@@ -7,26 +7,26 @@ avatar: https://avatars0.githubusercontent.com/u/9291400?s=400&u=76e77587b4fe1bf
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: r1misra@ucsd.edu
-  facebook: rishabhmisra1994
+  email: grover.jigyasa1@gmail.com
+  facebook: grover.jigyasa
   flickr:
-  github: rishabhmisra
-  instagram:
-  linkedin: misrarishabh
+  github: jigyasa-grover
+  instagram: jigyasa.grover
+  linkedin: jigyasa-grover
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: rishabh_misra_
+  twitter: jigyasa_grover
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
+  youtube: channel/UCaPucMRPgl5aNJJMO3OkfEA
   googleplus: # anything in your profile username that comes after plus.google.com/
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus: rishabhmisra
+disqus: 
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: UA-63791734-1
+google_analytics: UA-172999305-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
@@ -65,7 +65,7 @@ sass:
 
 theme: jekyll-theme-cayman
 
-repository: rishabhmisra/rishabhmisra.github.io
+repository: jigyasa-grover/jigyasa-grover.github.io
 
 # Use the following plug-ins
 gems:
