@@ -237,12 +237,14 @@ img {
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
+  line-height: 150%;
 }
 
 .site-description {
   margin: -5px 0 0 0;
   color: $gray;
   font-size: 16px;
+  line-height: 150%;
 
   @include mobile {
     margin: 3px 0;
