@@ -4,7 +4,7 @@ title: About Me
 permalink: /about
 ---
 
-<div class="column leftcol" style="text-align:justify;margin-right:20px">
+<div class="column leftcol" style="text-align:justify;padding-right:40px">
 
 Hey 👋🏻 Thank you for dropping by! 
 
