@@ -6,27 +6,28 @@ permalink: /about/
 
 <div class="column leftcol">
 
-I consider myself a lifelong learner and believe in working hard. I graduated from UC San Diego with Master's in Computer Science with specialization in Machine Learning in June 2018. Currently, I'm working at Twitter in the Timelines Quality team building relevance and machine learning models and systems. Previously, I worked at Amazon with Amazon Expansions and Exports Tech team. <br> <br>
+Hey 👋🏻 Thank you for dropping by! 
 
-My interests are in the Applied ML, Recommender Systems and NLP domains. I got my first exposure to Machine Learning during my internships at IIT Madras, India where I was involved in the development of scalable Bayesian models for the rating prediction task. <br> <br>
+</br>
+I am a <b>Machine Learning Engineer</b> by profession aand currently working at Twitter, Inc. in San Francisco. I recently wrote a book titled <aa href="https://www.amazon.com/dp/B08RN47C5T">Sculpting Data for ML: The first act of Machine Learning</a> which is a culmination of my myriad of experiences from my brief stints at <b>Facebook, Inc.</b>, <b>National Research Council of Canada</b>, and <b>Institute of Research & Development France</b> involving Data Science, mathematical modeling, and software engineering. 
 
-At UC San Diego, I worked on several research projects under the guidance of Prof. Julian McAuley. Recently, one of our research papers got accepted at <a href="http://acl2019.org/EN/index.xhtml" target="_blank">ACL 2019</a> in which we proposed a neural network architecture to detect spoilers in review datasets. Additionally, we also contributed a <a href="https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/reviews" target="_blank">large book review dataset</a> for the task of spoiler detection. Last year, another work of ours was published at <a href="https://recsys.acm.org/recsys18/" target="_blank">RecSys 2018</a> in which we proposed a new machine learning framework for predicting the fit of clothing products so that appropriate product sizes could be recommended to customers. The proposed approach improves upon a method proposed by Amazon by up to 18%. In this work as well, we released two <a href="https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation" target="_blank">novel datasets</a>, collected specifically for the task of clothing size recommendation. <br> <br>
+</br>Having graduated from the <b>University of California, San Diego</b>, with a Master’s degree in Computer Science with an Artificial Intelligence specialization, I am presently plying my past experiences and knowledge towards Applied Machine Learning in the online advertisements prediction and ranking domain. 
 
-Apart from this, I interned at Amazon in Summer 2017 where my project was to bring the support of primary key constraint, batch inserts/updates, transactions, and compaction in Hive while ensuring read consistency. This was particularly challenging as Hive is not designed to handle transactional data and operations. Previously, I also worked with Arcesium, a recently formed subsidiary of D.E. Shaw & Co, as a Software Developer. I was responsible for revamping their infrastructure to make it more scalable and robust. <br> <br>
+</br><b>Red Hat ‘Women in Open Source’ Academic Award Winner</b> and <b>Google Summer of Code</b> alumna, I am an ardent open-source contributor as well. I served as the Director of <b>Women Who Code</b> and Lead of Women Techmakers for a handful of years to help bridge the gender gap in technology. In my quest to build a powerful community of girls and boys alike, and believing in <i>“we rise by lifting others”</i>, I mentor aspiring developers and Machine Learning enthusiasts in various global programs. 
 
-My work experience is helping me in understanding the intricacies involved in developing critical and time-intensive software and my research experience is providing me in-depth knowledge of Machine Learning field. All of my work is driven by these learnings. <br> <br>
+</br>I also have many international conference keynotes, technical talks, panels, workshops, blogs, and podcasts to her name. Apart from my technological ventures, I enjoys exploring new places (I have solo traveled to 15+ countries in 4 continents so far✈️), hanging out with friends and family, and have been recently having fun with baking. 
 
-<h4> Last updated: 10th July 2019 </h4>
+</br>You drop me an EMail at <a href="mailto:rishabhmisra1994@gmail.com">grover.jigyasa1@gmail.com</a> or DM me on Twitter <a href="https://twitter.com/messages/compose?recipient_id=&ref_src=twsrc%5Etfw" class="twitter-dm-button" data-screen-name="jigyasa_grover" data-show-count="false">Message @jigyasa_grover</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<h3> Contact </h3>
+<br> <br>
 
-Please reach out to me @ <a href="mailto:rishabhmisra1994@gmail.com">r1misra@ucsd.edu</a> or DM me on Twitter: <a href="https://twitter.com/messages/compose?recipient_id=2591106696&text=Hey%20Rishabh" class="twitter-dm-button" data-screen-name="@rishabh_misra_" data-size=large>Message @rishabh_misra_</a>
+<h4> Last updated: February 2, 2021 </h4>
 
 </div>
 
 <div class="column rightcol">
 
-<a class="twitter-timeline" data-width="600" data-height="900" data-theme="light" data-link-color="#FF8A33" href="https://twitter.com/rishabh_misra_?ref_src=twsrc%5Etfw">Tweets by rishabh_misra_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-width="600" data-height="900" data-theme="light" href="https://twitter.com/jigyasa_grover?ref_src=twsrc%5Etfw">Tweets by jigyasa_grover</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </div>
 
