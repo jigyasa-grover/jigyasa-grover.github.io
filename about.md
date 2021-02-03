@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Me
-permalink: /about/
+permalink: /about
 ---
 
 <div class="column leftcol">
@@ -17,7 +17,7 @@ I am a <b>Machine Learning Engineer</b> by profession and currently work at <b>T
 
 </br>I also have many international conference keynotes, technical talks, panels, workshops, blogs, and podcasts to her name. Apart from my technological ventures, I enjoys exploring new places (I have solo traveled to 15+ countries in 4 continents so far✈️), hanging out with friends and family, and have been recently having fun with baking. 
 
-</br>You drop me an EMail at <a href="mailto:rishabhmisra1994@gmail.com">grover.jigyasa1@gmail.com</a> or DM me on Twitter <a href="https://twitter.com/messages/compose?recipient_id=&ref_src=twsrc%5Etfw" class="twitter-dm-button" data-screen-name="jigyasa_grover" data-show-count="false">Message @jigyasa_grover</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</br>You drop me an EMail at <a href="mailto:rishabhmisra1994@gmail.com">grover.jigyasa1@gmail.com</a> or DM me on Twitter <a href="https://twitter.com/messages/compose?recipient_id=3180367712&text=Hi%20Jigyasa!" class="twitter-dm-button" data-screen-name="@jigyasa_grover" data-size=large>Message @jigyasa_grover</a>
 
 <br> <br>
 
