@@ -1,7 +1,7 @@
 ---
 layout: post
 type: blog
-title: BOOK LAUNCH 🎉 Sculpting Data For ML - The first act of Machine Learning
+title: BOOK LAUNCH 🎉</br>Sculpting Data For ML - The first act of Machine Learning
 comments: true
 mathjax: true
 ---
