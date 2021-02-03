@@ -17,10 +17,10 @@ mathjax: true
 
 <center> <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B08RN47C5T&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_1mIeGbSZ013C3&tag=mobile0a1329f-20" style="padding:40px"></iframe> </center>
 
-The book is endorsed by leading ML experts from both academia and industry. It has forewords by:
+</br>The book is endorsed by leading ML experts from both academia and industry. It has forewords by:
 <ul>
   <li><strong><a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank" rel="noreferrer noopener">Julian McAuley</a></strong>, Associate Professor at&nbsp;<strong>University of California San Diego</strong></li>
-  <li><strong><a href="http://www.laurencemoroney.com/">Laurence Moroney</a></strong>, Lead Artificial Intelligence Advocate at&nbsp;<strong>Google</strong></li
+  <li><strong><a href="http://www.laurencemoroney.com/">Laurence Moroney</a></strong>, Lead Artificial Intelligence Advocate at&nbsp;<strong>Google</strong></li>
   <li><a href="https://mengtingwan.github.io/"><strong>Mengting</strong>&nbsp;<strong>Wan</strong></a>, Senior Applied Scientist at&nbsp;<strong>Microsoft</strong></li>
 </ul>
   
