@@ -17,7 +17,7 @@ I am a <b>Machine Learning Engineer</b> by profession and currently work at <b>T
 
 </br>I also have many <b>international conference keynotes, technical talks, panels, workshops, blogs, and podcasts</b> to her name. Apart from my technological ventures, I enjoys exploring new places (<i>I have solo traveled to 15+ countries in 4 continents so far✈️</i>), hanging out with friends and family, and have been recently having fun with baking. 
 
-</br>To get in touch, you can drop me an EMail at <a href="mailto:rishabhmisra1994@gmail.com">grover.jigyasa1@gmail.com</a> or DM me on Twitter <a href="https://twitter.com/messages/compose?recipient_id=3180367712&text=Hi%20Jigyasa!" class="twitter-dm-button" data-screen-name="@jigyasa_grover" data-size=large>Message @jigyasa_grover</a>
+</br>To get in touch, you can EMail at <a href="mailto:rishabhmisra1994@gmail.com">grover.jigyasa1@gmail.com</a> or DM on Twitter <a href="https://twitter.com/messages/compose?recipient_id=3180367712&text=Hi%20Jigyasa!" class="twitter-dm-button" data-screen-name="@jigyasa_grover" data-size=large>Message @jigyasa_grover</a>
 
 <br> <br>
 
