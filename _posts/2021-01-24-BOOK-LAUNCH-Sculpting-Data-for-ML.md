@@ -15,7 +15,7 @@ mathjax: true
 
 </br>The book puts forward practical tips to identify valuable information from the extensive amount of crude data available at our fingertips. The&nbsp;<strong>step-by-step guide</strong>&nbsp;accompanies code examples in&nbsp;<strong>Python</strong>&nbsp;from the extraction of real-world datasets created by the authors themselves. It also illustrates ways to hone the skills of extracting meaningful datasets. In addition, the book dives deep into how data fits into the Machine Learning ecosystem and tries to highlight the impact good quality data can have on the Machine Learning system's performance.
 
-<center> <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B08RN47C5T&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_1mIeGbSZ013C3&tag=mobile0a1329f-20" ></iframe> </center>
+<center> <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B08RN47C5T&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_1mIeGbSZ013C3&tag=mobile0a1329f-20" style="padding:40px"></iframe> </center>
 
 The book is endorsed by leading ML experts from both academia and industry. It has forewords by:
 <ul>
