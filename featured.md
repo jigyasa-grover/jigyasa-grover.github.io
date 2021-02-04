@@ -6,8 +6,6 @@ permalink: /featured/
 
 <div class="child-page-listing">
 
-  <h2>Our Locations</h2>
-
   <div class="grid-container">
 
     <article id="3685" class="location-listing">
