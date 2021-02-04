@@ -1,5 +1,5 @@
 ---
-layout: truncated_post
+layout: page
 title: Featured
 permalink: /featured/
 ---
