@@ -8,7 +8,7 @@ permalink: /featured/
    <div class="grid-container">
       <article id="0" class="location-listing">
          <a class="location-title" href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank">  Yuuvis® Hackathon Winner: VerbAlexa</a> 
-         <div class="location-image"> <a href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank"> <img src="https://github.com/jigyasa-grover/jigyasa-grover.github.io/blob/master/images/logo.png"> </a> </div>
+         <div class="location-image"> <a href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank"> <img src="{{ site.baseurl }}/images/logo.png"> </a> </div>
       </article>
       <article id="98" class="location-listing">
          <a class="location-title" href="https://www.geekyreality.com/blog/stemstories-jigyasa-machine-learning-engineer-usa/" target="_blank"> Geeky Girl Reality: #STEMStories ft. Jigyasa Grover</a> 
