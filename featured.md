@@ -8,7 +8,7 @@ permalink: /featured/
    <div class="grid-container">
       <article id="0" class="location-listing">
          <a class="location-title" href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank">  Yuuvis® Hackathon Winner: VerbAlexa</a> 
-         <div class="location-image"> <a href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank"> <img src="{{ site.baseurl }}/images/icon.png"> </a> </div>
+         <div class="location-image"> <a href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank"> <img src="{{ site.baseurl }}/images/logo.png"> </a> </div>
       </article>
       <article id="98" class="location-listing">
          <a class="location-title" href="https://www.geekyreality.com/blog/stemstories-jigyasa-machine-learning-engineer-usa/" target="_blank"> Geeky Girl Reality: #STEMStories ft. Jigyasa Grover</a> 
@@ -16,7 +16,7 @@ permalink: /featured/
       </article>
       <article id="99" class="location-listing">
          <a class="location-title" href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30" target="_blank"> HelloMeets: More Power to Hackers ft. Jigyasa Grover</a> 
-         <div class="location-image"> <a href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30" target="_blank"> <img width="200" height="200" src="https://miro.medium.com/max/1000/1*M6JzI3RU334Z1eRxpn9UCw.jpeg"> </a> </div>
+         <div class="location-image"> <a href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30" target="_blank"> <img width="200" height="200" style="width:100%;" src="https://miro.medium.com/max/1000/1*M6JzI3RU334Z1eRxpn9UCw.jpeg"> </a> </div>
       </article>
 <!--       <article id="3688" class="location-listing">
          <a class="location-title" href="#"> London            </a> 
