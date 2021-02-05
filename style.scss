@@ -492,6 +492,7 @@ footer {
 .location-image {
   line-height: 0;
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .location-image img {
@@ -512,8 +513,11 @@ footer {
   left: 0;
   opacity: 0;
   transition: opacity .5s;
-  background: rgba(90,0,10,0.4);
+//   background: rgba(90,0,10,0.4);
+  background: #292f336b;
   color: white;
+  text-align:center;
+  padding: 10px;
   
   /* position the text in t’ middle*/
   display: flex;
