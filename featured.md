@@ -7,10 +7,14 @@ permalink: /featured/
 <div class="child-page-listing">
    <div class="grid-container">
       <article id="0" class="location-listing">
+         <a class="location-title" href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank">  Yuuvis® Hackathon Winner: VerbAlexa</a> 
+         <div class="location-image"> <a href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank"> <img src="https://github.com/jigyasa-grover/jigyasa-grover.github.io/blob/master/images/logo.png"> </a> </div>
+      </article>
+      <article id="98" class="location-listing">
          <a class="location-title" href="https://www.geekyreality.com/blog/stemstories-jigyasa-machine-learning-engineer-usa/" target="_blank"> Geeky Girl Reality: #STEMStories ft. Jigyasa Grover</a> 
          <div class="location-image"> <a href="https://www.geekyreality.com/blog/stemstories-jigyasa-machine-learning-engineer-usa/" target="_blank"> <img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t31.0-8/15875344_851205171688192_1354750175758432514_o.jpg?_nc_cat=107&ccb=2&_nc_sid=e3f864&_nc_ohc=xhWfUjurT24AX_O-Gqq&_nc_ht=scontent-sjc3-1.xx&oh=073ecf358c4b0ae7e84ee01849168bc5&oe=6043C9C5"> </a> </div>
       </article>
-      <article id="1" class="location-listing">
+      <article id="99" class="location-listing">
          <a class="location-title" href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30" target="_blank"> HelloMeets: More Power to Hackers ft. Jigyasa Grover</a> 
          <div class="location-image"> <a href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30" target="_blank"> <img width="200" height="200" src="https://miro.medium.com/max/1000/1*M6JzI3RU334Z1eRxpn9UCw.jpeg"> </a> </div>
       </article>
