@@ -7,8 +7,8 @@ permalink: /featured/
 <div class="child-page-listing">
    <div class="grid-container">
       <article id="3685" class="location-listing">
-         <a class="location-title" href="https://www.linkedin.com/in/jigyasa-grover"> San Francisco</a> 
-         <div class="location-image"> <a href="https://www.linkedin.com/in/jigyasa-grover"> <img width="300" height="169" style="width: 100%" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/san-fransisco-768x432.jpg" alt="san francisco"> </a> </div>
+         <a class="location-title" href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30"> HeeloMeets: More Power to Hackers ft. Jigyasa Grover</a> 
+         <div class="location-image"> <a href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30"> <img width="300" height="169" style="width: 100%" src="https://miro.medium.com/max/1000/1*M6JzI3RU334Z1eRxpn9UCw.jpeg"> </a> </div>
       </article>
       <article id="3688" class="location-listing">
          <a class="location-title" href="#"> London            </a> 
