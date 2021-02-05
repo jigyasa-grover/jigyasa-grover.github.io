@@ -107,8 +107,11 @@ a {
   color: #D20844;
   text-decoration: none;
 	cursor: pointer;
-  &:hover, &:active {
-    color: $blue;
+//   &:hover, &:active {
+//     color: $blue;
+//   }
+   &:hover, &:active {
+    color: #D20844;
   }
 }
 
