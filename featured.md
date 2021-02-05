@@ -7,8 +7,8 @@ permalink: /featured/
 <div class="child-page-listing">
    <div class="grid-container">
       <article id="3685" class="location-listing">
-         <a class="location-title" href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30"> HelloMeets: More Power to Hackers ft. Jigyasa Grover</a> 
-         <div class="location-image"> <a href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30"> <img width="400" height="400" style="width: 100%" src="https://miro.medium.com/max/1000/1*M6JzI3RU334Z1eRxpn9UCw.jpeg"> </a> </div>
+         <a class="location-title" style="color: #D20844;" href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30"> HelloMeets: More Power to Hackers ft. Jigyasa Grover</a> 
+         <div class="location-image"> <a href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30"> <img width="200" height="200" src="https://miro.medium.com/max/1000/1*M6JzI3RU334Z1eRxpn9UCw.jpeg"> </a> </div>
       </article>
       <article id="3688" class="location-listing">
          <a class="location-title" href="#"> London            </a> 
