@@ -10,6 +10,10 @@ permalink: /featured/
          <a class="location-title" href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank">  Yuuvis® Hackathon Winner: VerbAlexa</a> 
          <div class="location-image"> <a href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank"> <img src="{{ site.baseurl }}/images/logo.png" style="width:100%; height=100%;"> </a> </div>
       </article>
+      <article id="1" class="location-listing">
+         <a class="location-title" href="https://www.redhat.com/en/about/press-releases/red-hat-announces-2017-women-open-source-award-winners" target="_blank"> Red Hat Announces 2017 Women in Open Source Award Winners</a> 
+         <div class="location-image"> <a href="https://www.redhat.com/en/about/press-releases/red-hat-announces-2017-women-open-source-award-winners" target="_blank"> <img src="https://media.glassdoor.com/l/f9/34/ea/7c/red-hat-women-in-open-source-award.jpg" style="width:100%; height=100%;"> </a> </div>
+      </article>
       <article id="97" class="location-listing">
          <a class="location-title" href="https://www.correlation-one.com/blog/data-science-work-twitter" target="_blank"> Data Science @ Work: ft. Jigyasa Grover</a> 
          <div class="location-image"> <a href="https://www.correlation-one.com/blog/data-science-work-twitter" target="_blank"> <img src="https://www.correlation-one.com/hs-fs/hubfs/DS@W_Full_Twittee-1.jpeg?width=1200&name=DS@W_Full_Twittee-1.jpeg" style="width:100%; height=100%;"> </a> </div>
