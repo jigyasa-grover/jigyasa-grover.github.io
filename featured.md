@@ -20,7 +20,7 @@ permalink: /featured/
       </article>
       <article id="100" class="location-listing">
          <a class="location-title" href="http://www.buzzingg.com/industry/it-ites/jigyasa-grover-dtu-red-hat-women-open-source-award/" target="_blank"> Delhi Engineering student among Top 5 Global Finalists</a> 
-         <div class="location-image"> <a href="http://www.buzzingg.com/industry/it-ites/jigyasa-grover-dtu-red-hat-women-open-source-award/" target="_blank"> <img src="http://www.buzzingg.com/wp-content/uploads/2017/04/Jigyasa-Grover-2017-Women-in-Open-Source-Award-Finalist-660x330.jpg"> </a> </div>
+         <div class="location-image"> <a href="http://www.buzzingg.com/industry/it-ites/jigyasa-grover-dtu-red-hat-women-open-source-award/" target="_blank"> <img src="{{ site.baseurl }}/images/buzzinng.jpg"> </a> </div>
       </article>
       <article id="99" class="location-listing">
          <a class="location-title" href="" target="_blank"> work in progress</a> 
