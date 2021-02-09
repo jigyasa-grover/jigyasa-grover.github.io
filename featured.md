@@ -30,26 +30,5 @@ permalink: /featured/
          <a class="location-title" href="" target="_blank"> work in progress</a> 
          <div class="location-image"> <a href="" target="_blank"> <img src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1412,w_2098,x_12,y_0/v1560194139/shape/mentalfloss/27585-istock-180822485.jpg?itok=ePnKiVbJ" style="width:100%; height=100%;"> </a> </div>
       </article>
-<!--       <article id="3688" class="location-listing">
-         <a class="location-title" href="#"> London            </a> 
-         <div class="location-image"> <a href="#"> <img width="300" height="169" style="width: 100%" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/london-768x432.jpg" alt="london">  </a> </div>
-      </article>
-      <article id="3691" class="location-listing">
-         <a class="location-title" href="#"> New York            </a> 
-         <div class="location-image"> <a href="#"> <img width="300" height="169" style="width: 100%" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/new-york-768x432.jpg" alt="new york">  </a> </div>
-      </article>
-      <article id="3694" class="location-listing">
-         <a class="location-title" href="#"> Cape Town           </a> 
-         <div class="location-image"> <a href="#"> <img width="300" height="169" style="width: 100%" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cape-town-768x432.jpg" alt="cape town">  </a> </div>
-      </article>
-      <article id="3697" class="location-listing">
-         <a class="location-title" href="#"> Beijing           </a> 
-         <div class="location-image"> <a href="#"> <img width="300" height="169" style="width: 100%" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/beijing-768x432.jpg" alt="beijing">    </a> </div>
-      </article>
-      <article id="3700" class="location-listing">
-         <a class="location-title" href="#"> Paris           </a> 
-         <div class="location-image"> <a href="#"> <img width="300" height="169" style="width: 100%" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/paris-768x432.jpg" alt="paris"> </a> </div>
-      </article> -->
    </div>
-   <!-- end grid container --> 
 </div>
