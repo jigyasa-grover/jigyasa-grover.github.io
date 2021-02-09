@@ -18,9 +18,13 @@ permalink: /featured/
          <a class="location-title" href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30" target="_blank"> HelloMeets: More Power to Hackers ft. Jigyasa Grover</a> 
          <div class="location-image"> <a href="https://medium.com/@hellomeets/more-power-to-hackers-jigyasa-grover-643ca836f30" target="_blank"> <img src="https://miro.medium.com/max/1000/1*M6JzI3RU334Z1eRxpn9UCw.jpeg"> </a> </div>
       </article>
+      <article id="100" class="location-listing">
+         <a class="location-title" href="http://www.buzzingg.com/industry/it-ites/jigyasa-grover-dtu-red-hat-women-open-source-award/" target="_blank"> Delhi Engineering student among Top 5 Global Finalists</a> 
+         <div class="location-image"> <a href="http://www.buzzingg.com/industry/it-ites/jigyasa-grover-dtu-red-hat-women-open-source-award/" target="_blank"> <img src="http://www.buzzingg.com/wp-content/uploads/2017/04/Jigyasa-Grover-2017-Women-in-Open-Source-Award-Finalist-660x330.jpg"> </a> </div>
+      </article>
       <article id="99" class="location-listing">
          <a class="location-title" href="" target="_blank"> work in progress</a> 
-         <div class="location-image"> <a href="" target="_blank"> <img src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1192,w_2122,x_0,y_212/f_auto,q_auto,w_1100/v1560194139/shape/mentalfloss/27585-istock-180822485.jpg"> </a> </div>
+         <div class="location-image"> <a href="" target="_blank"> <img src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1412,w_2098,x_12,y_0/v1560194139/shape/mentalfloss/27585-istock-180822485.jpg?itok=ePnKiVbJ"> </a> </div>
       </article>
 <!--       <article id="3688" class="location-listing">
          <a class="location-title" href="#"> London            </a> 
