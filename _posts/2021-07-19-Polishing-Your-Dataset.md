@@ -1,7 +1,7 @@
 ---
 layout: post
 type: blog
-title: BOOK LAUNCH 🎉</br>Sculpting Data For ML - The first act of Machine Learning
+title: 5 tips for polishing your Machine Learning dataset 🧼
 comments: true
 mathjax: true
 ---
