@@ -40,3 +40,6 @@ mathjax: true
 </br>This book is for Machine Learning researchers, practitioners, or enthusiasts who want to tackle the data availability challenges to address real-world problems. Folks interested can purchase either the <em>Kindle</em> or the <em>Paperback</em> version from Amazon →&nbsp;<a rel="noreferrer noopener" href="http://www.amazon.com/dp/B08RN47C5T" target="_blank"><strong>www.amazon.com/dp/B08RN47C5T</strong></a> 📖
 
 </br>A lot of thoughtful efforts were put in the composition of the book. We would appreciate your take on it. Please share your thoughts with us and the potential readers, especially on the platform you used to access this book. In case of any other questions regarding the content of the book, feel free to reach us at  <strong><em>@dataforml</em></strong> on <a rel="noreferrer noopener" href="https://twitter.com/DataForML" target="_blank">Twitter</a> or <a href="https://www.instagram.com/dataforml/">Instagram</a>.
+
+</br>
+<hr>
