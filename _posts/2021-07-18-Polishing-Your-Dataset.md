@@ -7,6 +7,8 @@ mathjax: true
 ---
 <p>I have been professionally working as a Machine Learning Engineer since more than 2 years now and also, recently co-authored a book titled <strong><a rel="noreferrer noopener" href="https://www.amazon.com/dp/B08RN47C5T" target="_blank">“Sculpting Data for ML: The first act of Machine Learning”</a></strong>. My past few experience have taught me that data does not get its due limelight in <a href="https://twitter.com/hashtag/MachineLearning">#MachineLearning</a> as compared to complex model architecture. Keeping up with 'more data beats clever algorithms, but better data beats more data', here are top 5 tips for polishing the dataset to effectively solve <a href="https://twitter.com/hashtag/ML">#ML</a> problems 🤖👇🏻</p>
 
+</br>
+
 <center>
  <blockquote class="twitter-tweet">
   <p lang="en" dir="ltr">Honestly, data does not get its due limelight in <a href="https://twitter.com/hashtag/MachineLearning?src=hash&amp;ref_src=twsrc%5Etfw">#MachineLearning</a> as compared to complex model architecture. Keeping up with &#39;more data beats clever algorithms, but better data beats more data&#39;, here are top 5 tips for polishing the dataset to effectively solve <a href="https://twitter.com/hashtag/ML?src=hash&amp;ref_src=twsrc%5Etfw">#ML</a> problems 🤖👇🏻
