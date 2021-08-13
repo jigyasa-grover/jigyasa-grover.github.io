@@ -16,6 +16,8 @@ mathjax: true
  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>
 
+</br>
+
 <p><strong>DATA IS SEASONAL☃️🏝🌧</strong> Every data point has its expiration date! With infinite data streams today, it is important to continuously perform data distribution checks to maintain the ‘data is IID’ status, more so if you are training on-the-go.</p>
 
 <p><strong>FIGHT THE BIAS🤺🧯💥 </strong>While data might represent the ultimate truth, the way a dataset is created might not. Any form of <a href="https://twitter.com/hashtag/DatasetBias">#DatasetBias</a> can limit generalization capabilities of even the most sophisticated <a href="https://twitter.com/hashtag/ML">#ML</a> algorithm. And thus, unintentionally lead to collective, disparate impact.</p>
