@@ -36,5 +36,5 @@ mathjax: true
  
  <p><strong>WANNA KNOW MORE </strong>❓📝🤓 Read more about the concept in this blog post: <a href="https://ai.googleblog.com/2021/06/data-cascades-in-machine-learning.html">ai.googleblog.com/data-cascades-in-machine-learning</a></p>
  
- </hr>
+ <hr>
  
