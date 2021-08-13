@@ -23,8 +23,9 @@ mathjax: true
   <li><strong><a href="http://www.laurencemoroney.com/">Laurence Moroney</a></strong>, Lead Artificial Intelligence Advocate at&nbsp;<strong>Google</strong></li>
   <li><a href="https://mengtingwan.github.io/"><strong>Mengting</strong>&nbsp;<strong>Wan</strong></a>, Senior Applied Scientist at&nbsp;<strong>Microsoft</strong></li>
 </ul>
-  
-  <hr>
+ 
+ </br>
+ <hr>
   
 </br><strong>What's Inside?</strong>
 <ul>
