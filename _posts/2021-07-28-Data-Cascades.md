@@ -14,7 +14,7 @@ mathjax: true
   <blockquote class="twitter-tweet"><p lang="en" dir="ltr">ML models are as good as the data they consume🍴Data impacts performance, fairness, robustness &amp; scalability of <a href="https://twitter.com/hashtag/ML?src=hash&amp;ref_src=twsrc%5Etfw">#ML</a> Systems. If not taken care of, it leads to a TON of tech debt over time in a corporate setting, downstream effects of which are termed as DATA CASCADES 🌊 🧵👇🏻</p>&mdash; Sculpting Data: First Act of Machine Learning 📖 (@DataForML) <a href="https://twitter.com/DataForML/status/1420271877377839108?ref_src=twsrc%5Etfw">July 28, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
  </center>
  
- </br>
+</br>
  
  <p><strong>TROUBLEMAKER</strong> 😈🙅🏻‍♀️😼 Often the issues originate early in <a href="https://twitter.com/hashtag/ML">#ML</a> system’s life cycle, for example at the stage where we collect or annotate the data. These seemingly small issues grow larger into complex challenges affecting the <a href="https://twitter.com/hashtag/MachineLearning">#MachineLearning</a> model development and deployment.</p>
  
@@ -26,15 +26,16 @@ mathjax: true
  
  <p><strong>SCULPT IT RIGHT</strong> 🧱⏳📖 To avoid <a href="https://twitter.com/hashtag/DataCascading">#DataCascading</a>, get started right by fostering data literacy for <a href="https://twitter.com/hashtag/MachineLearning">#MachineLearning</a>. Read through <a href="https://twitter.com/DataForML">@DataForML</a> and learn how to create your very own quality dataset using <a href="https://twitter.com/hashtag/Python">#Python</a> and other <a href="https://twitter.com/hashtag/OpenSource">#OpenSource</a> tools!</p>
  
- </br>
+</br>
  
  <center>
   <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B08RN47C5T&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_ZVR98ETZ0F8EM5HC7M5C&tag=mobile0a1329f-20" ></iframe>
  </center>
  
- </br>
+</br>
  
  <p><strong>WANNA KNOW MORE </strong>❓📝🤓 Read more about the concept in this blog post: <a href="https://ai.googleblog.com/2021/06/data-cascades-in-machine-learning.html">ai.googleblog.com/data-cascades-in-machine-learning</a></p>
  
+ </br>
  <hr>
  
