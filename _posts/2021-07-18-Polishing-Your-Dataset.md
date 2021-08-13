@@ -30,6 +30,8 @@ mathjax: true
 
 <p><strong>PRO TIP ✨📖👩🏻‍💻</strong> Lastly, you are in no way restricted by the availability of public dataset repositories. Sky's the limit. Grab a copy of <a href="https://twitter.com/DataForML">@DataForML</a> today and learn how to create your very own quality dataset using <a href="https://twitter.com/hashtag/Python">#Python</a> and other <a href="https://twitter.com/hashtag/OpenSource">#OpenSource</a> tools!</p>
 
+</br>
+
 <center>
  <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B08RN47C5T&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_TQ172033Z0X777T8FD8R&tag=mobile0a1329f-20" ></iframe>
 </center>
