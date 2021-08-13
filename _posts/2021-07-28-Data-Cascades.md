@@ -26,7 +26,7 @@ mathjax: true
   <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B08RN47C5T&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_ZVR98ETZ0F8EM5HC7M5C&tag=mobile0a1329f-20" ></iframe>
  </center>
  
- <p><strong>WANNA KNOW MORE </strong>❓📝🤓 Read more about the concept in this blog post: <a href="ai.googleblog.com/data-cascades-in-machine-learning">https://ai.googleblog.com/2021/06/data-cascades-in-machine-learning.html</a></p>
+ <p><strong>WANNA KNOW MORE </strong>❓📝🤓 Read more about the concept in this blog post: <a href="https://ai.googleblog.com/2021/06/data-cascades-in-machine-learning.html">ai.googleblog.com/data-cascades-in-machine-learning</a></p>
  
  
  
