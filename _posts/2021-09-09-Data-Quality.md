@@ -10,7 +10,9 @@ mathjax: true
 
 </br>
 
+<center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">DATA is the new oil🛢️ As <a href="https://twitter.com/hashtag/DataCentric?src=hash&amp;ref_src=twsrc%5Etfw">#DataCentric</a> approaches to <a href="https://twitter.com/hashtag/ML?src=hash&amp;ref_src=twsrc%5Etfw">#ML</a> gather traction, access to diverse, comprehensive, and more importantly quality data has been the talk of the town. Along these lines, it&#39;s important to understand what does QUALITY really means in the context of DATA 🔢🧵👇🏻</p>&mdash; Sculpting Data: First Act of Machine Learning 📖 (@DataForML) <a href="https://twitter.com/DataForML/status/1436215505782673421?ref_src=twsrc%5Etfw">September 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
 
 </br>
 
