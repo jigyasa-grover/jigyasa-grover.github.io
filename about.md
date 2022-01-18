@@ -9,7 +9,7 @@ permalink: /about
 Hey 👋🏻 Thank you for dropping by! 
 
 </br>
-I am a <b>Machine Learning Engineer</b> by profession and currently work at <b>Twitter, Inc.</b> in San Francisco. I recently co-authored a book titled <a href="https://www.amazon.com/dp/B08RN47C5T" target="_blank">Sculpting Data for ML: The first act of Machine Learning</a> which is a culmination of my myriad of experiences from brief stints at <b>Facebook, Inc.</b>, <b>National Research Council of Canada</b>, and <b>Institute of Research & Development France</b> involving Data Science, mathematical modeling, and software engineering. 
+I am a <b>Machine Learning Engineer</b> by profession and currently work at <b>Twitter, Inc.</b> in San Francisco. I also have the honor of being recognized as one of the <b>Google Developer Experts</b> in the Machine Learning domain. I recently co-authored a book titled <a href="https://www.amazon.com/dp/B08RN47C5T" target="_blank">Sculpting Data for ML: The first act of Machine Learning</a> which is a culmination of my myriad of experiences from brief stints at <b>Facebook, Inc.</b>, <b>National Research Council of Canada</b>, and <b>Institute of Research & Development France</b> involving Data Science, mathematical modeling, and software engineering. 
 
 </br>Having graduated from the <b>University of California, San Diego</b>, with a Master’s degree in Computer Science with an Artificial Intelligence specialization, I am presently plying my past experiences and knowledge towards Applied Machine Learning in the online advertisements prediction and ranking domain. 
 
