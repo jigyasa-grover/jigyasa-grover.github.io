@@ -15,7 +15,7 @@ I am a <b>Machine Learning Engineer</b> by profession and currently work at <b>T
 
 </br><b>Red Hat 'Women in Open Source' Academic Award Winner</b> and <b>Google Summer of Code</b> alumna, I am an ardent open-source contributor as well. I served as the Director of <b>Women Who Code</b> and Lead of Women Techmakers for a handful of years to help bridge the gender gap in technology. In my quest to build a powerful community of girls and boys alike, and believing in <i>“we rise by lifting others”</i>, I mentor aspiring developers and Machine Learning enthusiasts in various global programs. 
 
-</br>I also have many <b>international conference keynotes, technical talks, panels, workshops, blogs, and podcasts</b> to her name. Apart from my technological ventures, I enjoys exploring new places (<i>I have solo traveled to 15+ countries in 4 continents so far✈️</i>), hanging out with friends and family, and have been recently having fun with baking. 
+</br>I also have many <b>international conference keynotes, technical talks, panels, workshops, blogs, and podcasts</b> to her name. Apart from my technological ventures, I enjoy exploring new places (<i>I have solo traveled to 15+ countries in 4 continents so far✈️</i>), hanging out with friends and family, and have been recently having fun with baking. 
 
 </br>To get in touch, you can EMail at <a href="mailto:grover.jigyasa1@gmail.com" target="_blank">grover[dot]jigyasa1[at]gmail.com</a> or DM on Twitter <a href="https://twitter.com/messages/compose?recipient_id=3180367712&text=Hi%20Jigyasa!" class="twitter-dm-button" data-screen-name="@jigyasa_grover" data-size=large>Message @jigyasa_grover</a>
 
