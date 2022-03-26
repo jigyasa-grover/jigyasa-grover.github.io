@@ -9,25 +9,22 @@ permalink: /about
 Hey 👋🏻 Thank you for dropping by! 
 
 </br>
-I am a <b>Machine Learning Engineer</b> by profession and currently work at <b>Twitter, Inc.</b> in San Francisco. I also have the honor of being recognized as one of the <b>Google Developer Experts</b> in the Machine Learning domain. I recently co-authored a book titled <a href="https://www.amazon.com/dp/B08RN47C5T" target="_blank">Sculpting Data for ML: The first act of Machine Learning</a> which is a culmination of my myriad of experiences from brief stints at <b>Facebook, Inc.</b>, <b>National Research Council of Canada</b>, and <b>Institute of Research & Development France</b> involving Data Science, mathematical modeling, and software engineering. 
+I am a Machine Learning Engineer at Twitter working in the performance ads ranking domain. I am also one of the few ML Google Developer Experts globally. I recently co-authored a book titled 'Sculpting Data for ML' that campaigns for a data-centric approach to ML and is a practical guide on curating quality datasets that lay a strong foundation of an ML pipeline. I graduated from the University of California, San Diego, with a Master’s degree in Computer Science with an Artificial Intelligence specialization and have a myriad of experiences from my brief stints at Facebook, National Research Council of Canada, and Institute of Research & Development France involving data science, mathematical modeling, and software engineering.
 
-</br>Having graduated from the <b>University of California, San Diego</b>, with a Master’s degree in Computer Science with an Artificial Intelligence specialization, I am presently plying my past experiences and knowledge towards Applied Machine Learning in the online advertisements prediction and ranking domain. 
-
-</br><b>Red Hat 'Women in Open Source' Academic Award Winner</b> and <b>Google Summer of Code</b> alumna, I am an ardent open-source contributor as well. I served as the Director of <b>Women Who Code</b> and Lead of Women Techmakers for a handful of years to help bridge the gender gap in technology. In my quest to build a powerful community of girls and boys alike, and believing in <i>“we rise by lifting others”</i>, I mentor aspiring developers and Machine Learning enthusiasts in various global programs. 
-
-</br>I also have many <b>international conference keynotes, technical talks, panels, workshops, blogs, and podcasts</b> to her name. Apart from my technological ventures, I enjoy exploring new places (<i>I have solo traveled to 15+ countries in 4 continents so far✈️</i>), hanging out with friends and family, and have been recently having fun with baking. 
+</br>
+Red Hat 'Women in Open Source' Academic Award Winner, I am an avid proponent of open-source and credit the access to opportunities and my career growth to this sphere of community development. I am also the proud recipient of multiple scholarships for my research and travels like Mitacs Globalink, Linux Foundation, Facebook GHC, ESUG, GHC India, etc. I currently lead the open-source and ML track for Anita Borg's IWiC group, co-lead the Women@ML BRG at Twitter, and co-chair the Financial Aid Committee for Python Software Foundation. I also served as the Director of Women Who Code and Lead of Women Techmakers for a handful of years to help bridge the gender gap in technology. In my spirit to build a powerful community with a strong belief in “we rise by lifting others”, I mentor aspiring developers and ML enthusiasts in various global programs. I have 100+ conference talks, panels, keynotes, technical workshops, and podcasts to my name, which I have conducted in 10+ countries and countless cities across the US. My love for tinkering has led my win in 5+ hackathons, sponsored by Microsoft, Google, Github, etc. and I now give back to the community by serving on the judges panel of hackathons. Apart from my technological ventures, I enjoy exploring hidden gems in my city, hanging out with friends and family, and have been recently having fun with baking.
 
 </br>To get in touch, you can EMail at <a href="mailto:grover.jigyasa1@gmail.com" target="_blank">grover[dot]jigyasa1[at]gmail.com</a> or DM on Twitter <a href="https://twitter.com/messages/compose?recipient_id=3180367712&text=Hi%20Jigyasa!" class="twitter-dm-button" data-screen-name="@jigyasa_grover" data-size=large>Message @jigyasa_grover</a>
 
 <br> <br>
 
-<h4> Last updated: February 2, 2021 </h4>
+<h4> Last Updated: March 26, 2022 </h4>
 
 </div>
 
 <div class="column rightcol">
 
-<a class="twitter-timeline" data-width="600" data-height="900" data-theme="light" href="https://twitter.com/jigyasa_grover?ref_src=twsrc%5Etfw">Tweets by jigyasa_grover</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-width="600" data-height="900" href="https://twitter.com/jigyasa_grover?ref_src=twsrc%5Etfw">Tweets by jigyasa_grover</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </div>
 
