@@ -29,4 +29,4 @@ Hey 👋🏻 Thank you for dropping by!
 </div>
 
 
-<center> <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"> </center>
+<!-- <center> <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"> </center> -->
