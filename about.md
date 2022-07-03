@@ -24,7 +24,7 @@ Hey 👋🏻 Thank you for dropping by!
 
 <div class="column rightcol">
 
-<a class="twitter-timeline" data-width="600" data-height="900" href="https://twitter.com/jigyasa_grover?ref_src=twsrc%5Etfw">Tweets by jigyasa_grover</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-width="600" data-height="1200" href="https://twitter.com/jigyasa_grover?ref_src=twsrc%5Etfw">Tweets by jigyasa_grover</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </div>
 
