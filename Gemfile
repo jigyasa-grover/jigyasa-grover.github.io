@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 gemspec :name => "jekyll"
 
+gem "github-pages", "~> 226", group: :jekyll_plugins
 gem "jekyll-jupyter-notebook"
 gem "jekyll-paginate"
 gem "jekyll-latex"
