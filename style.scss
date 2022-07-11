@@ -587,10 +587,11 @@ button {
   position: relative;
   background: $primary;
   overflow: hidden;
+  border-radius: 5px;
   img {
     position: absolute;
     opacity: 0.9;
-    height: 100%
+//     height: 100%
   }
   p {
     position: absolute;
