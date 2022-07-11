@@ -633,7 +633,7 @@ button {
   transform: translateY(101%);
   transition: $ease;
   button {
-    background: none;
+    background: $white;
     outline: none;
     font-weight: 100;
     letter-spacing: 2px;
