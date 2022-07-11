@@ -5,7 +5,7 @@ permalink: /featured/
 ---
 
 <script>
-  const buttons = document.querySelectorAll('.project');
+const buttons = document.querySelectorAll('.project');
 const overlay = document.querySelector('.overlay');
 const overlayImage = document.querySelector('.overlay__inner img');
 
