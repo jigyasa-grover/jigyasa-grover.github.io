@@ -7,22 +7,19 @@ permalink: /featured/
   <section id="portfolio">
     <div class="project">
       <img class="project__image" src="/images/WAI.jpeg"/>
-<!--       <p>websites</p>
-      <h3 class="grid__title"> front-end</h3> -->
       <div class="grid__overlay">
         <button class="viewbutton">
           <a href="https://www.womeninai.co/post/women-in-ai-awards-honor-the-top-female-artificial-intelligence-innovators-in-north-america">Outstanding in AI - Young Role Model of the Year Award</a>
           </button>
-<!--         <button class="viewbutton">view more</button> -->
       </div>
     </div>
     
     <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1521104955835-ba91c70d6443?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38cdeda7d073c4b6d47a5776f184cba9&auto=format&fit=crop&w=700&q=80" />
-<!--       <p>pure css</p>
-      <h3 class="grid__title"> front-end</h3> -->
+      <img class="project__image" src="/images/VentureBeatsWAI.png"/>
       <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
+        <button class="viewbutton">
+          <a href="https://venturebeat.com/2022/07/08/meet-the-nominees-for-the-2022-venturebeat-women-in-ai-awards/">VentureBeat Women in AI Awards Finalist</a>
+          </button>
       </div>
     </div>
     
