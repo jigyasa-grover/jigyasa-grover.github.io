@@ -3,100 +3,85 @@ layout: page
 title: Media Features
 permalink: /featured/
 ---
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
-<div class="gallery">
-	<div class="gallery__column">
-		<a href="https://unsplash.com/@jeka_fe" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/_cvwXhGqG-o/300x300" alt="Portrait by Jessica Felicio" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Jessica Felicio</figcaption>
-			</figure>
-		</a>
 
-		<a href="https://unsplash.com/@oladimeg" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/AHBvAIVqk64/300x500" alt="Portrait by Oladimeji Odunsi" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Oladimeji Odunsi</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@a2eorigins" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/VLPLo-GtrIE/300x300" alt="Portrait by Alex Perez" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Alex Perez</figcaption>
-			</figure>
-		</a>
-	</div>
-	
-	<div class="gallery__column">
-		<a href="https://unsplash.com/@noahbuscher" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/AR7aumwKr2s/300x300" alt="Portrait by Noah Buscher" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Noah Buscher</figcaption>
-			</figure>
-		</a>
-		
-		<a href="https://unsplash.com/@von_co" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/dnL6ZIpht2s/300x300" alt="Portrait by Ivana Cajina" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Ivana Cajina</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@samburriss" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/tV_1sC603zA/300x500" alt="Portrait by Sam Burriss" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Sam Burriss</figcaption>
-			</figure>
-		</a>
-	</div>
-	
-	<div class="gallery__column">
-		<a href="https://unsplash.com/@marilezhava" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/Xm9-vA_bhm0/300x500" alt="Portrait by Mari Lezhava" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Mari Lezhava</figcaption>
-			</figure>
-		</a>
-		
-		<a href="https://unsplash.com/@ethanhaddox" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/NTjSR3zYpsY/300x300" alt="Portrait by Ethan Haddox" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Ethan Haddox</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@mr_geshani" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/2JH8d3ChNec/300x300" alt="Portrait by Amir Geshani" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Amir Geshani</figcaption>
-			</figure>
-		</a>
-	</div>
-	
-	<div class="gallery__column">
-		<a href="https://unsplash.com/@frxgui" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/FQhLLehm4dk/300x300" alt="Portrait by Guilian Fremaux" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Guilian Fremaux</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@majestical_jasmin" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/OQd9zONSx7s/300x300" alt="Portrait by Jasmin Chew" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Jasmin Chew</figcaption>
-			</figure>
-		</a>
-		
-		<a href="https://unsplash.com/@dimadallacqua" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/XZkEhowjx8k/300x500" alt="Portrait by Dima DallAcqua" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Dima DallAcqua</figcaption>
-			</figure>
-		</a>
-	</div>
-</div>
+  <section id="portfolio">
+    <div class="project">
+      <img class="project__image" src="https://images.unsplash.com/photo-1519211975560-4ca611f5a72a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ae34625b8db390fb2b784800d76d225&auto=format&fit=crop&w=700&q=80" />
+      <p>websites</p>
+      <h3 class="grid__title"> front-end</h3>
+      <div class="grid__overlay">
+        <button class="viewbutton">view more</button>
+      </div>
+    </div>
+    
+    <div class="project">
+      <img class="project__image" src="https://images.unsplash.com/photo-1521104955835-ba91c70d6443?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38cdeda7d073c4b6d47a5776f184cba9&auto=format&fit=crop&w=700&q=80" />
+      <p>pure css</p>
+      <h3 class="grid__title"> front-end</h3>
+      <div class="grid__overlay">
+        <button class="viewbutton">view more</button>
+      </div>
+    </div>
+    
+    <div class="project">
+      <img class="project__image" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5a31d03ddee66863a599421f792e07b&auto=format&fit=crop&w=700&q=80" />
+      <p>web apps</p>
+      <h3 class="grid__title"> full-stack</h3>
+      <div class="grid__overlay">
+        <button class="viewbutton">view more</button>
+      </div>
+    </div>
+    
+    <div class="project">
+      <img class="project__image" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dd4d735954f33290fbf984e4eb7abe32&auto=format&fit=crop&w=700&q=80" />
+      <p>daily ui</p>
+      <h3 class="grid__title"> ui/ux design</h3>
+      <div class="grid__overlay">
+        <button class="viewbutton">view more</button>
+      </div>
+    </div>
+    <div class="project">
+      <img class="project__image" src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c5008952226f48ed4bf5d3ea64ff545&auto=format&fit=crop&w=700&q=80" />
+      <p>websites</p>
+      <h3 class="grid__title"> front-end</h3>
+      <div class="grid__overlay">
+        <button class="viewbutton">view more</button>
+      </div>
+    </div>
+    
+    <div class="project">
+      <img class="project__image" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?ixlib=rb-0.3.5&s=a4b3dc4bee43da458f6aa5c05be6bfc4&auto=format&fit=crop&w=700&q=80" />
+      <p>pure css</p>
+      <h3 class="grid__title"> front-end</h3>
+      <div class="grid__overlay">
+        <button class="viewbutton">view more</button>
+      </div>
+    </div>
+    
+    <div class="project">
+      <img class="project__image" src="https://images.unsplash.com/photo-1481762554390-ff5562748bdf?ixlib=rb-0.3.5&s=1b7f850b7f8f702e237b0f81c0ec0bf5&auto=format&fit=crop&w=700&q=80" />
+      <p>web apps</p>
+      <h3 class="grid__title"> full-stack</h3>
+      <div class="grid__overlay">
+        <button class="viewbutton">view more</button>
+      </div>
+    </div>
+    
+    <div class="project">
+      <img class="project__image" src="https://images.unsplash.com/photo-1463620695885-8a91d87c53d0?ixlib=rb-0.3.5&s=e5bf2f64858b8abe2a386b0c6df594e4&auto=format&fit=crop&w=700&q=80" />
+      <p>daily ui</p>
+      <h3 class="grid__title"> ui/ux design</h3>
+      <div class="grid__overlay">
+        <button class="viewbutton">view more</button>
+      </div>
+    </div>
+    <div class="overlay">
+      <div class="overlay__inner">
+        <button class="close">close X</button>
+        <img>
+      </div>
+    </div>
+  </section>
 
 <!-- <div class="child-page-listing">
    <div class="grid-container">
