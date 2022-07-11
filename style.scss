@@ -579,9 +579,9 @@ button {
   background: $white;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 2px;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+//   grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
 }
 .project {
   position: relative;
@@ -590,6 +590,7 @@ button {
   img {
     position: absolute;
     opacity: 0.9;
+    height: 100%
   }
   p {
     position: absolute;
