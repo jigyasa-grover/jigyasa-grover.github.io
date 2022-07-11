@@ -4,6 +4,25 @@ title: Media Features
 permalink: /featured/
 ---
 
+<script>
+  const buttons = document.querySelectorAll('.project');
+const overlay = document.querySelector('.overlay');
+const overlayImage = document.querySelector('.overlay__inner img');
+
+function open(e) {
+  overlay.classList.add('open');
+  const src= e.currentTarget.querySelector('img').src;
+  overlayImage.src = src;
+}
+
+function close() {
+  overlay.classList.remove('open');
+}
+
+buttons.forEach(button => button.addEventListener('click', open));
+overlay.addEventListener('click', close);
+</script>
+
   <section id="portfolio">
     <div class="project">
       <img class="project__image" src="https://images.unsplash.com/photo-1519211975560-4ca611f5a72a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ae34625b8db390fb2b784800d76d225&auto=format&fit=crop&w=700&q=80" />
