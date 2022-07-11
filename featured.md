@@ -29,7 +29,10 @@ overlay.addEventListener('click', close);
       <p>websites</p>
       <h3 class="grid__title"> front-end</h3>
       <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
+        <button class="viewbutton">
+          <a href="https://www.womeninai.co/post/women-in-ai-awards-honor-the-top-female-artificial-intelligence-innovators-in-north-america">Outstanding in AI - Young Role Model of the Year Award</a>
+          </button>
+<!--         <button class="viewbutton">view more</button> -->
       </div>
     </div>
     
