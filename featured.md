@@ -3,7 +3,7 @@ layout: page
 title: Media Features
 permalink: /featured/
 ---
-
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
 <div class="gallery">
 	<div class="gallery__column">
 		<a href="https://unsplash.com/@jeka_fe" target="_blank" class="gallery__link">
