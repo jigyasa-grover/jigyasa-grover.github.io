@@ -7,8 +7,8 @@ permalink: /featured/
   <section id="portfolio">
     <div class="project">
       <img class="project__image" src="https://images.unsplash.com/photo-1519211975560-4ca611f5a72a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ae34625b8db390fb2b784800d76d225&auto=format&fit=crop&w=700&q=80" />
-      <p>websites</p>
-      <h3 class="grid__title"> front-end</h3>
+<!--       <p>websites</p>
+      <h3 class="grid__title"> front-end</h3> -->
       <div class="grid__overlay">
         <button class="viewbutton">
           <a href="https://www.womeninai.co/post/women-in-ai-awards-honor-the-top-female-artificial-intelligence-innovators-in-north-america">Outstanding in AI - Young Role Model of the Year Award</a>
@@ -19,8 +19,8 @@ permalink: /featured/
     
     <div class="project">
       <img class="project__image" src="https://images.unsplash.com/photo-1521104955835-ba91c70d6443?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38cdeda7d073c4b6d47a5776f184cba9&auto=format&fit=crop&w=700&q=80" />
-      <p>pure css</p>
-      <h3 class="grid__title"> front-end</h3>
+<!--       <p>pure css</p>
+      <h3 class="grid__title"> front-end</h3> -->
       <div class="grid__overlay">
         <button class="viewbutton">view more</button>
       </div>
@@ -37,8 +37,8 @@ permalink: /featured/
     
     <div class="project">
       <img class="project__image" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dd4d735954f33290fbf984e4eb7abe32&auto=format&fit=crop&w=700&q=80" />
-      <p>daily ui</p>
-      <h3 class="grid__title"> ui/ux design</h3>
+<!--       <p>daily ui</p>
+      <h3 class="grid__title"> ui/ux design</h3> -->
       <div class="grid__overlay">
         <button class="viewbutton">view more</button>
       </div>
