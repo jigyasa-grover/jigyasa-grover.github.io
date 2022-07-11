@@ -6,7 +6,7 @@ permalink: /featured/
 
   <section id="portfolio">
     <div class="project">
-      <img class="project__image" src="/images/IMG_4865.jpg" width="700" object-fit="cover" />
+      <img class="project__image" src="/images/womeninai.png" width="700" object-fit="cover" />
 <!--       <p>websites</p>
       <h3 class="grid__title"> front-end</h3> -->
       <div class="grid__overlay">
