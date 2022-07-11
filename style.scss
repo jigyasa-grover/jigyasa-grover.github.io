@@ -551,10 +551,10 @@ footer {
 //ImageGrid END
 
 // Image Grid for media features V2 START
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Merriweather');
+// @import url('https://fonts.googleapis.com/css?family=Inconsolata|Merriweather');
 
-$body: 'Inconsolata', monospace;
-$big: 'Merriweather', serif;
+// $body: 'Inconsolata', monospace;
+// $big: 'Merriweather', serif;
 
 $white: #ffffff;
 $primary: #F2DAD7;
@@ -564,10 +564,10 @@ $dark: #474545;
 
 $ease: all 0.3s ease-in-out;
 
-body {
-  font-family: $body;
-  margin: 0;
-}
+// body {
+//   font-family: $body;
+//   margin: 0;
+// }
 
 button {
   cursor: pointer;
