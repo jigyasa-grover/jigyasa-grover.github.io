@@ -6,7 +6,7 @@ permalink: /featured/
 
   <section id="portfolio">
     <div class="project">
-      <img class="project__image" src="/images/IMG_4865.jpg&auto=format&fit=crop&w=700&q=80" />
+      <img class="project__image" src="https://github.com/jigyasa-grover/jigyasa-grover.github.io/blob/7a035d4dbef1d97967fe467f72ae2427c8fee9f9/images/womeninai.png" width="700" object-fit="cover" />
 <!--       <p>websites</p>
       <h3 class="grid__title"> front-end</h3> -->
       <div class="grid__overlay">
