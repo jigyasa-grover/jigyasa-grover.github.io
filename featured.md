@@ -23,12 +23,12 @@ permalink: /featured/
       </div>
     </div>
     
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5a31d03ddee66863a599421f792e07b&auto=format&fit=crop&w=700&q=80" />
-      <p>web apps</p>
-      <h3 class="grid__title"> full-stack</h3>
+     <div class="project">
+      <img class="project__image" src="/images/1651276456453.jpeg"/>
       <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
+        <button class="viewbutton">
+          <a href="https://builtin.com/women-tech/moxie-award-winners">Introducing Built In’s 2022 Moxie Award Winners</a>
+          </button>
       </div>
     </div>
     
