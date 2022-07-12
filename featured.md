@@ -23,7 +23,17 @@ permalink: /featured/
       </div>
     </div>
     
-     <div class="project">
+      <div class="project">
+      <img class="project__image" src="/images/appliedai.jpeg"/>
+      <div class="grid__overlay">
+        <button class="viewbutton">
+          <a href="https://open.spotify.com/episode/6IwWp2TmXZI0MVLGHW4Qtl/">Conversations on Applied AI - Stories from Experts in Artificial Intelligence</a>
+          </button>
+      </div>
+    </div>
+    
+  
+  <div class="project">
       <img class="project__image" src="/images/1651276456453.jpeg"/>
       <div class="grid__overlay">
         <button class="viewbutton">
@@ -32,23 +42,7 @@ permalink: /featured/
       </div>
     </div>
     
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dd4d735954f33290fbf984e4eb7abe32&auto=format&fit=crop&w=700&q=80" />
-<!--       <p>daily ui</p>
-      <h3 class="grid__title"> ui/ux design</h3> -->
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c5008952226f48ed4bf5d3ea64ff545&auto=format&fit=crop&w=700&q=80" />
-      <p>websites</p>
-      <h3 class="grid__title"> front-end</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
+   
     <div class="project">
       <img class="project__image" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?ixlib=rb-0.3.5&s=a4b3dc4bee43da458f6aa5c05be6bfc4&auto=format&fit=crop&w=700&q=80" />
       <p>pure css</p>
