@@ -60,4 +60,13 @@ permalink: /featured/
     </div>
   </div>
   
+  <div class="project">
+    <img class="project__image" src="/images/wios.png" target="_blank" />
+    <div class="grid__overlay">
+      <button class="viewbutton">
+        <a href="https://www.redhat.com/en/about/press-releases/red-hat-announces-2017-women-open-source-award-winners">Women in Open Source Award Winner</a>
+      </button>
+    </div>
+  </div>
+  
 </section>
