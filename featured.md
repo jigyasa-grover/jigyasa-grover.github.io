@@ -51,4 +51,13 @@ permalink: /featured/
     </div>
   </div>
   
+  <div class="project">
+    <img class="project__image" src="/images/IMG_2368.JPG" target="_blank" />
+    <div class="grid__overlay">
+      <button class="viewbutton">
+        <a href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf">Winner: Yuuvis® Hackathon San Francisco</a>
+      </button>
+    </div>
+  </div>
+  
 </section>
