@@ -41,5 +41,14 @@ permalink: /featured/
       </button>
     </div>
   </div>
+ 
+  <div class="project">
+    <img class="project__image" src="/images/devprog.png" target="_blank" />
+    <div class="grid__overlay">
+      <button class="viewbutton">
+        <a href="https://www.youtube.com/watch?v=O5L2e1UrQtI">Gameshow Winner: S1E5 of DevProdEng Showdown!</a>
+      </button>
+    </div>
+  </div>
   
 </section>
