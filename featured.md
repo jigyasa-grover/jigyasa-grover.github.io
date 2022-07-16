@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Media Features
+title: Features
 permalink: /featured/
 ---
 
