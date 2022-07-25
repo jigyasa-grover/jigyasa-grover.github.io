@@ -7,19 +7,19 @@ permalink: /featured/
 <section id="portfolio">
   
   <div class="project">
-    <img class="project__image" src="/images/WAI.jpeg" />
-    <div class="grid__overlay">
-      <button class="viewbutton">
-        <a href="https://www.womeninai.co/post/women-in-ai-awards-honor-the-top-female-artificial-intelligence-innovators-in-north-america" target="_blank">Outstanding in AI - Young Role Model of the Year Award</a>
-      </button>
-    </div>
-  </div>
-  
-  <div class="project">
     <img class="project__image" src="/images/vb_rising_star.png" />
     <div class="grid__overlay">
       <button class="viewbutton">
         <a href="https://venturebeat.com/2022/07/19/transform-2020-women-in-ai-and-ai-innovation-awards-the-winners-are/" target="_blank">VentureBeat Women in AI : Rising Star Award Winner</a>
+      </button>
+    </div>
+  </div>
+  
+   <div class="project">
+    <img class="project__image" src="/images/WAI.jpeg" />
+    <div class="grid__overlay">
+      <button class="viewbutton">
+        <a href="https://www.womeninai.co/post/women-in-ai-awards-honor-the-top-female-artificial-intelligence-innovators-in-north-america" target="_blank">Outstanding in AI - Young Role Model of the Year Award</a>
       </button>
     </div>
   </div>
