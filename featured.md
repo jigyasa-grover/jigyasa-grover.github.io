@@ -16,10 +16,10 @@ permalink: /featured/
   </div>
   
   <div class="project">
-    <img class="project__image" src="/images/VentureBeatsWAI.png" />
+    <img class="project__image" src="/images/vb_rising_star.png" />
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://venturebeat.com/2022/07/08/meet-the-nominees-for-the-2022-venturebeat-women-in-ai-awards/" target="_blank">VentureBeat Women in AI Awards Finalist</a>
+        <a href="https://venturebeat.com/2022/07/19/transform-2020-women-in-ai-and-ai-innovation-awards-the-winners-are/" target="_blank">VentureBeat Women in AI : Rising Star Award Winner</a>
       </button>
     </div>
   </div>
