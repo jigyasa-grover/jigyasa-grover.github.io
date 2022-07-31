@@ -6,7 +6,7 @@ comments: true
 mathjax: true
 ---
 
-<p>Tonight's explorations led me to the ✨gold✨ standard of mitigating the leakage of data in <a href="https://twitter.com/hashtag/ML">#ML</a> -- <a href="https://twitter.com/hashtag/DifferentalPrivacy">#DifferentalPrivacy</a>. The idea is to add very subtle statistical noise (in the dataset) to make it impossible to infer information about an individual data point.</p>
+<p>Tonight's explorations led me to the ✨gold✨ standard of mitigating the leakage of data in <a href="https://twitter.com/hashtag/ML">#ML</a> -- <a href="https://twitter.com/hashtag/DifferentalPrivacy">#DifferentialPrivacy</a>. The idea is to add very subtle statistical noise (in the dataset) to make it impossible to infer information about an individual data point.</p>
 
 <center>
   <blockquote class="twitter-tweet"><p lang="en" dir="ltr">To put it simply:<br><br>Privacy-Preserving ML = Data Privacy + Model Privacy</p>&mdash; Jigyasa Grover ✨ (@jigyasa_grover) <a href="https://twitter.com/jigyasa_grover/status/1546358987016155136?ref_src=twsrc%5Etfw">July 11, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
