@@ -1,7 +1,7 @@
 ---
 layout: post
 type: blog
-title: Human Data Annotators: Lifeline of the AI pipeline!
+title: Human Data Annotators - Lifeline of the AI pipeline!
 comments: true
 mathjax: true
 ---
