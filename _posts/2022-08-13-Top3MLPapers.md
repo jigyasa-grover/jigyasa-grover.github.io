@@ -20,6 +20,10 @@ mathjax: true
 
 <p><a rel="noreferrer noopener" href="https://arxiv.org/pdf/2205.11728.pdf" target="_blank"><strong>ItemSage: Learning Product Embeddings for Shopping Recommendations at Pinterest<br></strong></a>My last recommendation is a paper by Pinterest that illustrates the aggregation of both textual and visual information to build a unified set of product embeddings to enhance recommendation results on e-commerce websites. By applying multi-task learning, the proposed embeddings can optimize for multiple engagement types (eg. click, save, add to cart, etc.) and ensures that the shopping recommendation stack is efficient with respect to all objectives. The paper further indicates how this approach leads to reduced maintenance and infrastructure costs as there is no need to infer separate embeddings per vertical application (eg. home, search, product closeup, etc.).</p>
 
+<center>
+  
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6963052659117350913" height="869" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6962605781762404352" height="914" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+
+</center>
