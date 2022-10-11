@@ -7,11 +7,20 @@ permalink: /featured/
 <section id="portfolio">
   
   <div class="project">
+    <img class="project__image" src="/images/top50.jpeg" />
+    <div class="grid__overlay">
+      <button class="viewbutton">
+        <a href="[https://www.ntd.com/meta-introduces-ai-text-to-video-creator_849271.html](https://www.engatica.com/blog/top-50-machine-learning-and-data-science-experts-to-follow-for-2023?contentId=634551c86f56fd1389e92c50)" target="_blank">Top 50 Machine Learning and Data Science experts to follow for 2023</a>
+      </button>
+    </div>
+  </div>
+  
+  
+  <div class="project">
     <img class="project__image" src="/images/ntd.jpg" />
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://www.ntd.com/meta-introduces-ai-text-to-video-creator_849271.html" target="_blank">Live TV @ NTD: Meta Introduces AI Text-to-Video Creator
-</a>
+        <a href="https://www.ntd.com/meta-introduces-ai-text-to-video-creator_849271.html" target="_blank">Live TV @ NTD: Meta Introduces AI Text-to-Video Creator</a>
       </button>
     </div>
   </div>
