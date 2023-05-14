@@ -6,9 +6,9 @@ permalink: /about
 
 <div class="column leftcol" style="text-align:justify;padding-right:40px">
 
-Hey 👋🏻 Thank you for dropping by! 
+<p>My name is <strong>Jigyasa Grover</strong> (pronounced as <em>JIG-yah-suh GROH-ver</em>).</p>
  
-<p>My name is <strong>Jigyasa Grover</strong> (pronounced as <em>JIG-yah-suh GROH-ver</em>)! <strong>10-time award winner</strong> in Artificial Intelligence and Open Source and the <strong>co-author of the book 'Sculpting Data For ML'</strong>, I am striving to make a dent in this world of technology and bridge the gaps. I have 5+ years of ML engineering &amp; Data Science experience in deploying large‐scale systems for monetization on social networking and e‐commerce platforms with a focus on ads prediction, sponsored content ranking, and recommendation. I am also one of the few ML <strong>Google Developer Experts</strong> globally.</p>
+<p><strong>10-time award winner</strong> in Artificial Intelligence and Open Source and the <strong>co-author of the book 'Sculpting Data For ML'</strong>, I am striving to make a dent in this world of technology and bridge the gaps. I have 5+ years of ML engineering &amp; Data Science experience in deploying large‐scale systems for monetization on social networking and e‐commerce platforms with a focus on ads prediction, sponsored content ranking, and recommendation. I am also one of the few ML <strong>Google Developer Experts</strong> globally.</p>
  
 <p>At present, I am at <strong>Faire</strong> as a Senior Data Scientist, building paid brands placements (ads) marketplace and ranking engine from the ground up to diversify company revenue streams. Previously, I was at <strong>Twitter</strong> as a Senior Machine Learning Engineer in the Online Ads Prediction &amp; Ranking domain, where I worked towards boosting the revenue and other advertising metrics of the platform. I have driven projects spanning ML model quality and performance improvements (viz. conversion rate, cost per conversion, revenue), feature engineering (feature set extension, imputation, and importance pipelines), privacy-preserving, Apple App Tracking Transparency (ATT) remediation, and SKAdNetwork mobile attribution and measurement.</p>
  
