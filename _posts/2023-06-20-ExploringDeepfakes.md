@@ -12,6 +12,8 @@ mathjax: true
 
 <p>My favorite part of the chapter was certainly <strong>deep fakes</strong> since it was intriguing to dive into the various real-world case studies of their generation, propagation, and detection 🥸 My probing stepped up a level when <a href="https://www.packtpub.com/" target="_blank">Packt Publishers</a> sent over a copy of their latest book on this theme titled <a href="https://www.amazon.com/Exploring-Deepfakes-techniques-replacement-comprehensive/dp/1801810699" target="_blank">Exploring Deepfakes: Deploy powerful AI techniques for face replacement and more</a> for review.</p>
 
+<img src="../images/bookreview.jpg" width=500px ></img>
+
 <p>Bryan Lyon and Matt Tora have done a wonderful job covering the basics of deepfakes, including their working, history, and potential uses. One of the strengths of the book is its discussion of the ethical implications of <strong>Deep Fakes</strong>. The authors acknowledge that deepfakes can be used for malicious purposes, such as spreading misinformation or creating explicit audiovisuals for revenge. However, they also argue that deepfakes can be used for positive purposes, such as creating educational content or making films more realistic.</p>
 
 <p>In my opinion, books become more utilitarian when they dispense practical knowledge to their readers. The highlight of this book is the step-by-step instructions on how to create your own deepfakes using <strong>Open Source</strong> software. The authors have explained the technical concepts clearly and concisely.</p>
