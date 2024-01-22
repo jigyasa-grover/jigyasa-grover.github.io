@@ -18,7 +18,7 @@ permalink: /about
  
 <p>I am an avid proponent of Open Source and credit my career growth to this sphere of community development. I am also the proud recipient of multiple scholarships for my research and travels like Mitacs Globalink, Linux Foundation, Facebook GHC, ESUG, and many more. I have <strong>150+ media features, keynotes, conference talks, panels, workshops, and podcasts</strong> to my name, with renowned entities like <strong>Google, United Nations, NTD Business, International Business Times</strong>, SiliconAngle, CubeTV, etc. My love for tinkering has led me to win 5+ hackathons, sponsored by Microsoft, Google, Github, etc. and I now give back to the community by serving on the judges' panel of hackathons.</p>
  
-<p>Apart from my technological ventures, I enjoy exploring hidden gems in my city, hanging out with friends and family, and have been recently having fun with baking. To get in touch, you can EMail at <a href="mailto:jigrover@eng.ucsd.edu">jigrover[at]eng[dot]ucsd[dot]com</a> or DM on Twitter <a href="https://twitter.com/messages/compose?recipient_id=3180367712&text=Hi%20Jigyasa!" class="twitter-dm-button" data-screen-name="@jigyasa_grover" data-size=large>Message @jigyasa_grover</a> </p>
+<p>Apart from my technological ventures, I enjoy exploring hidden gems in my city, hanging out with friends and family, and have been recently having fun with baking. To get in touch, you can EMail at <a href="mailto:grover.jigyasa2@gmail.com">grover[at]jigyasa2[dot]gmail[dot]com</a> or DM on Twitter <a href="https://twitter.com/messages/compose?recipient_id=3180367712&text=Hi%20Jigyasa!" class="twitter-dm-button" data-screen-name="@jigyasa_grover" data-size=large>Message @jigyasa_grover</a> </p>
 
 <br> <br>
 
