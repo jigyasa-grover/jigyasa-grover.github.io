@@ -6,9 +6,7 @@ comments: true
 mathjax: true
 ---
 
-<p><em><strong>How do you keep up with the countless innovations and state-of-the-art R&amp;D. happening?</strong> </em></p>
-
-<p>This is one of the most commonly asked questions. 🎙💭🤔</p>
+<p><em><strong>How do you keep up with the countless innovations and state-of-the-art R&amp;D happening?</strong> </em> This is one of the most commonly asked questions. 🎙💭🤔</p>
 
 <p>And I have a pretty standard response to it - you have to go above and beyond your day-job to keep up with the developments. Things that have worked for me so far:<br>✅ attending research and developer conferences<br>✅ subscribing to newsletters<br>✅ reading papers and blogs<br>✅ joining reading groups<br>✅ discussing with friends or peers</p>
 
