@@ -83,6 +83,7 @@ learning rate multiplier: 0.1
 batch size: 32
 </code></pre>
 
+<br><br>
 <figure class="wp-block-image size-large"><a href="https://jigyasagrover.files.wordpress.com/2024/03/image-3.png"><img src="https://jigyasagrover.files.wordpress.com/2024/03/image-3.png?w=1024" alt="" class="wp-image-3355"/></a><figcaption class="wp-element-caption"><em>Check out this <a href="https://ai.google.dev/docs/model_tuning_guidance">guide</a> by Google for more on tuning the text model behind the Gemini API text service. </em></figcaption></figure>
 
 <br><br>
