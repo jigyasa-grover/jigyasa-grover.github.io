@@ -8,6 +8,8 @@ mathjax: true
 
 <p>Are you tired of staring at a blank screen, struggling to craft captivating headlines and categorize news articles effectively? Say goodbye to news copywriter's block as we harness the power of Gemini Pro. In this article, we'll explore how this cutting-edge technology can supercharge your productivity and creativity, helping you craft compelling headlines and easily categorize news articles.</p>
 
+<br><br>
+
 <figure class="wp-block-image size-large"><a href="https://jigyasagrover.files.wordpress.com/2024/03/huge.png"><img src="https://jigyasagrover.files.wordpress.com/2024/03/huge.png?w=1024" alt="" class="wp-image-3366"/></a></figure>
 
 <br><br>
