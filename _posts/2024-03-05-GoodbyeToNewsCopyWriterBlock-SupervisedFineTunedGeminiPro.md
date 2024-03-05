@@ -8,6 +8,9 @@ mathjax: true
 
 <p>Are you tired of staring at a blank screen, struggling to craft captivating headlines and categorize news articles effectively? Say goodbye to news copywriter's block as we harness the power of Gemini Pro. In this article, we'll explore how this cutting-edge technology can supercharge your productivity and creativity, helping you craft compelling headlines and easily categorize news articles.</p>
 
+<figure class="wp-block-image size-large"><a href="https://jigyasagrover.files.wordpress.com/2024/03/huge.png"><img src="https://jigyasagrover.files.wordpress.com/2024/03/huge.png?w=1024" alt="" class="wp-image-3366"/></a></figure>
+
+<br><br>
 <h3 class="wp-block-heading"><strong>What is Gemini Pro? </strong></h3>
 
 <p><a href="https://blog.google/technology/ai/google-gemini-ai/">Gemini</a> is a family of highly capable multimodal models developed at Google. The Gemini models are trained jointly across image, audio, video, and text data to build a model with strong generalist capabilities across modalities alongside cutting-edge understanding and reasoning performance in each respective domain. Its state-of-the-art capabilities are aimed to significantly enhance the way developers and enterprise customers build and scale with AI. Google has optimized Gemini 1.0, the first version, for three different sizes:</p>
