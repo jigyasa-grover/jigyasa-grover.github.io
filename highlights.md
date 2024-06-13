@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Media
-permalink: /media/
+title: Highlights
+permalink: /highlights/
 ---
 
 <section id="portfolio">
