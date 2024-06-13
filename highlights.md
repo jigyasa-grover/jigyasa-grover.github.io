@@ -20,7 +20,7 @@ permalink: /highlights/
     <img class="project__image" src="/images/ntd_live_tv_2022.jpg" />
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://www.ntd.com/meta-introduces-ai-text-to-video-creator_849271.html" target="_blank">Live TV @ NTD: Meta Introduces AI Text-to-Video Creator</a>
+        <a href="https://www.ntd.com/meta-introduces-ai-text-to-video-creator_849271.html" target="_blank">Live TV @ NTD - Meta Introduces AI Text-to-Video Creator</a>
       </button>
     </div>
   </div>
@@ -30,7 +30,7 @@ permalink: /highlights/
     <img class="project__image" src="/images/venture_beat_rising_star_award.png" />
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://venturebeat.com/2022/07/19/transform-2020-women-in-ai-and-ai-innovation-awards-the-winners-are/" target="_blank">VentureBeat Women in AI : Rising Star Award Winner</a>
+        <a href="https://venturebeat.com/2022/07/19/transform-2020-women-in-ai-and-ai-innovation-awards-the-winners-are/" target="_blank">VentureBeat Women in AI - Rising Star Award Winner</a>
       </button>
     </div>
   </div>
@@ -58,7 +58,7 @@ permalink: /highlights/
     <img class="project__image" src="/images/moxie_award_winner.jpeg"/>
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://builtin.com/women-tech/moxie-award-winners" target="_blank">Introducing Built In’s 2022 Moxie Award Winners</a>
+        <a href="https://builtin.com/women-tech/moxie-award-winners" target="_blank">Built-In Moxie Award Winner</a>
       </button>
     </div>
   </div>
@@ -67,7 +67,7 @@ permalink: /highlights/
     <img class="project__image" src="/images/devprodeng_showdown_winner.png"/>
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://www.youtube.com/watch?v=O5L2e1UrQtI" target="_blank">Gameshow Winner: S1E5 of DevProdEng Showdown!</a>
+        <a href="https://www.youtube.com/watch?v=O5L2e1UrQtI" target="_blank">Gameshow Winner - DevProdEng Showdown S1E5</a>
       </button>
     </div>
   </div>
@@ -76,7 +76,7 @@ permalink: /highlights/
     <img class="project__image" src="/images/yuuvis_hackathon_winner.jpg"/>
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank">Winner: Yuuvis® Hackathon San Francisco</a>
+        <a href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank">Winner - Yuuvis® Hackathon San Francisco</a>
       </button>
     </div>
   </div>
