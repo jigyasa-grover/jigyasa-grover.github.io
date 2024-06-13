@@ -7,7 +7,7 @@ permalink: /highlights/
 <section id="portfolio">
   
   <div class="project">
-    <img class="project__image" src="/images/top50.jpeg" />
+    <img class="project__image" src="/images/engatica_top_50_ml_experts.jpeg" />
     <div class="grid__overlay">
       <button class="viewbutton">
         <a href="https://www.engatica.com/blog/top-50-machine-learning-and-data-science-experts-to-follow-for-2023?contentId=634551c86f56fd1389e92c50" target="_blank">Top 50 Machine Learning and Data Science experts to follow for 2023</a>
