@@ -85,7 +85,7 @@ permalink: /highlights/
     <img class="project__image" src="/images/red_hat_women_in_open_source_award_winner.png"/>
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://www.redhat.com/en/about/press-releases/red-hat-announces-2017-women-open-source-award-winners" target="_blank">Women in Open Source Award Winner</a>
+        <a href="https://www.redhat.com/en/about/press-releases/red-hat-announces-2017-women-open-source-award-winners" target="_blank">International Women in Open Source Academic Award Winner</a>
       </button>
     </div>
   </div>
