@@ -64,7 +64,7 @@ permalink: /highlights/
   </div>
  
   <div class="project">
-    <img class="project__image" src="/images/devprog.png"/>
+    <img class="project__image" src="/images/devprodeng_showdown_winner.png"/>
     <div class="grid__overlay">
       <button class="viewbutton">
         <a href="https://www.youtube.com/watch?v=O5L2e1UrQtI" target="_blank">Gameshow Winner: S1E5 of DevProdEng Showdown!</a>
