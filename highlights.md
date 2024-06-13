@@ -55,7 +55,7 @@ permalink: /highlights/
   </div>
   
   <div class="project">
-    <img class="project__image" src="/images/1651276456453.jpeg"/>
+    <img class="project__image" src="/images/moxie_award_winner.jpeg"/>
     <div class="grid__overlay">
       <button class="viewbutton">
         <a href="https://builtin.com/women-tech/moxie-award-winners" target="_blank">Introducing Built In’s 2022 Moxie Award Winners</a>
