@@ -6,7 +6,8 @@
 
 @import "reset";
 @import "variables";
-// Syntax highlighting @import is at the bottom of this file
+@import "highlights";
+@import "svg-icons";
 
 /**************/
 /* BASE RULES */
@@ -505,95 +506,7 @@ color: #606060;
   box-shadow: 2px 2px 0 transparent;
 }
 
-//ImageGrid START
-// .grid-container {
-//   display: grid;
-//   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-//   grid-gap: 1em;
-// }
-
-
-// /* hover styles */
-// .location-listing {
-//   position: relative;
-// }
-
-// .location-image {
-//   line-height: 0;
-//   overflow: hidden;
-//   border-radius: 15px;
-//   height: 100%;
-// }
-
-// .location-image img {
-//   filter: blur(0px);
-//   transition: filter 0.3s ease-in;
-//   transform: scale(1.1);
-// }
-
-// .location-title {
-//   font-size: 1.5em;
-//   font-weight: bold;
-//   text-decoration: none;
-//   z-index: 1;
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-//   top: 0;
-//   left: 0;
-//   opacity: 0;
-//   transition: opacity .5s;
-// //   background: rgba(90,0,10,0.4);
-//   background: #00000094;
-//   color: white;
-//   text-align:center;
-//   padding: 10px;
-//   border-radius: 15px;
-
-//   /* position the text in t’ middle*/
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .location-listing .location-title {
-//   opacity: 1;
-// }
-
-// .location-listing .location-image img {
-//   filter: blur(2px);
-// }
-
-
-// /* for touch screen devices */
-// @media (hover: none) { 
-//   .location-title {
-//     opacity: 1;
-//   }
-//   .location-image img {
-//     filter: blur(2px);
-//   }
-// }
-//ImageGrid END
-
-// Image Grid for media features V2 START
-// @import url('https://fonts.googleapis.com/css?family=Inconsolata|Merriweather');
-
-// $body: 'Inconsolata', monospace;
-// $big: 'Merriweather', serif;
-
-$white: #ffffff;
-$primary: #F2DAD7;
-$secondary: #D1A39E;
-$light: #CECDCA;
-$dark: #474545;
-
-$ease: all 0.3s ease-in-out;
-
-// body {
-//   font-family: $body;
-//   margin: 0;
-// }
+// START -- Image Grid for media features
 
 button {
   cursor: pointer;
@@ -613,7 +526,7 @@ button {
 
 .project {
   position: relative;
-  background: $primary;
+  background: $vanillaIce;
   overflow: hidden;
   border-radius: 5px;
 
@@ -643,7 +556,7 @@ button {
     font-size: 0.8em;
     z-index: 3;
     text-transform: uppercase;
-    color: $dark;
+    color: $darkGray;
     letter-spacing: 2px;
   }
 }
@@ -654,7 +567,7 @@ button {
 }
 
 .grid__overlay {
-  background: rgba(darken($primary, 10%), .9);
+  background: rgba(darken($vanillaIce, 10%), .9);
   height: 100%;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
@@ -678,7 +591,7 @@ button {
     &:hover {
       transition: $ease;
       background: $white;
-      color: $secondary;
+      color: $fadedPink;
       transform: scale(1.05);
     }
   }
@@ -688,7 +601,7 @@ button {
 
 .overlay {
   position: fixed;
-  background: rgba($dark, 0.7);
+  background: rgba($darkGray, 0.7);
   top: 0;
   right: 0;
   bottom: 0;
@@ -717,13 +630,13 @@ button {
   right: 10px;
   background: none;
   outline: 0;
-  color: $dark;
+  color: $darkGray;
   border: 0;
   text-transform: uppercase;
   letter-spacing: 2px;
 
   &:hover {
-    color: $secondary;
+    color: $fadedPink;
   }
 }
 
@@ -741,9 +654,4 @@ button {
   margin: auto;
 }
 
-// Image Grid for media features V2 END
-
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
-@import "svg-icons";
+// END -- Image Grid for media features
