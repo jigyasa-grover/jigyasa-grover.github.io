@@ -17,7 +17,7 @@ permalink: /highlights/
   
   
   <div class="project">
-    <img class="project__image" src="/images/ntd.jpg" />
+    <img class="project__image" src="/images/ntd_live_tv_2022.jpg" />
     <div class="grid__overlay">
       <button class="viewbutton">
         <a href="https://www.ntd.com/meta-introduces-ai-text-to-video-creator_849271.html" target="_blank">Live TV @ NTD: Meta Introduces AI Text-to-Video Creator</a>
