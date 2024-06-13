@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <link rel="icon" type="image/png" href="/images/profile_photo.jpg" sizes="32x32" />
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-  
+
     {% include meta.html %}
 
     <!--[if lt IE 9]>
@@ -15,75 +16,75 @@
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
     {% seo %}
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046238616138583"
-     crossorigin="anonymous"></script>
-  </head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046238616138583" crossorigin="anonymous"></script>
+</head>
 
-  <body>
+<body>
     <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+        <div class="container">
+            <header class="masthead clearfix">
+                <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-           <div class="site-info">
-            <center><h2 class="site-name" style="margin-bottom:8px"><a href="{{ site.baseurl }}/"><b>{{ site.name }}</b></a></h2></center>
-            <center><h4 class="site-description">ML Google Developer Expert 🤖</h4></center>
-            <center><h4 class="site-description">AI Engineering & Research Lead 👩🏻‍💻</h4></center>
-            <center><h4 class="site-description">'Sculpting Data for ML' Book Author 📖</h4></center>
-            <center><h4 class="site-description">10x Award Winner in AI & Open Source 🏆</h4></center>
-            <center><h2 style="margin-top:8px"><a href="https://twitter.com/jigyasa_grover?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="true">Follow @jigyasa_grover</a></h2><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
-            <center><h2 style="margin-top:8px">
-              <script
-                src="https://topmate-embed.s3.ap-south-1.amazonaws.com/v1/topmate-embed.js"
-                user-profile="https://topmate.io/embed/profile/jigyasagrover?theme=d20844"
-                btn-style='{"backgroundColor":"#000","color":"#fff","border":"1px solid #000"}'
-                embed-version="v1"
-                button-text="Hop on a call? or DM 🤙🏻"
-                position="relative"
-                custom-padding="4px"
-                custom-font-size="16px"
-                custom-font-weight="500"
-                custom-width="200px"
-                async=""
-                defer=""
-              ></script>
-            </center>
-           </div>
-          
+                <div class="site-info">
+                    <center>
+                        <h2 class="site-name" style="margin-bottom:8px"><a href="{{ site.baseurl }}/"><b>{{ site.name }}</b></a></h2>
+                    </center>
+                    <center>
+                        <h4 class="site-description">ML Google Developer Expert 🤖</h4>
+                    </center>
+                    <center>
+                        <h4 class="site-description">AI Engineering & Research Lead 👩🏻‍💻</h4>
+                    </center>
+                    <center>
+                        <h4 class="site-description">'Sculpting Data for ML' Book Author 📖</h4>
+                    </center>
+                    <center>
+                        <h4 class="site-description">10x Award Winner in AI & Open Source 🏆</h4>
+                    </center>
+                    <center>
+                        <h2 style="margin-top:8px"><a href="https://twitter.com/jigyasa_grover?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="true">Follow @jigyasa_grover</a></h2>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </center>
+                    <center>
+                        <h2 style="margin-top:8px">
+                            <script src="https://topmate-embed.s3.ap-south-1.amazonaws.com/v1/topmate-embed.js" user-profile="https://topmate.io/embed/profile/jigyasagrover?theme=d20844" btn-style='{"backgroundColor":"#000","color":"#fff","border":"1px solid #000"}' embed-version="v1" button-text="Hop on a call? or DM 🤙🏻" position="relative" custom-padding="4px" custom-font-size="16px" custom-font-weight="500" custom-width="200px" async="" defer=""></script>
+                    </center>
+                </div>
 
-          <nav>
-            <a href="https://www.google.com/search?q=jigyasa+grover" target="_blank"><img src="{{ site.baseurl }}/images/search-bar-2.png" width="430px" style="margin-bottom:15px"/></a>
-            </br>
-            {% include svg-icons.html %}
-            </br>
-            <center>
-            <div style="margin-top:20px">
-<!--             <a href="{{ site.baseurl }}/"><b>Home</b></a> -->
-            <a href="{{ site.baseurl }}/blog"><b>Blog</b></a>
-<!--             <a href="{{ site.baseurl }}"><b>Experience</b></a> -->
-            <a href="{{ site.baseurl }}/featured"><b>Features</b></a>
-            <a href="{{ site.baseurl }}/publications"><b>Publications</b></a>
-            <a href="{{ site.baseurl }}/about"><b>About</b></a>
-            </div>
-            </center>
-          </nav>
-        </header>
-      </div>
+
+                <nav>
+                    <a href="https://www.google.com/search?q=jigyasa+grover" target="_blank"><img src="{{ site.baseurl }}/images/search-bar-2.png" width="430px" style="margin-bottom:15px" /></a>
+                    </br>
+                    {% include svg-icons.html %}
+                    </br>
+                    <center>
+                        <div style="margin-top:20px">
+                            <!--             <a href="{{ site.baseurl }}/"><b>Home</b></a> -->
+                            <a href="{{ site.baseurl }}/blog"><b>Blog</b></a>
+                            <!--             <a href="{{ site.baseurl }}"><b>Experience</b></a> -->
+                            <a href="{{ site.baseurl }}/featured"><b>Features</b></a>
+                            <a href="{{ site.baseurl }}/publications"><b>Publications</b></a>
+                            <a href="{{ site.baseurl }}/about"><b>About</b></a>
+                        </div>
+                    </center>
+                </nav>
+            </header>
+        </div>
     </div>
 
     <div id="main" role="main" class="container">
-      {{ content }}
+        {{ content }}
     </div>
 
     <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-<!--           {% include svg-icons.html %} -->
-        </footer>
-      </div>
+        <div class="container">
+            <footer class="footer">
+                <!--           {% include svg-icons.html %} -->
+            </footer>
+        </div>
     </div>
 
     {% include analytics.html %}
-  </body>
+</body>
 
 </html>
