@@ -37,7 +37,7 @@ permalink: /highlights/
   
     
    <div class="project">
-    <img class="project__image" src="/images/WAIv2.png" />
+    <img class="project__image" src="/images/women_in_ai_award_winner_v2.png" />
     <div class="grid__overlay">
       <button class="viewbutton">
         <a href="https://www.womeninai.co/post/women-in-ai-awards-honor-the-top-female-artificial-intelligence-innovators-in-north-america" target="_blank">Outstanding in AI - Young Role Model of the Year Award</a>
