@@ -3,6 +3,8 @@ layout: default
 permalink: /experience/
 ---
 
+# ‼️obsolete‼️
+
 ## Industry Experience
 
 <details>
