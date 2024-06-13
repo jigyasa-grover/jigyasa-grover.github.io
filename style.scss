@@ -110,7 +110,7 @@ p {
 }
 
 a {
-  color: #D20844;
+  color: $richCarmine;
   text-decoration: none;
   cursor: pointer;
 
@@ -119,7 +119,7 @@ a {
   //   }
   &:hover,
   &:active {
-    color: #D20844;
+    color: $richCarmine;
   }
 }
 
@@ -250,7 +250,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: #D20844;
+  color: $richCarmine;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -296,7 +296,7 @@ nav {
   }
 
   a:hover {
-    color: #D20844
+    color: $richCarmine
   }
 }
 
