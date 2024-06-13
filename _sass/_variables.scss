@@ -5,6 +5,8 @@
 // Colors
 $blue: #4183C4;
 $richCarmine: #D20844;
+$vanillaIce: #F2DAD7;
+$fadedPink: #D1A39E;
 
 // Grays
 $black: #000;
@@ -12,7 +14,7 @@ $darkerGray: #222;
 $darkGray: #333;
 $gray: #666;
 $lightGray: #eee;
-$white: #fff;
+$white: #ffffff;
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
@@ -25,3 +27,5 @@ $georgia: Georgia, serif;
 		@content;
 	}
 }
+
+$ease: all 0.3s ease-in-out;
