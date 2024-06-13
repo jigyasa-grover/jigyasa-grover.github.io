@@ -46,7 +46,7 @@ permalink: /highlights/
   </div>
   
   <div class="project">
-    <img class="project__image" src="/images/appliedai.jpeg" />
+    <img class="project__image" src="/images/applied_ai_podcast.jpeg" />
     <div class="grid__overlay">
       <button class="viewbutton">
         <a href="https://open.spotify.com/episode/6IwWp2TmXZI0MVLGHW4Qtl/" target="_blank">Conversations on Applied AI - Stories from Experts in Artificial Intelligence</a>
