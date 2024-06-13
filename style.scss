@@ -1,6 +1,5 @@
 ---
----
-
+--- 
 //
 // IMPORTS
 //
@@ -32,7 +31,12 @@ body {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
   font-weight: bold;
@@ -46,7 +50,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-sub, sup {
+sub,
+sup {
   /* Specified in % so that the sup/sup is the
      right size relative to the surrounding text */
   font-size: 75%;
@@ -77,6 +82,7 @@ sub {
 
 h1 {
   font-size: 30px;
+
   a {
     color: inherit;
   }
@@ -106,16 +112,19 @@ p {
 a {
   color: #D20844;
   text-decoration: none;
-	cursor: pointer;
-//   &:hover, &:active {
-//     color: $blue;
-//   }
-   &:hover, &:active {
+  cursor: pointer;
+
+  //   &:hover, &:active {
+  //     color: $blue;
+  //   }
+  &:hover,
+  &:active {
     color: #D20844;
   }
 }
 
-ul, ol {
+ul,
+ol {
   margin: 15px 0;
   padding-left: 30px;
 }
@@ -128,23 +137,29 @@ ol {
   list-style-type: decimal;
 }
 
-ol ul, ul ol, ul ul, ol ol {
+ol ul,
+ul ol,
+ul ul,
+ol ol {
   margin: 0;
 }
 
-ul ul, ol ul {
+ul ul,
+ol ul {
   list-style-type: circle;
 }
 
-li{
+li {
   margin: 8px 0;
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
-strong, b {
+strong,
+b {
   font-weight: bold;
 }
 
@@ -167,6 +182,7 @@ img {
   color: $black;
   background: $lightGray;
 }
+
 ::selection {
   color: $black;
   background: $lightGray;
@@ -176,12 +192,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
@@ -292,12 +308,12 @@ nav {
   flex: 1 0 auto;
 }
 
-.posts > .post {
+.posts>.post {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
 }
 
-.posts > .post:last-child {
+.posts>.post:last-child {
   padding-bottom: 1em;
   border-bottom: none;
 }
@@ -323,19 +339,19 @@ nav {
 }
 
 .gist {
-   max-width:350px;
-   overflow:auto;
+  max-width: 350px;
+  overflow: auto;
 }
 
 .gist .blob-wrapper.data {
-   max-height:400px;
-   overflow:auto;
+  max-height: 400px;
+  overflow: auto;
 }
 
 .wrapper-footer {
   margin-top: 50px;
-//   border-top: 1px solid #ddd;
-//   border-bottom: 1px solid #ddd;
+  //   border-top: 1px solid #ddd;
+  //   border-bottom: 1px solid #ddd;
   background-color: #FFFFFF;
 }
 
@@ -363,9 +379,11 @@ footer {
   .column {
     width: 100%;
   }
+
   .leftcol {
     width: 100%;
   }
+
   .rightcol {
     width: 100%;
   }
@@ -383,92 +401,100 @@ footer {
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro");
 
 .card {
-	width: 100%;
-    	margin: 0px auto;
-    	background-color: white;
-    	/* box-shadow: 0px 5px 20px #555; */
-    	margin-top: 2em;
-    	margin-bottom: 2em;
-    	border: 2px solid #ded8d8;
-    	border-radius: 10px;
+  width: 100%;
+  margin: 0px auto;
+  background-color: white;
+  /* box-shadow: 0px 5px 20px #555; */
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 2px solid #ded8d8;
+  border-radius: 10px;
 }
 
 .left {
-    float: left;
+  float: left;
 }
 
 .right {
-    float: right;
+  float: right;
 }
 
 .card:hover .card-image img {
-	width: 100%;
-	filter: grayscale(0);
+  width: 100%;
+  filter: grayscale(0);
 }
+
 .card-image {
-	height: 12em;
-	position: relative;
-	overflow: hidden;
+  height: 12em;
+  position: relative;
+  overflow: hidden;
 }
+
 .card-image img {
-	width: 50%;
-	position: absolute;
-	top: 55%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	filter: grayscale(1);
-	transition-property: filter width;
-	transition-duration: .3s;
+  width: 50%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: grayscale(1);
+  transition-property: filter width;
+  transition-duration: .3s;
 }
+
 .card-body {
-	text-align: left;
-	padding: 0em 2em 1em;
-	box-sizing: border-box;
+  text-align: left;
+  padding: 0em 2em 1em;
+  box-sizing: border-box;
 }
+
 .card-date {
-	font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
+
 .card-date,
 .card-title {
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
+
 .card-title-2 {
-	text-align: center;
-	font-weight: bold;
-	letter-spacing: 1px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
+
 .card-date,
 .card-exceprt,
 {
-	color: #606060;
+color: #606060;
 }
 
 .btn {
   padding: 5px 15px;
-//   text-decoration: none;
+  //   text-decoration: none;
   background: transparent;
-//   border: 2px solid #f27c7c;
+  //   border: 2px solid #f27c7c;
   color: #f27c7c;
   display: inline-block;
-//   position: relative;
+  //   position: relative;
   text-transform: uppercase;
   font-size: 12px;
-//   -webkit-border-radius: 5px;
-//   -moz-border-radius: 5px;
-//   -ms-border-radius: 5px;
-//   border-radius: 5px;
-//   -webkit-transition: background 0.3s ease;
-//   -moz-transition: background 0.3s ease;
-//   -ms-transition: background 0.3s ease;
-//   transition: background 0.3s ease;
-//   -webkit-box-shadow: 2px 2px 0 #f27c7c;
-//   -moz-box-shadow: 2px 2px 0 #f27c7c;
-//   -ms-box-shadow: 2px 2px 0 #f27c7c;
-//   box-shadow: 2px 2px 0 #f27c7c;
+  //   -webkit-border-radius: 5px;
+  //   -moz-border-radius: 5px;
+  //   -ms-border-radius: 5px;
+  //   border-radius: 5px;
+  //   -webkit-transition: background 0.3s ease;
+  //   -moz-transition: background 0.3s ease;
+  //   -ms-transition: background 0.3s ease;
+  //   transition: background 0.3s ease;
+  //   -webkit-box-shadow: 2px 2px 0 #f27c7c;
+  //   -moz-box-shadow: 2px 2px 0 #f27c7c;
+  //   -ms-box-shadow: 2px 2px 0 #f27c7c;
+  //   box-shadow: 2px 2px 0 #f27c7c;
 }
+
 .btn:hover {
   box-shadow: none;
   top: 2px;
@@ -523,7 +549,7 @@ footer {
 //   text-align:center;
 //   padding: 10px;
 //   border-radius: 15px;
-  
+
 //   /* position the text in t’ middle*/
 //   display: flex;
 //   align-items: center;
@@ -575,25 +601,28 @@ button {
 
 #portfolio {
   width: 100%;
-//   min-height: 100vh;
+  //   min-height: 100vh;
   min-height: 103vh;
   background: $white;
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
-//   grid-template-rows: 1fr 1fr;
+  //   grid-template-rows: 1fr 1fr;
   grid-gap: 20px;
 }
+
 .project {
   position: relative;
   background: $primary;
   overflow: hidden;
   border-radius: 5px;
+
   img {
     position: absolute;
     opacity: 0.9;
-//     height: 100%
+    //     height: 100%
   }
+
   p {
     position: absolute;
     text-align: center;
@@ -603,6 +632,7 @@ button {
     letter-spacing: 2px;
     z-index: 3;
   }
+
   .grid__title {
     position: absolute;
     width: 100%;
@@ -634,6 +664,7 @@ button {
   align-items: center;
   transform: translateY(101%);
   transition: $ease;
+
   button {
     background: $white;
     outline: none;
@@ -643,6 +674,7 @@ button {
     color: $white;
     text-transform: uppercase;
     padding: 10px;
+
     &:hover {
       transition: $ease;
       background: $white;
@@ -664,6 +696,7 @@ button {
   display: none;
   z-index: 3;
 }
+
 .overlay.open {
   display: grid;
   align-items: center;
@@ -688,13 +721,14 @@ button {
   border: 0;
   text-transform: uppercase;
   letter-spacing: 2px;
+
   &:hover {
     color: $secondary;
   }
 }
 
 .project__image {
-//   margin-left: -50%;
+  //   margin-left: -50%;
   max-height: 100%;
   max-width: 100%;
   width: auto;
@@ -706,6 +740,7 @@ button {
   right: 0;
   margin: auto;
 }
+
 // Image Grid for media features V2 END
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
