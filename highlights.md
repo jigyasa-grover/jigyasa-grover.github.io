@@ -10,7 +10,7 @@ permalink: /highlights/
     <img class="project__image" src="/images/top50.jpeg" />
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="[https://www.ntd.com/meta-introduces-ai-text-to-video-creator_849271.html](https://www.engatica.com/blog/top-50-machine-learning-and-data-science-experts-to-follow-for-2023?contentId=634551c86f56fd1389e92c50)" target="_blank">Top 50 Machine Learning and Data Science experts to follow for 2023</a>
+        <a href="https://www.engatica.com/blog/top-50-machine-learning-and-data-science-experts-to-follow-for-2023?contentId=634551c86f56fd1389e92c50" target="_blank">Top 50 Machine Learning and Data Science experts to follow for 2023</a>
       </button>
     </div>
   </div>
@@ -55,37 +55,37 @@ permalink: /highlights/
   </div>
   
   <div class="project">
-    <img class="project__image" src="/images/1651276456453.jpeg" target="_blank" />
+    <img class="project__image" src="/images/1651276456453.jpeg"/>
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://builtin.com/women-tech/moxie-award-winners">Introducing Built In’s 2022 Moxie Award Winners</a>
+        <a href="https://builtin.com/women-tech/moxie-award-winners" target="_blank">Introducing Built In’s 2022 Moxie Award Winners</a>
       </button>
     </div>
   </div>
  
   <div class="project">
-    <img class="project__image" src="/images/devprog.png" target="_blank" />
+    <img class="project__image" src="/images/devprog.png"/>
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://www.youtube.com/watch?v=O5L2e1UrQtI">Gameshow Winner: S1E5 of DevProdEng Showdown!</a>
+        <a href="https://www.youtube.com/watch?v=O5L2e1UrQtI" target="_blank">Gameshow Winner: S1E5 of DevProdEng Showdown!</a>
       </button>
     </div>
   </div>
   
   <div class="project">
-    <img class="project__image" src="/images/IMG_2368.JPG" target="_blank" />
+    <img class="project__image" src="/images/IMG_2368.JPG"/>
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf">Winner: Yuuvis® Hackathon San Francisco</a>
+        <a href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank">Winner: Yuuvis® Hackathon San Francisco</a>
       </button>
     </div>
   </div>
   
   <div class="project">
-    <img class="project__image" src="/images/wios.png" target="_blank" />
+    <img class="project__image" src="/images/wios.png"/>
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://www.redhat.com/en/about/press-releases/red-hat-announces-2017-women-open-source-award-winners">Women in Open Source Award Winner</a>
+        <a href="https://www.redhat.com/en/about/press-releases/red-hat-announces-2017-women-open-source-award-winners" target="_blank">Women in Open Source Award Winner</a>
       </button>
     </div>
   </div>
