@@ -67,7 +67,7 @@ permalink: /highlights/
     <img class="project__image" src="/images/moxie_award_winner.jpeg"/>
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://builtin.com/women-tech/moxie-award-winners" target="_blank">Built-In Moxie Award Winner</a>
+        <a href="https://builtin.com/women-tech/moxie-award-winners" target="_blank">Built-In Moxie Women In Tech Award Winner</a>
       </button>
     </div>
   </div>
