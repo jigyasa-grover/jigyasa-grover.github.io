@@ -7,6 +7,15 @@ permalink: /highlights/
 <section id="portfolio">
   
   <div class="project">
+    <img class="project__image" src="/images/google_io_feature.jpg" />
+    <div class="grid__overlay">
+      <button class="viewbutton">
+        <a href="https://www.youtube.com/live/XEzRZ35urlk?t=516" target="_blank">Featured in Google I/O 2024</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="project">
     <img class="project__image" src="/images/engatica_top_50_ml_experts.jpeg" />
     <div class="grid__overlay">
       <button class="viewbutton">
