@@ -8,8 +8,6 @@ mathjax: true
 
 <p>In the realm of AI-driven interactive storytelling, the fusion of Retrieval Augmented Generation (RAG) and Google's Gemma language model opens new avenues for creating engaging narratives and educational experiences. RAG, often likened to an "open-book" approach for AI, empowers models like Gemma to access and synthesize vast amounts of information to answer specific queries or weave intricate tales.</p>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/07/book-buddy.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/07/book-buddy.png?w=1024" alt="" class="wp-image-3420"/></a></figure>
-
 <h2 class="wp-block-heading">RAG and Gemma 🤝🏻</h2>
 
 <p><a href="https://cloud.google.com/use-cases/retrieval-augmented-generation">Retrieval-Augmented Generation (RAG)</a> leverages a dual-model approach: a retriever to fetch relevant information and a generator to craft responses in natural language. This method not only enhances the accuracy of AI-generated content but also reduces computational overhead compared to traditional fine-tuning methods.</p>
@@ -23,6 +21,8 @@ mathjax: true
 <h2 class="wp-block-heading">Crafting Interactive Narratives 🏰</h2>
 
 <p>Imagine a scenario where readers can interact with a virtual "Book Buddy," a character powered by Gemma-based RAG. This AI companion can dynamically respond to queries from the storylines and provide detailed explanations on demand. Whether guiding readers through complex plotlines or explaining background lore, Gemma excels in delivering coherent, engaging content tailored to user interactions.</p>
+
+<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/07/book-buddy.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/07/book-buddy.png?w=1024" alt="" class="wp-image-3420"/></a></figure>
 
 <h1 class="wp-block-heading"><strong>Let's Build "Book Buddy" 🛠️</strong></h1>
 
