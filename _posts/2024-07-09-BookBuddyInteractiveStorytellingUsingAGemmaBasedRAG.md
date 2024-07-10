@@ -22,13 +22,13 @@ mathjax: true
 
 <p>Imagine a scenario where readers can interact with a virtual "Book Buddy," a character powered by Gemma-based RAG. This AI companion can dynamically respond to queries from the storylines and provide detailed explanations on demand. Whether guiding readers through complex plotlines or explaining background lore, Gemma excels in delivering coherent, engaging content tailored to user interactions.</p>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/07/book-buddy.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/07/book-buddy.png?w=1024" alt="" class="wp-image-3420"/></a></figure>
-
 <h1 class="wp-block-heading"><strong>Let's Build "Book Buddy" 🛠️</strong></h1>
 
 <p>To delve deeper into the capabilities of Gemma-based RAG for interactive storytelling, let's embark on a hands-on journey that creates a dynamic system capable of answering questions about the classic text <a href="https://www.gutenberg.org/files/11/11-0.txt">"Alice's Adventures in Wonderland" by Lewis Carroll</a>, available from Project Gutenberg.</p>
 
 <p>By leveraging Gemma's capabilities, we can prototype interactive narratives that respond intelligently to user prompts, offering a personalized storytelling experience. Whether deployed in educational settings to elucidate historical events or within gaming environments to create dynamic quests, the versatility of Gemma-based RAG enriches the user experience through immersive, responsive storytelling.</p>
+
+<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/07/book-buddy.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/07/book-buddy.png?w=1024" alt="" class="wp-image-3420"/></a></figure>
 
 <h2 class="wp-block-heading">Setting up the environment 🌳</h2>
 
