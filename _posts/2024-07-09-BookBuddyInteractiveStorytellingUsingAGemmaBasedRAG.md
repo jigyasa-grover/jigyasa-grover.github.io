@@ -123,7 +123,7 @@ recursive_character_text_splits = recursive_character_text_splitter.split_docume
 
 <h2 class="wp-block-heading">Loading the embedding model 🤳🏻</h2>
 
-<p>The next step involves converting textual data into numerical vectors (embeddings) for the text chunks using the <em>SENTENCE_TRANSFORMER_EMBEDDINGS_MODEL</em>. Here we use <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2">all-MiniLM-L6-v2</a> which maps sentences and paragraphs to a 384-dimensional dense vector space and can</p>
+<p>The next step involves converting textual data into numerical vectors (embeddings) for the text chunks using the <em>SENTENCE_TRANSFORMER_EMBEDDINGS_MODEL</em>. Here we use <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2">all-MiniLM-L6-v2</a> which maps sentences and paragraphs to a 384-dimensional dense vector space and can be used for tasks like clustering or semantic search.</p>
 
 ```
 SENTENCE_TRANSFORMER_EMBEDDINGS_MODEL = "all-MiniLM-L6-v2"
