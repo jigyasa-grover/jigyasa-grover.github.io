@@ -106,8 +106,10 @@ TEXT_SPLITTER_CHUNK_OVERLAP = 200
 
 <p>The LangChain's <a href="https://python.langchain.com/v0.2/docs/integrations/document_loaders/web_base/">WebBaseLoader</a> is utilized to load the text from the specified URL.</p>
 
+```
 book_data_loader = WebBaseLoader(BOOK_TEXT_WEB_SOURCE)
 book_data = book_data_loader.load()
+```
 
 <p>The objective of splitting the data is to partition lengthy text documents into smaller, more digestible segments or chunks. This practice enhances efficiency in NLP tasks, addressing constraints that models may encounter with processing extensive amounts of text in a single instance. Here we use the <a href="https://api.python.langchain.com/en/latest/character/langchain_text_splitters.character.RecursiveCharacterTextSplitter.html">RecursiveCharacterTextSplitter</a>  to split the document into chunks of <em>TEXT_SPLITTER_CHUNK_SIZE</em> characters, with an overlap of <em>TEXT_SPLITTER_CHUNK_OVERLAP</em> characters to maintain context across chunks.</p>
 
