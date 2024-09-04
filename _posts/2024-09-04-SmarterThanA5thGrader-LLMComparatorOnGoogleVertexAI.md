@@ -1,7 +1,7 @@
 ---
 layout: post
 type: blog
-title: Smarter than a 5th Grader? Using LLM Comparator on Google Vertex AI to find out 🎓
+title: Smarter than a 5th Grader? 🎓 Using LLM Comparator on Google Vertex AI to find out.
 comments: true
 mathjax: true
 ---
