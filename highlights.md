@@ -10,7 +10,7 @@ permalink: /highlights/
     <img class="project__image" src="/images/google_io_feature.jpg" />
     <div class="grid__overlay">
       <button class="viewbutton">
-        <a href="https://www.youtube.com/live/XEzRZ35urlk?t=516" target="_blank">Featured in Google I/O Main Keynote</a>
+        <a href="https://www.youtube.com/live/XEzRZ35urlk?t=516" target="_blank">Featured in Google I/O 2024 Keynote</a>
       </button>
     </div>
   </div>
