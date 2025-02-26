@@ -587,4 +587,7 @@ mathjax: true
 <figure class="wp-block-pullquote"><blockquote><p>Hope you enjoyed this piece, check out the entire code on <a href="https://github.com/jigyasa-grover/smart-suitcase-packing" target="_blank" rel="noreferrer noopener">github</a> 🎓</p></blockquote></figure>
 
 <br><br>
-<pre class="wp-block-preformatted">#BuildWithAI #BuildWithGemini #VertexSprint #VertexAISprint #AISprint #GeminiSprint</pre>
+<pre class="wp-block-preformatted">
+   Huge thanks to the Google ML Developer team organizing for #VertexAISprint, and for providing Google Cloud credits to accomplish this. 
+   #BuildWithAI #BuildWithGemini #VertexSprint #VertexAISprint #AISprint #GeminiSprint
+</pre>
