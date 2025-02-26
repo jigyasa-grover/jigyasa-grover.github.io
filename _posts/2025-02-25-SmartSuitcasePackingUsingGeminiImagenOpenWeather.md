@@ -90,7 +90,7 @@ mathjax: true
 
 <h2 class="wp-block-heading">Examples</h2>
 
-<h4 class="wp-block-heading">11-day trip to Fairbanks (M)</h2>
+<h4 class="wp-block-heading">11-day trip to Fairbanks (M)</h4>
 
 <details>
    <pre class="wp-block-code has-small-font-size"><code>
@@ -190,7 +190,7 @@ mathjax: true
 <figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/02/image.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/02/image.png?w=512" alt="" class="wp-image-3466"/></a></figure>
 
 
-<h4 class="wp-block-heading">6-day trip to New Delhi (MF)</h2>
+<h4 class="wp-block-heading">6-day trip to New Delhi (MF)</h4>
 <details>
    <pre class="wp-block-code has-small-font-size"><code>Enter your destination city: New Delhi
    Enter your travel start date (YYYY-MM-DD): 2025-03-10
@@ -288,7 +288,7 @@ mathjax: true
 </details>
 <figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/02/travel_outfit_collage-5-1.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/02/travel_outfit_collage-5-1.png?w=512" alt="" class="wp-image-3507"/></a></figure>
 
-<h4 class="wp-block-heading">11-day trip to Miami (F)</h2>
+<h4 class="wp-block-heading">11-day trip to Miami (F)</h4>
 <details>
    <pre class="wp-block-code has-small-font-size"><code>Enter your destination city: Miami
    Enter your travel start date (YYYY-MM-DD): 2025-04-10
