@@ -20,7 +20,7 @@ permalink: /about
  
 <p>I am an avid proponent of Open Source and credit my career growth to this sphere of community development. I am also the proud recipient of multiple scholarships for my research and travels like Mitacs Globalink, Linux Foundation, Facebook GHC, ESUG, and many more. I have <strong>150+ media features, keynotes, conference talks, panels, workshops, and podcasts</strong> to my name, with renowned entities like <strong>Google, United Nations, NTD Business, International Business Times</strong>, SiliconAngle, CubeTV, etc. My love for tinkering has led me to win 5+ hackathons, sponsored by Microsoft, Google, Github, etc. and I now give back to the community by serving on the judges' panel of hackathons.</p>
  
-<p>Apart from my technological ventures, I enjoy exploring hidden gems in my city, hanging out with friends and family, and have been recently having fun with baking. To get in touch, you can email at <a href="mailto:grover.jigyasa2@gmail.com">grover[at]jigyasa2[dot]gmail[dot]com</a> or directly <a href="https://topmate.io/jigyasagrover" target="_blank">hop on a call</a>!</p>
+<p>Apart from my technological ventures, I enjoy exploring hidden gems in my city, hanging out with friends and family, and have been recently having fun with baking. To get in touch, you can email at <a href="mailto:grover.jigyasa2@gmail.com">grover[dot]jigyasa2[at]gmail[dot]com</a> or directly <a href="https://topmate.io/jigyasagrover" target="_blank">hop on a call</a>!</p>
 
 <br> <br>
 
