@@ -7,6 +7,8 @@ mathjax: true
 ---
 
 <p>In the fast-evolving world of GenAI, conversational agents are becoming more intelligent, accessible, and mission-critical. This post is a deep dive into the design of a <strong>smart, multilingual, and safety-conscious movie/TV review agent</strong> using cutting-edge tools from Google, including:</p>
+
+
 <li><a href="https://google.github.io/adk-docs/">Google's Agent Development Kit (ADK)</a></li>
 <li><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-0-flash">Gemini 2.0 Flash</a></li>
 <li><a href="https://google.github.io/adk-docs/tools/built-in-tools/#google-search">Google Search Tool</a></li>
