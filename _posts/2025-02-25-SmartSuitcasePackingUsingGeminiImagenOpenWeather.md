@@ -588,7 +588,7 @@ mathjax: true
 
 <br><br>
 <pre class="wp-block-preformatted">
-Huge thanks to the Google ML Developer team organizing for #VertexAISprint ✨
+Huge thanks to the Google ML Developer team for organizing #VertexAISprint ✨
 Google Cloud credits are provided for this project.
 #BuildWithAI #BuildWithGemini #VertexSprint #VertexAISprint #AISprint #GeminiSprint
 </pre>
