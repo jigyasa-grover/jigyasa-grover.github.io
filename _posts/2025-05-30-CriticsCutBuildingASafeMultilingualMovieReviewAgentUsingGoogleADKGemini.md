@@ -6,14 +6,15 @@ comments: true
 mathjax: true
 ---
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/05/travel-in-style-rain-or-shine-smart-suitcase-packing-with-gemini-2.0-imagen-3-and-open-weather-f09fa7b3-1.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/05/travel-in-style-rain-or-shine-smart-suitcase-packing-with-gemini-2.0-imagen-3-and-open-weather-f09fa7b3-1.png?w=940" alt="" class="wp-image-3522"/></a></figure>
-
 <p>In the fast-evolving world of GenAI, conversational agents are becoming more intelligent, accessible, and mission-critical. This post is a deep dive into the design of a <strong>smart, multilingual, and safety-conscious movie/TV review agent</strong> using cutting-edge tools from Google, including:</p>
 <li><a href="https://google.github.io/adk-docs/">Google's Agent Development Kit (ADK)</a></li>
 <li><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-0-flash">Gemini 2.0 Flash</a></li>
 <li><a href="https://google.github.io/adk-docs/tools/built-in-tools/#google-search">Google Search Tool</a></li>
 <li>Sentence Embedding models</li>
 <li>Safety libraries like <a href="https://microsoft.github.io/presidio/analyzer/">Microsoft's Presidio Analyzer </a> and <a href="https://pypi.org/project/better-profanity/">Better Profanity</a></li>
+
+
+<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/05/travel-in-style-rain-or-shine-smart-suitcase-packing-with-gemini-2.0-imagen-3-and-open-weather-f09fa7b3-1.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/05/travel-in-style-rain-or-shine-smart-suitcase-packing-with-gemini-2.0-imagen-3-and-open-weather-f09fa7b3-1.png?w=940" alt="" class="wp-image-3522"/></a></figure>
 
 <h2 class="wp-block-heading">Overview</h2>
 <p>The goal is to build a simple agent that:</p>
