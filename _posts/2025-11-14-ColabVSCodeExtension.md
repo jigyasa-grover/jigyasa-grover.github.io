@@ -16,31 +16,38 @@ mathjax: true
 
 <h2 class="wp-block-heading">Why use the Colab VS&nbsp;Code extension?</h2>
 
-<p><strong>Free cloud GPUs + familiar editor.</strong>  Colab has long been a go-to for free GPU/TPU access. The new <a href="https://developers.googleblog.com/en/google-colab-is-coming-to-vs-code/">VS Code extension</a> brings that compute directly into your IDE:</p>
-<li>Execute heavy code on Colab while your laptop stays snappy</li>
-<li>Switch seamlessly between <code>.ipynb</code> notebooks and <code>.py</code> modules</li>
-<li>Choose GPU or TPU runtimes via your Google account</li>
+<p><strong>Free cloud GPUs + familiar editor.</strong> Colab has long been a go-to for free GPU/TPU access. The new <a href="https://developers.googleblog.com/en/google-colab-is-coming-to-vs-code/">VS Code extension</a> brings that compute directly into your IDE:</p>
+<ul>
+    <li>Execute heavy code on Colab while your laptop stays snappy</li>
+    <li>Switch seamlessly between <code>.ipynb</code> notebooks and <code>.py</code> modules</li>
+    <li>Choose GPU or TPU runtimes via your Google account</li>
+</ul>
 <p>No more juggling browser notebooks and local scripts - everything runs in one familiar, powerful environment.</p>
 
-<p><strong>Full IDE environment.</strong> <a href="https://developers.googleblog.com/en/google-colab-is-coming-to-vs-code/">VS Code + Colab</a> combines the best of exploration and software engineering:</p>
-<li>Modular project structure: multiple <code>.py</code> modules alongside notebooks</li>
-<li>Debugging, linting, IntelliSense, Git integration, and branching</li>
-<li>Clean workflow for experiments, visualizations, and reproducible ML pipelines</li>
+<p><strong>Full IDE environment.</strong>
+    
+<a href="https://developers.googleblog.com/en/google-colab-is-coming-to-vs-code/">VS Code + Colab</a> combines the best of exploration and software engineering:</p>
+<ul>
+    <li>Modular project structure: multiple <code>.py</code> modules alongside notebooks</li>
+    <li>Debugging, linting, IntelliSense, Git integration, and branching</li>
+    <li>Clean workflow for experiments, visualizations, and reproducible ML pipelines</li>
+</ul>
 <p>This setup turns notebooks into maintainable, production-ready projects without losing the flexibility of Colab.</p>
 
 <figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/colab-hearts-vsc2x.original.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/colab-hearts-vsc2x.original.png?w=640" alt="" class="wp-image-3619"/></a></figure>
 
 <h2 class="wp-block-heading">Installing + Using Colab VS Code Extension</h2>
-<li><strong>Install VS Code</strong> (if not already) on your local machine.</li>
-<li><strong>Install the Jupyter extension</strong> (Microsoft) in VS Code - this gives notebook support inside VS Code.</li>
-<li><strong>Install the Colab extension</strong>.</li>
-<li><strong>Open or create a <code>.ipynb</code> Notebook</strong> file in VS Code.</li>
-<li><strong>Connect to Colab runtime</strong>:</li>
-<li>In VS Code’s notebook interface, select kernel → “Colab” or equivalent → “New Colab Server” (or via the tunnel library you set up).</li>
-<li>Sign in with your Google account when prompted and select a GPU runtime (e.g., T4).</li>
-<li><strong>Run your cells or script</strong> - code executes on the remote Colab VM with GPU acceleration, while results and outputs show in VS Code.</li>
-<li><strong>For subsequent sessions</strong>, you can often just select kernel → “Colab Auto‑Connect” (or reconnect via your tunnel) to resume quickly.</li>
-
+<ul>
+    <li><strong>Install VS Code</strong> (if not already) on your local machine.</li>
+    <li><strong>Install the Jupyter extension</strong> (Microsoft) in VS Code - this gives notebook support inside VS Code.</li>
+    <li><strong>Install the Colab extension</strong>.</li>
+    <li><strong>Open or create a <code>.ipynb</code> Notebook</strong> file in VS Code.</li>
+    <li><strong>Connect to Colab runtime</strong>:</li>
+    <li>In VS Code’s notebook interface, select kernel → “Colab” or equivalent → “New Colab Server” (or via the tunnel library you set up).</li>
+    <li>Sign in with your Google account when prompted and select a GPU runtime (e.g., T4).</li>
+    <li><strong>Run your cells or script</strong> - code executes on the remote Colab VM with GPU acceleration, while results and outputs show in VS Code.</li>
+    <li><strong>For subsequent sessions</strong>, you can often just select kernel → “Colab Auto‑Connect” (or reconnect via your tunnel) to resume quickly.</li>
+</ul>
 <br>
 
 {% raw %}
@@ -56,14 +63,15 @@ mathjax: true
 
 <h2 class="wp-block-heading">Real Advantages - and what this DOES for you!</h2>
 <p>Here’s what you gain from using <strong>VS Code + Colab extension + Gemini Code Assist</strong>, beyond just faster compute:</p>
-<li><strong>Massive step‑up in compute capability:</strong> Run large grid simulations, deep learning experiments, and generative visuals without being limited by your local GPU or RAM. Cloud GPUs let you scale effortlessly.</li>
-<li><strong>Developer-friendly workflow:</strong> Use VS Code’s debugger, modules, linting, and Git integration. No more juggling separate browser windows, notebooks, and editors - everything stays in your familiar IDE.</li>
-<li><strong>AI-assisted coding fun:</strong> Gemini Code Assist can generate code snippets, suggest alternative implementations, propose helper functions, or even propose creative visual tweaks, all while your GPU crunches numbers. It’s like having a playful coding sidekick.</li>
-<li><strong>Clean project structure:</strong> Separate preprocessing, model code, visualization modules, tests, and notebooks - you’re not forced into a single notebook paradigm. This makes your project more maintainable and reproducible.</li>
-<li><strong>Iteration speed:</strong> Remote compute plus AI-assisted code suggestions allow you to experiment, tweak parameters, and explore ideas faster than ever.</li>
-<li><strong>Cost and access:</strong> Free GPU access is available with Colab, and paid tiers (Colab Pro/Pro+) give even more compute power at a fraction of cloud provider costs.</li>
-<li><strong>Collaboration and sharing:</strong> Notebooks and scripts remain in <code>.ipynb</code> or <code>.py</code> format, making it easy to push to GitHub, share with colleagues, or switch between local and remote runtimes seamlessly.</li>
-
+<ul>
+    <li><strong>Massive step‑up in compute capability:</strong> Run large grid simulations, deep learning experiments, and generative visuals without being limited by your local GPU or RAM. Cloud GPUs let you scale effortlessly.</li>
+    <li><strong>Developer-friendly workflow:</strong> Use VS Code’s debugger, modules, linting, and Git integration. No more juggling separate browser windows, notebooks, and editors - everything stays in your familiar IDE.</li>
+    <li><strong>AI-assisted coding fun:</strong> Gemini Code Assist can generate code snippets, suggest alternative implementations, propose helper functions, or even propose creative visual tweaks, all while your GPU crunches numbers. It’s like having a playful coding sidekick.</li>
+    <li><strong>Clean project structure:</strong> Separate preprocessing, model code, visualization modules, tests, and notebooks - you’re not forced into a single notebook paradigm. This makes your project more maintainable and reproducible.</li>
+    <li><strong>Iteration speed:</strong> Remote compute plus AI-assisted code suggestions allow you to experiment, tweak parameters, and explore ideas faster than ever.</li>
+    <li><strong>Cost and access:</strong> Free GPU access is available with Colab, and paid tiers (Colab Pro/Pro+) give even more compute power at a fraction of cloud provider costs.</li>
+    <li><strong>Collaboration and sharing:</strong> Notebooks and scripts remain in <code>.ipynb</code> or <code>.py</code> format, making it easy to push to GitHub, share with colleagues, or switch between local and remote runtimes seamlessly.</li>
+</ul>
 <br>
 
 <figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png?w=1024" alt="" class="wp-image-3596"/></a></figure>
@@ -72,10 +80,12 @@ mathjax: true
 
 <h2 class="wp-block-heading">Quick Show &amp; Tell </h2>
 <p>To showcase the power of <strong>VS Code + Colab extension + GPU compute</strong>, I <em>*vibe-coded*</em> a <strong>Zen Garden </strong>generative visualization and benchmarking demo:</p>
-<li><code>zen_garden(vibe, ax)</code> draws pastel, flowing vector‑field streamplots inspired by vibes like “tranquil stream”, “stormy sea”, “neon city dream”.</li>
-<li>CPU (NumPy) vs GPU (CuPy) on a 2048×2048 grid for 100 frames executed on the remote Colab GPU.</li>
-<li>Result - Dramatic speed‑up! Your GPU computes the animation in seconds; the CPU takes tens of seconds.</li>
-<li>Gemini Code Assist contributed visualization tweaks, helper functions, alternative flow parameters -making creative experimentation faster and more fun.</li>
+<ul>
+    <li><code>zen_garden(vibe, ax)</code> draws pastel, flowing vector‑field streamplots inspired by vibes like “tranquil stream”, “stormy sea”, “neon city dream”.</li>
+    <li>CPU (NumPy) vs GPU (CuPy) on a 2048×2048 grid for 100 frames executed on the remote Colab GPU.</li>
+    <li>Result - Dramatic speed‑up! Your GPU computes the animation in seconds; the CPU takes tens of seconds.</li>
+    <li>Gemini Code Assist contributed visualization tweaks, helper functions, alternative flow parameters -making creative experimentation faster and more fun.</li>
+</ul>
 <p><strong>Outcome:</strong> Rapid experimentation and creative exploration without bogging down your laptop 🎨</p>
 
 <br>
@@ -357,31 +367,37 @@ The actual rendering with `streamplot` happens on the CPU for both versions.
 
 <h3 class="wp-block-heading">Beyond the demo: Other compelling workflows...</h3>
 <p>The <strong>VS Code + Colab setup</strong> is versatile and extends well beyond generative visuals:</p>
-<li><strong>Machine Learning &amp; Deep Learning:</strong> Train or fine-tune models on a GPU backend while writing modular, version-controlled code in VS Code.</li>
-<li><strong>Data Science at scale:</strong> Process large datasets, run heavy simulations, and visualize results interactively.</li>
-<li><strong>Collaborative or teaching workflows:</strong> Share reproducible workflows; students can connect to Colab via VS Code while instructors provide structured modules and notebooks.</li>
-<li><strong>Rapid prototyping:</strong> Experiment with new algorithms, parameter sweeps, and visualization experiments. Remote GPU compute plus AI-assisted coding drastically shortens iteration times.</li>
+<ul>
+    <li><strong>Machine Learning &amp; Deep Learning:</strong> Train or fine-tune models on a GPU backend while writing modular, version-controlled code in VS Code.</li>
+    <li><strong>Data Science at scale:</strong> Process large datasets, run heavy simulations, and visualize results interactively.</li>
+    <li><strong>Collaborative or teaching workflows:</strong> Share reproducible workflows; students can connect to Colab via VS Code while instructors provide structured modules and notebooks.</li>
+    <li><strong>Rapid prototyping:</strong> Experiment with new algorithms, parameter sweeps, and visualization experiments. Remote GPU compute plus AI-assisted coding drastically shortens iteration times.</li>
+</ul>
 
 <br>
 
 <h2 class="wp-block-heading">Known Issues &amp; Caveats (<em>at the moment</em>)</h2>
 <p>Every powerful workflow has trade‑offs; especially at launch time:</p>
-<li>Session stability. Remote Colab VMs (and any tunnel connections) can disconnect after periods of inactivity and report “DISPOSED” notebook controllers.</li>
-<li>Mounting Google Drive or certain dependencies may require extra setup when connected through VS Code.</li>
-<li>Duplicate or “zombie” sessions. Signing out/reconnecting may leave orphaned resources.</li>
-<li>Editor language‑server mismatch. Remote VM packages may not reflect locally; VS Code linting/IntelliSense may complain unless synced.</li>
-<li>Free‑tier runtime limits. Colab free tier imposes idle timeouts, maximum session durations and GPU assignment policies.</li>
-<li>Workflow complexity. Initial setup (kernel selection, tunnels) is slightly more intricate than pure browser Colab.</li>
-<li>Large file transfers or I/O from local to remote VM may be slower than local execution.</li>
+<ul>
+    <li>Session stability. Remote Colab VMs (and any tunnel connections) can disconnect after periods of inactivity and report “DISPOSED” notebook controllers.</li>
+    <li>Mounting Google Drive or certain dependencies may require extra setup when connected through VS Code.</li>
+    <li>Duplicate or “zombie” sessions. Signing out/reconnecting may leave orphaned resources.</li>
+    <li>Editor language‑server mismatch. Remote VM packages may not reflect locally; VS Code linting/IntelliSense may complain unless synced.</li>
+    <li>Free‑tier runtime limits. Colab free tier imposes idle timeouts, maximum session durations and GPU assignment policies.</li>
+    <li>Workflow complexity. Initial setup (kernel selection, tunnels) is slightly more intricate than pure browser Colab.</li>
+    <li>Large file transfers or I/O from local to remote VM may be slower than local execution.</li>
+</ul>
 
 <br>
 
 <h2 class="wp-block-heading">Final Thoughts</h2>
 <p>The combination of <strong>VS Code + Colab extension + Gemini Code Assist</strong> creates a modern, powerful development workflow:</p>
-<li>A familiar IDE workflow with extensions, debugger, Git integration</li>
-<li>Cloud GPU/TPU horsepower for large-scale experiments</li>
-<li>AI‑assisted coding for creativity and speed</li>
-<li>Modular, version‑controlled projects for collaboration and reproducibility</li>
+<ul>
+    <li>A familiar IDE workflow with extensions, debugger, Git integration</li>
+    <li>Cloud GPU/TPU horsepower for large-scale experiments</li>
+    <li>AI‑assisted coding for creativity and speed</li>
+    <li>Modular, version‑controlled projects for collaboration and reproducibility</li>
+</ul>
 
 <br>
 
