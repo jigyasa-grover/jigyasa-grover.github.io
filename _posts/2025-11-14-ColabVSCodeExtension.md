@@ -51,7 +51,7 @@ mathjax: true
 <br>
 
 {% raw %}
-<video controls width="750%" preload="metadata">
+<video controls width="75%" preload="metadata">
 <source src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/original_videos/Copy_of_Colab_VS_Code_Extension_Demo_compressed.mp4" type="video/mp4">
 </video>
 {% endraw %}
