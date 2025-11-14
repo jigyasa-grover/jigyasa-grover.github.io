@@ -42,13 +42,13 @@ mathjax: true
 <li><strong>For subsequent sessions</strong>, you can often just select kernel → “Colab Auto‑Connect” (or reconnect via your tunnel) to resume quickly.</li>
 
 {% raw %}
-<video controls width="100%" preload="metadata">
+<video controls width="750%" preload="metadata">
 <source src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/original_videos/Copy_of_Colab_VS_Code_Extension_Demo_compressed.mp4" type="video/mp4">
 </video>
 {% endraw %}
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png?w=1024" alt="" class="wp-image-3596"/></a></figure>
-<p>💡 <em>Pro Tip:</em> Colab VMs stay alive only while active or within ~1 hour of inactivity. Total session lifetimes vary by machine type, so for long-running experiments, you may need to reconnect.</p>
+<!-- <figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png?w=1024" alt="" class="wp-image-3596"/></a></figure>
+<p>💡 <em>Pro Tip:</em> Colab VMs stay alive only while active or within ~1 hour of inactivity. Total session lifetimes vary by machine type, so for long-running experiments, you may need to reconnect.</p> -->
 
 <h2 class="wp-block-heading">Real Advantages - and what this DOES for you!</h2>
 <p>Here’s what you gain from using <strong>VS Code + Colab extension + Gemini Code Assist</strong>, beyond just faster compute:</p>
