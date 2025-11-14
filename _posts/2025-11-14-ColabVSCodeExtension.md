@@ -41,6 +41,8 @@ mathjax: true
 <li><strong>Run your cells or script</strong> - code executes on the remote Colab VM with GPU acceleration, while results and outputs show in VS Code.</li>
 <li><strong>For subsequent sessions</strong>, you can often just select kernel → “Colab Auto‑Connect” (or reconnect via your tunnel) to resume quickly.</li>
 
+<br>
+
 {% raw %}
 <video controls width="750%" preload="metadata">
 <source src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/original_videos/Copy_of_Colab_VS_Code_Extension_Demo_compressed.mp4" type="video/mp4">
@@ -49,6 +51,8 @@ mathjax: true
 
 <!-- <figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png?w=1024" alt="" class="wp-image-3596"/></a></figure>
 <p>💡 <em>Pro Tip:</em> Colab VMs stay alive only while active or within ~1 hour of inactivity. Total session lifetimes vary by machine type, so for long-running experiments, you may need to reconnect.</p> -->
+
+<br>
 
 <h2 class="wp-block-heading">Real Advantages - and what this DOES for you!</h2>
 <p>Here’s what you gain from using <strong>VS Code + Colab extension + Gemini Code Assist</strong>, beyond just faster compute:</p>
@@ -60,6 +64,12 @@ mathjax: true
 <li><strong>Cost and access:</strong> Free GPU access is available with Colab, and paid tiers (Colab Pro/Pro+) give even more compute power at a fraction of cloud provider costs.</li>
 <li><strong>Collaboration and sharing:</strong> Notebooks and scripts remain in <code>.ipynb</code> or <code>.py</code> format, making it easy to push to GitHub, share with colleagues, or switch between local and remote runtimes seamlessly.</li>
 
+<br>
+
+<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png?w=1024" alt="" class="wp-image-3596"/></a></figure>
+
+<br>
+
 <h2 class="wp-block-heading">Quick Show &amp; Tell </h2>
 <p>To showcase the power of <strong>VS Code + Colab extension + GPU compute</strong>, I <em>*vibe-coded*</em> a <strong>Zen Garden </strong>generative visualization and benchmarking demo:</p>
 <li><code>zen_garden(vibe, ax)</code> draws pastel, flowing vector‑field streamplots inspired by vibes like “tranquil stream”, “stormy sea”, “neon city dream”.</li>
@@ -67,6 +77,8 @@ mathjax: true
 <li>Result - Dramatic speed‑up! Your GPU computes the animation in seconds; the CPU takes tens of seconds.</li>
 <li>Gemini Code Assist contributed visualization tweaks, helper functions, alternative flow parameters -making creative experimentation faster and more fun.</li>
 <p><strong>Outcome:</strong> Rapid experimentation and creative exploration without bogging down your laptop 🎨</p>
+
+<br>
 
 <pre class="wp-block-code" style="font-size:8px"><code>import matplotlib.pyplot as plt
 import numpy as np
@@ -341,12 +353,16 @@ Note: The benchmark measures only the vector field calculation.
 The actual rendering with `streamplot` happens on the CPU for both versions.
 </code></pre>
 
+<br>
+
 <h3 class="wp-block-heading">Beyond the demo: Other compelling workflows...</h3>
 <p>The <strong>VS Code + Colab setup</strong> is versatile and extends well beyond generative visuals:</p>
 <li><strong>Machine Learning &amp; Deep Learning:</strong> Train or fine-tune models on a GPU backend while writing modular, version-controlled code in VS Code.</li>
 <li><strong>Data Science at scale:</strong> Process large datasets, run heavy simulations, and visualize results interactively.</li>
 <li><strong>Collaborative or teaching workflows:</strong> Share reproducible workflows; students can connect to Colab via VS Code while instructors provide structured modules and notebooks.</li>
 <li><strong>Rapid prototyping:</strong> Experiment with new algorithms, parameter sweeps, and visualization experiments. Remote GPU compute plus AI-assisted coding drastically shortens iteration times.</li>
+
+<br>
 
 <h2 class="wp-block-heading">Known Issues &amp; Caveats (<em>at the moment</em>)</h2>
 <p>Every powerful workflow has trade‑offs; especially at launch time:</p>
@@ -358,6 +374,8 @@ The actual rendering with `streamplot` happens on the CPU for both versions.
 <li>Workflow complexity. Initial setup (kernel selection, tunnels) is slightly more intricate than pure browser Colab.</li>
 <li>Large file transfers or I/O from local to remote VM may be slower than local execution.</li>
 
+<br>
+
 <h2 class="wp-block-heading">Final Thoughts</h2>
 <p>The combination of <strong>VS Code + Colab extension + Gemini Code Assist</strong> creates a modern, powerful development workflow:</p>
 <li>A familiar IDE workflow with extensions, debugger, Git integration</li>
@@ -366,6 +384,7 @@ The actual rendering with `streamplot` happens on the CPU for both versions.
 <li>Modular, version‑controlled projects for collaboration and reproducibility</li>
 
 <br>
+
 <p>Whether you’re a <strong>data scientist, ML researcher, or creative coder</strong>, this workflow removes bottlenecks, accelerates iteration, and makes experimentation effortless.</p>
 
 <blockquote>
