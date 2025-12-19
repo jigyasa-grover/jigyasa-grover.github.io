@@ -20,10 +20,10 @@ mathjax: true
 
 <p>The prompt wasn't to <em>"build a chatbot."</em> It was to build a verifiable, real-time intelligence system that could survive in a high-stakes environment where cloud latency could be a safety risk. To make it happen, he turned his <a href="https://www.instagram.com/p/DSbGqKgDa2u/">BMW E46 M3</a> into a rolling <em>"Data Capture Unit"</em>. We picked the race track as our lab. And, we called it the <em>"Data Crucible."</em></p>
 
-<p>I’ll be honest: I’m an ML engineer, and I've never worked with hardware before. My day job is training recommendation models for personalization and monetization, a world far removed from the physical constraints of a racecar. I’m far more at home with stochastic gradient descent in a loss landscape than I am optimizing a friction circle at the limit of traction. But taking AI out of the sterile cloud & notebooks and into a vibrating, 125 mph + 100-degree cockpit was exactly why this challenge mattered!</p>
+<p>I’ll be honest: I’m an ML engineer, and I've never worked with hardware before. My day job is training recommendation models for personalization and monetization, a world far removed from the physical constraints of a racecar. I’m far more at home with stochastic gradient descent in a loss landscape than I am optimizing a friction circle at the limit of traction. But taking AI out of the sterile cloud & notebooks and into a vibrating, 150 mph + 100-degree cockpit was exactly why this challenge mattered!</p>
 <h2 class="wp-block-heading">Trust is Built on Ground Truth 🏎️</h2>
 
-<p>Early on, we hit a fundamental limitation of Large Language Models: in high-velocity physical systems, standard probabilistic outputs are a safety hazard. You can't ask a model to "innovate" a racing line at 125 mph; a single incorrect token isn't just a typo, it's a safety risk.</p>
+<p>Early on, we hit a fundamental limitation of Large Language Models: in high-velocity physical systems, standard probabilistic outputs are a safety hazard. You can't ask a model to "innovate" a racing line at 150 mph; a single incorrect token isn't just a typo, it's a safety risk.</p>
 
 <p>We realized trust had to be anchored in <strong>Ground Truth</strong>. We shifted our objective from "AI Innovation" to "Expert Scaling." To create a deterministic baseline, we needed a human benchmark. Huge thanks to Anthony Zwain from Edge Motorworks for laying down a 1:57 reference lap on Thunderhill's East Loop!</p>
 
@@ -96,7 +96,7 @@ mathjax: true
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Why? Because at 125 mph, you survive. In the paddock, you learn. </li>
+<li>Why? Because at 150 mph, you survive. In the paddock, you learn. </li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
@@ -118,7 +118,7 @@ mathjax: true
 
 <p>By weaving together <strong>Gemini Nano</strong>, <strong>Gemini</strong> <strong>3.0</strong> <strong>Flash</strong>, <strong>Google Cloud</strong>, and <strong>Antigravity</strong>, we didn't just build a smart app. </p>
 
-<blockquote>We built an AI system that made it safe enough to ride at 125 mph!</blockquote>
+<blockquote>We built an AI system that made it safe enough to ride at 150 mph!</blockquote>
 
 <p>The data is in, the laps are logged, and we’ve only just glimpsed the future of augmented intelligence. Hammer time!</p>
 
