@@ -65,11 +65,11 @@ mathjax: true
 
 <h2 class="wp-block-heading"><strong>The Workflow: From Noob to Pro</strong> ⚡️</h2>
 
-<p>To be honest, this project would have taken months without the right (AI powered!) tools. We used the Gemini ecosystem to <em>"vibe code"</em> the entire stack.</p>
+<p>To be honest, this project would have taken months without the right (AI-powered!) tools. We used the Gemini ecosystem to <em>"vibe code"</em> the entire stack.</p>
 
 <li><strong>Discovery Phase</strong>: As newcomers to racing, we used <a href="https://aistudio.google.com/apps">Google AI Studio</a> to anchor the entire project. We literally uploaded raw VBOX videos and telemetry logs to make sense of the domain, the data, design our "Coach Personas" (Tony, Rachel, AJ), and prototype the entire app experience in a sandbox before we moved anywhere near a motor.</li>
 
-<li><strong>Build Phase</strong>: When we moved to production, <a href="https://antigravity.google/">Google Antigravity</a> became our pair programmer. It didn't just autocomplete syntax; it solved hardware bugs. We could describe the physics in plain English, <em>"If speed drops rapidly without lateral G, that’s straight-line braking"</em>, or just suplly it a rough paper napkin diagram of ideas, and Antigravity would generate the Python inference logic for our virtual sensors on the fly. And when our GPS units spit out gibberish? I pasted the error logs into Antigravity, and it instantly identified a baud rate mismatch, rewriting our <code>pyserial</code> configuration in seconds.</li>
+<li><strong>Build Phase</strong>: When we moved to production, <a href="https://antigravity.google/">Google Antigravity</a> became our pair programmer. It didn't just autocomplete syntax; it solved hardware bugs. We could describe the physics in plain English, <em>"If speed drops rapidly without lateral G, that’s straight-line braking"</em>, or just supply it a rough paper napkin diagram of ideas, and Antigravity would generate the Python inference logic for our virtual sensors on the fly. And when our GPS units spit out gibberish? I pasted the error logs into Antigravity, and it instantly identified a baud rate mismatch, rewriting our <code>pyserial</code> configuration in seconds.</li>
 
 <p><em>Side Note</em>: Since track laps were limited (and expensive!), we had to get creative. We literally physically ran around the paddock holding our GPS devices to capture live coordinates for some quick testing. And yes, our first version involved a laptop strapped to the passenger seat in a backpack, but that's a chaotic story for another day.</p>
 
@@ -79,7 +79,7 @@ mathjax: true
 
 <li><strong>Servers Don't Shake. Cars Do.</strong> <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li>In the cloud, your servers are air-conditioned and mounted to stable racks. On the track, it’s 100 degrees in the cabin, the car is vibrating at 1.5G, and your hardware is gasping for air. We faced a 50% failure rate with our harware setup because standard USB C cables wiggled loose, or the browser crashed. It taught us that "robustness" isn't just about code coverage. it's about building for the physical chaos of the real world. </li>
+<li>In the cloud, your servers are air-conditioned and mounted to stable racks. On the track, it’s 100 degrees in the cabin, the car is vibrating at 1.5G, and your hardware is gasping for air. We faced a 50% failure rate with our hardware setup because standard USB-C cables wiggled loose, or the browser crashed. It taught us that "robustness" isn't just about code coverage. It's about building for the physical chaos of the real world. </li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
