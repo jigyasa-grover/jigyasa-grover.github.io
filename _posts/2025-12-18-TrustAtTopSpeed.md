@@ -25,9 +25,9 @@ mathjax: true
 
 <p>Early on, we hit a fundamental limitation of Large Language Models: in high-velocity physical systems, standard probabilistic outputs are a safety hazard. You can't ask a model to "innovate" a racing line at 125 mph; a single incorrect token isn't just a typo, it's a safety risk.</p>
 
-<p>We realized trust had to be anchored in <strong>Ground Truth</strong>. We shifted our objective from "AI Innovation" to "Expert Scaling." To create a deterministic baseline, we needed a human benchmark. Huge thanks to <strong>Anthony Zwain</strong> from Edge Motorworks for laying down a <strong>1:57 reference lap</strong> on Thunderhill's East Loop!</p>
+<p>We realized trust had to be anchored in <strong>Ground Truth</strong>. We shifted our objective from "AI Innovation" to "Expert Scaling." To create a deterministic baseline, we needed a human benchmark. Huge thanks to Anthony Zwain from Edge Motorworks for laying down a 1:57 reference lap on Thunderhill's East Loop!</p>
 
-<p>This became our <strong>"Golden Lap."</strong> Instead of asking the AI to guess the physics of a corner, we engineered a system that calculated the precise <strong>physics-delta</strong> between the user and the pro driver. By using Gemini 3.0 to codify the expert coach-to-driver interaction, we were able to extract pedagogical patterns rather than just raw telemetry.</p>
+<p>This became our <strong>"Golden Lap."</strong> Instead of asking the AI to guess the physics of a corner, we engineered a system that calculated the precise physics-delta between the user and the pro driver. By using Gemini 3.0 to codify the expert coach-to-driver interaction, we were able to extract pedagogical patterns rather than just raw telemetry.</p>
 
 <p>This created a three-layer verification system: any AI advice that deviated significantly from the Golden Lap’s high-fidelity physics profile was suppressed by hard-coded safety gates. We weren't just prompting a model; we were scaling verified human intuition through a <strong>Human-in-the-Loop</strong> architecture.</p>
 
@@ -53,7 +53,7 @@ mathjax: true
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item --><!-- /wp:list-item --></ul>
 
-<li><strong><strong>Virtual Sensors &amp; Heuristics</strong></strong>. When hardware failed us, we used physics. We implemented <strong>Virtual Sensors</strong> to infer brake pressure by calculating longitudinal and lateral G.<!-- wp:list -->
+<li><strong><strong>Virtual Sensors &amp; Heuristics</strong></strong>. When hardware failed us, we used physics. We implemented Virtual Sensors to infer brake pressure by calculating longitudinal and lateral G.<!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
 <li>But we didn't stop at AI. We implemented a Heuristic Fallback layer, a rule-based system that acts as a hard safety gate. If the AI suggests an action that contradicts the telemetry's "Safe Set" (like "Push" during a heavy braking zone), the heuristics preempt the audio.</li>
 <!-- /wp:list-item --></ul>
@@ -114,7 +114,7 @@ mathjax: true
 
 <p>This experience proved something critical: you <em>can</em> trust AI in high-stakes environments, but only if you move beyond simple prompting and embrace rigorous orchestration.</p>
 
-<p>The <strong>"Split-Brain"</strong> architecture we validated - Edge AI for reflexes, Cloud AI for strategy, and Human Expertise as Ground Truth - isn't just a racing coach. It’s a blueprint for any agentic system where the cost of a mistake is measured in more than just bad text. From surgical guidance to autonomous logistics, the goal is the same: scaling intelligence without sacrificing safety.</p>
+<p>The <strong>"Split-Brain"</strong> architecture we validated - Edge AI for reflexes, Cloud AI for strategy, and Human expertise as Ground Truth - applies far beyond the track. Whether it's precision robotics, autonomous drone navigation, industrial floor safety, emergency response coordination, or assistive technologies for the visually impaired, the philosophy is the same.</p>
 
 <p>By weaving together <strong>Gemini Nano</strong>, <strong>Gemini</strong> <strong>3.0</strong> <strong>Flash</strong>, <strong>Google Cloud</strong>, and <strong>Antigravity</strong>, we didn't just build a smart app. </p>
 
