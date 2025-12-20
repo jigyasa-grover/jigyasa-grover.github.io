@@ -132,5 +132,5 @@ mathjax: true
 Ajeet Mirwani, Austin Bennett, Hemanth HM, Jesse Nowlin, Lynn Langit, Margaret Maynard-Reid, Rabimba Karanjai, 
 Sebastian Gomez, Vikram Tiwari, Karen Acosta Parra, Alvaro H., and the entire Developer Ecosystem team ✨
   
-#BuildWithAI #BuildWithGemini #BuildWithAntigravity #AISprint</em></p>
+#BuildWithAI #BuildWithGemini #BuildWithAntigravity #AISprint #AISprintH2</em></p>
 </pre>
