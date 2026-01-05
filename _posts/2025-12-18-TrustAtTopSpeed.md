@@ -13,7 +13,10 @@ mathjax: true
 
 <p>He was staring at our app. Just a few days ago, it was an idea. Now, it was a digital race coach capable of whispering physics-driven mentorship through a driver's headset, spotting errors with the sharp, predictive eyes of a seasoned veteran.</p>
 
-<p>Want a quick sneak peek behind the scenes? 👀</p>
+<br>
+<hr>
+
+<p><i>Before we dive in, want a quick sneak peek behind the scenes? 👀</i></p>
 <div style="max-width:540px; margin:2rem auto;">
   <div style="position:relative; padding-bottom:125%; height:0; overflow:hidden;">
     <iframe
@@ -25,8 +28,7 @@ mathjax: true
   </div>
 </div>
 
-
-
+<hr>
 
 <br>
 <p>The spark came from <strong>Ajeet Mirwani</strong>, a passionate race enthusiast who brought his two worlds together. As our lead for the Google Developer Experts program, he challenged us with something that sounded impossible: <strong>The High-Velocity AI Field Test</strong>. </p>
