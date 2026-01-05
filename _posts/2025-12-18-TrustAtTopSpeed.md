@@ -17,15 +17,14 @@ mathjax: true
 <hr>
 
 <p><i>Before we dive in, want a quick sneak peek behind the scenes? 👀</i></p>
-<div style="max-width:750px; margin:2rem auto;">
-  <div style="position:relative; padding-bottom:150%; height:0; overflow:hidden;">
-    <iframe
-      src="https://www.instagram.com/p/DSeGmDekfT8/embed"
-      style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
-      loading="lazy"
-      allowfullscreen>
-    </iframe>
-  </div>
+<div style="max-width:500px; margin:2rem auto;">
+  <iframe
+    src="https://www.instagram.com/p/DSeGmDekfT8/embed"
+    style="width:100%; border:0;"
+    loading="lazy"
+    allowfullscreen
+    scrolling="no">
+  </iframe>
 </div>
 
 <hr>
