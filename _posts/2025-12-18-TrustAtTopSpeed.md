@@ -17,14 +17,15 @@ mathjax: true
 <hr>
 
 <p><i>Before we dive in, want a quick sneak peek behind the scenes? 👀</i></p>
-<div style="max-width:500px; margin:2rem auto;">
-  <iframe
-    src="https://www.instagram.com/p/DSeGmDekfT8/embed"
-    style="width:100%; border:0;"
-    loading="lazy"
-    allowfullscreen
-    scrolling="no">
-  </iframe>
+<div style="max-width:500px; margin:2rem auto;"> 
+  <div style="position:relative; padding-bottom:150%; height:0; overflow:hidden;"> 
+    <iframe 
+      src="https://www.instagram.com/p/DSeGmDekfT8/embed" 
+      style="position:absolute; top:0; left:0; width:100%; height:125%; border:0;" 
+      loading="lazy" 
+      allowfullscreen> 
+    </iframe> 
+  </div> 
 </div>
 
 <hr>
@@ -124,8 +125,6 @@ mathjax: true
 <!-- /wp:list-item --></ul>
 <!-- /wp:list --></li>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/12/screenshot-2025-12-18-at-9.35.58-pm.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/12/screenshot-2025-12-18-at-9.35.58-pm.png?w=817" alt="" class="wp-image-3653"/></a></figure>
-
 <h2 class="wp-block-heading">Bottom Line 💡</h2>
 
 <p>This experience proved something critical: you <em>can</em> trust AI in high-stakes environments, but only if you move beyond simple prompting and embrace rigorous orchestration.</p>
@@ -137,6 +136,9 @@ mathjax: true
 <blockquote>We built an AI system that made it safe enough to ride at 150 mph!</blockquote>
 
 <p>The data is in, the laps are logged, and we’ve only just glimpsed the future of augmented intelligence. Hammer time!</p>
+
+<br>
+<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/12/screenshot-2025-12-18-at-9.35.58-pm.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/12/screenshot-2025-12-18-at-9.35.58-pm.png?w=817" alt="" class="wp-image-3653"/></a></figure>
 
 <br><br>
 
