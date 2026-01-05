@@ -13,7 +13,20 @@ mathjax: true
 
 <p>He was staring at our app. Just a few days ago, it was an idea. Now, it was a digital race coach capable of whispering physics-driven mentorship through a driver's headset, spotting errors with the sharp, predictive eyes of a seasoned veteran.</p>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/12/screenshot-2025-12-18-at-9.35.58-pm.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/12/screenshot-2025-12-18-at-9.35.58-pm.png?w=817" alt="" class="wp-image-3653"/></a></figure>
+<p>Want a quick sneak peek behind the scenes? 👀</p>
+<div style="max-width:540px; margin:2rem auto;">
+  <div style="position:relative; padding-bottom:125%; height:0; overflow:hidden;">
+    <iframe
+      src="https://www.instagram.com/DSeGmDekfT8/embed"
+      style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+
+
 
 <br>
 <p>The spark came from <strong>Ajeet Mirwani</strong>, a passionate race enthusiast who brought his two worlds together. As our lead for the Google Developer Experts program, he challenged us with something that sounded impossible: <strong>The High-Velocity AI Field Test</strong>. </p>
@@ -109,6 +122,8 @@ mathjax: true
 <li>I learned that being a "Prompt Engineer" isn't enough anymore. You need to be a System Orchestrator. Success came from knowing <em>how</em> to leverage intelligence - Nano for speed, Flash for analysis, and Pro for deep thinking and reasoning!</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list --></li>
+
+<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/12/screenshot-2025-12-18-at-9.35.58-pm.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/12/screenshot-2025-12-18-at-9.35.58-pm.png?w=817" alt="" class="wp-image-3653"/></a></figure>
 
 <h2 class="wp-block-heading">Bottom Line 💡</h2>
 
