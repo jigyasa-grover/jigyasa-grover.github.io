@@ -6,18 +6,17 @@ comments: true
 mathjax: true
 ---
 
-![Startup on a Shoestring Blog Cover](https://github.com/jigyasa-grover/startup-on-a-shoestring/blob/main/cover.png)
-Imagine this: you write a prompt for an autonomous developer agent to fix a minor CSS alignment bug on your startup landing page. You walk away to grab a cup of coffee. Ten minutes later, you return to a $250 API bill. 
+_IMAGINE:_ You write a prompt for an autonomous developer agent to fix a minor CSS alignment bug on your startup landing page. You walk away to grab a cup of coffee. Ten minutes later, you return to a $250 API bill. 
 
 What happened? The agent got trapped in a **self-correction loop**—trying to modify a file in a write-protected directory, failing, reading the error, attempting a slightly different syntax, and appending its reasoning trace history to the conversation context with every turn. Because LLM APIs charge for prompt tokens on every request, this accumulating history inflated the turn footprint quadratically, draining your entire budget before shipping a single line of value.
 
-In the era of autonomous systems, architects face this brand-new class of runtime failure: **rogue agent execution loops**. traditional software loops eat CPU and memory; autonomous loops eat your bank account. 
+In the era of autonomous systems, architects face this brand-new class of runtime failure: **rogue agent execution loops**. Traditional software loops eat CPU and memory; autonomous loops eat your bank account. 
 
 To prevent this token degradation, modern AI platforms require **cost-engineering guardrails**. In this tutorial, we will build a **Zero-Overhead Token Budget and Cost Accumulation Monitor** using the [Google Antigravity SDK](https://antigravity.google/docs/sdk/overview). This monitor tracks token consumption across two distinct scopes—**per-turn** and **cumulative**—and triggers an escalating behavior loop (prioritize, panic, and ship) before executing a hard programmatic kill-switch when budgets are crossed.
 
 We will also stream these telemetry updates in real-time using FastAPI Server-Sent Events (SSE) to a premium glassmorphic dashboard featuring a live rendered preview of the agent's landing page MVP. The complete source code for this walkthrough is available in the [Startup on a Shoestring GitHub Repository](https://github.com/jigyasa-grover/startup-on-a-shoestring).
 
----
+![Startup on a Shoestring Blog Cover](https://github.com/jigyasa-grover/startup-on-a-shoestring/blob/main/cover.png)
 
 ## The Core Challenge: Why Agentic SRE is Critical
 
