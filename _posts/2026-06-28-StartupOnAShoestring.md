@@ -438,5 +438,9 @@ If you're deploying autonomous agents today, cost engineering isn't an afterthou
 
 Hope you enjoyed this piece; check out the entire code on [GitHub](https://github.com/jigyasa-grover/startup-on-a-shoestring) 🎓
 
-_Huge thanks to the Google ML Developer team for organizing #AgenticArchitectSprint. Google Cloud credits are provided for this project✨ #BuildWithAI #BuildWithGemini #BuildWithGoogleAntigravity #BuildWithAntigravity #AISprint #GeminiSprint #AgenticArchitect #GoogleAntigravity
+<pre class="wp-block-preformatted">
+Huge thanks to the Google ML Developer team for organizing #AgenticArchitectSprint. 
+Google Cloud credits are provided for this project✨ 
+#BuildWithAI #BuildWithGemini #BuildWithGoogleAntigravity #BuildWithAntigravity #AISprint #GeminiSprint #AgenticArchitect #GoogleAntigravity
+</pre>
 _
