@@ -237,7 +237,7 @@ Cost metrics are great, but we also want to see performance. By capturing timest
 
 We'll stream these metrics out from our monitor as JSON payloads and send them down a FastAPI Server-Sent Events (SSE) channel. This feeds our dashboard so we can monitor our agent's metrics turn-by-turn. Here is the operational interface in action:
 
-![SRE Dashboard Telemetry Interface](https://github.com/jigyasa-grover/startup-on-a-shoestring/blob/main/dashboard.png)
+![SRE Dashboard Telemetry Interface](https://raw.githubusercontent.com/jigyasa-grover/startup-on-a-shoestring/main/dashboard.png)
 
 Here's how our frontend listens to the stream:
 
