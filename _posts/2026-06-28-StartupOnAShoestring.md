@@ -16,7 +16,7 @@ To prevent this token degradation, modern AI platforms require **cost-engineerin
 
 We will also stream these telemetry updates in real-time using FastAPI Server-Sent Events (SSE) to a premium glassmorphic dashboard featuring a live rendered preview of the agent's landing page MVP. The complete source code for this walkthrough is available in the [Startup on a Shoestring GitHub Repository](https://github.com/jigyasa-grover/startup-on-a-shoestring).
 
-![Startup on a Shoestring Blog Cover](https://github.com/jigyasa-grover/startup-on-a-shoestring/blob/main/cover.png)
+![Startup on a Shoestring Blog Cover](https://raw.githubusercontent.com/jigyasa-grover/startup-on-a-shoestring/main/cover.png)
 
 ## The Core Challenge: Why Agentic SRE is Critical
 
