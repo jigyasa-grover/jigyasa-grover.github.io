@@ -1,6 +1,6 @@
 featured_book:
   title: "Sculpting Data for ML: The First Act of Machine Learning"
-  authors: "Jigyasa Grover (Co-Author)"
+  authors: "Jigyasa Grover & Rishabh Misra"
   year: "2021"
   isbn: "979-8585463570"
   formats: "Paperback · Kindle · Audible"
@@ -9,7 +9,7 @@ featured_book:
   amazon_url: "https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/"
   goodreads_url: "https://www.goodreads.com/book/show/56632735-sculpting-data-for-ml"
   launch_post_url: "/BOOK-LAUNCH-Sculpting-Data-for-ML/"
-  summary: "A hands-on Python guide to Data-Centric AI—covering dataset curation, weak supervision, labeling workflows, class imbalance, and real-world data pipelines."
+  summary: "Co-authored with Rishabh Misra—a hands-on Python guide to Data-Centric AI covering dataset curation, weak supervision, labeling workflows, and class imbalance."
   forewords:
     - name: "Prof. Julian McAuley"
       affiliation: "Professor of Computer Science, UC San Diego"
@@ -22,6 +22,13 @@ featured_book:
       url: "https://mengtingwan.github.io/"
 
 research_publications:
+  - title: "Enterprise LLM Deployment Readiness: A Practitioner Framework across Six Pillars"
+    venue: "SSRN · AI Assurance Council Practitioner Framework (SSRN 7477058)"
+    year: "2026"
+    type: "Research Paper"
+    doi_url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7477058"
+    summary: "Co-authored six-pillar operational governance, evaluation, security, compliance, and observability framework for moving enterprise LLMs from pilot to production."
+
   - title: "Keeping it Low-Key: Modern-Day Approaches to Privacy-Preserving Machine Learning"
     venue: "Springer — Data Protection in a Post-Pandemic Society"
     year: "2023"
@@ -54,8 +61,8 @@ research_publications:
 
 editorial_reviewing:
   - org: "O'Reilly Media"
-    role: "Technical Book Reviewer — ML, Generative AI & Data Engineering (2022 – Present)"
-    url: "https://www.oreilly.com/"
+    role: "Technical Book Reviewer — Scalable AI Systems (2026) & Machine Learning with Python Cookbook, 2nd Ed. (2023); cited in AI-Assisted Programming"
+    url: "https://www.oreilly.com/library/view/scalable-ai-systems/0642572342883/"
   - org: "Packt Publishing"
-    role: "Technical Manuscript Reviewer — Applied AI & Python Systems"
+    role: "Technical Book Reviewer — Exploring Deepfakes (2023) & Applied AI Manuscripts"
     url: "https://www.packtpub.com/"

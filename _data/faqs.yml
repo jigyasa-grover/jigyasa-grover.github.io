@@ -4,13 +4,13 @@ about:
   - q: "What is her engineering background?"
     a: "Before Uber, she led AI & Research at Bordo AI, built a 0→1 feature store and ads bidding engine at Faire, owned sub-50ms billion-request ads ranking at Twitter/X, and interned at Meta after completing her M.S. in CS (AI) at UC San Diego."
   - q: "How can founders, organizers, or brands work with her?"
-    a: "Submit an inquiry on Work With Me, book a 1:1 consultation via Intro (intro.co/JigyasaGrover), or scope developer brand campaigns via Passionfroot or Naano."
+    a: "Submit an inquiry on Work With Me, book a 1:1 consultation via Intro or Topmate, or scope developer brand campaigns via Passionfroot or Naano."
 
 advisory:
   - q: "What topics does Jigyasa advise startups and engineering leaders on?"
     a: "Production ML ranking and personalization, feature stores, multi-agent orchestration vs. deterministic workflows, LLM evaluation harnesses, inference cost guardrails, and developer GTM."
   - q: "How are advisory engagements structured?"
-    a: "Book focused 1:1 architecture or strategy calls on Intro, or inquire via Work With Me for ongoing startup advisory retainers and product/DevEx design partnership."
+    a: "Book focused 1:1 architecture or strategy calls via Intro or Topmate, or inquire via Work With Me for ongoing startup advisory retainers through her independent practice, Afterdays."
 
 speaking:
   - q: "What are Jigyasa's signature keynote and conference topics?"
@@ -20,7 +20,7 @@ speaking:
 
 teaching:
   - q: "What organizations has Jigyasa delivered corporate AI training with?"
-    a: "She has trained 40,380+ learners on LinkedIn Learning and delivered corporate AI training and workshops with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, CommonSpirit Health, and Udacity."
+    a: "She has trained 44,000+ learners on LinkedIn Learning and delivered corporate AI training and workshops with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, CommonSpirit Health, and Udacity."
   - q: "Can workshops be tailored to our internal stack?"
     a: "Yes—sessions run as 90-minute executive briefings, half-day intensives, or full-day labs customized to Python, Google ADK / Vertex AI, or multi-provider LLM stacks."
 

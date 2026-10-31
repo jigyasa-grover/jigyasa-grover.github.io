@@ -11,6 +11,15 @@
 
   <div class="platform-box">
     <div>
+      <div class="platform-box__badge">{{ b.topmate.badge }}</div>
+      <h3 class="platform-box__name">{{ b.topmate.name }}</h3>
+      <p class="platform-box__desc">{{ b.topmate.use_case }}</p>
+    </div>
+    <a id="booking-link-topmate" class="btn btn--secondary" href="{{ b.topmate.url }}" target="_blank" rel="noopener">{{ b.topmate.cta }} ↗</a>
+  </div>
+
+  <div class="platform-box">
+    <div>
       <div class="platform-box__badge">{{ b.passionfroot.badge }}</div>
       <h3 class="platform-box__name">{{ b.passionfroot.name }}</h3>
       <p class="platform-box__desc">{{ b.passionfroot.use_case }}</p>

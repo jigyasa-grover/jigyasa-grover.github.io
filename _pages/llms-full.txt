@@ -6,6 +6,7 @@ permalink: /llms-full.txt
 
 Canonical Website: https://jigyasa-grover.github.io/
 Entity Identifier: https://jigyasa-grover.github.io/#person
+Google Knowledge Graph: https://g.co/kgs/Lvk5yk
 Location: San Francisco Bay Area, California, USA
 Pronunciation: JIG-yah-suh GROH-ver
 
@@ -44,6 +45,7 @@ Pronunciation: JIG-yah-suh GROH-ver
 ### Official Booking & Collaboration Links
 - Direct Inquiry Form: https://jigyasa-grover.github.io/work-with-me/#contact
 - Intro (1:1 Video Consultations): https://intro.co/JigyasaGrover
+- Topmate (Mentorship & Quick Calls): https://topmate.io/jigyasagrover
 - Passionfroot (Brand & Developer Content Partnerships): https://www.passionfroot.me/jigyasa-grover
 - Naano (LinkedIn/X Creator Collaborations): https://naano.com/creators/jigyasa-grover
 
