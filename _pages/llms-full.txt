@@ -88,3 +88,14 @@ Featured Video: {{ site.data.speaking.featured_video.title }} ({{ site.data.spea
 
 {% for u in site.data.identity.same_as %}- {{ u }}
 {% endfor %}
+
+## 13. Canonical Frequently Asked Questions (Entity Q&A)
+
+{% for section in site.data.faqs %}{% for item in section[1] %}- **Q: {{ item.q }}**
+  A: {{ item.a }}
+{% endfor %}{% endfor %}
+
+## 14. Complete Technical Writing & Essays Index
+
+{% for post in site.posts %}{% unless post.url == "/archive/" %}{% assign m = site.data.posts_meta[post.url] %}- **{{ post.title }}** ({{ post.date | date: "%Y-%m-%d" }}{% if m.category %} · {{ m.category }}{% endif %}) — https://jigyasa-grover.github.io{{ post.url }}{% if m.summary %}: {{ m.summary }}{% endif %}
+{% endunless %}{% endfor %}

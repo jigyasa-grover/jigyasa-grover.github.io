@@ -266,8 +266,12 @@ def main() -> None:
                     errors.append(f"robots.txt BLOCKED {bot} FROM {route}")
 
     sitemap_path = SITE_DIR / "sitemap.xml"
-    if sitemap_path.is_file() and "404.html" in sitemap_path.read_text(encoding="utf-8"):
-        errors.append("404.html SHOULD NOT APPEAR IN sitemap.xml")
+    if sitemap_path.is_file():
+        sm_raw = sitemap_path.read_text(encoding="utf-8")
+        if "404.html" in sm_raw:
+            errors.append("404.html SHOULD NOT APPEAR IN sitemap.xml")
+        if "/archive/" in sm_raw:
+            errors.append("/archive/ STUB SHOULD NOT APPEAR IN sitemap.xml")
 
     # 5. Inspect all generated HTML pages
     html_files = sorted(
@@ -338,6 +342,12 @@ def main() -> None:
         if not is_post and parser.imgs_missing_alt:
             errors.append(f"IMAGES MISSING ALT in {rel_path}: {parser.imgs_missing_alt}")
 
+        if not is_post and rel_path != "/404.html":
+            if len(title) > 68:
+                errors.append(f"TITLE TOO LONG FOR SERP ({len(title)} > 68 chars) in {rel_path}: '{title}'")
+            if not (110 <= len(desc) <= 165):
+                errors.append(f"META DESCRIPTION LENGTH ({len(desc)} chars, expected 110-165) in {rel_path}")
+
         if not parser.jsonld_blocks:
             errors.append(f"MISSING JSON-LD in {rel_path}")
         for blk in parser.jsonld_blocks:
@@ -345,15 +355,30 @@ def main() -> None:
                 data = json.loads(blk)
                 jsonld_count += 1
                 graph = data.get("@graph", [])
+                gtypes = {n.get("@type") for n in graph}
                 person_nodes = [n for n in graph if n.get("@id") == "https://jigyasa-grover.github.io/#person"]
                 if len(person_nodes) != 1:
                     errors.append(f"MISSING #person ENTITY NODE in JSON-LD of {rel_path}")
+                else:
+                    same_as = person_nodes[0].get("sameAs", [])
+                    if len(same_as) != len(set(same_as)):
+                        errors.append(f"DUPLICATE URLS IN Person.sameAs in {rel_path}")
+                if rel_path in ("/index.html", "/about.html") and "ProfilePage" not in gtypes:
+                    errors.append(f"MISSING ProfilePage SCHEMA in {rel_path}")
+                if rel_path == "/publications/index.html" and not ({"Book", "ScholarlyArticle"} <= gtypes):
+                    errors.append("MISSING Book OR ScholarlyArticle SCHEMA in /publications/")
+                if rel_path == "/projects/index.html" and "SoftwareSourceCode" not in blk:
+                    errors.append("MISSING SoftwareSourceCode SCHEMA in /projects/")
+                if rel_path == "/speaking/index.html" and "VideoObject" not in gtypes:
+                    errors.append("MISSING VideoObject SCHEMA in /speaking/")
+                if rel_path == "/teaching/index.html" and "CourseInstance" not in blk:
+                    errors.append("MISSING CourseInstance SCHEMA in /teaching/")
             except Exception as exc:
                 errors.append(f"INVALID JSON-LD in {rel_path}: {exc}")
 
         robots_meta = next((m.get("content", "") for m in parser.metas if m.get("name") == "robots"), "")
-        if rel_path == "/404.html" and "noindex" not in robots_meta:
-            errors.append("404.html MISSING noindex robots meta tag")
+        if rel_path in ("/404.html", "/archive/index.html") and "noindex" not in robots_meta:
+            errors.append(f"{rel_path} MISSING noindex robots meta tag")
 
     # 6. Verify booking platform links on /work-with-me/
     wwm_path = SITE_DIR / "work-with-me" / "index.html"

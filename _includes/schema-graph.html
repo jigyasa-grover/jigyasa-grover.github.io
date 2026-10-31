@@ -26,22 +26,42 @@
       "@type": "Person",
       "@id": "https://jigyasa-grover.github.io/#person",
       "name": "Jigyasa Grover",
+      "givenName": "Jigyasa",
+      "familyName": "Grover",
       "url": "https://jigyasa-grover.github.io/",
       "image": "https://jigyasa-grover.github.io/assets/images/opt/profile_photo.jpg",
       "jobTitle": "Machine Learning Engineer, Agentic AI Educator, Author & Advisor",
       "description": {{ id.short_bio_50 | jsonify }},
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Uber"
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Google Knowledge Graph",
+        "value": "https://g.co/kgs/Lvk5yk"
       },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "San Francisco Bay Area, California, USA"
+      },
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "Uber",
+          "url": "https://www.uber.com/"
+        },
+        {
+          "@type": "Organization",
+          "name": "Afterdays"
+        }
+      ],
       "alumniOf": [
         {
           "@type": "CollegeOrUniversity",
-          "name": "University of California, San Diego"
+          "name": "University of California, San Diego",
+          "url": "https://ucsd.edu/"
         },
         {
           "@type": "CollegeOrUniversity",
-          "name": "Delhi Technological University"
+          "name": "Delhi Technological University",
+          "url": "https://dtu.ac.in/"
         }
       ],
       "memberOf": [
@@ -55,19 +75,39 @@
         },
         {
           "@type": "Organization",
+          "name": "AI Assurance Council"
+        },
+        {
+          "@type": "Organization",
           "name": "World Economic Forum Global Shapers Community"
+        },
+        {
+          "@type": "Organization",
+          "name": "Linux Foundation Program Committee"
+        },
+        {
+          "@type": "Organization",
+          "name": "Python Software Foundation"
         }
+      ],
+      "award": [
+        {% for a in site.data.recognition.awards %}{{ a.title | append: " — " | append: a.issuer | jsonify }}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
       ],
       "knowsAbout": [
         "Machine Learning Engineering",
         "Agentic AI",
-        "AI Engineering",
-        "Large Language Model Evaluation",
+        "Multi-Agent Orchestration",
+        "Model Context Protocol (MCP)",
         "Google Agent Development Kit (ADK)",
+        "Large Language Model Evaluation",
         "Personalization and Ranking Systems",
+        "Mixture-of-Experts (MoE) Architectures",
+        "Real-Time Feature Stores",
+        "Cloud TPU Fine-Tuning",
         "Data-Centric AI",
         "Privacy-Preserving Machine Learning",
-        "Responsible AI"
+        "AI Security and Red-Teaming"
       ],
       "sameAs": {{ id.same_as | jsonify }}
     },
@@ -76,29 +116,45 @@
       "@id": "https://jigyasa-grover.github.io/#website",
       "url": "https://jigyasa-grover.github.io/",
       "name": "Jigyasa Grover",
+      "alternateName": "Jigyasa Grover — Official Website",
       "description": {{ site.description | jsonify }},
+      "author": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "about": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
       "publisher": {
         "@id": "https://jigyasa-grover.github.io/#person"
       },
       "inLanguage": "en-US"
     }
-    {% if page.layout == "post" %},
+    {% if page.layout == "post" and page.noindex != true %},
     {
       "@type": "BlogPosting",
       "@id": {{ canonical_url | append: "#article" | jsonify }},
+      "url": {{ canonical_url | jsonify }},
       "mainEntityOfPage": {{ canonical_url | jsonify }},
       "headline": {{ page.title | jsonify }},
       "description": {{ schema_desc | jsonify }},
       "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
       "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+      "wordCount": {{ page.content | number_of_words }},
       "author": {
         "@id": "https://jigyasa-grover.github.io/#person"
       },
       "publisher": {
         "@id": "https://jigyasa-grover.github.io/#person"
       },
+      "isPartOf": {
+        "@id": "https://jigyasa-grover.github.io/#website"
+      },
       "image": "https://jigyasa-grover.github.io/assets/images/opt/google_io_feature.jpg",
-      "inLanguage": "en-US"
+      "inLanguage": "en-US",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".post-summary"]
+      }
       {% if post_meta and post_meta.tags %},
       "keywords": {{ post_meta.tags | join: ", " | jsonify }},
       "articleSection": {{ post_meta.category | jsonify }}
@@ -111,11 +167,18 @@
       "url": {{ canonical_url | jsonify }},
       "name": {{ schema_title | jsonify }},
       "description": {{ schema_desc | jsonify }},
+      "dateCreated": "2020-07-01T00:00:00Z",
+      "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
+      "inLanguage": "en-US",
       "mainEntity": {
         "@id": "https://jigyasa-grover.github.io/#person"
       },
       "isPartOf": {
         "@id": "https://jigyasa-grover.github.io/#website"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".hero__lead", ".page-hero__lead"]
       }
     }
     {% else %},
@@ -125,6 +188,7 @@
       "url": {{ canonical_url | jsonify }},
       "name": {{ schema_title | jsonify }},
       "description": {{ schema_desc | jsonify }},
+      "inLanguage": "en-US",
       "about": {
         "@id": "https://jigyasa-grover.github.io/#person"
       },
@@ -133,7 +197,7 @@
       }
     }
     {% endif %}
-    {% if page.url != "/" and page.url != "/404.html" %},
+    {% if page.url != "/" and page.noindex != true %},
     {
       "@type": "BreadcrumbList",
       "@id": {{ canonical_url | append: "#breadcrumb" | jsonify }},
@@ -161,7 +225,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": {{ schema_title | jsonify }},
+          "name": {{ page.title | default: schema_title | jsonify }},
           "item": {{ canonical_url | jsonify }}
         }
         {% endif %}
@@ -174,13 +238,81 @@
       "@id": "https://jigyasa-grover.github.io/publications/#sculpting-data-for-ml",
       "name": "Sculpting Data for ML: The First Act of Machine Learning",
       "isbn": "979-8585463570",
+      "bookFormat": "https://schema.org/Paperback",
+      "inLanguage": "en",
       "datePublished": "2021-01-24",
-      "author": {
-        "@id": "https://jigyasa-grover.github.io/#person"
-      },
+      "author": [
+        {
+          "@id": "https://jigyasa-grover.github.io/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Rishabh Misra"
+        }
+      ],
       "url": "https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/",
       "image": "https://jigyasa-grover.github.io/assets/images/opt/book_cover.jpg",
       "description": {{ site.data.publications.featured_book.summary | jsonify }}
+    }{% for r in site.data.publications.research_publications %},
+    {
+      "@type": "ScholarlyArticle",
+      "@id": {{ "https://jigyasa-grover.github.io/publications/#paper-" | append: forloop.index | jsonify }},
+      "headline": {{ r.title | jsonify }},
+      "name": {{ r.title | jsonify }},
+      "datePublished": {{ r.year | append: "" | jsonify }},
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "name": {{ r.venue | jsonify }}
+      },
+      "author": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "url": {{ r.doi_url | jsonify }},
+      "description": {{ r.summary | jsonify }}
+    }{% endfor %}
+    {% endif %}
+    {% if page.url == "/projects/" %},
+    {
+      "@type": "ItemList",
+      "@id": "https://jigyasa-grover.github.io/projects/#software",
+      "name": "Open-Source AI & Machine Learning Systems by Jigyasa Grover",
+      "itemListElement": [
+        {% assign featured_projects = site.data.projects | where: "featured", true %}
+        {% for proj in featured_projects %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": {{ proj.title | jsonify }},
+            "description": {{ proj.summary | jsonify }},
+            "dateCreated": {{ proj.year | append: "" | jsonify }},
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://jigyasa-grover.github.io/#person"
+            }{% if proj.repo_url %},
+            "codeRepository": {{ proj.repo_url | jsonify }},
+            "url": {{ proj.repo_url | jsonify }}{% elsif proj.post_url %},
+            "url": {{ "https://jigyasa-grover.github.io" | append: proj.post_url | jsonify }}{% endif %}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    {% endif %}
+    {% if page.url == "/speaking/" %},
+    {
+      "@type": "VideoObject",
+      "@id": "https://jigyasa-grover.github.io/speaking/#google-io-keynote",
+      "name": {{ site.data.speaking.featured_video.title | jsonify }},
+      "description": {{ site.data.speaking.featured_video.caption | jsonify }},
+      "thumbnailUrl": "https://jigyasa-grover.github.io/assets/images/opt/google_io_feature.jpg",
+      "uploadDate": "2024-05-14T10:00:00-07:00",
+      "contentUrl": {{ site.data.speaking.featured_video.url | jsonify }},
+      "embedUrl": "https://www.youtube.com/embed/XEzRZ35urlk?start=516",
+      "actor": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      }
     }
     {% endif %}
     {% if page.url == "/teaching/" %},
@@ -204,6 +336,13 @@
             },
             "instructor": {
               "@id": "https://jigyasa-grover.github.io/#person"
+            },
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "online",
+              "instructor": {
+                "@id": "https://jigyasa-grover.github.io/#person"
+              }
             }
           }
         }{% unless forloop.last %},{% endunless %}
