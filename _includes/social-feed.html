@@ -4,8 +4,9 @@
 
 <div class="social-feed" data-social-feed data-behold-url="{{ behold_url | escape }}">
   <div class="social-feed__header">
-    <div class="filter-pills" role="group" aria-label="Filter social posts by platform">
-      <button type="button" class="filter-btn is-active" data-social-filter="all" aria-pressed="true">All Channels</button>
+    <div class="filter-pills" role="group" aria-label="Filter social posts by platform or sponsorship">
+      <button type="button" class="filter-btn is-active" data-social-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="filter-btn" data-social-filter="sponsored" aria-pressed="false">Sponsored</button>
       <button type="button" class="filter-btn" data-social-filter="linkedin" aria-pressed="false">LinkedIn</button>
       <button type="button" class="filter-btn" data-social-filter="x" aria-pressed="false">X (Twitter)</button>
       <button type="button" class="filter-btn" data-social-filter="instagram" aria-pressed="false">Instagram</button>
@@ -24,7 +25,12 @@
   <div class="social-grid" data-social-grid>
     {% for post in sf.posts %}
       {% if post.contexts contains feed_context %}
-      <article class="social-card" data-social-item data-platform="{{ post.platform }}">
+      <article
+        class="social-card"
+        data-social-item
+        data-platform="{{ post.platform }}"
+        data-sponsored="{% if post.sponsored %}true{% else %}false{% endif %}"
+      >
         <div class="social-card__top">
           <div class="social-card__brand">
             <span class="social-badge social-badge--{{ post.platform }}">
@@ -35,7 +41,13 @@
               <div class="social-card__handle">{{ post.handle }}</div>
             </div>
           </div>
-          <span class="social-card__date">{{ post.date }}</span>
+          <div class="social-card__meta-right">
+            {% if post.sponsored %}
+              <span class="social-card__sponsored">Sponsored · {{ post.partner }}</span>
+            {% else %}
+              <span class="social-card__date">{{ post.date }}</span>
+            {% endif %}
+          </div>
         </div>
 
         {% if post.image %}
@@ -52,7 +64,7 @@
         {% endif %}
 
         <div class="social-card__body">
-          <div class="social-card__kicker">{{ post.badge }}</div>
+          <div class="social-card__kicker">{{ post.badge }} · {{ post.date }}</div>
           <p class="social-card__excerpt">{{ post.excerpt }}</p>
         </div>
 

@@ -336,7 +336,11 @@
       if (!grid) return;
       grid.querySelectorAll("[data-social-item]").forEach(function (card) {
         var plat = (card.getAttribute("data-platform") || "").toLowerCase();
-        var show = activePlatform === "all" || plat === activePlatform;
+        var isSponsored = card.getAttribute("data-sponsored") === "true";
+        var show =
+          activePlatform === "all" ||
+          (activePlatform === "sponsored" && isSponsored) ||
+          plat === activePlatform;
         card.style.display = show ? "" : "none";
       });
     };

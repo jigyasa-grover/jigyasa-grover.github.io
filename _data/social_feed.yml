@@ -16,10 +16,37 @@ channels:
     url: "https://www.instagram.com/jigyasagroverofficial/"
 
 posts:
+  - platform: "x"
+    platform_label: "X Thread"
+    handle: "@jigyasa_grover"
+    date: "Oct 2026"
+    sponsored: true
+    partner: "Parallel"
+    badge: "Retrieval-Augmented Decisions"
+    contexts: ["partnerships", "highlights"]
+    excerpt: "We chain multi-agent graphs and MCP servers just to answer yes/no state checks. Enter Retrieval-Augmented Decisions (RAD): sub-second, live web-grounded classification with verified citations at $0.001/call."
+    tag: "#ParallelPartner"
+    cta: "Read Thread on X"
+    url: "https://x.com/jigyasa_grover/status/2115293448869753316"
+
+  - platform: "linkedin"
+    platform_label: "LinkedIn"
+    handle: "in/jigyasa-grover"
+    date: "Oct 2026"
+    sponsored: true
+    partner: "Pensieve"
+    badge: "Context Engineering over MCP"
+    contexts: ["partnerships", "highlights"]
+    excerpt: "Upgrading from one model version to the next won't make your product better—because the model was never the part that understood the business. Persistent, source-cited MCP context across Notion, Slack, GitHub, and Linear was."
+    tag: "Pensieve · #ad"
+    cta: "Read on LinkedIn"
+    url: "https://www.linkedin.com/posts/jigyasa-grover_ad-contextengineering-agentharness-share-7516155573327790080-WXGO/"
+
   - platform: "instagram"
     platform_label: "Instagram Reel"
     handle: "@jigyasagroverofficial"
     date: "Oct 2026"
+    sponsored: false
     badge: "Keynote Reel · Milan"
     contexts: ["highlights", "partnerships"]
     image: "/assets/images/opt/codemotion_speaker_2026.jpg"
@@ -31,36 +58,42 @@ posts:
     cta: "Watch on Instagram"
     url: "https://www.instagram.com/jigyasagroverofficial/"
 
-  - platform: "x"
-    platform_label: "X (Twitter)"
-    handle: "@jigyasa_grover"
-    date: "Oct 2026"
-    badge: "Launch Thread · Parallel"
-    contexts: ["highlights", "partnerships"]
-    excerpt: "Replacing brittle 'search → stuff into LLM → pray for typed JSON' pipelines with sub-second web-grounded decision models returning calibrated probabilities and citations."
-    tag: "Parallel Decisions API"
-    cta: "Read on X"
-    url: "https://x.com/jigyasa_grover/status/2115293448869753316"
-
   - platform: "linkedin"
     platform_label: "LinkedIn"
     handle: "in/jigyasa-grover"
     date: "Oct 2026"
-    badge: "Context Engineering · Pensieve"
-    contexts: ["highlights", "partnerships"]
-    excerpt: "Upgrading from one model version to the next won't make your product better—because the model was never the part that understood the business. Persistent MCP context was."
-    tag: "MCP & Context"
+    sponsored: true
+    partner: "Guidde"
+    badge: "AI Enablement & MCP Knowledge"
+    contexts: ["partnerships"]
+    excerpt: "Teaching 150K+ people taught me that keeping engineering knowledge alive afterward is the hardest part—turning one screen walkthrough into multilingual video docs and a company-grounded MCP server inside Claude."
+    tag: "Guidde · #ad"
     cta: "Read on LinkedIn"
-    url: "https://www.linkedin.com/posts/jigyasa-grover_ad-contextengineering-agentharness-share-7516155573327790080-WXGO/"
+    url: "https://www.linkedin.com/posts/jigyasa-grover_ad-guidde-aieducation-activity-7513332803313430528-8qYl"
+
+  - platform: "x"
+    platform_label: "X (Twitter)"
+    handle: "@jigyasa_grover"
+    date: "Oct 2026"
+    sponsored: true
+    partner: "Qodo"
+    badge: "Shift-Left Agentic Review"
+    contexts: ["partnerships"]
+    excerpt: "Shifting code review left into the active coding agent session—tracing PR history, downstream dependencies, and engineering standards before a pull request ever hits CI."
+    tag: "Qodo · Partner"
+    cta: "Read on X"
+    url: "https://x.com/jigyasa_grover/status/2105710278822552037"
 
   - platform: "linkedin"
     platform_label: "LinkedIn"
     handle: "in/jigyasa-grover"
     date: "Sep 2026"
-    badge: "Multi-Agent Memory · SenseLab"
-    contexts: ["highlights", "partnerships"]
-    excerpt: "Adding more autonomy doesn't automatically equal more capability—mostly, it adds a coordination tax unless versioned, outcome-driven shared memory is treated as infrastructure."
-    tag: "SenseLab (a16z Speedrun)"
+    sponsored: true
+    partner: "SenseLab"
+    badge: "Continual Multi-Agent Memory"
+    contexts: ["partnerships", "highlights"]
+    excerpt: "Adding more autonomy doesn't automatically equal more capability—mostly, it adds a coordination tax unless versioned, outcome-driven shared memory over MCP is treated as infrastructure."
+    tag: "SenseLab (a16z Speedrun) · #ad"
     cta: "Read on LinkedIn"
     url: "https://www.linkedin.com/posts/jigyasa-grover_ad-agenticai-machinelearning-activity-7508189831764566016-sg2l"
 
@@ -68,28 +101,20 @@ posts:
     platform_label: "LinkedIn"
     handle: "in/jigyasa-grover"
     date: "Sep 2026"
-    badge: "Code Governance · Qodo"
-    contexts: ["partnerships"]
+    sponsored: true
+    partner: "Qodo"
+    badge: "Train/Serve Skew & Code Governance"
+    contexts: ["partnerships", "highlights"]
     excerpt: "Where the scary ML bugs live: not syntax errors, but silent train/serve skew, subtle feature pipeline drift, and cross-repo clamps three services downstream that never show up in a local diff."
-    tag: "Qodo Agentic Toolbox"
+    tag: "Qodo Agentic Toolbox · #ad"
     cta: "Read on LinkedIn"
     url: "https://www.linkedin.com/posts/jigyasa-grover_ad-codegovernance-aicodereview-share-7503200004652576768-1r_a"
-
-  - platform: "x"
-    platform_label: "X (Twitter)"
-    handle: "@jigyasa_grover"
-    date: "Oct 2026"
-    badge: "Agentic SDLC · Qodo"
-    contexts: ["highlights"]
-    excerpt: "Shifting code review left into the active coding agent session—tracing PR history, downstream dependencies, and engineering standards before a pull request ever exists."
-    tag: "Agentic SDLC"
-    cta: "Read on X"
-    url: "https://x.com/jigyasa_grover/status/2105710278822552037"
 
   - platform: "linkedin"
     platform_label: "LinkedIn"
     handle: "in/jigyasa-grover"
     date: "2026"
+    sponsored: false
     badge: "Ecosystem · Google Gemini"
     contexts: ["highlights", "partnerships"]
     image: "/assets/images/opt/gemini_live_2026.jpg"
@@ -101,17 +126,30 @@ posts:
     cta: "Read on LinkedIn"
     url: "https://www.linkedin.com/posts/jigyasa-grover_googlegemini-geminiomniflash-buildwithgemini-ugcPost-7477566989939671040-a9tE"
 
-  - platform: "instagram"
-    platform_label: "Instagram"
-    handle: "@jigyasagroverofficial"
+  - platform: "x"
+    platform_label: "X (Twitter)"
+    handle: "@jigyasa_grover"
     date: "2026"
-    badge: "Behind the Scenes · SF"
+    sponsored: false
+    badge: "Google Gemini Early Access"
     contexts: ["highlights"]
     image: "/assets/images/opt/gemini_dinner_2026.jpg"
     width: 1080
     height: 1080
     focal: "center 28%"
     excerpt: "Evening conversations in San Francisco with Google's Gemini product and developer teams on multimodal agents, evaluation loops, and what actually ships in production."
-    tag: "Google Gemini Dinner"
-    cta: "View on Instagram"
-    url: "https://www.instagram.com/jigyasagroverofficial/"
+    tag: "Google gDAB"
+    cta: "View on X"
+    url: "https://x.com/jigyasa_grover/status/2105464156656939298"
+
+  - platform: "linkedin"
+    platform_label: "LinkedIn"
+    handle: "in/jigyasa-grover"
+    date: "2026"
+    sponsored: false
+    badge: "Production Agentic AI"
+    contexts: ["highlights"]
+    excerpt: "Field notes on designing reliable agentic workflows in production—where latency budgets, deterministic state boundaries, and evaluation harnesses beat prompt guesswork."
+    tag: "Agentic AI"
+    cta: "Read on LinkedIn"
+    url: "https://www.linkedin.com/posts/jigyasa-grover_agenticai-machinelearning-share-7433765251751538688-ATRA"
