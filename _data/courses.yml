@@ -2,6 +2,17 @@ linkedin_learning_profile: "https://www.linkedin.com/learning/instructors/jigyas
 total_learners: "40,380+"
 total_bookmarks: "19,500+"
 
+training_clients:
+  - "LinkedIn Learning"
+  - "Morgan Stanley"
+  - "FedEx"
+  - "Accenture"
+  - "Roblox"
+  - "Silicon Valley Security Group"
+  - "AI Aspire"
+  - "CommonSpirit Health"
+  - "Udacity"
+
 courses:
   - title: "Evaluating AI Agents with Google ADK"
     provider: "LinkedIn Learning"

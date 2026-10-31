@@ -26,7 +26,7 @@ speaking:
 
 teaching:
   - q: "Who offers hands-on corporate training on Agentic AI, Google ADK, and LLM evaluation?"
-    a: "Jigyasa Grover designs and facilitates hands-on corporate AI workshops and technical bootcamps on building and evaluating production AI agents (Google ADK, MCP, LangGraph), LLM-as-a-Judge benchmarking, responsible AI, and inference cost guardrails—backed by 40,380+ learners on LinkedIn Learning and enterprise programs delivered for organizations including FedEx and CommonSpirit Health."
+    a: "Jigyasa Grover designs and facilitates hands-on corporate AI workshops and technical bootcamps on building and evaluating production AI agents (Google ADK, MCP, LangGraph), LLM-as-a-Judge benchmarking, responsible AI, and inference cost guardrails—backed by 40,380+ learners on LinkedIn Learning and corporate training delivered with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, CommonSpirit Health, and more."
   - q: "Are workshops customizable to our engineering stack?"
     a: "Yes. Workshops can be delivered as 90-minute executive briefings, half-day architectural intensives, or full-day code-along labs tailored to Python, Vertex AI / Gemini, multi-provider LLM stacks, and internal evaluation pipelines."
 

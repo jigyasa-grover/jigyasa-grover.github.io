@@ -50,6 +50,7 @@ Pronunciation: JIG-yah-suh GROH-ver
 ## 6. Courses & Corporate AI Workshops
 
 - LinkedIn Learning Instructor Profile: https://www.linkedin.com/learning/instructors/jigyasa-grover ({{ site.data.courses.total_learners }} learners, {{ site.data.courses.total_bookmarks }} bookmarks)
+- Corporate AI Training & Enablement Organizations: {{ site.data.courses.training_clients | join: ", " }}, and more
 {% for c in site.data.courses.courses %}- **{{ c.title }}** ({{ c.provider }}, {{ c.year }}, {{ c.learners }}): {{ c.summary }} — {{ c.url }}
 {% endfor %}
 

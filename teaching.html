@@ -3,11 +3,11 @@ layout: page
 title: "Corporate AI Training, Workshops & Courses"
 heading: "Hands-on AI engineering enablement for technical teams and leaders."
 eyebrow: "Pillar 03 · Courses & Workshops"
-lead: "Trusted by 40,380+ learners on LinkedIn Learning and enterprise engineering cohorts—taking teams from prompt prototypes to evaluated, production-grade agentic and ML systems."
+lead: "Trusted by 40,380+ learners on LinkedIn Learning and corporate engineering cohorts across Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, and more—taking teams from prompt prototypes to evaluated, production-grade agentic and ML systems."
 hero_cta_label: "Book an AI Workshop →"
 hero_cta_url: "/work-with-me/?topic=Corporate%20AI%20Training#contact"
 seo_title: "Corporate AI Trainer, Agentic AI Workshops & LinkedIn Learning Courses — Jigyasa Grover"
-description: "Hands-on enterprise AI workshops and courses by Jigyasa Grover: Building & Evaluating AI Agents with Google ADK, LLM evaluation harnesses, Responsible AI, and production AI architecture."
+description: "Hands-on enterprise AI training, workshops, and courses by Jigyasa Grover—delivered with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, and more."
 faq_key: "teaching"
 permalink: /teaching/
 redirect_from:
@@ -19,9 +19,18 @@ redirect_from:
 <section style="margin-bottom: 4.5rem;" aria-labelledby="workshops-heading">
   <div class="eyebrow">Live Corporate Enablement</div>
   <h2 id="workshops-heading">Customizable enterprise AI workshops &amp; bootcamps</h2>
-  <p style="max-width: 70ch; color: var(--ink-muted); margin-bottom: 2rem;">
-    Previously delivered for enterprise organizations and technical communities including <strong>FedEx</strong> (via Udacity), <strong>CommonSpirit Health</strong>, and <strong>Silicon Valley Security Group</strong>. Available in-person or live virtual.
+  <p style="max-width: 72ch; color: var(--ink-muted); margin-bottom: 1.35rem;">
+    Corporate AI training, technical workshops, and enterprise curriculum delivered with <strong>LinkedIn Learning</strong>, <strong>Morgan Stanley</strong>, <strong>FedEx</strong>, <strong>Accenture</strong>, <strong>Roblox</strong>, <strong>Silicon Valley Security Group</strong>, <strong>AI Aspire</strong>, <strong>CommonSpirit Health</strong>, <strong>Udacity</strong>, and more. Available in-person or live virtual.
   </p>
+
+  <div style="margin-bottom: 2.25rem; padding: 1.15rem 1.35rem; border: 1px solid var(--rule-light); border-radius: var(--radius-md); background: var(--bg-surface);">
+    <div class="eyebrow" style="margin-bottom: 0.45rem;">Selected Corporate Training &amp; Enablement Organizations</div>
+    <div class="partner-strip">
+      {% for client in site.data.courses.training_clients %}
+        <span>{{ client }}{% unless forloop.last %} ·{% endunless %}</span>
+      {% endfor %}
+    </div>
+  </div>
 
   <div class="project-grid">
     {% for w in site.data.courses.workshops %}

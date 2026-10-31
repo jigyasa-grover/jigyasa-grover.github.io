@@ -14,7 +14,7 @@ hero_lead: "I lead large-scale rider personalization and ranking ML systems at U
 
 short_bio_50: "Jigyasa Grover is a Machine Learning Engineer at Uber leading global rider personalization and ranking systems, a 13x AI and Open Source award winner, Google Developer Advisory Board member, Google Developer Expert in AI/ML, LinkedIn Learning instructor (40,000+ learners), and co-author of Sculpting Data for ML."
 
-medium_bio_150: "Jigyasa Grover (pronounced JIG-yah-suh GROH-ver) is a San Francisco–based Machine Learning Engineer at Uber, where she serves as Tech Lead for global rider personalization and ranking pipelines serving millions of daily users across 500+ cities. Previously, she led AI and Research at Bordo AI and built billion-request, low-latency ML ranking, ads prediction, and feature infrastructure across Faire, Twitter (X), and Meta. A 13-time award winner in AI and Open Source, Jigyasa serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) recognition, and is a World Economic Forum Global Shaper. She is the co-author of Sculpting Data for ML (95+ academic citations), a LinkedIn Learning and Udacity instructor reaching 50,000+ learners, an advisor across 30+ startups and enterprises, and an international keynote speaker featured on the Google I/O main stage and 200+ conferences across 20+ countries."
+medium_bio_150: "Jigyasa Grover (pronounced JIG-yah-suh GROH-ver) is a San Francisco–based Machine Learning Engineer at Uber, where she serves as Tech Lead for global rider personalization and ranking pipelines serving millions of daily users across 500+ cities. Previously, she led AI and Research at Bordo AI and built billion-request, low-latency ML ranking, ads prediction, and feature infrastructure across Faire, Twitter (X), and Meta. A 13-time award winner in AI and Open Source, Jigyasa serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) recognition, and is a World Economic Forum Global Shaper. She is the co-author of Sculpting Data for ML (95+ academic citations), a LinkedIn Learning instructor reaching 50,000+ learners, a corporate AI trainer with organizations including Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, and AI Aspire, an advisor across 30+ startups and enterprises, and an international keynote speaker featured on the Google I/O main stage and 200+ conferences across 20+ countries."
 
 metrics:
   - value: "13×"
@@ -25,7 +25,7 @@ metrics:
     detail: "Google I/O Keynote, Cloud Next, Open Source Summit, PyCon, 20+ countries"
   - value: "50K+"
     label: "Engineers & Leaders Trained"
-    detail: "4 LinkedIn Learning courses (40K+), Udacity enterprise programs & live workshops"
+    detail: "LinkedIn Learning (40K+), Morgan Stanley, FedEx, Accenture, Roblox, SVSG & AI Aspire"
   - value: "30+"
     label: "Advisory & Ecosystem Roles"
     detail: "Google gDAB, startups, VCs, enterprise AI teams & governance boards"

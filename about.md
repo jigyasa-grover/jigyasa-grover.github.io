@@ -32,7 +32,7 @@ permalink: /about
       On the ecosystem and governance side, I serve on the <strong>Google Developer Advisory Board (gDAB)</strong> and <strong>Google Cloud BI Council</strong>, hold recognition as a <strong>Google Developer Expert (AI/ML)</strong> and <strong>World Economic Forum Global Shaper</strong> (Palo Alto Hub), and advise founders, product leaders, and investors across <strong>30+ startups, enterprises, and venture funds</strong>. In May 2024, I was <a href="https://www.youtube.com/live/XEzRZ35urlk?t=516" target="_blank" rel="noopener">featured on the Google I/O main keynote stage</a>—introduced by Sundar Pichai—sharing practitioner insights on Gemini 1.5 Pro's 1-million-token context window.
     </p>
     <p>
-      Guided by the belief that <em>we rise by lifting others</em>, I co-authored <strong><a href="https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/" target="_blank" rel="noopener">Sculpting Data for ML: The First Act of Machine Learning</a></strong> (95+ academic citations), authored peer-reviewed Springer chapters on privacy-preserving ML and deepfake detection, and teach four courses on <strong><a href="https://www.linkedin.com/learning/instructors/jigyasa-grover" target="_blank" rel="noopener">LinkedIn Learning</a></strong>—including <em>Hands-On AI: Building Agents with Google ADK</em> and <em>Evaluating AI Agents with Google ADK</em>—reaching <strong>50,000+ learners</strong> across courses and enterprise workshops.
+      Guided by the belief that <em>we rise by lifting others</em>, I co-authored <strong><a href="https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/" target="_blank" rel="noopener">Sculpting Data for ML: The First Act of Machine Learning</a></strong> (95+ academic citations), authored peer-reviewed Springer chapters on privacy-preserving ML and deepfake detection, teach four courses on <strong><a href="https://www.linkedin.com/learning/instructors/jigyasa-grover" target="_blank" rel="noopener">LinkedIn Learning</a></strong>—including <em>Hands-On AI: Building Agents with Google ADK</em> and <em>Evaluating AI Agents with Google ADK</em>—and deliver corporate AI training with organizations including <strong>Morgan Stanley</strong>, <strong>FedEx</strong>, <strong>Accenture</strong>, <strong>Roblox</strong>, <strong>Silicon Valley Security Group</strong>, and <strong>AI Aspire</strong>, reaching <strong>50,000+ learners</strong> globally.
     </p>
   </div>
 
@@ -55,7 +55,7 @@ permalink: /about
       <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; color: var(--ink-secondary);">
         <li><strong>Current Role:</strong> ML Engineer (Tech Lead), Uber</li>
         <li><strong>Google Ecosystem:</strong> gDAB Member &amp; AI/ML GDE</li>
-        <li><strong>Teaching:</strong> LinkedIn Learning &amp; Udacity Instructor (50K+ learners)</li>
+        <li><strong>Teaching &amp; Training:</strong> LinkedIn Learning (40K+) · Morgan Stanley · FedEx · Accenture · Roblox · SVSG · AI Aspire</li>
         <li><strong>Book:</strong> <em>Sculpting Data for ML</em> (ISBN 979-8585463570)</li>
         <li><strong>Speaking:</strong> 200+ talks · 20+ countries · Google I/O Keynote</li>
         <li><strong>Recognition:</strong> 13× AI &amp; Open Source Award Winner</li>

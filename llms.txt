@@ -16,7 +16,7 @@ For complete structured biographical, career, speaking, course, publication, and
 - [Work With Me](https://jigyasa-grover.github.io/work-with-me/): Six collaboration pillars, booking links (Intro, Passionfroot, Naano), and direct inquiry form.
 - [AI Startup & Product Advisory](https://jigyasa-grover.github.io/advisory/): Advisory on production ML ranking, Agentic AI architecture, LLM evaluation, and token cost guardrails.
 - [Keynotes & Conference Speaking](https://jigyasa-grover.github.io/speaking/): Signature talk abstracts, Google I/O keynote feature, and 200+ global appearances.
-- [Corporate AI Training & Courses](https://jigyasa-grover.github.io/teaching/): Enterprise AI workshops, 4 LinkedIn Learning courses, and Udacity curriculum.
+- [Corporate AI Training & Courses](https://jigyasa-grover.github.io/teaching/): Enterprise AI training & workshops delivered with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, Udacity, and CommonSpirit Health, plus 4 LinkedIn Learning courses.
 - [Technical Content & Brand Partnerships](https://jigyasa-grover.github.io/partnerships/): Engineering-led developer content, audience demographics (82% senior technical), and brand partners.
 - [Selected Engineering Projects](https://jigyasa-grover.github.io/projects/): Open-source agentic AI systems, TPU fine-tuning, edge/cloud racing telemetry, and RAG benchmarks.
 - [Books & Publications](https://jigyasa-grover.github.io/publications/): *Sculpting Data for ML* (ISBN 979-8585463570), Springer chapters, and ACM research.
