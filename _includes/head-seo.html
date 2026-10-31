@@ -46,7 +46,11 @@
 <title>{{ meta_title | escape }}</title>
 <meta name="description" content="{{ meta_desc | escape }}" />
 <meta name="author" content="Jigyasa Grover" />
+{% if page.noindex %}
+<meta name="robots" content="noindex, follow" />
+{% else %}
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+{% endif %}
 
 <link rel="canonical" href="{{ canonical_url }}" />
 <link rel="alternate" type="application/rss+xml" title="Jigyasa Grover — Technical Writing RSS" href="{{ site.url }}/feed.xml" />

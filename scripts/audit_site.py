@@ -190,7 +190,7 @@ def main() -> None:
             except Exception as exc:
                 errors.append(f"INVALID XML in {xml_file}: {exc}")
 
-    # 4. Validate LLM context endpoints
+    # 4. Validate LLM context endpoints & RFC 9309 robots.txt
     for llm_rel in ("llms.txt", ".well-known/llms.txt", "llms-full.txt"):
         llm_path = SITE_DIR / llm_rel
         if llm_path.is_file():
@@ -199,6 +199,75 @@ def main() -> None:
                 errors.append(f"LLM ENDPOINT UNEXPECTEDLY SHORT: {llm_rel}")
             if "{{" in content or "{%" in content:
                 errors.append(f"UNRENDERED LIQUID TAG IN {llm_rel}")
+
+    robots_path = SITE_DIR / "robots.txt"
+    if robots_path.is_file():
+        robots_raw = robots_path.read_text(encoding="utf-8")
+        if len(robots_raw.encode("utf-8")) > 65536:
+            errors.append("robots.txt EXCEEDS SAFE SIZE THRESHOLD")
+        seen_agents = set()
+        seen_sitemaps = []
+        in_group = False
+        saw_rule_in_group = False
+        for lineno, raw_line in enumerate(robots_raw.splitlines(), 1):
+            line = raw_line.split("#", 1)[0].strip()
+            if not line:
+                continue
+            if ":" not in line:
+                errors.append(f"INVALID RFC 9309 SYNTAX in robots.txt:{lineno}: {raw_line}")
+                continue
+            field, val = [part.strip() for part in line.split(":", 1)]
+            fl = field.lower()
+            if fl == "user-agent":
+                if saw_rule_in_group:
+                    saw_rule_in_group = False
+                in_group = True
+                if not val:
+                    errors.append(f"EMPTY User-agent in robots.txt:{lineno}")
+                seen_agents.add(val)
+            elif fl in ("allow", "disallow"):
+                if not in_group:
+                    errors.append(f"ORPHAN {field} BEFORE User-agent in robots.txt:{lineno}")
+                saw_rule_in_group = True
+                if val and not val.startswith(("/", "*")):
+                    errors.append(f"INVALID PATH '{val}' in robots.txt:{lineno}")
+            elif fl == "sitemap":
+                seen_sitemaps.append(val)
+            else:
+                errors.append(f"NON-RFC-9309 DIRECTIVE '{field}' in robots.txt:{lineno}")
+        for req_agent in (
+            "*",
+            "Googlebot",
+            "Googlebot-Image",
+            "Bingbot",
+            "Applebot",
+            "OAI-SearchBot",
+            "ChatGPT-User",
+            "GPTBot",
+            "ClaudeBot",
+            "Claude-SearchBot",
+            "Claude-User",
+            "PerplexityBot",
+            "Perplexity-User",
+            "Google-Extended",
+            "Applebot-Extended",
+        ):
+            if req_agent not in seen_agents:
+                errors.append(f"MISSING REQUIRED USER-AGENT '{req_agent}' in robots.txt")
+        if "https://jigyasa-grover.github.io/sitemap.xml" not in seen_sitemaps:
+            errors.append("MISSING CANONICAL Sitemap DIRECTIVE in robots.txt")
+
+        import urllib.robotparser
+        rp = urllib.robotparser.RobotFileParser()
+        rp.parse(robots_raw.splitlines())
+        for bot in ("Googlebot", "Bingbot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "PerplexityBot", "LinkedInBot", "AnyAgent"):
+            for route in ("/", "/about", "/llms.txt", "/.well-known/llms.txt", "/llms-full.txt", "/sitemap.xml"):
+                if not rp.can_fetch(bot, f"https://jigyasa-grover.github.io{route}"):
+                    errors.append(f"robots.txt BLOCKED {bot} FROM {route}")
+
+    sitemap_path = SITE_DIR / "sitemap.xml"
+    if sitemap_path.is_file() and "404.html" in sitemap_path.read_text(encoding="utf-8"):
+        errors.append("404.html SHOULD NOT APPEAR IN sitemap.xml")
 
     # 5. Inspect all generated HTML pages
     html_files = sorted(
@@ -282,6 +351,10 @@ def main() -> None:
             except Exception as exc:
                 errors.append(f"INVALID JSON-LD in {rel_path}: {exc}")
 
+        robots_meta = next((m.get("content", "") for m in parser.metas if m.get("name") == "robots"), "")
+        if rel_path == "/404.html" and "noindex" not in robots_meta:
+            errors.append("404.html MISSING noindex robots meta tag")
+
     # 6. Verify booking platform links on /work-with-me/
     wwm_path = SITE_DIR / "work-with-me" / "index.html"
     if wwm_path.is_file():
@@ -290,6 +363,7 @@ def main() -> None:
             "https://www.passionfroot.me/jigyasa-grover",
             "https://naano.com/creators/jigyasa-grover",
             "https://intro.co/JigyasaGrover",
+            "https://topmate.io/jigyasagrover",
         ):
             if url not in wwm_html:
                 errors.append(f"MISSING BOOKING URL on /work-with-me/: {url}")
