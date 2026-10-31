@@ -325,4 +325,127 @@
       }
     });
   }
+
+  // 7. Social Pulse Platform Filter & Optional Live Behold Instagram Hydration
+  document.querySelectorAll("[data-social-feed]").forEach(function (feedRoot) {
+    var btns = feedRoot.querySelectorAll("[data-social-filter]");
+    var grid = feedRoot.querySelector("[data-social-grid]");
+    var activePlatform = "all";
+
+    var applySocialFilter = function () {
+      if (!grid) return;
+      grid.querySelectorAll("[data-social-item]").forEach(function (card) {
+        var plat = (card.getAttribute("data-platform") || "").toLowerCase();
+        var show = activePlatform === "all" || plat === activePlatform;
+        card.style.display = show ? "" : "none";
+      });
+    };
+
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        btns.forEach(function (b) {
+          b.classList.remove("is-active");
+          b.setAttribute("aria-pressed", "false");
+        });
+        btn.classList.add("is-active");
+        btn.setAttribute("aria-pressed", "true");
+        activePlatform = (btn.getAttribute("data-social-filter") || "all").toLowerCase();
+        applySocialFilter();
+      });
+    });
+
+    var beholdUrl = (feedRoot.getAttribute("data-behold-url") || "").trim();
+    if (beholdUrl && grid && window.fetch) {
+      fetch(beholdUrl, { headers: { Accept: "application/json" } })
+        .then(function (res) {
+          return res.ok ? res.json() : null;
+        })
+        .then(function (data) {
+          var items = data && (Array.isArray(data) ? data : data.posts);
+          if (!Array.isArray(items) || !items.length) return;
+          items.slice(0, 3).forEach(function (item) {
+            if (!item || !item.permalink) return;
+            var imgSrc = (item.sizes && item.sizes.medium && item.sizes.medium.mediaUrl) || item.thumbnailUrl || item.mediaUrl || "";
+            var caption = (item.prunedCaption || item.caption || "").trim();
+            if (caption.length > 175) {
+              caption = caption.slice(0, 172).trim() + "…";
+            }
+            var card = document.createElement("article");
+            card.className = "social-card";
+            card.setAttribute("data-social-item", "");
+            card.setAttribute("data-platform", "instagram");
+
+            var top = document.createElement("div");
+            top.className = "social-card__top";
+            var brand = document.createElement("div");
+            brand.className = "social-card__brand";
+            var badge = document.createElement("span");
+            badge.className = "social-badge social-badge--instagram";
+            badge.textContent = "IG";
+            var metaWrap = document.createElement("div");
+            var platEl = document.createElement("div");
+            platEl.className = "social-card__platform";
+            platEl.textContent = item.mediaType === "VIDEO" ? "Instagram Reel" : "Instagram";
+            var handleEl = document.createElement("div");
+            handleEl.className = "social-card__handle";
+            handleEl.textContent = "@jigyasagroverofficial";
+            metaWrap.appendChild(platEl);
+            metaWrap.appendChild(handleEl);
+            brand.appendChild(badge);
+            brand.appendChild(metaWrap);
+            var dateEl = document.createElement("span");
+            dateEl.className = "social-card__date";
+            dateEl.textContent = item.timestamp ? new Date(item.timestamp).toLocaleDateString("en-US", { month: "short", year: "numeric" }) : "Live";
+            top.appendChild(brand);
+            top.appendChild(dateEl);
+            card.appendChild(top);
+
+            if (imgSrc) {
+              var mediaLink = document.createElement("a");
+              mediaLink.className = "social-card__media";
+              mediaLink.href = item.permalink;
+              mediaLink.target = "_blank";
+              mediaLink.rel = "noopener";
+              var img = document.createElement("img");
+              img.src = imgSrc;
+              img.loading = "lazy";
+              img.alt = "Instagram post by Jigyasa Grover";
+              mediaLink.appendChild(img);
+              card.appendChild(mediaLink);
+            }
+
+            var body = document.createElement("div");
+            body.className = "social-card__body";
+            var kicker = document.createElement("div");
+            kicker.className = "social-card__kicker";
+            kicker.textContent = item.mediaType === "VIDEO" ? "Live Reel" : "Latest Dispatch";
+            var excerpt = document.createElement("p");
+            excerpt.className = "social-card__excerpt";
+            excerpt.textContent = caption || "Stage moments and AI engineering behind the scenes.";
+            body.appendChild(kicker);
+            body.appendChild(excerpt);
+            card.appendChild(body);
+
+            var footer = document.createElement("div");
+            footer.className = "social-card__footer";
+            var tag = document.createElement("span");
+            tag.className = "mono-tag";
+            tag.textContent = "Instagram";
+            var cta = document.createElement("a");
+            cta.className = "social-card__cta";
+            cta.href = item.permalink;
+            cta.target = "_blank";
+            cta.rel = "noopener";
+            cta.textContent = "Open on Instagram ↗";
+            footer.appendChild(tag);
+            footer.appendChild(cta);
+            card.appendChild(footer);
+
+            grid.insertBefore(card, grid.firstChild);
+          });
+          applySocialFilter();
+        })
+        .catch(function () {});
+    }
+  });
 })();

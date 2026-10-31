@@ -1,0 +1,67 @@
+{% assign sf = site.data.social_feed %}
+{% assign feed_context = include.context | default: "highlights" %}
+{% assign behold_url = site.social.behold_feed_url | default: "" %}
+
+<div class="social-feed" data-social-feed data-behold-url="{{ behold_url | escape }}">
+  <div class="social-feed__header">
+    <div class="filter-pills" role="group" aria-label="Filter social posts by platform">
+      <button type="button" class="filter-btn is-active" data-social-filter="all" aria-pressed="true">All Channels</button>
+      <button type="button" class="filter-btn" data-social-filter="linkedin" aria-pressed="false">LinkedIn</button>
+      <button type="button" class="filter-btn" data-social-filter="x" aria-pressed="false">X (Twitter)</button>
+      <button type="button" class="filter-btn" data-social-filter="instagram" aria-pressed="false">Instagram</button>
+    </div>
+
+    <div class="social-channels" aria-label="Follow Jigyasa Grover">
+      {% for ch in sf.channels %}
+      <a class="social-channel-pill" href="{{ ch.url }}" target="_blank" rel="noopener">
+        <span class="social-channel-pill__name">{{ ch.name }}</span>
+        <span class="social-channel-pill__meta">{{ ch.handle }} ↗</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="social-grid" data-social-grid>
+    {% for post in sf.posts %}
+      {% if post.contexts contains feed_context %}
+      <article class="social-card" data-social-item data-platform="{{ post.platform }}">
+        <div class="social-card__top">
+          <div class="social-card__brand">
+            <span class="social-badge social-badge--{{ post.platform }}">
+              {% if post.platform == "linkedin" %}in{% elsif post.platform == "x" %}𝕏{% else %}IG{% endif %}
+            </span>
+            <div>
+              <div class="social-card__platform">{{ post.platform_label }}</div>
+              <div class="social-card__handle">{{ post.handle }}</div>
+            </div>
+          </div>
+          <span class="social-card__date">{{ post.date }}</span>
+        </div>
+
+        {% if post.image %}
+        <a class="social-card__media" href="{{ post.url }}" target="_blank" rel="noopener">
+          <img
+            src="{{ post.image }}"
+            width="{{ post.width }}"
+            height="{{ post.height }}"
+            loading="lazy"
+            {% if post.focal %}style="object-position: {{ post.focal }};"{% endif %}
+            alt="{{ post.badge }} — {{ post.platform_label }} by Jigyasa Grover"
+          />
+        </a>
+        {% endif %}
+
+        <div class="social-card__body">
+          <div class="social-card__kicker">{{ post.badge }}</div>
+          <p class="social-card__excerpt">{{ post.excerpt }}</p>
+        </div>
+
+        <div class="social-card__footer">
+          <span class="mono-tag">{{ post.tag }}</span>
+          <a class="social-card__cta" href="{{ post.url }}" target="_blank" rel="noopener">{{ post.cta }} ↗</a>
+        </div>
+      </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

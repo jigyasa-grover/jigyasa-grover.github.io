@@ -15,7 +15,8 @@ This repository powers **[jigyasa-grover.github.io](https://jigyasa-grover.githu
   - `projects.yml`: Featured and archival engineering systems and open-source repos.
   - `publications.yml`: *Sculpting Data for ML* monograph, Springer chapters, ACM papers, and editorial reviewing.
   - `recognition.yml`: 13× awards, media features, visual highlights gallery (with per-photo `focal` coordinates), and brand partners.
-  - `updates.yml`: Chronological career & speaking dispatches (2017–2026).
+  - `updates.yml`: Curated high-profile press, award, keynote & career milestones (2017–2026).
+  - `social_feed.yml`: Unified LinkedIn, X (Twitter), and Instagram feed rendered on `/highlights/` and `/partnerships/`.
   - `posts_meta.yml`: Curated summaries, categories, and tags for the 24 technical articles.
   - `faqs.yml`: Structured Q&A blocks rendered visually via `_includes/faq-section.html` and injected into `FAQPage` JSON-LD via `_includes/schema-graph.html`.
 - `_posts/`: Preserved Markdown technical articles (`permalink: /:title/`).

@@ -22,6 +22,12 @@ contact:
   web3forms_access_key: ""
   fallback_email: "grover.jigyasa2@gmail.com"
 
+# Live Instagram Feed Hydration (Optional)
+# Paste a free Behold.so JSON feed URL (e.g., "https://feeds.behold.so/xxxxxxxx")
+# to auto-hydrate your latest Instagram Reels & posts into the Social Pulse cards.
+social:
+  behold_feed_url: ""
+
 footer-links:
   github: jigyasa-grover
   linkedin: jigyasa-grover
