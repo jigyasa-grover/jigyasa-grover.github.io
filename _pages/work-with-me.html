@@ -1,9 +1,9 @@
 ---
 layout: page
 title: "Work With Me"
-heading: "Selective advisory, keynotes, corporate AI training, and technical partnerships."
+heading: "Advisory, keynotes, corporate AI training, and technical partnerships."
 eyebrow: "Collaborate & Connect"
-lead: "Alongside leading production ML systems at Uber, I partner selectively with AI founders, conference organizers, engineering leaders, L&D teams, developer platforms, and journalists."
+lead: "Select an engagement area below, book directly via Intro / Passionfroot / Naano, or send an inquiry."
 hero_cta_label: "Jump to Inquiry Form ↓"
 hero_cta_url: "#contact"
 seo_title: "Work With Me — Jigyasa Grover | AI Advisor, Keynote Speaker, Corporate Trainer & Brand Partner"
@@ -16,11 +16,8 @@ redirect_from:
 
 <!-- 1. Six Collaboration Pillars -->
 <section class="content-section" aria-labelledby="six-pillars-heading">
-  <div class="eyebrow">Collaboration Pillars</div>
-  <h2 id="six-pillars-heading">How we can collaborate</h2>
-  <p class="section-lead">
-    Every engagement is grounded in hands-on experience designing, evaluating, and scaling production ML and agentic AI systems—never generic consulting templates.
-  </p>
+  <div class="eyebrow">Collaboration Areas</div>
+  <h2 id="six-pillars-heading" class="mb-lg">How we can collaborate</h2>
 
   <div class="pillar-matrix">
     {% for p in site.data.pillars %}
@@ -37,11 +34,11 @@ redirect_from:
           <li>{{ d }}</li>
           {% endfor %}
         </ul>
-        <p class="pillar-cell__evidence"><strong>Supporting Evidence:</strong> {{ p.evidence }}</p>
+        <p class="pillar-cell__evidence">{{ p.evidence }}</p>
       </div>
       <div class="btn-group">
         <a class="btn btn--secondary" href="{{ p.cta_url }}">{{ p.cta_label }} →</a>
-        <a class="pillar-cell__cta" href="/work-with-me/?topic={{ p.inquiry_topic | uri_escape }}#contact">Inquire about {{ p.short_title }} ↓</a>
+        <a class="pillar-cell__cta" href="/work-with-me/?topic={{ p.inquiry_topic | uri_escape }}#contact">Inquire ↓</a>
       </div>
     </article>
     {% endfor %}
@@ -51,23 +48,13 @@ redirect_from:
 <!-- 2. Direct Booking Platforms -->
 <section class="content-section--bordered" aria-labelledby="booking-platforms-heading">
   <div class="eyebrow">Direct Platforms</div>
-  <h2 id="booking-platforms-heading">Streamlined booking for 1:1 sessions &amp; creator campaigns</h2>
-  <p class="section-lead">
-    If you prefer instant scheduling for a 1:1 technical consultation or structured campaign management for a developer brand collaboration, use the verified platforms below:
-  </p>
+  <h2 id="booking-platforms-heading" class="mb-lg">Instant 1:1 booking &amp; creator storefronts</h2>
   {% include booking-platforms.html %}
 </section>
 
 <!-- 3. Contact Form -->
 <section id="contact" class="content-section--bordered content-section--last" aria-labelledby="direct-inquiry-heading">
-  <div class="section-header section-header--single mb-lg">
-    <div>
-      <div class="eyebrow">Direct Inquiry</div>
-      <h2 id="direct-inquiry-heading">Send a speaking, advisory, training, or partnership inquiry</h2>
-      <p class="section-header__desc">
-        For conference invitations, startup advisory retainers, enterprise AI workshops, technical collaborations, or media requests, share context below.
-      </p>
-    </div>
-  </div>
+  <div class="eyebrow">Direct Inquiry</div>
+  <h2 id="direct-inquiry-heading" class="mb-lg">Send an inquiry</h2>
   {% include contact-form.html %}
 </section>

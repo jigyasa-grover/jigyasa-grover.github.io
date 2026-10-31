@@ -7,8 +7,8 @@ For complete structured biographical, career, speaking, course, publication, and
 ## Primary Pages
 
 - [Home](https://jigyasa-grover.github.io/): Overview of engineering work, speaking, courses, publications, and collaboration pillars.
-- [About Jigyasa Grover](https://jigyasa-grover.github.io/about): Authoritative biography, education (UC San Diego M.S. CS), Google & governance board roles, and Entity FAQ.
-- [Experience & Career Timeline](https://jigyasa-grover.github.io/experience/): Full career at Uber, Bordo AI, Faire, Twitter/X, Meta, academic research, and 2017–2026 milestone archive.
+- [About Jigyasa Grover](https://jigyasa-grover.github.io/about): Authoritative biography, Google & governance board roles, and Entity FAQ.
+- [Experience & Career Timeline](https://jigyasa-grover.github.io/experience/): Full career at Uber, Bordo AI, Faire, Twitter/X, Meta, education (UC San Diego M.S. CS), and 2017–2026 milestone archive.
 - [Work With Me](https://jigyasa-grover.github.io/work-with-me/): Six collaboration pillars, booking links (Intro, Passionfroot, Naano), and direct inquiry form.
 - [AI Startup & Product Advisory](https://jigyasa-grover.github.io/advisory/): Advisory on production ML ranking, Agentic AI architecture, LLM evaluation, and token cost guardrails.
 - [Keynotes & Conference Speaking](https://jigyasa-grover.github.io/speaking/): Signature talk abstracts, Google I/O keynote feature, and 200+ global appearances.

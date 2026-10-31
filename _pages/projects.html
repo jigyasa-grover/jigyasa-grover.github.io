@@ -1,9 +1,9 @@
 ---
 layout: page
 title: "Selected Engineering Work & Open Source"
-heading: "Agentic AI systems, distributed fine-tuning, evaluation harnesses, and open-source tools."
+heading: "Agentic AI systems, TPU fine-tuning, evaluation harnesses, and open-source tools."
 eyebrow: "Engineering Portfolio"
-lead: "Hands-on software, ML, and agentic systems accompanied by runnable repositories, live demonstrations, and architectural postmortems."
+lead: "Runnable repositories, live demonstrations, and architectural postmortems."
 hero_cta_label: "GitHub (@jigyasa-grover) ↗"
 hero_cta_url: "https://github.com/jigyasa-grover"
 seo_title: "Selected AI & ML Engineering Projects — Jigyasa Grover"
@@ -30,7 +30,6 @@ redirect_from:
           <a href="{{ proj.repo_url }}" target="_blank" rel="noopener">{{ proj.title }} ↗</a>
         {% endif %}
       </h2>
-      <p class="dossier-tagline">{{ proj.tagline }}</p>
       <p class="project-dossier__summary">{{ proj.summary }}</p>
     </div>
 
@@ -41,9 +40,9 @@ redirect_from:
         {% endfor %}
       </div>
       <div class="dossier-links">
-        {% if proj.post_url %}<a href="{{ proj.post_url }}">Technical Write-Up →</a>{% endif %}
-        {% if proj.live_url %}<a href="{{ proj.live_url }}" target="_blank" rel="noopener">Live Application ↗</a>{% endif %}
-        {% if proj.repo_url %}<a href="{{ proj.repo_url }}" target="_blank" rel="noopener">Source Repository ↗</a>{% endif %}
+        {% if proj.post_url %}<a href="{{ proj.post_url }}">Write-Up →</a>{% endif %}
+        {% if proj.live_url %}<a href="{{ proj.live_url }}" target="_blank" rel="noopener">Live Demo ↗</a>{% endif %}
+        {% if proj.repo_url %}<a href="{{ proj.repo_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
       </div>
     </div>
   </article>
@@ -53,13 +52,11 @@ redirect_from:
 <section class="contact-panel split-panel" aria-labelledby="github-more-heading">
   <div>
     <div class="eyebrow mb-xs">72+ Public Repositories</div>
-    <h2 id="github-more-heading" class="split-panel__title">Explore additional code, course labs &amp; open-source contributions</h2>
-    <p class="split-panel__desc">
-      View LinkedIn Learning Google ADK exercise repositories, Python ML benchmarks, and Pharo Smalltalk tools on GitHub.
-    </p>
+    <h2 id="github-more-heading" class="split-panel__title">More code, course labs &amp; open-source work</h2>
+    <p class="split-panel__desc">Explore Google ADK course labs, Python ML benchmarks, and Pharo Smalltalk tools on GitHub.</p>
   </div>
   <div class="btn-group">
-    <a class="btn btn--primary" href="https://github.com/jigyasa-grover" target="_blank" rel="noopener">Visit GitHub Profile ↗</a>
-    <a class="btn btn--secondary" href="/work-with-me/?topic=Technical%20Collaborations#contact">Collaborate on a Project →</a>
+    <a class="btn btn--primary" href="https://github.com/jigyasa-grover" target="_blank" rel="noopener">GitHub Profile ↗</a>
+    <a class="btn btn--secondary" href="/work-with-me/?topic=Technical%20Collaborations#contact">Collaborate →</a>
   </div>
 </section>

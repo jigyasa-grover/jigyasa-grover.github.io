@@ -1,10 +1,10 @@
 ---
 layout: page
 title: "Books & Peer-Reviewed Publications"
-heading: "Books, Springer research chapters, ACM proceedings, and editorial reviewing."
-eyebrow: "Pillar 05 · Author & Researcher"
-lead: "Examining data-centric machine learning, privacy-preserving ML, synthetic media detection, and multi-agent spatial modeling."
-hero_cta_label: "Google Scholar Profile ↗"
+heading: "Books, Springer chapters, ACM proceedings, and editorial reviewing."
+eyebrow: "Pillar 05 · Publications"
+lead: "Data-centric machine learning, privacy-preserving ML, synthetic media detection, and multi-agent simulation."
+hero_cta_label: "Google Scholar ↗"
 hero_cta_url: "https://scholar.google.com/citations?user=nURar74AAAAJ"
 seo_title: "Books & Publications — Jigyasa Grover | Sculpting Data for ML, Springer & ACM"
 description: "Published books and peer-reviewed research by Jigyasa Grover: Sculpting Data for ML (ISBN 979-8585463570), Springer privacy-preserving ML & deepfake chapters, and ACM agent-based modeling."
@@ -31,12 +31,9 @@ permalink: /publications/
       <div class="eyebrow">Published Book ({{ pub.featured_book.year }})</div>
       <h2 id="featured-book-heading">{{ pub.featured_book.title }}</h2>
       <p>{{ pub.featured_book.summary }}</p>
-      <p>
-        Championed across <strong>25+ international conference talks and workshops</strong> under the <strong>#DataForML</strong> initiative—including PyCon US, LeadDev Live, MLconf, All Things Open, and GDG events worldwide.
-      </p>
 
       <div class="endorsement-box">
-        <div class="endorsement-box__label">Endorsed with Forewords By</div>
+        <div class="endorsement-box__label">Forewords By</div>
         <ul class="endorsement-box__list">
           {% for f in pub.featured_book.forewords %}
           <li><a href="{{ f.url }}" target="_blank" rel="noopener"><strong>{{ f.name }}</strong></a> — {{ f.affiliation }}</li>
@@ -45,9 +42,9 @@ permalink: /publications/
       </div>
 
       <div class="btn-group">
-        <a class="btn btn--primary" href="{{ pub.featured_book.amazon_url }}" target="_blank" rel="noopener">Order on Amazon (Print &amp; Kindle) ↗</a>
+        <a class="btn btn--primary" href="{{ pub.featured_book.amazon_url }}" target="_blank" rel="noopener">Amazon (Print, Kindle &amp; Audible) ↗</a>
         <a class="btn btn--secondary" href="{{ pub.featured_book.goodreads_url }}" target="_blank" rel="noopener">Goodreads ↗</a>
-        <a class="btn btn--secondary" href="{{ pub.featured_book.launch_post_url }}">Read Book Launch Essay →</a>
+        <a class="btn btn--secondary" href="{{ pub.featured_book.launch_post_url }}">Launch Essay →</a>
       </div>
     </div>
   </div>
@@ -55,8 +52,8 @@ permalink: /publications/
 
 <!-- Peer-Reviewed Chapters & Academic Papers -->
 <section class="content-section--bordered" aria-labelledby="research-papers-heading">
-  <div class="eyebrow">Peer-Reviewed Chapters &amp; Proceedings</div>
-  <h2 id="research-papers-heading">Academic &amp; Open-Source Publications</h2>
+  <div class="eyebrow">Peer-Reviewed Research</div>
+  <h2 id="research-papers-heading">Chapters &amp; conference papers</h2>
 
   <div class="ledger mt-md">
     {% for r in pub.research_publications %}
@@ -67,7 +64,7 @@ permalink: /publications/
         <p class="venue-label">{{ r.venue }}</p>
         <p class="ledger-row__sub">{{ r.summary }}</p>
       </div>
-      <div class="ledger-row__aside"><a href="{{ r.doi_url }}" target="_blank" rel="noopener">Publisher Link ↗</a></div>
+      <div class="ledger-row__aside"><a href="{{ r.doi_url }}" target="_blank" rel="noopener">DOI / Link ↗</a></div>
     </div>
     {% endfor %}
   </div>
@@ -75,8 +72,8 @@ permalink: /publications/
 
 <!-- Technical Manuscript Reviewing -->
 <section class="content-section--bordered content-section--last" aria-labelledby="reviewing-heading">
-  <div class="eyebrow">Editorial &amp; Peer Review</div>
-  <h2 id="reviewing-heading">Technical Book Reviewing</h2>
+  <div class="eyebrow">Editorial Review</div>
+  <h2 id="reviewing-heading">Technical book reviewing</h2>
   <div class="ledger">
     {% for ed in pub.editorial_reviewing %}
     <div class="ledger-row">

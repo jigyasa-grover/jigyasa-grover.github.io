@@ -1,10 +1,10 @@
 ---
 layout: page
 title: "Experience & Career Timeline"
-heading: "Production ML, agentic architectures, and a decade of open-source & industry milestones."
+heading: "Production ML, agentic systems, and chronological milestones."
 eyebrow: "Career & Chronology"
-lead: "From open-source agent simulations in Pharo and graduate AI research at UC San Diego to billion-request ranking systems across Twitter/X, Faire, Bordo AI, and Uber."
-hero_cta_label: "Explore Advisory & Speaking →"
+lead: "Engineering roles across Uber, Bordo AI, Faire, Twitter (X), and Meta—plus academic credentials and multi-year dispatches."
+hero_cta_label: "Work With Me →"
 hero_cta_url: "/work-with-me/"
 seo_title: "Experience & Career Timeline — Jigyasa Grover | Uber, Bordo AI, Faire, Twitter/X, Meta"
 description: "Complete engineering career, research background, education, and chronological milestone archive (2017–2026) of Machine Learning Engineer Jigyasa Grover."
@@ -14,7 +14,7 @@ permalink: /experience/
 
 <section class="content-section" aria-labelledby="career-history-heading">
   <div class="eyebrow">Industry &amp; Research Roles</div>
-  <h2 id="career-history-heading">Engineering &amp; Technical Leadership</h2>
+  <h2 id="career-history-heading">Engineering &amp; technical leadership</h2>
 
   <div class="career-list">
     {% for job in id.career %}
@@ -40,7 +40,7 @@ permalink: /experience/
 
 <section class="content-section" aria-labelledby="education-history-heading">
   <div class="eyebrow">Academic Credentials</div>
-  <h2 id="education-history-heading">Education &amp; Research Scholarships</h2>
+  <h2 id="education-history-heading">Education &amp; scholarships</h2>
   <div class="ledger">
     {% for edu in id.education %}
     <div class="ledger-row">
@@ -56,11 +56,8 @@ permalink: /experience/
 </section>
 
 <section id="milestones" aria-labelledby="milestone-archive-heading">
-  <div class="eyebrow">Complete Historical Ledger (2017 – 2026)</div>
-  <h2 id="milestone-archive-heading">All Keynotes, Awards, Launches &amp; Community Milestones</h2>
-  <p class="section-lead">
-    Preserving the complete multi-year chronological log of speaking appearances, publications, open-source awards, and media features.
-  </p>
+  <div class="eyebrow">Historical Ledger (2017 – 2026)</div>
+  <h2 id="milestone-archive-heading" class="mb-md">Keynotes, awards &amp; launches</h2>
 
   <div class="ledger">
     {% for u in site.data.updates %}
@@ -70,7 +67,7 @@ permalink: /experience/
         <p class="ledger-row__sub ledger-row__sub--primary">
           {{ u.text }}
           {% if u.url %}
-            <a class="ledger-inline-link" href="{{ u.url }}" {% if u.url contains 'http' %}target="_blank" rel="noopener"{% endif %}>Reference →</a>
+            <a class="ledger-inline-link" href="{{ u.url }}" {% if u.url contains 'http' %}target="_blank" rel="noopener"{% endif %}>View →</a>
           {% endif %}
         </p>
       </div>

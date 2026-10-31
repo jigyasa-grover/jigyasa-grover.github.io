@@ -1,9 +1,9 @@
 ---
 layout: page
 title: "Conference & Keynote Speaker"
-heading: "Substantive AI keynotes, technical sessions, and fireside chats."
+heading: "Technical keynotes, conference sessions, and executive panels."
 eyebrow: "Pillar 02 · Global Speaking"
-lead: "200+ keynotes, conference talks, panels, and workshops across 20+ countries—translating production ML and agentic AI engineering into memorable, high-signal narratives."
+lead: "200+ talks across 20+ countries—translating production ML and agentic AI into clear, actionable frameworks."
 hero_cta_label: "Invite Me to Speak →"
 hero_cta_url: "/work-with-me/?topic=Speaking%20%26%20Workshops#contact"
 seo_title: "Jigyasa Grover — AI Keynote Speaker & Agentic AI Conference Speaker"
@@ -29,16 +29,13 @@ permalink: /speaking/
   </div>
 
   <div>
-    <h2>Why event organizers invite Jigyasa</h2>
+    <h2>Grounded in real architecture, not hype</h2>
     <p>
-      Conference audiences—whether 5,000 software engineers or 80 enterprise CTOs—are fatigued by generic AI hype. Every talk I deliver is anchored in real architectural trade-offs, production postmortems, live benchmarks, and clear visual mental models.
-    </p>
-    <p>
-      From being introduced on the <strong>Google I/O</strong> main stage by Sundar Pichai to delivering technical sessions at <strong>Codemotion Milan</strong>, <strong>Open Source Summit Europe</strong>, <strong>AGNTCon + MCPCon</strong>, and <strong>API Days</strong>, I tailor every session to leave builders and decision-makers with concrete frameworks they can apply Monday morning.
+      From being introduced on the <strong>Google I/O</strong> main stage by Sundar Pichai to delivering technical sessions at <strong>Codemotion Milan</strong>, <strong>Open Source Summit Europe</strong>, <strong>AGNTCon + MCPCon</strong>, and <strong>API Days</strong>, every talk centers on real architectural trade-offs, production postmortems, and concrete mental models.
     </p>
     <div class="btn-group mt-md">
       <a class="btn btn--accent" href="/work-with-me/?topic=Speaking%20%26%20Workshops#contact">Invite Me to Speak →</a>
-      <a class="btn btn--secondary" href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener">Watch Google I/O Keynote ↗</a>
+      <a class="btn btn--secondary" href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener">Watch Google I/O ↗</a>
       <a class="btn btn--secondary" href="/press/">Speaker Bios &amp; Photos →</a>
     </div>
   </div>
@@ -57,7 +54,7 @@ permalink: /speaking/
     />
     <div class="gallery-card__body">
       <div class="gallery-card__title">Codemotion Milan · Oct 2026</div>
-      <p class="gallery-card__sub">"When NOT to Build an Agent: Lessons from Systems That Didn't Want Autonomy"</p>
+      <p class="gallery-card__sub">"When NOT to Build an Agent"</p>
     </div>
   </div>
 
@@ -71,8 +68,8 @@ permalink: /speaking/
       alt="Jigyasa Grover at TEDAI San Francisco and Microsoft for Startups"
     />
     <div class="gallery-card__body">
-      <div class="gallery-card__title">TEDAI San Francisco &amp; Global Summits</div>
-      <p class="gallery-card__sub">Keynotes, technical sessions &amp; founder ecosystems across 20+ countries</p>
+      <div class="gallery-card__title">TEDAI San Francisco</div>
+      <p class="gallery-card__sub">Keynotes &amp; founder summits</p>
     </div>
   </div>
 
@@ -86,36 +83,31 @@ permalink: /speaking/
       alt="Jigyasa Grover speaking into a microphone during an executive AI panel"
     />
     <div class="gallery-card__body">
-      <div class="gallery-card__title">Fireside Chats &amp; Executive Panels</div>
-      <p class="gallery-card__sub">Moderated discussions on generative AI, data trust &amp; engineering scale</p>
+      <div class="gallery-card__title">Fireside Chats &amp; Panels</div>
+      <p class="gallery-card__sub">Executive &amp; developer discussions</p>
     </div>
   </div>
 </div>
 
 <!-- Signature Keynote & Talk Topics -->
 <section class="content-section--bordered" aria-labelledby="signature-talks-heading">
-  <div class="eyebrow">Current Speaking Repertoire</div>
-  <h2 id="signature-talks-heading">Signature keynotes &amp; technical sessions</h2>
+  <div class="eyebrow">Current Repertoire</div>
+  <h2 id="signature-talks-heading">Signature talks</h2>
 
-  <div class="project-grid mt-lg">
+  <div class="project-grid mt-md">
     {% for talk in site.data.speaking.signature_talks %}
     <article class="project-dossier">
       <div>
         <div class="project-dossier__meta">
           <span>{{ talk.format }}</span>
-          <span>Customizable</span>
+          <span>{{ talk.themes | split: " · " | first }}</span>
         </div>
         <h3 class="project-dossier__title">{{ talk.title }}</h3>
         <p class="project-dossier__summary">{{ talk.abstract }}</p>
       </div>
-      <div>
-        <p class="dossier-meta-note">
-          <strong>Themes:</strong> {{ talk.themes }}
-        </p>
-        <p class="dossier-footnote">
-          <strong>Delivered at:</strong> {{ talk.stages }}
-        </p>
-      </div>
+      <p class="dossier-footnote">
+        <strong>Stages:</strong> {{ talk.stages }}
+      </p>
     </article>
     {% endfor %}
   </div>
@@ -124,7 +116,7 @@ permalink: /speaking/
 <!-- Confirmed Global Appearances Ledger -->
 <section class="content-section--bordered" aria-labelledby="speaking-ledger-heading">
   <div class="eyebrow">Selected Global Stages</div>
-  <h2 id="speaking-ledger-heading">Upcoming &amp; recent conference appearances</h2>
+  <h2 id="speaking-ledger-heading">Upcoming &amp; recent conferences</h2>
 
   <div class="ledger mt-md">
     {% for a in site.data.speaking.appearances %}
@@ -153,7 +145,7 @@ permalink: /speaking/
 
 <!-- Organizer FAQ -->
 <section class="content-section--bordered content-section--last" aria-labelledby="speaking-faq-heading">
-  <div class="eyebrow">Event Organizer Information</div>
-  <h2 id="speaking-faq-heading">Speaking logistics &amp; FAQ</h2>
+  <div class="eyebrow">Organizer Info</div>
+  <h2 id="speaking-faq-heading">Speaking FAQ</h2>
   {% include faq-section.html key="speaking" %}
 </section>

@@ -3,7 +3,7 @@ layout: page
 title: "Corporate AI Training, Workshops & Courses"
 heading: "Hands-on AI engineering enablement for technical teams and leaders."
 eyebrow: "Pillar 03 · Courses & Workshops"
-lead: "Trusted by 40,380+ learners on LinkedIn Learning and corporate engineering cohorts across Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, and more—taking teams from prompt prototypes to evaluated, production-grade agentic and ML systems."
+lead: "Taking engineering organizations from prompt prototypes to evaluated, production-grade agentic and ML systems."
 hero_cta_label: "Book an AI Workshop →"
 hero_cta_url: "/work-with-me/?topic=Corporate%20AI%20Training#contact"
 seo_title: "Corporate AI Trainer, Agentic AI Workshops & LinkedIn Learning Courses — Jigyasa Grover"
@@ -18,13 +18,10 @@ redirect_from:
 <!-- Enterprise Live Workshops -->
 <section class="content-section" aria-labelledby="workshops-heading">
   <div class="eyebrow">Live Corporate Enablement</div>
-  <h2 id="workshops-heading">Customizable enterprise AI workshops &amp; bootcamps</h2>
-  <p class="section-lead">
-    Corporate AI training, technical workshops, and enterprise curriculum delivered with <strong>LinkedIn Learning</strong>, <strong>Morgan Stanley</strong>, <strong>FedEx</strong>, <strong>Accenture</strong>, <strong>Roblox</strong>, <strong>Silicon Valley Security Group</strong>, <strong>AI Aspire</strong>, <strong>CommonSpirit Health</strong>, <strong>Udacity</strong>, and more. Available in-person or live virtual.
-  </p>
+  <h2 id="workshops-heading">Customizable enterprise AI workshops</h2>
 
   <div class="callout-strip">
-    <div class="eyebrow">Selected Corporate Training &amp; Enablement Organizations</div>
+    <div class="eyebrow">Corporate Training &amp; Enablement Delivered With</div>
     <div class="partner-strip">
       {% for client in site.data.courses.training_clients %}
         <span>{{ client }}{% unless forloop.last %} ·{% endunless %}</span>
@@ -38,20 +35,20 @@ redirect_from:
       <div>
         <div class="project-dossier__meta">
           <span>{{ w.duration }}</span>
-          <span>Live Cohort</span>
+          <span>In-Person or Virtual</span>
         </div>
         <h3 class="project-dossier__title">{{ w.title }}</h3>
         <p class="project-dossier__summary">{{ w.abstract }}</p>
       </div>
       <div class="dossier-footnote">
-        <strong>Ideal Audience:</strong> {{ w.audience }}
+        <strong>Audience:</strong> {{ w.audience }}
       </div>
     </article>
     {% endfor %}
   </div>
 
   <div class="btn-group mt-lg">
-    <a class="btn btn--accent" href="/work-with-me/?topic=Corporate%20AI%20Training#contact">Request a Custom Workshop Syllabus →</a>
+    <a class="btn btn--accent" href="/work-with-me/?topic=Corporate%20AI%20Training#contact">Request a Workshop Syllabus →</a>
   </div>
 </section>
 
@@ -61,11 +58,8 @@ redirect_from:
     <div>
       <div class="eyebrow">On-Demand Curriculum · {{ site.data.courses.total_learners }} Learners</div>
       <h2 id="courses-catalog-heading">LinkedIn Learning &amp; Udacity Courses</h2>
-      <p class="section-header__desc">
-        Self-paced video courses complete with open-source exercise repositories and production architecture blueprints.
-      </p>
     </div>
-    <a class="section-header__link" href="{{ site.data.courses.linkedin_learning_profile }}" target="_blank" rel="noopener">Official LinkedIn Learning Instructor Profile ↗</a>
+    <a class="section-header__link" href="{{ site.data.courses.linkedin_learning_profile }}" target="_blank" rel="noopener">LinkedIn Learning Profile ↗</a>
   </div>
 
   <div class="project-grid">
@@ -87,7 +81,7 @@ redirect_from:
         </div>
         <div class="dossier-links">
           <a href="{{ c.url }}" target="_blank" rel="noopener">Take Course ↗</a>
-          {% if c.repo_url %}<a href="{{ c.repo_url }}" target="_blank" rel="noopener">Exercise Code on GitHub ↗</a>{% endif %}
+          {% if c.repo_url %}<a href="{{ c.repo_url }}" target="_blank" rel="noopener">GitHub Labs ↗</a>{% endif %}
         </div>
       </div>
     </article>
@@ -96,7 +90,7 @@ redirect_from:
 </section>
 
 <section class="content-section--bordered content-section--last" aria-labelledby="teaching-faq-heading">
-  <div class="eyebrow">L&amp;D &amp; Engineering Enablement FAQ</div>
-  <h2 id="teaching-faq-heading">Corporate training questions</h2>
+  <div class="eyebrow">Enablement FAQ</div>
+  <h2 id="teaching-faq-heading">Common questions</h2>
   {% include faq-section.html key="teaching" %}
 </section>

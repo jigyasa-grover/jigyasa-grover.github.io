@@ -4,38 +4,38 @@ featured_video:
   date: "May 2024"
   url: "https://www.youtube.com/live/XEzRZ35urlk?t=516"
   image: "/assets/images/opt/google_io_feature.jpg"
-  caption: "Introduced on the main stage by Google CEO Sundar Pichai, sharing practitioner insights on building with Gemini 1.5 Pro's 1-million-token context window (147K+ YouTube views)."
+  caption: "Introduced on the main stage by Sundar Pichai—sharing practitioner insights on Gemini 1.5 Pro's 1M-token context window (147K+ views)."
 
 signature_talks:
   - title: "When NOT to Build an Agent: Lessons from Systems That Didn't Want Autonomy"
-    format: "Keynote / 40-min Technical Session"
+    format: "Keynote / Technical Session"
     themes: "Agentic Architecture · Determinism vs. Autonomy · Failure Modes"
-    abstract: "Autonomous LLM agents are powerful—and frequently over-prescribed. Drawing from real production deployments and runaway cost/latency postmortems, this talk introduces a clear architectural rubric for choosing between deterministic DAGs, single-turn tool calling, workflow state machines, and true multi-agent autonomy."
+    abstract: "An architectural rubric grounded in real latency and cost postmortems—separating workflows best served by deterministic state machines from genuine multi-agent autonomy."
     stages: "Codemotion Milan (Oct 2026) · AGNTCon + MCPCon Europe, Amsterdam (Sep 2026)"
 
   - title: "Designing APIs & Guardrails for Agentic Systems"
     format: "Keynote / Technical Deep Dive"
-    themes: "Agent-Native APIs · MCP · Token & Cost Circuit Breakers"
-    abstract: "APIs designed for human developers fail silently when consumed by stochastic agents. Learn how to design semantic tool contracts, Model Context Protocol (MCP) boundaries, lifecycle cost monitors, and idempotency guardrails for autonomous tool-use."
+    themes: "Agent-Native APIs · MCP · Token Circuit Breakers"
+    abstract: "Human-oriented APIs fail silently under stochastic tool use. How to design semantic MCP contracts, idempotency boundaries, and per-turn token circuit breakers."
     stages: "API Days Paris (Dec 2026) · API Days New York (May 2026)"
 
   - title: "Guarding the LLM Galaxy: Evaluating, Red-Teaming & Securing AI Systems"
     format: "Keynote / Technical Session"
     themes: "LLM Evaluation · Adversarial Security · Responsible AI"
-    abstract: "How engineering teams replace subjective 'vibe checks' with repeatable evaluation pipelines—combining PAIR LLM Comparator, trajectory assertions, Pass@k reliability metrics, PII redaction, and defenses against prompt injection and model wreckage."
-    stages: "Open Source Summit Europe, Prague (2026) · AI_dev Europe, Amsterdam (2025) · Open Source Summit NA, Denver (2025) · Milan0day (2026)"
+    abstract: "Replacing subjective vibe-checks with automated evaluation harnesses: PAIR LLM Comparator, trajectory assertions, Pass@k reliability, PII redaction, and injection defenses."
+    stages: "Open Source Summit Europe, Prague (2026) · AI_dev Europe (2025) · Milan0day (2026)"
 
   - title: "Trust at Top Speed: Split-Brain Edge + Cloud AI in Real-Time Systems"
     format: "Technical Case Study"
     themes: "On-Device AI · Low-Latency Systems · Safety Heuristics"
-    abstract: "Inside the architecture of an AI Racing Coach field-tested on a live racetrack: pairing sub-15ms on-device Gemini Nano voice cues and deterministic physics safety gates with asynchronous Cloud Run telemetry reasoning."
+    abstract: "Architecture of an AI Racing Coach tested on a live track—pairing sub-15ms on-device Gemini Nano cues and physics safety gates with Cloud Run lap reasoning."
     stages: "Google Cloud Next '26 (Las Vegas) · Google Track Day (Thunderhill Raceway)"
 
   - title: "Sculpting Data for ML & Large-Scale Personalization"
     format: "Keynote / Fireside / Technical Session"
     themes: "Data-Centric AI · Ranking & Recommendation · Feature Stores"
-    abstract: "Why model architecture rarely rescues flawed signals. Lessons from billion-request ads and rider ranking pipelines across Uber, Faire, and Twitter/X—and practical data curation strategies from Sculpting Data for ML."
-    stages: "PyCon US · LeadDev Live · MLconf · Data Innovation Summit Stockholm · Reinforce AI"
+    abstract: "Field lessons from billion-request ranking pipelines across Uber, Faire, and Twitter/X—and dataset curation practices from Sculpting Data for ML."
+    stages: "PyCon US · LeadDev Live · MLconf · Data Innovation Summit Stockholm"
 
 appearances:
   - date: "Dec 2026"

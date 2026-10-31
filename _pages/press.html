@@ -1,10 +1,10 @@
 ---
 layout: page
 title: "Press, Media & Speaker Kit"
-heading: "Media features, expert commentary, 13× awards, and approved speaker assets."
-eyebrow: "Pillar 06 · Press & Industry Voice"
-lead: "Resources for journalists, podcast hosts, conference organizers, and documentary producers seeking grounded practitioner commentary on AI, agentic systems, and production ML."
-hero_cta_label: "Media & Interview Inquiry →"
+heading: "Media features, 13× awards, and approved speaker assets."
+eyebrow: "Pillar 06 · Press & Speaker Kit"
+lead: "Interviews, honors, copy-ready biographies, and high-resolution press photography."
+hero_cta_label: "Media Inquiry →"
 hero_cta_url: "/work-with-me/?topic=Media%20%26%20Interviews#contact"
 seo_title: "Press, Media & Speaker Kit — Jigyasa Grover | Forbes, Business Insider, Google I/O"
 description: "Official press kit, media appearances (Forbes, Business Insider, Google I/O, VentureBeat, NTD TV, UN ITU), 13x award ledger, and speaker bios for Jigyasa Grover."
@@ -15,13 +15,13 @@ permalink: /press/
 
 <!-- 1. Selected Media, TV & Podcast Features -->
 <section class="content-section" aria-labelledby="media-ledger-heading">
-  <div class="eyebrow">Selected Press, Broadcast &amp; Podcasts</div>
-  <h2 id="media-ledger-heading">Featured commentary &amp; interviews</h2>
+  <div class="eyebrow">Press, Broadcast &amp; Podcasts</div>
+  <h2 id="media-ledger-heading">Selected media features</h2>
 
   <div class="ledger mt-md">
     {% for m in rec.media_features %}
     <div class="ledger-row">
-      <div class="ledger-row__date">{{ m.date }} · {{ m.outlet }}</div>
+      <div class="ledger-row__date">{{ m.date }}</div>
       <div>
         <div class="ledger-row__title">
           {% if m.url %}
@@ -43,12 +43,9 @@ permalink: /press/
   <div class="section-header">
     <div>
       <div class="eyebrow">Verified Honors</div>
-      <h2 id="awards-ledger-heading">13× AI, Engineering &amp; Open Source Awards</h2>
-      <p class="section-header__desc">
-        Recognized across North America, Europe, and India for production ML leadership, open-source contributions, and technical education.
-      </p>
+      <h2 id="awards-ledger-heading">13× AI &amp; Open Source Awards</h2>
     </div>
-    <a class="section-header__link" href="/highlights/">View visual award &amp; stage gallery →</a>
+    <a class="section-header__link" href="/highlights/">Visual award &amp; stage gallery →</a>
   </div>
 
   <div class="ledger">
@@ -65,7 +62,7 @@ permalink: /press/
         </div>
         <p class="ledger-row__sub">{{ a.issuer }}</p>
       </div>
-      <div class="ledger-row__aside">Honoree / Winner</div>
+      <div class="ledger-row__aside">Honoree</div>
     </div>
     {% endfor %}
   </div>
@@ -74,15 +71,15 @@ permalink: /press/
 <!-- 3. Speaker & Press Assets (Bios + Approved Photos) -->
 <section class="content-section--bordered content-section--last" aria-labelledby="media-kit-assets-heading">
   <div class="eyebrow">Approved Media Assets</div>
-  <h2 id="media-kit-assets-heading">Official biographies &amp; press photography</h2>
+  <h2 id="media-kit-assets-heading">Official bios &amp; press photography</h2>
   <p class="section-lead">
-    Event organizers and journalists are welcome to use the third-person biographies and photography below with attribution to <strong>Jigyasa Grover</strong>. Pronunciation: <em>{{ id.pronunciation }}</em>.
+    Approved for event programs and press with attribution to <strong>Jigyasa Grover</strong> (pronounced <em>{{ id.pronunciation }}</em>).
   </p>
 
   <div class="project-grid mb-lg">
     <div class="project-dossier">
       <div>
-        <div class="project-dossier__meta"><span>50-Word Bio</span><span>Copy-Ready</span></div>
+        <div class="project-dossier__meta"><span>50-Word Bio</span><span>Third-Person</span></div>
         <p id="press-bio-50" class="project-dossier__summary">{{ id.short_bio_50 }}</p>
       </div>
       <div>
@@ -92,7 +89,7 @@ permalink: /press/
 
     <div class="project-dossier">
       <div>
-        <div class="project-dossier__meta"><span>150-Word Bio</span><span>Copy-Ready</span></div>
+        <div class="project-dossier__meta"><span>150-Word Bio</span><span>Third-Person</span></div>
         <p id="press-bio-150" class="project-dossier__summary">{{ id.medium_bio_150 }}</p>
       </div>
       <div>
@@ -105,8 +102,8 @@ permalink: /press/
     <a class="gallery-card" href="/assets/images/press/jigyasa-grover-studio-headshot.jpg" target="_blank" rel="noopener">
       <img src="/assets/images/opt/studio_headshot.jpg" width="960" height="960" loading="lazy" style="object-position: center 18%;" alt="Official studio headshot of Jigyasa Grover" />
       <div class="gallery-card__body">
-        <div class="gallery-card__title">Official Studio Headshot (1:1)</div>
-        <p class="gallery-card__sub">Download square speaker headshot ↗</p>
+        <div class="gallery-card__title">Studio Headshot (1:1)</div>
+        <p class="gallery-card__sub">Download square headshot ↗</p>
       </div>
     </a>
 
@@ -114,15 +111,15 @@ permalink: /press/
       <img src="/assets/images/opt/profile_photo.jpg" width="768" height="960" loading="lazy" alt="Editorial portrait of Jigyasa Grover" />
       <div class="gallery-card__body">
         <div class="gallery-card__title">Editorial Portrait (Vertical)</div>
-        <p class="gallery-card__sub">Download full-resolution JPG (1440×1800) ↗</p>
+        <p class="gallery-card__sub">Download 1440×1800 JPG ↗</p>
       </div>
     </a>
 
     <a class="gallery-card" href="/assets/images/opt/editorial_lounge_2025.jpg" target="_blank" rel="noopener">
       <img src="/assets/images/opt/editorial_lounge_2025.jpg" width="825" height="1100" loading="lazy" style="object-position: center 45%;" alt="Editorial feature portrait of Jigyasa Grover" />
       <div class="gallery-card__body">
-        <div class="gallery-card__title">Editorial Feature Portrait (2025)</div>
-        <p class="gallery-card__sub">Download candid feature portrait ↗</p>
+        <div class="gallery-card__title">Feature Portrait (2025)</div>
+        <p class="gallery-card__sub">Download candid portrait ↗</p>
       </div>
     </a>
 
@@ -130,23 +127,23 @@ permalink: /press/
       <img src="/assets/images/opt/panel_stage_full.jpg" width="799" height="1200" loading="lazy" style="object-position: center 5%;" alt="Jigyasa Grover onstage speaking into a microphone during a fireside panel" />
       <div class="gallery-card__body">
         <div class="gallery-card__title">Fireside &amp; Panel Stage</div>
-        <p class="gallery-card__sub">Download high-resolution stage photo ↗</p>
+        <p class="gallery-card__sub">Download high-res stage photo ↗</p>
       </div>
     </a>
 
     <a class="gallery-card" href="/assets/images/press/jigyasa-grover-codemotion-speaker-2026.jpg" target="_blank" rel="noopener">
       <img src="/assets/images/opt/codemotion_speaker_2026.jpg" width="675" height="1200" loading="lazy" style="object-position: center 44%;" alt="Jigyasa Grover holding her speaker badge at Codemotion Milan 2026" />
       <div class="gallery-card__body">
-        <div class="gallery-card__title">Conference Speaker Portrait (2026)</div>
-        <p class="gallery-card__sub">Download Codemotion Milan speaker photo ↗</p>
+        <div class="gallery-card__title">Speaker Portrait (2026)</div>
+        <p class="gallery-card__sub">Download Codemotion Milan photo ↗</p>
       </div>
     </a>
 
     <a class="gallery-card" href="/images/google_io_feature.jpg" target="_blank" rel="noopener">
       <img src="/assets/images/opt/google_io_feature.jpg" width="1280" height="718" loading="lazy" alt="Jigyasa Grover featured on the Google I/O 2024 main stage" />
       <div class="gallery-card__body">
-        <div class="gallery-card__title">Google I/O Main Stage Feature</div>
-        <p class="gallery-card__sub">Download widescreen stage photo (3456×1940) ↗</p>
+        <div class="gallery-card__title">Google I/O Main Stage</div>
+        <p class="gallery-card__sub">Download 3456×1940 stage photo ↗</p>
       </div>
     </a>
   </div>
