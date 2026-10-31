@@ -3,27 +3,28 @@ layout: page
 title: "Highlights & Recognition Gallery"
 heading: "Visual archive of keynotes, broadcasts, awards, and community milestones."
 eyebrow: "Visual Highlights"
-lead: "Moments from Google I/O, live television commentary, open-source honors, and industry awards."
+lead: "Moments from Codemotion Milan 2026, Google I/O, Google Gemini ecosystem events, TEDAI San Francisco, live television commentary, and 13× open-source & AI honors."
 hero_cta_label: "Full Press & Awards Ledger →"
 hero_cta_url: "/press/"
 seo_title: "Highlights & Awards Gallery — Jigyasa Grover"
-description: "Visual highlights from Jigyasa Grover's career: Google I/O 2024 Keynote, VentureBeat Women in AI Rising Star, Red Hat Women in Open Source Award, and NTD Live TV."
+description: "Visual highlights from Jigyasa Grover's career: Codemotion Milan 2026, Google Gemini Early Access, Google I/O Keynote, TEDAI SF, VentureBeat Women in AI, and Red Hat Open Source Award."
 permalink: /highlights/
 ---
 
 <div class="gallery-grid" style="margin-bottom: 3.5rem;">
   {% for item in site.data.recognition.visual_highlights %}
-  <a class="gallery-card" href="{{ item.url }}" target="_blank" rel="noopener">
+  <a class="gallery-card" href="{{ item.url }}" {% if item.url contains 'http' %}target="_blank" rel="noopener"{% endif %}>
     <img
       src="{{ item.image }}"
       width="{{ item.width }}"
       height="{{ item.height }}"
       loading="lazy"
+      {% if item.focal %}style="object-position: {{ item.focal }};"{% endif %}
       alt="{{ item.title }} — {{ item.subtitle }}"
     />
     <div class="gallery-card__body">
       <h2 class="gallery-card__title">{{ item.title }}</h2>
-      <p class="gallery-card__sub">{{ item.subtitle }} ↗</p>
+      <p class="gallery-card__sub">{{ item.subtitle }} {% if item.url contains 'http' %}↗{% else %}→{% endif %}</p>
     </div>
   </a>
   {% endfor %}

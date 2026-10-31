@@ -59,6 +59,11 @@ media_features:
     title: "Conversational Video AI—Teaching Machines The Art Of Being Human"
     type: "Expert Commentary"
     url: "https://www.forbes.com/sites/neilsahota/2026/01/24/conversational-video-ai-teaching-machines-the-art-of-being-human/"
+  - outlet: "ShoutOut Colorado"
+    date: "Jun 2025"
+    title: "Meet Jigyasa Grover: Engineering Large-Scale AI, Teaching 50K+ Learners & Progress Over Perfection"
+    type: "Feature Interview"
+    url: "https://shoutoutcolorado.com/meet-jigyasa-grover/"
   - outlet: "Business Insider"
     date: "Mar 2025"
     title: "Engineering Career Strategy & Big Tech Machine Learning Leadership"
@@ -115,12 +120,55 @@ media_features:
     url: "https://www.youtube.com/watch?v=1QlhArGZbfU"
 
 visual_highlights:
+  - title: "Codemotion Milan 2026 — Speaker"
+    subtitle: "Delivering 'When NOT to Build an Agent' in Milan, Italy (Oct 2026)"
+    image: "/assets/images/opt/codemotion_speaker_2026.jpg"
+    width: 675
+    height: 1200
+    focal: "center 43%"
+    url: "https://conferences.codemotion.com/"
+  - title: "Google Gemini Early Access Dinner (2026)"
+    subtitle: "Google Developer Advisory Board & AI/ML GDE Ecosystem"
+    image: "/assets/images/opt/gemini_dinner_2026.jpg"
+    width: 1080
+    height: 1080
+    focal: "center 28%"
+    url: "https://x.com/jigyasa_grover/status/2105464156656939298"
+  - title: "Google Gemini Live & Audio Showcase (2026)"
+    subtitle: "Extended thinking & real-time multimodal voice AI launch"
+    image: "/assets/images/opt/gemini_live_2026.jpg"
+    width: 1200
+    height: 1200
+    focal: "center 38%"
+    url: "https://x.com/jigyasa_grover/status/2104674065059643506"
+  - title: "ShoutOut Colorado Feature Profile (2025)"
+    subtitle: "In-depth interview on production ML leadership & mentorship"
+    image: "/assets/images/opt/editorial_lounge_2025.jpg"
+    width: 825
+    height: 1100
+    focal: "center 45%"
+    url: "https://shoutoutcolorado.com/meet-jigyasa-grover/"
+  - title: "TEDAI San Francisco × Microsoft for Startups"
+    subtitle: "San Francisco AI founder & builder ecosystem"
+    image: "/assets/images/opt/tedai_sf.jpg"
+    width: 880
+    height: 1100
+    focal: "center 22%"
+    url: "https://shoutoutcolorado.com/meet-jigyasa-grover/"
   - title: "Featured in Google I/O 2024 Main Keynote"
     subtitle: "Introduced by Sundar Pichai at Shoreline Amphitheatre"
     image: "/assets/images/opt/google_io_feature.jpg"
     width: 1280
     height: 718
+    focal: "center center"
     url: "https://www.youtube.com/live/XEzRZ35urlk?t=516"
+  - title: "Fireside & Executive AI Panel Stage"
+    subtitle: "Candid technical commentary on production ML & responsible AI"
+    image: "/assets/images/opt/panel_stage_full.jpg"
+    width: 799
+    height: 1200
+    focal: "center 5%"
+    url: "/speaking/"
   - title: "NTD Live TV Broadcast Commentary"
     subtitle: "Analyzing generative text-to-video models live on air"
     image: "/assets/images/opt/ntd_live_tv_2022.jpg"
@@ -145,8 +193,15 @@ visual_highlights:
     width: 960
     height: 686
     url: "https://www.redhat.com/en/about/press-releases/red-hat-announces-2017-women-open-source-award-winners"
-  - title: "Women Impact Tech — Woman of Impact Honoree"
-    subtitle: "Accelerate San Francisco Award Recognition"
+  - title: "Women Impact Tech — Top 50 Women of Impact"
+    subtitle: "Accelerate San Francisco Award Trophy & Recognition"
+    image: "/assets/images/opt/women_impact_award.jpg"
+    width: 825
+    height: 1100
+    focal: "center 62%"
+    url: "https://womenimpacttech.com/"
+  - title: "Women Impact Tech — Honoree Feature"
+    subtitle: "Official Women Impact Tech honoree spotlight"
     image: "/assets/images/opt/woman_of_impact_2023.jpg"
     width: 720
     height: 960
