@@ -91,7 +91,7 @@
   align-items: center;
 
   @include tablet {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2.5rem;
   }
 }
@@ -200,11 +200,11 @@
   grid-template-columns: repeat(4, 1fr);
 
   @include tablet {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   @include mobile {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -269,7 +269,7 @@
   border-left: 1px solid var(--rule-light);
 
   @include tablet {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -381,7 +381,7 @@
   align-items: center;
 
   @include tablet {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
   }
 }
@@ -390,7 +390,7 @@
   grid-template-columns: minmax(220px, 3.6fr) minmax(0, 8.4fr);
 
   @include tablet {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -421,7 +421,7 @@
   gap: 1.75rem;
 
   @include tablet {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -523,7 +523,7 @@
   border-bottom: 1px solid var(--rule-light);
 
   @include tablet {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0.35rem;
   }
 }
@@ -577,7 +577,7 @@
   border-bottom: 1px solid var(--rule-light);
 
   @include tablet {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0.5rem;
   }
 }
@@ -620,7 +620,7 @@
   gap: 1.5rem;
 
   @include tablet {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -669,13 +669,25 @@
   }
 }
 
+.cta-banner-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 2rem;
+  align-items: center;
+
+  @include tablet {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.35rem;
+  }
+}
+
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
 
   @include mobile {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -807,6 +819,7 @@
   color: var(--ink-primary);
 
   @include mobile {
+    min-width: 0;
     width: 100%;
   }
 }
@@ -872,7 +885,7 @@
   }
 
   @include mobile {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

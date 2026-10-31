@@ -208,7 +208,7 @@ html:not([data-theme="dark"]) .icon-sun {
   margin-bottom: 2.75rem;
 
   @include tablet {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0.85rem;
     margin-bottom: 2rem;
   }
@@ -285,7 +285,7 @@ html:not([data-theme="dark"]) .icon-sun {
   align-items: end;
 
   @include tablet {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
   }
 }
@@ -334,11 +334,11 @@ html:not([data-theme="dark"]) .icon-sun {
   border-bottom: 1px solid var(--rule-light);
 
   @include tablet {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   @include mobile {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
   }
 }
