@@ -18,7 +18,7 @@ layout: default
         {% if page.lead %}<p class="page-hero__lead">{{ page.lead }}</p>{% endif %}
       </div>
       {% if page.hero_cta_label and page.hero_cta_url %}
-      <div style="justify-self: end;">
+      <div class="page-hero__cta">
         <a class="btn btn--primary" href="{{ page.hero_cta_url }}">{{ page.hero_cta_label }}</a>
       </div>
       {% endif %}

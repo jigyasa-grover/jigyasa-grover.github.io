@@ -16,15 +16,15 @@ redirect_from:
 ---
 
 <!-- Enterprise Live Workshops -->
-<section style="margin-bottom: 4.5rem;" aria-labelledby="workshops-heading">
+<section class="content-section" aria-labelledby="workshops-heading">
   <div class="eyebrow">Live Corporate Enablement</div>
   <h2 id="workshops-heading">Customizable enterprise AI workshops &amp; bootcamps</h2>
-  <p style="max-width: 72ch; color: var(--ink-muted); margin-bottom: 1.35rem;">
+  <p class="section-lead">
     Corporate AI training, technical workshops, and enterprise curriculum delivered with <strong>LinkedIn Learning</strong>, <strong>Morgan Stanley</strong>, <strong>FedEx</strong>, <strong>Accenture</strong>, <strong>Roblox</strong>, <strong>Silicon Valley Security Group</strong>, <strong>AI Aspire</strong>, <strong>CommonSpirit Health</strong>, <strong>Udacity</strong>, and more. Available in-person or live virtual.
   </p>
 
-  <div style="margin-bottom: 2.25rem; padding: 1.15rem 1.35rem; border: 1px solid var(--rule-light); border-radius: var(--radius-md); background: var(--bg-surface);">
-    <div class="eyebrow" style="margin-bottom: 0.45rem;">Selected Corporate Training &amp; Enablement Organizations</div>
+  <div class="callout-strip">
+    <div class="eyebrow">Selected Corporate Training &amp; Enablement Organizations</div>
     <div class="partner-strip">
       {% for client in site.data.courses.training_clients %}
         <span>{{ client }}{% unless forloop.last %} ·{% endunless %}</span>
@@ -43,20 +43,20 @@ redirect_from:
         <h3 class="project-dossier__title">{{ w.title }}</h3>
         <p class="project-dossier__summary">{{ w.abstract }}</p>
       </div>
-      <div style="padding-top: 0.75rem; border-top: 1px solid var(--rule-light); font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-muted);">
+      <div class="dossier-footnote">
         <strong>Ideal Audience:</strong> {{ w.audience }}
       </div>
     </article>
     {% endfor %}
   </div>
 
-  <div class="btn-group" style="margin-top: 2rem;">
+  <div class="btn-group mt-lg">
     <a class="btn btn--accent" href="/work-with-me/?topic=Corporate%20AI%20Training#contact">Request a Custom Workshop Syllabus →</a>
   </div>
 </section>
 
 <!-- Published Video Courses -->
-<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light); margin-bottom: 4.5rem;" aria-labelledby="courses-catalog-heading">
+<section class="content-section--bordered" aria-labelledby="courses-catalog-heading">
   <div class="section-header">
     <div>
       <div class="eyebrow">On-Demand Curriculum · {{ site.data.courses.total_learners }} Learners</div>
@@ -95,7 +95,7 @@ redirect_from:
   </div>
 </section>
 
-<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light);" aria-labelledby="teaching-faq-heading">
+<section class="content-section--bordered content-section--last" aria-labelledby="teaching-faq-heading">
   <div class="eyebrow">L&amp;D &amp; Engineering Enablement FAQ</div>
   <h2 id="teaching-faq-heading">Corporate training questions</h2>
   {% include faq-section.html key="teaching" %}

@@ -44,18 +44,18 @@ permalink: /blog/
       >
         <div class="ledger-row__date">
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-          <div style="margin-top: 0.2rem; font-size: 0.7rem;">{{ mins }} min read</div>
+          <div class="ledger-row__meta-sub">{{ mins }} min read</div>
         </div>
 
         <div>
           <div class="ledger-row__title"><a href="{{ post.url }}">{{ post.title }}</a></div>
           {% if meta and meta.summary %}
-            <p class="ledger-row__sub" style="margin-bottom: 0.55rem;">{{ meta.summary }}</p>
+            <p class="ledger-row__sub mb-sm">{{ meta.summary }}</p>
           {% else %}
-            <p class="ledger-row__sub" style="margin-bottom: 0.55rem;">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+            <p class="ledger-row__sub mb-sm">{{ post.excerpt | strip_html | truncate: 180 }}</p>
           {% endif %}
           {% if meta and meta.tags %}
-            <div class="tag-row" style="margin-bottom: 0;">
+            <div class="tag-row mb-0">
               {% for t in meta.tags %}
                 <span class="mono-tag">{{ t }}</span>
               {% endfor %}
@@ -69,16 +69,16 @@ permalink: /blog/
   {% endfor %}
 </div>
 
-<p id="blog-empty-state" style="display: none; padding: 2rem 0; color: var(--ink-muted); font-family: var(--font-mono); font-size: 0.85rem;">
+<p id="blog-empty-state" class="empty-state">
   No articles matched your current filter. Clear your search term or select "All Articles".
 </p>
 
 <!-- Preserved Historical WordPress Archive Notice -->
-<div class="contact-panel" style="margin-top: 3.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+<div class="contact-panel split-panel mt-xl">
   <div>
-    <div class="eyebrow" style="margin-bottom: 0.3rem;">Earlier Open-Source &amp; Research Posts (2014 – 2020)</div>
-    <h2 style="font-size: 1.35rem; margin-bottom: 0.25rem;">Looking for earlier Google Summer of Code &amp; Pharo articles?</h2>
-    <p style="margin-bottom: 0;">All earlier posts remain archived on WordPress and via the preserved <a href="/archive/">/archive/</a> page.</p>
+    <div class="eyebrow mb-xs">Earlier Open-Source &amp; Research Posts (2014 – 2020)</div>
+    <h2 class="split-panel__title">Looking for earlier Google Summer of Code &amp; Pharo articles?</h2>
+    <p class="split-panel__desc">All earlier posts remain archived on WordPress and via the preserved <a href="/archive/">/archive/</a> page.</p>
   </div>
   <a class="btn btn--secondary" href="https://jigyasagrover.wordpress.com/" target="_blank" rel="noopener">Visit WordPress Archive ↗</a>
 </div>

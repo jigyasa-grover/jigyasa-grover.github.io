@@ -1,7 +1,3 @@
----
-layout: null
-permalink: /llms.txt
----
 # Jigyasa Grover
 
 > Official digital home of Jigyasa Grover (pronounced JIG-yah-suh GROH-ver) — Machine Learning Engineer at Uber (Tech Lead — Rider Personalization & Ranking), 13x AI & Open Source Award Winner, Google Developer Advisory Board (gDAB) member, Google Developer Expert (AI/ML), LinkedIn Learning Instructor (40,380+ learners), international keynote speaker (Google I/O main stage, 200+ talks across 20+ countries), and co-author of *Sculpting Data for ML*.

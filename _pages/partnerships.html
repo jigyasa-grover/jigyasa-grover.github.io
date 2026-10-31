@@ -13,14 +13,14 @@ permalink: /partnerships/
 ---
 {% assign b = site.data.identity.booking %}
 
-<section style="margin-bottom: 4rem;" aria-labelledby="audience-profile-heading">
+<section class="content-section" aria-labelledby="audience-profile-heading">
   <div class="eyebrow">Why Developer Platforms Partner With Me</div>
   <h2 id="audience-profile-heading">Practitioner credibility—not generic influencer copy</h2>
-  <p style="max-width: 70ch;">
+  <p class="max-prose">
     Senior software and ML engineers immediately recognize surface-level promotional posts. Every collaboration I take on starts with hands-on technical exploration—building real workflows, testing edge cases, and explaining <em>where and why</em> a tool fits inside a production stack.
   </p>
 
-  <div class="proof-ledger" style="margin: 2rem 0; border-top: 1px solid var(--rule-light);">
+  <div class="proof-ledger proof-ledger--inline">
     <div class="proof-ledger__grid">
       <div class="proof-item">
         <div class="proof-item__value">82%</div>
@@ -68,16 +68,16 @@ permalink: /partnerships/
   </div>
 </section>
 
-<section style="padding-top: 3rem; border-top: 1px solid var(--rule-light); margin-bottom: 4rem;" aria-labelledby="past-partners-heading">
+<section class="content-section--bordered" aria-labelledby="past-partners-heading">
   <div class="eyebrow">Trusted Collaborations</div>
   <h2 id="past-partners-heading">Selected developer &amp; AI ecosystem partners</h2>
-  <div class="partner-strip" style="margin-bottom: 2.25rem;">
+  <div class="partner-strip mb-lg">
     {% for partner in site.data.recognition.brand_partners %}
       <span>{{ partner }}{% unless forloop.last %} ·{% endunless %}</span>
     {% endfor %}
   </div>
 
-  <div class="gallery-grid" style="margin-bottom: 2.5rem;">
+  <div class="gallery-grid mb-lg">
     <div class="gallery-card">
       <img
         src="/assets/images/opt/gemini_dinner_2026.jpg"
@@ -154,7 +154,7 @@ permalink: /partnerships/
   </div>
 </section>
 
-<section style="padding-top: 3rem; border-top: 1px solid var(--rule-light);" aria-labelledby="partnerships-faq-heading">
+<section class="content-section--bordered content-section--last" aria-labelledby="partnerships-faq-heading">
   <div class="eyebrow">Brand Collaboration FAQ</div>
   <h2 id="partnerships-faq-heading">Questions for developer marketing &amp; DevRel teams</h2>
   {% include faq-section.html key="partnerships" %}

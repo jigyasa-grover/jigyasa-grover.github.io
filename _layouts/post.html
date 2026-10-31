@@ -29,7 +29,7 @@ layout: default
           <span aria-hidden="true">·</span>
           <span>{{ read_mins }} min read</span>
           <span aria-hidden="true">·</span>
-          <span>By <a href="/about" rel="author" style="color: inherit;">Jigyasa Grover</a></span>
+          <span>By <a class="link-inherit" href="/about" rel="author">Jigyasa Grover</a></span>
         {% endif %}
       </div>
 
@@ -40,13 +40,13 @@ layout: default
       {% endif %}
 
       {% if meta %}
-        <div class="tag-row" style="margin-bottom: 0.75rem;">
+        <div class="tag-row mb-sm">
           {% for tag in meta.tags %}
             <span class="mono-tag">{{ tag }}</span>
           {% endfor %}
         </div>
         {% if meta.live_url or meta.repo_url %}
-          <div class="btn-group" style="margin-top: 1rem;">
+          <div class="btn-group mt-sm">
             {% if meta.live_url %}
               <a class="btn btn--primary" href="{{ meta.live_url }}" target="_blank" rel="noopener">Launch Live Demo ↗</a>
             {% endif %}
@@ -88,7 +88,7 @@ layout: default
           <p class="author-card__bio">
             Machine Learning Engineer at Uber (Tech Lead — Rider Personalization &amp; Ranking), Google Developer Advisory Board member, 13× AI &amp; Open Source Award Winner, LinkedIn Learning Instructor, and co-author of <em>Sculpting Data for ML</em>.
           </p>
-          <div class="dossier-links" style="border-top: 0; padding-top: 0;">
+          <div class="dossier-links dossier-links--bare">
             <a href="/about">Full Biography →</a>
             <a href="/work-with-me/">Advisory, Speaking &amp; Workshops →</a>
             <a href="/blog/">All Technical Essays →</a>
@@ -98,9 +98,9 @@ layout: default
     </footer>
 
     {% unless page.url == "/archive/" %}
-    <section style="margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--rule-light);" aria-labelledby="related-articles-heading">
+    <section class="post-related" aria-labelledby="related-articles-heading">
       <div class="eyebrow">Continue Reading</div>
-      <h2 id="related-articles-heading" style="margin-bottom: 1.5rem;">Related Technical Writing</h2>
+      <h2 id="related-articles-heading" class="mb-md">Related Technical Writing</h2>
       <div class="ledger">
         {% assign shown = 0 %}
         {% for post in site.posts %}

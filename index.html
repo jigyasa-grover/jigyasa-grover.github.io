@@ -39,7 +39,7 @@ description: "Jigyasa Grover is a Machine Learning Engineer at Uber, 13x AI & Op
     </div>
 
     <div>
-      <figure class="hero__portrait-frame" style="margin: 0;">
+      <figure class="hero__portrait-frame">
         <img
           class="hero__portrait"
           src="/assets/images/opt/profile_photo.jpg"
@@ -186,7 +186,7 @@ description: "Jigyasa Grover is a Machine Learning Engineer at Uber, 13x AI & Op
         <p>
           Recent 2026 talks examine <em>When NOT to Build an Agent</em>, <em>Designing APIs &amp; Cost Guardrails for Agentic Systems</em>, and <em>Quantitative LLM Evaluation &amp; Security</em>.
         </p>
-        <div class="btn-group" style="margin-top: 1.5rem;">
+        <div class="btn-group mt-md">
           <a class="btn btn--primary" href="/speaking/">Speaker Topics &amp; Past Stages →</a>
           <a class="btn btn--secondary" href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener">Watch Google I/O Segment ↗</a>
           <a class="btn btn--secondary" href="/highlights/">Photo Archive →</a>
@@ -194,7 +194,7 @@ description: "Jigyasa Grover is a Machine Learning Engineer at Uber, 13x AI & Op
       </div>
     </div>
 
-    <div class="gallery-grid" style="margin-top: 2.5rem;">
+    <div class="gallery-grid mt-lg">
       <a class="gallery-card" href="/speaking/">
         <img
           src="/assets/images/opt/codemotion_speaker_2026.jpg"
@@ -257,8 +257,8 @@ description: "Jigyasa Grover is a Machine Learning Engineer at Uber, 13x AI & Op
       <a class="section-header__link" href="/teaching/">View all courses &amp; corporate workshops →</a>
     </div>
 
-    <div class="feature-split feature-split--book" style="margin-bottom: 3rem;">
-      <div class="media-frame" style="max-width: 280px;">
+    <div class="feature-split feature-split--book mb-xl">
+      <div class="media-frame media-frame--portrait">
         <img
           src="{{ site.data.publications.featured_book.cover_image }}"
           width="517"
@@ -271,10 +271,10 @@ description: "Jigyasa Grover is a Machine Learning Engineer at Uber, 13x AI & Op
         <div class="eyebrow">Published Book · 95+ Academic Citations</div>
         <h3>{{ site.data.publications.featured_book.title }}</h3>
         <p>{{ site.data.publications.featured_book.summary }}</p>
-        <p style="font-size: 0.9rem; color: var(--ink-muted);">
+        <p class="section-lead mb-0">
           <strong>Forewords by:</strong> Prof. Julian McAuley (UC San Diego), Laurence Moroney, and Dr. Mengting Wan · Available in Print, Kindle &amp; Audible.
         </p>
-        <div class="btn-group" style="margin-top: 1.15rem;">
+        <div class="btn-group mt-sm">
           <a class="btn btn--primary" href="{{ site.data.publications.featured_book.amazon_url }}" target="_blank" rel="noopener">Get the Book on Amazon ↗</a>
           <a class="btn btn--secondary" href="/publications/">All Springer &amp; ACM Publications →</a>
         </div>
@@ -349,10 +349,10 @@ description: "Jigyasa Grover is a Machine Learning Engineer at Uber, 13x AI & Op
       <div class="ledger-row">
         <div class="ledger-row__date">{{ u.date }}</div>
         <div>
-          <p class="ledger-row__sub" style="color: var(--ink-primary);">
+          <p class="ledger-row__sub ledger-row__sub--primary">
             {{ u.text }}
             {% if u.url %}
-              <a href="{{ u.url }}" {% if u.url contains 'http' %}target="_blank" rel="noopener"{% endif %} style="margin-left: 0.35rem; font-weight: 600;">Read / Watch →</a>
+              <a class="ledger-inline-link" href="{{ u.url }}" {% if u.url contains 'http' %}target="_blank" rel="noopener"{% endif %}>Read / Watch →</a>
             {% endif %}
           </p>
         </div>
@@ -361,8 +361,8 @@ description: "Jigyasa Grover is a Machine Learning Engineer at Uber, 13x AI & Op
       {% endfor %}
     </div>
 
-    <div style="margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--rule-light);">
-      <div class="eyebrow" style="margin-bottom: 0.35rem;">Selected Ecosystem &amp; Brand Collaborations</div>
+    <div class="section-divider">
+      <div class="eyebrow mb-xs">Selected Ecosystem &amp; Brand Collaborations</div>
       <div class="partner-strip">
         {% for partner in site.data.recognition.brand_partners %}
           <span>{{ partner }}{% unless forloop.last %} ·{% endunless %}</span>
@@ -378,12 +378,12 @@ description: "Jigyasa Grover is a Machine Learning Engineer at Uber, 13x AI & Op
     <div class="contact-panel cta-banner-grid">
       <div>
         <div class="eyebrow">Start a Conversation</div>
-        <h2 id="cta-banner-heading" style="margin-bottom: 0.65rem;">Building an AI product, planning a conference, or upskilling an engineering org?</h2>
-        <p style="margin-bottom: 0;">
+        <h2 id="cta-banner-heading" class="mb-sm">Building an AI product, planning a conference, or upskilling an engineering org?</h2>
+        <p class="mb-0">
           Reach out directly for advisory, keynotes, hands-on corporate AI workshops, developer content partnerships, or media commentary.
         </p>
       </div>
-      <div class="btn-group" style="justify-content: flex-start;">
+      <div class="btn-group">
         <a class="btn btn--accent" href="/work-with-me/#contact">Send an Inquiry →</a>
         <a class="btn btn--secondary" href="{{ id.booking.intro.url }}" target="_blank" rel="noopener">1:1 on Intro ↗</a>
         <a class="btn btn--secondary" href="{{ id.booking.passionfroot.url }}" target="_blank" rel="noopener">Passionfroot ↗</a>

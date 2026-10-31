@@ -1,11 +1,21 @@
-_site
-.DS_Store
-.jekyll
+# Jekyll & Ruby build artifacts
+_site/
+.jekyll-cache/
 .jekyll-metadata
-.bundle
-.sass-cache
-vendor
-Gemfile
+.jekyll/
+.sass-cache/
+.bundle/
+vendor/
 Gemfile.lock
-node_modules
-package.json
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Optional Node / Python local caches
+node_modules/
+package-lock.json
+__pycache__/
+*.pyc

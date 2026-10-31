@@ -1,0 +1,62 @@
+primary:
+  - label: "About"
+    url: "/about"
+    match_urls:
+      - "/about"
+      - "/experience/"
+  - label: "Work"
+    url: "/projects/"
+    match_urls:
+      - "/projects/"
+  - label: "Speaking"
+    url: "/speaking/"
+    match_urls:
+      - "/speaking/"
+  - label: "Teaching"
+    url: "/teaching/"
+    match_urls:
+      - "/teaching/"
+  - label: "Writing"
+    url: "/blog/"
+    match_urls:
+      - "/blog/"
+    match_layout: "post"
+  - label: "Publications"
+    url: "/publications/"
+    match_urls:
+      - "/publications/"
+  - label: "Press"
+    url: "/press/"
+    match_urls:
+      - "/press/"
+      - "/highlights/"
+  - label: "Advisory"
+    url: "/advisory/"
+    match_urls:
+      - "/advisory/"
+
+footer_explore:
+  - label: "About & Biography"
+    url: "/about"
+  - label: "Career & Experience"
+    url: "/experience/"
+  - label: "Selected Engineering Work"
+    url: "/projects/"
+  - label: "Technical Writing & Blog"
+    url: "/blog/"
+  - label: "Books & Publications"
+    url: "/publications/"
+  - label: "Awards & Highlights"
+    url: "/highlights/"
+  - label: "Press & Media Kit"
+    url: "/press/"
+
+footer_collaborate:
+  - label: "AI Startup & Product Advisory"
+    url: "/advisory/"
+  - label: "Keynotes & Conference Speaking"
+    url: "/speaking/"
+  - label: "Corporate AI Workshops & Courses"
+    url: "/teaching/"
+  - label: "Technical Content Partnerships"
+    url: "/partnerships/"

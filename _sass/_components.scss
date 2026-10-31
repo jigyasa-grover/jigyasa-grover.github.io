@@ -150,6 +150,7 @@
 }
 
 .hero__portrait-frame {
+  margin: 0;
   background-color: var(--bg-surface);
   border: 1px solid var(--rule-light);
   padding: 0.85rem;
@@ -943,3 +944,200 @@
     color: var(--ink-muted);
   }
 }
+
+// Reusable Subpage & Dossier Modifiers
+.feature-split--top {
+  align-items: start;
+}
+
+.media-frame--portrait {
+  max-width: 280px;
+}
+
+.media-frame--book {
+  max-width: 300px;
+}
+
+.proof-ledger--inline {
+  margin: 2rem 0;
+  border-top: 1px solid var(--rule-light);
+}
+
+.callout-strip {
+  margin-bottom: 2.25rem;
+  padding: 1.15rem 1.35rem;
+  border: 1px solid var(--rule-light);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+
+  .eyebrow {
+    margin-bottom: 0.45rem;
+  }
+
+  .partner-strip {
+    padding-top: 0.35rem;
+  }
+}
+
+.endorsement-box {
+  margin: 1.5rem 0;
+  padding: 1.15rem 1.25rem;
+  background-color: var(--bg-subtle);
+  border-left: 2px solid var(--accent);
+}
+
+.endorsement-box__label {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+  margin-bottom: 0.45rem;
+}
+
+.endorsement-box__list {
+  margin: 0;
+  padding-left: 1.15rem;
+  font-size: 0.92rem;
+}
+
+.split-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.split-panel__title {
+  font-size: 1.38rem;
+  margin-bottom: 0.3rem;
+}
+
+.split-panel__desc {
+  margin-bottom: 0;
+  max-width: 60ch;
+}
+
+.sidebar-card {
+  padding: 1.5rem;
+
+  .eyebrow {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.sidebar-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+}
+
+.dossier-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--ink-primary);
+  margin-bottom: 0.65rem;
+}
+
+.dossier-meta-note {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.5rem;
+}
+
+.dossier-footnote {
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--rule-light);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+.dossier-links--bare {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.project-dossier__title--md {
+  font-size: 1.45rem;
+}
+
+.mono-tag--upcoming {
+  margin-left: 0.35rem;
+  color: var(--verified);
+  border-color: var(--verified);
+}
+
+.venue-label {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--accent);
+  margin-bottom: 0.45rem;
+}
+
+.ledger-row__sub--primary {
+  color: var(--ink-primary);
+}
+
+.ledger-row__meta-sub {
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
+}
+
+.ledger-inline-link {
+  margin-left: 0.35rem;
+  font-weight: 600;
+}
+
+.career-list {
+  border-top: 1px solid var(--rule-strong);
+}
+
+.career-item__location {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--ink-muted);
+  margin-top: 0.25rem;
+}
+
+.form-note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+.empty-state {
+  display: none;
+  padding: 2rem 0;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.post-related {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule-light);
+}
+
+.link-inherit {
+  color: inherit;
+}
+
+// Predictable Spacing Rhythm Utilities
+.mt-sm { margin-top: 1.15rem; }
+.mt-md { margin-top: 1.5rem; }
+.mt-lg { margin-top: 2.25rem; }
+.mt-xl { margin-top: 3.5rem; }
+.mb-0 { margin-bottom: 0; }
+.mb-xs { margin-bottom: 0.35rem; }
+.mb-sm { margin-bottom: 0.75rem; }
+.mb-md { margin-bottom: 1.5rem; }
+.mb-lg { margin-bottom: 2.5rem; }
+.mb-xl { margin-bottom: 3.75rem; }
+.max-prose { max-width: 70ch; }
+

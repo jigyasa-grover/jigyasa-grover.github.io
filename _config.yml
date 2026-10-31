@@ -37,7 +37,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    css_class: 'highlight'
+    css_class: "highlight"
 
 sass:
   sass_dir: _sass
@@ -50,6 +50,10 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
 
+include:
+  - _pages
+  - .well-known
+
 defaults:
   - scope:
       path: "_posts"
@@ -59,13 +63,18 @@ defaults:
       author: "Jigyasa Grover"
 
 exclude:
+  - .editorconfig
+  - .github
+  - AGENTS.md
+  - CLAUDE.md
+  - CNAME
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - Makefile
   - README.md
-  - CNAME
-  - vendor
-  - scripts
   - node_modules
   - package.json
   - package-lock.json
+  - scripts
+  - vendor

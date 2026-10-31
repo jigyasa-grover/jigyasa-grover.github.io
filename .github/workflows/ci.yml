@@ -1,0 +1,32 @@
+name: Site Build & SEO/GEO Audit
+
+on:
+  push:
+    branches:
+      - master
+      - main
+      - "feat/**"
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Jekyll Build + Route, Link & Schema Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Build production site
+        run: bundle exec jekyll build --trace
+
+      - name: Run automated SEO, link, JSON-LD & GEO audit
+        run: python3 scripts/audit_site.py

@@ -14,11 +14,11 @@ permalink: /press/
 {% assign rec = site.data.recognition %}
 
 <!-- 1. Selected Media, TV & Podcast Features -->
-<section style="margin-bottom: 4.5rem;" aria-labelledby="media-ledger-heading">
+<section class="content-section" aria-labelledby="media-ledger-heading">
   <div class="eyebrow">Selected Press, Broadcast &amp; Podcasts</div>
   <h2 id="media-ledger-heading">Featured commentary &amp; interviews</h2>
 
-  <div class="ledger" style="margin-top: 1.5rem;">
+  <div class="ledger mt-md">
     {% for m in rec.media_features %}
     <div class="ledger-row">
       <div class="ledger-row__date">{{ m.date }} · {{ m.outlet }}</div>
@@ -39,7 +39,7 @@ permalink: /press/
 </section>
 
 <!-- 2. 13x Industry & Open Source Awards -->
-<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light); margin-bottom: 4.5rem;" aria-labelledby="awards-ledger-heading">
+<section class="content-section--bordered" aria-labelledby="awards-ledger-heading">
   <div class="section-header">
     <div>
       <div class="eyebrow">Verified Honors</div>
@@ -72,14 +72,14 @@ permalink: /press/
 </section>
 
 <!-- 3. Speaker & Press Assets (Bios + Approved Photos) -->
-<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light);" aria-labelledby="media-kit-assets-heading">
+<section class="content-section--bordered content-section--last" aria-labelledby="media-kit-assets-heading">
   <div class="eyebrow">Approved Media Assets</div>
   <h2 id="media-kit-assets-heading">Official biographies &amp; press photography</h2>
-  <p style="max-width: 68ch; color: var(--ink-muted); margin-bottom: 2rem;">
+  <p class="section-lead">
     Event organizers and journalists are welcome to use the third-person biographies and photography below with attribution to <strong>Jigyasa Grover</strong>. Pronunciation: <em>{{ id.pronunciation }}</em>.
   </p>
 
-  <div class="project-grid" style="margin-bottom: 2.5rem;">
+  <div class="project-grid mb-lg">
     <div class="project-dossier">
       <div>
         <div class="project-dossier__meta"><span>50-Word Bio</span><span>Copy-Ready</span></div>

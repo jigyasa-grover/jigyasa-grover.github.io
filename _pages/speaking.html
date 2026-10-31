@@ -14,7 +14,7 @@ permalink: /speaking/
 ---
 
 <!-- Featured Stage Highlight -->
-<div class="feature-split" style="margin-bottom: 4.5rem;">
+<div class="feature-split content-section">
   <div class="media-frame">
     <a href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener">
       <img
@@ -36,7 +36,7 @@ permalink: /speaking/
     <p>
       From being introduced on the <strong>Google I/O</strong> main stage by Sundar Pichai to delivering technical sessions at <strong>Codemotion Milan</strong>, <strong>Open Source Summit Europe</strong>, <strong>AGNTCon + MCPCon</strong>, and <strong>API Days</strong>, I tailor every session to leave builders and decision-makers with concrete frameworks they can apply Monday morning.
     </p>
-    <div class="btn-group" style="margin-top: 1.35rem;">
+    <div class="btn-group mt-md">
       <a class="btn btn--accent" href="/work-with-me/?topic=Speaking%20%26%20Workshops#contact">Invite Me to Speak →</a>
       <a class="btn btn--secondary" href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener">Watch Google I/O Keynote ↗</a>
       <a class="btn btn--secondary" href="/press/">Speaker Bios &amp; Photos →</a>
@@ -45,7 +45,7 @@ permalink: /speaking/
 </div>
 
 <!-- Recent Stage Photography Strip -->
-<div class="gallery-grid" style="margin-bottom: 4.5rem;">
+<div class="gallery-grid content-section">
   <div class="gallery-card">
     <img
       src="/assets/images/opt/codemotion_speaker_2026.jpg"
@@ -93,11 +93,11 @@ permalink: /speaking/
 </div>
 
 <!-- Signature Keynote & Talk Topics -->
-<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light); margin-bottom: 4.5rem;" aria-labelledby="signature-talks-heading">
+<section class="content-section--bordered" aria-labelledby="signature-talks-heading">
   <div class="eyebrow">Current Speaking Repertoire</div>
   <h2 id="signature-talks-heading">Signature keynotes &amp; technical sessions</h2>
 
-  <div class="project-grid" style="margin-top: 2rem;">
+  <div class="project-grid mt-lg">
     {% for talk in site.data.speaking.signature_talks %}
     <article class="project-dossier">
       <div>
@@ -109,10 +109,10 @@ permalink: /speaking/
         <p class="project-dossier__summary">{{ talk.abstract }}</p>
       </div>
       <div>
-        <p style="font-family: var(--font-mono); font-size: 0.73rem; color: var(--ink-muted); margin-bottom: 0.5rem;">
+        <p class="dossier-meta-note">
           <strong>Themes:</strong> {{ talk.themes }}
         </p>
-        <p style="font-size: 0.8rem; color: var(--ink-muted); margin: 0; padding-top: 0.65rem; border-top: 1px solid var(--rule-light);">
+        <p class="dossier-footnote">
           <strong>Delivered at:</strong> {{ talk.stages }}
         </p>
       </div>
@@ -122,17 +122,17 @@ permalink: /speaking/
 </section>
 
 <!-- Confirmed Global Appearances Ledger -->
-<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light); margin-bottom: 4.5rem;" aria-labelledby="speaking-ledger-heading">
+<section class="content-section--bordered" aria-labelledby="speaking-ledger-heading">
   <div class="eyebrow">Selected Global Stages</div>
   <h2 id="speaking-ledger-heading">Upcoming &amp; recent conference appearances</h2>
 
-  <div class="ledger" style="margin-top: 1.5rem;">
+  <div class="ledger mt-md">
     {% for a in site.data.speaking.appearances %}
     <div class="ledger-row">
       <div class="ledger-row__date">
         {{ a.date }}
         {% if a.status == "Upcoming" %}
-          <span class="mono-tag" style="margin-left: 0.35rem; color: var(--verified); border-color: var(--verified);">Upcoming</span>
+          <span class="mono-tag mono-tag--upcoming">Upcoming</span>
         {% endif %}
       </div>
       <div>
@@ -152,7 +152,7 @@ permalink: /speaking/
 </section>
 
 <!-- Organizer FAQ -->
-<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light);" aria-labelledby="speaking-faq-heading">
+<section class="content-section--bordered content-section--last" aria-labelledby="speaking-faq-heading">
   <div class="eyebrow">Event Organizer Information</div>
   <h2 id="speaking-faq-heading">Speaking logistics &amp; FAQ</h2>
   {% include faq-section.html key="speaking" %}

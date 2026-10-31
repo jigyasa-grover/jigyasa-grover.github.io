@@ -14,9 +14,9 @@ permalink: /publications/
 {% assign pub = site.data.publications %}
 
 <!-- Featured Book Monograph -->
-<section style="margin-bottom: 4.5rem;" aria-labelledby="featured-book-heading">
+<section class="content-section" aria-labelledby="featured-book-heading">
   <div class="feature-split feature-split--book">
-    <div class="media-frame" style="max-width: 300px;">
+    <div class="media-frame media-frame--book">
       <img
         src="{{ pub.featured_book.cover_image }}"
         width="517"
@@ -35,11 +35,9 @@ permalink: /publications/
         Championed across <strong>25+ international conference talks and workshops</strong> under the <strong>#DataForML</strong> initiative—including PyCon US, LeadDev Live, MLconf, All Things Open, and GDG events worldwide.
       </p>
 
-      <div style="margin: 1.5rem 0; padding: 1.15rem 1.25rem; background-color: var(--bg-subtle); border-left: 2px solid var(--accent);">
-        <div style="font-family: var(--font-mono); font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); margin-bottom: 0.45rem;">
-          Endorsed with Forewords By
-        </div>
-        <ul style="margin: 0; padding-left: 1.15rem; font-size: 0.92rem;">
+      <div class="endorsement-box">
+        <div class="endorsement-box__label">Endorsed with Forewords By</div>
+        <ul class="endorsement-box__list">
           {% for f in pub.featured_book.forewords %}
           <li><a href="{{ f.url }}" target="_blank" rel="noopener"><strong>{{ f.name }}</strong></a> — {{ f.affiliation }}</li>
           {% endfor %}
@@ -56,17 +54,17 @@ permalink: /publications/
 </section>
 
 <!-- Peer-Reviewed Chapters & Academic Papers -->
-<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light); margin-bottom: 4rem;" aria-labelledby="research-papers-heading">
+<section class="content-section--bordered" aria-labelledby="research-papers-heading">
   <div class="eyebrow">Peer-Reviewed Chapters &amp; Proceedings</div>
   <h2 id="research-papers-heading">Academic &amp; Open-Source Publications</h2>
 
-  <div class="ledger" style="margin-top: 1.5rem;">
+  <div class="ledger mt-md">
     {% for r in pub.research_publications %}
     <div class="ledger-row">
       <div class="ledger-row__date">{{ r.year }} · {{ r.type }}</div>
       <div>
         <div class="ledger-row__title"><a href="{{ r.doi_url }}" target="_blank" rel="noopener">{{ r.title }} ↗</a></div>
-        <p style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent); margin-bottom: 0.45rem;">{{ r.venue }}</p>
+        <p class="venue-label">{{ r.venue }}</p>
         <p class="ledger-row__sub">{{ r.summary }}</p>
       </div>
       <div class="ledger-row__aside"><a href="{{ r.doi_url }}" target="_blank" rel="noopener">Publisher Link ↗</a></div>
@@ -76,7 +74,7 @@ permalink: /publications/
 </section>
 
 <!-- Technical Manuscript Reviewing -->
-<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light);" aria-labelledby="reviewing-heading">
+<section class="content-section--bordered content-section--last" aria-labelledby="reviewing-heading">
   <div class="eyebrow">Editorial &amp; Peer Review</div>
   <h2 id="reviewing-heading">Technical Book Reviewing</h2>
   <div class="ledger">
@@ -84,7 +82,7 @@ permalink: /publications/
     <div class="ledger-row">
       <div class="ledger-row__date"><a href="{{ ed.url }}" target="_blank" rel="noopener">{{ ed.org }} ↗</a></div>
       <div>
-        <p class="ledger-row__sub" style="color: var(--ink-primary);">{{ ed.role }}</p>
+        <p class="ledger-row__sub ledger-row__sub--primary">{{ ed.role }}</p>
       </div>
       <div class="ledger-row__aside">Reviewer</div>
     </div>

@@ -12,21 +12,21 @@ permalink: /experience/
 ---
 {% assign id = site.data.identity %}
 
-<section style="margin-bottom: 4rem;" aria-labelledby="career-history-heading">
+<section class="content-section" aria-labelledby="career-history-heading">
   <div class="eyebrow">Industry &amp; Research Roles</div>
   <h2 id="career-history-heading">Engineering &amp; Technical Leadership</h2>
 
-  <div style="border-top: 1px solid var(--rule-strong);">
+  <div class="career-list">
     {% for job in id.career %}
     <article class="career-item">
       <div>
         <div class="career-item__period">{{ job.period }}</div>
         <div class="career-item__org">{{ job.org }}</div>
-        <div style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-muted); margin-top: 0.25rem;">{{ job.location }}</div>
+        <div class="career-item__location">{{ job.location }}</div>
       </div>
       <div>
         <h3 class="career-item__role">{{ job.role }}</h3>
-        <p style="margin-bottom: 0.5rem;">{{ job.summary }}</p>
+        <p class="mb-sm">{{ job.summary }}</p>
         <ul class="career-item__bullets">
           {% for h in job.highlights %}
           <li>{{ h }}</li>
@@ -38,7 +38,7 @@ permalink: /experience/
   </div>
 </section>
 
-<section style="margin-bottom: 4rem;" aria-labelledby="education-history-heading">
+<section class="content-section" aria-labelledby="education-history-heading">
   <div class="eyebrow">Academic Credentials</div>
   <h2 id="education-history-heading">Education &amp; Research Scholarships</h2>
   <div class="ledger">
@@ -58,7 +58,7 @@ permalink: /experience/
 <section id="milestones" aria-labelledby="milestone-archive-heading">
   <div class="eyebrow">Complete Historical Ledger (2017 – 2026)</div>
   <h2 id="milestone-archive-heading">All Keynotes, Awards, Launches &amp; Community Milestones</h2>
-  <p style="max-width: 65ch; color: var(--ink-muted); margin-bottom: 2rem;">
+  <p class="section-lead">
     Preserving the complete multi-year chronological log of speaking appearances, publications, open-source awards, and media features.
   </p>
 
@@ -67,10 +67,10 @@ permalink: /experience/
     <div class="ledger-row">
       <div class="ledger-row__date">{{ u.date }}</div>
       <div>
-        <p class="ledger-row__sub" style="color: var(--ink-primary);">
+        <p class="ledger-row__sub ledger-row__sub--primary">
           {{ u.text }}
           {% if u.url %}
-            <a href="{{ u.url }}" {% if u.url contains 'http' %}target="_blank" rel="noopener"{% endif %} style="margin-left: 0.35rem; font-weight: 600;">Reference →</a>
+            <a class="ledger-inline-link" href="{{ u.url }}" {% if u.url contains 'http' %}target="_blank" rel="noopener"{% endif %}>Reference →</a>
           {% endif %}
         </p>
       </div>

@@ -298,6 +298,50 @@ html:not([data-theme="dark"]) .icon-sun {
   margin-bottom: 0;
 }
 
+.page-hero__cta {
+  justify-self: end;
+
+  @include tablet {
+    justify-self: start;
+  }
+}
+
+// Subpage Internal Section Rhythm
+.content-section {
+  margin-bottom: 4.25rem;
+
+  @include mobile {
+    margin-bottom: 3rem;
+  }
+}
+
+.content-section--bordered {
+  padding-top: 3.25rem;
+  border-top: 1px solid var(--rule-light);
+  margin-bottom: 4.25rem;
+
+  @include mobile {
+    padding-top: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.content-section--last {
+  margin-bottom: 0;
+}
+
+.section-lead {
+  max-width: 72ch;
+  color: var(--ink-muted);
+  margin-bottom: 1.85rem;
+}
+
+.section-divider {
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule-light);
+}
+
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;

@@ -13,7 +13,7 @@ permalink: /about
 ---
 {% assign id = site.data.identity %}
 
-<div class="feature-split" style="align-items: start; margin-bottom: 4rem;">
+<div class="feature-split feature-split--top content-section">
   <div>
     <h2>At the intersection of production scale, agentic engineering, and technical clarity</h2>
     <p>
@@ -37,7 +37,7 @@ permalink: /about
   </div>
 
   <div>
-    <div class="media-frame" style="margin-bottom: 1.75rem;">
+    <div class="media-frame mb-md">
       <img
         src="/assets/images/opt/portrait_outdoor.jpg"
         width="900"
@@ -50,9 +50,9 @@ permalink: /about
       </div>
     </div>
 
-    <div class="contact-panel" style="padding: 1.5rem;">
-      <div class="eyebrow" style="margin-bottom: 0.5rem;">Quick Facts &amp; Credentials</div>
-      <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; color: var(--ink-secondary);">
+    <div class="contact-panel sidebar-card">
+      <div class="eyebrow">Quick Facts &amp; Credentials</div>
+      <ul class="sidebar-list">
         <li><strong>Current Role:</strong> ML Engineer (Tech Lead), Uber</li>
         <li><strong>Google Ecosystem:</strong> gDAB Member &amp; AI/ML GDE</li>
         <li><strong>Teaching &amp; Training:</strong> LinkedIn Learning (40K+) · Morgan Stanley · FedEx · Accenture · Roblox · SVSG · AI Aspire</li>
@@ -61,7 +61,7 @@ permalink: /about
         <li><strong>Recognition:</strong> 13× AI &amp; Open Source Award Winner</li>
         <li><strong>Alma Mater:</strong> UC San Diego (M.S. CS) · DTU (B.Tech. CE, Distinguished Alumni)</li>
       </ul>
-      <div class="btn-group" style="margin-top: 1.25rem;">
+      <div class="btn-group mt-sm">
         <a class="btn btn--secondary" href="/experience/">Full Career Timeline →</a>
         <a class="btn btn--secondary" href="/press/">Press &amp; Speaker Kit →</a>
       </div>
@@ -70,11 +70,11 @@ permalink: /about
 </div>
 
 <!-- Ecosystem, Boards & Education -->
-<section style="padding-top: 3rem; border-top: 1px solid var(--rule-light); margin-bottom: 4rem;" aria-labelledby="boards-heading">
+<section class="content-section--bordered" aria-labelledby="boards-heading">
   <div class="eyebrow">Advisory, Governance &amp; Academic Foundations</div>
   <h2 id="boards-heading">Ecosystem leadership &amp; education</h2>
 
-  <div class="ledger" style="margin-bottom: 2.75rem;">
+  <div class="ledger mb-lg">
     {% for item in id.ecosystem_roles %}
     <div class="ledger-row">
       <div class="ledger-row__date">{{ item.org }}</div>
@@ -102,7 +102,7 @@ permalink: /about
 </section>
 
 <!-- Copyable Official Bios for Event Organizers & Journalists -->
-<section style="padding-top: 3rem; border-top: 1px solid var(--rule-light); margin-bottom: 4rem;" aria-labelledby="official-bios-heading">
+<section class="content-section--bordered" aria-labelledby="official-bios-heading">
   <div class="eyebrow">For Event Organizers, Podcasts &amp; Press</div>
   <h2 id="official-bios-heading">Approved third-person biographies</h2>
 
@@ -136,7 +136,7 @@ permalink: /about
 </section>
 
 <!-- Entity FAQ (GEO & Human Clarity) -->
-<section style="padding-top: 3rem; border-top: 1px solid var(--rule-light);" aria-labelledby="about-faq-heading">
+<section class="content-section--bordered content-section--last" aria-labelledby="about-faq-heading">
   <div class="eyebrow">Frequently Asked Questions</div>
   <h2 id="about-faq-heading">Background &amp; collaboration FAQ</h2>
   {% include faq-section.html key="about" %}

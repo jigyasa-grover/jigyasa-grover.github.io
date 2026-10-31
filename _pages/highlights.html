@@ -11,7 +11,7 @@ description: "Visual highlights from Jigyasa Grover's career: Codemotion Milan 2
 permalink: /highlights/
 ---
 
-<div class="gallery-grid" style="margin-bottom: 3.5rem;">
+<div class="gallery-grid mb-xl">
   {% for item in site.data.recognition.visual_highlights %}
   <a class="gallery-card" href="{{ item.url }}" {% if item.url contains 'http' %}target="_blank" rel="noopener"{% endif %}>
     <img
@@ -30,10 +30,10 @@ permalink: /highlights/
   {% endfor %}
 </div>
 
-<div class="contact-panel" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.25rem;">
+<div class="contact-panel split-panel">
   <div>
-    <h2 style="font-size: 1.35rem; margin-bottom: 0.25rem;">Looking for the full 13× awards list, press links, or speaker bios?</h2>
-    <p style="margin-bottom: 0;">Visit the Press &amp; Media Kit for complete citations and downloadable headshots.</p>
+    <h2 class="split-panel__title">Looking for the full 13× awards list, press links, or speaker bios?</h2>
+    <p class="split-panel__desc">Visit the Press &amp; Media Kit for complete citations and downloadable headshots.</p>
   </div>
   <a class="btn btn--primary" href="/press/">Open Press &amp; Media Kit →</a>
 </div>

@@ -8,14 +8,15 @@
     </a>
 
     <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-      <a class="site-nav__link" href="/about" {% if page.url == "/about" or page.url == "/experience/" %}aria-current="page"{% endif %}>About</a>
-      <a class="site-nav__link" href="/projects/" {% if page.url == "/projects/" %}aria-current="page"{% endif %}>Work</a>
-      <a class="site-nav__link" href="/speaking/" {% if page.url == "/speaking/" %}aria-current="page"{% endif %}>Speaking</a>
-      <a class="site-nav__link" href="/teaching/" {% if page.url == "/teaching/" %}aria-current="page"{% endif %}>Teaching</a>
-      <a class="site-nav__link" href="/blog/" {% if page.url == "/blog/" or page.layout == "post" %}aria-current="page"{% endif %}>Writing</a>
-      <a class="site-nav__link" href="/publications/" {% if page.url == "/publications/" %}aria-current="page"{% endif %}>Publications</a>
-      <a class="site-nav__link" href="/press/" {% if page.url == "/press/" or page.url == "/highlights/" %}aria-current="page"{% endif %}>Press</a>
-      <a class="site-nav__link" href="/advisory/" {% if page.url == "/advisory/" %}aria-current="page"{% endif %}>Advisory</a>
+      {% for item in site.data.navigation.primary %}
+        {% assign is_current = false %}
+        {% if item.match_urls contains page.url %}
+          {% assign is_current = true %}
+        {% elsif item.match_layout and page.layout == item.match_layout %}
+          {% assign is_current = true %}
+        {% endif %}
+        <a class="site-nav__link" href="{{ item.url }}" {% if is_current %}aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endfor %}
     </nav>
 
     <div class="header-actions">

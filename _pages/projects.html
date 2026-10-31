@@ -9,9 +9,11 @@ hero_cta_url: "https://github.com/jigyasa-grover"
 seo_title: "Selected AI & ML Engineering Projects — Jigyasa Grover"
 description: "Explore Jigyasa Grover's open-source AI and Machine Learning systems: Proof of Work, Startup on a Shoestring, Critic's Cut (Google ADK), Gemma 3 TPU Fine-Tuning, and AI Racing Coach."
 permalink: /projects/
+redirect_from:
+  - /projectsDepricated/
 ---
 
-<div class="project-grid" style="margin-bottom: 4rem;">
+<div class="project-grid content-section">
   {% for proj in site.data.projects %}
   <article class="project-dossier" id="{{ proj.id }}">
     <div>
@@ -28,9 +30,7 @@ permalink: /projects/
           <a href="{{ proj.repo_url }}" target="_blank" rel="noopener">{{ proj.title }} ↗</a>
         {% endif %}
       </h2>
-      <p style="font-family: var(--font-serif); font-style: italic; color: var(--ink-primary); margin-bottom: 0.65rem;">
-        {{ proj.tagline }}
-      </p>
+      <p class="dossier-tagline">{{ proj.tagline }}</p>
       <p class="project-dossier__summary">{{ proj.summary }}</p>
     </div>
 
@@ -50,11 +50,11 @@ permalink: /projects/
   {% endfor %}
 </div>
 
-<section class="contact-panel" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem;" aria-labelledby="github-more-heading">
+<section class="contact-panel split-panel" aria-labelledby="github-more-heading">
   <div>
-    <div class="eyebrow" style="margin-bottom: 0.35rem;">72+ Public Repositories</div>
-    <h2 id="github-more-heading" style="font-size: 1.45rem; margin-bottom: 0.35rem;">Explore additional code, course labs &amp; open-source contributions</h2>
-    <p style="margin-bottom: 0; max-width: 60ch;">
+    <div class="eyebrow mb-xs">72+ Public Repositories</div>
+    <h2 id="github-more-heading" class="split-panel__title">Explore additional code, course labs &amp; open-source contributions</h2>
+    <p class="split-panel__desc">
       View LinkedIn Learning Google ADK exercise repositories, Python ML benchmarks, and Pharo Smalltalk tools on GitHub.
     </p>
   </div>
