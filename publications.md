@@ -1,34 +1,93 @@
 ---
-layout: default
+layout: page
+title: "Books & Peer-Reviewed Publications"
+heading: "Books, Springer research chapters, ACM proceedings, and editorial reviewing."
+eyebrow: "Pillar 05 · Author & Researcher"
+lead: "Examining data-centric machine learning, privacy-preserving ML, synthetic media detection, and multi-agent spatial modeling."
+hero_cta_label: "Google Scholar Profile ↗"
+hero_cta_url: "https://scholar.google.com/citations?user=nURar74AAAAJ"
+seo_title: "Books & Publications — Jigyasa Grover | Sculpting Data for ML, Springer & ACM"
+description: "Published books and peer-reviewed research by Jigyasa Grover: Sculpting Data for ML (ISBN 979-8585463570), Springer privacy-preserving ML & deepfake chapters, and ACM agent-based modeling."
+og_image: "/assets/images/opt/book_cover.jpg"
 permalink: /publications/
 ---
+{% assign pub = site.data.publications %}
 
-## Publications
+<!-- Featured Book Monograph -->
+<section style="margin-bottom: 4.5rem;" aria-labelledby="featured-book-heading">
+  <div class="feature-split feature-split--book">
+    <div class="media-frame" style="max-width: 300px;">
+      <img
+        src="{{ pub.featured_book.cover_image }}"
+        width="517"
+        height="800"
+        fetchpriority="high"
+        alt="Cover of Sculpting Data for ML: The First Act of Machine Learning"
+      />
+      <div class="media-frame__caption">ISBN {{ pub.featured_book.isbn }} · {{ pub.featured_book.citations }}</div>
+    </div>
 
-### [**Keeping it Low-Key: Modern-Day Approaches to Privacy-Preserving Machine Learning**](https://link.springer.com/chapter/10.1007/978-3-031-34006-2_2)
-* This research publication analyzes the contemporary interpretation of Privacy-Preserving Machine Learning and the significance it holds in myriad settings.
-* It covers prevalent types of privacy attacks on ML systems like inferences of the membership, input, parameter, and property, along with examining some privacy-enhancing techniques such as differential privacy, federated learning, and synthetic data along with modern-day advancements like dataset condensation among others.
-* It also highlights some of the recent policy developments to regulate data protection and privacy worldwide and how that is shaping the industry. The goal is to ignite the public dialogue regarding privacy impacts, ethical consequences, fairness, and real-world harms of non-privacy-compliant ML systems.
-* Published as a chapter in **Springer**'s latest book titled [Data Protection in a Post-Pandemic Society: Laws, Regulations, Best Practices and Recent Solutions](https://link.springer.com/book/10.1007/978-3-031-34006-2).
+    <div>
+      <div class="eyebrow">Published Book ({{ pub.featured_book.year }})</div>
+      <h2 id="featured-book-heading">{{ pub.featured_book.title }}</h2>
+      <p>{{ pub.featured_book.summary }}</p>
+      <p>
+        Championed across <strong>25+ international conference talks and workshops</strong> under the <strong>#DataForML</strong> initiative—including PyCon US, LeadDev Live, MLconf, All Things Open, and GDG events worldwide.
+      </p>
 
+      <div style="margin: 1.5rem 0; padding: 1.15rem 1.25rem; background-color: var(--bg-subtle); border-left: 2px solid var(--accent);">
+        <div style="font-family: var(--font-mono); font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); margin-bottom: 0.45rem;">
+          Endorsed with Forewords By
+        </div>
+        <ul style="margin: 0; padding-left: 1.15rem; font-size: 0.92rem;">
+          {% for f in pub.featured_book.forewords %}
+          <li><a href="{{ f.url }}" target="_blank" rel="noopener"><strong>{{ f.name }}</strong></a> — {{ f.affiliation }}</li>
+          {% endfor %}
+        </ul>
+      </div>
 
-### [**Do not 'fake it till you make it'! - Synopsis of fake news detection methodologies on social media**](https://link.springer.com/book/9783031108716)
-* This research publication analyzes the definition and forms of fake news on social media and is a comparative study of deep learning models to identify phony information, verify the validity of various claims and facts, catch fake content, and so on.
-* It discusses the limitations of deep learning with insights into the fairness, interpretability, and accountability of fake news detection algorithms.
-* Published in **Springer** book titled ['Deep Learning for Social Media Data Analytics'](https://link.springer.com/book/9783031108716) as a part of their popular book series [Studies in Big Data](https://www.springer.com/series/11970).
+      <div class="btn-group">
+        <a class="btn btn--primary" href="{{ pub.featured_book.amazon_url }}" target="_blank" rel="noopener">Order on Amazon (Print &amp; Kindle) ↗</a>
+        <a class="btn btn--secondary" href="{{ pub.featured_book.goodreads_url }}" target="_blank" rel="noopener">Goodreads ↗</a>
+        <a class="btn btn--secondary" href="{{ pub.featured_book.launch_post_url }}">Read Book Launch Essay →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Peer-Reviewed Chapters & Academic Papers -->
+<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light); margin-bottom: 4rem;" aria-labelledby="research-papers-heading">
+  <div class="eyebrow">Peer-Reviewed Chapters &amp; Proceedings</div>
+  <h2 id="research-papers-heading">Academic &amp; Open-Source Publications</h2>
 
-### [**Sculpting Data for ML: The first act of Machine Learning**](https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/)
-* The [book]((https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/)) introduces the readers to the first act of Machine Learning, *Dataset Curation*. This step-by-step guide accompanies code examples in Python from the extraction of real-world datasets and practical tips to identify valuable information on the web. In addition, it also dives deep into how data fits into the Machine Learning ecosystem and highlights the impact of data-centric approaches on ML system’s performance.
-* To date, delivered 25+ talks across the US and beyond to champion the importance of data in Machine Learning under the [\#DataForML](https://twitter.com/DataForML/) campaign.
-* Endorsed by leading ML experts in Academia and Industry; Forewords by: [Julian McAuley](https://cseweb.ucsd.edu/~jmcauley/), [Laurence Moroney](https://laurencemoroney.com/), and [Mengting Wan](https://mengtingwan.github.io/).
-* It is available both as a paperback and Kindle eBook, grab a copy [here](https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/)!
+  <div class="ledger" style="margin-top: 1.5rem;">
+    {% for r in pub.research_publications %}
+    <div class="ledger-row">
+      <div class="ledger-row__date">{{ r.year }} · {{ r.type }}</div>
+      <div>
+        <div class="ledger-row__title"><a href="{{ r.doi_url }}" target="_blank" rel="noopener">{{ r.title }} ↗</a></div>
+        <p style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent); margin-bottom: 0.45rem;">{{ r.venue }}</p>
+        <p class="ledger-row__sub">{{ r.summary }}</p>
+      </div>
+      <div class="ledger-row__aside"><a href="{{ r.doi_url }}" target="_blank" rel="noopener">Publisher Link ↗</a></div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 
-
-### [**Pragmatic Insights: Live UIs for Agent-based Modelling in Pharo**](https://dl.acm.org/doi/10.1145/3139903.3139915)
-* This [ACM publication](https://dl.acm.org/doi/10.1145/3139903.3139915) focuses on the spatial interface of agent-based simulation platforms to visualize the evolution of the system through time. It analyses state-of-the-art, scrutinizing in terms of programming flexibility, extensibility, portability, scalability, and interaction. Subsequently, it highlights the efforts in building an open-source extension for CORMAS' spatial interface in Pharo.
-* Presented at the 12th edition of the **International Workshop on Smalltalk Technologies** held in Maribor, Slovenia.
-
-
-### [**Pharo by Example 5.0**](https://books.pharo.org/updated-pharo-by-example/)
-* As an _Open Source Developer_, contributed to this [book](https://books.pharo.org/updated-pharo-by-example/) published by [Square Bracket Associates](https://github.com/SquareBracketAssociates) that introduces the Pharo programming environment, the language and the associated tools. It also puts forward common practices of the Pharo environment with a focus on object-oriented design.
+<!-- Technical Manuscript Reviewing -->
+<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light);" aria-labelledby="reviewing-heading">
+  <div class="eyebrow">Editorial &amp; Peer Review</div>
+  <h2 id="reviewing-heading">Technical Book Reviewing</h2>
+  <div class="ledger">
+    {% for ed in pub.editorial_reviewing %}
+    <div class="ledger-row">
+      <div class="ledger-row__date"><a href="{{ ed.url }}" target="_blank" rel="noopener">{{ ed.org }} ↗</a></div>
+      <div>
+        <p class="ledger-row__sub" style="color: var(--ink-primary);">{{ ed.role }}</p>
+      </div>
+      <div class="ledger-row__aside">Reviewer</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

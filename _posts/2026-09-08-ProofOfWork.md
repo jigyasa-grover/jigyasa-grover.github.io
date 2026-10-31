@@ -512,7 +512,7 @@ Output MUST cite precise temporal intervals ([MM:SS]).
 
 ## 6. Antigravity Agent Skill Integration
 
-To bring this pipeline into active developer and educator workflows, Proof of Work is packaged as a native **Google Antigravity Agent Skill** under [`.agents/skills/proof_of_work/`](./.agents/skills/proof_of_work/):
+To bring this pipeline into active developer and educator workflows, Proof of Work is packaged as a native **Google Antigravity Agent Skill** under [`.agents/skills/proof_of_work/`](https://github.com/jigyasa-grover/proof-of-work/tree/main/.agents/skills/proof_of_work):
 
 ```
 .agents/skills/proof_of_work/

@@ -1,0 +1,62 @@
+{% assign id = site.data.identity %}
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <div class="site-footer__title">Jigyasa Grover</div>
+        <p class="site-footer__bio">
+          Machine Learning Engineer at Uber · Google Developer Advisory Board · 13× AI &amp; Open Source Award Winner · LinkedIn Learning Instructor · Co-author of <em>Sculpting Data for ML</em>.
+        </p>
+        <div class="btn-group">
+          <a class="btn btn--primary" href="/work-with-me/#contact">Collaborate &amp; Inquire</a>
+          <a class="btn btn--secondary" href="{{ id.booking.intro.url }}" target="_blank" rel="noopener">Book 1:1 on Intro ↗</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="site-footer__heading">Explore</div>
+        <ul class="footer-list">
+          <li><a href="/about">About &amp; Biography</a></li>
+          <li><a href="/experience/">Career &amp; Experience</a></li>
+          <li><a href="/projects/">Selected Engineering Work</a></li>
+          <li><a href="/blog/">Technical Writing &amp; Blog</a></li>
+          <li><a href="/publications/">Books &amp; Publications</a></li>
+          <li><a href="/highlights/">Awards &amp; Highlights</a></li>
+          <li><a href="/press/">Press &amp; Media Kit</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="site-footer__heading">Work With Me</div>
+        <ul class="footer-list">
+          <li><a href="/advisory/">AI Startup &amp; Product Advisory</a></li>
+          <li><a href="/speaking/">Keynotes &amp; Conference Speaking</a></li>
+          <li><a href="/teaching/">Corporate AI Workshops &amp; Courses</a></li>
+          <li><a href="/partnerships/">Technical Content Partnerships</a></li>
+          <li><a href="{{ id.booking.passionfroot.url }}" target="_blank" rel="noopener">Passionfroot Storefront ↗</a></li>
+          <li><a href="{{ id.booking.naano.url }}" target="_blank" rel="noopener">Naano Creator Profile ↗</a></li>
+          <li><a href="{{ id.booking.intro.url }}" target="_blank" rel="noopener">Intro 1:1 Consultations ↗</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="site-footer__heading">Verified Profiles</div>
+        <ul class="footer-list">
+          {% for s in id.socials %}
+          <li><a href="{{ s.url }}" target="_blank" rel="noopener me">{{ s.name }} ↗</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>© {{ 'now' | date: "%Y" }} Jigyasa Grover · San Francisco Bay Area, CA</span>
+      <span>
+        <a href="/feed.xml">RSS Feed</a> ·
+        <a href="/sitemap.xml">Sitemap</a> ·
+        <a href="/llms.txt">llms.txt</a> ·
+        <a href="/llms-full.txt">llms-full.txt</a>
+      </span>
+    </div>
+  </div>
+</footer>

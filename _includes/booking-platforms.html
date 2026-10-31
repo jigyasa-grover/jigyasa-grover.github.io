@@ -1,0 +1,29 @@
+{% assign b = site.data.identity.booking %}
+<div class="platform-grid">
+  <div class="platform-box">
+    <div>
+      <div class="platform-box__badge">{{ b.intro.badge }}</div>
+      <h3 class="platform-box__name">{{ b.intro.name }}</h3>
+      <p class="platform-box__desc">{{ b.intro.use_case }}</p>
+    </div>
+    <a id="booking-link-intro" class="btn btn--secondary" href="{{ b.intro.url }}" target="_blank" rel="noopener">{{ b.intro.cta }} ↗</a>
+  </div>
+
+  <div class="platform-box">
+    <div>
+      <div class="platform-box__badge">{{ b.passionfroot.badge }}</div>
+      <h3 class="platform-box__name">{{ b.passionfroot.name }}</h3>
+      <p class="platform-box__desc">{{ b.passionfroot.use_case }}</p>
+    </div>
+    <a id="booking-link-passionfroot" class="btn btn--secondary" href="{{ b.passionfroot.url }}" target="_blank" rel="noopener">{{ b.passionfroot.cta }} ↗</a>
+  </div>
+
+  <div class="platform-box">
+    <div>
+      <div class="platform-box__badge">{{ b.naano.badge }}</div>
+      <h3 class="platform-box__name">{{ b.naano.name }}</h3>
+      <p class="platform-box__desc">{{ b.naano.use_case }}</p>
+    </div>
+    <a id="booking-link-naano" class="btn btn--secondary" href="{{ b.naano.url }}" target="_blank" rel="noopener">{{ b.naano.cta }} ↗</a>
+  </div>
+</div>

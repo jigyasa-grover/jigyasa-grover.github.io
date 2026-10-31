@@ -1,0 +1,64 @@
+// Rouge Code Blocks & Editorial Syntax Highlighting
+
+.highlighter-rouge,
+figure.highlight,
+div.highlight {
+  position: relative;
+  margin: 1.75rem 0;
+}
+
+.post-prose pre,
+div.highlight pre,
+figure.highlight pre {
+  margin: 0;
+  padding: 1.2rem 1.35rem;
+  background-color: var(--bg-code);
+  color: #EAE6DF;
+  border: 1px solid #2C2A26;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  line-height: 1.62;
+  tab-size: 2;
+}
+
+.post-prose pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+.copy-code-btn {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  appearance: none;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #D7D2C8;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.24rem 0.55rem;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #FFFFFF;
+  }
+}
+
+.highlight {
+  .c, .cm, .c1, .cs { color: #8C867B; font-style: italic; }
+  .k, .kc, .kd, .kn, .kp, .kr, .kt { color: #F09383; font-weight: 500; }
+  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1 { color: #B8D6A3; }
+  .na, .nb, .nc, .nf, .nn { color: #8FC7D9; }
+  .mi, .mf, .mh, .mo, .il { color: #E7C284; }
+  .o, .ow { color: #D8CFC2; }
+  .gd { color: #F08A8A; }
+  .gi { color: #A6D89F; }
+}

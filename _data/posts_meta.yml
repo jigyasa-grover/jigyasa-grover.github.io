@@ -1,0 +1,153 @@
+"/ProofOfWork/":
+  category: "Agentic AI & Evaluation"
+  tags: ["Agentic AI", "Gemini", "Multimodal Video", "AI Evaluation"]
+  featured: true
+  summary: "How Proof of Work uses Gemini's agentic video understanding to evaluate software engineering process, debugging discipline, and hypothesis iteration from continuous screen recordings."
+  repo_url: "https://github.com/jigyasa-grover/proof-of-work"
+  live_url: "https://jigyasa-grover.github.io/proof-of-work/"
+
+"/StartupOnAShoestring/":
+  category: "Agentic Infrastructure"
+  tags: ["Agentic AI", "Token Economics", "Cost Guardrails", "FastAPI"]
+  featured: true
+  summary: "Preventing quadratic token inflation and runaway self-correction loops in autonomous agents using Google Antigravity SDK lifecycle hooks and FastAPI SSE telemetry."
+  repo_url: "https://github.com/jigyasa-grover/startup-on-a-shoestring"
+
+"/KineticFinetuningOnCloudTPU/":
+  category: "Fine-Tuning & Compute"
+  tags: ["Gemma 3", "Cloud TPU", "Supervised Fine-Tuning", "Keras Kinetic"]
+  featured: true
+  summary: "Supervised fine-tuning (SFT) of Google's Gemma 3 1B on a Cloud TPU v5 Lite using a single Python decorator—zero Docker or Kubernetes YAML required."
+  repo_url: "https://github.com/jigyasa-grover/kinetic-finetuning-on-cloud-tpu"
+  live_url: "https://jigyasa-grover.github.io/kinetic-finetuning-on-cloud-tpu/"
+
+"/TrustAtTopSpeed/":
+  category: "Edge & Real-Time AI"
+  tags: ["Gemini Nano", "Edge AI", "Cloud Run", "Real-Time Telemetry"]
+  featured: true
+  summary: "Building and field-testing a split-brain AI Racing Coach at Thunderhill Raceway Park combining sub-15ms on-device Gemini Nano cues, physics safety gates, and Cloud Run telemetry reasoning."
+
+"/ColabVSCodeExtension/":
+  category: "Developer Tooling"
+  tags: ["Google Colab", "VS Code", "Cloud GPUs & TPUs", "Gemini Code Assist"]
+  featured: false
+  summary: "Running modular, version-controlled Python ML workloads on cloud GPUs and TPUs directly inside VS Code using the Google Colab extension and Gemini Code Assist."
+
+"/CriticsCutMultilingualContextADKAgent/":
+  category: "Agentic AI & Evaluation"
+  tags: ["Google ADK", "Multi-Agent", "Safety Guardrails", "Gemini 2.0"]
+  featured: true
+  summary: "Architectural deep dive into Critic's Cut: building a context-aware, multilingual multi-agent system with Google's Agent Development Kit (ADK), tool integration, and PII safety callbacks."
+  repo_url: "https://github.com/jigyasa-grover/critics-cut"
+
+"/SmartSuitcasePackingUsingGeminiImagenOpenWeather/":
+  category: "Multimodal AI"
+  tags: ["Gemini 2.0", "Imagen 3", "Tool Calling", "Multimodal"]
+  featured: false
+  summary: "Combining Gemini 2.0 structured reasoning, Imagen 3 visual generation, and real-time OpenWeather API data for weather-aware travel planning."
+  repo_url: "https://github.com/jigyasa-grover/smart-suitcase-packing"
+
+"/SmarterThanA5thGrader-LLMComparatorOnGoogleVertexAI/":
+  category: "Agentic AI & Evaluation"
+  tags: ["LLM Evaluation", "Vertex AI", "LLM Comparator", "Responsible AI"]
+  featured: true
+  summary: "Quantitative side-by-side LLM evaluation on Google Vertex AI using PAIR's open-source LLM Comparator across accuracy, clarity, safety, and communication rubrics."
+  repo_url: "https://github.com/jigyasa-grover/Smarter-than-a-5th-Grader-Using-LLM-Comparator-on-Google-Vertex-AI"
+
+"/BookBuddyInteractiveStorytellingUsingAGemmaBasedRAG/":
+  category: "RAG & Foundation Models"
+  tags: ["Gemma", "RAG", "Vector Search", "Open Models"]
+  featured: false
+  summary: "Designing a Retrieval-Augmented Generation (RAG) pipeline with Google's open-weights Gemma model for grounded interactive narratives and educational Q&A."
+  repo_url: "https://github.com/jigyasa-grover/Book-Buddy-Interactive-Storytelling-using-a-Gemma-based-RAG"
+
+"/GoodbyeToNewsCopyWriterBlock-SupervisedFineTunedGeminiPro/":
+  category: "Fine-Tuning & Compute"
+  tags: ["Gemini Pro", "Supervised Fine-Tuning", "Vertex AI", "NLP"]
+  featured: false
+  summary: "Step-by-step supervised fine-tuning of Gemini Pro for structured domain adaptation and editorial headline generation."
+
+"/BifocalPerspectiveOfCAS/":
+  category: "Systems & Simulation"
+  tags: ["Complex Adaptive Systems", "Multi-Agent Systems", "Simulation"]
+  featured: false
+  summary: "Examining Complex Adaptive Systems (CAS) through emergent multi-agent interactions, feedback loops, and computational modeling."
+
+"/HyperPersonalizedAdsGenAI/":
+  category: "Personalization & Ranking"
+  tags: ["Personalization", "Ads ML", "Gemini Pro Vision", "Multimodal"]
+  featured: false
+  summary: "Bridging production ad-ranking personalization with multimodal generative synthesis using Gemini Pro Vision."
+  repo_url: "https://github.com/jigyasa-grover/Hyper-Personalized-Ad-Campaigns-using-Generative-AI-Quick-Demo-using-Gemini-Pro-Vision"
+
+"/ExploringDeepfakes/":
+  category: "Responsible AI & Privacy"
+  tags: ["Deepfakes", "Synthetic Media", "AI Safety", "Detection"]
+  featured: false
+  summary: "Technical breakdown of generative synthetic media, deepfake synthesis architectures, detection limits, and organizational provenance defenses."
+
+"/Top3MLPapers/":
+  category: "ML Research & Foundations"
+  tags: ["ML Papers", "Recommender Systems", "Deep Learning"]
+  featured: false
+  summary: "Practitioner notes on foundational machine learning papers shaping modern representation learning and production recommendation systems."
+
+"/DataCleaning-Cleanlab/":
+  category: "Data-Centric AI"
+  tags: ["Data-Centric AI", "Confident Learning", "Cleanlab", "Label Noise"]
+  featured: false
+  summary: "Automatically detecting and fixing mislabeled training examples in real-world datasets using confident learning and Cleanlab."
+
+"/HumanDataAnnotators/":
+  category: "Data-Centric AI"
+  tags: ["Data Curation", "Human-in-the-Loop", "Annotation Quality"]
+  featured: false
+  summary: "Designing fair, high-signal human annotation rubrics, inter-annotator agreement workflows, and quality feedback loops for ML datasets."
+
+"/DifferentialPrivacy/":
+  category: "Responsible AI & Privacy"
+  tags: ["Differential Privacy", "Privacy-Preserving ML", "Security"]
+  featured: false
+  summary: "Mathematical intuition and engineering trade-offs behind epsilon-differential privacy, calibrated noise injection, and privacy budgets in ML."
+
+"/PrivacyPreservingML1/":
+  category: "Responsible AI & Privacy"
+  tags: ["Privacy-Preserving ML", "Federated Learning", "Inference Attacks"]
+  featured: false
+  summary: "Part 1 of a technical series examining membership, property, and model-inversion attacks alongside modern privacy-preserving ML defenses."
+
+"/DataLakes/":
+  category: "Data-Centric AI"
+  tags: ["Data Architecture", "Data Lakes", "ML Pipelines"]
+  featured: false
+  summary: "How data lakes, schema governance, and feature lineage underpin reliable downstream machine learning pipelines."
+
+"/Data-Quality/":
+  category: "Data-Centric AI"
+  tags: ["Data Quality", "Sculpting Data for ML", "Production ML"]
+  featured: false
+  summary: "Quantifying completeness, consistency, timeliness, and validity across training and serving data pipelines."
+
+"/Data-Centric-ML/":
+  category: "Data-Centric AI"
+  tags: ["Data-Centric AI", "Dataset Engineering", "Sculpting Data for ML"]
+  featured: false
+  summary: "Why systematic dataset engineering outperforms endless hyperparameter tuning when taking ML models from benchmark notebooks to production."
+
+"/Data-Cascades/":
+  category: "Data-Centric AI"
+  tags: ["Data Cascades", "Production ML", "Technical Debt"]
+  featured: false
+  summary: "Understanding compounding upstream data issues—data cascades—in high-stakes machine learning deployments and how to prevent them early."
+
+"/Polishing-Your-Dataset/":
+  category: "Data-Centric AI"
+  tags: ["Feature Engineering", "Data Cleaning", "Sculpting Data for ML"]
+  featured: false
+  summary: "Practical preprocessing, outlier handling, and signal normalization techniques from Sculpting Data for ML."
+
+"/BOOK-LAUNCH-Sculpting-Data-for-ML/":
+  category: "Data-Centric AI"
+  tags: ["Book", "Sculpting Data for ML", "Dataset Curation"]
+  featured: false
+  summary: "Introducing Sculpting Data for ML: The First Act of Machine Learning—why we wrote a hands-on guide to dataset curation and data-centric engineering."

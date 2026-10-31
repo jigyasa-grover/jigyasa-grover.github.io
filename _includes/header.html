@@ -1,0 +1,50 @@
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header" role="banner">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Jigyasa Grover — Home">
+      <span class="brand__name">Jigyasa Grover</span>
+      <span class="brand__tag">Production AI · Agentic Systems · Advisory</span>
+    </a>
+
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a class="site-nav__link" href="/about" {% if page.url == "/about" or page.url == "/experience/" %}aria-current="page"{% endif %}>About</a>
+      <a class="site-nav__link" href="/projects/" {% if page.url == "/projects/" %}aria-current="page"{% endif %}>Work</a>
+      <a class="site-nav__link" href="/speaking/" {% if page.url == "/speaking/" %}aria-current="page"{% endif %}>Speaking</a>
+      <a class="site-nav__link" href="/teaching/" {% if page.url == "/teaching/" %}aria-current="page"{% endif %}>Teaching</a>
+      <a class="site-nav__link" href="/blog/" {% if page.url == "/blog/" or page.layout == "post" %}aria-current="page"{% endif %}>Writing</a>
+      <a class="site-nav__link" href="/publications/" {% if page.url == "/publications/" %}aria-current="page"{% endif %}>Publications</a>
+      <a class="site-nav__link" href="/press/" {% if page.url == "/press/" or page.url == "/highlights/" %}aria-current="page"{% endif %}>Press</a>
+      <a class="site-nav__link" href="/advisory/" {% if page.url == "/advisory/" %}aria-current="page"{% endif %}>Advisory</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark or light reading theme" title="Toggle reading theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+
+      <a id="header-collaborate-cta" class="btn btn--primary btn--sm" href="/work-with-me/">Work With Me</a>
+
+      <button id="site-nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

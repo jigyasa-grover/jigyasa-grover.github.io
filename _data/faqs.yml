@@ -1,0 +1,37 @@
+about:
+  - q: "Who is Jigyasa Grover?"
+    a: "Jigyasa Grover is a San Francisco–based Machine Learning Engineer at Uber (Tech Lead for Rider Personalization & Ranking), a 13-time AI and Open Source award winner, a member of the Google Developer Advisory Board (gDAB), a Google Developer Expert in AI/ML, a LinkedIn Learning instructor with 40,380+ learners, and the co-author of Sculpting Data for ML."
+  - q: "What is Jigyasa Grover's engineering and research background?"
+    a: "She leads large-scale multi-task ranking and user representation models at Uber across 500+ cities. Previously, she served as Lead Engineer of AI & Research at Bordo AI, Senior Data Scientist at Faire (0→1 feature store and ads bidding), Senior Machine Learning Engineer at Twitter/X (billion-request/day sub-50ms ads ranking), and Software Engineering Intern at Meta, after earning her M.S. in Computer Science (AI specialization) at UC San Diego."
+  - q: "What books and courses has Jigyasa Grover authored?"
+    a: "She co-authored Sculpting Data for ML: The First Act of Machine Learning (ISBN 979-8585463570, cited 95+ times), authored peer-reviewed chapters with Springer on privacy-preserving ML and deepfake/misinformation detection plus an ACM paper on agent-based modeling, and teaches four AI engineering courses on LinkedIn Learning—including Hands-On AI: Building Agents with Google ADK and Evaluating AI Agents with Google ADK."
+  - q: "How can founders, conference organizers, or brands collaborate with Jigyasa Grover?"
+    a: "You can submit an inquiry directly on the Work With Me page, book a 1:1 technical advisory consultation via Intro (intro.co/JigyasaGrover), or initiate sponsored developer content and brand partnerships via Passionfroot (passionfroot.me/jigyasa-grover) or Naano (naano.com/creators/jigyasa-grover)."
+
+advisory:
+  - q: "Who can advise an AI startup on production ML, ranking, or agentic AI architecture?"
+    a: "Jigyasa Grover advises AI founders, venture teams, and engineering leaders on production ML ranking, feature stores, multi-agent orchestration, LLM evaluation harnesses, and inference cost guardrails—drawing on Tech Lead experience at Uber, 0→1 AI architecture at Bordo AI and Faire, billion-scale serving at Twitter/X, and advisory work across 30+ organizations and the Google Developer Advisory Board."
+  - q: "What formats are available for technical advisory?"
+    a: "Founders and engineering leaders can book focused 1:1 architecture or strategy sessions on Intro, or reach out via the Work With Me form for recurring startup advisory retainers, product/DevEx design partner feedback, or technical due diligence."
+  - q: "Can Jigyasa help teams decide whether they actually need autonomous agents?"
+    a: "Yes. One of her core advisory specialties—and her signature 2026 conference talk—is auditing proposed LLM architectures to separate workflows best served by deterministic state machines or single-step retrieval from genuine multi-agent orchestration, preventing unnecessary latency and runaway token spend."
+
+speaking:
+  - q: "What topics does Jigyasa Grover speak on at conferences and executive summits?"
+    a: "Her primary speaking tracks cover Agentic AI architecture ('When NOT to Build an Agent'), Designing APIs & Cost Guardrails for Autonomous Agents, Quantitative LLM Evaluation & AI Security ('Guarding the LLM Galaxy'), Split-Brain Edge + Cloud Real-Time AI, and Data-Centric ML & Large-Scale Personalization."
+  - q: "What conferences has Jigyasa Grover spoken at?"
+    a: "She has delivered 200+ keynotes, talks, panels, and workshops across 20+ countries—including being featured on the Google I/O 2024 main keynote stage (introduced by Sundar Pichai), Google Cloud Next ('24, '25, '26), Linux Foundation Open Source Summit (North America & Europe), AI_dev Europe, Codemotion Milan, AGNTCon + MCPCon Europe, API Days (New York & Paris), PyCon US, LeadDev Live, MLconf, and Grace Hopper Celebration."
+  - q: "Where is Jigyasa based for travel and event logistics?"
+    a: "She is based in the San Francisco Bay Area (SFO / SJC) and speaks at in-person international conferences, executive summits, corporate offsites, and virtual global events."
+
+teaching:
+  - q: "Who offers hands-on corporate training on Agentic AI, Google ADK, and LLM evaluation?"
+    a: "Jigyasa Grover designs and facilitates hands-on corporate AI workshops and technical bootcamps on building and evaluating production AI agents (Google ADK, MCP, LangGraph), LLM-as-a-Judge benchmarking, responsible AI, and inference cost guardrails—backed by 40,380+ learners on LinkedIn Learning and enterprise programs delivered for organizations including FedEx and CommonSpirit Health."
+  - q: "Are workshops customizable to our engineering stack?"
+    a: "Yes. Workshops can be delivered as 90-minute executive briefings, half-day architectural intensives, or full-day code-along labs tailored to Python, Vertex AI / Gemini, multi-provider LLM stacks, and internal evaluation pipelines."
+
+partnerships:
+  - q: "What kind of technical content partnerships does Jigyasa Grover take on?"
+    a: "She collaborates selectively with developer platforms, cloud/AI infrastructure teams, and DevTools companies on authentic, code-backed technical deep dives, reference apps, architectural teardowns, and LinkedIn/X educational campaigns."
+  - q: "Who is in Jigyasa's technical audience?"
+    a: "Across LinkedIn (14K+ followers, 325K+ annual impressions), GitHub, X, and her technical blog, 82% of her professional audience consists of senior technical practitioners and decision-makers—including Staff/Principal ML & Software Engineers, Engineering Managers, Directors, VPs, and AI Founders."

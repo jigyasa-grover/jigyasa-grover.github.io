@@ -1,102 +1,38 @@
 ---
 layout: page
-title: Highlights
+title: "Highlights & Recognition Gallery"
+heading: "Visual archive of keynotes, broadcasts, awards, and community milestones."
+eyebrow: "Visual Highlights"
+lead: "Moments from Google I/O, live television commentary, open-source honors, and industry awards."
+hero_cta_label: "Full Press & Awards Ledger →"
+hero_cta_url: "/press/"
+seo_title: "Highlights & Awards Gallery — Jigyasa Grover"
+description: "Visual highlights from Jigyasa Grover's career: Google I/O 2024 Keynote, VentureBeat Women in AI Rising Star, Red Hat Women in Open Source Award, and NTD Live TV."
 permalink: /highlights/
 ---
 
-<section id="portfolio">
-  
-  <div class="project">
-    <img class="project__image" src="/images/google_io_feature.jpg" />
-    <div class="grid__overlay">
-      <button class="viewbutton">
-        <a href="https://www.youtube.com/live/XEzRZ35urlk?t=516" target="_blank">Featured in Google I/O 2024 Keynote</a>
-      </button>
+<div class="gallery-grid" style="margin-bottom: 3.5rem;">
+  {% for item in site.data.recognition.visual_highlights %}
+  <a class="gallery-card" href="{{ item.url }}" target="_blank" rel="noopener">
+    <img
+      src="{{ item.image }}"
+      width="{{ item.width }}"
+      height="{{ item.height }}"
+      loading="lazy"
+      alt="{{ item.title }} — {{ item.subtitle }}"
+    />
+    <div class="gallery-card__body">
+      <h2 class="gallery-card__title">{{ item.title }}</h2>
+      <p class="gallery-card__sub">{{ item.subtitle }} ↗</p>
     </div>
-  </div>
+  </a>
+  {% endfor %}
+</div>
 
-  <div class="project">
-    <img class="project__image" src="/images/engatica_top_50_ml_experts.jpeg" />
-    <div class="grid__overlay">
-      <button class="viewbutton">
-        <a href="https://www.engatica.com/blog/top-50-machine-learning-and-data-science-experts-to-follow-for-2023?contentId=634551c86f56fd1389e92c50" target="_blank">Top 50 Machine Learning and Data Science experts to follow for 2023</a>
-      </button>
-    </div>
+<div class="contact-panel" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.25rem;">
+  <div>
+    <h2 style="font-size: 1.35rem; margin-bottom: 0.25rem;">Looking for the full 13× awards list, press links, or speaker bios?</h2>
+    <p style="margin-bottom: 0;">Visit the Press &amp; Media Kit for complete citations and downloadable headshots.</p>
   </div>
-  
-  
-  <div class="project">
-    <img class="project__image" src="/images/ntd_live_tv_2022.jpg" />
-    <div class="grid__overlay">
-      <button class="viewbutton">
-        <a href="https://www.ntd.com/meta-introduces-ai-text-to-video-creator_849271.html" target="_blank">Live TV @ NTD - Meta Introduces AI Text-to-Video Creator</a>
-      </button>
-    </div>
-  </div>
-  
-  
-  <div class="project">
-    <img class="project__image" src="/images/venture_beat_rising_star_award.png" />
-    <div class="grid__overlay">
-      <button class="viewbutton">
-        <a href="https://venturebeat.com/2022/07/19/transform-2020-women-in-ai-and-ai-innovation-awards-the-winners-are/" target="_blank">VentureBeat Women in AI - Rising Star Award Winner</a>
-      </button>
-    </div>
-  </div>
-  
-    
-   <div class="project">
-    <img class="project__image" src="/images/women_in_ai_award_winner_v2.png" />
-    <div class="grid__overlay">
-      <button class="viewbutton">
-        <a href="https://www.womeninai.co/post/women-in-ai-awards-honor-the-top-female-artificial-intelligence-innovators-in-north-america" target="_blank">Outstanding in AI - Young Role Model of the Year Award</a>
-      </button>
-    </div>
-  </div>
-  
-  <div class="project">
-    <img class="project__image" src="/images/applied_ai_podcast.jpeg" />
-    <div class="grid__overlay">
-      <button class="viewbutton">
-        <a href="https://open.spotify.com/episode/6IwWp2TmXZI0MVLGHW4Qtl/" target="_blank">Conversations on Applied AI - Stories from Experts in Artificial Intelligence</a>
-      </button>
-    </div>
-  </div>
-  
-  <div class="project">
-    <img class="project__image" src="/images/moxie_award_winner.jpeg"/>
-    <div class="grid__overlay">
-      <button class="viewbutton">
-        <a href="https://builtin.com/women-tech/moxie-award-winners" target="_blank">Built-In Moxie Women In Tech Award Winner</a>
-      </button>
-    </div>
-  </div>
- 
-  <div class="project">
-    <img class="project__image" src="/images/devprodeng_showdown_winner.png"/>
-    <div class="grid__overlay">
-      <button class="viewbutton">
-        <a href="https://www.youtube.com/watch?v=O5L2e1UrQtI" target="_blank">Gameshow Winner - DevProdEng Showdown S1E5</a>
-      </button>
-    </div>
-  </div>
-  
-  <div class="project">
-    <img class="project__image" src="/images/yuuvis_hackathon_winner.jpg"/>
-    <div class="grid__overlay">
-      <button class="viewbutton">
-        <a href="https://yuuvis.com/wp-content/uploads/2020/02/verbalexa-innovation-case-study.pdf" target="_blank">Winner - Yuuvis® Hackathon San Francisco</a>
-      </button>
-    </div>
-  </div>
-  
-  <div class="project">
-    <img class="project__image" src="/images/red_hat_women_in_open_source_award_winner.png"/>
-    <div class="grid__overlay">
-      <button class="viewbutton">
-        <a href="https://www.redhat.com/en/about/press-releases/red-hat-announces-2017-women-open-source-award-winners" target="_blank">International Women in Open Source Academic Award Winner</a>
-      </button>
-    </div>
-  </div>
-  
-</section>
+  <a class="btn btn--primary" href="/press/">Open Press &amp; Media Kit →</a>
+</div>

@@ -1,0 +1,13 @@
+{% assign faq_items = site.data.faqs[include.key] %}
+{% if faq_items %}
+<div class="faq-list">
+  {% for item in faq_items %}
+  <details class="faq-item" {% if forloop.first %}open{% endif %}>
+    <summary>{{ item.q }}</summary>
+    <div class="faq-item__answer">
+      <p>{{ item.a }}</p>
+    </div>
+  </details>
+  {% endfor %}
+</div>
+{% endif %}

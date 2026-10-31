@@ -1,0 +1,97 @@
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("jg-theme");
+      if (saved === "dark" || saved === "light") {
+        document.documentElement.setAttribute("data-theme", saved);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+{% assign post_meta = site.data.posts_meta[page.url] %}
+{% if page.seo_title %}
+  {% assign meta_title = page.seo_title %}
+{% elsif page.url == "/" %}
+  {% assign meta_title = site.title %}
+{% elsif page.title %}
+  {% assign meta_title = page.title | append: " — Jigyasa Grover" %}
+{% else %}
+  {% assign meta_title = site.title %}
+{% endif %}
+
+{% if page.description %}
+  {% assign meta_desc = page.description %}
+{% elsif post_meta and post_meta.summary %}
+  {% assign meta_desc = post_meta.summary %}
+{% elsif page.excerpt %}
+  {% assign meta_desc = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+{% else %}
+  {% assign meta_desc = site.description %}
+{% endif %}
+
+{% assign clean_path = page.url | replace: "index.html", "" %}
+{% assign canonical_url = site.url | append: clean_path %}
+
+{% if page.og_image %}
+  {% assign social_image = site.url | append: page.og_image %}
+{% else %}
+  {% assign social_image = site.url | append: site.og_image %}
+{% endif %}
+
+<title>{{ meta_title | escape }}</title>
+<meta name="description" content="{{ meta_desc | escape }}" />
+<meta name="author" content="Jigyasa Grover" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+<link rel="canonical" href="{{ canonical_url }}" />
+<link rel="alternate" type="application/rss+xml" title="Jigyasa Grover — Technical Writing RSS" href="{{ site.url }}/feed.xml" />
+<link rel="alternate" type="text/plain" title="Jigyasa Grover — LLM Context (llms.txt)" href="{{ site.url }}/llms.txt" />
+<link rel="icon" type="image/png" href="/images/icon.png" />
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Jigyasa Grover" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="{{ meta_title | escape }}" />
+<meta property="og:description" content="{{ meta_desc | escape }}" />
+<meta property="og:url" content="{{ canonical_url }}" />
+<meta property="og:image" content="{{ social_image }}" />
+<meta property="og:image:alt" content="Jigyasa Grover — Machine Learning Engineer, Agentic AI Educator, Author & Keynote Speaker" />
+{% if page.layout == "post" %}
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+<meta property="article:author" content="https://jigyasa-grover.github.io/#person" />
+{% if post_meta and post_meta.tags %}
+  {% for tag in post_meta.tags %}
+<meta property="article:tag" content="{{ tag | escape }}" />
+  {% endfor %}
+{% endif %}
+{% elsif page.url == "/about" %}
+<meta property="og:type" content="profile" />
+<meta property="profile:first_name" content="Jigyasa" />
+<meta property="profile:last_name" content="Grover" />
+{% else %}
+<meta property="og:type" content="website" />
+{% endif %}
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@jigyasa_grover" />
+<meta name="twitter:creator" content="@jigyasa_grover" />
+<meta name="twitter:title" content="{{ meta_title | escape }}" />
+<meta name="twitter:description" content="{{ meta_desc | escape }}" />
+<meta name="twitter:image" content="{{ social_image }}" />
+
+<!-- Editorial Typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" href="/style.css" />
+
+{% include schema-graph.html %}
+{% include analytics.html %}

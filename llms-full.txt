@@ -1,0 +1,87 @@
+---
+layout: null
+permalink: /llms-full.txt
+---
+# Jigyasa Grover — Complete Authoritative Entity & Professional Profile
+
+Canonical Website: https://jigyasa-grover.github.io/
+Entity Identifier: https://jigyasa-grover.github.io/#person
+Location: San Francisco Bay Area, California, USA
+Pronunciation: JIG-yah-suh GROH-ver
+
+## 1. Executive Summary
+
+{{ site.data.identity.medium_bio_150 }}
+
+## 2. Production Engineering & Research Career
+
+{% for job in site.data.identity.career %}### {{ job.role }} — {{ job.org }} ({{ job.period }}, {{ job.location }})
+{{ job.summary }}
+{% for h in job.highlights %}- {{ h }}
+{% endfor %}
+{% endfor %}
+
+## 3. Education
+
+{% for edu in site.data.identity.education %}- **{{ edu.degree }}**, {{ edu.institution }} ({{ edu.period }}) — {{ edu.detail }}
+{% endfor %}
+
+## 4. Ecosystem, Governance & Advisory Roles
+
+{% for e in site.data.identity.ecosystem_roles %}- **{{ e.role }}** ({{ e.org }}): {{ e.detail }}
+{% endfor %}
+
+## 5. Six Professional Collaboration Pillars (Work With Jigyasa Grover)
+
+{% for p in site.data.pillars %}### {{ p.number }}. {{ p.title }} (https://jigyasa-grover.github.io{{ p.cta_url }})
+- **Target Audience:** {{ p.audience }}
+- **Overview:** {{ p.summary }}
+- **Evidence:** {{ p.evidence }}
+{% for d in p.deliverables %}- {{ d }}
+{% endfor %}
+{% endfor %}
+
+### Official Booking & Collaboration Links
+- Direct Inquiry Form: https://jigyasa-grover.github.io/work-with-me/#contact
+- Intro (1:1 Video Consultations): https://intro.co/JigyasaGrover
+- Passionfroot (Brand & Developer Content Partnerships): https://www.passionfroot.me/jigyasa-grover
+- Naano (LinkedIn/X Creator Collaborations): https://naano.com/creators/jigyasa-grover
+
+## 6. Courses & Corporate AI Workshops
+
+- LinkedIn Learning Instructor Profile: https://www.linkedin.com/learning/instructors/jigyasa-grover ({{ site.data.courses.total_learners }} learners, {{ site.data.courses.total_bookmarks }} bookmarks)
+{% for c in site.data.courses.courses %}- **{{ c.title }}** ({{ c.provider }}, {{ c.year }}, {{ c.learners }}): {{ c.summary }} — {{ c.url }}
+{% endfor %}
+
+## 7. Books & Peer-Reviewed Publications
+
+- **Book:** *{{ site.data.publications.featured_book.title }}* ({{ site.data.publications.featured_book.year }}, ISBN {{ site.data.publications.featured_book.isbn }}, {{ site.data.publications.featured_book.citations }}). {{ site.data.publications.featured_book.summary }} URL: {{ site.data.publications.featured_book.amazon_url }}
+{% for r in site.data.publications.research_publications %}- **{{ r.title }}** ({{ r.venue }}, {{ r.year }}): {{ r.summary }} URL: {{ r.doi_url }}
+{% endfor %}
+
+## 8. Selected AI & Open-Source Engineering Projects
+
+{% for proj in site.data.projects %}- **{{ proj.title }}** ({{ proj.year }} · {{ proj.category }}): {{ proj.summary }}{% if proj.post_url %} Write-up: https://jigyasa-grover.github.io{{ proj.post_url }}{% endif %}{% if proj.live_url %} Live Demo: {{ proj.live_url }}{% endif %}{% if proj.repo_url %} Repo: {{ proj.repo_url }}{% endif %}
+{% endfor %}
+
+## 9. Signature Speaking Topics & Global Conferences
+
+Featured Video: {{ site.data.speaking.featured_video.title }} ({{ site.data.speaking.featured_video.url }}) — {{ site.data.speaking.featured_video.caption }}
+
+{% for t in site.data.speaking.signature_talks %}- **{{ t.title }}** ({{ t.format }}): {{ t.abstract }} [Delivered at: {{ t.stages }}]
+{% endfor %}
+
+## 10. 13x Industry & Open Source Awards
+
+{% for a in site.data.recognition.awards %}- {{ a.year }}: **{{ a.title }}** — {{ a.issuer }}
+{% endfor %}
+
+## 11. Selected Media, Broadcast & Podcast Appearances
+
+{% for m in site.data.recognition.media_features %}- {{ m.date }} — **{{ m.outlet }}**: {{ m.title }}{% if m.url %} ({{ m.url }}){% endif %}
+{% endfor %}
+
+## 12. Verified External Profiles (sameAs)
+
+{% for u in site.data.identity.same_as %}- {{ u }}
+{% endfor %}

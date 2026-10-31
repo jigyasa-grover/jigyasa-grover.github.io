@@ -1,0 +1,84 @@
+// Editorial Design System Tokens — Jigyasa Grover
+// Warm Archival Paper + Obsidian Ink + Deep Editorial Carmine
+
+:root {
+  --bg-canvas: #FAF8F5;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F2EFE9;
+  --bg-muted: #EAE5DC;
+  --bg-code: #171715;
+
+  --ink-primary: #141413;
+  --ink-secondary: #373530;
+  --ink-muted: #5F5B53;
+  --ink-subtle: #78736A;
+  --ink-inverse: #FAF8F5;
+
+  --rule-light: #E4DFD5;
+  --rule-strong: #CCC5B8;
+  --rule-ink: #141413;
+
+  --accent: #9A1B38;
+  --accent-hover: #761229;
+  --accent-wash: #F7ECEF;
+  --accent-border: #DFBCC5;
+
+  --verified: #1B4D44;
+  --verified-wash: #EAF2F0;
+
+  --shadow-subtle: 0 1px 2px rgba(20, 20, 19, 0.04), 0 8px 24px rgba(20, 20, 19, 0.04);
+  --shadow-elevated: 0 12px 36px rgba(20, 20, 19, 0.08);
+
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --container-max: 1180px;
+  --measure-reading: 68ch;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme="dark"] {
+  --bg-canvas: #121210;
+  --bg-surface: #1A1917;
+  --bg-subtle: #21201D;
+  --bg-muted: #2A2824;
+  --bg-code: #0D0D0C;
+
+  --ink-primary: #EFECE6;
+  --ink-secondary: #CFCAC0;
+  --ink-muted: #9E988E;
+  --ink-subtle: #857F75;
+  --ink-inverse: #121210;
+
+  --rule-light: #2A2824;
+  --rule-strong: #3D3A34;
+  --rule-ink: #EFECE6;
+
+  --accent: #E26D89;
+  --accent-hover: #F08DA4;
+  --accent-wash: rgba(226, 109, 137, 0.12);
+  --accent-border: rgba(226, 109, 137, 0.32);
+
+  --verified: #6BC2B2;
+  --verified-wash: rgba(107, 194, 178, 0.12);
+
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.24);
+  --shadow-elevated: 0 12px 36px rgba(0, 0, 0, 0.45);
+}
+
+@mixin tablet {
+  @media screen and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 680px) {
+    @content;
+  }
+}

@@ -1,12 +1,34 @@
 ---
 layout: default
 ---
-
-<article class="page">
-
-    <h1>{{ page.title }}</h1>
-
-    <div class="entry">
-        {{ content }}
+{% if page.custom_hero %}
+  {{ content }}
+{% else %}
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <span>{{ page.title }}</span>
+    </nav>
+    <div class="page-hero__grid">
+      <div>
+        {% if page.eyebrow %}<div class="eyebrow">{{ page.eyebrow }}</div>{% endif %}
+        <h1>{{ page.heading | default: page.title }}</h1>
+        {% if page.lead %}<p class="page-hero__lead">{{ page.lead }}</p>{% endif %}
+      </div>
+      {% if page.hero_cta_label and page.hero_cta_url %}
+      <div style="justify-self: end;">
+        <a class="btn btn--primary" href="{{ page.hero_cta_url }}">{{ page.hero_cta_label }}</a>
+      </div>
+      {% endif %}
     </div>
-</article>
+  </div>
+</section>
+
+<div class="section section--no-border">
+  <div class="container">
+    {{ content }}
+  </div>
+</div>
+{% endif %}

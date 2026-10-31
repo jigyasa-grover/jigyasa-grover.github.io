@@ -1,0 +1,149 @@
+- id: "proof-of-work"
+  title: "Proof of Work — Agentic Video Teaching Assistant"
+  year: "2026"
+  category: "Agentic AI & Evaluation"
+  featured: true
+  tagline: "Grading engineering process, debugging maturity, and hypothesis iteration from continuous screen recordings."
+  summary: "An autonomous AI Teaching Assistant powered by Gemini's multimodal video understanding that watches continuous coding practicum recordings to evaluate architectural planning, debugging discipline, and authentic iteration—backed by timestamped visual evidence rather than unit-test pass rates alone."
+  stack:
+    - "Gemini Multimodal Video"
+    - "Agentic Evaluation"
+    - "Timestamped Evidence Rubrics"
+    - "TypeScript / Web"
+  live_url: "https://jigyasa-grover.github.io/proof-of-work/"
+  repo_url: "https://github.com/jigyasa-grover/proof-of-work"
+  post_url: "/ProofOfWork/"
+
+- id: "startup-on-a-shoestring"
+  title: "Startup on a Shoestring — Agent Cost & Token Guardrails"
+  year: "2026"
+  category: "Agentic Infrastructure & FinOps"
+  featured: true
+  tagline: "Zero-overhead lifecycle hooks preventing runaway quadratic token loops in autonomous coding and workflow agents."
+  summary: "Implements per-turn and cumulative budget circuit-breakers using Google Antigravity SDK lifecycle hooks paired with a real-time FastAPI Server-Sent Events (SSE) telemetry dashboard—stopping runaway self-correction loops before they drain API budgets."
+  stack:
+    - "Google Antigravity SDK"
+    - "Python"
+    - "FastAPI SSE"
+    - "Token Guardrails"
+  repo_url: "https://github.com/jigyasa-grover/startup-on-a-shoestring"
+  post_url: "/StartupOnAShoestring/"
+
+- id: "trust-at-top-speed"
+  title: "Trust at Top Speed — Split-Brain Edge/Cloud AI Racing Coach"
+  year: "2025"
+  category: "Edge + Cloud Real-Time AI"
+  featured: true
+  tagline: "Sub-15ms on-device Gemini Nano coaching paired with Cloud Run Gemini 3.0 Flash telemetry analysis on a live racetrack."
+  summary: "Field-tested in the paddock at Thunderhill Raceway Park for Google Track Day: a hybrid edge/cloud architecture combining ~15ms on-device Gemini Nano voice cues, heuristic physics safety gates in high-G corners, and deep lap-by-lap Cloud Run telemetry synthesis."
+  stack:
+    - "Gemini Nano (On-Device)"
+    - "Gemini 3.0 Flash"
+    - "Google Cloud Run"
+    - "Physics Safety Gates"
+  post_url: "/TrustAtTopSpeed/"
+
+- id: "critics-cut"
+  title: "Critic's Cut — Multilingual Safety-Gated ADK Multi-Agent System"
+  year: "2025–2026"
+  category: "Multi-Agent Orchestration"
+  featured: true
+  tagline: "Context-aware multilingual movie intelligence with Google ADK, MCP tools, PII redaction, and automated evaluation gates."
+  summary: "A production-patterned conversational agent built with Google's Agent Development Kit (ADK), Model Context Protocol (MCP), Gemini Flash, Microsoft Presidio PII redaction, and headless trajectory evaluation suites."
+  stack:
+    - "Google ADK"
+    - "MCP"
+    - "Gemini 2.0 Flash"
+    - "Microsoft Presidio"
+  repo_url: "https://github.com/jigyasa-grover/critics-cut"
+  post_url: "/CriticsCutMultilingualContextADKAgent/"
+
+- id: "kinetic-gemma-tpu"
+  title: "Single-Decorator Gemma 3 Fine-Tuning on Cloud TPU v5 Lite"
+  year: "2026"
+  category: "Distributed Fine-Tuning & TPUs"
+  featured: true
+  tagline: "Supervised fine-tuning (SFT) of Gemma 3 1B on Cloud TPU v5 Lite with zero Docker or Kubernetes boilerplate."
+  summary: "Demonstrates rapid domain and tone adaptation of Google's open-weights Gemma 3 1B model on Cloud TPU v5 Lite hardware using the Keras Kinetic `@kinetic.run()` decorator."
+  stack:
+    - "Gemma 3 1B"
+    - "Cloud TPU v5 Lite"
+    - "Keras Kinetic"
+    - "Supervised Fine-Tuning"
+  live_url: "https://jigyasa-grover.github.io/kinetic-finetuning-on-cloud-tpu/"
+  repo_url: "https://github.com/jigyasa-grover/kinetic-finetuning-on-cloud-tpu"
+  post_url: "/KineticFinetuningOnCloudTPU/"
+
+- id: "llm-comparator-vertex"
+  title: "Quantitative LLM Benchmarking with Vertex AI LLM Comparator"
+  year: "2024"
+  category: "LLM Evaluation & Responsible AI"
+  featured: true
+  tagline: "Side-by-side LLM-as-a-Judge evaluation across accuracy, clarity, safety, and tone."
+  summary: "Rigorous comparative evaluation pipeline using Google PAIR's open-source LLM Comparator on Vertex AI to move model selection from vibe-checks to reproducible, multi-rubric quantitative scoring."
+  stack:
+    - "Vertex AI"
+    - "PAIR LLM Comparator"
+    - "LLM-as-a-Judge"
+    - "Python"
+  repo_url: "https://github.com/jigyasa-grover/Smarter-than-a-5th-Grader-Using-LLM-Comparator-on-Google-Vertex-AI"
+  post_url: "/SmarterThanA5thGrader-LLMComparatorOnGoogleVertexAI/"
+
+- id: "book-buddy-gemma-rag"
+  title: "Book Buddy — Grounded Storytelling with Gemma RAG"
+  year: "2024"
+  category: "Retrieval-Augmented Generation"
+  featured: false
+  tagline: "Open-weights Retrieval-Augmented Generation combining Gemma with vector retrieval for grounded interactive narratives."
+  summary: "End-to-end RAG reference architecture pairing open Gemma models with semantic chunking and vector search to synthesize grounded answers and interactive educational stories."
+  stack:
+    - "Google Gemma"
+    - "RAG"
+    - "Vector Embeddings"
+    - "Python"
+  repo_url: "https://github.com/jigyasa-grover/Book-Buddy-Interactive-Storytelling-using-a-Gemma-based-RAG"
+  post_url: "/BookBuddyInteractiveStorytellingUsingAGemmaBasedRAG/"
+
+- id: "smart-suitcase-packing"
+  title: "Smart Suitcase — Multimodal Weather-Aware Trip Planner"
+  year: "2025"
+  category: "Multimodal AI Applications"
+  featured: false
+  tagline: "Combining Gemini 2.0 tool-calling, Imagen 3 visual synthesis, and live OpenWeather forecasts."
+  summary: "Multimodal reasoning workflow integrating real-time meteorological APIs with Gemini 2.0 structured planning and Imagen 3 visual capsule generation."
+  stack:
+    - "Gemini 2.0"
+    - "Imagen 3"
+    - "OpenWeather API"
+    - "Python"
+  repo_url: "https://github.com/jigyasa-grover/smart-suitcase-packing"
+  post_url: "/SmartSuitcasePackingUsingGeminiImagenOpenWeather/"
+
+- id: "hyper-personalized-ads"
+  title: "Hyper-Personalized Ad Synthesis & Copy Fine-Tuning"
+  year: "2024"
+  category: "Personalization & GenAI"
+  featured: false
+  tagline: "Applying production ad-ranking intuition to multimodal ad synthesis and supervised Gemini Pro fine-tuning."
+  summary: "Explores privacy-conscious audience personalization and supervised fine-tuning of Gemini Pro to eliminate cold-start creative bottlenecks in digital advertising."
+  stack:
+    - "Gemini Pro Vision"
+    - "Supervised Fine-Tuning"
+    - "Personalization"
+  repo_url: "https://github.com/jigyasa-grover/Hyper-Personalized-Ad-Campaigns-using-Generative-AI-Quick-Demo-using-Gemini-Pro-Vision"
+  post_url: "/HyperPersonalizedAdsGenAI/"
+
+- id: "cormas-squick-pharo"
+  title: "CORMAS Spatial UI & sQuick in Pharo Smalltalk"
+  year: "2015–2017"
+  category: "Open Source & Agent Simulation"
+  featured: false
+  tagline: "Award-winning open-source extensions for live spatial agent-based ecological modeling and offline search."
+  summary: "Built live spatial visualization UIs for the CORMAS multi-agent simulation platform with IRD Paris (published in ACM IWST) and searchQuick for FOSSASIA/Pharo—work recognized with the Red Hat Women in Open Source Academic Award."
+  stack:
+    - "Pharo Smalltalk"
+    - "Multi-Agent Simulation"
+    - "CORMAS"
+    - "Open Source"
+  live_url: "https://jigyasa-grover.github.io/sQuick_new/"
+  repo_url: "https://github.com/jigyasa-grover/CORMAS-Pharo"

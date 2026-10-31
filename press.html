@@ -1,0 +1,129 @@
+---
+layout: page
+title: "Press, Media & Speaker Kit"
+heading: "Media features, expert commentary, 13× awards, and approved speaker assets."
+eyebrow: "Pillar 06 · Press & Industry Voice"
+lead: "Resources for journalists, podcast hosts, conference organizers, and documentary producers seeking grounded practitioner commentary on AI, agentic systems, and production ML."
+hero_cta_label: "Media & Interview Inquiry →"
+hero_cta_url: "/work-with-me/?topic=Media%20%26%20Interviews#contact"
+seo_title: "Press, Media & Speaker Kit — Jigyasa Grover | Forbes, Business Insider, Google I/O"
+description: "Official press kit, media appearances (Forbes, Business Insider, Google I/O, VentureBeat, NTD TV, UN ITU), 13x award ledger, and speaker bios for Jigyasa Grover."
+permalink: /press/
+---
+{% assign id = site.data.identity %}
+{% assign rec = site.data.recognition %}
+
+<!-- 1. Selected Media, TV & Podcast Features -->
+<section style="margin-bottom: 4.5rem;" aria-labelledby="media-ledger-heading">
+  <div class="eyebrow">Selected Press, Broadcast &amp; Podcasts</div>
+  <h2 id="media-ledger-heading">Featured commentary &amp; interviews</h2>
+
+  <div class="ledger" style="margin-top: 1.5rem;">
+    {% for m in rec.media_features %}
+    <div class="ledger-row">
+      <div class="ledger-row__date">{{ m.date }} · {{ m.outlet }}</div>
+      <div>
+        <div class="ledger-row__title">
+          {% if m.url %}
+            <a href="{{ m.url }}" target="_blank" rel="noopener">{{ m.title }} ↗</a>
+          {% else %}
+            {{ m.title }}
+          {% endif %}
+        </div>
+        <p class="ledger-row__sub">{{ m.outlet }}</p>
+      </div>
+      <div class="ledger-row__aside">{{ m.type }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- 2. 13x Industry & Open Source Awards -->
+<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light); margin-bottom: 4.5rem;" aria-labelledby="awards-ledger-heading">
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Verified Honors</div>
+      <h2 id="awards-ledger-heading">13× AI, Engineering &amp; Open Source Awards</h2>
+      <p class="section-header__desc">
+        Recognized across North America, Europe, and India for production ML leadership, open-source contributions, and technical education.
+      </p>
+    </div>
+    <a class="section-header__link" href="/highlights/">View visual award &amp; stage gallery →</a>
+  </div>
+
+  <div class="ledger">
+    {% for a in rec.awards %}
+    <div class="ledger-row">
+      <div class="ledger-row__date">{{ a.year }}</div>
+      <div>
+        <div class="ledger-row__title">
+          {% if a.url %}
+            <a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }} ↗</a>
+          {% else %}
+            {{ a.title }}
+          {% endif %}
+        </div>
+        <p class="ledger-row__sub">{{ a.issuer }}</p>
+      </div>
+      <div class="ledger-row__aside">Honoree / Winner</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- 3. Speaker & Press Assets (Bios + Approved Photos) -->
+<section style="padding-top: 3.25rem; border-top: 1px solid var(--rule-light);" aria-labelledby="media-kit-assets-heading">
+  <div class="eyebrow">Approved Media Assets</div>
+  <h2 id="media-kit-assets-heading">Official biographies &amp; press photography</h2>
+  <p style="max-width: 68ch; color: var(--ink-muted); margin-bottom: 2rem;">
+    Event organizers and journalists are welcome to use the third-person biographies and photography below with attribution to <strong>Jigyasa Grover</strong>. Pronunciation: <em>{{ id.pronunciation }}</em>.
+  </p>
+
+  <div class="project-grid" style="margin-bottom: 2.5rem;">
+    <div class="project-dossier">
+      <div>
+        <div class="project-dossier__meta"><span>50-Word Bio</span><span>Copy-Ready</span></div>
+        <p id="press-bio-50" class="project-dossier__summary">{{ id.short_bio_50 }}</p>
+      </div>
+      <div>
+        <button type="button" class="btn btn--secondary" data-copy-target="press-bio-50">Copy 50-Word Bio</button>
+      </div>
+    </div>
+
+    <div class="project-dossier">
+      <div>
+        <div class="project-dossier__meta"><span>150-Word Bio</span><span>Copy-Ready</span></div>
+        <p id="press-bio-150" class="project-dossier__summary">{{ id.medium_bio_150 }}</p>
+      </div>
+      <div>
+        <button type="button" class="btn btn--secondary" data-copy-target="press-bio-150">Copy 150-Word Bio</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-grid">
+    <a class="gallery-card" href="/images/profile_photo.jpg" target="_blank" rel="noopener">
+      <img src="/assets/images/opt/profile_photo.jpg" width="768" height="960" loading="lazy" alt="Portrait headshot of Jigyasa Grover" />
+      <div class="gallery-card__body">
+        <div class="gallery-card__title">Editorial Portrait (Vertical)</div>
+        <p class="gallery-card__sub">Download full-resolution JPG (1440×1800) ↗</p>
+      </div>
+    </a>
+
+    <a class="gallery-card" href="/assets/images/opt/headshot-ratecard.jpg" target="_blank" rel="noopener">
+      <img src="/assets/images/opt/headshot-ratecard.jpg" width="650" height="650" loading="lazy" alt="Jigyasa Grover onstage speaking into a microphone" />
+      <div class="gallery-card__body">
+        <div class="gallery-card__title">Onstage Speaker Portrait (Square)</div>
+        <p class="gallery-card__sub">Download square speaker headshot (650×650) ↗</p>
+      </div>
+    </a>
+
+    <a class="gallery-card" href="/images/google_io_feature.jpg" target="_blank" rel="noopener">
+      <img src="/assets/images/opt/google_io_feature.jpg" width="1280" height="718" loading="lazy" alt="Jigyasa Grover featured on the Google I/O 2024 main stage" />
+      <div class="gallery-card__body">
+        <div class="gallery-card__title">Google I/O Main Stage Feature</div>
+        <p class="gallery-card__sub">Download widescreen stage photo (3456×1940) ↗</p>
+      </div>
+    </a>
+  </div>
+</section>

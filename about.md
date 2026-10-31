@@ -1,38 +1,143 @@
 ---
 layout: page
-title: About Me
+title: "About Jigyasa Grover"
+heading: "Engineering large-scale AI systems—and bridging production depth with industry education."
+eyebrow: "Biography & Digital Identity"
+lead: "My name is Jigyasa Grover (pronounced JIG-yah-suh GROH-ver). I am a Machine Learning Engineer, Agentic AI educator, published author, advisor, and 13-time award winner in Artificial Intelligence and Open Source based in the San Francisco Bay Area."
+hero_cta_label: "Work With Me →"
+hero_cta_url: "/work-with-me/"
+seo_title: "About Jigyasa Grover — Machine Learning Engineer, Agentic AI Educator, Author & Advisor"
+description: "Authoritative biography of Jigyasa Grover: Machine Learning Engineer at Uber, Google Developer Advisory Board member, 13x AI & Open Source award winner, LinkedIn Learning instructor, and co-author of Sculpting Data for ML."
+faq_key: "about"
 permalink: /about
 ---
+{% assign id = site.data.identity %}
 
-<div class="column leftcol" style="text-align:justify;padding-right:40px">
+<div class="feature-split" style="align-items: start; margin-bottom: 4rem;">
+  <div>
+    <h2>At the intersection of production scale, agentic engineering, and technical clarity</h2>
+    <p>
+      Currently, I serve as a <strong>Machine Learning Engineer (Tech Lead — Rider Personalization &amp; Ranking) at Uber</strong>, leading end-to-end personalization, multi-task Mixture-of-Experts (MoE) ranking, and cross-vertical user representation models serving millions of daily riders across 500+ cities, alongside building 0→1 internal agentic developer tooling.
+    </p>
+    <p>
+      Over the past decade, my engineering career has focused on taking machine learning and generative AI out of notebooks and into high-throughput, low-latency production environments:
+    </p>
+    <ul>
+      <li><strong>Bordo AI</strong> — Served as <em>Lead Engineer, AI &amp; Research</em>, architecting a 0→1 provider-agnostic multi-LLM conversational analytics stack (Claude, Gemini, GPT, LangGraph, custom RAG) across 25+ enterprises.</li>
+      <li><strong>Faire</strong> — Built a real-time marketplace feature store, calibrated XGBoost ads bidding engine with Bayesian cold-start smoothing, and monetization simulator from 0→1.</li>
+      <li><strong>Twitter (X)</strong> — Owned billion-request/day ads click and conversion ranking models under strict sub-50ms SLAs, dynamic feature hydration, and privacy-preserving post-ATT serving infrastructure.</li>
+      <li><strong>Facebook (Meta)</strong> — Built statistical anomaly detection systems on live Pixel conversion streams, following earlier computational research at the <strong>San Diego Supercomputer Center</strong>, <strong>IRD Paris</strong>, and <strong>National Research Council Canada</strong>.</li>
+    </ul>
+    <p>
+      On the ecosystem and governance side, I serve on the <strong>Google Developer Advisory Board (gDAB)</strong> and <strong>Google Cloud BI Council</strong>, hold recognition as a <strong>Google Developer Expert (AI/ML)</strong> and <strong>World Economic Forum Global Shaper</strong> (Palo Alto Hub), and advise founders, product leaders, and investors across <strong>30+ startups, enterprises, and venture funds</strong>. In May 2024, I was <a href="https://www.youtube.com/live/XEzRZ35urlk?t=516" target="_blank" rel="noopener">featured on the Google I/O main keynote stage</a>—introduced by Sundar Pichai—sharing practitioner insights on Gemini 1.5 Pro's 1-million-token context window.
+    </p>
+    <p>
+      Guided by the belief that <em>we rise by lifting others</em>, I co-authored <strong><a href="https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/" target="_blank" rel="noopener">Sculpting Data for ML: The First Act of Machine Learning</a></strong> (95+ academic citations), authored peer-reviewed Springer chapters on privacy-preserving ML and deepfake detection, and teach four courses on <strong><a href="https://www.linkedin.com/learning/instructors/jigyasa-grover" target="_blank" rel="noopener">LinkedIn Learning</a></strong>—including <em>Hands-On AI: Building Agents with Google ADK</em> and <em>Evaluating AI Agents with Google ADK</em>—reaching <strong>50,000+ learners</strong> across courses and enterprise workshops.
+    </p>
+  </div>
 
-<p>My name is <strong>Jigyasa Grover</strong> (pronounced as <em>JIG-yah-suh GROH-ver</em>).</p>
- 
-<p><strong>10-time award winner</strong> in Artificial Intelligence and Open Source and the <strong>co-author of the book 'Sculpting Data For ML'</strong>, I am striving to make a dent in this world of technology and bridge the gaps. As an AI & Research Lead at <strong>Bordo AI</strong> currently, I have years of ML engineering & Data Science experience in deploying large‐scale low-latency systems for user personalization and monetization on popular social networking apps like <strong>Twitter</strong> (now X) and <strong>Facebook</strong> (now Meta), and e‐commerce at <strong>Faire</strong>, particularly ads prediction, sponsored content ranking, and recommendation with a recent focus on Generative AI. I am also one of the few ML <strong>Google Developer Experts</strong> and Google Women Techmaker Ambassadors globally. As a <strong>World Economic Forum</strong> Global Shaper at the Palo Alto Hub, I ensure to leverage my technical skills and connections for solution-building, policy-making, and lasting change.</p>
- 
-<p>Recently, I was <strong><a href ="https://www.youtube.com/live/XEzRZ35urlk?t=516" target="_blank">featured at Google I/O 2024 main keynote</a></strong> and introduced by <i>Sundar Pichai</i> on the stage as I spoke about my experience using Gemini 1.5 Pro’s 1 million token context window. As a part of the <strong>Google Developer Advisory Board (gDAB)</strong> I collaborate with experts and contribute to shaping the future of Google's developer ecosystem. I am also involved with Google Developer Experts and Google for Startups, and most recently was on the Generative AI panel with some renowned folks from the industry and startup world.</p>
- 
-<p>My latest research <strong>'Keeping it Low‑Key'</strong> is focused on igniting the public dialogue regarding privacy impacts, ethical consequences, fairness, and real-world harms of non-privacy-compliant ML systems. I have also co-authored a book chapter <strong>‘Do not fake it till you make it!’</strong>, which is a synopsis of trending fake news detection methodologies on social media using deep learning in a world-renowned Springer book series.</p>
- 
-<p>In my spirit to build a powerful community with a strong belief in <strong>“we rise by lifting others”</strong>, I mentor aspiring developers and ML enthusiasts in various global programs. I am also an Advisory Board Member at Bezoku AI, Las Positas Community College, AI Forum, Corinium Global Intelligence, and VigiTrust. To help budding authors and writers, I serve as a technical book reviewer for O'Reilly Media and Packt Publishing House.</p>
- 
-<p>Having graduated from the University of California, San Diego, with a Master’s degree in Computer Science with an Artificial Intelligence specialization, my journey is highlighted by a myriad of experiences from my stints at Faire, Twitter/X, Facebook/Meta, National Research Council Canada, Institute of Research & Development France, San Diego Supercomputer Center involving data science, mathematical modeling, and software engineering.</p>
- 
-<p>I am an avid proponent of Open Source and credit my career growth to this sphere of community development. I am also the proud recipient of multiple scholarships for my research and travels like Mitacs Globalink, Linux Foundation, Facebook GHC, ESUG, and many more. I have <strong>150+ media features, keynotes, conference talks, panels, workshops, and podcasts</strong> to my name, with renowned entities like <strong>Google, United Nations, NTD Business, International Business Times</strong>, SiliconAngle, CubeTV, etc. My love for tinkering has led me to win 5+ hackathons, sponsored by Microsoft, Google, Github, etc. and I now give back to the community by serving on the judges' panel of hackathons.</p>
- 
-<p>Apart from my technological ventures, I enjoy exploring hidden gems in my city, hanging out with friends and family, and have been recently having fun with baking. To get in touch, you can email at <a href="mailto:grover.jigyasa2@gmail.com">grover[dot]jigyasa2[at]gmail[dot]com</a> or directly <a href="https://topmate.io/jigyasagrover" target="_blank">hop on a call</a>!</p>
+  <div>
+    <div class="media-frame" style="margin-bottom: 1.75rem;">
+      <img
+        src="/assets/images/opt/portrait_outdoor.jpg"
+        width="900"
+        height="900"
+        loading="lazy"
+        alt="Jigyasa Grover outdoors in California"
+      />
+      <div class="media-frame__caption">
+        Jigyasa Grover · San Francisco Bay Area, CA · M.S. CS (AI), UC San Diego
+      </div>
+    </div>
 
-<br> <br>
-
-<h4> Last Updated: June 13, 2024 </h4>
-
+    <div class="contact-panel" style="padding: 1.5rem;">
+      <div class="eyebrow" style="margin-bottom: 0.5rem;">Quick Facts &amp; Credentials</div>
+      <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; color: var(--ink-secondary);">
+        <li><strong>Current Role:</strong> ML Engineer (Tech Lead), Uber</li>
+        <li><strong>Google Ecosystem:</strong> gDAB Member &amp; AI/ML GDE</li>
+        <li><strong>Teaching:</strong> LinkedIn Learning &amp; Udacity Instructor (50K+ learners)</li>
+        <li><strong>Book:</strong> <em>Sculpting Data for ML</em> (ISBN 979-8585463570)</li>
+        <li><strong>Speaking:</strong> 200+ talks · 20+ countries · Google I/O Keynote</li>
+        <li><strong>Recognition:</strong> 13× AI &amp; Open Source Award Winner</li>
+        <li><strong>Alma Mater:</strong> UC San Diego (M.S. CS) · DTU (B.Tech. CE, Distinguished Alumni)</li>
+      </ul>
+      <div class="btn-group" style="margin-top: 1.25rem;">
+        <a class="btn btn--secondary" href="/experience/">Full Career Timeline →</a>
+        <a class="btn btn--secondary" href="/press/">Press &amp; Speaker Kit →</a>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="column rightcol">
+<!-- Ecosystem, Boards & Education -->
+<section style="padding-top: 3rem; border-top: 1px solid var(--rule-light); margin-bottom: 4rem;" aria-labelledby="boards-heading">
+  <div class="eyebrow">Advisory, Governance &amp; Academic Foundations</div>
+  <h2 id="boards-heading">Ecosystem leadership &amp; education</h2>
 
-<a class="twitter-timeline" data-width="600" data-height="1200" href="https://twitter.com/jigyasa_grover?ref_src=twsrc%5Etfw">Tweets by jigyasa_grover</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <div class="ledger" style="margin-bottom: 2.75rem;">
+    {% for item in id.ecosystem_roles %}
+    <div class="ledger-row">
+      <div class="ledger-row__date">{{ item.org }}</div>
+      <div>
+        <div class="ledger-row__title">{{ item.role }}</div>
+        <p class="ledger-row__sub">{{ item.detail }}</p>
+      </div>
+      <div class="ledger-row__aside">Active</div>
+    </div>
+    {% endfor %}
+  </div>
 
-</div>
+  <div class="ledger">
+    {% for edu in id.education %}
+    <div class="ledger-row">
+      <div class="ledger-row__date">{{ edu.period }}</div>
+      <div>
+        <div class="ledger-row__title">{{ edu.degree }} — {{ edu.institution }}</div>
+        <p class="ledger-row__sub">{{ edu.detail }}</p>
+      </div>
+      <div class="ledger-row__aside">Education</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 
+<!-- Copyable Official Bios for Event Organizers & Journalists -->
+<section style="padding-top: 3rem; border-top: 1px solid var(--rule-light); margin-bottom: 4rem;" aria-labelledby="official-bios-heading">
+  <div class="eyebrow">For Event Organizers, Podcasts &amp; Press</div>
+  <h2 id="official-bios-heading">Approved third-person biographies</h2>
 
-<!-- <center> <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"> </center> -->
+  <div class="project-grid">
+    <div class="project-dossier">
+      <div>
+        <div class="project-dossier__meta">
+          <span>Short Bio (~50 Words)</span>
+          <span>Third-Person</span>
+        </div>
+        <p id="bio-short-copy" class="project-dossier__summary">{{ id.short_bio_50 }}</p>
+      </div>
+      <div>
+        <button type="button" class="btn btn--secondary" data-copy-target="bio-short-copy">Copy Short Bio</button>
+      </div>
+    </div>
+
+    <div class="project-dossier">
+      <div>
+        <div class="project-dossier__meta">
+          <span>Standard Speaker &amp; Press Bio (~150 Words)</span>
+          <span>Third-Person</span>
+        </div>
+        <p id="bio-medium-copy" class="project-dossier__summary">{{ id.medium_bio_150 }}</p>
+      </div>
+      <div>
+        <button type="button" class="btn btn--secondary" data-copy-target="bio-medium-copy">Copy Standard Bio</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Entity FAQ (GEO & Human Clarity) -->
+<section style="padding-top: 3rem; border-top: 1px solid var(--rule-light);" aria-labelledby="about-faq-heading">
+  <div class="eyebrow">Frequently Asked Questions</div>
+  <h2 id="about-faq-heading">Background &amp; collaboration FAQ</h2>
+  {% include faq-section.html key="about" %}
+</section>

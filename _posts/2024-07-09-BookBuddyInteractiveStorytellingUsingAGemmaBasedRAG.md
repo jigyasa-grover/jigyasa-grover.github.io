@@ -22,7 +22,7 @@ mathjax: true
 
 <p>Imagine a scenario where readers can interact with a virtual "Book Buddy," a character powered by Gemma-based RAG. This AI companion can dynamically respond to queries from the storylines and provide detailed explanations on demand. Whether guiding readers through complex plotlines or explaining background lore, Gemma excels in delivering coherent, engaging content tailored to user interactions.</p>
 
-<h1 class="wp-block-heading"><strong>Let's Build "Book Buddy" 🛠️</strong></h1>
+<h2 class="wp-block-heading"><strong>Let's Build "Book Buddy" 🛠️</strong></h2>
 
 <p>To delve deeper into the capabilities of Gemma-based RAG for interactive storytelling, let's embark on a hands-on journey that creates a dynamic system capable of answering questions about the classic text <a href="https://www.gutenberg.org/files/11/11-0.txt">"Alice's Adventures in Wonderland" by Lewis Carroll</a>, available from Project Gutenberg.</p>
 

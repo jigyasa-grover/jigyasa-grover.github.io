@@ -1,0 +1,110 @@
+<div class="contact-panel">
+  <form
+    id="contact-form"
+    novalidate
+    data-formspree="{{ site.contact.formspree_endpoint | escape }}"
+    data-web3forms="{{ site.contact.web3forms_access_key | escape }}"
+    data-fallback-email="{{ site.contact.fallback_email | escape }}"
+  >
+    <!-- Honeypot anti-spam trap (hidden from screen readers and sighted users) -->
+    <div class="sr-only" aria-hidden="true">
+      <label for="contact-gotcha">Leave this field empty</label>
+      <input type="text" id="contact-gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="contact-name">Your Name <span aria-hidden="true">*</span></label>
+        <input
+          id="contact-name"
+          name="name"
+          type="text"
+          class="form-input"
+          required
+          minlength="2"
+          maxlength="120"
+          autocomplete="name"
+          placeholder="Ada Lovelace"
+          aria-describedby="error-name"
+        />
+        <span id="error-name" class="field-error" role="alert"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="contact-email">Work or Direct Email <span aria-hidden="true">*</span></label>
+        <input
+          id="contact-email"
+          name="email"
+          type="email"
+          class="form-input"
+          required
+          maxlength="160"
+          autocomplete="email"
+          placeholder="ada@organization.com"
+          aria-describedby="error-email"
+        />
+        <span id="error-email" class="field-error" role="alert"></span>
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="contact-org">Organization / Event / Publication <span class="form-optional">(optional)</span></label>
+        <input
+          id="contact-org"
+          name="organization"
+          type="text"
+          class="form-input"
+          maxlength="160"
+          autocomplete="organization"
+          placeholder="Company, conference, or media outlet"
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="contact-topic">Inquiry Category <span aria-hidden="true">*</span></label>
+        <select
+          id="contact-topic"
+          name="inquiry_type"
+          class="form-select"
+          required
+          aria-describedby="error-topic"
+        >
+          <option value="">Select an inquiry category…</option>
+          <option value="Speaking & Workshops" {% if include.default_topic == "Speaking & Workshops" %}selected{% endif %}>Speaking &amp; Workshops</option>
+          <option value="Advisory & Consulting" {% if include.default_topic == "Advisory & Consulting" %}selected{% endif %}>Advisory &amp; Consulting</option>
+          <option value="Corporate AI Training" {% if include.default_topic == "Corporate AI Training" %}selected{% endif %}>Corporate AI Training</option>
+          <option value="Technical Collaborations" {% if include.default_topic == "Technical Collaborations" %}selected{% endif %}>Technical Collaborations</option>
+          <option value="Content & Brand Partnerships" {% if include.default_topic == "Content & Brand Partnerships" %}selected{% endif %}>Content &amp; Brand Partnerships</option>
+          <option value="Media & Interviews" {% if include.default_topic == "Media & Interviews" %}selected{% endif %}>Media &amp; Interviews</option>
+          <option value="Other Inquiries" {% if include.default_topic == "Other Inquiries" %}selected{% endif %}>Other Inquiries</option>
+        </select>
+        <span id="error-topic" class="field-error" role="alert"></span>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="contact-message">Project, Event, or Collaboration Details <span aria-hidden="true">*</span></label>
+      <textarea
+        id="contact-message"
+        name="message"
+        class="form-textarea"
+        required
+        minlength="20"
+        maxlength="4000"
+        placeholder="Share relevant dates, audience, technical goals, or how you would like to collaborate…"
+        aria-describedby="error-message"
+      ></textarea>
+      <span id="error-message" class="field-error" role="alert"></span>
+    </div>
+
+    <div class="btn-group">
+      <button id="contact-submit" type="submit" class="btn btn--accent">Send Inquiry →</button>
+      <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-muted);">
+        Protected against automated spam · Direct response for aligned inquiries
+      </span>
+    </div>
+
+    <div id="contact-status" class="form-status" role="status" aria-live="polite"></div>
+  </form>
+</div>

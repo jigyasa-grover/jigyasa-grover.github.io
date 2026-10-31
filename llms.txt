@@ -1,0 +1,35 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# Jigyasa Grover
+
+> Official digital home of Jigyasa Grover (pronounced JIG-yah-suh GROH-ver) — Machine Learning Engineer at Uber (Tech Lead — Rider Personalization & Ranking), 13x AI & Open Source Award Winner, Google Developer Advisory Board (gDAB) member, Google Developer Expert (AI/ML), LinkedIn Learning Instructor (40,380+ learners), international keynote speaker (Google I/O main stage, 200+ talks across 20+ countries), and co-author of *Sculpting Data for ML*.
+
+For complete structured biographical, career, speaking, course, publication, and project context, see [llms-full.txt](https://jigyasa-grover.github.io/llms-full.txt).
+
+## Primary Pages
+
+- [Home](https://jigyasa-grover.github.io/): Overview of engineering work, speaking, courses, publications, and collaboration pillars.
+- [About Jigyasa Grover](https://jigyasa-grover.github.io/about): Authoritative biography, education (UC San Diego M.S. CS), Google & governance board roles, and Entity FAQ.
+- [Experience & Career Timeline](https://jigyasa-grover.github.io/experience/): Full career at Uber, Bordo AI, Faire, Twitter/X, Meta, academic research, and 2017–2026 milestone archive.
+- [Work With Me](https://jigyasa-grover.github.io/work-with-me/): Six collaboration pillars, booking links (Intro, Passionfroot, Naano), and direct inquiry form.
+- [AI Startup & Product Advisory](https://jigyasa-grover.github.io/advisory/): Advisory on production ML ranking, Agentic AI architecture, LLM evaluation, and token cost guardrails.
+- [Keynotes & Conference Speaking](https://jigyasa-grover.github.io/speaking/): Signature talk abstracts, Google I/O keynote feature, and 200+ global appearances.
+- [Corporate AI Training & Courses](https://jigyasa-grover.github.io/teaching/): Enterprise AI workshops, 4 LinkedIn Learning courses, and Udacity curriculum.
+- [Technical Content & Brand Partnerships](https://jigyasa-grover.github.io/partnerships/): Engineering-led developer content, audience demographics (82% senior technical), and brand partners.
+- [Selected Engineering Projects](https://jigyasa-grover.github.io/projects/): Open-source agentic AI systems, TPU fine-tuning, edge/cloud racing telemetry, and RAG benchmarks.
+- [Books & Publications](https://jigyasa-grover.github.io/publications/): *Sculpting Data for ML* (ISBN 979-8585463570), Springer chapters, and ACM research.
+- [Press, Media & Speaker Kit](https://jigyasa-grover.github.io/press/): Forbes, Business Insider, VentureBeat, 13x awards ledger, copyable bios, and press photos.
+- [Technical Blog](https://jigyasa-grover.github.io/blog/): 24 in-depth technical articles and tutorials.
+
+## Direct Collaboration & Booking Platforms
+
+- [Intro (1:1 Technical & Startup Consultations)](https://intro.co/JigyasaGrover)
+- [Passionfroot (Sponsored Developer Content & Brand Campaigns)](https://www.passionfroot.me/jigyasa-grover)
+- [Naano (B2B & Developer Creator Collaborations)](https://naano.com/creators/jigyasa-grover)
+
+## Technical Articles & Essays
+
+{% for post in site.posts %}{% unless post.url == "/archive/" %}{% assign m = site.data.posts_meta[post.url] %}- [{{ post.title }}](https://jigyasa-grover.github.io{{ post.url }}) ({{ post.date | date: "%Y-%m-%d" }}){% if m.summary %}: {{ m.summary }}{% endif %}
+{% endunless %}{% endfor %}

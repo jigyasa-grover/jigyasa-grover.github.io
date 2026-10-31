@@ -1,18 +1,126 @@
 ---
 layout: default
 ---
+{% assign meta = site.data.posts_meta[page.url] %}
+{% assign words = content | strip_html | number_of_words %}
+{% assign read_mins = words | divided_by: 210 | plus: 1 %}
+{% assign canonical_url = site.url | append: page.url %}
 
-<article class="post">
-    <h1>{{ page.title }}</h1>
+<article class="post-shell" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/blog/">Writing</a>
+      <span aria-hidden="true">/</span>
+      <span>Article</span>
+    </nav>
 
-    <div class="entry">
+    <header class="post-header">
+      <div class="post-meta-bar">
+        {% if meta and meta.category %}
+          <span class="post-category">{{ meta.category }}</span>
+          <span aria-hidden="true">·</span>
+        {% endif %}
+        {% if page.url == "/archive/" %}
+          <span>Historical Blog Archive (2014–2020)</span>
+        {% else %}
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+          <span aria-hidden="true">·</span>
+          <span>{{ read_mins }} min read</span>
+          <span aria-hidden="true">·</span>
+          <span>By <a href="/about" rel="author" style="color: inherit;">Jigyasa Grover</a></span>
+        {% endif %}
+      </div>
+
+      <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+
+      {% if meta and meta.summary %}
+        <p class="post-summary-box" itemprop="description">{{ meta.summary }}</p>
+      {% endif %}
+
+      {% if meta %}
+        <div class="tag-row" style="margin-bottom: 0.75rem;">
+          {% for tag in meta.tags %}
+            <span class="mono-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% if meta.live_url or meta.repo_url %}
+          <div class="btn-group" style="margin-top: 1rem;">
+            {% if meta.live_url %}
+              <a class="btn btn--primary" href="{{ meta.live_url }}" target="_blank" rel="noopener">Launch Live Demo ↗</a>
+            {% endif %}
+            {% if meta.repo_url %}
+              <a class="btn btn--secondary" href="{{ meta.repo_url }}" target="_blank" rel="noopener">View Source on GitHub ↗</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endif %}
+    </header>
+
+    <div class="post-layout">
+      <div id="post-prose" class="post-prose" itemprop="articleBody">
         {{ content }}
+      </div>
+
+      {% unless page.url == "/archive/" %}
+      <aside id="post-toc-aside" class="post-sidebar" aria-label="Table of contents" hidden>
+        <div class="toc-heading">On this page</div>
+        <ul id="post-toc-list" class="toc-list"></ul>
+      </aside>
+      {% endunless %}
     </div>
 
-    <div class="date">
-        </br>Written on {{ page.date | date: "%B %e, %Y" }}
-    </div>
+    <footer class="post-footer">
+      <div class="share-bar">
+        <span>Share or cite this technical article:</span>
+        <div class="share-bar__links">
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ canonical_url | uri_escape }}" target="_blank" rel="noopener">Share on LinkedIn ↗</a>
+          <a href="https://x.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ canonical_url | uri_escape }}&via=jigyasa_grover" target="_blank" rel="noopener">Post on X ↗</a>
+          <button id="copy-article-url" type="button" data-url="{{ canonical_url }}">Copy Link</button>
+        </div>
+      </div>
 
-    {% include disqus.html %}
-    {% include mathjax.html %}
+      <div class="author-card">
+        <img src="/assets/images/opt/profile_photo.jpg" width="76" height="76" loading="lazy" alt="Portrait of Jigyasa Grover" />
+        <div>
+          <div class="author-card__name"><a href="/about">Jigyasa Grover</a></div>
+          <p class="author-card__bio">
+            Machine Learning Engineer at Uber (Tech Lead — Rider Personalization &amp; Ranking), Google Developer Advisory Board member, 13× AI &amp; Open Source Award Winner, LinkedIn Learning Instructor, and co-author of <em>Sculpting Data for ML</em>.
+          </p>
+          <div class="dossier-links" style="border-top: 0; padding-top: 0;">
+            <a href="/about">Full Biography →</a>
+            <a href="/work-with-me/">Advisory, Speaking &amp; Workshops →</a>
+            <a href="/blog/">All Technical Essays →</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    {% unless page.url == "/archive/" %}
+    <section style="margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--rule-light);" aria-labelledby="related-articles-heading">
+      <div class="eyebrow">Continue Reading</div>
+      <h2 id="related-articles-heading" style="margin-bottom: 1.5rem;">Related Technical Writing</h2>
+      <div class="ledger">
+        {% assign shown = 0 %}
+        {% for post in site.posts %}
+          {% if post.url != page.url and post.url != "/archive/" and shown < 3 %}
+            {% assign pmeta = site.data.posts_meta[post.url] %}
+            {% if meta == nil or pmeta == nil or pmeta.category == meta.category or shown < 3 %}
+              {% assign shown = shown | plus: 1 %}
+              <div class="ledger-row">
+                <div class="ledger-row__date">{{ post.date | date: "%b %Y" }}</div>
+                <div>
+                  <div class="ledger-row__title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+                  {% if pmeta and pmeta.summary %}<p class="ledger-row__sub">{{ pmeta.summary }}</p>{% endif %}
+                </div>
+                <div class="ledger-row__aside">{% if pmeta %}{{ pmeta.category }}{% endif %}</div>
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endunless %}
+  </div>
 </article>

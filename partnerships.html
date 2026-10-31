@@ -1,0 +1,114 @@
+---
+layout: page
+title: "Technical Content & Brand Partnerships"
+heading: "Engineering-led storytelling for AI platforms, cloud infrastructure, and developer tools."
+eyebrow: "Pillar 04 · Technical Creator & Brand Partner"
+lead: "Translating complex SDKs, foundation models, and developer workflows into credible, code-backed narratives for an audience where 82% are senior engineers and technical decision-makers."
+hero_cta_label: "Explore Passionfroot ↗"
+hero_cta_url: "https://www.passionfroot.me/jigyasa-grover"
+seo_title: "AI Technical Content Creator & Developer Brand Collaborations — Jigyasa Grover"
+description: "Partner with Jigyasa Grover on developer-focused AI technical content, reference architectures, product launches, and LinkedIn/X campaigns via Passionfroot, Naano, or direct inquiry."
+faq_key: "partnerships"
+permalink: /partnerships/
+---
+{% assign b = site.data.identity.booking %}
+
+<section style="margin-bottom: 4rem;" aria-labelledby="audience-profile-heading">
+  <div class="eyebrow">Why Developer Platforms Partner With Me</div>
+  <h2 id="audience-profile-heading">Practitioner credibility—not generic influencer copy</h2>
+  <p style="max-width: 70ch;">
+    Senior software and ML engineers immediately recognize surface-level promotional posts. Every collaboration I take on starts with hands-on technical exploration—building real workflows, testing edge cases, and explaining <em>where and why</em> a tool fits inside a production stack.
+  </p>
+
+  <div class="proof-ledger" style="margin: 2rem 0; border-top: 1px solid var(--rule-light);">
+    <div class="proof-ledger__grid">
+      <div class="proof-item">
+        <div class="proof-item__value">82%</div>
+        <div class="proof-item__label">Senior Technical Audience</div>
+        <p class="proof-item__detail">Staff+ Engineers, Engineering Managers, Directors, VPs, Founders &amp; C-Suite</p>
+      </div>
+      <div class="proof-item">
+        <div class="proof-item__value">325K+</div>
+        <div class="proof-item__label">Annual LinkedIn Impressions</div>
+        <p class="proof-item__detail">14,000+ high-intent AI &amp; software engineering followers</p>
+      </div>
+      <div class="proof-item">
+        <div class="proof-item__value">72+</div>
+        <div class="proof-item__label">Open-Source Repositories</div>
+        <p class="proof-item__detail">Runnable reference implementations accompanying technical deep dives</p>
+      </div>
+      <div class="proof-item">
+        <div class="proof-item__value">14+</div>
+        <div class="proof-item__label">Ecosystem Brand Partners</div>
+        <p class="proof-item__detail">Hyperscalers, AI labs, developer tooling startups &amp; learning platforms</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-grid">
+    <article class="project-dossier">
+      <div>
+        <div class="project-dossier__meta"><span>Format 01</span><span>Deep Technical Content</span></div>
+        <h3 class="project-dossier__title">Reference Apps &amp; Architectural Tutorials</h3>
+        <p class="project-dossier__summary">
+          End-to-end engineering build-outs (such as fine-tuning Gemma 3 on Cloud TPUs, building ADK multi-agent pipelines, or benchmarking LLMs) complete with open-source code and permanent technical blog posts.
+        </p>
+      </div>
+    </article>
+
+    <article class="project-dossier">
+      <div>
+        <div class="project-dossier__meta"><span>Format 02</span><span>Launch &amp; Thought Leadership</span></div>
+        <h3 class="project-dossier__title">LinkedIn &amp; X Developer Campaigns</h3>
+        <p class="project-dossier__summary">
+          High-signal launch analyses, SDK walk-throughs, architectural diagrams, and practitioner commentary tailored for Staff+ engineers, AI builders, and technical buyers.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section style="padding-top: 3rem; border-top: 1px solid var(--rule-light); margin-bottom: 4rem;" aria-labelledby="past-partners-heading">
+  <div class="eyebrow">Trusted Collaborations</div>
+  <h2 id="past-partners-heading">Selected developer &amp; AI ecosystem partners</h2>
+  <div class="partner-strip" style="margin-bottom: 2.25rem;">
+    {% for partner in site.data.recognition.brand_partners %}
+      <span>{{ partner }}{% unless forloop.last %} ·{% endunless %}</span>
+    {% endfor %}
+  </div>
+
+  <div class="platform-grid">
+    <div class="platform-box">
+      <div>
+        <div class="platform-box__badge">{{ b.passionfroot.badge }}</div>
+        <h3 class="platform-box__name">{{ b.passionfroot.name }}</h3>
+        <p class="platform-box__desc">{{ b.passionfroot.use_case }}</p>
+      </div>
+      <a class="btn btn--primary" href="{{ b.passionfroot.url }}" target="_blank" rel="noopener">{{ b.passionfroot.cta }} ↗</a>
+    </div>
+
+    <div class="platform-box">
+      <div>
+        <div class="platform-box__badge">{{ b.naano.badge }}</div>
+        <h3 class="platform-box__name">{{ b.naano.name }}</h3>
+        <p class="platform-box__desc">{{ b.naano.use_case }}</p>
+      </div>
+      <a class="btn btn--secondary" href="{{ b.naano.url }}" target="_blank" rel="noopener">{{ b.naano.cta }} ↗</a>
+    </div>
+
+    <div class="platform-box">
+      <div>
+        <div class="platform-box__badge">Custom Multi-Part Scope</div>
+        <h3 class="platform-box__name">Direct Campaign Inquiry</h3>
+        <p class="platform-box__desc">Planning a custom technical whitepaper, live developer webinar, conference stage collaboration, or multi-part series?</p>
+      </div>
+      <a class="btn btn--accent" href="/work-with-me/?topic=Content%20%26%20Brand%20Partnerships#contact">Discuss a Custom Partnership →</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top: 3rem; border-top: 1px solid var(--rule-light);" aria-labelledby="partnerships-faq-heading">
+  <div class="eyebrow">Brand Collaboration FAQ</div>
+  <h2 id="partnerships-faq-heading">Questions for developer marketing &amp; DevRel teams</h2>
+  {% include faq-section.html key="partnerships" %}
+</section>

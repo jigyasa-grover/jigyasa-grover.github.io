@@ -1,88 +1,71 @@
 name: Jigyasa Grover
+title: Jigyasa Grover — Machine Learning Engineer, Agentic AI Educator, Author & Advisor
+tagline: Production AI Systems · Agentic Engineering · Technical Education · Industry Advisory
+description: "Jigyasa Grover is a Machine Learning Engineer at Uber, 13x AI & Open Source Award Winner, Google Developer Advisory Board member, LinkedIn Learning instructor (40K+ learners), and co-author of Sculpting Data for ML."
+author: Jigyasa Grover
+locale: en_US
 
-description: 10x AI & Open Source Award Winner, Book Author, Data Scientist & ML Engineer
-
-avatar: https://avatars.githubusercontent.com/u/9291400?s=460&u=01a3da66cef82594f745c36933e6413d02af04fa&v=4
-
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble:
-  # email: grover.jigyasa2@gmail.com
-  facebook: 
-  flickr:
-  github: jigyasa-grover
-  instagram: jigyasagroverofficial
-  linkedin: jigyasa-grover
-  pinterest:
-  rss: # just type anything here for a working RSS icon
-  twitter: jigyasa_grover
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: c/JigyasaGrover/playlists
-  googleplus: # anything in your profile username that comes after plus.google.com/
-  wordpress: jigyasagrover
-  spotify: playlist/6vRPsGPE6v2I81NlWkdGiY
-
-
-# Enter your Disqus shortname (not your username) to enable commenting on posts
-# You can find your shortname on the Settings page of your Disqus account
-disqus: 
-
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: UA-172999305-1
-
-# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
-# Used for Sitemap.xml and your RSS feed
-url: https://jigyasa-grover.github.io/
-
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
+url: https://jigyasa-grover.github.io
 baseurl: ""
+avatar: /assets/images/opt/profile_photo.jpg
+og_image: /assets/images/opt/google_io_feature.jpg
 
-#
-# !! You don't need to change any of the configuration flags below !!
-#
+# Analytics (GA4 active; legacy Universal Analytics removed)
+google_analytics_ga4: G-GC9TNKJ6GT
+
+# Contact Form Configuration
+# Set formspree_endpoint to your Formspree URL (e.g., "https://formspree.io/f/xxxxxxxx")
+# or web3forms_access_key to a public Web3Forms access key for direct inbox delivery.
+# Leave blank to use the built-in validated mailto composer fallback without exposing secrets.
+contact:
+  formspree_endpoint: ""
+  web3forms_access_key: ""
+  fallback_email: "grover.jigyasa2@gmail.com"
+
+footer-links:
+  github: jigyasa-grover
+  linkedin: jigyasa-grover
+  twitter: jigyasa_grover
+  youtube: "@JigyasaGrover"
+  instagram: jigyasagroverofficial
+  wordpress: jigyasagrover
 
 permalink: /:title/
 
-# The release of Jekyll Now that you're using
-# version: v3.6
-
-# Jekyll 3 now only supports Kramdown for Markdown		
-kramdown:		
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks		
-  input: GFM		
-  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting		
-  syntax_highlighter: rouge		
-  syntax_highlighter_opts:		
-    # Use existing pygments syntax highlighting css		
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
     css_class: 'highlight'
 
-markdown: kramdown
-
-# Set the Sass partials directory, as we're using @imports
 sass:
-  style: :expanded # You might prefer to minify using :compressed
-
-theme: jekyll-theme-cayman
+  sass_dir: _sass
+  style: :compressed
 
 repository: jigyasa-grover/jigyasa-grover.github.io
 
-# Use the following plug-ins
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jekyll-jupyter-notebook
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-redirect-from
 
-# Exclude these files from your production _site
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Jigyasa Grover"
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - README.md
   - CNAME
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-twitter-plugin
+  - vendor
+  - scripts
+  - node_modules
+  - package.json
+  - package-lock.json

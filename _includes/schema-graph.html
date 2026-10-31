@@ -1,0 +1,234 @@
+{% assign id = site.data.identity %}
+{% assign post_meta = site.data.posts_meta[page.url] %}
+{% assign clean_path = page.url | replace: "index.html", "" %}
+{% assign canonical_url = site.url | append: clean_path %}
+{% if page.seo_title %}
+  {% assign schema_title = page.seo_title %}
+{% elsif page.title %}
+  {% assign schema_title = page.title %}
+{% else %}
+  {% assign schema_title = site.title %}
+{% endif %}
+{% if page.description %}
+  {% assign schema_desc = page.description %}
+{% elsif post_meta and post_meta.summary %}
+  {% assign schema_desc = post_meta.summary %}
+{% elsif page.excerpt %}
+  {% assign schema_desc = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+{% else %}
+  {% assign schema_desc = site.description %}
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://jigyasa-grover.github.io/#person",
+      "name": "Jigyasa Grover",
+      "url": "https://jigyasa-grover.github.io/",
+      "image": "https://jigyasa-grover.github.io/assets/images/opt/profile_photo.jpg",
+      "jobTitle": "Machine Learning Engineer, Agentic AI Educator, Author & Advisor",
+      "description": {{ id.short_bio_50 | jsonify }},
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Uber"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of California, San Diego"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Delhi Technological University"
+        }
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "Google Developer Advisory Board"
+        },
+        {
+          "@type": "Organization",
+          "name": "Google Developer Experts"
+        },
+        {
+          "@type": "Organization",
+          "name": "World Economic Forum Global Shapers Community"
+        }
+      ],
+      "knowsAbout": [
+        "Machine Learning Engineering",
+        "Agentic AI",
+        "AI Engineering",
+        "Large Language Model Evaluation",
+        "Google Agent Development Kit (ADK)",
+        "Personalization and Ranking Systems",
+        "Data-Centric AI",
+        "Privacy-Preserving Machine Learning",
+        "Responsible AI"
+      ],
+      "sameAs": {{ id.same_as | jsonify }}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jigyasa-grover.github.io/#website",
+      "url": "https://jigyasa-grover.github.io/",
+      "name": "Jigyasa Grover",
+      "description": {{ site.description | jsonify }},
+      "publisher": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "inLanguage": "en-US"
+    }
+    {% if page.layout == "post" %},
+    {
+      "@type": "BlogPosting",
+      "@id": {{ canonical_url | append: "#article" | jsonify }},
+      "mainEntityOfPage": {{ canonical_url | jsonify }},
+      "headline": {{ page.title | jsonify }},
+      "description": {{ schema_desc | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+      "author": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "publisher": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "image": "https://jigyasa-grover.github.io/assets/images/opt/google_io_feature.jpg",
+      "inLanguage": "en-US"
+      {% if post_meta and post_meta.tags %},
+      "keywords": {{ post_meta.tags | join: ", " | jsonify }},
+      "articleSection": {{ post_meta.category | jsonify }}
+      {% endif %}
+    }
+    {% elsif page.url == "/" or page.url == "/about" %},
+    {
+      "@type": "ProfilePage",
+      "@id": {{ canonical_url | append: "#webpage" | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ schema_title | jsonify }},
+      "description": {{ schema_desc | jsonify }},
+      "mainEntity": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "isPartOf": {
+        "@id": "https://jigyasa-grover.github.io/#website"
+      }
+    }
+    {% else %},
+    {
+      "@type": "WebPage",
+      "@id": {{ canonical_url | append: "#webpage" | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ schema_title | jsonify }},
+      "description": {{ schema_desc | jsonify }},
+      "about": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "isPartOf": {
+        "@id": "https://jigyasa-grover.github.io/#website"
+      }
+    }
+    {% endif %}
+    {% if page.url != "/" and page.url != "/404.html" %},
+    {
+      "@type": "BreadcrumbList",
+      "@id": {{ canonical_url | append: "#breadcrumb" | jsonify }},
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jigyasa-grover.github.io/"
+        }
+        {% if page.layout == "post" %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Writing",
+          "item": "https://jigyasa-grover.github.io/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ page.title | jsonify }},
+          "item": {{ canonical_url | jsonify }}
+        }
+        {% else %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ schema_title | jsonify }},
+          "item": {{ canonical_url | jsonify }}
+        }
+        {% endif %}
+      ]
+    }
+    {% endif %}
+    {% if page.url == "/publications/" %},
+    {
+      "@type": "Book",
+      "@id": "https://jigyasa-grover.github.io/publications/#sculpting-data-for-ml",
+      "name": "Sculpting Data for ML: The First Act of Machine Learning",
+      "isbn": "979-8585463570",
+      "datePublished": "2021-01-24",
+      "author": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "url": "https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/",
+      "image": "https://jigyasa-grover.github.io/assets/images/opt/book_cover.jpg",
+      "description": {{ site.data.publications.featured_book.summary | jsonify }}
+    }
+    {% endif %}
+    {% if page.url == "/teaching/" %},
+    {
+      "@type": "ItemList",
+      "@id": "https://jigyasa-grover.github.io/teaching/#courses",
+      "name": "AI Engineering & Agentic AI Courses by Jigyasa Grover",
+      "itemListElement": [
+        {% for course in site.data.courses.courses %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "Course",
+            "name": {{ course.title | jsonify }},
+            "description": {{ course.summary | jsonify }},
+            "url": {{ course.url | jsonify }},
+            "provider": {
+              "@type": "Organization",
+              "name": {{ course.provider | jsonify }}
+            },
+            "instructor": {
+              "@id": "https://jigyasa-grover.github.io/#person"
+            }
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    {% endif %}
+    {% if page.faq_key and site.data.faqs[page.faq_key] %},
+    {
+      "@type": "FAQPage",
+      "@id": {{ canonical_url | append: "#faq" | jsonify }},
+      "mainEntity": [
+        {% for item in site.data.faqs[page.faq_key] %}
+        {
+          "@type": "Question",
+          "name": {{ item.q | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ item.a | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    {% endif %}
+  ]
+}
+</script>
