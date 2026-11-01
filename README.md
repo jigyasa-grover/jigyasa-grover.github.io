@@ -1,6 +1,6 @@
 # [jigyasa-grover.github.io](https://jigyasa-grover.github.io/)
 
-Official personal website, technical writing journal, and inbound collaboration hub of **Jigyasa Grover** — Machine Learning Engineer (Tech Lead at Uber), 13× AI & Open Source Award Winner, Google Developer Advisory Board member, LinkedIn Learning Instructor, Author of *Sculpting Data for ML*, and International Keynote Speaker.
+Official personal website, technical writing journal, and inbound collaboration hub of **Jigyasa Grover** — Machine Learning Engineer (Tech Lead at Uber), Principal at **Afterdays**, 13× AI & Open Source Award Winner, Google Developer Advisory Board member, LinkedIn Learning Instructor, Author of *Sculpting Data for ML*, and International Keynote Speaker.
 
 ---
 
@@ -10,16 +10,16 @@ Official personal website, technical writing journal, and inbound collaboration 
 .
 ├── _config.yml              # Jekyll site, SEO, permalink & build configuration
 ├── index.html               # Homepage (/)
-├── _pages/                  # All standalone route pages & LLM Markdown endpoints
-├── _posts/                  # 25 Markdown technical articles & archive (/:title/)
+├── _pages/                  # Standalone routes (/about, /links/, etc.) & GEO/WebMCP endpoints
+├── _posts/                  # 33 indexed technical articles + 57 archival posts & /archive/ (/:title/)
 ├── _data/                   # Single-source-of-truth YAML data (identity, courses, speaking, etc.)
 ├── _layouts/                # Base HTML5 templates (default, page, post)
 ├── _includes/               # Modular partials (head-seo, schema-graph, header, footer, forms)
 ├── _sass/                   # Design system tokens, layout, components, post & syntax SCSS
 ├── assets/
 │   ├── css/style.scss       # Compiled to /assets/css/style.css
-│   ├── js/site.js           # Progressive-enhancement vanilla JS
-│   └── images/              # Web-optimized portraits (opt/) & press kit downloads (press/)
+│   ├── js/site.js           # Progressive-enhancement vanilla JS & W3C WebMCP tool registration
+│   └── images/              # Web-optimized portraits (opt/), OG card & press kit downloads (press/)
 ├── images/                  # Preserved legacy post & media assets (/images/*)
 ├── scripts/audit_site.py    # Automated route, link, SEO, JSON-LD & GEO audit script
 ├── .github/workflows/ci.yml # Continuous integration build & audit pipeline
@@ -38,7 +38,7 @@ make install
 # 2. Run local live-preview server at http://127.0.0.1:4000/
 make serve
 
-# 3. Build production _site/ and run full 44-page SEO, link & JSON-LD audit
+# 3. Build production _site/ and run full 113-page SEO, link, JSON-LD & GEO audit
 make audit
 ```
 
@@ -47,7 +47,7 @@ make audit
 All structured biographical, career, speaking, course, project, award, and FAQ content is driven from `_data/*.yml`. Updating a YAML file automatically updates:
 1. The corresponding HTML pages (`index.html` and `_pages/*.html`),
 2. Connected Schema.org JSON-LD `@graph` entities (`_includes/schema-graph.html`), and
-3. Machine-readable LLM context endpoints (`/llms.txt`, `/.well-known/llms.txt`, and `/llms-full.txt`).
+3. Machine-readable LLM & WebMCP context endpoints (`/llms.txt`, `/.well-known/llms.txt`, `/llms-full.txt`, and `/agent-context.json`).
 
 ## Contact Form Endpoint Setup (Optional)
 
