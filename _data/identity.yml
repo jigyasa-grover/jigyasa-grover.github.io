@@ -15,7 +15,7 @@ hero_lead: "Machine Learning Tech Lead at Uber, Google Developer Advisory Board 
 
 short_bio_50: "Jigyasa Grover is a Machine Learning Engineer at Uber leading global rider personalization and ranking, a 13x AI and Open Source award winner, Google Developer Advisory Board member, Google Developer Expert in AI/ML, LinkedIn Learning instructor (44,000+ learners), and co-author of Sculpting Data for ML."
 
-medium_bio_150: "Jigyasa Grover (pronounced jig-YAH-sah GROH-ver) is a San Francisco–based Machine Learning Engineer at Uber, serving as Tech Lead for rider personalization and ranking across 500+ cities. Previously, she led AI and Research at Bordo AI and built low-latency ML ranking, ads prediction, and feature infrastructure across Faire, Twitter (X), and Meta, following her M.S. in Computer Science (AI) at UC San Diego and selection to the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS). A 13-time award winner in AI and Open Source, she serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) and Women Techmakers Ambassador recognition, and is a World Economic Forum Global Shaper. She co-authored Sculpting Data for ML (95+ citations), teaches 44,000+ learners across 4 LinkedIn Learning courses, delivers corporate AI training with Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, and AI Aspire, has consulted or advised 30+ organizations, and has delivered 200+ talks across 20+ countries—including the Google I/O main stage."
+medium_bio_150: "Jigyasa Grover (pronounced jig-YAH-sah GROH-ver) is a San Francisco–based Machine Learning Engineer at Uber, serving as Tech Lead for rider personalization and ranking across 500+ cities. Previously, she led AI and Research at Bordo AI and built low-latency ML ranking, ads prediction, and feature infrastructure across Faire, Twitter (X), and Meta, following her M.S. in Computer Science (AI) at UC San Diego and selection to the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS). A 13-time award winner in AI and Open Source, she serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) and Women Techmakers Ambassador recognition, and is a World Economic Forum Global Shaper. She co-authored Sculpting Data for ML (95+ citations), teaches 44,000+ learners across 4 LinkedIn Learning courses, delivers corporate AI training with Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, and AI Aspire, has consulted or advised 30+ organizations through her independent practice Afterdays, and has delivered 200+ talks across 20+ countries—including the Google I/O main stage."
 
 metrics:
   - value: "13+"
@@ -29,7 +29,7 @@ metrics:
     detail: "LinkedIn Learning (44K+), Morgan Stanley, FedEx, Accenture & Roblox"
   - value: "30+"
     label: "Advisory & Consulting Orgs"
-    detail: "Google gDAB, Anthropic, Spotify, Windsurf, Diem AI & venture funds"
+    detail: "Via Afterdays · Google gDAB, Anthropic, Spotify, Windsurf & VCs"
 
 booking:
   intro:
@@ -115,6 +115,14 @@ career:
     highlights:
       - "Architected multi-task Mixture-of-Experts (MoE) ranking, calibration, and cross-vertical user representation foundation models trained on distributed NVIDIA A100/B200 GPU clusters."
       - "Built 0→1 internal agentic developer tooling—including a Ranking Explainer Agent with automated reward-signal graders and an Experiment Config Automator—accelerating ML experimentation velocity."
+  - role: "Principal AI Strategist, Educator & Advisor"
+    org: "Afterdays"
+    period: "2015 – Present"
+    location: "San Francisco Bay Area"
+    summary: "Independent AI advisory, corporate education, developer content, and global keynote practice partnering with 30+ enterprises, AI startups, and venture funds."
+    highlights:
+      - "Advised and consulted across Google, Meta, Apple, Microsoft, Anthropic, Amazon Fresh, Spotify, Adobe, Grammarly, Figma, Atlassian, Coinbase, Remitly, Superhuman, Windsurf, Base44, Diem AI, Bezoku AI, Okareo, Optica Labs AI, BackOps AI, Founders Circle Capital, and Capital Hill Ventures."
+      - "Delivered hands-on AI architecture & agentic engineering programs reaching 50,000+ engineers and leaders across LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, SVSG, and 200+ global stages."
   - role: "Lead Engineer, AI & Research"
     org: "Bordo AI"
     period: "Jan 2024 – Mar 2025"
@@ -138,7 +146,7 @@ career:
     highlights:
       - "Led dynamic feature hydration infrastructure, TwHIN graph embedding integration, and post-ATT privacy-preserving serving architectures achieving a 70% infrastructure cost reduction."
       - "Founded the Women@ML Business Resource Group and mentored engineers across ads ranking and cortex ML teams."
-  - role: "Software Engineering — Ads Signal Monitoring"
+  - role: "Software Engineer — Ads Signal Monitoring"
     org: "Meta (Facebook)"
     period: "2018"
     location: "Menlo Park, CA"
@@ -187,8 +195,8 @@ ecosystem_roles:
       - label: "Google Cloud Documentary"
         url: "https://www.youtube.com/watch?v=VSgKWy2iRWE"
   - role: "Principal AI Strategist & Startup Advisor"
-    org: "Afterdays (Independent Advisory Practice) · 30+ Teams"
-    detail: "Consulted and advised across Google, Meta, Apple, Microsoft, Anthropic, Amazon Fresh, Spotify, Adobe, Grammarly, Figma, Atlassian, Coinbase, Remitly, Superhuman, Windsurf, HP, Innodata, Diem AI, Bezoku AI, Okareo, Optica Labs AI, BackOps AI, Founders Circle Capital, and Capital Hill Ventures."
+    org: "Afterdays (Independent Practice · 2015–Present)"
+    detail: "Consulted and advised 30+ teams across Google, Meta, Apple, Microsoft, Anthropic, Amazon Fresh, Spotify, Adobe, Grammarly, Figma, Atlassian, Coinbase, Remitly, Superhuman, Windsurf, Base44, HP, Innodata, Diem AI, Bezoku AI, Okareo, Optica Labs AI, BackOps AI, Founders Circle Capital, and Capital Hill Ventures."
   - role: "Governance & Industry Advisory Boards"
     org: "Global Policy, Data & Academic Institutions"
     detail: "AI Assurance Council, World Economic Forum Global Shapers (Palo Alto), World Summit AI Americas Ambassador, Corinium Global Intelligence, VigiTrust, AI Forum, Pacelearn, Goanna Collective, and Las Positas College."
