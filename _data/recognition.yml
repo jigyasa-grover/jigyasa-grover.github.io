@@ -151,9 +151,9 @@ visual_highlights:
   - title: "Codemotion Milan 2026 — Speaker"
     subtitle: "Delivering 'When NOT to Build an Agent' in Milan, Italy (Oct 2026)"
     image: "/assets/images/opt/codemotion_speaker_2026.jpg"
-    width: 675
-    height: 1200
-    focal: "center 43%"
+    width: 576
+    height: 1024
+    focal: "center 27%"
     url: "https://conferences.codemotion.com/"
   - title: "Google Gemini Early Access Dinner (2026)"
     subtitle: "Google Developer Advisory Board & AI/ML GDE Ecosystem"
