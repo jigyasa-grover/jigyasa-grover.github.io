@@ -13,20 +13,21 @@ permalink: /blog/
 
 <div class="filter-bar" role="region" aria-label="Filter and search technical articles">
   <div class="filter-pills" role="group" aria-label="Filter by topic">
-    <button type="button" class="filter-btn is-active" data-blog-filter="all">All Articles (33)</button>
-    <button type="button" class="filter-btn" data-blog-filter="agentic ai & evaluation">Agentic AI &amp; Evaluation</button>
-    <button type="button" class="filter-btn" data-blog-filter="agentic infrastructure">Agentic Infrastructure</button>
-    <button type="button" class="filter-btn" data-blog-filter="fine-tuning & compute">Fine-Tuning &amp; Compute</button>
-    <button type="button" class="filter-btn" data-blog-filter="personalization & ranking">Personalization &amp; Ranking</button>
-    <button type="button" class="filter-btn" data-blog-filter="data-centric ai">Data-Centric AI</button>
-    <button type="button" class="filter-btn" data-blog-filter="responsible ai & privacy">Responsible AI &amp; Privacy</button>
-    <button type="button" class="filter-btn" data-blog-filter="open source & python">Open Source &amp; Python</button>
-    <button type="button" class="filter-btn" data-blog-filter="early archive (2015–17)">Early Archive (2015–17)</button>
+    <button id="blog-filter-all" type="button" class="filter-btn is-active" data-blog-filter="all" aria-pressed="true">All Articles (33)</button>
+    <button id="blog-filter-agentic-eval" type="button" class="filter-btn" data-blog-filter="agentic ai & evaluation" aria-pressed="false">Agentic AI &amp; Evaluation</button>
+    <button id="blog-filter-agentic-infra" type="button" class="filter-btn" data-blog-filter="agentic infrastructure" aria-pressed="false">Agentic Infrastructure</button>
+    <button id="blog-filter-finetuning" type="button" class="filter-btn" data-blog-filter="fine-tuning & compute" aria-pressed="false">Fine-Tuning &amp; Compute</button>
+    <button id="blog-filter-ranking" type="button" class="filter-btn" data-blog-filter="personalization & ranking" aria-pressed="false">Personalization &amp; Ranking</button>
+    <button id="blog-filter-data-centric" type="button" class="filter-btn" data-blog-filter="data-centric ai" aria-pressed="false">Data-Centric AI</button>
+    <button id="blog-filter-responsible-ai" type="button" class="filter-btn" data-blog-filter="responsible ai & privacy" aria-pressed="false">Responsible AI &amp; Privacy</button>
+    <button id="blog-filter-oss-python" type="button" class="filter-btn" data-blog-filter="open source & python" aria-pressed="false">Open Source &amp; Python</button>
+    <button id="blog-filter-early-archive" type="button" class="filter-btn" data-blog-filter="early archive (2015–17)" aria-pressed="false">Early Archive (2015–17)</button>
   </div>
 
   <div>
     <label for="blog-search" class="sr-only">Search all 90 articles &amp; archives by keyword</label>
     <input id="blog-search" type="search" class="search-input" placeholder="Search all 90 articles &amp; archives…" />
+    <span id="blog-results-status" class="sr-only" role="status" aria-live="polite"></span>
   </div>
 </div>
 

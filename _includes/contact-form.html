@@ -2,6 +2,8 @@
   <form
     id="contact-form"
     novalidate
+    toolname="draft-collaboration-inquiry"
+    tooldescription="Draft a speaking, startup advisory, corporate AI training, brand partnership, or media inquiry for Jigyasa Grover and focus the submit button for human review."
     data-formspree="{{ site.contact.formspree_endpoint | escape }}"
     data-web3forms="{{ site.contact.web3forms_access_key | escape }}"
     data-fallback-email="{{ site.contact.fallback_email | escape }}"
@@ -25,6 +27,7 @@
           maxlength="120"
           autocomplete="name"
           placeholder="Ada Lovelace"
+          toolparamdescription="Full name of the person reaching out (2 to 120 characters)."
           aria-describedby="error-name"
         />
         <span id="error-name" class="field-error" role="alert"></span>
@@ -41,6 +44,7 @@
           maxlength="160"
           autocomplete="email"
           placeholder="ada@organization.com"
+          toolparamdescription="Valid work or direct reply email address."
           aria-describedby="error-email"
         />
         <span id="error-email" class="field-error" role="alert"></span>
@@ -58,6 +62,7 @@
           maxlength="160"
           autocomplete="organization"
           placeholder="Company, conference, or media outlet"
+          toolparamdescription="Optional company, conference, university, venture fund, or media publication."
         />
       </div>
 
@@ -68,6 +73,7 @@
           name="inquiry_type"
           class="form-select"
           required
+          toolparamdescription="Collaboration category: Speaking & Workshops, Advisory & Consulting, Corporate AI Training, Technical Collaborations, Content & Brand Partnerships, Media & Interviews, or Other Inquiries."
           aria-describedby="error-topic"
         >
           <option value="">Select an inquiry category…</option>
@@ -93,6 +99,7 @@
         minlength="20"
         maxlength="4000"
         placeholder="Share relevant dates, audience, technical goals, or how you would like to collaborate…"
+        toolparamdescription="Detailed inquiry message including dates, event or team context, technical goals, and scope (minimum 20 characters)."
         aria-describedby="error-message"
       ></textarea>
       <span id="error-message" class="field-error" role="alert"></span>

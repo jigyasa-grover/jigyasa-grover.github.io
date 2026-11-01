@@ -76,6 +76,7 @@ EXPECTED_ROUTES = [
     "/llms.txt",
     "/.well-known/llms.txt",
     "/llms-full.txt",
+    "/agent-context.json",
     "/favicon.ico",
     "/favicon.svg",
     "/apple-touch-icon.png",
@@ -417,6 +418,25 @@ def main() -> None:
         ):
             if url not in wwm_html:
                 errors.append(f"MISSING BOOKING URL on /work-with-me/: {url}")
+
+    # 7. Verify /agent-context.json validity & WebMCP tool registration
+    agent_ctx_path = SITE_DIR / "agent-context.json"
+    if agent_ctx_path.is_file():
+        try:
+            agent_ctx = json.loads(agent_ctx_path.read_text(encoding="utf-8"))
+            for key in ("identity", "collaboration", "speaking", "articles"):
+                if key not in agent_ctx:
+                    errors.append(f"MISSING KEY '{key}' in /agent-context.json")
+            if len(agent_ctx.get("articles", [])) < 33:
+                errors.append("UNEXPECTEDLY FEW ARTICLES in /agent-context.json")
+        except Exception as exc:
+            errors.append(f"INVALID JSON in /agent-context.json: {exc}")
+
+    site_js_path = SITE_DIR / "assets" / "js" / "site.js"
+    if site_js_path.is_file():
+        site_js = site_js_path.read_text(encoding="utf-8")
+        if "modelContext" not in site_js or "registerTool" not in site_js:
+            errors.append("MISSING WebMCP modelContext.registerTool support in /assets/js/site.js")
 
     print(f"Audited {len(html_files)} generated HTML files and {jsonld_count} JSON-LD graphs.")
     if warnings:

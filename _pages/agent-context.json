@@ -1,0 +1,70 @@
+---
+layout: null
+permalink: /agent-context.json
+sitemap: false
+---
+{
+  "schema_version": "1.0",
+  "protocol": "WebMCP + Agent Context",
+  "entity_id": {{ site.data.identity.entity_id | jsonify }},
+  "canonical_url": {{ site.data.identity.canonical_url | jsonify }},
+  "llms_txt": "{{ site.url }}/llms.txt",
+  "llms_full_txt": "{{ site.url }}/llms-full.txt",
+  "identity": {
+    "name": {{ site.data.identity.name | jsonify }},
+    "pronunciation": {{ site.data.identity.pronunciation | jsonify }},
+    "pronunciation_ipa": {{ site.data.identity.pronunciation_ipa | jsonify }},
+    "location": {{ site.data.identity.location | jsonify }},
+    "headline": {{ site.data.identity.headline | jsonify }},
+    "current_role": {{ site.data.identity.current_role | jsonify }},
+    "current_org": {{ site.data.identity.current_org | jsonify }},
+    "award_badge": {{ site.data.identity.award_badge | jsonify }},
+    "short_bio_50": {{ site.data.identity.short_bio_50 | jsonify }},
+    "medium_bio_150": {{ site.data.identity.medium_bio_150 | jsonify }},
+    "education": {{ site.data.identity.education | jsonify }},
+    "same_as": {{ site.data.identity.same_as | jsonify }},
+    "press_photos": [
+      {
+        "label": "Studio Headshot (Square)",
+        "url": "{{ site.url }}/assets/images/press/jigyasa-grover-studio-headshot.jpg"
+      },
+      {
+        "label": "Fireside & Panel Stage",
+        "url": "{{ site.url }}/assets/images/press/jigyasa-grover-panel-stage.jpg"
+      },
+      {
+        "label": "Codemotion Milan 2026 Speaker Portrait",
+        "url": "{{ site.url }}/assets/images/press/jigyasa-grover-codemotion-speaker-2026.jpg"
+      },
+      {
+        "label": "Google I/O 2024 Main Stage Feature",
+        "url": "{{ site.url }}/images/google_io_feature.jpg"
+      }
+    ]
+  },
+  "collaboration": {
+    "work_with_me_url": "{{ site.url }}/work-with-me/",
+    "booking_platforms": {{ site.data.identity.booking | jsonify }},
+    "pillars": {{ site.data.pillars | jsonify }},
+    "training_clients": {{ site.data.courses.training_clients | jsonify }},
+    "live_workshops": {{ site.data.courses.workshops | jsonify }},
+    "courses": {{ site.data.courses.courses | jsonify }}
+  },
+  "speaking": {
+    "featured_keynote": {{ site.data.speaking.featured_video | jsonify }},
+    "signature_talks": {{ site.data.speaking.signature_talks | jsonify }}
+  },
+  "articles": [
+    {% assign emitted = false %}{% for post in site.posts %}{% unless post.url == "/archive/" %}{% assign meta = site.data.posts_meta[post.url] %}{% if post.archival %}{% assign cat_name = "Early Archive (2015–17)" %}{% assign row_tags = post.archive_tags %}{% assign row_summary = post.description %}{% else %}{% assign cat_name = meta.category | default: "AI Engineering" %}{% assign row_tags = meta.tags %}{% assign row_summary = meta.summary %}{% endif %}{% if emitted %},
+    {% endif %}{% assign emitted = true %}{
+      "title": {{ post.title | jsonify }},
+      "url": {{ site.url | append: post.url | jsonify }},
+      "path": {{ post.url | jsonify }},
+      "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+      "category": {{ cat_name | jsonify }},
+      "archival": {% if post.archival %}true{% else %}false{% endif %},
+      "summary": {{ row_summary | default: "" | jsonify }},
+      "tags": {{ row_tags | default: empty | jsonify }}
+    }{% endunless %}{% endfor %}
+  ]
+}

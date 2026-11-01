@@ -6,6 +6,7 @@
 # Curated LLM & Agent Index: https://jigyasa-grover.github.io/llms.txt
 # Well-Known LLM Mirror:     https://jigyasa-grover.github.io/.well-known/llms.txt
 # Full Entity & Bio Corpus:  https://jigyasa-grover.github.io/llms-full.txt
+# Structured WebMCP JSON:    https://jigyasa-grover.github.io/agent-context.json
 # Technical Writing Feed:    https://jigyasa-grover.github.io/feed.xml
 # XML Sitemap:               https://jigyasa-grover.github.io/sitemap.xml
 #
@@ -54,6 +55,7 @@ Allow: /
 Allow: /llms.txt
 Allow: /.well-known/llms.txt
 Allow: /llms-full.txt
+Allow: /agent-context.json
 Allow: /feed.xml
 Allow: /sitemap.xml
 
@@ -91,6 +93,7 @@ Allow: /
 Allow: /llms.txt
 Allow: /.well-known/llms.txt
 Allow: /llms-full.txt
+Allow: /agent-context.json
 Allow: /feed.xml
 Allow: /sitemap.xml
 

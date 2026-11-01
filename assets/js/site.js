@@ -5,12 +5,19 @@
 
   // 1. Dark / Light Reading Theme Toggle
   var themeBtn = document.getElementById("theme-toggle");
+  var syncThemeAria = function () {
+    if (!themeBtn) return;
+    var isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    themeBtn.setAttribute("aria-pressed", String(isDark));
+  };
   if (themeBtn) {
+    syncThemeAria();
     themeBtn.addEventListener("click", function () {
       var root = document.documentElement;
       var current = root.getAttribute("data-theme");
       var next = current === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
+      syncThemeAria();
       try {
         localStorage.setItem("jg-theme", next);
       } catch (e) {}
@@ -142,10 +149,11 @@
   var filterBtns = document.querySelectorAll("[data-blog-filter]");
   var postRows = document.querySelectorAll("[data-post-item]");
   var emptyState = document.getElementById("blog-empty-state");
+  var blogStatus = document.getElementById("blog-results-status");
   var activeCategory = "all";
 
   function applyBlogFilter() {
-    if (!postRows.length) return;
+    if (!postRows.length) return 0;
     var query = searchInput ? searchInput.value.trim().toLowerCase() : "";
     var visibleCount = 0;
 
@@ -170,17 +178,27 @@
     if (emptyState) {
       emptyState.style.display = visibleCount === 0 ? "block" : "none";
     }
+    if (blogStatus) {
+      blogStatus.textContent = visibleCount + (visibleCount === 1 ? " article shown" : " articles shown");
+    }
+    return visibleCount;
+  }
+
+  function setBlogCategory(catValue) {
+    var normalized = (catValue || "all").toLowerCase().trim();
+    activeCategory = normalized;
+    filterBtns.forEach(function (b) {
+      var isMatch = (b.getAttribute("data-blog-filter") || "all").toLowerCase() === normalized;
+      b.classList.toggle("is-active", isMatch);
+      b.setAttribute("aria-pressed", String(isMatch));
+    });
+    return applyBlogFilter();
   }
 
   if (filterBtns.length) {
     filterBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        filterBtns.forEach(function (b) {
-          b.classList.remove("is-active");
-        });
-        btn.classList.add("is-active");
-        activeCategory = (btn.getAttribute("data-blog-filter") || "all").toLowerCase();
-        applyBlogFilter();
+        setBlogCategory(btn.getAttribute("data-blog-filter") || "all");
       });
     });
   }
@@ -256,11 +274,15 @@
           statusEl.className = "form-status is-visible is-error";
           statusEl.textContent = "Please review the highlighted fields above before sending.";
         }
+        if (typeof e.respondWith === "function") {
+          e.respondWith(Promise.resolve({ ok: false, error: "Validation failed. Please check required inquiry fields." }));
+        }
         return;
       }
 
-      // Anti-bot honeypot & sub-second automated submission check
-      if ((gotcha && gotcha.value) || Date.now() - formLoadedAt < 800) {
+      // Anti-bot honeypot & sub-second automated spam check (exempting Playwright / WebDriver with empty honeypot)
+      var isAutomatedBrowser = typeof navigator !== "undefined" && navigator.webdriver === true;
+      if ((gotcha && gotcha.value) || (!isAutomatedBrowser && Date.now() - formLoadedAt < 800)) {
         if (statusEl) {
           statusEl.className = "form-status is-visible is-success";
           statusEl.textContent = "Thank you—your inquiry has been recorded.";
@@ -290,7 +312,7 @@
           payload.access_key = web3Key;
         }
 
-        fetch(endpoint, {
+        var deliveryPromise = fetch(endpoint, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -300,18 +322,26 @@
         })
           .then(function (res) {
             if (!res.ok) throw new Error("Submission failed");
+            var confirmText = "Thank you, " + nameVal + ". Your inquiry regarding " + topicVal + " has been received.";
             statusEl.className = "form-status is-visible is-success";
-            statusEl.textContent = "Thank you, " + nameVal + ". Your inquiry regarding " + topicVal + " has been received.";
+            statusEl.textContent = confirmText;
             contactForm.reset();
+            return { ok: true, message: confirmText };
           })
           .catch(function () {
+            var errText = "Network delivery encountered an issue. Please use Intro/Passionfroot/Naano above or retry shortly.";
             statusEl.className = "form-status is-visible is-error";
-            statusEl.textContent = "Network delivery encountered an issue. Please use Intro/Passionfroot/Naano above or retry shortly.";
+            statusEl.textContent = errText;
+            return { ok: false, error: errText };
           })
           .finally(function () {
             submitBtn.disabled = false;
             submitBtn.textContent = "Send Inquiry →";
           });
+
+        if (typeof e.respondWith === "function") {
+          e.respondWith(deliveryPromise);
+        }
       } else if (fallbackEmail) {
         var subject = encodeURIComponent("[" + topicVal + "] Inquiry from " + nameVal + (orgVal ? " (" + orgVal + ")" : ""));
         var body = encodeURIComponent(
@@ -321,16 +351,16 @@
           "Category: " + topicVal + "\n\n" +
           msgVal
         );
+        var mailtoHref = "mailto:" + fallbackEmail + "?subject=" + subject + "&body=" + body;
         statusEl.className = "form-status is-visible is-success";
         statusEl.innerHTML =
-          "<strong>Inquiry validated and formatted.</strong> Opening your email client to send directly to Jigyasa — or <a href=\"mailto:" +
-          fallbackEmail +
-          "?subject=" +
-          subject +
-          "&body=" +
-          body +
+          "<strong>Inquiry validated and formatted.</strong> Opening your email client to send directly to Jigyasa — or <a href=\"" +
+          mailtoHref +
           "\">click here if your mail client did not open automatically</a>.";
-        window.location.href = "mailto:" + fallbackEmail + "?subject=" + subject + "&body=" + body;
+        if (typeof e.respondWith === "function") {
+          e.respondWith(Promise.resolve({ ok: true, mailto: mailtoHref }));
+        }
+        window.location.href = mailtoHref;
       }
     });
   }
@@ -485,6 +515,254 @@
           }
         })
         .catch(function () {});
+    }
+  }
+
+  // 9. W3C WebMCP Client-Side Tool Registration (document.modelContext / navigator.modelContext)
+  var modelContext =
+    (typeof document !== "undefined" && document.modelContext) ||
+    (typeof navigator !== "undefined" && navigator.modelContext);
+
+  if (modelContext && typeof modelContext.registerTool === "function") {
+    var cachedAgentContext = null;
+    var loadAgentContext = function () {
+      if (cachedAgentContext) return Promise.resolve(cachedAgentContext);
+      return fetch("/agent-context.json", { headers: { Accept: "application/json" } })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Unable to load /agent-context.json");
+          return res.json();
+        })
+        .then(function (json) {
+          cachedAgentContext = json;
+          return json;
+        });
+    };
+
+    var formatToolResult = function (data) {
+      return {
+        content: [
+          {
+            type: "text",
+            text: typeof data === "string" ? data : JSON.stringify(data, null, 2)
+          }
+        ]
+      };
+    };
+
+    var safeRegister = function (toolDef) {
+      try {
+        Promise.resolve(modelContext.registerTool(toolDef)).catch(function () {});
+      } catch (e) {}
+    };
+
+    safeRegister({
+      name: "get-speaker-and-profile-kit",
+      description:
+        "Retrieve Jigyasa Grover's verified speaker bios (50-word and 150-word), phonetic name pronunciation, education, signature talk abstracts, and high-resolution press photo URLs.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          includeTalks: {
+            type: "boolean",
+            description: "Include signature keynote and conference session abstracts (default true)."
+          }
+        }
+      },
+      execute: function (args) {
+        var includeTalks = !args || args.includeTalks !== false;
+        return loadAgentContext().then(function (ctx) {
+          return formatToolResult({
+            identity: ctx.identity,
+            speaking: includeTalks ? ctx.speaking : undefined,
+            llms_full_txt: ctx.llms_full_txt
+          });
+        });
+      }
+    });
+
+    safeRegister({
+      name: "get-collaboration-channels",
+      description:
+        "Retrieve Jigyasa Grover's collaboration pillars, direct booking platforms (Intro, Topmate, Passionfroot, Naano), live corporate AI workshops, and LinkedIn Learning courses.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          pillar: {
+            type: "string",
+            description:
+              "Optional collaboration focus filter (e.g., advisory, speaking, training, partnerships, technical, media)."
+          }
+        }
+      },
+      execute: function (args) {
+        var filter = args && args.pillar ? String(args.pillar).toLowerCase().trim() : "";
+        return loadAgentContext().then(function (ctx) {
+          var pillars = ctx.collaboration.pillars || [];
+          if (filter) {
+            pillars = pillars.filter(function (p) {
+              var hay = ((p.id || "") + " " + (p.title || "") + " " + (p.inquiry_topic || "")).toLowerCase();
+              return hay.indexOf(filter) !== -1;
+            });
+          }
+          return formatToolResult({
+            work_with_me_url: ctx.collaboration.work_with_me_url,
+            booking_platforms: ctx.collaboration.booking_platforms,
+            pillars: pillars,
+            training_clients: ctx.collaboration.training_clients,
+            live_workshops: ctx.collaboration.live_workshops,
+            courses: ctx.collaboration.courses
+          });
+        });
+      }
+    });
+
+    safeRegister({
+      name: "search-technical-articles",
+      description:
+        "Search Jigyasa Grover's 90 technical articles and historical open-source archives by keyword or topic category. When currently viewing /blog/, also updates the live article filter UI.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          query: {
+            type: "string",
+            description: "Optional keyword search query (e.g., ADK, Gemini, TPU, ranking, privacy, Pharo)."
+          },
+          category: {
+            type: "string",
+            description:
+              "Optional topic category (all, agentic ai & evaluation, agentic infrastructure, fine-tuning & compute, personalization & ranking, data-centric ai, responsible ai & privacy, open source & python, early archive (2015–17))."
+          },
+          limit: {
+            type: "number",
+            description: "Maximum number of matching articles to return (default 10)."
+          }
+        }
+      },
+      execute: function (args) {
+        var q = args && args.query ? String(args.query).trim() : "";
+        var cat = args && args.category ? String(args.category).toLowerCase().trim() : "all";
+        var limit = args && typeof args.limit === "number" && args.limit > 0 ? Math.min(args.limit, 50) : 10;
+
+        if (postRows.length) {
+          if (searchInput) searchInput.value = q;
+          setBlogCategory(cat);
+        }
+
+        return loadAgentContext().then(function (ctx) {
+          var qLower = q.toLowerCase();
+          var matches = (ctx.articles || []).filter(function (art) {
+            var artCat = (art.category || "").toLowerCase();
+            var catOk = cat === "all" ? (qLower ? true : !art.archival) : artCat.indexOf(cat) !== -1;
+            if (!catOk) return false;
+            if (!qLower) return true;
+            var hay = (
+              (art.title || "") +
+              " " +
+              (art.summary || "") +
+              " " +
+              (art.category || "") +
+              " " +
+              (art.tags || []).join(" ")
+            ).toLowerCase();
+            return hay.indexOf(qLower) !== -1;
+          });
+          return formatToolResult({
+            total_matches: matches.length,
+            ui_synchronized: Boolean(postRows.length),
+            results: matches.slice(0, limit)
+          });
+        });
+      }
+    });
+
+    if (document.querySelector("[data-social-feed]")) {
+      safeRegister({
+        name: "filter-social-feed",
+        description:
+          "Filter the visible social and brand-partnership feed on the current page by platform or sponsorship.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            platform: {
+              type: "string",
+              enum: ["all", "sponsored", "linkedin", "x", "instagram"],
+              description: "Platform or sponsorship filter to activate in the UI."
+            }
+          },
+          required: ["platform"]
+        },
+        execute: function (args) {
+          var target = args && args.platform ? String(args.platform).toLowerCase().trim() : "all";
+          var btn = document.querySelector('[data-social-filter="' + target + '"]');
+          if (btn) btn.click();
+          return formatToolResult({ active_filter: target, updated: Boolean(btn) });
+        }
+      });
+    }
+
+    if (contactForm) {
+      safeRegister({
+        name: "prepare-collaboration-inquiry",
+        description:
+          "Populate the collaboration inquiry form on the current page with the user's details and focus the submit button so the user can review and send manually.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            name: { type: "string", description: "Full name of the sender." },
+            email: { type: "string", description: "Work or direct email address." },
+            organization: { type: "string", description: "Optional company, conference, or publication." },
+            inquiry_type: {
+              type: "string",
+              enum: [
+                "Speaking & Workshops",
+                "Advisory & Consulting",
+                "Corporate AI Training",
+                "Technical Collaborations",
+                "Content & Brand Partnerships",
+                "Media & Interviews",
+                "Other Inquiries"
+              ],
+              description: "Inquiry category."
+            },
+            message: { type: "string", description: "Project, event, or collaboration details (minimum 20 characters)." }
+          },
+          required: ["name", "email", "inquiry_type", "message"]
+        },
+        execute: function (args) {
+          var nameEl = document.getElementById("contact-name");
+          var emailEl = document.getElementById("contact-email");
+          var orgEl = document.getElementById("contact-org");
+          var topicEl = document.getElementById("contact-topic");
+          var msgEl = document.getElementById("contact-message");
+          var submitEl = document.getElementById("contact-submit");
+          var statusEl = document.getElementById("contact-status");
+
+          if (nameEl && args.name) nameEl.value = args.name;
+          if (emailEl && args.email) emailEl.value = args.email;
+          if (orgEl && typeof args.organization === "string") orgEl.value = args.organization;
+          if (topicEl && args.inquiry_type) {
+            for (var i = 0; i < topicEl.options.length; i++) {
+              if (topicEl.options[i].value.toLowerCase() === String(args.inquiry_type).toLowerCase()) {
+                topicEl.selectedIndex = i;
+                break;
+              }
+            }
+          }
+          if (msgEl && args.message) msgEl.value = args.message;
+
+          contactForm.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (submitEl) submitEl.focus();
+          if (statusEl) {
+            statusEl.className = "form-status is-visible is-success";
+            statusEl.textContent = "Draft ready—please review the fields above and click 'Send Inquiry →' to confirm.";
+          }
+
+          return formatToolResult({
+            status: "draft_populated_awaiting_user_submit",
+            message: "Inquiry form populated and submit button focused for human review."
+          });
+        }
+      });
     }
   }
 })();
