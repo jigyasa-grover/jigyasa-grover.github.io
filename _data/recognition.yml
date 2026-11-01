@@ -153,7 +153,7 @@ visual_highlights:
     image: "/assets/images/opt/codemotion_speaker_2026.jpg"
     width: 576
     height: 1024
-    focal: "center 62%"
+    focal: "center 44%"
     url: "https://conferences.codemotion.com/"
   - title: "Google Gemini Early Access Dinner (2026)"
     subtitle: "Google Developer Advisory Board & AI/ML GDE Ecosystem"
