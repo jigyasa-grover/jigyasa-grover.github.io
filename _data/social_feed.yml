@@ -52,7 +52,7 @@ posts:
     image: "/assets/images/opt/codemotion_speaker_2026.jpg"
     width: 576
     height: 1024
-    focal: "center 27%"
+    focal: "center 59%"
     excerpt: "Flew to Milan to stand on one of Europe's largest developer stages at Codemotion—and tell a packed auditorium when NOT to build an AI agent."
     tag: "Codemotion Milan"
     cta: "Watch on Instagram"
