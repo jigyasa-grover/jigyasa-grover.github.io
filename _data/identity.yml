@@ -138,9 +138,9 @@ career:
     highlights:
       - "Led dynamic feature hydration infrastructure, TwHIN graph embedding integration, and post-ATT privacy-preserving serving architectures achieving a 70% infrastructure cost reduction."
       - "Founded the Women@ML Business Resource Group and mentored engineers across ads ranking and cortex ML teams."
-  - role: "Software Engineering Intern — Ads Signal Monitoring"
-    org: "Facebook (Meta)"
-    period: "Jun 2018 – Sep 2018"
+  - role: "Software Engineering — Ads Signal Monitoring"
+    org: "Meta (Facebook)"
+    period: "2018"
     location: "Menlo Park, CA"
     summary: "Built real-time statistical anomaly detection systems on live Facebook Pixel conversion streams."
     highlights:
