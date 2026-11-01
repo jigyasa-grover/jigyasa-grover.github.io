@@ -461,4 +461,30 @@
         .catch(function () {});
     }
   });
+
+  // 8. Live GitHub Profile Stat Hydration on /projects/
+  var ghRoot = document.querySelector("[data-github-profile]");
+  if (ghRoot && window.fetch) {
+    var ghUser = ghRoot.getAttribute("data-github-profile");
+    if (ghUser) {
+      fetch("https://api.github.com/users/" + encodeURIComponent(ghUser), {
+        headers: { Accept: "application/vnd.github+json" }
+      })
+        .then(function (res) {
+          return res.ok ? res.json() : null;
+        })
+        .then(function (data) {
+          if (!data) return;
+          var reposEl = ghRoot.querySelector('[data-gh-stat="repos"]');
+          var followersEl = ghRoot.querySelector('[data-gh-stat="followers"]');
+          if (reposEl && typeof data.public_repos === "number" && data.public_repos >= 73) {
+            reposEl.textContent = data.public_repos + "+";
+          }
+          if (followersEl && typeof data.followers === "number" && data.followers >= 425) {
+            followersEl.textContent = data.followers.toLocaleString() + "+";
+          }
+        })
+        .catch(function () {});
+    }
+  }
 })();

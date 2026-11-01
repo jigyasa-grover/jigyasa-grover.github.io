@@ -62,9 +62,16 @@ Pronunciation: JIG-yah-suh GROH-ver
 {% for r in site.data.publications.research_publications %}- **{{ r.title }}** ({{ r.venue }}, {{ r.year }}): {{ r.summary }} URL: {{ r.doi_url }}
 {% endfor %}
 
-## 8. Selected AI & Open-Source Engineering Projects
+## 8. GitHub Profile & Selected AI / Open-Source Engineering Projects
 
+- **GitHub Profile:** {{ site.data.github.url }} ({{ site.data.github.handle }}, active since {{ site.data.github.active_since }}; 73+ public repositories, 180+ authored pull requests, 425+ followers; Achievements: {{ site.data.github.achievements | join: ", " }})
+- **GitHub Organizations:** {% for o in site.data.github.organizations %}@{{ o.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+
+### Original Systems & Benchmarks
 {% for proj in site.data.projects %}- **{{ proj.title }}** ({{ proj.year }} · {{ proj.category }}): {{ proj.summary }}{% if proj.post_url %} Write-up: https://jigyasa-grover.github.io{{ proj.post_url }}{% endif %}{% if proj.live_url %} Live Demo: {{ proj.live_url }}{% endif %}{% if proj.repo_url %} Repo: {{ proj.repo_url }}{% endif %}
+{% endfor %}
+### Pinned Upstream Open-Source & Official Course Repositories
+{% for u in site.data.github.pinned_upstream %}- **{{ u.repo }}** ({{ u.role }} · {{ u.stack }}): {{ u.summary }} — {{ u.url }}
 {% endfor %}
 
 ## 9. Signature Speaking Topics & Global Conferences

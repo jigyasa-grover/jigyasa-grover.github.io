@@ -116,6 +116,18 @@
   repo_url: "https://github.com/jigyasa-grover/Hyper-Personalized-Ad-Campaigns-using-Generative-AI-Quick-Demo-using-Gemini-Pro-Vision"
   post_url: "/HyperPersonalizedAdsGenAI/"
 
+- id: "neural-style-gan-sketches"
+  title: "GAN Sketch Shading & VGG-19 Neural Style Transfer"
+  year: "2018"
+  category: "Deep Learning & Computer Vision"
+  featured: false
+  summary: "Two-stage generative pipeline at UC San Diego combining adaptive line-art extraction, pixel-level GAN colorization, and VGG-19 neural style transfer."
+  stack:
+    - "Python"
+    - "GANs"
+    - "VGG-19 Style Transfer"
+  repo_url: "https://github.com/jigyasa-grover/Imitating-Artistic-Style-on-Automatically-Curated-and-Shaded-Sketches"
+
 - id: "cormas-squick-pharo"
   title: "CORMAS Spatial UI & sQuick in Pharo Smalltalk"
   year: "2015–2017"
@@ -128,3 +140,4 @@
     - "CORMAS"
   live_url: "https://jigyasa-grover.github.io/sQuick_new/"
   repo_url: "https://github.com/jigyasa-grover/CORMAS-Pharo"
+  post_url: "/paris-france-to-maribor-slovenia-and-beyond-chronicles-of-cormas-pharo/"

@@ -3,60 +3,126 @@ layout: page
 title: "Selected Engineering Work & Open Source"
 heading: "Agentic AI systems, TPU fine-tuning, evaluation harnesses, and open-source tools."
 eyebrow: "Engineering Portfolio"
-lead: "Runnable repositories, live demonstrations, and architectural postmortems."
+lead: "Runnable repositories, upstream open-source contributions, course labs, and architectural postmortems."
 hero_cta_label: "GitHub (@jigyasa-grover) ↗"
 hero_cta_url: "https://github.com/jigyasa-grover"
-seo_title: "Selected AI & ML Engineering Projects — Jigyasa Grover"
-description: "Open-source AI systems by Jigyasa Grover: Proof of Work, Startup on a Shoestring, Critic's Cut (Google ADK), Gemma 3 TPU Fine-Tuning & AI Racing Coach."
+seo_title: "Selected AI & Open-Source Engineering Projects — Jigyasa Grover"
+description: "73+ GitHub repositories & 180+ open-source PRs by Jigyasa Grover: Google ADK agents, Gemma 3 TPU fine-tuning, AI Racing Coach, FOSSASIA & LinkedIn Learning labs."
 permalink: /projects/
 redirect_from:
   - /projectsDepricated/
 ---
+{% assign gh = site.data.github %}
 
-<div class="project-grid content-section">
-  {% for proj in site.data.projects %}
-  <article class="project-dossier" id="{{ proj.id }}">
+<!-- GitHub Public Profile Snapshot -->
+<section class="content-section" aria-labelledby="github-snapshot-heading">
+  <div class="section-header">
     <div>
-      <div class="project-dossier__meta">
-        <span>{{ proj.category }}</span>
-        <span>{{ proj.year }}</span>
-      </div>
-      <h2 class="project-dossier__title">
-        {% if proj.post_url %}
-          <a href="{{ proj.post_url }}">{{ proj.title }}</a>
-        {% elsif proj.live_url %}
-          <a href="{{ proj.live_url }}" target="_blank" rel="noopener">{{ proj.title }} ↗</a>
-        {% else %}
-          <a href="{{ proj.repo_url }}" target="_blank" rel="noopener">{{ proj.title }} ↗</a>
-        {% endif %}
-      </h2>
-      <p class="project-dossier__summary">{{ proj.summary }}</p>
+      <div class="eyebrow">GitHub Footprint · {{ gh.handle }} · Active Since {{ gh.active_since }}</div>
+      <h2 id="github-snapshot-heading">Open-source &amp; engineering snapshot</h2>
     </div>
+    <a class="section-header__link" href="{{ gh.url }}" target="_blank" rel="noopener">View GitHub Profile ↗</a>
+  </div>
 
+  <div class="proof-ledger proof-ledger--inline" data-github-profile="jigyasa-grover">
+    <div class="proof-ledger__grid">
+      {% for m in gh.metrics %}
+      <div class="proof-item">
+        <div class="proof-item__value" {% if m.id %}data-gh-stat="{{ m.id }}"{% endif %}>{{ m.value }}</div>
+        <div class="proof-item__label">{{ m.label }}</div>
+        <p class="proof-item__detail">{{ m.detail }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="callout-strip">
+    <div class="eyebrow">GitHub Organizations &amp; Ecosystem Memberships</div>
+    <div class="partner-strip">
+      {% for org in gh.organizations %}
+        <span><a class="link-inherit" href="{{ org.url }}" target="_blank" rel="noopener">@{{ org.name }}</a>{% unless forloop.last %} ·{% endunless %}</span>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Original Systems & Prototypes -->
+<section class="content-section--bordered" aria-labelledby="selected-systems-heading">
+  <div class="eyebrow">Original Codebases &amp; Benchmarks</div>
+  <h2 id="selected-systems-heading" class="mb-lg">Selected AI &amp; ML systems</h2>
+
+  <div class="project-grid">
+    {% for proj in site.data.projects %}
+    <article class="project-dossier" id="{{ proj.id }}">
+      <div>
+        <div class="project-dossier__meta">
+          <span>{{ proj.category }}</span>
+          <span>{{ proj.year }}</span>
+        </div>
+        <h3 class="project-dossier__title">
+          {% if proj.post_url %}
+            <a href="{{ proj.post_url }}">{{ proj.title }}</a>
+          {% elsif proj.live_url %}
+            <a href="{{ proj.live_url }}" target="_blank" rel="noopener">{{ proj.title }} ↗</a>
+          {% else %}
+            <a href="{{ proj.repo_url }}" target="_blank" rel="noopener">{{ proj.title }} ↗</a>
+          {% endif %}
+        </h3>
+        <p class="project-dossier__summary">{{ proj.summary }}</p>
+      </div>
+
+      <div>
+        <div class="tag-row">
+          {% for tech in proj.stack %}
+            <span class="mono-tag">{{ tech }}</span>
+          {% endfor %}
+        </div>
+        <div class="dossier-links">
+          {% if proj.post_url %}<a href="{{ proj.post_url }}">Write-Up →</a>{% endif %}
+          {% if proj.live_url %}<a href="{{ proj.live_url }}" target="_blank" rel="noopener">Live Demo ↗</a>{% endif %}
+          {% if proj.repo_url %}<a href="{{ proj.repo_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Pinned Upstream FOSS & Course Companion Repositories -->
+<section class="content-section--bordered" aria-labelledby="upstream-foss-heading">
+  <div class="section-header">
     <div>
-      <div class="tag-row">
-        {% for tech in proj.stack %}
-          <span class="mono-tag">{{ tech }}</span>
-        {% endfor %}
-      </div>
-      <div class="dossier-links">
-        {% if proj.post_url %}<a href="{{ proj.post_url }}">Write-Up →</a>{% endif %}
-        {% if proj.live_url %}<a href="{{ proj.live_url }}" target="_blank" rel="noopener">Live Demo ↗</a>{% endif %}
-        {% if proj.repo_url %}<a href="{{ proj.repo_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
-      </div>
+      <div class="eyebrow">Pinned on GitHub · Upstream FOSS &amp; Course Curriculum</div>
+      <h2 id="upstream-foss-heading">Upstream contributions &amp; official course labs</h2>
     </div>
-  </article>
-  {% endfor %}
-</div>
+    <a class="section-header__link" href="/teaching/">All AI courses &amp; workshops →</a>
+  </div>
 
-<section class="contact-panel split-panel" aria-labelledby="github-more-heading">
+  <div class="ledger">
+    {% for item in gh.pinned_upstream %}
+    <div class="ledger-row">
+      <div class="ledger-row__date">
+        <div>{{ item.role }}</div>
+        <div class="ledger-row__meta-sub">{{ item.stack }}</div>
+      </div>
+      <div>
+        <div class="ledger-row__title"><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.repo }} ↗</a></div>
+        <p class="ledger-row__sub">{{ item.summary }}</p>
+      </div>
+      <div class="ledger-row__aside"><a class="section-header__link" href="{{ item.url }}" target="_blank" rel="noopener">Repo ↗</a></div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="contact-panel split-panel mt-xl" aria-labelledby="github-more-heading">
   <div>
-    <div class="eyebrow mb-xs">72+ Public Repositories</div>
-    <h2 id="github-more-heading" class="split-panel__title">More code, course labs &amp; open-source work</h2>
-    <p class="split-panel__desc">Explore Google ADK course labs, Python ML benchmarks, and Pharo Smalltalk tools on GitHub.</p>
+    <div class="eyebrow mb-xs">Arctic Code Vault Contributor · 73+ Public Repositories</div>
+    <h2 id="github-more-heading" class="split-panel__title">Explore all repositories, notebooks &amp; open-source commits</h2>
+    <p class="split-panel__desc">Browse Python ML benchmarks, Google ADK agent workflows, Vertex AI evaluation notebooks, and Pharo Smalltalk packages on GitHub.</p>
   </div>
   <div class="btn-group">
-    <a class="btn btn--primary" href="https://github.com/jigyasa-grover" target="_blank" rel="noopener">GitHub Profile ↗</a>
+    <a class="btn btn--primary" href="{{ gh.url }}" target="_blank" rel="noopener">GitHub Profile ↗</a>
     <a class="btn btn--secondary" href="/work-with-me/?topic=Technical%20Collaborations#contact">Collaborate →</a>
   </div>
 </section>

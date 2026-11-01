@@ -13,6 +13,7 @@ This repository powers **[jigyasa-grover.github.io](https://jigyasa-grover.githu
   - `courses.yml`: LinkedIn Learning / Udacity courses, live corporate workshops, and `training_clients`.
   - `speaking.yml`: Featured Google I/O keynote, signature talk abstracts, and conference appearances.
   - `projects.yml`: Featured and archival engineering systems and open-source repos.
+  - `github.yml`: Public GitHub profile metrics, achievements, organizations, and pinned upstream FOSS / course repos.
   - `publications.yml`: *Sculpting Data for ML* monograph, Springer chapters, ACM papers, and editorial reviewing.
   - `recognition.yml`: 13× awards, media features, visual highlights gallery (with per-photo `focal` coordinates), and brand partners.
   - `updates.yml`: Curated high-profile press, award, keynote & career milestones (2017–2026).
