@@ -10,7 +10,7 @@ mathjax: true
 
 <br><br>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.files.wordpress.com/2024/03/huge.png"><img src="https://jigyasagrover.files.wordpress.com/2024/03/huge.png?w=1024" alt="" class="wp-image-3366"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/huge-d46b5d35.jpg"><img src="/assets/images/wp-archive/2024/huge-d46b5d35.jpg" alt="" class="wp-image-3366"/></a></figure>
 
 <br><br>
 <h3 class="wp-block-heading"><strong>What is Gemini Pro? </strong></h3>
@@ -86,19 +86,19 @@ batch size: 32
 </code></pre>
 
 <br><br>
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.files.wordpress.com/2024/03/image-3.png"><img src="https://jigyasagrover.files.wordpress.com/2024/03/image-3.png?w=1024" alt="" class="wp-image-3355"/></a><figcaption class="wp-element-caption"><em>Check out this <a href="https://ai.google.dev/docs/model_tuning_guidance">guide</a> by Google for more on tuning the text model behind the Gemini API text service. </em></figcaption></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/image-3-0a60acfe.png"><img src="/assets/images/wp-archive/2024/image-3-0a60acfe.png" alt="" class="wp-image-3355"/></a><figcaption class="wp-element-caption"><em>Check out this <a href="https://ai.google.dev/docs/model_tuning_guidance">guide</a> by Google for more on tuning the text model behind the Gemini API text service. </em></figcaption></figure>
 
 <br><br>
 <p>It took ~34 minutes to fine-tune the model with a learning rate of 0.00002. Here is a snapshot of the loss vs epoch curve and other details for the model `tunedModels/news-headline--category-generator-pvv2y3`.</p>
 
-<figure class="wp-block-image size-full is-style-default"><a href="https://jigyasagrover.files.wordpress.com/2024/03/image.png"><img src="https://jigyasagrover.files.wordpress.com/2024/03/image.png" alt="" class="wp-image-3349"/></a></figure>
+<figure class="wp-block-image size-full is-style-default"><a href="/assets/images/wp-archive/2024/image-98a0d57b.png"><img src="/assets/images/wp-archive/2024/image-98a0d57b.png" alt="" class="wp-image-3349"/></a></figure>
 
 <br><br>
 <p>Here are some examples in both structured and freeform prompts where it is creatively generating headlines for the given snippet and also providing relevant categories the news can be bucketed into. </p>
 
-<figure class="wp-block-image size-full"><a href="https://jigyasagrover.files.wordpress.com/2024/03/image-1.png"><img src="https://jigyasagrover.files.wordpress.com/2024/03/image-1.png" alt="" class="wp-image-3351"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/assets/images/wp-archive/2024/image-1-0a0ab715.png"><img src="/assets/images/wp-archive/2024/image-1-0a0ab715.png" alt="" class="wp-image-3351"/></a></figure>
 
-<figure class="wp-block-image size-full"><a href="https://jigyasagrover.files.wordpress.com/2024/03/image-2.png"><img src="https://jigyasagrover.files.wordpress.com/2024/03/image-2.png" alt="" class="wp-image-3353"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/assets/images/wp-archive/2024/image-2-56dfd3a7.png"><img src="/assets/images/wp-archive/2024/image-2-56dfd3a7.png" alt="" class="wp-image-3353"/></a></figure>
 
 <br><br>
 <p>In short, we can soon bid farewell to the dreaded news copywriter's block with Gemini Pro, powered by supervised fine-tuning. This blog has explored how this AI marvel is transforming the landscape of news headline generation, bringing unprecedented efficiency to the table. </p>

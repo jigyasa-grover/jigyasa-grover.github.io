@@ -311,7 +311,23 @@ def main() -> None:
         if "adsbygoogle" in raw:
             errors.append(f"ADSENSE SCRIPT FOUND in {rel_path}")
 
-        is_post = any(rel_path.startswith(p) for p in EXPECTED_POST_URLS)
+        standalone_paths = {
+            "/index.html",
+            "/about.html",
+            "/404.html",
+            "/advisory/index.html",
+            "/blog/index.html",
+            "/experience/index.html",
+            "/highlights/index.html",
+            "/partnerships/index.html",
+            "/press/index.html",
+            "/projects/index.html",
+            "/publications/index.html",
+            "/speaking/index.html",
+            "/teaching/index.html",
+            "/work-with-me/index.html",
+        }
+        is_post = rel_path not in standalone_paths
         if not is_post and "rishabhmisra" in raw.lower():
             errors.append(f"LEFTOVER TEMPLATE REFERENCE 'rishabhmisra' in {rel_path}")
 
@@ -379,6 +395,11 @@ def main() -> None:
         robots_meta = next((m.get("content", "") for m in parser.metas if m.get("name") == "robots"), "")
         if rel_path in ("/404.html", "/archive/index.html") and "noindex" not in robots_meta:
             errors.append(f"{rel_path} MISSING noindex robots meta tag")
+        if "post-archival-note" in raw:
+            if "noindex" not in robots_meta:
+                errors.append(f"ARCHIVAL POST {rel_path} MISSING noindex robots meta tag")
+            if sitemap_path.is_file() and canon in sm_raw:
+                errors.append(f"ARCHIVAL POST {canon} SHOULD NOT APPEAR IN sitemap.xml")
 
     # 6. Verify booking platform links on /work-with-me/
     wwm_path = SITE_DIR / "work-with-me" / "index.html"

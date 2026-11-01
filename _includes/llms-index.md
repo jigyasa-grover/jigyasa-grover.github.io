@@ -17,7 +17,7 @@ For complete structured biographical, career, speaking, course, publication, and
 - [Selected Engineering Projects](https://jigyasa-grover.github.io/projects/): Open-source agentic AI systems, TPU fine-tuning, edge/cloud racing telemetry, and RAG benchmarks.
 - [Books & Publications](https://jigyasa-grover.github.io/publications/): *Sculpting Data for ML* (ISBN 979-8585463570), *Enterprise LLM Deployment Readiness* (SSRN 2026), Springer chapters, and ACM research.
 - [Press, Media & Speaker Kit](https://jigyasa-grover.github.io/press/): Forbes, Business Insider, VentureBeat, Observer, 13+ awards ledger, copyable bios, and press photos.
-- [Technical Blog](https://jigyasa-grover.github.io/blog/): 24 in-depth technical articles and tutorials.
+- [Technical Blog](https://jigyasa-grover.github.io/blog/): 33 in-depth technical articles and essays (plus 57 self-hosted 2015–2017 open-source archive entries at `/archive/`).
 
 ## Direct Collaboration & Booking Platforms
 
@@ -28,5 +28,5 @@ For complete structured biographical, career, speaking, course, publication, and
 
 ## Technical Articles & Essays
 
-{% for post in site.posts %}{% unless post.url == "/archive/" %}{% assign m = site.data.posts_meta[post.url] %}- [{{ post.title }}](https://jigyasa-grover.github.io{{ post.url }}) ({{ post.date | date: "%Y-%m-%d" }}){% if m.summary %}: {{ m.summary }}{% endif %}
+{% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign m = site.data.posts_meta[post.url] %}- [{{ post.title }}](https://jigyasa-grover.github.io{{ post.url }}) ({{ post.date | date: "%Y-%m-%d" }}){% if m.summary %}: {{ m.summary }}{% endif %}
 {% endunless %}{% endfor %}

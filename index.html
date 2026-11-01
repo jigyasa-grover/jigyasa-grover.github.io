@@ -288,13 +288,13 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
         <div class="eyebrow">Technical Journal</div>
         <h2 id="writing-heading">Recent essays &amp; benchmarks</h2>
       </div>
-      <a class="section-header__link" href="/blog/">All 24 technical articles →</a>
+      <a class="section-header__link" href="/blog/">All 33 technical articles →</a>
     </div>
 
     <div class="ledger">
       {% assign post_count = 0 %}
       {% for post in site.posts %}
-        {% if post.url != "/archive/" and post_count < 4 %}
+        {% if post.url != "/archive/" and post.archival != true and post_count < 4 %}
           {% assign post_count = post_count | plus: 1 %}
           {% assign pmeta = site.data.posts_meta[post.url] %}
           <div class="ledger-row">

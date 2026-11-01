@@ -28,7 +28,7 @@ mathjax: true
 
 <p>By leveraging Gemma's capabilities, we can prototype interactive narratives that respond intelligently to user prompts, offering a personalized storytelling experience. Whether deployed in educational settings to elucidate historical events or within gaming environments to create dynamic quests, the versatility of Gemma-based RAG enriches the user experience through immersive, responsive storytelling.</p>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/07/book-buddy.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/07/book-buddy.png?w=1024" alt="" class="wp-image-3420"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/book-buddy-af714930.png"><img src="/assets/images/wp-archive/2024/book-buddy-af714930.png" alt="" class="wp-image-3420"/></a></figure>
 
 <h2 class="wp-block-heading">Setting up the environment 🌳</h2>
 

@@ -10,7 +10,7 @@ mathjax: true
 
 <p>And for a bit of fun, add <strong>Gemini Code Assist</strong>, an AI‑powered coding buddy, and you get the ultimate combo: your code executes on a Colab GPU while Gemini suggests optimizations, helper functions, or creative tweaks - letting you focus on experimentation, not environment setup!</p>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/supercharging-vs-code-vibe-coding-with-gemini-code-assist-new-google-colab-extension-2.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/supercharging-vs-code-vibe-coding-with-gemini-code-assist-new-google-colab-extension-2.png?w=1024" alt="" class="wp-image-3617"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/supercharging-vs-code-vibe-coding-with-gemini-code-assis-943b0e18.jpg"><img src="/assets/images/wp-archive/2025/supercharging-vs-code-vibe-coding-with-gemini-code-assis-943b0e18.jpg" alt="" class="wp-image-3617"/></a></figure>
 
 <p><br>Let’s see why the <a href="https://developers.googleblog.com/en/google-colab-is-coming-to-vs-code/">Colab extension for VS Code</a> matters, how to install and use it, the real advantages (and caveats), and how I used it - with a sprinkle of AI creativity thanks to Gemini.</p>
 
@@ -34,7 +34,7 @@ mathjax: true
 </ul>
 <p>This setup turns notebooks into maintainable, production-ready projects without losing the flexibility of Colab.</p>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/colab-hearts-vsc2x.original.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/colab-hearts-vsc2x.original.png?w=640" alt="" class="wp-image-3619"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/colab-hearts-vsc2x-original-bfc1d64b.png"><img src="/assets/images/wp-archive/2025/colab-hearts-vsc2x-original-bfc1d64b.png" alt="" class="wp-image-3619"/></a></figure>
 
 <h2 class="wp-block-heading">Installing + Using Colab VS Code Extension</h2>
 <ul>
@@ -56,7 +56,7 @@ mathjax: true
 </video>
 {% endraw %}
 
-<!-- <figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png?w=1024" alt="" class="wp-image-3596"/></a></figure>
+<!-- <figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/screenshot-2025-11-09-at-7-47-13-am-86468019.png"><img src="/assets/images/wp-archive/2025/screenshot-2025-11-09-at-7-47-13-am-86468019.png" alt="" class="wp-image-3596"/></a></figure>
 <p>💡 <em>Pro Tip:</em> Colab VMs stay alive only while active or within ~1 hour of inactivity. Total session lifetimes vary by machine type, so for long-running experiments, you may need to reconnect.</p> -->
 
 <br>
@@ -74,7 +74,7 @@ mathjax: true
 </ul>
 <br>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-7.47.13-am.png?w=1024" alt="" class="wp-image-3596"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/screenshot-2025-11-09-at-7-47-13-am-86468019.png"><img src="/assets/images/wp-archive/2025/screenshot-2025-11-09-at-7-47-13-am-86468019.png" alt="" class="wp-image-3596"/></a></figure>
 
 <br>
 
@@ -172,7 +172,7 @@ fig.suptitle("Zen Garden Vibe Comparison", fontsize=20, color='#333333', y=1.02)
 plt.tight_layout()
 plt.show()</code></pre>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/image.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/image.png?w=1024" alt="" class="wp-image-3604"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/image-f9676e62.png"><img src="/assets/images/wp-archive/2025/image-f9676e62.png" alt="" class="wp-image-3604"/></a></figure>
 
 <pre class="wp-block-code" style="font-size:8px"><code>import time
 import numpy as np
@@ -352,7 +352,7 @@ if __name__ == "__main__":
     else:
         print("\nGPU benchmark skipped as CuPy is not available.")</code></pre>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-8.08.25-am.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/11/screenshot-2025-11-09-at-8.08.25-am.png?w=1024" alt="" class="wp-image-3610"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/screenshot-2025-11-09-at-8-08-25-am-9386181d.jpg"><img src="/assets/images/wp-archive/2025/screenshot-2025-11-09-at-8-08-25-am-9386181d.jpg" alt="" class="wp-image-3610"/></a></figure>
 
 <pre class="wp-block-code" style="font-size:8px"><code>
 --- Stream Animation Benchmark Summary ---

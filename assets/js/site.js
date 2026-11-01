@@ -152,9 +152,17 @@
     postRows.forEach(function (row) {
       var cat = (row.getAttribute("data-category") || "").toLowerCase();
       var hay = (row.getAttribute("data-search") || "").toLowerCase();
-      var catMatch = activeCategory === "all" || cat === activeCategory;
+      var isArchival = row.getAttribute("data-archival") === "true";
+      var catMatch;
+      if (activeCategory === "all") {
+        // Keep default All Articles focused on the 33 primary essays unless user types a search query
+        catMatch = query ? true : !isArchival;
+      } else {
+        catMatch = cat === activeCategory;
+      }
       var queryMatch = !query || hay.indexOf(query) !== -1;
       var show = catMatch && queryMatch;
+      row.hidden = !show;
       row.style.display = show ? "" : "none";
       if (show) visibleCount++;
     });
@@ -180,6 +188,7 @@
   if (searchInput) {
     searchInput.addEventListener("input", applyBlogFilter);
   }
+  applyBlogFilter();
 
   // 6. Contact Form Pre-Selection, Validation & Anti-Spam Submission
   var contactForm = document.getElementById("contact-form");

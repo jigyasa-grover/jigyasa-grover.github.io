@@ -209,6 +209,79 @@
       color: var(--ink-primary);
     }
   }
+
+  .wp-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin: 2rem 0;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      margin: 0;
+    }
+  }
+
+  .video-embed {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 2rem 0;
+    border: 1px solid var(--rule-light);
+    border-radius: var(--radius-xs);
+    overflow: hidden;
+    background-color: var(--bg-subtle);
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+
+  iframe {
+    max-width: 100%;
+    border: 1px solid var(--rule-light);
+    border-radius: var(--radius-xs);
+  }
+
+  .wpcom-reblog-snapshot {
+    margin: 1.75rem 0;
+    padding: 1.35rem 1.5rem;
+    background-color: var(--bg-subtle);
+    border: 1px solid var(--rule-light);
+    border-radius: var(--radius-xs);
+  }
+
+  .reblog-from {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    margin-bottom: 0.85rem;
+  }
+}
+
+.post-archival-note {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.15rem;
+  background-color: var(--bg-subtle);
+  border-left: 2px solid var(--accent);
 }
 
 // Post Footer: Author Card & Share Bar

@@ -10,7 +10,7 @@ mathjax: true
 
 AI can write the code. But who can *think* through the problem? **Proof of Work** serves as your AI Teaching Assistant, powered by Gemini's agentic video understanding. It watches continuous screen recordings of programming practicums and engineering challenges to evaluate the problem-solving process — architectural planning, debugging maturity, and authentic code iteration — backed by timestamped visual evidence, not just whether unit tests pass. [Check it out!](https://jigyasa-grover.github.io/proof-of-work/)
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2026/09/cover.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2026/09/cover.png?w=1024" alt="" class="wp-image-3792"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2026/cover-d3562309.jpg"><img src="/assets/images/wp-archive/2026/cover-d3562309.jpg" alt="" class="wp-image-3792"/></a></figure>
 
 ---
 

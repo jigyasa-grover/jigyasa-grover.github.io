@@ -14,7 +14,7 @@ mathjax: true
 <li>Safety libraries like <a href="https://microsoft.github.io/presidio/analyzer/">Microsoft's Presidio Analyzer </a>and <a href="https://pypi.org/project/better-profanity/">Better Profanity</a></li>
 <br>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/06/image.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/06/image.png?w=940" alt="" class="wp-image-3542"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/image-7b993ce9.jpg"><img src="/assets/images/wp-archive/2025/image-7b993ce9.jpg" alt="" class="wp-image-3542"/></a></figure>
 
 <h2 class="wp-block-heading">Overview</h2>
 <p>The goal of this project is to demonstrate a simple agent that:</p>

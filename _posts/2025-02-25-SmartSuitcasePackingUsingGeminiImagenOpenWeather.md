@@ -8,7 +8,7 @@ mathjax: true
 
 <p><strong>Say goodbye to overpacking and hello to perfectly curated travel wardrobes!</strong> This project leverages the power of AI to create personalized packing lists that consider your destination's weather, your personal style, and planned activities, ensuring you're prepared for anything the trip throws your way.<br></p>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/02/image-3.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/02/image-3.png?w=1024" alt="" class="wp-image-3478"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/image-3-eb95a8b8.jpg"><img src="/assets/images/wp-archive/2025/image-3-eb95a8b8.jpg" alt="" class="wp-image-3478"/></a></figure>
 
 <br><br>
 
@@ -187,7 +187,7 @@ mathjax: true
    day 2 outfit: Day 2 - Snowshoeing: Begin with Merino wool base layers as in day 1. Add the insulated mid-layer pants under your snow pants and the fleece hoodie under your parka. Wear insulated waterproof hiking boots with thick wool socks. Use a balaclava, beanie, liner gloves, and insulated waterproof mittens for hand and head protection. Carry your backpack containing water and snacks.</code></pre>
 </details>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/02/image.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/02/image.png?w=512" alt="" class="wp-image-3466"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/image-170f05c7.jpg"><img src="/assets/images/wp-archive/2025/image-170f05c7.jpg" alt="" class="wp-image-3466"/></a></figure>
 
 
 <h4 class="wp-block-heading">6-day trip to New Delhi (MF)</h4>
@@ -286,7 +286,7 @@ mathjax: true
    day 5 outfit: Day 5 - Relaxed Day: A comfortable cotton kurta paired with palazzo pants. A lightweight shawl. Comfortable sandals and minimal jewelry.
    day 6 outfit: Day 6 - Departure: Layer a basic cotton t-shirt with a long kurta and palazzo pants. Warm Cardigan or Sweater. Comfortable sandals or closed-toe shoes depending on your preference. A scarf for warmth during travel. Carry a small backpack.</code></pre>
 </details>
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/02/travel_outfit_collage-5-1.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/02/travel_outfit_collage-5-1.png?w=512" alt="" class="wp-image-3507"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/travel_outfit_collage-5-1-d070da9f.jpg"><img src="/assets/images/wp-archive/2025/travel_outfit_collage-5-1-d070da9f.jpg" alt="" class="wp-image-3507"/></a></figure>
 
 <h4 class="wp-block-heading">11-day trip to Miami (F)</h4>
 <details>
@@ -405,7 +405,7 @@ mathjax: true
    day 11 outfit: Flowy blouse tucked into denim shorts, stylish sneakers, sunglasses, and a crossbody bag. (Departure outfit)
    </code></pre>
 </details>
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/02/image-1.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2025/02/image-1.png?w=512" alt="" class="wp-image-3470"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/image-1-3797244a.jpg"><img src="/assets/images/wp-archive/2025/image-1-3797244a.jpg" alt="" class="wp-image-3470"/></a></figure>
 
 <h2 class="wp-block-heading"><strong>A Step-by-Step Journey to the Perfectly Packed Suitcase: From Input to Outfit Visualization</strong></h2>
 

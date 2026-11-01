@@ -21,9 +21,12 @@ layout: default
         {% if meta and meta.category %}
           <span class="post-category">{{ meta.category }}</span>
           <span aria-hidden="true">·</span>
+        {% elsif page.archival %}
+          <span class="post-category">Early Open-Source Archive (2015–17)</span>
+          <span aria-hidden="true">·</span>
         {% endif %}
         {% if page.url == "/archive/" %}
-          <span>Historical Blog Archive (2014–2020)</span>
+          <span>Complete Early Open-Source &amp; GSoC Archive (2015–2017)</span>
         {% else %}
           <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
           <span aria-hidden="true">·</span>
@@ -37,6 +40,10 @@ layout: default
 
       {% if meta and meta.summary %}
         <p class="post-summary-box" itemprop="description">{{ meta.summary }}</p>
+      {% elsif page.archival and page.original_url %}
+        <p class="post-archival-note">
+          Preserved from Jigyasa Grover's early open-source &amp; Google Summer of Code journal (<a href="{{ page.original_url }}" target="_blank" rel="noopener">original WordPress entry ↗</a>).
+        </p>
       {% endif %}
 
       {% if meta %}
@@ -55,6 +62,12 @@ layout: default
             {% endif %}
           </div>
         {% endif %}
+      {% elsif page.archive_tags %}
+        <div class="tag-row mb-sm">
+          {% for tag in page.archive_tags %}
+            <span class="mono-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
       {% endif %}
     </header>
 
@@ -104,7 +117,7 @@ layout: default
       <div class="ledger">
         {% assign shown = 0 %}
         {% for post in site.posts %}
-          {% if post.url != page.url and post.url != "/archive/" and shown < 3 %}
+          {% if post.url != page.url and post.url != "/archive/" and post.archival != true and shown < 3 %}
             {% assign pmeta = site.data.posts_meta[post.url] %}
             {% if meta == nil or pmeta == nil or pmeta.category == meta.category or shown < 3 %}
               {% assign shown = shown | plus: 1 %}

@@ -10,7 +10,7 @@ mathjax: true
 
 <p>Here, we shall embark on an exciting exploration using the <strong><a href="https://github.com/PAIR-code/llm-comparator">LLM Comparator</a></strong>, a cutting-edge tool from Google's Responsible Generative AI Toolkit. This tool is designed to offer a comprehensive evaluation of LLMs, allowing us to compare their ability to handle various tasks with clarity and thoroughness. By testing these sophisticated AI models against questions typically aimed at a 5th Grader (inspired by the American quiz game show called <a href="https://www.imdb.com/title/tt9845152/">"<em>Are You Smarter than a 5th Grader?</em>"</a>), we aim to uncover which models not only perform accurately but also align with high standards of communication and respect.</p>
 
-<figure class="wp-block-image size-medium"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/09/1-1.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/09/1-1.png?w=940" alt="" class="wp-image-3448"/></a></figure>
+<figure class="wp-block-image size-medium"><a href="/assets/images/wp-archive/2024/1-1-9c14fb5a.png"><img src="/assets/images/wp-archive/2024/1-1-9c14fb5a.png" alt="" class="wp-image-3448"/></a></figure>
 
 <h2 class="wp-block-heading">LLM Comparator</h2>
 
@@ -20,7 +20,7 @@ mathjax: true
 <li>Quantitative assessments through numerical scores.</li>
 <li>Qualitative insights through detailed feedback.</li>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/09/image.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2024/09/image.png?w=1024" alt="" class="wp-image-3452"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/image-3b041b5e.png"><img src="/assets/images/wp-archive/2024/image-3b041b5e.png" alt="" class="wp-image-3452"/></a></figure>
 
 <h4 class="wp-block-heading">Features</h4>
 

@@ -151,3 +151,58 @@
   tags: ["Book", "Sculpting Data for ML", "Dataset Curation"]
   featured: false
   summary: "Introducing Sculpting Data for ML: The First Act of Machine Learning—why we wrote a hands-on guide to dataset curation and data-centric engineering."
+
+"/top-5-trends-in-artificial-intelligence-for-2023/":
+  category: "ML Research & Foundations"
+  tags: ["Generative AI", "Explainable AI", "AI Governance", "Data-Centric AI"]
+  featured: false
+  summary: "Reflections with SaugaTalks on five defining shifts shaping enterprise AI adoption: generative models, data governance, explainability, spatial computing, and low-code ML."
+
+"/research-reading-approaches-to-click-through-rate-estimation-3-x/":
+  category: "Personalization & Ranking"
+  tags: ["CTR Prediction", "Ads Ranking", "DIEN", "Recommender Systems"]
+  featured: false
+  summary: "Part 3 of the CTR estimation research series: dissecting Alibaba's AAAI 2019 Deep Interest Evolution Network (DIEN) for modeling temporal user interest shifts."
+
+"/research-reading-approaches-to-click-through-rate-estimation-2-x/":
+  category: "Personalization & Ranking"
+  tags: ["CTR Prediction", "Sponsored Search", "Deep Semantic Models", "Ads ML"]
+  featured: false
+  summary: "Part 2 of the CTR estimation research series: examining Yahoo! Research's Deeply Supervised Semantic Model for sponsored search click prediction."
+
+"/research-reading-approaches-to-click-through-rate-estimation-1-x/":
+  category: "Personalization & Ranking"
+  tags: ["CTR Prediction", "Model Ensembles", "Search Ads", "GBDT + Neural Nets"]
+  featured: false
+  summary: "Part 1 of the CTR estimation research series: analyzing Microsoft Bing's production model-ensemble architectures for large-scale search ad click prediction."
+
+"/perceiving-python-programming-paradigms/":
+  category: "Open Source & Python"
+  tags: ["Python", "Programming Paradigms", "Functional Programming", "Software Architecture"]
+  featured: false
+  summary: "In-depth guide to imperative, procedural, object-oriented, and functional programming paradigms in Python—featured among Opensource.com's Top Articles."
+
+"/dive-into-open-source-go-beyond-coding/":
+  category: "Open Source & Python"
+  tags: ["Open Source", "Technical Documentation", "Community Leadership", "Mentorship"]
+  featured: false
+  summary: "How engineers, technical writers, designers, and researchers create high-leverage impact in open-source ecosystems beyond writing code."
+
+"/keynotin-at-open-source-101/":
+  category: "Open Source & Python"
+  tags: ["Open Source 101", "Keynote", "Community", "Developer Advocacy"]
+  featured: false
+  summary: "Notes and takeaways from delivering the keynote at Open Source 101 on sustaining open-source communities and lowering contributor barriers."
+
+"/paris-france-to-maribor-slovenia-and-beyond-chronicles-of-cormas-pharo/":
+  category: "Systems & Simulation"
+  tags: ["Multi-Agent Simulation", "CORMAS", "Pharo Smalltalk", "ESUG"]
+  featured: false
+  summary: "Engineering chronicle on modernizing the CORMAS multi-agent ecological simulation platform in Pharo Smalltalk across Paris and ESUG Maribor."
+
+"/winning-red-hat-women-in-open-source-academic-award-2017-the-summit-a-week-in-boston-and-more/":
+  category: "Open Source & Python"
+  tags: ["Red Hat Award", "Women in Open Source", "Red Hat Summit", "FOSS"]
+  featured: false
+  summary: "Receiving the 2017 Red Hat Women in Open Source Academic Award at Red Hat Summit in Boston and reflections on open-source mentorship."
+

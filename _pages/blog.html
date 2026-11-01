@@ -3,28 +3,30 @@ layout: page
 title: "Technical Writing & Essays"
 heading: "Deep dives on Agentic AI, LLM evaluation, fine-tuning, and data-centric ML."
 eyebrow: "Technical Journal"
-lead: "24 engineering essays, architectural tutorials, and research notes—plus historical open-source writing."
+lead: "33 technical essays, architectural tutorials, and research readings—plus 57 self-hosted early open-source & Google Summer of Code archives (2015–2017)."
 hero_cta_label: "Subscribe via RSS"
 hero_cta_url: "/feed.xml"
 seo_title: "Technical Blog & AI Engineering Essays — Jigyasa Grover"
-description: "24 technical articles by Jigyasa Grover on Agentic AI, Google ADK, Gemini, Cloud TPU fine-tuning, LLM evaluation, privacy-preserving ML & data quality."
+description: "33 technical essays by Jigyasa Grover on Agentic AI, Gemini, Cloud TPU fine-tuning, CTR ranking, data-centric ML & Python—plus 57 early open-source archives."
 permalink: /blog/
 ---
 
 <div class="filter-bar" role="region" aria-label="Filter and search technical articles">
   <div class="filter-pills" role="group" aria-label="Filter by topic">
-    <button type="button" class="filter-btn is-active" data-blog-filter="all">All Articles</button>
+    <button type="button" class="filter-btn is-active" data-blog-filter="all">All Articles (33)</button>
     <button type="button" class="filter-btn" data-blog-filter="agentic ai & evaluation">Agentic AI &amp; Evaluation</button>
     <button type="button" class="filter-btn" data-blog-filter="agentic infrastructure">Agentic Infrastructure</button>
     <button type="button" class="filter-btn" data-blog-filter="fine-tuning & compute">Fine-Tuning &amp; Compute</button>
-    <button type="button" class="filter-btn" data-blog-filter="edge & real-time ai">Edge &amp; Real-Time AI</button>
+    <button type="button" class="filter-btn" data-blog-filter="personalization & ranking">Personalization &amp; Ranking</button>
     <button type="button" class="filter-btn" data-blog-filter="data-centric ai">Data-Centric AI</button>
     <button type="button" class="filter-btn" data-blog-filter="responsible ai & privacy">Responsible AI &amp; Privacy</button>
+    <button type="button" class="filter-btn" data-blog-filter="open source & python">Open Source &amp; Python</button>
+    <button type="button" class="filter-btn" data-blog-filter="early archive (2015–17)">Early Archive (2015–17)</button>
   </div>
 
   <div>
-    <label for="blog-search" class="sr-only">Search articles by keyword</label>
-    <input id="blog-search" type="search" class="search-input" placeholder="Search articles, tools, topics…" />
+    <label for="blog-search" class="sr-only">Search all 90 articles &amp; archives by keyword</label>
+    <input id="blog-search" type="search" class="search-input" placeholder="Search all 90 articles &amp; archives…" />
   </div>
 </div>
 
@@ -34,13 +36,22 @@ permalink: /blog/
       {% assign meta = site.data.posts_meta[post.url] %}
       {% assign words = post.content | strip_html | number_of_words %}
       {% assign mins = words | divided_by: 210 | plus: 1 %}
-      {% assign cat_name = meta.category | default: "AI Engineering" %}
-      {% assign tags_joined = meta.tags | join: " " %}
+      {% if post.archival %}
+        {% assign cat_name = "Early Archive (2015–17)" %}
+        {% assign row_tags = post.archive_tags %}
+        {% assign row_summary = post.description %}
+      {% else %}
+        {% assign cat_name = meta.category | default: "AI Engineering" %}
+        {% assign row_tags = meta.tags %}
+        {% assign row_summary = meta.summary %}
+      {% endif %}
+      {% assign tags_joined = row_tags | join: " " %}
       <article
         class="ledger-row"
         data-post-item
         data-category="{{ cat_name | downcase | escape }}"
-        data-search="{{ post.title | escape }} {{ meta.summary | escape }} {{ cat_name | escape }} {{ tags_joined | escape }}"
+        {% if post.archival %}data-archival="true" hidden{% endif %}
+        data-search="{{ post.title | escape }} {{ row_summary | escape }} {{ cat_name | escape }} {{ tags_joined | escape }}"
       >
         <div class="ledger-row__date">
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
@@ -49,14 +60,14 @@ permalink: /blog/
 
         <div>
           <div class="ledger-row__title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-          {% if meta and meta.summary %}
-            <p class="ledger-row__sub mb-sm">{{ meta.summary }}</p>
+          {% if row_summary %}
+            <p class="ledger-row__sub mb-sm">{{ row_summary }}</p>
           {% else %}
             <p class="ledger-row__sub mb-sm">{{ post.excerpt | strip_html | truncate: 180 }}</p>
           {% endif %}
-          {% if meta and meta.tags %}
+          {% if row_tags %}
             <div class="tag-row mb-0">
-              {% for t in meta.tags %}
+              {% for t in row_tags %}
                 <span class="mono-tag">{{ t }}</span>
               {% endfor %}
             </div>
@@ -70,15 +81,15 @@ permalink: /blog/
 </div>
 
 <p id="blog-empty-state" class="empty-state">
-  No articles matched your current filter. Clear your search term or select "All Articles".
+  No articles matched your current filter. Clear your search term or select "All Articles (33)".
 </p>
 
-<!-- Preserved Historical WordPress Archive Notice -->
+<!-- Complete Self-Hosted Open-Source & GSoC Archive Notice -->
 <div class="contact-panel split-panel mt-xl">
   <div>
-    <div class="eyebrow mb-xs">Earlier Open-Source &amp; Research Posts (2014 – 2020)</div>
-    <h2 class="split-panel__title">Looking for earlier Google Summer of Code &amp; Pharo articles?</h2>
-    <p class="split-panel__desc">All earlier posts remain archived on WordPress and via the preserved <a href="/archive/">/archive/</a> page.</p>
+    <div class="eyebrow mb-xs">Complete Self-Hosted Archive (2015 – 2026)</div>
+    <h2 class="split-panel__title">Looking for earlier Google Summer of Code, Loklak &amp; Pharo logs?</h2>
+    <p class="split-panel__desc">All 90 historical posts and media from WordPress (2015–2026) are preserved directly on this website. Select <strong>Early Archive (2015–17)</strong> above or browse the chronological <a href="/archive/">/archive/</a> index.</p>
   </div>
-  <a class="btn btn--secondary" href="https://jigyasagrover.wordpress.com/" target="_blank" rel="noopener">Visit WordPress Archive ↗</a>
+  <a class="btn btn--secondary" href="/archive/">Browse Early Archive (57) →</a>
 </div>

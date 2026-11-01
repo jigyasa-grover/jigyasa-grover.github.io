@@ -97,5 +97,5 @@ Featured Video: {{ site.data.speaking.featured_video.title }} ({{ site.data.spea
 
 ## 14. Complete Technical Writing & Essays Index
 
-{% for post in site.posts %}{% unless post.url == "/archive/" %}{% assign m = site.data.posts_meta[post.url] %}- **{{ post.title }}** ({{ post.date | date: "%Y-%m-%d" }}{% if m.category %} · {{ m.category }}{% endif %}) — https://jigyasa-grover.github.io{{ post.url }}{% if m.summary %}: {{ m.summary }}{% endif %}
+{% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign m = site.data.posts_meta[post.url] %}- **{{ post.title }}** ({{ post.date | date: "%Y-%m-%d" }}{% if m.category %} · {{ m.category }}{% endif %}) — https://jigyasa-grover.github.io{{ post.url }}{% if m.summary %}: {{ m.summary }}{% endif %}
 {% endunless %}{% endfor %}

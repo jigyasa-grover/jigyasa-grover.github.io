@@ -10,7 +10,7 @@ mathjax: true
 
 <p>Zero Docker. Zero Kubernetes YAML. Just <code>@kinetic.run()</code>!</p>
 
-<figure class="wp-block-image size-large"><a href="https://jigyasagrover.wordpress.com/wp-content/uploads/2026/03/kinetic-era-2.png"><img src="https://jigyasagrover.wordpress.com/wp-content/uploads/2026/03/kinetic-era-2.png?w=1024" alt="" class="wp-image-3710"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2026/kinetic-era-2-abfee7c9.png"><img src="/assets/images/wp-archive/2026/kinetic-era-2-abfee7c9.png" alt="" class="wp-image-3710"/></a></figure>
 
 <h2 class="wp-block-heading">The Problem: Getting code onto a TPU is annoyingly hard</h2>
 
