@@ -76,6 +76,10 @@ EXPECTED_ROUTES = [
     "/llms.txt",
     "/.well-known/llms.txt",
     "/llms-full.txt",
+    "/favicon.ico",
+    "/favicon.svg",
+    "/apple-touch-icon.png",
+    "/site.webmanifest",
 ]
 
 FORBIDDEN_IN_SITE = [
