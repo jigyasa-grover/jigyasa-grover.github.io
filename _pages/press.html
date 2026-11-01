@@ -15,11 +15,16 @@ permalink: /press/
 
 <!-- 1. Selected Media, TV & Podcast Features -->
 <section class="content-section" aria-labelledby="media-ledger-heading">
-  <div class="eyebrow">Press, Broadcast &amp; Podcasts</div>
-  <h2 id="media-ledger-heading">Selected media features</h2>
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Press, Broadcast &amp; Podcasts</div>
+      <h2 id="media-ledger-heading">Selected media features</h2>
+    </div>
+    <a class="section-header__link" href="/highlights/">Stage photos &amp; social dispatches →</a>
+  </div>
 
-  <div class="ledger mt-md">
-    {% for m in rec.media_features %}
+  <div class="ledger">
+    {% for m in rec.media_features limit:8 %}
     <div class="ledger-row">
       <div class="ledger-row__date">{{ m.date }}</div>
       <div>
@@ -36,6 +41,34 @@ permalink: /press/
     </div>
     {% endfor %}
   </div>
+
+  {% if rec.media_features.size > 8 %}
+  <details class="ledger-more">
+    <summary class="ledger-more__summary">
+      <span class="ledger-more__label-closed">Show all {{ rec.media_features.size }} press, TV &amp; podcast features</span>
+      <span class="ledger-more__label-open">Collapse earlier media features</span>
+      <span class="ledger-more__icon" aria-hidden="true">↓</span>
+    </summary>
+    <div class="ledger ledger--nested">
+      {% for m in rec.media_features offset:8 %}
+      <div class="ledger-row">
+        <div class="ledger-row__date">{{ m.date }}</div>
+        <div>
+          <div class="ledger-row__title">
+            {% if m.url %}
+              <a href="{{ m.url }}" target="_blank" rel="noopener">{{ m.title }} ↗</a>
+            {% else %}
+              {{ m.title }}
+            {% endif %}
+          </div>
+          <p class="ledger-row__sub">{{ m.outlet }}</p>
+        </div>
+        <div class="ledger-row__aside">{{ m.type }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </details>
+  {% endif %}
 </section>
 
 <!-- 2. 13x Industry & Open Source Awards -->
@@ -49,7 +82,7 @@ permalink: /press/
   </div>
 
   <div class="ledger">
-    {% for a in rec.awards %}
+    {% for a in rec.awards limit:7 %}
     <div class="ledger-row">
       <div class="ledger-row__date">{{ a.year }}</div>
       <div>
@@ -66,6 +99,34 @@ permalink: /press/
     </div>
     {% endfor %}
   </div>
+
+  {% if rec.awards.size > 7 %}
+  <details class="ledger-more">
+    <summary class="ledger-more__summary">
+      <span class="ledger-more__label-closed">Show all {{ rec.awards.size }} industry &amp; open-source honors</span>
+      <span class="ledger-more__label-open">Collapse earlier honors</span>
+      <span class="ledger-more__icon" aria-hidden="true">↓</span>
+    </summary>
+    <div class="ledger ledger--nested">
+      {% for a in rec.awards offset:7 %}
+      <div class="ledger-row">
+        <div class="ledger-row__date">{{ a.year }}</div>
+        <div>
+          <div class="ledger-row__title">
+            {% if a.url %}
+              <a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }} ↗</a>
+            {% else %}
+              {{ a.title }}
+            {% endif %}
+          </div>
+          <p class="ledger-row__sub">{{ a.issuer }}</p>
+        </div>
+        <div class="ledger-row__aside">Honoree</div>
+      </div>
+      {% endfor %}
+    </div>
+  </details>
+  {% endif %}
 </section>
 
 <!-- 3. Speaker & Press Assets (Bios + Approved Photos) -->

@@ -48,7 +48,7 @@ posts:
     date: "Oct 2026"
     sponsored: false
     badge: "Keynote Reel · Milan"
-    contexts: ["highlights", "partnerships"]
+    contexts: ["highlights", "partnerships", "home"]
     image: "/assets/images/opt/codemotion_speaker_2026.jpg"
     width: 576
     height: 1024
@@ -116,7 +116,7 @@ posts:
     date: "2026"
     sponsored: false
     badge: "Ecosystem · Google Gemini"
-    contexts: ["highlights", "partnerships"]
+    contexts: ["highlights", "partnerships", "home"]
     image: "/assets/images/opt/gemini_live_2026.jpg"
     width: 1200
     height: 1200
@@ -132,7 +132,7 @@ posts:
     date: "2026"
     sponsored: false
     badge: "Google Gemini Early Access"
-    contexts: ["highlights"]
+    contexts: ["highlights", "home"]
     image: "/assets/images/opt/gemini_dinner_2026.jpg"
     width: 1080
     height: 1080

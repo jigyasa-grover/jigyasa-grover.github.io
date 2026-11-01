@@ -371,3 +371,40 @@
   color: var(--ink-secondary);
   margin-bottom: 0.65rem;
 }
+
+.reader-flywheel {
+  padding: 1.5rem 1.65rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--rule-light);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-xs);
+
+  @include mobile {
+    padding: 1.2rem 1.15rem;
+  }
+}
+
+.reader-flywheel__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.reader-flywheel__title {
+  font-family: var(--font-serif);
+  font-size: 1.32rem;
+  font-weight: 500;
+  color: var(--ink-primary);
+  margin-bottom: 0.4rem;
+}
+
+.reader-flywheel__desc {
+  font-size: 0.91rem;
+  line-height: 1.58;
+  color: var(--ink-secondary);
+  margin-bottom: 1rem;
+}

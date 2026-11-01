@@ -4,6 +4,21 @@ seo_title: "Jigyasa Grover — ML Engineer, Agentic AI Educator & Advisor"
 description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Developer Advisory Board member, 13x AI Award Winner, author & LinkedIn Learning instructor."
 ---
 {% assign id = site.data.identity %}
+{% assign next_stage = site.data.speaking.appearances | where: "status", "Upcoming" | first %}
+
+{% if next_stage %}
+<div class="stage-ribbon" role="region" aria-label="Upcoming conference stage">
+  <div class="container stage-ribbon__inner">
+    <div class="stage-ribbon__main">
+      <span class="stage-ribbon__badge"><span class="stage-ribbon__dot" aria-hidden="true"></span>Upcoming Stage</span>
+      <span class="stage-ribbon__text">
+        <strong>{{ next_stage.event }}</strong> ({{ next_stage.date }} · {{ next_stage.location }}) — {{ next_stage.role | remove_first: "Speaker · " }}
+      </span>
+    </div>
+    <a id="ribbon-cta-speaking" class="stage-ribbon__cta" href="/work-with-me/?topic=Speaking%20%26%20Workshops#contact">Book a briefing or invite →</a>
+  </div>
+</div>
+{% endif %}
 
 <!-- 1. Editorial Hero -->
 <section class="hero" aria-labelledby="hero-heading">
@@ -27,7 +42,7 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
       <div class="btn-group">
         <a id="hero-cta-collaborate" class="btn btn--primary" href="/work-with-me/">Work With Me →</a>
         <a id="hero-cta-speaking" class="btn btn--secondary" href="/speaking/">Invite Me to Speak</a>
-        <a id="hero-cta-work" class="btn btn--secondary" href="/projects/">Selected Work</a>
+        <a id="hero-cta-links" class="btn btn--secondary" href="/links/">Quick Links</a>
       </div>
 
       <div class="hero__affiliations" aria-label="Selected affiliations and prior engineering teams">
@@ -70,7 +85,7 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
   </div>
 </section>
 
-<!-- 3. Six Collaboration Pillars -->
+<!-- 3. Six Collaboration Pillars + Brand Ecosystem -->
 <section class="section" id="collaborate" aria-labelledby="pillars-heading">
   <div class="container">
     <div class="section-header">
@@ -78,7 +93,7 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
         <div class="eyebrow">Selective Collaborations</div>
         <h2 id="pillars-heading">Ways we can work together</h2>
       </div>
-      <a class="section-header__link" href="/work-with-me/">Booking links &amp; inquiry form →</a>
+      <a class="section-header__link" href="/work-with-me/">Instant booking &amp; inquiry form →</a>
     </div>
 
     <div class="pillar-matrix">
@@ -98,56 +113,29 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
       </article>
       {% endfor %}
     </div>
+
+    <div class="section-divider">
+      <div class="eyebrow mb-xs">Selected Ecosystem &amp; Brand Collaborations</div>
+      <div class="partner-strip">
+        {% for partner in site.data.recognition.brand_partners %}
+          <span>{{ partner }}{% unless forloop.last %} ·{% endunless %}</span>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- 4. Selected Engineering Systems -->
-<section class="section section--subtle" aria-labelledby="selected-work-heading">
+<!-- 4. Verified Client, Founder & Learner Feedback (Elevated Above the Mid-Fold) -->
+<section class="section section--subtle" aria-labelledby="testimonials-heading">
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="eyebrow">Hands-On AI Engineering</div>
-        <h2 id="selected-work-heading">Selected systems &amp; open-source builds</h2>
+        <div class="eyebrow">Verified Reviews · 5.0★ Across 130+ Sessions</div>
+        <h2 id="testimonials-heading">What founders, leaders &amp; learners say</h2>
       </div>
-      <a class="section-header__link" href="/projects/">All 10+ projects &amp; 72+ GitHub repos →</a>
+      <a class="section-header__link" href="/advisory/#advisory-reviews-heading">More client &amp; founder reviews →</a>
     </div>
-
-    <div class="project-grid">
-      {% for proj in site.data.projects %}
-        {% if proj.featured %}
-        <article class="project-dossier">
-          <div>
-            <div class="project-dossier__meta">
-              <span>{{ proj.category }}</span>
-              <span>{{ proj.year }}</span>
-            </div>
-            <h3 class="project-dossier__title">
-              {% if proj.post_url %}
-                <a href="{{ proj.post_url }}">{{ proj.title }}</a>
-              {% elsif proj.live_url %}
-                <a href="{{ proj.live_url }}" target="_blank" rel="noopener">{{ proj.title }}</a>
-              {% else %}
-                <a href="{{ proj.repo_url }}" target="_blank" rel="noopener">{{ proj.title }}</a>
-              {% endif %}
-            </h3>
-            <p class="project-dossier__summary">{{ proj.summary }}</p>
-          </div>
-          <div>
-            <div class="tag-row">
-              {% for tech in proj.stack %}
-                <span class="mono-tag">{{ tech }}</span>
-              {% endfor %}
-            </div>
-            <div class="dossier-links">
-              {% if proj.post_url %}<a href="{{ proj.post_url }}">Deep Dive →</a>{% endif %}
-              {% if proj.live_url %}<a href="{{ proj.live_url }}" target="_blank" rel="noopener">Live Demo ↗</a>{% endif %}
-              {% if proj.repo_url %}<a href="{{ proj.repo_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
-            </div>
-          </div>
-        </article>
-        {% endif %}
-      {% endfor %}
-    </div>
+    {% include testimonials-grid.html key="home" columns=3 show_badges=true %}
   </div>
 </section>
 
@@ -156,7 +144,7 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
   <div class="container">
     <div class="feature-split">
       <div class="media-frame">
-        <a href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener">
+        <a id="home-io-video-link" class="media-frame__video-link" href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener" aria-label="Watch Jigyasa Grover featured on the Google I/O 2024 Main Keynote Stage on YouTube">
           <img
             src="{{ site.data.speaking.featured_video.image }}"
             width="1280"
@@ -164,9 +152,13 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
             loading="lazy"
             alt="Jigyasa Grover featured on the Google I/O 2024 main keynote stage at Shoreline Amphitheatre, introduced by Sundar Pichai"
           />
+          <span class="media-play-badge">
+            <span class="media-play-badge__icon" aria-hidden="true">▶</span>
+            <span>Watch Google I/O Keynote Clip ↗</span>
+          </span>
         </a>
         <div class="media-frame__caption">
-          Google I/O Main Keynote · Shoreline Amphitheatre · Introduced by Sundar Pichai
+          Google I/O Main Keynote · Shoreline Amphitheatre · Introduced by Sundar Pichai (147K+ views)
         </div>
       </div>
 
@@ -179,7 +171,7 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
         <div class="btn-group mt-md">
           <a class="btn btn--primary" href="/speaking/">Topics &amp; Past Stages →</a>
           <a class="btn btn--secondary" href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener">Watch Google I/O ↗</a>
-          <a class="btn btn--secondary" href="/highlights/">Photo Archive →</a>
+          <a class="btn btn--secondary" href="/press/">Press &amp; 13× Awards →</a>
         </div>
       </div>
     </div>
@@ -233,15 +225,65 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
   </div>
 </section>
 
-<!-- 6. Book & Courses -->
-<section class="section section--subtle" aria-labelledby="education-heading">
+<!-- 6. Selected Engineering Systems -->
+<section class="section section--subtle" aria-labelledby="selected-work-heading">
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="eyebrow">Books, Courses &amp; Corporate Training</div>
-        <h2 id="education-heading">Durable AI engineering education</h2>
+        <div class="eyebrow">Hands-On AI Engineering</div>
+        <h2 id="selected-work-heading">Selected systems &amp; open-source builds</h2>
       </div>
-      <a class="section-header__link" href="/teaching/">Courses &amp; corporate training →</a>
+      <a class="section-header__link" href="/projects/">All 10+ projects &amp; 72+ GitHub repos →</a>
+    </div>
+
+    <div class="project-grid">
+      {% for proj in site.data.projects %}
+        {% if proj.featured %}
+        <article class="project-dossier">
+          <div>
+            <div class="project-dossier__meta">
+              <span>{{ proj.category }}</span>
+              <span>{{ proj.year }}</span>
+            </div>
+            <h3 class="project-dossier__title">
+              {% if proj.post_url %}
+                <a href="{{ proj.post_url }}">{{ proj.title }}</a>
+              {% elsif proj.live_url %}
+                <a href="{{ proj.live_url }}" target="_blank" rel="noopener">{{ proj.title }}</a>
+              {% else %}
+                <a href="{{ proj.repo_url }}" target="_blank" rel="noopener">{{ proj.title }}</a>
+              {% endif %}
+            </h3>
+            <p class="project-dossier__summary">{{ proj.summary }}</p>
+          </div>
+          <div>
+            <div class="tag-row">
+              {% for tech in proj.stack %}
+                <span class="mono-tag">{{ tech }}</span>
+              {% endfor %}
+            </div>
+            <div class="dossier-links">
+              {% if proj.post_url %}<a href="{{ proj.post_url }}">Deep Dive →</a>{% endif %}
+              {% if proj.live_url %}<a href="{{ proj.live_url }}" target="_blank" rel="noopener">Live Demo ↗</a>{% endif %}
+              {% if proj.repo_url %}<a href="{{ proj.repo_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
+            </div>
+          </div>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 7. Books, Courses & Technical Journal -->
+<section class="section" aria-labelledby="education-heading">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="eyebrow">Books, Courses &amp; Technical Journal</div>
+        <h2 id="education-heading">Durable AI education &amp; recent essays</h2>
+      </div>
+      <a class="section-header__link" href="/teaching/">All courses &amp; corporate training →</a>
     </div>
 
     <div class="feature-split feature-split--book mb-lg">
@@ -255,7 +297,7 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
         />
       </div>
       <div>
-        <div class="eyebrow">Published Book · 95+ Citations</div>
+        <div class="eyebrow">Published Book · 95+ Citations · 44K+ Course Learners</div>
         <h3>{{ site.data.publications.featured_book.title }}</h3>
         <p>{{ site.data.publications.featured_book.summary }}</p>
         <p class="section-lead mb-0">
@@ -263,108 +305,57 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
         </p>
         <div class="btn-group mt-sm">
           <a class="btn btn--primary" href="{{ site.data.publications.featured_book.amazon_url }}" target="_blank" rel="noopener">Order on Amazon ↗</a>
+          <a class="btn btn--secondary" href="{{ site.data.courses.linkedin_learning_profile }}" target="_blank" rel="noopener">LinkedIn Learning Courses ↗</a>
           <a class="btn btn--secondary" href="/publications/">Springer &amp; ACM Papers →</a>
         </div>
       </div>
     </div>
 
-    <div class="ledger">
-      {% for c in site.data.courses.courses limit:4 %}
-      <div class="ledger-row">
-        <div class="ledger-row__date">{{ c.provider }} · {{ c.year }}</div>
-        <div class="ledger-row__title"><a href="{{ c.url }}" target="_blank" rel="noopener">{{ c.title }} ↗</a></div>
-        <div class="ledger-row__aside">{% if c.rating_value %}{{ c.rating_value }}★ · {% endif %}{{ c.learners }}</div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- 7. Recent Technical Writing -->
-<section class="section" aria-labelledby="writing-heading">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <div class="eyebrow">Technical Journal</div>
-        <h2 id="writing-heading">Recent essays &amp; benchmarks</h2>
-      </div>
-      <a class="section-header__link" href="/blog/">All 33 technical articles →</a>
-    </div>
-
-    <div class="ledger">
-      {% assign post_count = 0 %}
-      {% for post in site.posts %}
-        {% if post.url != "/archive/" and post.archival != true and post_count < 4 %}
-          {% assign post_count = post_count | plus: 1 %}
-          {% assign pmeta = site.data.posts_meta[post.url] %}
-          <div class="ledger-row">
-            <div class="ledger-row__date">{{ post.date | date: "%b %-d, %Y" }}</div>
-            <div>
-              <div class="ledger-row__title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-              {% if pmeta and pmeta.summary %}<p class="ledger-row__sub">{{ pmeta.summary }}</p>{% endif %}
-            </div>
-            <div class="ledger-row__aside">{% if pmeta %}{{ pmeta.category }}{% endif %}</div>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- 8. Recent Dispatches & Ecosystem Partners -->
-<section class="section section--subtle" aria-labelledby="recognition-heading">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <div class="eyebrow">Press &amp; Dispatches</div>
-        <h2 id="recognition-heading">Recent milestones</h2>
-      </div>
-      <a class="section-header__link" href="/press/">Press kit &amp; 13× awards →</a>
-    </div>
-
-    <div class="ledger">
-      {% for u in site.data.updates limit:5 %}
-      <div class="ledger-row">
-        <div class="ledger-row__date">{{ u.date }}</div>
-        <div>
-          <p class="ledger-row__sub ledger-row__sub--primary">
-            {{ u.text }}
-            {% if u.url %}
-              <a class="ledger-inline-link" href="{{ u.url }}" {% if u.url contains 'http' %}target="_blank" rel="noopener"{% endif %}>View →</a>
-            {% endif %}
-          </p>
-        </div>
-        <div class="ledger-row__aside">{{ u.category }}</div>
-      </div>
-      {% endfor %}
-    </div>
-
     <div class="section-divider">
-      <div class="eyebrow mb-xs">Selected Ecosystem &amp; Brand Collaborations</div>
-      <div class="partner-strip">
-        {% for partner in site.data.recognition.brand_partners %}
-          <span>{{ partner }}{% unless forloop.last %} ·{% endunless %}</span>
+      <div class="section-header section-header--compact">
+        <div>
+          <div class="eyebrow">Technical Journal</div>
+          <h3 id="writing-heading">Recent essays &amp; benchmarks</h3>
+        </div>
+        <a class="section-header__link" href="/blog/">All 33 technical articles →</a>
+      </div>
+
+      <div class="ledger">
+        {% assign post_count = 0 %}
+        {% for post in site.posts %}
+          {% if post.url != "/archive/" and post.archival != true and post_count < 4 %}
+            {% assign post_count = post_count | plus: 1 %}
+            {% assign pmeta = site.data.posts_meta[post.url] %}
+            <div class="ledger-row">
+              <div class="ledger-row__date">{{ post.date | date: "%b %-d, %Y" }}</div>
+              <div>
+                <div class="ledger-row__title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+                {% if pmeta and pmeta.summary %}<p class="ledger-row__sub">{{ pmeta.summary }}</p>{% endif %}
+              </div>
+              <div class="ledger-row__aside">{% if pmeta %}{{ pmeta.category }}{% endif %}</div>
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
   </div>
 </section>
 
-<!-- 9. Verified Client, Founder & Learner Feedback -->
-<section class="section" aria-labelledby="testimonials-heading">
+<!-- 8. Social Pulse (Turn Cold Visitors into LinkedIn / X / Instagram Followers) -->
+<section class="section section--subtle" aria-labelledby="home-social-heading">
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="eyebrow">Verified Reviews</div>
-        <h2 id="testimonials-heading">What founders, leaders &amp; learners say</h2>
+        <div class="eyebrow">Social Pulse · 16K+ Practitioners</div>
+        <h2 id="home-social-heading">Recent dispatches across LinkedIn, X &amp; Instagram</h2>
       </div>
-      <a class="section-header__link" href="/advisory/#advisory-reviews-heading">More client &amp; founder reviews →</a>
+      <a class="section-header__link" href="/highlights/#social-pulse-heading">Full feed &amp; visual archive →</a>
     </div>
-    {% include testimonials-grid.html key="home" columns=3 show_badges=true %}
+    {% include social-feed.html context="home" compact=true %}
   </div>
 </section>
 
-<!-- 10. Direct Inbound Call to Action -->
+<!-- 9. Direct Inbound Call to Action -->
 <section class="section section--no-border" aria-labelledby="cta-banner-heading">
   <div class="container">
     <div class="contact-panel cta-banner-grid">

@@ -144,6 +144,36 @@
     });
   });
 
+  document.querySelectorAll("[data-copy-email]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var email = btn.getAttribute("data-copy-email") || "";
+      if (email && navigator.clipboard && navigator.clipboard.writeText) {
+        var original = btn.textContent;
+        navigator.clipboard.writeText(email).then(function () {
+          btn.textContent = "Copied: " + email;
+          setTimeout(function () {
+            btn.textContent = original;
+          }, 2200);
+        });
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-copy-url]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var targetUrl = btn.getAttribute("data-copy-url") || window.location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        var original = btn.textContent;
+        navigator.clipboard.writeText(targetUrl).then(function () {
+          btn.textContent = "Copied URL";
+          setTimeout(function () {
+            btn.textContent = original;
+          }, 1800);
+        });
+      }
+    });
+  });
+
   // 5. Blog Topic Filtering & Instant Search
   var searchInput = document.getElementById("blog-search");
   var filterBtns = document.querySelectorAll("[data-blog-filter]");
@@ -343,6 +373,14 @@
           e.respondWith(deliveryPromise);
         }
       } else if (fallbackEmail) {
+        var plainDraft =
+          "To: " + fallbackEmail + "\n" +
+          "Subject: [" + topicVal + "] Inquiry from " + nameVal + (orgVal ? " (" + orgVal + ")" : "") + "\n\n" +
+          "Name: " + nameVal + "\n" +
+          "Email: " + emailVal + "\n" +
+          "Organization: " + (orgVal || "—") + "\n" +
+          "Category: " + topicVal + "\n\n" +
+          msgVal;
         var subject = encodeURIComponent("[" + topicVal + "] Inquiry from " + nameVal + (orgVal ? " (" + orgVal + ")" : ""));
         var body = encodeURIComponent(
           "Name: " + nameVal + "\n" +
@@ -354,9 +392,17 @@
         var mailtoHref = "mailto:" + fallbackEmail + "?subject=" + subject + "&body=" + body;
         statusEl.className = "form-status is-visible is-success";
         statusEl.innerHTML =
-          "<strong>Inquiry validated and formatted.</strong> Opening your email client to send directly to Jigyasa — or <a href=\"" +
+          "<strong>Inquiry validated and formatted.</strong> Opening your email client to send directly to Jigyasa — <a href=\"" +
           mailtoHref +
-          "\">click here if your mail client did not open automatically</a>.";
+          "\">open mail app</a> or <button type=\"button\" id=\"copy-formatted-inquiry\" class=\"btn btn--secondary btn--compact\">Copy Message &amp; Email</button>.";
+        var copyDraftBtn = document.getElementById("copy-formatted-inquiry");
+        if (copyDraftBtn && navigator.clipboard && navigator.clipboard.writeText) {
+          copyDraftBtn.addEventListener("click", function () {
+            navigator.clipboard.writeText(plainDraft).then(function () {
+              copyDraftBtn.textContent = "Copied Message + " + fallbackEmail;
+            });
+          });
+        }
         if (typeof e.respondWith === "function") {
           e.respondWith(Promise.resolve({ ok: true, mailto: mailtoHref }));
         }

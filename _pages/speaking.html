@@ -13,10 +13,23 @@ faq_key: "speaking"
 permalink: /speaking/
 ---
 
+{% assign next_stage = site.data.speaking.appearances | where: "status", "Upcoming" | first %}
+{% if next_stage %}
+<div class="callout-strip" role="region" aria-label="Next confirmed stage">
+  <div class="eyebrow">Next Confirmed Stage · {{ next_stage.date }}</div>
+  <div class="split-panel">
+    <p class="split-panel__desc">
+      <strong>{{ next_stage.event }}</strong> ({{ next_stage.location }}) — {{ next_stage.role }}
+    </p>
+    <a class="btn btn--secondary btn--sm" href="/work-with-me/?topic=Speaking%20%26%20Workshops#contact">Book a Briefing in {{ next_stage.location | split: "," | first }} →</a>
+  </div>
+</div>
+{% endif %}
+
 <!-- Featured Stage Highlight -->
 <div class="feature-split content-section">
   <div class="media-frame">
-    <a href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener">
+    <a id="speaking-io-video-link" class="media-frame__video-link" href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener" aria-label="Watch Jigyasa Grover featured on the Google I/O 2024 Main Keynote Stage on YouTube">
       <img
         src="{{ site.data.speaking.featured_video.image }}"
         width="1280"
@@ -24,6 +37,10 @@ permalink: /speaking/
         fetchpriority="high"
         alt="Jigyasa Grover featured on the Google I/O 2024 main keynote stage at Shoreline Amphitheatre"
       />
+      <span class="media-play-badge">
+        <span class="media-play-badge__icon" aria-hidden="true">▶</span>
+        <span>Watch Google I/O Keynote Clip ↗</span>
+      </span>
     </a>
     <div class="media-frame__caption">{{ site.data.speaking.featured_video.caption }}</div>
   </div>
@@ -119,7 +136,7 @@ permalink: /speaking/
   <h2 id="speaking-ledger-heading">Upcoming &amp; recent conferences</h2>
 
   <div class="ledger mt-md">
-    {% for a in site.data.speaking.appearances %}
+    {% for a in site.data.speaking.appearances limit:8 %}
     <div class="ledger-row">
       <div class="ledger-row__date">
         {{ a.date }}
@@ -141,6 +158,34 @@ permalink: /speaking/
     </div>
     {% endfor %}
   </div>
+
+  {% if site.data.speaking.appearances.size > 8 %}
+  <details class="ledger-more">
+    <summary class="ledger-more__summary">
+      <span class="ledger-more__label-closed">Show all {{ site.data.speaking.appearances.size }} global stage &amp; summit appearances</span>
+      <span class="ledger-more__label-open">Collapse earlier stage appearances</span>
+      <span class="ledger-more__icon" aria-hidden="true">↓</span>
+    </summary>
+    <div class="ledger ledger--nested">
+      {% for a in site.data.speaking.appearances offset:8 %}
+      <div class="ledger-row">
+        <div class="ledger-row__date">{{ a.date }}</div>
+        <div>
+          <div class="ledger-row__title">
+            {% if a.url %}
+              <a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.event }} ↗</a>
+            {% else %}
+              {{ a.event }}
+            {% endif %}
+          </div>
+          <p class="ledger-row__sub">{{ a.role }}</p>
+        </div>
+        <div class="ledger-row__aside">{{ a.location }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </details>
+  {% endif %}
 </section>
 
 <!-- Organizer FAQ -->

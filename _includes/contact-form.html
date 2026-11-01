@@ -107,6 +107,9 @@
 
     <div class="btn-group">
       <button id="contact-submit" type="submit" class="btn btn--accent">Send Inquiry →</button>
+      {% if site.contact.fallback_email and site.contact.fallback_email != "" %}
+      <button id="copy-direct-email" type="button" class="btn btn--secondary" data-copy-email="{{ site.contact.fallback_email | escape }}">Copy Direct Email</button>
+      {% endif %}
       <span class="form-note">
         Protected against automated spam · Direct response for aligned inquiries
       </span>

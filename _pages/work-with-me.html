@@ -3,8 +3,8 @@ layout: page
 title: "Work With Me"
 heading: "Advisory, keynotes, corporate AI training, and technical partnerships."
 eyebrow: "Collaborate & Connect"
-lead: "Select an engagement area below, book directly via Intro / Passionfroot / Naano, or send an inquiry."
-hero_cta_label: "Jump to Inquiry Form ↓"
+lead: "Book an instant 1:1 session or brand campaign below, send a direct inquiry, or explore detailed engagement scopes."
+hero_cta_label: "Send Direct Inquiry ↓"
 hero_cta_url: "#contact"
 seo_title: "Work With Jigyasa Grover — AI Advisory, Speaking & Training"
 description: "Collaborate with Jigyasa Grover across startup AI advisory, keynotes, corporate AI training, brand partnerships (Intro, Topmate, Passionfroot) & press."
@@ -14,10 +14,27 @@ redirect_from:
   - /contact/
 ---
 
-<!-- 1. Six Collaboration Pillars -->
-<section class="content-section" aria-labelledby="six-pillars-heading">
-  <div class="eyebrow">Collaboration Areas</div>
-  <h2 id="six-pillars-heading" class="mb-lg">How we can collaborate</h2>
+<!-- 1. Instant Booking Platforms & Verified Reviews (Above the Fold) -->
+<section class="content-section" aria-labelledby="booking-platforms-heading">
+  <div class="eyebrow">Direct Platforms · 5.0★ Across 130+ Sessions</div>
+  <h2 id="booking-platforms-heading" class="mb-lg">Instant 1:1 booking &amp; creator storefronts</h2>
+  {% include booking-platforms.html %}
+  <div class="mt-lg">
+    {% include testimonials-grid.html key="work_with_me" columns=3 %}
+  </div>
+</section>
+
+<!-- 2. Direct Inquiry Form -->
+<section id="contact" class="content-section--bordered" aria-labelledby="direct-inquiry-heading">
+  <div class="eyebrow">Direct Inquiry</div>
+  <h2 id="direct-inquiry-heading" class="mb-lg">Send an inquiry</h2>
+  {% include contact-form.html %}
+</section>
+
+<!-- 3. Compact Collaboration Scope Reference -->
+<section class="content-section--bordered content-section--last" aria-labelledby="six-pillars-heading">
+  <div class="eyebrow">Engagement Scopes</div>
+  <h2 id="six-pillars-heading" class="mb-lg">Explore dedicated collaboration tracks</h2>
 
   <div class="pillar-matrix">
     {% for p in site.data.pillars %}
@@ -29,35 +46,12 @@ redirect_from:
         </div>
         <h3 class="pillar-cell__title"><a href="{{ p.cta_url }}">{{ p.title }}</a></h3>
         <p class="pillar-cell__summary">{{ p.summary }}</p>
-        <ul class="pillar-cell__list">
-          {% for d in p.deliverables %}
-          <li>{{ d }}</li>
-          {% endfor %}
-        </ul>
         <p class="pillar-cell__evidence">{{ p.evidence }}</p>
       </div>
-      <div class="btn-group">
-        <a class="btn btn--secondary" href="{{ p.cta_url }}">{{ p.cta_label }} →</a>
-        <a class="pillar-cell__cta" href="/work-with-me/?topic={{ p.inquiry_topic | uri_escape }}#contact">Inquire ↓</a>
+      <div>
+        <a class="pillar-cell__cta" href="{{ p.cta_url }}">{{ p.cta_label }} <span aria-hidden="true">→</span></a>
       </div>
     </article>
     {% endfor %}
   </div>
-</section>
-
-<!-- 2. Direct Booking Platforms -->
-<section class="content-section--bordered" aria-labelledby="booking-platforms-heading">
-  <div class="eyebrow">Direct Platforms · 5.0★ Across 130+ Sessions</div>
-  <h2 id="booking-platforms-heading" class="mb-lg">Instant 1:1 booking &amp; creator storefronts</h2>
-  {% include booking-platforms.html %}
-  <div class="mt-lg">
-    {% include testimonials-grid.html key="work_with_me" columns=3 %}
-  </div>
-</section>
-
-<!-- 3. Contact Form -->
-<section id="contact" class="content-section--bordered content-section--last" aria-labelledby="direct-inquiry-heading">
-  <div class="eyebrow">Direct Inquiry</div>
-  <h2 id="direct-inquiry-heading" class="mb-lg">Send an inquiry</h2>
-  {% include contact-form.html %}
 </section>

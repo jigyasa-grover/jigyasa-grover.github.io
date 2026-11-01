@@ -4,14 +4,14 @@ primary:
     match_urls:
       - "/about"
       - "/experience/"
-  - label: "Work"
-    url: "/projects/"
-    match_urls:
-      - "/projects/"
   - label: "Speaking"
     url: "/speaking/"
     match_urls:
       - "/speaking/"
+  - label: "Advisory"
+    url: "/advisory/"
+    match_urls:
+      - "/advisory/"
   - label: "Teaching"
     url: "/teaching/"
     match_urls:
@@ -21,19 +21,11 @@ primary:
     match_urls:
       - "/blog/"
     match_layout: "post"
-  - label: "Publications"
-    url: "/publications/"
-    match_urls:
-      - "/publications/"
   - label: "Press"
     url: "/press/"
     match_urls:
       - "/press/"
       - "/highlights/"
-  - label: "Advisory"
-    url: "/advisory/"
-    match_urls:
-      - "/advisory/"
 
 footer_explore:
   - label: "About & Biography"
@@ -50,6 +42,8 @@ footer_explore:
     url: "/highlights/"
   - label: "Press & Media Kit"
     url: "/press/"
+  - label: "Quick Links & Slide QR"
+    url: "/links/"
 
 footer_collaborate:
   - label: "AI Startup & Product Advisory"

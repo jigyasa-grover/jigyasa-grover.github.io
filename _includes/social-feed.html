@@ -1,9 +1,11 @@
 {% assign sf = site.data.social_feed %}
 {% assign feed_context = include.context | default: "highlights" %}
+{% assign is_compact = include.compact | default: false %}
 {% assign behold_url = site.social.behold_feed_url | default: "" %}
 
-<div class="social-feed" data-social-feed data-behold-url="{{ behold_url | escape }}">
+<div class="social-feed" data-social-feed {% unless is_compact %}data-behold-url="{{ behold_url | escape }}"{% endunless %}>
   <div class="social-feed__header">
+    {% unless is_compact %}
     <div class="filter-pills" role="group" aria-label="Filter social posts by platform or sponsorship">
       <button type="button" class="filter-btn is-active" data-social-filter="all" aria-pressed="true">All</button>
       <button type="button" class="filter-btn" data-social-filter="sponsored" aria-pressed="false">Sponsored</button>
@@ -11,6 +13,7 @@
       <button type="button" class="filter-btn" data-social-filter="x" aria-pressed="false">X (Twitter)</button>
       <button type="button" class="filter-btn" data-social-filter="instagram" aria-pressed="false">Instagram</button>
     </div>
+    {% endunless %}
 
     <div class="social-channels" aria-label="Follow Jigyasa Grover">
       {% for ch in sf.channels %}

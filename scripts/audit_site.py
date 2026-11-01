@@ -67,6 +67,11 @@ EXPECTED_ROUTES = [
     "/courses/",
     "/partnerships/",
     "/press/",
+    "/links/",
+    "/bio/",
+    "/qr/",
+    "/assets/images/og-card.jpg",
+    "/assets/images/links-qr.svg",
     "/assets/css/style.css",
     "/assets/js/site.js",
     "/ads.txt",
@@ -331,6 +336,7 @@ def main() -> None:
             "/speaking/index.html",
             "/teaching/index.html",
             "/work-with-me/index.html",
+            "/links/index.html",
         }
         is_post = rel_path not in standalone_paths
         if not is_post and "rishabhmisra" in raw.lower():

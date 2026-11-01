@@ -1515,3 +1515,406 @@
   color: var(--ink-muted);
   line-height: 1.4;
 }
+
+/* ==========================================================================
+   Upcoming Stage Live Ribbon, Video Play Badge, Progressive Ledgers & /links/
+   ========================================================================== */
+
+.btn--compact {
+  padding: 0.56rem 1rem;
+  font-size: 0.83rem;
+}
+
+.stage-ribbon {
+  background-color: var(--bg-subtle);
+  border-bottom: 1px solid var(--rule-light);
+  padding: 0.62rem 0;
+}
+
+.stage-ribbon__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.25rem;
+  font-size: 0.84rem;
+}
+
+.stage-ribbon__main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.75rem;
+  color: var(--ink-secondary);
+}
+
+.stage-ribbon__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--verified);
+  background-color: var(--verified-wash);
+  padding: 0.18rem 0.52rem;
+  border-radius: var(--radius-xs);
+}
+
+.stage-ribbon__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--verified);
+  display: inline-block;
+  animation: pulse-stage-dot 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse-stage-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.85); }
+}
+
+.stage-ribbon__cta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+  }
+}
+
+// Playable Video Thumbnail Overlay (Google I/O Main Keynote)
+.media-frame__video-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+
+  img {
+    transition: transform 280ms var(--ease-editorial);
+  }
+
+  &:hover img {
+    transform: scale(1.02);
+  }
+
+  &:hover .media-play-badge {
+    background-color: rgba(20, 20, 19, 0.94);
+    border-color: var(--accent);
+  }
+
+  &:hover .media-play-badge__icon {
+    transform: scale(1.08);
+  }
+}
+
+.media-play-badge {
+  position: absolute;
+  left: 0.9rem;
+  bottom: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.48rem 0.85rem 0.48rem 0.55rem;
+  background-color: rgba(20, 20, 19, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background-color 180ms var(--ease-editorial), border-color 180ms var(--ease-editorial);
+
+  @include mobile {
+    left: 0.6rem;
+    bottom: 0.6rem;
+    font-size: 0.68rem;
+    padding: 0.38rem 0.65rem 0.38rem 0.45rem;
+  }
+}
+
+.media-play-badge__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  padding-left: 2px;
+  transition: transform 180ms var(--ease-editorial);
+}
+
+// Progressive Disclosure for Long Archival Ledgers (100% Crawl-Preserved)
+.ledger-more {
+  margin-top: 1rem;
+}
+
+.ledger-more__summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.62rem 1.05rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.77rem;
+  font-weight: 500;
+  color: var(--ink-primary);
+  transition: border-color 160ms var(--ease-editorial), background-color 160ms var(--ease-editorial), color 160ms var(--ease-editorial);
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background-color: var(--bg-subtle);
+  }
+}
+
+.ledger-more__label-open {
+  display: none;
+}
+
+.ledger-more__icon {
+  transition: transform 180ms var(--ease-editorial);
+  color: var(--accent);
+}
+
+.ledger-more[open] {
+  .ledger-more__label-closed {
+    display: none;
+  }
+
+  .ledger-more__label-open {
+    display: inline;
+  }
+
+  .ledger-more__icon {
+    transform: rotate(180deg);
+  }
+}
+
+.ledger--nested {
+  margin-top: 1rem;
+  border-top: 1px solid var(--rule-light);
+}
+
+// Native /links/ ("Link-in-Bio" & Conference Slide QR Hub)
+.links-hub {
+  padding: 3.25rem 0 4.5rem;
+
+  @include mobile {
+    padding: 2rem 0 3.25rem;
+  }
+}
+
+.links-hub__container {
+  max-width: 680px;
+}
+
+.links-hub__header {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links-hub__avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--rule-strong);
+  background-color: var(--bg-surface);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.links-hub__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 0.45rem;
+}
+
+.links-hub__name {
+  font-size: unquote("clamp(1.95rem, 4vw, 2.5rem)");
+  margin-bottom: 0.55rem;
+}
+
+.links-hub__bio {
+  font-size: 0.96rem;
+  line-height: 1.58;
+  color: var(--ink-secondary);
+  max-width: 54ch;
+  margin-bottom: 1.25rem;
+}
+
+.links-hub__socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.links-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.links-stack__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  padding: 0.35rem 0.15rem 0.15rem;
+}
+
+.links-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.35rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--rule-light);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: border-color 180ms var(--ease-editorial), transform 180ms var(--ease-editorial), box-shadow 180ms var(--ease-editorial);
+
+  > div {
+    min-width: 0;
+  }
+
+  &:hover {
+    border-color: var(--ink-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-subtle);
+
+    .links-card__arrow {
+      color: var(--accent);
+      transform: translateX(2px);
+    }
+  }
+
+  @include mobile {
+    padding: 1rem 1.05rem;
+  }
+}
+
+.links-card--live {
+  margin-bottom: 1.25rem;
+  border-color: var(--verified);
+  background-color: var(--verified-wash);
+}
+
+.links-card--featured {
+  border-left: 3px solid var(--accent);
+}
+
+.links-card__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  margin-bottom: 0.25rem;
+}
+
+.links-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-weight: 500;
+  line-height: 1.28;
+  color: var(--ink-primary);
+  margin-bottom: 0.2rem;
+}
+
+.links-card__sub {
+  font-size: 0.84rem;
+  color: var(--ink-secondary);
+  line-height: 1.45;
+}
+
+.links-card__arrow {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--ink-muted);
+  flex-shrink: 0;
+  transition: transform 160ms var(--ease-editorial), color 160ms var(--ease-editorial);
+}
+
+.qr-card {
+  margin-top: 2.25rem;
+  padding: 1.5rem;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-md);
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+
+    .btn-group {
+      justify-content: center;
+    }
+  }
+}
+
+.qr-card__img {
+  width: 128px;
+  height: 128px;
+  display: block;
+  border: 1px solid var(--rule-light);
+  border-radius: var(--radius-xs);
+  background-color: #FFFFFF;
+  padding: 4px;
+}
+
+.qr-card__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.qr-card__desc {
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  margin-bottom: 0.95rem;
+}

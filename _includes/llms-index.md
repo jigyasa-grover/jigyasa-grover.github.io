@@ -17,6 +17,7 @@ For complete structured biographical, career, speaking, course, publication, and
 - [Selected Engineering Projects](https://jigyasa-grover.github.io/projects/): Open-source agentic AI systems, TPU fine-tuning, edge/cloud racing telemetry, and RAG benchmarks.
 - [Books & Publications](https://jigyasa-grover.github.io/publications/): *Sculpting Data for ML* (ISBN 979-8585463570, 4.8★ Goodreads, 95+ citations), *Enterprise LLM Deployment Readiness* (SSRN 2026), Springer chapters, and ACM research.
 - [Press, Media & Speaker Kit](https://jigyasa-grover.github.io/press/): Forbes, Business Insider, VentureBeat, Observer, 13+ awards ledger, copyable bios, and press photos.
+- [Quick Links & Slide QR Hub](https://jigyasa-grover.github.io/links/): Unified link-in-bio, 5.0★ 1:1 booking links, upcoming stage, courses, and downloadable conference slide QR code.
 - [Technical Blog](https://jigyasa-grover.github.io/blog/): 33 in-depth technical articles and essays (plus 57 self-hosted 2015–2017 open-source archive entries at `/archive/`).
 
 ## Direct Collaboration & Booking Platforms

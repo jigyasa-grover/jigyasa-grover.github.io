@@ -8,7 +8,7 @@ locale: en_US
 url: https://jigyasa-grover.github.io
 baseurl: ""
 avatar: /assets/images/opt/profile_photo.jpg
-og_image: /assets/images/opt/google_io_feature.jpg
+og_image: /assets/images/og-card.jpg
 
 # Analytics (GA4 active; legacy Universal Analytics removed)
 google_analytics_ga4: G-GC9TNKJ6GT

@@ -60,7 +60,7 @@ permalink: /experience/
   <h2 id="milestone-archive-heading" class="mb-md">Keynotes, awards &amp; launches</h2>
 
   <div class="ledger">
-    {% for u in site.data.updates %}
+    {% for u in site.data.updates limit:7 %}
     <div class="ledger-row">
       <div class="ledger-row__date">{{ u.date }}</div>
       <div>
@@ -75,4 +75,30 @@ permalink: /experience/
     </div>
     {% endfor %}
   </div>
+
+  {% if site.data.updates.size > 7 %}
+  <details class="ledger-more">
+    <summary class="ledger-more__summary">
+      <span class="ledger-more__label-closed">Show complete 2017–2026 milestone archive ({{ site.data.updates.size }} entries)</span>
+      <span class="ledger-more__label-open">Collapse earlier 2017–2025 milestones</span>
+      <span class="ledger-more__icon" aria-hidden="true">↓</span>
+    </summary>
+    <div class="ledger ledger--nested">
+      {% for u in site.data.updates offset:7 %}
+      <div class="ledger-row">
+        <div class="ledger-row__date">{{ u.date }}</div>
+        <div>
+          <p class="ledger-row__sub ledger-row__sub--primary">
+            {{ u.text }}
+            {% if u.url %}
+              <a class="ledger-inline-link" href="{{ u.url }}" {% if u.url contains 'http' %}target="_blank" rel="noopener"{% endif %}>View →</a>
+            {% endif %}
+          </p>
+        </div>
+        <div class="ledger-row__aside">{{ u.category }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </details>
+  {% endif %}
 </section>

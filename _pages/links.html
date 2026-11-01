@@ -1,0 +1,180 @@
+---
+layout: default
+title: "Quick Links & Speaker Hub"
+seo_title: "Links, Booking & Slide QR — Jigyasa Grover"
+description: "Official quick links for Jigyasa Grover: 1:1 AI advisory (Intro, Topmate 5.0★), brand partnerships (Passionfroot), Google ADK courses, speaking & essays."
+permalink: /links/
+redirect_from:
+  - /bio/
+  - /qr/
+---
+{% assign id = site.data.identity %}
+{% assign next_stage = site.data.speaking.appearances | where: "status", "Upcoming" | first %}
+{% assign latest_post = nil %}
+{% for post in site.posts %}
+  {% if post.url != "/archive/" and post.archival != true %}
+    {% assign latest_post = post %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<section class="links-hub" aria-labelledby="links-hub-heading">
+  <div class="container links-hub__container">
+    <!-- Identity Header -->
+    <header class="links-hub__header">
+      <img
+        class="links-hub__avatar"
+        src="/assets/images/opt/profile_photo.jpg"
+        width="104"
+        height="104"
+        fetchpriority="high"
+        alt="Portrait of Jigyasa Grover"
+      />
+      <div class="links-hub__kicker">
+        <span class="hero__dot" aria-hidden="true"></span>
+        <span>{{ id.award_badge }}</span>
+      </div>
+      <h1 id="links-hub-heading" class="links-hub__name">Jigyasa Grover</h1>
+      <p class="links-hub__bio">
+        ML Tech Lead @ <strong>Uber</strong> · <strong>Google</strong> Developer Advisory Board &amp; AI/ML GDE · LinkedIn Learning Instructor (44K+ learners) · Co-author, <em>Sculpting Data for ML</em>
+      </p>
+
+      <div class="links-hub__socials" aria-label="Verified social profiles">
+        {% for s in id.socials %}
+        <a class="social-channel-pill" href="{{ s.url }}" target="_blank" rel="noopener me">
+          <span class="social-channel-pill__name">{{ s.name }}</span>
+          <span class="social-channel-pill__meta">↗</span>
+        </a>
+        {% endfor %}
+      </div>
+    </header>
+
+    <!-- Live Upcoming Stage Highlight -->
+    {% if next_stage %}
+    <a id="links-next-stage" class="links-card links-card--live" href="/work-with-me/?topic=Speaking%20%26%20Workshops#contact">
+      <div>
+        <div class="links-card__eyebrow">
+          <span class="stage-ribbon__dot" aria-hidden="true"></span>
+          <span>Next Stage · {{ next_stage.date }} · {{ next_stage.location }}</span>
+        </div>
+        <div class="links-card__title">{{ next_stage.event }} — {{ next_stage.role | remove_first: "Speaker · " }}</div>
+        <div class="links-card__sub">Book an in-person briefing or invite Jigyasa to speak</div>
+      </div>
+      <span class="links-card__arrow" aria-hidden="true">→</span>
+    </a>
+    {% endif %}
+
+    <!-- High-Intent Action Stack -->
+    <div class="links-stack" aria-label="Primary booking, learning, and collaboration links">
+      <div class="links-stack__label">Collaborate &amp; Book (5.0★ Verified)</div>
+
+      <a id="links-intro" class="links-card links-card--featured" href="{{ id.booking.intro.url }}" target="_blank" rel="noopener">
+        <div>
+          <div class="links-card__eyebrow">5.0★ · 30+ Founder &amp; Executive Reviews</div>
+          <div class="links-card__title">Book 1:1 AI Strategy &amp; Architecture Call on Intro</div>
+          <div class="links-card__sub">Startup advisory, agentic architecture reviews &amp; leadership coaching</div>
+        </div>
+        <span class="links-card__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a id="links-topmate" class="links-card" href="https://topmate.io/jigyasagrover" target="_blank" rel="noopener">
+        <div>
+          <div class="links-card__eyebrow">5.0★ · 99+ Completed 1:1 Sessions</div>
+          <div class="links-card__title">1:1 Mentorship &amp; Career Strategy on Topmate</div>
+          <div class="links-card__sub">ML engineering interviews, Big Tech transitions &amp; portfolio feedback</div>
+        </div>
+        <span class="links-card__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a id="links-passionfroot" class="links-card" href="{{ id.booking.passionfroot.url }}" target="_blank" rel="noopener">
+        <div>
+          <div class="links-card__eyebrow">Brand &amp; Developer Ecosystem Partnerships</div>
+          <div class="links-card__title">Sponsor Technical Content via Passionfroot</div>
+          <div class="links-card__sub">LinkedIn, X &amp; Instagram technical deep dives (Google, Meta, Qodo, Parallel)</div>
+        </div>
+        <span class="links-card__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a id="links-speaking" class="links-card" href="/speaking/">
+        <div>
+          <div class="links-card__eyebrow">Google I/O Keynote Feature · Sessionize Top 3%</div>
+          <div class="links-card__title">Invite Jigyasa to Keynote, Moderate, or Lead a Workshop</div>
+          <div class="links-card__sub">Signature talk abstracts, past global stages &amp; approved speaker kit</div>
+        </div>
+        <span class="links-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <div class="links-stack__label mt-md">Learn, Read &amp; Watch</div>
+
+      <a id="links-courses" class="links-card" href="{{ site.data.courses.linkedin_learning_profile }}" target="_blank" rel="noopener">
+        <div>
+          <div class="links-card__eyebrow">LinkedIn Learning · 44,000+ Learners · 4.6–4.8★</div>
+          <div class="links-card__title">Hands-On Google ADK, Agent Evaluation &amp; Responsible AI Courses</div>
+          <div class="links-card__sub">4 code-first courses on building, evaluating, and shipping AI systems</div>
+        </div>
+        <span class="links-card__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a id="links-book" class="links-card" href="{{ site.data.publications.featured_book.amazon_url }}" target="_blank" rel="noopener">
+        <div>
+          <div class="links-card__eyebrow">Published Book · 95+ Academic Citations · 4.8★</div>
+          <div class="links-card__title">Sculpting Data for ML: The First Act of Machine Learning</div>
+          <div class="links-card__sub">Paperback, Kindle &amp; Audible · Forewords by Julian McAuley &amp; Laurence Moroney</div>
+        </div>
+        <span class="links-card__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      {% if latest_post %}
+      <a id="links-latest-essay" class="links-card" href="{{ latest_post.url }}">
+        <div>
+          <div class="links-card__eyebrow">Latest Technical Essay · {{ latest_post.date | date: "%b %Y" }}</div>
+          <div class="links-card__title">{{ latest_post.title }}</div>
+          <div class="links-card__sub">Read the full benchmark &amp; engineering write-up on the journal</div>
+        </div>
+        <span class="links-card__arrow" aria-hidden="true">→</span>
+      </a>
+      {% endif %}
+
+      <a id="links-io-keynote" class="links-card" href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener">
+        <div>
+          <div class="links-card__eyebrow">Featured Video · 147K+ Views</div>
+          <div class="links-card__title">Watch Google I/O Main Keynote Feature</div>
+          <div class="links-card__sub">Introduced by Sundar Pichai at Shoreline Amphitheatre</div>
+        </div>
+        <span class="links-card__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a id="links-direct-inquiry" class="links-card" href="/work-with-me/#contact">
+        <div>
+          <div class="links-card__eyebrow">Direct Inbox</div>
+          <div class="links-card__title">Send a Custom Advisory, Corporate Training, or Press Inquiry</div>
+          <div class="links-card__sub">Open the direct collaboration form or copy direct email</div>
+        </div>
+        <span class="links-card__arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <!-- Conference Slide & Bio QR Card -->
+    <div class="qr-card" aria-labelledby="qr-card-heading">
+      <img
+        class="qr-card__img"
+        src="/assets/images/links-qr.svg"
+        width="128"
+        height="128"
+        loading="lazy"
+        alt="Scan QR code to open jigyasa-grover.github.io/links/"
+      />
+      <div>
+        <div class="eyebrow mb-xs">Conference Slide &amp; Bio QR</div>
+        <h2 id="qr-card-heading" class="qr-card__title">Share or scan this page onstage</h2>
+        <p class="qr-card__desc">
+          Point any phone camera here to save Jigyasa's slides, courses, and booking links in one tap.
+        </p>
+        <div class="btn-group">
+          <button id="copy-links-hub-url" type="button" class="btn btn--secondary btn--compact" data-copy-url="{{ site.url }}/links/">Copy /links/ URL</button>
+          <a class="btn btn--secondary btn--compact" href="/assets/images/press/jigyasa-grover-links-qr.png" download="jigyasa-grover-links-qr.png">Download Slide QR (PNG) ↓</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -94,6 +94,31 @@ layout: default
         </div>
       </div>
 
+      {% unless page.url == "/archive/" %}
+      {% assign is_agentic_post = false %}
+      {% if meta and meta.category contains "Agentic" %}{% assign is_agentic_post = true %}{% endif %}
+      {% if meta and meta.category contains "Fine-Tuning" %}{% assign is_agentic_post = true %}{% endif %}
+      <div class="reader-flywheel">
+        <div class="reader-flywheel__eyebrow">Keep Learning &amp; Stay Connected</div>
+        {% if is_agentic_post %}
+          <div class="reader-flywheel__title">Go deeper on production AI agents &amp; evaluation</div>
+          <p class="reader-flywheel__desc">
+            Join <strong>44,000+ engineers</strong> in my hands-on <strong>Google ADK &amp; Agent Evaluation</strong> courses on LinkedIn Learning—and follow new benchmarks on LinkedIn and X.
+          </p>
+        {% else %}
+          <div class="reader-flywheel__title">Enjoyed this technical deep dive?</div>
+          <p class="reader-flywheel__desc">
+            Follow new production ML &amp; agentic AI dispatches across LinkedIn and X, or explore <em>Sculpting Data for ML</em> (95+ citations) and 4 LinkedIn Learning courses (44K+ learners).
+          </p>
+        {% endif %}
+        <div class="btn-group">
+          <a class="btn btn--primary btn--compact" href="https://www.linkedin.com/in/jigyasa-grover/" target="_blank" rel="noopener">Follow on LinkedIn ↗</a>
+          <a class="btn btn--secondary btn--compact" href="https://x.com/jigyasa_grover" target="_blank" rel="noopener">Follow @jigyasa_grover ↗</a>
+          <a class="btn btn--secondary btn--compact" href="{{ site.data.courses.linkedin_learning_profile }}" target="_blank" rel="noopener">Google ADK Courses (44K+) ↗</a>
+        </div>
+      </div>
+      {% endunless %}
+
       <div class="author-card">
         <img src="/assets/images/opt/profile_photo.jpg" width="76" height="76" loading="lazy" alt="Portrait of Jigyasa Grover" />
         <div>
@@ -116,22 +141,45 @@ layout: default
       <h2 id="related-articles-heading" class="mb-md">Related Technical Writing</h2>
       <div class="ledger">
         {% assign shown = 0 %}
-        {% for post in site.posts %}
-          {% if post.url != page.url and post.url != "/archive/" and post.archival != true and shown < 3 %}
-            {% assign pmeta = site.data.posts_meta[post.url] %}
-            {% if meta == nil or pmeta == nil or pmeta.category == meta.category or shown < 3 %}
-              {% assign shown = shown | plus: 1 %}
-              <div class="ledger-row">
-                <div class="ledger-row__date">{{ post.date | date: "%b %Y" }}</div>
-                <div>
-                  <div class="ledger-row__title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-                  {% if pmeta and pmeta.summary %}<p class="ledger-row__sub">{{ pmeta.summary }}</p>{% endif %}
+        {% assign shown_urls = page.url | append: "|" %}
+        {% if meta and meta.category %}
+          {% for post in site.posts %}
+            {% if post.url != page.url and post.url != "/archive/" and post.archival != true and shown < 3 %}
+              {% assign pmeta = site.data.posts_meta[post.url] %}
+              {% if pmeta and pmeta.category == meta.category %}
+                {% assign shown = shown | plus: 1 %}
+                {% assign shown_urls = shown_urls | append: post.url | append: "|" %}
+                <div class="ledger-row">
+                  <div class="ledger-row__date">{{ post.date | date: "%b %Y" }}</div>
+                  <div>
+                    <div class="ledger-row__title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+                    {% if pmeta.summary %}<p class="ledger-row__sub">{{ pmeta.summary }}</p>{% endif %}
+                  </div>
+                  <div class="ledger-row__aside">{{ pmeta.category }}</div>
                 </div>
-                <div class="ledger-row__aside">{% if pmeta %}{{ pmeta.category }}{% endif %}</div>
-              </div>
+              {% endif %}
             {% endif %}
-          {% endif %}
-        {% endfor %}
+          {% endfor %}
+        {% endif %}
+        {% if shown < 3 %}
+          {% for post in site.posts %}
+            {% assign url_token = post.url | append: "|" %}
+            {% unless shown_urls contains url_token %}
+              {% if post.url != "/archive/" and post.archival != true and shown < 3 %}
+                {% assign pmeta = site.data.posts_meta[post.url] %}
+                {% assign shown = shown | plus: 1 %}
+                <div class="ledger-row">
+                  <div class="ledger-row__date">{{ post.date | date: "%b %Y" }}</div>
+                  <div>
+                    <div class="ledger-row__title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+                    {% if pmeta and pmeta.summary %}<p class="ledger-row__sub">{{ pmeta.summary }}</p>{% endif %}
+                  </div>
+                  <div class="ledger-row__aside">{% if pmeta %}{{ pmeta.category }}{% endif %}</div>
+                </div>
+              {% endif %}
+            {% endunless %}
+          {% endfor %}
+        {% endif %}
       </div>
     </section>
     {% endunless %}
