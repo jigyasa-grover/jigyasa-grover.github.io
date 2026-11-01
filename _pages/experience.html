@@ -47,7 +47,7 @@ permalink: /experience/
       <div class="ledger-row__date">{{ edu.period }}</div>
       <div>
         <div class="ledger-row__title">{{ edu.degree }}</div>
-        <p class="ledger-row__sub"><strong>{{ edu.institution }}</strong> · {{ edu.detail }}</p>
+        <p class="ledger-row__sub">{% if edu.url %}<a class="link-inherit" href="{{ edu.url }}" target="_blank" rel="noopener"><strong>{{ edu.institution }} ↗</strong></a>{% else %}<strong>{{ edu.institution }}</strong>{% endif %} · {{ edu.detail }}</p>
       </div>
       <div class="ledger-row__aside">Academic</div>
     </div>

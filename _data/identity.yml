@@ -15,7 +15,7 @@ hero_lead: "Machine Learning Tech Lead at Uber, Google Developer Advisory Board 
 
 short_bio_50: "Jigyasa Grover is a Machine Learning Engineer at Uber leading global rider personalization and ranking, a 13x AI and Open Source award winner, Google Developer Advisory Board member, Google Developer Expert in AI/ML, LinkedIn Learning instructor (44,000+ learners), and co-author of Sculpting Data for ML."
 
-medium_bio_150: "Jigyasa Grover (pronounced jig-YAH-sah GROH-ver) is a San Francisco–based Machine Learning Engineer at Uber, serving as Tech Lead for rider personalization and ranking across 500+ cities. Previously, she led AI and Research at Bordo AI and built low-latency ML ranking, ads prediction, and feature infrastructure across Faire, Twitter (X), and Meta. A 13-time award winner in AI and Open Source, she serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) and Women Techmakers Ambassador recognition, and is a World Economic Forum Global Shaper. She co-authored Sculpting Data for ML (95+ citations), teaches 44,000+ learners across 4 LinkedIn Learning courses, delivers corporate AI training with Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, and AI Aspire, has consulted or advised 30+ organizations, and has delivered 200+ talks across 20+ countries—including the Google I/O main stage."
+medium_bio_150: "Jigyasa Grover (pronounced jig-YAH-sah GROH-ver) is a San Francisco–based Machine Learning Engineer at Uber, serving as Tech Lead for rider personalization and ranking across 500+ cities. Previously, she led AI and Research at Bordo AI and built low-latency ML ranking, ads prediction, and feature infrastructure across Faire, Twitter (X), and Meta, following her M.S. in Computer Science (AI) at UC San Diego and selection to the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS). A 13-time award winner in AI and Open Source, she serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) and Women Techmakers Ambassador recognition, and is a World Economic Forum Global Shaper. She co-authored Sculpting Data for ML (95+ citations), teaches 44,000+ learners across 4 LinkedIn Learning courses, delivers corporate AI training with Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, and AI Aspire, has consulted or advised 30+ organizations, and has delivered 200+ talks across 20+ countries—including the Google I/O main stage."
 
 metrics:
   - value: "13+"
@@ -146,25 +146,29 @@ career:
     highlights:
       - "Automated high-throughput signal integrity alerting across advertiser conversion pipelines."
   - role: "Early Research & Open Source Engineering"
-    org: "San Diego Supercomputer Center · IRD Paris · National Research Council Canada · GSoC"
+    org: "San Diego Supercomputer Center · Cornell/Maryland/Max Planck (CMMRS) · IRD Paris · NRC Canada · GSoC"
     period: "2015 – 2018"
-    location: "San Diego · Paris · Ottawa"
+    location: "San Diego · Saarbrücken · Paris · Ottawa"
     summary: "Cross-disciplinary research in computer vision, agent-based ecological modeling, and computational social networks."
     highlights:
+      - "Selected on full scholarship among Top 30 globally for the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS) at MPI-SWS in Saarbrücken, Germany."
       - "Automated histology brain-atlas image annotation at SDSC; CORMAS spatial agent-based modeling in Pharo Smalltalk at IRD Paris (ESUG Scholar); kinetic Monte Carlo social simulation at NRC Canada (Mitacs Globalink Scholar)."
       - "Two-time Google Summer of Code developer (FOSSASIA / Pharo) and GSoC Organization Administrator for the Pharo Consortium."
 
 education:
   - degree: "M.S. in Computer Science (Artificial Intelligence Specialization)"
     institution: "University of California, San Diego (UCSD)"
+    url: "https://ucsd.edu/"
     period: "2017 – Dec 2018"
     detail: "GPA 3.9 / 4.0 · Graduate Teaching & Research at San Diego Supercomputer Center"
   - degree: "Pre-Doctoral Research School in Computer Science"
-    institution: "Cornell, Maryland & Max Planck Pre-Doctoral Research School"
+    institution: "Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS)"
+    url: "https://cmmrs.mpi-sws.org/"
     period: "Aug 2017"
-    detail: "Saarbrücken, Germany · Full Scholarship (Selected among Top 30 globally)"
+    detail: "Max Planck Institute for Software Systems (MPI-SWS), Saarbrücken, Germany · Full Scholarship (Selected among Top 30 globally)"
   - degree: "B.Tech. in Computer Engineering"
     institution: "Delhi Technological University (formerly DCE)"
+    url: "https://dtu.ac.in/"
     period: "2013 – May 2017"
     detail: "GPA 9.3 / 10.0 (Top 5%) · Conferred Distinguished Alumni — Young Achiever Award (2025/2026)"
 
