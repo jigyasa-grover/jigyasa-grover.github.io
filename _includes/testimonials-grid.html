@@ -1,0 +1,33 @@
+{% assign items = site.data.testimonials[include.key] %}
+{% assign cols = include.columns | default: 3 %}
+{% if include.show_badges %}
+<div class="rating-strip" aria-label="Verified platform ratings">
+  {% for pr in site.data.testimonials.platform_ratings %}
+  <a class="rating-pill" href="{{ pr.url }}" target="_blank" rel="noopener">
+    <span class="rating-pill__platform">{{ pr.platform }}</span>
+    <span class="rating-pill__score">{{ pr.score }}</span>
+    <span class="rating-pill__detail">{{ pr.detail }} ↗</span>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if items %}
+<div class="testimonial-grid{% if cols == 2 or cols == '2' %} testimonial-grid--2col{% elsif cols == 1 or cols == '1' %} testimonial-grid--1col{% endif %}">
+  {% for t in items %}
+  <figure class="testimonial-card">
+    <div class="testimonial-card__top">
+      <span class="testimonial-card__stars" aria-label="Rated {{ t.rating }}">★★★★★ {{ t.rating }}</span>
+      <a class="testimonial-card__source" href="{{ t.url }}" target="_blank" rel="noopener">{{ t.platform }} ↗</a>
+    </div>
+    <blockquote class="testimonial-card__quote">
+      <p>“{{ t.quote }}”</p>
+    </blockquote>
+    <figcaption class="testimonial-card__author">
+      <strong class="testimonial-card__name">{{ t.author }}</strong>
+      <span class="testimonial-card__role">{{ t.role }}</span>
+    </figcaption>
+  </figure>
+  {% endfor %}
+</div>
+{% endif %}

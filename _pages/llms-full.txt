@@ -44,21 +44,27 @@ Pronunciation: JIG-yah-suh GROH-ver
 
 ### Official Booking & Collaboration Links
 - Direct Inquiry Form: https://jigyasa-grover.github.io/work-with-me/#contact
-- Intro (1:1 Video Consultations): https://intro.co/JigyasaGrover
-- Topmate (Mentorship & Quick Calls): https://topmate.io/jigyasagrover
+- Intro (1:1 Video Consultations — 5.0★ across 6 verified reviews): https://intro.co/JigyasaGrover
+- Topmate (Mentorship & Quick Calls — 5.0★ across 19 ratings, 126+ bookings): https://topmate.io/jigyasagrover
 - Passionfroot (Brand & Developer Content Partnerships): https://www.passionfroot.me/jigyasa-grover
 - Naano (LinkedIn/X Creator Collaborations): https://naano.com/creators/jigyasa-grover
 
+### Selected Verified Client, Founder & Learner Testimonials
+{% for t in site.data.testimonials.home %}- "{{ t.quote }}" — {{ t.author }} ({{ t.role }} · {{ t.platform }}, {{ t.rating }})
+{% endfor %}{% for t in site.data.testimonials.advisory %}- "{{ t.quote }}" — {{ t.author }} ({{ t.role }} · {{ t.platform }}, {{ t.rating }})
+{% endfor %}{% for t in site.data.testimonials.teaching %}- "{{ t.quote }}" — {{ t.author }} ({{ t.role }} · {{ t.platform }}, {{ t.rating }})
+{% endfor %}
+
 ## 6. Courses & Corporate AI Workshops
 
-- LinkedIn Learning Instructor Profile: https://www.linkedin.com/learning/instructors/jigyasa-grover ({{ site.data.courses.total_learners }} learners, {{ site.data.courses.total_bookmarks }} bookmarks)
+- LinkedIn Learning Instructor Profile: https://www.linkedin.com/learning/instructors/jigyasa-grover ({{ site.data.courses.total_learners }} learners, {{ site.data.courses.total_bookmarks }} bookmarks, {{ site.data.courses.avg_rating }} across {{ site.data.courses.total_ratings }} ratings)
 - Corporate AI Training & Enablement Organizations: {{ site.data.courses.training_clients | join: ", " }}, and more
-{% for c in site.data.courses.courses %}- **{{ c.title }}** ({{ c.provider }}, {{ c.year }}, {{ c.learners }}): {{ c.summary }} — {{ c.url }}
+{% for c in site.data.courses.courses %}- **{{ c.title }}** ({{ c.provider }}, {{ c.year }}, {% if c.rating_value %}{{ c.rating_value }}★ across {{ c.rating_count }} ratings, {% endif %}{{ c.learners }}): {{ c.summary }} — {{ c.url }}
 {% endfor %}
 
 ## 7. Books & Peer-Reviewed Publications
 
-- **Book:** *{{ site.data.publications.featured_book.title }}* ({{ site.data.publications.featured_book.year }}, ISBN {{ site.data.publications.featured_book.isbn }}, {{ site.data.publications.featured_book.citations }}). {{ site.data.publications.featured_book.summary }} URL: {{ site.data.publications.featured_book.amazon_url }}
+- **Book:** *{{ site.data.publications.featured_book.title }}* ({{ site.data.publications.featured_book.year }}, ISBN {{ site.data.publications.featured_book.isbn }}, {{ site.data.publications.featured_book.rating_value }}★ on Goodreads, {{ site.data.publications.featured_book.citations }}). {{ site.data.publications.featured_book.summary }} Amazon: {{ site.data.publications.featured_book.amazon_url }} | Goodreads: {{ site.data.publications.featured_book.goodreads_url }}
 {% for r in site.data.publications.research_publications %}- **{{ r.title }}** ({{ r.venue }}, {{ r.year }}): {{ r.summary }} URL: {{ r.doi_url }}
 {% endfor %}
 

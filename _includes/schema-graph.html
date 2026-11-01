@@ -251,8 +251,33 @@
         }
       ],
       "url": "https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/",
+      "sameAs": {{ site.data.publications.featured_book.goodreads_url | jsonify }},
       "image": "https://jigyasa-grover.github.io/assets/images/opt/book_cover.jpg",
-      "description": {{ site.data.publications.featured_book.summary | jsonify }}
+      "description": {{ site.data.publications.featured_book.summary | jsonify }},
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": {{ site.data.publications.featured_book.rating_value }},
+        "ratingCount": {{ site.data.publications.featured_book.rating_count }},
+        "reviewCount": {{ site.data.publications.featured_book.review_count }},
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "review": [
+        {% for br in site.data.testimonials.publications %}
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": {{ br.author | jsonify }}
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": {{ br.platform | jsonify }}
+          },
+          "reviewBody": {{ br.quote | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
     }{% for r in site.data.publications.research_publications %},
     {
       "@type": "ScholarlyArticle",
@@ -343,7 +368,14 @@
               "instructor": {
                 "@id": "https://jigyasa-grover.github.io/#person"
               }
-            }
+            }{% if course.rating_value %},
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": {{ course.rating_value }},
+              "ratingCount": {{ course.rating_count }},
+              "bestRating": 5,
+              "worstRating": 1
+            }{% endif %}
           }
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}

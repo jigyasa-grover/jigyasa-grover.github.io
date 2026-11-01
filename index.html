@@ -273,7 +273,7 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
       <div class="ledger-row">
         <div class="ledger-row__date">{{ c.provider }} · {{ c.year }}</div>
         <div class="ledger-row__title"><a href="{{ c.url }}" target="_blank" rel="noopener">{{ c.title }} ↗</a></div>
-        <div class="ledger-row__aside">{{ c.learners }}</div>
+        <div class="ledger-row__aside">{% if c.rating_value %}{{ c.rating_value }}★ · {% endif %}{{ c.learners }}</div>
       </div>
       {% endfor %}
     </div>
@@ -350,14 +350,28 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
   </div>
 </section>
 
-<!-- 9. Direct Inbound Call to Action -->
+<!-- 9. Verified Client, Founder & Learner Feedback -->
+<section class="section" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="eyebrow">Verified Reviews</div>
+        <h2 id="testimonials-heading">What founders, leaders &amp; learners say</h2>
+      </div>
+      <a class="section-header__link" href="/advisory/#advisory-reviews-heading">More client &amp; founder reviews →</a>
+    </div>
+    {% include testimonials-grid.html key="home" columns=3 show_badges=true %}
+  </div>
+</section>
+
+<!-- 10. Direct Inbound Call to Action -->
 <section class="section section--no-border" aria-labelledby="cta-banner-heading">
   <div class="container">
     <div class="contact-panel cta-banner-grid">
       <div>
         <div class="eyebrow">Get in Touch</div>
         <h2 id="cta-banner-heading" class="mb-xs">Building an AI product, planning a summit, or upskilling an engineering team?</h2>
-        <p class="mb-0">Inquire directly or book via Intro, Passionfroot, or Naano.</p>
+        <p class="mb-0">Inquire directly or book via Intro (5.0★), Topmate (5.0★), Passionfroot, or Naano.</p>
       </div>
       <div class="btn-group">
         <a class="btn btn--accent" href="/work-with-me/#contact">Send an Inquiry →</a>

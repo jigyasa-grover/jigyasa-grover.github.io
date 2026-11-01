@@ -34,13 +34,13 @@ booking:
   intro:
     name: "Intro"
     url: "https://intro.co/JigyasaGrover"
-    badge: "1:1 Video Consultations · 5.0★"
+    badge: "1:1 Video Consultations · 5.0★ (6 reviews)"
     use_case: "Direct 1:1 architecture reviews, production ML guidance, and startup advisory calls."
     cta: "Book 1:1 on Intro"
   topmate:
     name: "Topmate"
     url: "https://topmate.io/jigyasagrover"
-    badge: "Mentorship & Quick Calls · 5.0★"
+    badge: "Mentorship & Quick Calls · 5.0★ (19 ratings)"
     use_case: "126+ sessions · Top 50 US Tech Mentor for ML career strategy, pitch decks, and AMA calls."
     cta: "Book on Topmate"
   passionfroot:
@@ -72,7 +72,7 @@ same_as:
   - "https://sessionize.com/jigyasagrover/"
   - "https://pyvideo.org/speaker/jigyasa-grover.html"
   - "https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/"
-  - "https://www.goodreads.com/book/show/56632735-sculpting-data-for-ml"
+  - "https://www.goodreads.com/book/show/56698788-sculpting-data-for-ml"
   - "https://intro.co/JigyasaGrover"
   - "https://topmate.io/jigyasagrover"
   - "https://www.passionfroot.me/jigyasa-grover"

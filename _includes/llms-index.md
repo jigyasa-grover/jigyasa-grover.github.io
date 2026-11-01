@@ -12,17 +12,17 @@ For complete structured biographical, career, speaking, course, publication, and
 - [Work With Me](https://jigyasa-grover.github.io/work-with-me/): Six collaboration pillars, booking links (Intro, Topmate, Passionfroot, Naano), and direct inquiry form.
 - [AI Startup & Product Advisory](https://jigyasa-grover.github.io/advisory/): Advisory & consulting across 30+ organizations on production ML ranking, Agentic AI architecture, LLM evaluation, and token cost guardrails.
 - [Keynotes & Conference Speaking](https://jigyasa-grover.github.io/speaking/): Signature talk abstracts, Google I/O keynote feature, and 200+ global appearances.
-- [Corporate AI Training & Courses](https://jigyasa-grover.github.io/teaching/): Enterprise AI training & workshops delivered with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, Udacity, and CommonSpirit Health, plus 4 LinkedIn Learning courses (44,000+ learners).
+- [Corporate AI Training & Courses](https://jigyasa-grover.github.io/teaching/): Enterprise AI training & workshops delivered with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, Udacity, and CommonSpirit Health, plus 4 LinkedIn Learning courses (44,000+ learners, 4.6–4.8★ across 180+ ratings).
 - [Technical Content & Brand Partnerships](https://jigyasa-grover.github.io/partnerships/): Engineering-led developer content, audience demographics (82% senior technical), and brand partners.
 - [Selected Engineering Projects](https://jigyasa-grover.github.io/projects/): Open-source agentic AI systems, TPU fine-tuning, edge/cloud racing telemetry, and RAG benchmarks.
-- [Books & Publications](https://jigyasa-grover.github.io/publications/): *Sculpting Data for ML* (ISBN 979-8585463570), *Enterprise LLM Deployment Readiness* (SSRN 2026), Springer chapters, and ACM research.
+- [Books & Publications](https://jigyasa-grover.github.io/publications/): *Sculpting Data for ML* (ISBN 979-8585463570, 4.8★ Goodreads, 95+ citations), *Enterprise LLM Deployment Readiness* (SSRN 2026), Springer chapters, and ACM research.
 - [Press, Media & Speaker Kit](https://jigyasa-grover.github.io/press/): Forbes, Business Insider, VentureBeat, Observer, 13+ awards ledger, copyable bios, and press photos.
 - [Technical Blog](https://jigyasa-grover.github.io/blog/): 33 in-depth technical articles and essays (plus 57 self-hosted 2015–2017 open-source archive entries at `/archive/`).
 
 ## Direct Collaboration & Booking Platforms
 
-- [Intro (1:1 Technical & Startup Consultations)](https://intro.co/JigyasaGrover)
-- [Topmate (Mentorship, Career Strategy & Quick Calls)](https://topmate.io/jigyasagrover)
+- [Intro (1:1 Technical & Startup Consultations — 5.0★)](https://intro.co/JigyasaGrover)
+- [Topmate (Mentorship, Career Strategy & Quick Calls — 5.0★, 126+ bookings)](https://topmate.io/jigyasagrover)
 - [Passionfroot (Sponsored Developer Content & Brand Campaigns)](https://www.passionfroot.me/jigyasa-grover)
 - [Naano (B2B & Developer Creator Collaborations)](https://naano.com/creators/jigyasa-grover)
 

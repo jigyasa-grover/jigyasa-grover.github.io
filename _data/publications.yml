@@ -5,9 +5,12 @@ featured_book:
   isbn: "979-8585463570"
   formats: "Paperback · Kindle · Audible"
   citations: "95+ citations"
+  rating_value: 4.8
+  rating_count: 5
+  review_count: 1
   cover_image: "/assets/images/opt/book_cover.jpg"
   amazon_url: "https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/"
-  goodreads_url: "https://www.goodreads.com/book/show/56632735-sculpting-data-for-ml"
+  goodreads_url: "https://www.goodreads.com/book/show/56698788-sculpting-data-for-ml"
   launch_post_url: "/BOOK-LAUNCH-Sculpting-Data-for-ML/"
   summary: "Co-authored with Rishabh Misra—a hands-on Python guide to Data-Centric AI covering dataset curation, weak supervision, labeling workflows, and class imbalance."
   forewords:

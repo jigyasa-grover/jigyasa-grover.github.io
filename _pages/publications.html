@@ -24,16 +24,16 @@ permalink: /publications/
         fetchpriority="high"
         alt="Cover of Sculpting Data for ML: The First Act of Machine Learning"
       />
-      <div class="media-frame__caption">ISBN {{ pub.featured_book.isbn }} · {{ pub.featured_book.citations }}</div>
+      <div class="media-frame__caption">ISBN {{ pub.featured_book.isbn }} · {{ pub.featured_book.rating_value }}★ on Goodreads · {{ pub.featured_book.citations }}</div>
     </div>
 
     <div>
-      <div class="eyebrow">Published Book ({{ pub.featured_book.year }})</div>
+      <div class="eyebrow">Published Book ({{ pub.featured_book.year }}) · {{ pub.featured_book.rating_value }}★ Goodreads</div>
       <h2 id="featured-book-heading">{{ pub.featured_book.title }}</h2>
       <p>{{ pub.featured_book.summary }}</p>
 
       <div class="endorsement-box">
-        <div class="endorsement-box__label">Forewords By</div>
+        <div class="endorsement-box__label">Forewords &amp; Endorsements By</div>
         <ul class="endorsement-box__list">
           {% for f in pub.featured_book.forewords %}
           <li><a href="{{ f.url }}" target="_blank" rel="noopener"><strong>{{ f.name }}</strong></a> — {{ f.affiliation }}</li>
@@ -43,10 +43,14 @@ permalink: /publications/
 
       <div class="btn-group">
         <a class="btn btn--primary" href="{{ pub.featured_book.amazon_url }}" target="_blank" rel="noopener">Amazon (Print, Kindle &amp; Audible) ↗</a>
-        <a class="btn btn--secondary" href="{{ pub.featured_book.goodreads_url }}" target="_blank" rel="noopener">Goodreads ↗</a>
+        <a class="btn btn--secondary" href="{{ pub.featured_book.goodreads_url }}" target="_blank" rel="noopener">Goodreads ({{ pub.featured_book.rating_value }}★) ↗</a>
         <a class="btn btn--secondary" href="{{ pub.featured_book.launch_post_url }}">Launch Essay →</a>
       </div>
     </div>
+  </div>
+
+  <div class="mt-lg">
+    {% include testimonials-grid.html key="publications" columns=1 %}
   </div>
 </section>
 

@@ -1,6 +1,8 @@
 linkedin_learning_profile: "https://www.linkedin.com/learning/instructors/jigyasa-grover"
 total_learners: "44,000+"
 total_bookmarks: "19,500+"
+avg_rating: "4.6–4.8★"
+total_ratings: "180+"
 
 training_clients:
   - "LinkedIn Learning"
@@ -18,6 +20,8 @@ courses:
     provider: "LinkedIn Learning"
     year: "2026"
     learners: "1,300+ learners"
+    rating_value: 4.8
+    rating_count: 5
     level: "Intermediate"
     url: "https://www.linkedin.com/learning/evaluating-ai-agents-with-google-adk"
     repo_url: "https://github.com/LinkedInLearning/evaluating-ai-agents-with-google-adk-11697044"
@@ -31,6 +35,8 @@ courses:
     provider: "LinkedIn Learning"
     year: "2025"
     learners: "28,000+ learners"
+    rating_value: 4.6
+    rating_count: 91
     level: "Intermediate"
     url: "https://www.linkedin.com/learning/hands-on-ai-building-agents-with-the-google-agent-development-toolkit-adk"
     repo_url: "https://github.com/LinkedInLearning/hands-on-ai-building-agents-with-google-s-agent-development-toolkit-adk-2743271"
@@ -44,6 +50,8 @@ courses:
     provider: "LinkedIn Learning"
     year: "2025"
     learners: "11,000+ learners"
+    rating_value: 4.6
+    rating_count: 54
     level: "Intermediate / Senior"
     url: "https://www.linkedin.com/learning/integrating-ai-into-the-product-architecture"
     summary: "Systems blueprint for embedding foundation and classical ML models—balancing latency SLAs, caching, RAG vs. fine-tuning, and observability."
@@ -55,9 +63,11 @@ courses:
   - title: "Building AI Products: Implementing Responsible AI"
     provider: "LinkedIn Learning"
     year: "2025"
-    learners: "4,000+ learners"
+    learners: "4,300+ learners"
+    rating_value: 4.6
+    rating_count: 30
     level: "Professional Certificate"
-    url: "https://www.linkedin.com/learning/building-ai-products-implementing-responsible-ai"
+    url: "https://www.linkedin.com/learning/welcome-to-the-building-ai-products-implementing-responsible-ai-professional-certificate"
     summary: "Engineering practices for privacy-preserving ML, bias auditing, PII redaction, red-teaming, and human-in-the-loop UX."
     topics:
       - "Responsible AI"
