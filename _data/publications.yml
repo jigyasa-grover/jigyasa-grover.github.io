@@ -44,7 +44,8 @@ research_publications:
     venue: "Springer — Deep Learning for Social Media Data Analytics"
     year: "2022"
     type: "Springer Chapter"
-    doi_url: "https://link.springer.com/book/9783031108716"
+    doi_url: "https://link.springer.com/chapter/10.1007/978-3-031-10869-3_12"
+    book_url: "https://link.springer.com/book/9783031108716"
     series_url: "https://www.springer.com/series/11970"
     summary: "Comparative analysis of deep learning architectures for misinformation detection, fairness, interpretability, and dataset drift."
 

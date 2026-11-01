@@ -12,6 +12,7 @@
       <button type="button" class="filter-btn" data-social-filter="linkedin" aria-pressed="false">LinkedIn</button>
       <button type="button" class="filter-btn" data-social-filter="x" aria-pressed="false">X (Twitter)</button>
       <button type="button" class="filter-btn" data-social-filter="instagram" aria-pressed="false">Instagram</button>
+      <button type="button" class="filter-btn" data-social-filter="youtube" aria-pressed="false">YouTube</button>
     </div>
     {% endunless %}
 
@@ -37,7 +38,7 @@
         <div class="social-card__top">
           <div class="social-card__brand">
             <span class="social-badge social-badge--{{ post.platform }}">
-              {% if post.platform == "linkedin" %}in{% elsif post.platform == "x" %}𝕏{% else %}IG{% endif %}
+              {% if post.platform == "linkedin" %}in{% elsif post.platform == "x" %}𝕏{% elsif post.platform == "youtube" %}▶{% else %}IG{% endif %}
             </span>
             <div>
               <div class="social-card__platform">{{ post.platform_label }}</div>

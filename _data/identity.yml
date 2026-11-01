@@ -152,8 +152,8 @@ career:
     summary: "Cross-disciplinary research in computer vision, agent-based ecological modeling, and computational social networks."
     highlights:
       - "Selected on full scholarship among Top 30 globally for the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS) at MPI-SWS in Saarbrücken, Germany."
-      - "Automated histology brain-atlas image annotation at SDSC; CORMAS spatial agent-based modeling in Pharo Smalltalk at IRD Paris (ESUG Scholar); kinetic Monte Carlo social simulation at NRC Canada (Mitacs Globalink Scholar)."
-      - "Two-time Google Summer of Code developer (FOSSASIA / Pharo) and GSoC Organization Administrator for the Pharo Consortium."
+      - "Automated histology brain-atlas image annotation at SDSC; CORMAS spatial agent-based modeling in Pharo Smalltalk at IRD Paris (ESUG Scholar); kinetic Monte Carlo social simulation at NRC Canada (Government of Canada Mitacs Globalink Research Scholar)."
+      - "Awarded competitive international research and conference grants by the Government of Canada (Mitacs), Government of Norway, The Linux Foundation, and Facebook (Grace Hopper Scholar); two-time Google Summer of Code developer & Organization Administrator."
 
 education:
   - degree: "M.S. in Computer Science (Artificial Intelligence Specialization)"
@@ -170,7 +170,7 @@ education:
     institution: "Delhi Technological University (formerly DCE)"
     url: "https://dtu.ac.in/"
     period: "2013 – May 2017"
-    detail: "GPA 9.3 / 10.0 (Top 5%) · Conferred Distinguished Alumni — Young Achiever Award (2025/2026)"
+    detail: "GPA 9.3 / 10.0 (Top 5%) · Conferred Distinguished Alumni — Young Achiever / Young Trailblazer Award (2025/2026)"
 
 ecosystem_roles:
   - role: "Member, Google Developer Advisory Board (gDAB)"
@@ -178,7 +178,14 @@ ecosystem_roles:
     detail: "Advising Google engineering and DevRel leadership on developer platforms, Firebase Studio, SDLC agents, and AI ecosystem strategy."
   - role: "Google Developer Expert (AI/ML), Cloud Champion Innovator & WTM Ambassador"
     org: "Google Developers & Google Cloud"
-    detail: "5-year AI/ML GDE featured in Google I/O keynote; Google Cloud BI Council member and Enterprise Design Partner."
+    detail: "5-year AI/ML GDE featured on the Google I/O main stage, Google's Gemini Omni Flash launch video, Google Developers' AI Agent Bake Off, and Google Cloud Tech documentary; Google Cloud BI Council member and Enterprise Design Partner."
+    links:
+      - label: "Google I/O Keynote"
+        url: "https://www.youtube.com/live/XEzRZ35urlk?t=516"
+      - label: "Gemini Omni Flash Launch"
+        url: "https://www.youtube.com/watch?v=3iZzf_NRxDQ"
+      - label: "Google Cloud Documentary"
+        url: "https://www.youtube.com/watch?v=VSgKWy2iRWE"
   - role: "Principal AI Strategist & Startup Advisor"
     org: "Afterdays (Independent Advisory Practice) · 30+ Teams"
     detail: "Consulted and advised across Google, Meta, Apple, Microsoft, Anthropic, Amazon Fresh, Spotify, Adobe, Grammarly, Figma, Atlassian, Coinbase, Remitly, Superhuman, Windsurf, HP, Innodata, Diem AI, Bezoku AI, Okareo, Optica Labs AI, BackOps AI, Founders Circle Capital, and Capital Hill Ventures."
@@ -187,4 +194,9 @@ ecosystem_roles:
     detail: "AI Assurance Council, World Economic Forum Global Shapers (Palo Alto), World Summit AI Americas Ambassador, Corinium Global Intelligence, VigiTrust, AI Forum, Pacelearn, Goanna Collective, and Las Positas College."
   - role: "Open Source & Community Leadership"
     org: "Linux Foundation · Python · GitHub · Women Who Code"
-    detail: "GitHub Arctic Code Vault Contributor (73+ public repos, 180+ authored PRs across FOSSASIA, Loklak, Hashkat & Loris); Linux Foundation & ACM Tapia Program Committees; PyCon US Financial Aid Co-Chair (3 yrs) & PyBay Chair; Women Who Code Director (grew chapter 10 → 10K+); Apache & PSF contributor; O'Reilly & Packt Reviewer."
+    detail: "GitHub Arctic Code Vault Contributor (73+ public repos, 180+ authored PRs across FOSSASIA, Loklak, Hashkat & Loris); credentialed Linux Foundation (OSS NA & Europe) & ACM Tapia Program Committees; PyCon US Financial Aid Co-Chair (3 yrs) & PyBay Chair; Women Who Code Director (grew chapter 10 → 10K+); Apache & PSF contributor; O'Reilly & Packt Reviewer."
+    links:
+      - label: "LF Program Committee (NA)"
+        url: "https://www.credly.com/badges/89abb1ed-e032-49e7-adfc-f24efbe2682a"
+      - label: "LF Program Committee (EU)"
+        url: "https://www.credly.com/badges/b288caa6-1058-4c71-999b-02b5a70a7133"

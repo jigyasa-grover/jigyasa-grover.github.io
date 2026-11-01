@@ -1129,6 +1129,7 @@
 }
 
 // Predictable Spacing Rhythm Utilities
+.mt-xs { margin-top: 0.45rem; }
 .mt-sm { margin-top: 1.15rem; }
 .mt-md { margin-top: 1.5rem; }
 .mt-lg { margin-top: 2.25rem; }
@@ -1249,7 +1250,8 @@
   color: #0a66c2;
 }
 
-.social-badge--instagram {
+.social-badge--instagram,
+.social-badge--youtube {
   color: var(--accent);
 }
 

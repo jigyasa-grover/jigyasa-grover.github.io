@@ -731,7 +731,7 @@
           properties: {
             platform: {
               type: "string",
-              enum: ["all", "sponsored", "linkedin", "x", "instagram"],
+              enum: ["all", "sponsored", "linkedin", "x", "instagram", "youtube"],
               description: "Platform or sponsorship filter to activate in the UI."
             }
           },

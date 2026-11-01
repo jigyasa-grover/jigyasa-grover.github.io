@@ -36,6 +36,8 @@
     - "Gemini 3.0 Flash"
     - "Google Cloud Run"
   post_url: "/TrustAtTopSpeed/"
+  video_url: "https://www.youtube.com/watch?v=VSgKWy2iRWE"
+  feature_url: "https://developers.googleblog.com/en/beyond-the-chatbot-a-blueprint-for-trustable-ai/"
 
 - id: "critics-cut"
   title: "Critic's Cut — Multilingual Safety-Gated ADK Agent"

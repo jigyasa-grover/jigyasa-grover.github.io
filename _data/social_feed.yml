@@ -14,6 +14,11 @@ channels:
     handle: "@jigyasagroverofficial"
     metric: "Keynote Reels & Behind the Scenes"
     url: "https://www.instagram.com/jigyasagroverofficial/"
+  - id: "youtube"
+    name: "YouTube"
+    handle: "@JigyasaGrover"
+    metric: "Google I/O, Cloud Tech & Keynotes"
+    url: "https://www.youtube.com/@JigyasaGrover"
 
 posts:
   - platform: "x"
@@ -109,6 +114,19 @@ posts:
     tag: "Qodo Agentic Toolbox · #ad"
     cta: "Read on LinkedIn"
     url: "https://www.linkedin.com/posts/jigyasa-grover_ad-codegovernance-aicodereview-share-7503200004652576768-1r_a"
+
+  - platform: "youtube"
+    platform_label: "YouTube · Creator Feature"
+    handle: "@JigyasaGrover × @GoogleCloudTech"
+    date: "Jul 2026"
+    sponsored: true
+    partner: "Google Cloud"
+    badge: "Multi-Agent Orchestration on Cloud"
+    contexts: ["partnerships", "highlights"]
+    excerpt: "Breaking down production multi-agent orchestration patterns, tool boundaries, and grounded execution with Google ADK and Vertex AI in collaboration with @GoogleCloudTech."
+    tag: "Google Cloud · #GoogleCloudPartner"
+    cta: "Watch on YouTube"
+    url: "https://www.youtube.com/watch?v=M2TVyZR9pe8"
 
   - platform: "linkedin"
     platform_label: "LinkedIn"
