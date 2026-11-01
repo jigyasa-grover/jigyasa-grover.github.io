@@ -8,7 +8,7 @@ Canonical Website: https://jigyasa-grover.github.io/
 Entity Identifier: https://jigyasa-grover.github.io/#person
 Google Knowledge Graph: https://g.co/kgs/Lvk5yk
 Location: San Francisco Bay Area, California, USA
-Pronunciation: JIG-yah-suh GROH-ver
+Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pronunciation_ipa }})
 
 ## 1. Executive Summary
 

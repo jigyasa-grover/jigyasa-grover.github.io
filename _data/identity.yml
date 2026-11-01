@@ -1,5 +1,6 @@
 name: "Jigyasa Grover"
-pronunciation: "JIG-yah-suh GROH-ver"
+pronunciation: "jig-YAH-sah GROH-ver"
+pronunciation_ipa: "/dʒɪɡˈjɑːsɑː ˈɡroʊvər/"
 location: "San Francisco Bay Area, California"
 entity_id: "https://jigyasa-grover.github.io/#person"
 canonical_url: "https://jigyasa-grover.github.io/"
@@ -14,7 +15,7 @@ hero_lead: "Machine Learning Tech Lead at Uber, Google Developer Advisory Board 
 
 short_bio_50: "Jigyasa Grover is a Machine Learning Engineer at Uber leading global rider personalization and ranking, a 13x AI and Open Source award winner, Google Developer Advisory Board member, Google Developer Expert in AI/ML, LinkedIn Learning instructor (44,000+ learners), and co-author of Sculpting Data for ML."
 
-medium_bio_150: "Jigyasa Grover (pronounced JIG-yah-suh GROH-ver) is a San Francisco–based Machine Learning Engineer at Uber, serving as Tech Lead for rider personalization and ranking across 500+ cities. Previously, she led AI and Research at Bordo AI and built low-latency ML ranking, ads prediction, and feature infrastructure across Faire, Twitter (X), and Meta. A 13-time award winner in AI and Open Source, she serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) and Women Techmakers Ambassador recognition, and is a World Economic Forum Global Shaper. She co-authored Sculpting Data for ML (95+ citations), teaches 44,000+ learners across 4 LinkedIn Learning courses, delivers corporate AI training with Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, and AI Aspire, has consulted or advised 30+ organizations, and has delivered 200+ talks across 20+ countries—including the Google I/O main stage."
+medium_bio_150: "Jigyasa Grover (pronounced jig-YAH-sah GROH-ver) is a San Francisco–based Machine Learning Engineer at Uber, serving as Tech Lead for rider personalization and ranking across 500+ cities. Previously, she led AI and Research at Bordo AI and built low-latency ML ranking, ads prediction, and feature infrastructure across Faire, Twitter (X), and Meta. A 13-time award winner in AI and Open Source, she serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) and Women Techmakers Ambassador recognition, and is a World Economic Forum Global Shaper. She co-authored Sculpting Data for ML (95+ citations), teaches 44,000+ learners across 4 LinkedIn Learning courses, delivers corporate AI training with Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, and AI Aspire, has consulted or advised 30+ organizations, and has delivered 200+ talks across 20+ countries—including the Google I/O main stage."
 
 metrics:
   - value: "13+"
