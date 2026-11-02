@@ -9,9 +9,9 @@ achievements:
 
 metrics:
   - id: "repos"
-    value: "73+"
+    value: "74+"
     label: "Public Repositories"
-    detail: "38+ original repos in Python, Jupyter, TypeScript & Smalltalk"
+    detail: "39+ original repos in Python, Jupyter, TypeScript & Smalltalk"
   - id: "prs"
     value: "180+"
     label: "Authored Public PRs"

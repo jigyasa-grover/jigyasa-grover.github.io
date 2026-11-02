@@ -1,3 +1,11 @@
+"/TorchTPUDoctor/":
+  category: "Fine-Tuning & Compute"
+  tags: ["TorchTPU", "PyTorch", "Cloud TPU", "Agent Skills"]
+  featured: true
+  summary: "Catching silent CPU fallbacks, hidden Hugging Face host syncs, and dynamic-shape XLA recompiles in native PyTorch on Cloud TPU v6e—cutting compiled LoRA step time 2,537× (47.3s → 18.6ms)."
+  repo_url: "https://github.com/jigyasa-grover/TorchTPU-Doctor"
+  live_url: "https://colab.research.google.com/github/jigyasa-grover/TorchTPU-Doctor/blob/main/notebooks/torchtpu_doctor_demo.ipynb"
+
 "/ProofOfWork/":
   category: "Agentic AI & Evaluation"
   tags: ["Agentic AI", "Gemini", "Multimodal Video", "AI Evaluation"]

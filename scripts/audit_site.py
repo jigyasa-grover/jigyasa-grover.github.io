@@ -20,6 +20,7 @@ EXTERNAL_SUBREPOS = {
 }
 
 EXPECTED_POST_URLS = [
+    "/TorchTPUDoctor/",
     "/ProofOfWork/",
     "/StartupOnAShoestring/",
     "/KineticFinetuningOnCloudTPU/",
@@ -433,7 +434,7 @@ def main() -> None:
             for key in ("identity", "collaboration", "speaking", "articles"):
                 if key not in agent_ctx:
                     errors.append(f"MISSING KEY '{key}' in /agent-context.json")
-            if len(agent_ctx.get("articles", [])) < 33:
+            if len(agent_ctx.get("articles", [])) < 34:
                 errors.append("UNEXPECTEDLY FEW ARTICLES in /agent-context.json")
         except Exception as exc:
             errors.append(f"INVALID JSON in /agent-context.json: {exc}")

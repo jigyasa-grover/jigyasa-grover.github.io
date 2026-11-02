@@ -19,9 +19,9 @@ This repository powers **[jigyasa-grover.github.io](https://jigyasa-grover.githu
   - `updates.yml`: Curated high-profile press, award, keynote & career milestones (2017–2026).
   - `social_feed.yml`: Unified LinkedIn, X (Twitter), Instagram, and YouTube feed rendered on `/`, `/highlights/`, and `/partnerships/`.
   - `testimonials.yml`: Verified verbatim reviews and platform ratings (`Intro`, `Topmate`, `LinkedIn Learning`, `Goodreads`) rendered via `_includes/testimonials-grid.html`.
-  - `posts_meta.yml`: Curated summaries, categories, and tags for the 33 indexed technical & open-source articles.
+  - `posts_meta.yml`: Curated summaries, categories, and tags for the 34 indexed technical & open-source articles.
   - `faqs.yml`: Structured Q&A blocks rendered visually via `_includes/faq-section.html` and injected into `FAQPage` JSON-LD via `_includes/schema-graph.html`.
-- `_posts/`: Preserved Markdown technical articles & self-hosted historical WordPress archive (`permalink: /:title/`; 33 indexed essays + 57 `archival: true, noindex: true, sitemap: false` early 2015–2017 entries + `/archive/`).
+- `_posts/`: Preserved Markdown technical articles & self-hosted historical WordPress archive (`permalink: /:title/`; 34 indexed essays + 57 `archival: true, noindex: true, sitemap: false` early 2015–2017 entries + `/archive/`).
 - `_layouts/` & `_includes/`: Semantic HTML5 layouts (`default.html`, `page.html`, `post.html`), SEO/OpenGraph head tags (`head-seo.html`), connected JSON-LD entity graph (`schema-graph.html`), header/footer, booking platforms, testimonials grid, and contact form.
 - `_sass/` & `assets/css/style.scss`: Editorial design system (`_tokens.scss`, `_base.scss`, `_layout.scss`, `_components.scss`, `_post.scss`, `_syntax.scss`).
 - `assets/js/site.js`: Progressive-enhancement vanilla JS (theme toggle, mobile nav, post TOC & code copy buttons, blog search/filter, validated anti-spam inquiry form, and W3C WebMCP `document.modelContext` tool registration).

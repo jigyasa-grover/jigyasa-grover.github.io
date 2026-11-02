@@ -193,7 +193,7 @@
       var isArchival = row.getAttribute("data-archival") === "true";
       var catMatch;
       if (activeCategory === "all") {
-        // Keep default All Articles focused on the 33 primary essays unless user types a search query
+        // Keep default All Articles focused on the 34 primary essays unless user types a search query
         catMatch = query ? true : !isArchival;
       } else {
         catMatch = cat === activeCategory;

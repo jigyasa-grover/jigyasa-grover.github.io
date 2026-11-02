@@ -1,3 +1,17 @@
+- id: "torchtpu-doctor"
+  title: "TorchTPU Doctor — Agent Skill & Profiler for PyTorch on Cloud TPUs"
+  year: "2026"
+  category: "PyTorch & Cloud TPU Profiling"
+  featured: true
+  summary: "Agent Skill, zero-dependency AST linter, TorchDispatchMode warmup profiler, and runtime patch kit for native PyTorch (torch_tpu)—cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms)."
+  stack:
+    - "PyTorch (torch_tpu)"
+    - "Cloud TPU v6e"
+    - "Agent Skill & AST"
+  live_url: "https://colab.research.google.com/github/jigyasa-grover/TorchTPU-Doctor/blob/main/notebooks/torchtpu_doctor_demo.ipynb"
+  repo_url: "https://github.com/jigyasa-grover/TorchTPU-Doctor"
+  post_url: "/TorchTPUDoctor/"
+
 - id: "proof-of-work"
   title: "Proof of Work — Agentic Video Teaching Assistant"
   year: "2026"
@@ -43,7 +57,7 @@
   title: "Critic's Cut — Multilingual Safety-Gated ADK Agent"
   year: "2025–2026"
   category: "Multi-Agent Orchestration"
-  featured: true
+  featured: false
   summary: "Production-patterned multi-agent workflow built with Google ADK, Model Context Protocol (MCP) tools, Microsoft Presidio PII redaction, and trajectory evals."
   stack:
     - "Google ADK"

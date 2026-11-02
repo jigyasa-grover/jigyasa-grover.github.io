@@ -70,7 +70,7 @@ Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pro
 
 ## 8. GitHub Profile & Selected AI / Open-Source Engineering Projects
 
-- **GitHub Profile:** {{ site.data.github.url }} ({{ site.data.github.handle }}, active since {{ site.data.github.active_since }}; 73+ public repositories, 180+ authored pull requests, 425+ followers; Achievements: {{ site.data.github.achievements | join: ", " }})
+- **GitHub Profile:** {{ site.data.github.url }} ({{ site.data.github.handle }}, active since {{ site.data.github.active_since }}; 74+ public repositories, 180+ authored pull requests, 425+ followers; Achievements: {{ site.data.github.achievements | join: ", " }})
 - **GitHub Organizations:** {% for o in site.data.github.organizations %}@{{ o.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}
 
 ### Original Systems & Benchmarks
