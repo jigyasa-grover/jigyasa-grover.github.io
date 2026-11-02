@@ -87,11 +87,22 @@
 
     var codeBlocks = prose.querySelectorAll("pre");
     codeBlocks.forEach(function (pre) {
+      if (pre.classList.contains("wp-block-preformatted")) return;
+      var rawText = pre.innerText || pre.textContent || "";
+      if (/[┌┐└┘├┤┬┴┼─│]/.test(rawText)) return;
+
       var wrapper = pre.parentElement;
       if (!wrapper) return;
-      if (getComputedStyle(wrapper).position === "static") {
+      if (wrapper === prose || (!wrapper.classList.contains("highlight") && wrapper.tagName.toLowerCase() !== "figure")) {
+        var customWrap = document.createElement("div");
+        customWrap.className = "code-block-wrap";
+        wrapper.insertBefore(customWrap, pre);
+        customWrap.appendChild(pre);
+        wrapper = customWrap;
+      } else if (getComputedStyle(wrapper).position === "static") {
         wrapper.style.position = "relative";
       }
+
       var btn = document.createElement("button");
       btn.type = "button";
       btn.className = "copy-code-btn";

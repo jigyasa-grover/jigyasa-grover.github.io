@@ -5,21 +5,23 @@ title: "TorchTPU Doctor: Agent Skill & Performance Profiler for PyTorch on Cloud
 date: 2026-11-02 08:00:00 -0800
 comments: true
 mathjax: true
+og_image: "/assets/images/opt/torchtpu-doctor-cover.jpg"
+og_image_alt: "TorchTPU Doctor: Agent Skill & Performance Profiler for PyTorch on Cloud TPUs"
 ---
 
 > **Your PyTorch script runs on a Cloud TPU without throwing a single exception—while quietly losing 2,537× in step throughput.**
 
-Porting CUDA-oriented PyTorch and Hugging Face scripts to Google Cloud TPUs used to fail loudly behind `PyTorch/XLA` boilerplate. With the new open-source **[TorchTPU (`torch_tpu`)](https://github.com/google-pytorch/torch_tpu)** backend, standard PyTorch code runs directly on `device="tpu"`—which creates a subtler engineering problem: **silent performance cliffs**. Unpatched device helpers fall back to `'cpu'`, hidden scalar readbacks stall HBM-to-host transfers inside library internals, and ragged batch shapes trigger 45–77 second XLA recompilations on every step.
+Porting CUDA-oriented PyTorch and Hugging Face scripts to Google Cloud TPUs used to fail loudly behind `PyTorch/XLA` boilerplate. With the new open-source **[TorchTPU](https://github.com/google-pytorch/torch_tpu)** (`torch_tpu`) backend, standard PyTorch code runs directly on `device="tpu"`—which creates a subtler engineering problem: **silent performance cliffs**. Unpatched device helpers fall back to `'cpu'`, hidden scalar readbacks stall HBM-to-host transfers inside library internals, and ragged batch shapes trigger 45–77 second XLA recompilations on every step.
 
-**[TorchTPU Doctor (`torchtpu-doctor`)](https://github.com/jigyasa-grover/TorchTPU-Doctor)** is an open-source Agent Skill, zero-dependency AST linter, `TorchDispatchMode` warmup profiler, and runtime patch kit built to diagnose and eliminate those bottlenecks automatically—cutting compiled `Qwen2.5-0.5B-Instruct` LoRA fine-tuning step time on a Cloud TPU `v6e-1` (Trillium) VM from **47.3 seconds/step down to 18.6 ms/step (2,537× faster)**. [Explore the repository on GitHub!](https://github.com/jigyasa-grover/TorchTPU-Doctor)
+**[TorchTPU Doctor](https://github.com/jigyasa-grover/TorchTPU-Doctor)** (`torchtpu-doctor`) is an open-source Agent Skill, zero-dependency AST linter, `TorchDispatchMode` warmup profiler, and runtime patch kit built to diagnose and eliminate those bottlenecks automatically—cutting compiled `Qwen2.5-0.5B-Instruct` LoRA fine-tuning step time on a Cloud TPU `v6e-1` (Trillium) VM from **47.3 seconds/step down to 18.6 ms/step (2,537× faster)**.
 
-![TorchTPU Doctor: Agent Skill & Performance Profiler for PyTorch on Cloud TPUs](https://raw.githubusercontent.com/jigyasa-grover/TorchTPU-Doctor/main/docs/cover.png)
+![TorchTPU Doctor: Agent Skill & Performance Profiler for PyTorch on Cloud TPUs](/assets/images/opt/torchtpu-doctor-cover.jpg)
 
 ---
 
 ## 1. From `PyTorch/XLA` Ceremony to Native `torch_tpu`
 
-At PyTorch Conference 2026, Google and Meta's PyTorch team open-sourced **[TorchTPU (`torch_tpu`)](https://github.com/google-pytorch/torch_tpu)**—a native, principled PyTorch backend for Google Cloud TPUs ([Google Cloud announcement](https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus) · [PyTorch technical blog](https://pytorch.org/blog/introducing-torchtpu/) · [Cloud TPU docs](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)).
+At PyTorch Conference 2026, Google and Meta's PyTorch team open-sourced **[TorchTPU](https://github.com/google-pytorch/torch_tpu)** (`torch_tpu`)—a native, principled PyTorch backend for Google Cloud TPUs ([Google Cloud announcement](https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus) · [PyTorch technical blog](https://pytorch.org/blog/introducing-torchtpu/) · [Cloud TPU docs](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)).
 
 Anyone who trained models on `PyTorch/XLA` a couple of years ago remembers the Lazy Tensor ceremony: `xm.xla_device()`, manual `xm.mark_step()` barriers at the end of every training step, and custom `ParallelLoader` wrappers. With `torch_tpu`, TPUs sit right alongside GPUs and CPUs behind first-class PyTorch APIs:
 
@@ -54,13 +56,13 @@ Naturally, the first thing I wanted to test was moving a standard Hugging Face `
 └─────────────────────────────────────┘         └─────────────────────────────────────┘
 ```
 
-To make these invisible hardware mismatches obvious—both to human engineers and to AI coding agents—I built **[TorchTPU Doctor (`torchtpu-doctor`)](https://github.com/jigyasa-grover/TorchTPU-Doctor)**:
+To make these invisible hardware mismatches obvious—both to human engineers and to AI coding agents—I built **TorchTPU Doctor** (`torchtpu-doctor`):
 
 - **GitHub Repository:** [github.com/jigyasa-grover/TorchTPU-Doctor](https://github.com/jigyasa-grover/TorchTPU-Doctor)
 - **Executed Cloud TPU `v6e-1` Notebook:** [`notebooks/torchtpu_doctor_demo.ipynb`](https://github.com/jigyasa-grover/TorchTPU-Doctor/blob/main/notebooks/torchtpu_doctor_demo.ipynb) ([Open in Google Colab](https://colab.research.google.com/github/jigyasa-grover/TorchTPU-Doctor/blob/main/notebooks/torchtpu_doctor_demo.ipynb))
 - **Drop-In Agent Skill (`SKILL.md`):** [`.agents/skills/torchtpu-doctor/SKILL.md`](https://github.com/jigyasa-grover/TorchTPU-Doctor/blob/main/.agents/skills/torchtpu-doctor/SKILL.md)
 
-![Before vs After on Cloud TPU v6e-1](https://raw.githubusercontent.com/jigyasa-grover/TorchTPU-Doctor/main/notebooks/before_after_tpu.png)
+![Before vs After on Cloud TPU v6e-1](/assets/images/opt/torchtpu-doctor-benchmark.png)
 
 ---
 

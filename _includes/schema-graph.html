@@ -154,11 +154,11 @@
       "isPartOf": {
         "@id": "https://jigyasa-grover.github.io/#website"
       },
-      "image": "https://jigyasa-grover.github.io/assets/images/opt/google_io_feature.jpg",
+      "image": {{ social_image | jsonify }},
       "inLanguage": "en-US",
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".post-summary"]
+        "cssSelector": ["h1", ".post-summary-box"]
       }
       {% if post_meta and post_meta.tags %},
       "keywords": {{ post_meta.tags | join: ", " | jsonify }},

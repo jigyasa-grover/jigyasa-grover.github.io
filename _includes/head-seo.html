@@ -42,9 +42,11 @@
 {% if page.og_image %}
   {% assign social_image = site.url | append: page.og_image %}
   {% assign is_default_og = false %}
+  {% assign social_image_alt = page.og_image_alt | default: meta_title %}
 {% else %}
   {% assign social_image = site.url | append: site.og_image %}
   {% assign is_default_og = true %}
+  {% assign social_image_alt = "Jigyasa Grover — Machine Learning Engineer, Agentic AI Educator, Author & Keynote Speaker" %}
 {% endif %}
 
 <title>{{ meta_title | escape }}</title>
@@ -88,7 +90,7 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 {% endif %}
-<meta property="og:image:alt" content="Jigyasa Grover — Machine Learning Engineer, Agentic AI Educator, Author & Keynote Speaker" />
+<meta property="og:image:alt" content="{{ social_image_alt | escape }}" />
 {% if page.layout == "post" %}
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
@@ -113,7 +115,7 @@
 <meta name="twitter:title" content="{{ meta_title | escape }}" />
 <meta name="twitter:description" content="{{ meta_desc | escape }}" />
 <meta name="twitter:image" content="{{ social_image }}" />
-<meta name="twitter:image:alt" content="Jigyasa Grover — Machine Learning Engineer, Agentic AI Educator, Author & Keynote Speaker" />
+<meta name="twitter:image:alt" content="{{ social_image_alt | escape }}" />
 
 <!-- Editorial Typography -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />

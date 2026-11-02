@@ -2,7 +2,8 @@
 
 .highlighter-rouge,
 figure.highlight,
-div.highlight {
+div.highlight,
+.code-block-wrap {
   position: relative;
   margin: 1.75rem 0;
 }
@@ -21,6 +22,24 @@ figure.highlight pre {
   font-size: 0.84rem;
   line-height: 1.62;
   tab-size: 2;
+}
+
+.post-prose > pre {
+  margin: 1.75rem 0;
+}
+
+.post-prose pre.wp-block-preformatted {
+  margin: 1.75rem 0;
+  padding: 1rem 1.2rem;
+  background-color: var(--bg-subtle);
+  color: var(--ink-secondary);
+  border: 1px solid var(--rule-light);
+  border-left: 3px solid var(--accent);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow-x: visible;
+  font-size: 0.8rem;
+  line-height: 1.65;
 }
 
 .post-prose pre code {
