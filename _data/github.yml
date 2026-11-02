@@ -50,11 +50,11 @@ pinned_upstream:
     stack: "PyTorch · Cloud TPU · SDPA"
     summary: "Eliminated two blocking device-to-host boolean syncs per forward pass in `_ignore_causal_mask_sdpa` on TorchTPU (`tpu:0`), cutting bucketed eager LoRA step latency 2.06×."
 
-  - repo: "huggingface/peft (#4099)"
-    url: "https://github.com/huggingface/peft/pull/4099"
-    role: "Upstream PR · 21.8K+ ★"
+  - repo: "huggingface/peft (#4101 · PR #4099)"
+    url: "https://github.com/huggingface/peft/issues/4101"
+    role: "Upstream Issue & PR · 21.8K+ ★"
     stack: "PyTorch · LoRA · torch.accelerator"
-    summary: "Added `torch.accelerator` support (including `torch_tpu` / `PrivateUse1`) to `infer_device()` so `PeftModel` and LoRA adapters stop silently falling back to host CPU on Cloud TPUs."
+    summary: "Added `torch.accelerator` support (including `torch_tpu` / `PrivateUse1`) to `infer_device()` (#4101, PR #4099) so `load_adapter`, `hotswap`, and LoRA helpers target `'tpu'` instead of host CPU."
 
   - repo: "LinkedInLearning/hands-on-ai-building-agents-with-google-s-agent-development-toolkit-adk-2743271"
     url: "https://github.com/LinkedInLearning/hands-on-ai-building-agents-with-google-s-agent-development-toolkit-adk-2743271"
