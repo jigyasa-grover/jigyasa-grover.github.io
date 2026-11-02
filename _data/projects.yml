@@ -3,7 +3,7 @@
   year: "2026"
   category: "PyTorch & Cloud TPU Profiling"
   featured: true
-  summary: "Agent Skill, zero-dependency AST linter, TorchDispatchMode warmup profiler, and runtime patch kit for native PyTorch (torch_tpu)—cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms)."
+  summary: "Agent Skill, AST linter, and TorchDispatchMode profiler for native PyTorch (torch_tpu)—cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms) and driving upstream fixes in Hugging Face transformers & peft."
   stack:
     - "PyTorch (torch_tpu)"
     - "Cloud TPU v6e"

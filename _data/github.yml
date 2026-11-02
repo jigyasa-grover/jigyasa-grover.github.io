@@ -15,7 +15,7 @@ metrics:
   - id: "prs"
     value: "180+"
     label: "Authored Public PRs"
-    detail: "Upstream FOSS across FOSSASIA, Loklak, Hashkat, Loris & Pharo"
+    detail: "Upstream FOSS across Hugging Face (transformers, peft), FOSSASIA, Loklak & Loris"
   - id: "followers"
     value: "425+"
     label: "GitHub Followers"
@@ -44,6 +44,18 @@ organizations:
     url: "https://github.com/teamOSC"
 
 pinned_upstream:
+  - repo: "huggingface/transformers (#50267)"
+    url: "https://github.com/huggingface/transformers/pull/50267"
+    role: "Upstream PR · 168K+ ★"
+    stack: "PyTorch · Cloud TPU · SDPA"
+    summary: "Eliminated two blocking device-to-host boolean syncs per forward pass in `_ignore_causal_mask_sdpa` on TorchTPU (`tpu:0`), cutting bucketed eager LoRA step latency 2.06×."
+
+  - repo: "huggingface/peft (#4099)"
+    url: "https://github.com/huggingface/peft/pull/4099"
+    role: "Upstream PR · 21.8K+ ★"
+    stack: "PyTorch · LoRA · torch.accelerator"
+    summary: "Added `torch.accelerator` support (including `torch_tpu` / `PrivateUse1`) to `infer_device()` so `PeftModel` and LoRA adapters stop silently falling back to host CPU on Cloud TPUs."
+
   - repo: "LinkedInLearning/hands-on-ai-building-agents-with-google-s-agent-development-toolkit-adk-2743271"
     url: "https://github.com/LinkedInLearning/hands-on-ai-building-agents-with-google-s-agent-development-toolkit-adk-2743271"
     role: "Course Author · 42+ Forks"

@@ -13,7 +13,7 @@ og_image_alt: "TorchTPU Doctor: Agent Skill & Performance Profiler for PyTorch o
 
 Porting CUDA-oriented PyTorch and Hugging Face scripts to Google Cloud TPUs used to fail loudly behind `PyTorch/XLA` boilerplate. With the new open-source **[TorchTPU](https://github.com/google-pytorch/torch_tpu)** (`torch_tpu`) backend, standard PyTorch code runs directly on `device="tpu"`—which creates a subtler engineering problem: **silent performance cliffs**. Unpatched device helpers fall back to `'cpu'`, hidden scalar readbacks stall HBM-to-host transfers inside library internals, and ragged batch shapes trigger 45–77 second XLA recompilations on every step.
 
-**[TorchTPU Doctor](https://github.com/jigyasa-grover/TorchTPU-Doctor)** (`torchtpu-doctor`) is an open-source Agent Skill, zero-dependency AST linter, `TorchDispatchMode` warmup profiler, and runtime patch kit built to diagnose and eliminate those bottlenecks automatically—cutting compiled `Qwen2.5-0.5B-Instruct` LoRA fine-tuning step time on a Cloud TPU `v6e-1` (Trillium) VM from **47.3 seconds/step down to 18.6 ms/step (2,537× faster)**.
+**[TorchTPU Doctor](https://github.com/jigyasa-grover/TorchTPU-Doctor)** (`torchtpu-doctor`) is an open-source Agent Skill, zero-dependency AST linter, `TorchDispatchMode` warmup profiler, and runtime patch kit built to diagnose and eliminate those bottlenecks automatically—cutting compiled `Qwen2.5-0.5B-Instruct` LoRA fine-tuning step time on a Cloud TPU `v6e-1` (Trillium) VM from **47.3 seconds/step down to 18.6 ms/step (2,537× faster)** and producing **three upstream ecosystem contributions** across Hugging Face and Google PyTorch ([`huggingface/transformers#50267`](https://github.com/huggingface/transformers/pull/50267), [`huggingface/peft#4099`](https://github.com/huggingface/peft/pull/4099), and [`google-pytorch/torch_tpu#6127`](https://github.com/google-pytorch/torch_tpu/issues/6127)).
 
 ![TorchTPU Doctor: Agent Skill & Performance Profiler for PyTorch on Cloud TPUs](/assets/images/opt/torchtpu-doctor-cover.jpg)
 
@@ -61,6 +61,7 @@ To make these invisible hardware mismatches obvious—both to human engineers an
 - **GitHub Repository:** [github.com/jigyasa-grover/TorchTPU-Doctor](https://github.com/jigyasa-grover/TorchTPU-Doctor)
 - **Executed Cloud TPU `v6e-1` Notebook:** [`notebooks/torchtpu_doctor_demo.ipynb`](https://github.com/jigyasa-grover/TorchTPU-Doctor/blob/main/notebooks/torchtpu_doctor_demo.ipynb) ([Open in Google Colab](https://colab.research.google.com/github/jigyasa-grover/TorchTPU-Doctor/blob/main/notebooks/torchtpu_doctor_demo.ipynb))
 - **Drop-In Agent Skill (`SKILL.md`):** [`.agents/skills/torchtpu-doctor/SKILL.md`](https://github.com/jigyasa-grover/TorchTPU-Doctor/blob/main/.agents/skills/torchtpu-doctor/SKILL.md)
+- **Upstream Contributions:** [`huggingface/transformers#50267`](https://github.com/huggingface/transformers/pull/50267) · [`huggingface/peft#4099`](https://github.com/huggingface/peft/pull/4099) · [`google-pytorch/torch_tpu#6127`](https://github.com/google-pytorch/torch_tpu/issues/6127)
 
 ![Before vs After on Cloud TPU v6e-1](/assets/images/opt/torchtpu-doctor-benchmark.png)
 
@@ -121,7 +122,7 @@ Nothing crashed, the gradients flowed, and yet the Trillium chip spent nearly fi
 
 Core `transformers` already queries PyTorch's device-agnostic `torch.accelerator` API, so `Trainer` recognizes `"tpu"`. Several neighboring libraries in the Hugging Face ecosystem, however, still walk hardcoded `if/elif` vendor allowlists:
 
-- **PEFT** (`src/peft/utils/other.py`): `infer_device()` checks `cuda`, `mps`, `mlu`, `xpu`, `npu`, and silently falls through to `"cpu"` on a TPU VM.
+- **PEFT** (`src/peft/utils/other.py`): `infer_device()` checks `cuda`, `mps`, `mlu`, `xpu`, `npu`, and silently falls through to `"cpu"` on a TPU VM across internal `PeftModel`, `save_and_load`, `hotswap`, and user scripts — **upstream fix PR opened at [`huggingface/peft#4099`](https://github.com/huggingface/peft/pull/4099)** to check `torch.accelerator.is_available()` before falling back to `"cpu"`.
 - **SentenceTransformers** (`sentence_transformers/util/environment.py`): `get_device_name()` checks `cuda`, `mps`, `npu`, `xpu`, `hpu`, and returns `"cpu"`.
 - **lm-evaluation-harness** (`lm_eval/models/huggingface.py`): `device_list` omits `"tpu"`, defaulting to `torch.device("cpu")`.
 
@@ -179,7 +180,7 @@ for step, batch in enumerate(loader):
         loss_sum.zero_()
 ```
 
-Eliminating those 12 hidden `transformers` syncs immediately cut 6-step eager execution in half (`2,739 ms` down to `1,329 ms`) and dropped host syncs from `18` to `0`.
+Eliminating those 12 hidden `transformers` syncs immediately cut bucketed eager step latency in half (`456.5 ms/step` down to `221.5 ms/step` — **2.06× faster**) and dropped host syncs from `18` to `0`. I submitted this exact fix upstream in **[`huggingface/transformers#50267`](https://github.com/huggingface/transformers/pull/50267)** and filed the full `v6e-1` ecosystem benchmark report in **[`google-pytorch/torch_tpu#6127`](https://github.com/google-pytorch/torch_tpu/issues/6127)**.
 
 ---
 
@@ -412,7 +413,19 @@ Breaking the timings down rung by rung shows exactly where every speedup comes f
 
 ---
 
-## 7. Practical Caveats for Production Workloads
+## 7. Upstream Ecosystem Contributions (`transformers`, `peft`, `torch_tpu`)
+
+Building `torchtpu-doctor` and running live `TorchDispatchMode` audits on a Cloud TPU `v6e-1` VM surfaced genuine ecosystem gaps in first-party libraries—not just user-script mistakes. While `torchtpu_doctor.patch_hf_tpu()` patches these in memory immediately so existing `pip` installs run cleanly today, I also contributed the fixes and hardware reproductions directly upstream:
+
+| Upstream Repository | Contribution | Root Cause Caught by `torchtpu-doctor` | Measured Impact on Cloud TPU `v6e-1` |
+| :--- | :--- | :--- | :--- |
+| **[`huggingface/transformers#50267`](https://github.com/huggingface/transformers/pull/50267)** | **PR:** *[Masking] Avoid device-to-host sync in `_ignore_causal_mask_sdpa` on TPU* | `_ignore_causal_mask_sdpa` calls `fast_all(padding_mask)` twice per eager forward pass, firing 2 blocking `aten::_local_scalar_dense` (`torch.bool`) TPU-to-CPU transfers per step. Short-circuits to `False` when `padding_mask.device.type == "tpu"` (matching `is_tracing`). | Cuts bucketed eager LoRA step latency **2.06×** (`456.5 ms/step` → **`221.5 ms/step`**; `12 → 0` host syncs). |
+| **[`huggingface/peft#4099`](https://github.com/huggingface/peft/pull/4099)** | **PR:** *FIX: Support `torch.accelerator` backends (e.g. `torch_tpu`) in `infer_device()`* | `peft.utils.other.infer_device()` walks `cuda`, `mps`, `mlu`, `xpu`, `npu` and silently falls through to `"cpu"` across `PeftModel`, `save_and_load`, `hotswap`, and user LoRA scripts on `PrivateUse1` (`device="tpu"`). Adds `torch.accelerator.is_available()` fallback + CI unit tests. | Moves LoRA fine-tuning off silent host CPU fallback onto `tpu:0` (**53.2× faster** eager; **2,537×** compiled with static buckets). |
+| **[`google-pytorch/torch_tpu#6127`](https://github.com/google-pytorch/torch_tpu/issues/6127)** | **Issue:** *[Ecosystem / Hugging Face] Silent host syncs in `transformers.masking_utils` & CPU fallback in `peft` on `torch_tpu 0.2.0`* | Documents both Hugging Face `PrivateUse1` ecosystem bottlenecks, `TorchDispatchMode` stack traces, and reproducible `Qwen2.5-0.5B-Instruct` LoRA timings on `v6e-1` (`torch_tpu 0.2.0`, `libtpu 0.0.51`) for the TorchTPU maintainers and user guide. | Coordinates upstream ecosystem fixes across `torch_tpu`, `transformers`, and `peft`. |
+
+---
+
+## 8. Practical Caveats for Production Workloads
 
 Two engineering boundaries to keep in mind when adopting `torchtpu-doctor`:
 
@@ -421,7 +434,7 @@ Two engineering boundaries to keep in mind when adopting `torchtpu-doctor`:
 
 ---
 
-## 8. Try It Out & References
+## 9. Try It Out & References
 
 Install directly from GitHub and run the static scanner or self-contained dispatch demo on any machine:
 
@@ -434,6 +447,10 @@ torchtpu-doctor demo
 - **GitHub Repository:** [github.com/jigyasa-grover/TorchTPU-Doctor](https://github.com/jigyasa-grover/TorchTPU-Doctor)
 - **Colab / Cloud TPU `v6e-1` Notebook:** [`notebooks/torchtpu_doctor_demo.ipynb`](https://colab.research.google.com/github/jigyasa-grover/TorchTPU-Doctor/blob/main/notebooks/torchtpu_doctor_demo.ipynb)
 - **Before & After Sample Scripts:** [`examples/naive_lora_sft.py`](https://github.com/jigyasa-grover/TorchTPU-Doctor/blob/main/examples/naive_lora_sft.py) and [`examples/tpu_lora_sft.py`](https://github.com/jigyasa-grover/TorchTPU-Doctor/blob/main/examples/tpu_lora_sft.py)
+- **Upstream PRs & Ecosystem Report:**
+  - [`huggingface/transformers#50267` — Avoid device-to-host sync in `_ignore_causal_mask_sdpa` on TPU](https://github.com/huggingface/transformers/pull/50267)
+  - [`huggingface/peft#4099` — Support `torch.accelerator` backends (e.g. `torch_tpu`) in `infer_device()`](https://github.com/huggingface/peft/pull/4099)
+  - [`google-pytorch/torch_tpu#6127` — Silent host syncs in `transformers.masking_utils` & CPU fallback in `peft` on `torch_tpu 0.2.0`](https://github.com/google-pytorch/torch_tpu/issues/6127)
 - **Further Reading:**
   - [TorchTPU is now open source: Run native PyTorch on TPUs (Google Cloud Blog, PyTorch Conference 2026)](https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus)
   - [Introducing TorchTPU (PyTorch Blog)](https://pytorch.org/blog/introducing-torchtpu/)
