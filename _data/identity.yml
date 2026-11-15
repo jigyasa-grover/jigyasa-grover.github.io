@@ -20,15 +20,19 @@ medium_bio_150: "Jigyasa Grover (pronounced jig-YAH-sah GROH-ver) is a San Franc
 metrics:
   - value: "13+"
     label: "AI & Open Source Awards"
+    short_detail: "VentureBeat · Red Hat · Women in AI"
     detail: "VentureBeat, Red Hat, Rise R&D, Women in AI NA, DTU Alumni"
   - value: "200+"
     label: "Keynotes, Talks & Panels"
+    short_detail: "Google I/O · Cloud Next · 20+ Countries"
     detail: "Google I/O Keynote, Cloud Next, OSS Summit, UN & Harvard"
   - value: "50K+"
     label: "Engineers & Leaders Trained"
+    short_detail: "LinkedIn Learning · Morgan Stanley · FedEx"
     detail: "LinkedIn Learning (44K+), Morgan Stanley, FedEx, Accenture & Roblox"
   - value: "30+"
     label: "Advisory & Consulting Orgs"
+    short_detail: "Google gDAB · Startups · Venture Funds"
     detail: "Via Afterdays · Google gDAB, Anthropic, Spotify, Windsurf & VCs"
 
 booking:

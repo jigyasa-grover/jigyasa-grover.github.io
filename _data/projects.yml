@@ -1,8 +1,11 @@
 - id: "torchtpu-doctor"
   title: "TorchTPU Doctor — Agent Skill & Profiler for PyTorch on Cloud TPUs"
+  short_title: "TorchTPU Doctor"
   year: "2026"
-  category: "PyTorch & Cloud TPU Profiling"
+  category: "PyTorch & Cloud TPUs"
   featured: true
+  home_featured: true
+  home_summary: "AST linter & profiler cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms), with upstream fixes in transformers & peft."
   summary: "Agent Skill, AST linter, and TorchDispatchMode profiler for native PyTorch (torch_tpu)—cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms) and driving upstream fixes in Hugging Face transformers & peft."
   stack:
     - "PyTorch (torch_tpu)"
@@ -14,9 +17,12 @@
 
 - id: "proof-of-work"
   title: "Proof of Work — Agentic Video Teaching Assistant"
+  short_title: "Proof of Work"
   year: "2026"
-  category: "Agentic AI & Evaluation"
+  category: "Multimodal Agent Evals"
   featured: true
+  home_featured: true
+  home_summary: "Multimodal Gemini agent evaluating engineering reasoning and debugging maturity from continuous screen recordings."
   summary: "Multimodal Gemini agent that evaluates software engineering process, debugging maturity, and hypothesis iteration from continuous screen recordings with timestamped visual evidence."
   stack:
     - "Gemini Multimodal Video"
@@ -28,9 +34,11 @@
 
 - id: "startup-on-a-shoestring"
   title: "Startup on a Shoestring — Agent Cost & Token Guardrails"
+  short_title: "Startup on a Shoestring"
   year: "2026"
   category: "Agentic Infrastructure & FinOps"
   featured: true
+  home_featured: false
   summary: "Per-turn and cumulative budget circuit-breakers built on Google Antigravity SDK lifecycle hooks and FastAPI SSE telemetry to halt runaway token loops."
   stack:
     - "Google Antigravity SDK"
@@ -41,9 +49,12 @@
 
 - id: "trust-at-top-speed"
   title: "Trust at Top Speed — Split-Brain Edge/Cloud AI Racing Coach"
+  short_title: "Trust at Top Speed"
   year: "2025"
   category: "Edge + Cloud Real-Time AI"
   featured: true
+  home_featured: true
+  home_summary: "Field-tested at Thunderhill Raceway: ~15ms on-device Gemini Nano voice cues paired with Cloud Run lap telemetry."
   summary: "Field-tested at Thunderhill Raceway: ~15ms on-device Gemini Nano voice cues and physics safety gates paired with Cloud Run lap telemetry reasoning."
   stack:
     - "Gemini Nano"

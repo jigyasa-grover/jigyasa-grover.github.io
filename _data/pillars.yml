@@ -1,9 +1,11 @@
 - number: "01"
   id: "advisory"
   slug: "/advisory/"
+  home_featured: true
   short_title: "AI Advisory"
   title: "AI Advisor & Thought Partner"
   audience: "Founders · Engineering VPs · VCs"
+  home_hook: "Architecture audits and strategy for production ranking, agentic workflows, and inference costs."
   summary: "Architecture reviews and product strategy for production ML ranking, agentic orchestration, and inference economics."
   deliverables:
     - "Agentic AI vs. deterministic workflow architecture audits"
@@ -12,15 +14,19 @@
   evidence: "Principal at Afterdays (30+ startups, enterprises & VCs) · Google gDAB · ML Tech Lead at Uber."
   cta_label: "Explore Advisory"
   cta_url: "/advisory/"
+  fast_cta_label: "1:1 on Intro"
+  fast_cta_url: "https://intro.co/JigyasaGrover"
   inquiry_topic: "Advisory & Consulting"
   direct_platform_key: "intro"
 
 - number: "02"
   id: "speaking"
   slug: "/speaking/"
+  home_featured: true
   short_title: "Keynotes & Speaking"
   title: "Conference & Keynote Speaker"
   audience: "Conferences · Developer Summits · Offsites"
+  home_hook: "Story-driven technical keynotes and executive panels grounded in real production systems."
   summary: "Grounded, story-driven keynotes, technical sessions, and executive panels bridging production systems and emerging AI."
   deliverables:
     - "Main-stage keynotes on Agentic AI, evaluation & failure modes"
@@ -29,14 +35,18 @@
   evidence: "Google I/O main stage · Sessionize Top 3% globally · 200+ talks in 20+ countries."
   cta_label: "Invite Me to Speak"
   cta_url: "/speaking/"
+  fast_cta_label: "Check Dates"
+  fast_cta_url: "/work-with-me/?topic=Speaking%20%26%20Workshops#contact"
   inquiry_topic: "Speaking & Workshops"
 
 - number: "03"
   id: "training"
   slug: "/teaching/"
+  home_featured: true
   short_title: "Corporate AI Training"
   title: "Corporate AI Trainer & Workshop Lead"
   audience: "Corporate L&D · Engineering & Platform Teams"
+  home_hook: "Hands-on bootcamps taking teams from brittle prompt prototypes to evaluated AI agents."
   summary: "Hands-on bootcamps taking engineering teams from brittle prompt prototypes to evaluated, production-ready AI agents."
   deliverables:
     - "Building & evaluating agents with Google ADK, MCP & LangGraph"
@@ -45,14 +55,18 @@
   evidence: "44,000+ LinkedIn Learning learners · Training with Morgan Stanley, FedEx, Accenture, Roblox, SVSG & AI Aspire."
   cta_label: "Book an AI Workshop"
   cta_url: "/teaching/"
+  fast_cta_label: "Inquire"
+  fast_cta_url: "/work-with-me/?topic=Corporate%20AI%20Training#contact"
   inquiry_topic: "Corporate AI Training"
 
 - number: "04"
   id: "partnerships"
   slug: "/partnerships/"
+  home_featured: true
   short_title: "Brand Partnerships"
   title: "Technical Creator & Brand Partner"
   audience: "AI Platforms · Cloud · DevTools"
+  home_hook: "Code-backed demos and deep dives reaching an audience of 82% senior engineers and leaders."
   summary: "Code-backed tutorials, reference apps, and launch analyses reaching an audience that is 82% senior engineers and tech leaders."
   deliverables:
     - "End-to-end reference implementations & technical blog deep dives"
@@ -61,6 +75,8 @@
   evidence: "325K+ annual LinkedIn impressions · Partnered with Google, DeepMind, Meta, Qodo, Parallel & Adobe."
   cta_label: "Discuss a Partnership"
   cta_url: "/partnerships/"
+  fast_cta_label: "Passionfroot"
+  fast_cta_url: "https://www.passionfroot.me/jigyasa-grover"
   inquiry_topic: "Content & Brand Partnerships"
   direct_platform_key: "passionfroot"
 
