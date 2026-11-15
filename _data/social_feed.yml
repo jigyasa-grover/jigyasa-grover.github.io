@@ -12,13 +12,13 @@ channels:
   - id: "instagram"
     name: "Instagram"
     handle: "@jigyasagroverofficial"
-    metric: "Keynote Reels & Behind the Scenes"
+    metric: "Reels & Tagged Features"
     url: "https://www.instagram.com/jigyasagroverofficial/"
   - id: "youtube"
     name: "YouTube"
     handle: "@JigyasaGrover"
-    metric: "Google I/O, Cloud Tech & Keynotes"
-    url: "https://www.youtube.com/@JigyasaGrover"
+    metric: "64+ Playlists · 70+ Shorts"
+    url: "https://www.youtube.com/@JigyasaGrover/playlists"
 
 posts:
   - platform: "x"
@@ -58,9 +58,12 @@ posts:
     width: 576
     height: 1024
     focal: "center 44%"
+    video_id: "5AflJGyIZt4"
+    video_mode: "vertical"
     excerpt: "Flew to Milan to stand on one of Europe's largest developer stages at Codemotion—and tell a packed auditorium when NOT to build an AI agent."
     tag: "Codemotion Milan"
-    cta: "Watch on Instagram"
+    cta: "Play Reel"
+    external_cta: "Instagram"
     url: "https://www.instagram.com/jigyasagroverofficial/"
 
   - platform: "linkedin"
@@ -116,17 +119,55 @@ posts:
     url: "https://www.linkedin.com/posts/jigyasa-grover_ad-codegovernance-aicodereview-share-7503200004652576768-1r_a"
 
   - platform: "youtube"
-    platform_label: "YouTube · Creator Feature"
+    platform_label: "YouTube · Creator Collab"
     handle: "@JigyasaGrover × @GoogleCloudTech"
     date: "Jul 2026"
     sponsored: true
     partner: "Google Cloud"
     badge: "Multi-Agent Orchestration on Cloud"
+    contexts: ["partnerships", "highlights", "home"]
+    image: "https://i.ytimg.com/vi/W54cRxp-bSA/hqdefault.jpg"
+    width: 480
+    height: 360
+    video_id: "W54cRxp-bSA"
+    excerpt: "Hands-on walkthrough of production multi-agent orchestration patterns, MCP tool boundaries, and grounded execution with Google ADK on @GoogleCloudTech."
+    tag: "Google Cloud · ADK & MCP"
+    cta: "Play Inline"
+    url: "https://www.youtube.com/watch?v=W54cRxp-bSA"
+
+  - platform: "instagram"
+    platform_label: "Tagged Reel · Launch"
+    handle: "@googlegemini × @jigyasagroverofficial"
+    date: "Jul 2026"
+    sponsored: false
+    badge: "Gemini Omni Flash Official Launch"
     contexts: ["partnerships", "highlights"]
-    excerpt: "Breaking down production multi-agent orchestration patterns, tool boundaries, and grounded execution with Google ADK and Vertex AI in collaboration with @GoogleCloudTech."
-    tag: "Google Cloud · #GoogleCloudPartner"
-    cta: "Watch on YouTube"
-    url: "https://www.youtube.com/watch?v=M2TVyZR9pe8"
+    image: "/assets/images/opt/gemini_live_2026.jpg"
+    width: 1200
+    height: 1200
+    focal: "center 38%"
+    video_id: "3iZzf_NRxDQ"
+    video_mode: "vertical"
+    excerpt: "Featured developer builder in Google's official launch video for Gemini Omni Flash—spotlighting real-time audio-visual grounding and low-latency multimodal UX."
+    tag: "Tagged · @googlegemini"
+    cta: "Play Launch Clip"
+    external_cta: "Tagged IG"
+    url: "https://www.instagram.com/jigyasagroverofficial/tagged/"
+
+  - platform: "youtube"
+    platform_label: "YouTube Short · Partner"
+    handle: "@JigyasaGrover × @GoogleCloudTech"
+    date: "Jul 2026"
+    sponsored: true
+    partner: "Google Cloud"
+    badge: "The Glow-Up Your AI Agent Needs"
+    contexts: ["partnerships"]
+    video_id: "M2TVyZR9pe8"
+    video_mode: "vertical"
+    excerpt: "60-second creator reel with @GoogleCloudTech breaking down deterministic guardrails and Vertex AI evaluation loops for production agents."
+    tag: "#GoogleCloudPartner"
+    cta: "Play Short"
+    url: "https://www.youtube.com/shorts/M2TVyZR9pe8"
 
   - platform: "linkedin"
     platform_label: "LinkedIn"

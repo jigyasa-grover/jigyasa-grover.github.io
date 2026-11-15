@@ -1,45 +1,379 @@
 ---
 layout: page
-title: "Highlights & Recognition Gallery"
-heading: "Visual archive of keynotes, broadcasts, awards, and community milestones."
-eyebrow: "Visual Highlights"
-lead: "Moments from Codemotion Milan 2026, Google I/O, Google Gemini ecosystem events, TEDAI San Francisco, live television commentary, and 13× open-source & AI honors."
-hero_cta_label: "Full Press & Awards Ledger →"
+title: "Watch, Reels & Visual Highlights"
+heading: "Interactive screening room, 9:16 reels, stage gallery, and community milestones."
+eyebrow: "Watch & Visual Archive"
+lead: "100+ talks, official Google developer films, podcasts, YouTube Shorts, and tagged Instagram Reels—produced by or featuring Jigyasa Grover."
+hero_cta_label: "Full Press & Awards Kit →"
 hero_cta_url: "/press/"
-seo_title: "Highlights & Awards Gallery — Jigyasa Grover"
-description: "Stage and recognition highlights: Codemotion Milan, Google Gemini Early Access, Google I/O Keynote, TEDAI SF, VentureBeat & Red Hat Open Source Awards."
+seo_title: "Watch Talks, Reels & Highlights — Jigyasa Grover"
+description: "Interactive video screening room, 9:16 AI reels, stage gallery & 13x awards featuring Jigyasa Grover across Google I/O, Cloud Tech & Instagram."
 permalink: /highlights/
 ---
+{% assign vids = site.data.videos %}
 
-<div class="gallery-grid mb-xl">
-  {% for item in site.data.recognition.visual_highlights %}
-  <a class="gallery-card" href="{{ item.url }}" {% if item.url contains 'http' %}target="_blank" rel="noopener"{% endif %}>
-    <img
-      src="{{ item.image }}"
-      width="{{ item.width }}"
-      height="{{ item.height }}"
-      loading="lazy"
-      {% if item.focal %}style="object-position: {{ item.focal }};"{% endif %}
-      alt="{{ item.title }} — {{ item.subtitle }}"
-    />
-    <div class="gallery-card__body">
-      <h2 class="gallery-card__title">{{ item.title }}</h2>
-      <p class="gallery-card__sub">{{ item.subtitle }} {% if item.url contains 'http' %}↗{% else %}→{% endif %}</p>
+<!-- 0. Interactive Channel Strip & Instant Tuner -->
+<section id="watch-hub" class="watch-channel-bar mb-xl" aria-label="Video channels and instant screening controls">
+  <div class="watch-channel-bar__top">
+    <div>
+      <div class="eyebrow">4 Video Channels · Featured In &amp; Produced By</div>
+      <p class="watch-channel-bar__lead">
+        Play any talk, documentary, or vertical Short inline below—or jump straight to each channel.
+      </p>
     </div>
-  </a>
-  {% endfor %}
-</div>
+    <div class="btn-group">
+      <button type="button" class="btn btn--accent btn--compact" data-cinema-shuffle>
+        <span aria-hidden="true">🎲</span> Surprise Me
+      </button>
+      <a
+        class="btn btn--primary btn--compact"
+        href="{{ vids.featured_films[0].url }}"
+        target="_blank"
+        rel="noopener"
+        data-cinema="{{ vids.featured_films[0].video_id }}"
+        data-cinema-start="{{ vids.featured_films[0].start }}"
+        data-cinema-mode="wide"
+        data-cinema-title="{{ vids.featured_films[0].title | escape }}"
+        data-cinema-channel="{{ vids.featured_films[0].channel | escape }}"
+      >
+        <span aria-hidden="true">▶</span> Start Screening
+      </a>
+    </div>
+  </div>
 
+  <div class="watch-channels-grid">
+    {% for ch in vids.channels %}
+    <a class="watch-channel-card" href="{{ ch.url }}" target="_blank" rel="noopener">
+      <div class="watch-channel-card__top">
+        <span class="social-badge social-badge--{{ ch.platform }}">
+          {% if ch.platform == "youtube" %}▶{% else %}IG{% endif %}
+        </span>
+        <span class="watch-channel-card__arrow" aria-hidden="true">↗</span>
+      </div>
+      <div class="watch-channel-card__label">{{ ch.label }}</div>
+      <div class="watch-channel-card__handle">{{ ch.handle }}</div>
+      <div class="watch-channel-card__stat">{{ ch.stat }}</div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- 1. Interactive Screening Room: Long-Form Films, Keynotes & Podcasts -->
+<section id="screening-room" class="content-section--bordered mb-xl" aria-labelledby="screening-room-heading" data-watch-hub>
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Interactive Screening Room · {{ vids.featured_films.size }} Curated Broadcasts</div>
+      <h2 id="screening-room-heading">Keynotes, Google films, documentaries &amp; podcasts</h2>
+    </div>
+    <a class="section-header__link" href="https://www.youtube.com/@JigyasaGrover/playlists" target="_blank" rel="noopener">
+      All 64+ YouTube playlists ↗
+    </a>
+  </div>
+
+  <div class="watch-toolbar">
+    <div class="watch-toolbar__filters">
+      <div class="filter-pills" role="group" aria-label="Filter videos by ownership or topic">
+        <button type="button" class="filter-btn is-active" data-watch-filter="all" aria-pressed="true">All ({{ vids.featured_films.size }})</button>
+        <button type="button" class="filter-btn" data-watch-filter="role:featured" aria-pressed="false">Featured In</button>
+        <button type="button" class="filter-btn" data-watch-filter="role:produced" aria-pressed="false">Produced by Me</button>
+        <button type="button" class="filter-btn" data-watch-filter="cat:google" aria-pressed="false">Google Ecosystem</button>
+        <button type="button" class="filter-btn" data-watch-filter="cat:keynotes" aria-pressed="false">Keynotes &amp; Talks</button>
+        <button type="button" class="filter-btn" data-watch-filter="cat:podcasts" aria-pressed="false">Podcasts &amp; Interviews</button>
+        <button type="button" class="filter-btn" data-watch-filter="cat:opensource" aria-pressed="false">Open Source &amp; UN</button>
+      </div>
+    </div>
+
+    <div class="watch-toolbar__search">
+      <label class="sr-only" for="watch-search-input">Search talks, documentaries, and channels</label>
+      <input
+        type="search"
+        id="watch-search-input"
+        class="search-input"
+        placeholder="Search ADK, Racing Coach, Gemini, PyCon…"
+        data-watch-search
+      />
+    </div>
+  </div>
+
+  <div id="watch-results-status" class="sr-only" aria-live="polite"></div>
+
+  <div class="cinema-grid" data-watch-grid>
+    {% for v in vids.featured_films %}
+    {% assign thumb_src = v.thumbnail | default: "" %}
+    {% if thumb_src == "" %}
+      {% assign thumb_src = "https://i.ytimg.com/vi/" | append: v.video_id | append: "/hqdefault.jpg" %}
+    {% endif %}
+    <article
+      class="cinema-card{% unless v.featured_initial %} is-collapsed-initial{% endunless %}"
+      data-watch-item
+      data-role="{{ v.role_type }}"
+      data-category="{{ v.category }}"
+      data-initial="{% if v.featured_initial %}true{% else %}false{% endif %}"
+      data-search="{{ v.title | escape }} {{ v.channel | escape }} {{ v.badge | escape }} {{ v.summary | escape }} {{ v.date | escape }}"
+    >
+      <a
+        class="cinema-card__media"
+        href="{{ v.url }}"
+        target="_blank"
+        rel="noopener"
+        data-cinema="{{ v.video_id }}"
+        {% if v.start %}data-cinema-start="{{ v.start }}"{% endif %}
+        data-cinema-mode="wide"
+        data-cinema-title="{{ v.title | escape }}"
+        data-cinema-channel="{{ v.channel | escape }}"
+        data-cinema-badge="{{ v.badge | escape }}"
+        data-cinema-summary="{{ v.summary | escape }}"
+      >
+        <img
+          src="{{ thumb_src }}"
+          width="480"
+          height="270"
+          loading="lazy"
+          alt="{{ v.title }} — {{ v.channel }}"
+        />
+        <span class="cinema-card__pill cinema-card__pill--{{ v.role_type }}">
+          {% if v.role_type == "produced" %}Produced{% else %}Featured In{% endif %}
+        </span>
+        <span class="cinema-chip">
+          <span class="cinema-chip__icon" aria-hidden="true">▶</span>
+          <span>Play Inline</span>
+        </span>
+      </a>
+
+      <div class="cinema-card__body">
+        <div class="cinema-card__meta">
+          <span class="cinema-card__host">{{ v.channel }}</span>
+          <span>{{ v.date }}</span>
+        </div>
+        <h3 class="cinema-card__title">
+          <a
+            href="{{ v.url }}"
+            target="_blank"
+            rel="noopener"
+            data-cinema="{{ v.video_id }}"
+            {% if v.start %}data-cinema-start="{{ v.start }}"{% endif %}
+            data-cinema-mode="wide"
+            data-cinema-title="{{ v.title | escape }}"
+            data-cinema-channel="{{ v.channel | escape }}"
+          >{{ v.title }}</a>
+        </h3>
+        <p class="cinema-card__summary">{{ v.summary }}</p>
+      </div>
+
+      <div class="cinema-card__footer">
+        <span class="mono-tag">{{ v.badge }}</span>
+        <div class="cinema-card__links">
+          {% if v.playlist_id %}
+          <a href="https://www.youtube.com/playlist?list={{ v.playlist_id }}" target="_blank" rel="noopener">Playlist ↗</a>
+          {% endif %}
+          <a
+            href="{{ v.url }}"
+            target="_blank"
+            rel="noopener"
+            data-cinema="{{ v.video_id }}"
+            {% if v.start %}data-cinema-start="{{ v.start }}"{% endif %}
+            data-cinema-mode="wide"
+            data-cinema-title="{{ v.title | escape }}"
+            data-cinema-channel="{{ v.channel | escape }}"
+          >Watch ▶</a>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <p id="watch-empty-state" class="empty-state" data-watch-empty>
+    No matching talks or films found—try clearing your search or switching category tabs.
+  </p>
+
+  <div class="watch-expand-wrap" data-watch-expand-wrap>
+    <button type="button" class="btn btn--secondary" data-watch-expand>
+      Show all {{ vids.featured_films.size }} featured talks, films &amp; broadcasts ↓
+    </button>
+  </div>
+</section>
+
+<!-- 2. Interactive 9:16 Vertical Studio: YouTube Shorts & Instagram Reels -->
+<section id="reels-deck" class="content-section--bordered mb-xl" aria-labelledby="reels-deck-heading" data-reels-deck>
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">9:16 Vertical Studio · Shorts &amp; Tagged Reels</div>
+      <h2 id="reels-deck-heading">60-second AI teardowns, Google collabs &amp; stage reels</h2>
+    </div>
+    <div class="reels-nav-group">
+      <button type="button" class="reel-paddle-btn" data-reel-scroll="-1" aria-label="Scroll reels left">←</button>
+      <button type="button" class="reel-paddle-btn" data-reel-scroll="1" aria-label="Scroll reels right">→</button>
+    </div>
+  </div>
+
+  <div class="watch-toolbar watch-toolbar--compact">
+    <div class="filter-pills" role="group" aria-label="Filter vertical Shorts and Reels">
+      <button type="button" class="filter-btn is-active" data-reel-filter="all" aria-pressed="true">All Reels ({{ vids.shorts.size }})</button>
+      <button type="button" class="filter-btn" data-reel-filter="agentic" aria-pressed="false">Agentic AI &amp; Code</button>
+      <button type="button" class="filter-btn" data-reel-filter="google" aria-pressed="false">Google Launches &amp; Track</button>
+      <button type="button" class="filter-btn" data-reel-filter="stages" aria-pressed="false">Keynotes, Studios &amp; Collabs</button>
+      <button type="button" class="filter-btn" data-reel-filter="featured" aria-pressed="false">Partner &amp; Tagged</button>
+    </div>
+
+    <div class="reels-channel-links">
+      <a href="https://www.youtube.com/@JigyasaGrover/shorts" target="_blank" rel="noopener">All 70+ Shorts ↗</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://www.instagram.com/jigyasagroverofficial/tagged/" target="_blank" rel="noopener">IG Tagged ↗</a>
+    </div>
+  </div>
+
+  <div class="reel-strip" data-reel-strip tabindex="0" aria-label="Vertical Shorts and Reels carousel">
+    {% for s in vids.shorts %}
+    <a
+      class="reel-card"
+      href="{{ s.url }}"
+      target="_blank"
+      rel="noopener"
+      data-reel-item
+      data-reel-cat="{{ s.category }}"
+      data-reel-role="{{ s.role_type }}"
+      data-cinema="{{ s.video_id }}"
+      data-cinema-mode="vertical"
+      data-cinema-title="{{ s.title | escape }}"
+      data-cinema-channel="{% if s.partner %}@JigyasaGrover × {{ s.partner | escape }}{% else %}@JigyasaGrover{% endif %}"
+    >
+      <img
+        src="https://i.ytimg.com/vi/{{ s.video_id }}/hqdefault.jpg"
+        width="360"
+        height="640"
+        loading="lazy"
+        alt="{{ s.title }} — vertical video by Jigyasa Grover"
+      />
+      <div class="reel-card__shade"></div>
+      <div class="reel-card__top">
+        <span class="reel-card__badge">{% if s.role_type == "featured" %}Featured{% else %}Short{% endif %}</span>
+        <span class="reel-card__play" aria-hidden="true">▶</span>
+      </div>
+      <div class="reel-card__bottom">
+        <span class="reel-card__tag">{{ s.tag }}</span>
+        <h3 class="reel-card__title">{{ s.title }}</h3>
+        <span class="reel-card__date">{{ s.date }}</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  <!-- Instagram Reels & Tagged Creator Collaborations Strip -->
+  <div class="ig-tagged-panel mt-lg">
+    <div class="ig-tagged-panel__header">
+      <div>
+        <div class="eyebrow">Instagram · @jigyasagroverofficial &amp; /tagged/</div>
+        <h3 class="ig-tagged-panel__title">Cross-posted keynote reels &amp; tagged partner features</h3>
+      </div>
+      <div class="btn-group">
+        <a class="btn btn--secondary btn--compact" href="https://www.instagram.com/jigyasagroverofficial/" target="_blank" rel="noopener">
+          @jigyasagroverofficial ↗
+        </a>
+        <a class="btn btn--secondary btn--compact" href="https://www.instagram.com/jigyasagroverofficial/tagged/" target="_blank" rel="noopener">
+          Tagged Videos (/tagged/) ↗
+        </a>
+      </div>
+    </div>
+
+    <div class="ig-spotlight-grid">
+      {% for ig in vids.instagram_spotlights %}
+      <article class="ig-spotlight-card">
+        <a
+          class="ig-spotlight-card__media"
+          href="{{ ig.ig_url }}"
+          target="_blank"
+          rel="noopener"
+          {% if ig.video_id %}
+          data-cinema="{{ ig.video_id }}"
+          data-cinema-mode="vertical"
+          data-cinema-title="{{ ig.title | escape }}"
+          data-cinema-channel="{{ ig.handle | escape }}"
+          data-cinema-external="{{ ig.ig_url | escape }}"
+          {% endif %}
+        >
+          <img
+            src="{{ ig.image }}"
+            width="{{ ig.width }}"
+            height="{{ ig.height }}"
+            loading="lazy"
+            {% if ig.focal %}style="object-position: {{ ig.focal }};"{% endif %}
+            alt="{{ ig.title }} — {{ ig.handle }}"
+          />
+          <span class="ig-spotlight-card__pill">IG · {{ ig.tab }}</span>
+          {% if ig.video_id %}
+          <span class="cinema-chip">
+            <span class="cinema-chip__icon" aria-hidden="true">▶</span>
+            <span>Play Reel</span>
+          </span>
+          {% endif %}
+        </a>
+        <div class="ig-spotlight-card__body">
+          <div class="ig-spotlight-card__handle">{{ ig.handle }} · {{ ig.date }}</div>
+          <h4 class="ig-spotlight-card__title">{{ ig.title }}</h4>
+          <p class="ig-spotlight-card__caption">{{ ig.caption }}</p>
+          <div class="ig-spotlight-card__links">
+            {% if ig.video_id %}
+            <a
+              href="{{ ig.ig_url }}"
+              target="_blank"
+              rel="noopener"
+              data-cinema="{{ ig.video_id }}"
+              data-cinema-mode="vertical"
+              data-cinema-title="{{ ig.title | escape }}"
+              data-cinema-channel="{{ ig.handle | escape }}"
+              data-cinema-external="{{ ig.ig_url | escape }}"
+            >▶ Watch Inline</a>
+            {% endif %}
+            <a href="{{ ig.ig_url }}" target="_blank" rel="noopener">Open on Instagram ↗</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 3. Stage, Broadcast & Recognition Photo Gallery -->
+<section id="photo-gallery" class="content-section--bordered mb-xl" aria-labelledby="photo-gallery-heading">
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Stage &amp; Honors Archive</div>
+      <h2 id="photo-gallery-heading">Visual moments from global summits, live TV &amp; 13× awards</h2>
+    </div>
+    <a class="section-header__link" href="/press/">Downloadable press photos →</a>
+  </div>
+
+  <div class="gallery-grid">
+    {% for item in site.data.recognition.visual_highlights %}
+    <a class="gallery-card" href="{{ item.url }}" {% if item.url contains 'http' %}target="_blank" rel="noopener"{% endif %}>
+      <img
+        src="{{ item.image }}"
+        width="{{ item.width }}"
+        height="{{ item.height }}"
+        loading="lazy"
+        {% if item.focal %}style="object-position: {{ item.focal }};"{% endif %}
+        alt="{{ item.title }} — {{ item.subtitle }}"
+      />
+      <div class="gallery-card__body">
+        <h3 class="gallery-card__title">{{ item.title }}</h3>
+        <p class="gallery-card__sub">{{ item.subtitle }} {% if item.url contains 'youtube.com' %}▶ Play{% elsif item.url contains 'http' %}↗{% else %}→{% endif %}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- 4. Multi-Platform Social Pulse -->
 <section class="content-section--bordered mb-xl" aria-labelledby="social-pulse-heading">
   <div class="eyebrow">Social Pulse</div>
-  <h2 id="social-pulse-heading" class="mb-md">Dispatches across LinkedIn, X &amp; Instagram</h2>
+  <h2 id="social-pulse-heading" class="mb-md">Dispatches across LinkedIn, X, Instagram &amp; YouTube</h2>
   {% include social-feed.html context="highlights" %}
 </section>
 
 <div class="contact-panel split-panel">
   <div>
-    <h2 class="split-panel__title">Looking for the full 13× awards list, press links, or speaker bios?</h2>
-    <p class="split-panel__desc">Visit the Press &amp; Media Kit for complete citations and downloadable headshots.</p>
+    <h2 class="split-panel__title">Looking for the full 13× awards list, press tearsheets, or speaker bios?</h2>
+    <p class="split-panel__desc">Visit the Press &amp; Media Kit for complete citations and high-resolution headshots.</p>
   </div>
   <a class="btn btn--primary" href="/press/">Open Press &amp; Media Kit →</a>
 </div>

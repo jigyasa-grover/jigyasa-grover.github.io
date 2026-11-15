@@ -29,7 +29,19 @@ permalink: /speaking/
 <!-- Featured Stage Highlight -->
 <div class="feature-split content-section">
   <div class="media-frame">
-    <a id="speaking-io-video-link" class="media-frame__video-link" href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener" aria-label="Watch Jigyasa Grover featured on the Google I/O 2024 Main Keynote Stage on YouTube">
+    <a
+      id="speaking-io-video-link"
+      class="media-frame__video-link"
+      href="{{ site.data.speaking.featured_video.url }}"
+      target="_blank"
+      rel="noopener"
+      data-cinema="XEzRZ35urlk"
+      data-cinema-start="516"
+      data-cinema-mode="wide"
+      data-cinema-title="{{ site.data.speaking.featured_video.title | escape }}"
+      data-cinema-channel="Google I/O Main Keynote"
+      aria-label="Play Jigyasa Grover featured on the Google I/O 2024 Main Keynote Stage"
+    >
       <img
         src="{{ site.data.speaking.featured_video.image }}"
         width="1280"
@@ -39,7 +51,7 @@ permalink: /speaking/
       />
       <span class="media-play-badge">
         <span class="media-play-badge__icon" aria-hidden="true">▶</span>
-        <span>Watch Google I/O Keynote Clip ↗</span>
+        <span>Play Google I/O Keynote Clip</span>
       </span>
     </a>
     <div class="media-frame__caption">{{ site.data.speaking.featured_video.caption }}</div>
@@ -52,7 +64,7 @@ permalink: /speaking/
     </p>
     <div class="btn-group mt-md">
       <a class="btn btn--accent" href="/work-with-me/?topic=Speaking%20%26%20Workshops#contact">Invite Me to Speak →</a>
-      <a class="btn btn--secondary" href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener">Watch Google I/O ↗</a>
+      <a class="btn btn--secondary" href="/highlights/#screening-room">Watch Recorded Talks &amp; Reels →</a>
       <a class="btn btn--secondary" href="/press/">Speaker Bios &amp; Photos →</a>
     </div>
   </div>
@@ -147,7 +159,9 @@ permalink: /speaking/
       <div>
         <div class="ledger-row__title">
           {% if a.url %}
-            <a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.event }} ↗</a>
+            <a href="{{ a.url }}" target="_blank" rel="noopener">
+              {{ a.event }} {% if a.url contains 'youtube.com' %}<span class="inline-play-pill">▶ Watch</span>{% else %}↗{% endif %}
+            </a>
           {% else %}
             {{ a.event }}
           {% endif %}
@@ -173,7 +187,9 @@ permalink: /speaking/
         <div>
           <div class="ledger-row__title">
             {% if a.url %}
-              <a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.event }} ↗</a>
+              <a href="{{ a.url }}" target="_blank" rel="noopener">
+                {{ a.event }} {% if a.url contains 'youtube.com' %}<span class="inline-play-pill">▶ Watch</span>{% else %}↗{% endif %}
+              </a>
             {% else %}
               {{ a.event }}
             {% endif %}

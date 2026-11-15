@@ -54,6 +54,12 @@ sitemap: false
     "featured_keynote": {{ site.data.speaking.featured_video | jsonify }},
     "signature_talks": {{ site.data.speaking.signature_talks | jsonify }}
   },
+  "videos": {
+    "watch_hub_url": "{{ site.url }}/highlights/#watch-hub",
+    "channels": {{ site.data.videos.channels | jsonify }},
+    "featured_films": {{ site.data.videos.featured_films | jsonify }},
+    "shorts": {{ site.data.videos.shorts | jsonify }}
+  },
   "articles": [
     {% assign emitted = false %}{% for post in site.posts %}{% unless post.url == "/archive/" %}{% assign meta = site.data.posts_meta[post.url] %}{% if post.archival %}{% assign cat_name = "Early Archive (2015–17)" %}{% assign row_tags = post.archive_tags %}{% assign row_summary = post.description %}{% else %}{% assign cat_name = meta.category | default: "AI Engineering" %}{% assign row_tags = meta.tags %}{% assign row_summary = meta.summary %}{% endif %}{% if emitted %},
     {% endif %}{% assign emitted = true %}{

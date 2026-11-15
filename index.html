@@ -133,7 +133,19 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
   <div class="container">
     <div class="feature-split">
       <div class="media-frame">
-        <a id="home-io-video-link" class="media-frame__video-link" href="{{ site.data.speaking.featured_video.url }}" target="_blank" rel="noopener" aria-label="Watch Jigyasa Grover featured on the Google I/O 2024 Main Keynote Stage on YouTube">
+        <a
+          id="home-io-video-link"
+          class="media-frame__video-link"
+          href="{{ site.data.speaking.featured_video.url }}"
+          target="_blank"
+          rel="noopener"
+          data-cinema="XEzRZ35urlk"
+          data-cinema-start="516"
+          data-cinema-mode="wide"
+          data-cinema-title="{{ site.data.speaking.featured_video.title | escape }}"
+          data-cinema-channel="Google I/O Main Keynote"
+          aria-label="Play Jigyasa Grover featured on the Google I/O 2024 Main Keynote Stage"
+        >
           <img
             src="{{ site.data.speaking.featured_video.image }}"
             width="1280"
@@ -143,7 +155,7 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
           />
           <span class="media-play-badge">
             <span class="media-play-badge__icon" aria-hidden="true">▶</span>
-            <span>Watch Google I/O Keynote Clip ↗</span>
+            <span>Play Google I/O Keynote Clip</span>
           </span>
         </a>
         <div class="media-frame__caption">
@@ -152,14 +164,15 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
       </div>
 
       <div>
-        <div class="eyebrow">Keynotes &amp; Media</div>
+        <div class="eyebrow">Keynotes, Broadcasts &amp; Media</div>
         <h2 id="speaking-spotlight-heading">200+ talks across 20+ countries</h2>
         <p>
           Named among <strong>Sessionize's Top 3% Speakers globally</strong>, delivering grounded keynotes and executive panels across <strong>Google I/O</strong>, <strong>Google Cloud Next</strong>, <strong>Linux Foundation OSS Summit</strong>, <strong>Codemotion Milan</strong>, and <strong>PyCon US</strong>—with commentary in <strong>Forbes</strong>, <strong>Business Insider</strong>, and <strong>VentureBeat</strong>.
         </p>
         <div class="btn-group mt-md">
           <a class="btn btn--primary" href="/speaking/">Topics &amp; Speaker Kit →</a>
-          <a class="btn btn--secondary" href="/press/">Press &amp; 13× Awards →</a>
+          <a class="btn btn--secondary" href="/highlights/#watch-hub">Screening Room &amp; Reels →</a>
+          <button type="button" class="btn btn--secondary" data-cinema-shuffle><span aria-hidden="true">🎲</span> Surprise Video</button>
         </div>
       </div>
     </div>
@@ -210,6 +223,70 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
         </div>
       </a>
     </div>
+
+    <div class="cinema-mini-strip mt-lg" aria-label="Featured developer films and reels">
+      <div class="cinema-mini-strip__header">
+        <span class="eyebrow mb-0">Quick Watch · Official Google Films &amp; 60s Reels</span>
+        <a class="section-header__link" href="/highlights/#watch-hub">All 50+ talks, playlists &amp; tagged reels →</a>
+      </div>
+      <div class="cinema-mini-grid">
+        {% for film in site.data.videos.featured_films %}
+          {% if film.home_spotlight and film.id != "google-io-2024-keynote" %}
+          <a
+            class="cinema-mini-card"
+            href="{{ film.url }}"
+            target="_blank"
+            rel="noopener"
+            data-cinema="{{ film.video_id }}"
+            data-cinema-mode="wide"
+            data-cinema-title="{{ film.title | escape }}"
+            data-cinema-channel="{{ film.channel | escape }}"
+          >
+            <div class="cinema-mini-card__thumb">
+              <img
+                src="https://i.ytimg.com/vi/{{ film.video_id }}/hqdefault.jpg"
+                width="320"
+                height="180"
+                loading="lazy"
+                alt="{{ film.title }} — {{ film.channel }}"
+              />
+              <span class="cinema-mini-card__play" aria-hidden="true">▶</span>
+            </div>
+            <div class="cinema-mini-card__body">
+              <div class="cinema-mini-card__meta">{{ film.channel }} · {{ film.date }}</div>
+              <div class="cinema-mini-card__title">{{ film.title }}</div>
+            </div>
+          </a>
+          {% endif %}
+        {% endfor %}
+        <a
+          class="cinema-mini-card"
+          href="https://www.youtube.com/shorts/5AflJGyIZt4"
+          target="_blank"
+          rel="noopener"
+          data-cinema="5AflJGyIZt4"
+          data-cinema-mode="vertical"
+          data-cinema-title="Stop building AI agents for everything"
+          data-cinema-channel="@JigyasaGrover · 9:16 Reel"
+        >
+          <div class="cinema-mini-card__thumb">
+            <img
+              src="/assets/images/opt/codemotion_speaker_2026.jpg"
+              width="320"
+              height="180"
+              loading="lazy"
+              style="object-position: center 36%;"
+              alt="Codemotion Milan 9:16 Reel — Stop building AI agents for everything"
+            />
+            <span class="cinema-mini-card__play" aria-hidden="true">▶</span>
+          </div>
+          <div class="cinema-mini-card__body">
+            <div class="cinema-mini-card__meta">9:16 Reel · Shorts &amp; IG</div>
+            <div class="cinema-mini-card__title">Stop building AI agents for everything</div>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -247,7 +324,7 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
         <div class="dossier-links">
           {% if proj.post_url %}<a href="{{ proj.post_url }}">Deep Dive →</a>{% endif %}
           {% if proj.repo_url %}<a href="{{ proj.repo_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
-          {% if proj.video_url %}<a href="{{ proj.video_url }}" target="_blank" rel="noopener">Google Film ↗</a>{% endif %}
+          {% if proj.video_url %}<a href="{{ proj.video_url }}" target="_blank" rel="noopener">▶ Watch Film</a>{% endif %}
         </div>
       </article>
       {% endfor %}

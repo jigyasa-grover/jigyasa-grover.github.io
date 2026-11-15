@@ -97,6 +97,11 @@ Featured Video: {{ site.data.speaking.featured_video.title }} ({{ site.data.spea
 {% for m in site.data.recognition.media_features %}- {{ m.date }} — **{{ m.outlet }}**: {{ m.title }}{% if m.url %} ({{ m.url }}){% endif %}
 {% endfor %}
 
+### Video Channels, Curated Playlists & Vertical Reels
+{% for ch in site.data.videos.channels %}- **{{ ch.label }}** ({{ ch.handle }} — {{ ch.stat }}): {{ ch.url }}
+{% endfor %}{% for v in site.data.videos.featured_films %}- **{{ v.title }}** ({{ v.channel }}, {{ v.date }}, {% if v.role_type == "produced" %}Produced by Jigyasa Grover{% else %}Featured{% endif %}): {{ v.summary }} — {{ v.url }}
+{% endfor %}
+
 ## 12. Verified External Profiles (sameAs)
 
 {% for u in site.data.identity.same_as %}- {{ u }}

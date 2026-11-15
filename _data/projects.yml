@@ -76,6 +76,7 @@
     - "Microsoft Presidio"
   repo_url: "https://github.com/jigyasa-grover/critics-cut"
   post_url: "/CriticsCutMultilingualContextADKAgent/"
+  video_url: "https://www.youtube.com/watch?v=W54cRxp-bSA"
 
 - id: "kinetic-gemma-tpu"
   title: "Single-Decorator Gemma 3 Fine-Tuning on Cloud TPU v5 Lite"
@@ -103,6 +104,7 @@
     - "LLM-as-a-Judge"
   repo_url: "https://github.com/jigyasa-grover/Smarter-than-a-5th-Grader-Using-LLM-Comparator-on-Google-Vertex-AI"
   post_url: "/SmarterThanA5thGrader-LLMComparatorOnGoogleVertexAI/"
+  video_url: "https://www.youtube.com/watch?v=GAd5J257vA0"
 
 - id: "book-buddy-gemma-rag"
   title: "Book Buddy — Grounded Storytelling with Gemma RAG"

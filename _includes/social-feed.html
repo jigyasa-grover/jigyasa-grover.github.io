@@ -55,7 +55,19 @@
         </div>
 
         {% if post.image %}
-        <a class="social-card__media" href="{{ post.url }}" target="_blank" rel="noopener">
+        <a
+          class="social-card__media{% if post.video_id %} social-card__media--video{% endif %}"
+          href="{{ post.url }}"
+          target="_blank"
+          rel="noopener"
+          {% if post.video_id %}
+          data-cinema="{{ post.video_id }}"
+          data-cinema-mode="{{ post.video_mode | default: 'wide' }}"
+          data-cinema-title="{{ post.badge | escape }}"
+          data-cinema-channel="{{ post.handle | escape }}"
+          data-cinema-external="{{ post.url | escape }}"
+          {% endif %}
+        >
           <img
             src="{{ post.image }}"
             width="{{ post.width }}"
@@ -64,6 +76,12 @@
             {% if post.focal %}style="object-position: {{ post.focal }};"{% endif %}
             alt="{{ post.badge }} — {{ post.platform_label }} by Jigyasa Grover"
           />
+          {% if post.video_id %}
+          <span class="cinema-chip">
+            <span class="cinema-chip__icon" aria-hidden="true">▶</span>
+            <span>{% if post.video_mode == "vertical" %}Play 9:16 Reel{% else %}Play Video{% endif %}</span>
+          </span>
+          {% endif %}
         </a>
         {% endif %}
 
@@ -74,7 +92,26 @@
 
         <div class="social-card__footer">
           <span class="mono-tag">{{ post.tag }}</span>
-          <a class="social-card__cta" href="{{ post.url }}" target="_blank" rel="noopener">{{ post.cta }} ↗</a>
+          <div class="social-card__actions">
+            {% if post.video_id %}
+            <a
+              class="social-card__cta social-card__cta--play"
+              href="{{ post.url }}"
+              target="_blank"
+              rel="noopener"
+              data-cinema="{{ post.video_id }}"
+              data-cinema-mode="{{ post.video_mode | default: 'wide' }}"
+              data-cinema-title="{{ post.badge | escape }}"
+              data-cinema-channel="{{ post.handle | escape }}"
+              data-cinema-external="{{ post.url | escape }}"
+            >▶ {{ post.cta }}</a>
+            {% if post.external_cta %}
+            <a class="social-card__cta" href="{{ post.url }}" target="_blank" rel="noopener">{{ post.external_cta }} ↗</a>
+            {% endif %}
+            {% else %}
+            <a class="social-card__cta" href="{{ post.url }}" target="_blank" rel="noopener">{{ post.cta }} ↗</a>
+            {% endif %}
+          </div>
         </div>
       </article>
       {% endif %}

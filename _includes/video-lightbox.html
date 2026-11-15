@@ -1,0 +1,88 @@
+<div
+  id="cinema-lightbox"
+  class="cinema-lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="cinema-lightbox-title"
+  hidden
+>
+  <div class="cinema-lightbox__backdrop" data-cinema-close></div>
+
+  <div class="cinema-lightbox__dialog" role="document">
+    <header class="cinema-lightbox__topbar">
+      <div class="cinema-lightbox__meta">
+        <span id="cinema-lightbox-badge" class="cinema-lightbox__badge">Screening Room</span>
+        <span id="cinema-lightbox-channel" class="cinema-lightbox__channel">@JigyasaGrover</span>
+      </div>
+
+      <div class="cinema-lightbox__controls">
+        <button type="button" id="cinema-prev-btn" class="cinema-ctrl-btn" aria-label="Previous video">
+          <span aria-hidden="true">←</span> Prev
+        </button>
+        <button type="button" id="cinema-shuffle-btn" class="cinema-ctrl-btn cinema-ctrl-btn--accent" aria-label="Play a random talk or reel">
+          <span aria-hidden="true">🎲</span> Surprise Me
+        </button>
+        <button type="button" id="cinema-next-btn" class="cinema-ctrl-btn" aria-label="Next video">
+          Next <span aria-hidden="true">→</span>
+        </button>
+        <button type="button" id="cinema-close-btn" class="cinema-ctrl-btn cinema-ctrl-btn--close" data-cinema-close aria-label="Close video player">
+          ✕
+        </button>
+      </div>
+    </header>
+
+    <div id="cinema-lightbox-stage" class="cinema-lightbox__stage">
+      <div id="cinema-lightbox-mount" class="cinema-lightbox__mount"></div>
+    </div>
+
+    <footer class="cinema-lightbox__footer">
+      <div class="cinema-lightbox__caption-wrap">
+        <div id="cinema-lightbox-title" class="cinema-lightbox__title">Select a talk, documentary, or reel</div>
+        <p id="cinema-lightbox-summary" class="cinema-lightbox__summary"></p>
+      </div>
+      <div class="cinema-lightbox__links">
+        <a id="cinema-lightbox-yt" class="btn btn--secondary btn--compact" href="https://www.youtube.com/@JigyasaGrover" target="_blank" rel="noopener">
+          YouTube ↗
+        </a>
+        <a id="cinema-lightbox-ig" class="btn btn--secondary btn--compact" href="https://www.instagram.com/jigyasagroverofficial/" target="_blank" rel="noopener" hidden>
+          Instagram ↗
+        </a>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<script type="application/json" id="jg-cinema-catalog">
+[
+{% assign comma = false %}
+{% for v in site.data.videos.featured_films %}{% if comma %},{% endif %}{% assign comma = true %}
+  {
+    "video_id": {{ v.video_id | jsonify }},
+    "start": {{ v.start | default: 0 }},
+    "mode": "wide",
+    "role_type": {{ v.role_type | jsonify }},
+    "category": {{ v.category | jsonify }},
+    "badge": {{ v.badge | jsonify }},
+    "channel": {{ v.channel | jsonify }},
+    "date": {{ v.date | jsonify }},
+    "title": {{ v.title | jsonify }},
+    "summary": {{ v.summary | jsonify }},
+    "url": {{ v.url | jsonify }}
+  }{% endfor %}
+{% for s in site.data.videos.shorts %}{% if comma %},{% endif %}{% assign comma = true %}
+  {
+    "video_id": {{ s.video_id | jsonify }},
+    "start": 0,
+    "mode": "vertical",
+    "role_type": {{ s.role_type | jsonify }},
+    "category": {{ s.category | jsonify }},
+    "badge": {{ s.tag | append: " · Short" | jsonify }},
+    "channel": {% if s.partner %}{{ "@JigyasaGrover × " | append: s.partner | jsonify }}{% else %}"@JigyasaGrover"{% endif %},
+    "date": {{ s.date | jsonify }},
+    "title": {{ s.title | jsonify }},
+    "summary": "60-second vertical dispatch — also cross-posted across @JigyasaGrover Shorts & @jigyasagroverofficial Reels.",
+    "url": {{ s.url | jsonify }},
+    "ig_url": "https://www.instagram.com/jigyasagroverofficial/"
+  }{% endfor %}
+]
+</script>

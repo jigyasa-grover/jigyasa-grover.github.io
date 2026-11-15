@@ -345,6 +345,32 @@
       }
     }
     {% endif %}
+    {% if page.url == "/highlights/" %},
+    {
+      "@type": "ItemList",
+      "@id": "https://jigyasa-grover.github.io/highlights/#videos",
+      "name": "Keynotes, Developer Films & Reels Featuring or Produced by Jigyasa Grover",
+      "itemListElement": [
+        {% for v in site.data.videos.featured_films limit:12 %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "VideoObject",
+            "name": {{ v.title | jsonify }},
+            "description": {{ v.summary | jsonify }},
+            "thumbnailUrl": {% if v.thumbnail %}{{ "https://jigyasa-grover.github.io" | append: v.thumbnail | jsonify }}{% else %}{{ "https://i.ytimg.com/vi/" | append: v.video_id | append: "/hqdefault.jpg" | jsonify }}{% endif %},
+            "contentUrl": {{ v.url | jsonify }},
+            "embedUrl": {{ "https://www.youtube.com/embed/" | append: v.video_id | jsonify }},
+            "actor": {
+              "@id": "https://jigyasa-grover.github.io/#person"
+            }
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    {% endif %}
     {% if page.url == "/teaching/" %},
     {
       "@type": "ItemList",
