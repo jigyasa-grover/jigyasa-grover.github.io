@@ -67,130 +67,516 @@ awards:
     issuer: "Grace Hopper Celebration (AnitaB.org × Meta)"
     url: "https://www.youtube.com/watch?v=wLvTRzDOaJw"
 
+press_mastheads:
+  - label: "Forbes"
+    query: "Forbes"
+    style: "serif"
+  - label: "Google I/O"
+    query: "Google I/O"
+    style: "sans"
+  - label: "Business Insider"
+    query: "Business Insider"
+    style: "sans"
+  - label: "Communications of the ACM"
+    query: "Communications of the ACM"
+    style: "serif"
+  - label: "Google Cloud"
+    query: "Google Cloud"
+    style: "sans"
+  - label: "Observer"
+    query: "Observer"
+    style: "serif"
+  - label: "MIT Sloan × BCG"
+    query: "MIT Sloan"
+    style: "serif"
+  - label: "Grazia UK"
+    query: "Grazia"
+    style: "serif"
+  - label: "NTD Live TV"
+    query: "NTD"
+    style: "sans"
+  - label: "theCUBE · UN ITU"
+    query: "theCUBE"
+    style: "mono"
+
 media_features:
-  - outlet: "Google · Gemini Omni Flash Official Launch"
+  - id: "google-gemini-omni-flash-2026"
+    outlet: "Google · Gemini Omni Flash Official Launch"
+    masthead: "Google · Gemini"
+    masthead_style: "sans"
     date: "Jul 2026"
     title: "Featured Developer in Google's Official Gemini Omni Flash Launch Video"
     type: "Official Launch Video"
+    category: "video"
+    featured_span: true
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/gemini_omni_flash_2026.jpg"
+    width: 1280
+    height: 720
+    focal: "center 24%"
+    takeaway: "Showcasing low-latency multimodal reasoning, native audio-visual grounding, and production developer workflows for the official Gemini Omni Flash release."
+    summary: "Selected by Google as a featured developer builder in the global launch video introducing Gemini Omni Flash, highlighting real-world multimodal latency and agentic developer patterns."
+    tags: ["Gemini Omni Flash", "Multimodal AI", "Official Launch"]
+    cta_label: "Watch Official Launch Video"
     url: "https://www.youtube.com/watch?v=3iZzf_NRxDQ"
-  - outlet: "Google Cloud Tech (Official YouTube)"
+
+  - id: "google-cloud-racing-coach-2026"
+    outlet: "Google Cloud Tech (Official YouTube)"
+    masthead: "Google Cloud"
+    masthead_style: "sans"
     date: "May 2026"
     title: "How Google Developer Experts Vibecoded an AI Racing Coach with Gemini"
     type: "Documentary Feature"
+    category: "video"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/gcloud_racing_coach_2026.jpg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Inside the split-brain telemetry architecture that combined deterministic physics guardrails with real-time Gemini coaching at Google Cloud Next."
+    summary: "Official Google Cloud Tech documentary profiling how Jigyasa Grover and fellow Google Developer Experts architected and stress-tested a real-time AI racing coach powered by Gemini and Cloud Run."
+    tags: ["Google Cloud Next", "Split-Brain AI", "Telemetry"]
+    cta_label: "Watch Documentary on YouTube"
     url: "https://www.youtube.com/watch?v=VSgKWy2iRWE"
-  - outlet: "Communications of the ACM"
+
+  - id: "cacm-ai-native-stack-2026"
+    outlet: "Communications of the ACM"
+    masthead: "Communications of the ACM"
+    masthead_style: "serif"
     date: "Mar 2026"
     title: "Rethinking the Stack: AI-Native Operating Systems and Tools"
     type: "ACM News Feature"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_cacm.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Examining how deterministic runtime boundaries, Model Context Protocol interfaces, and evaluation harnesses reshape the modern systems stack."
+    summary: "Featured in the flagship publication of the Association for Computing Machinery on how operating systems, developer toolchains, and runtime abstractions are evolving for agentic workloads."
+    tags: ["ACM News", "AI-Native Systems", "Developer Stack"]
+    cta_label: "Read Feature in CACM"
     url: "https://cacm.acm.org/news/rethinking-the-stack-ai-native-operating-systems-and-tools/"
-  - outlet: "Google for Developers Blog"
+
+  - id: "google-dev-blog-trustable-ai-2026"
+    outlet: "Google for Developers Blog"
+    masthead: "Google Developers"
+    masthead_style: "sans"
     date: "Jan 2026"
     title: "Beyond the Chatbot: A Blueprint for Trustable AI (The Intelligence Team)"
     type: "Official Feature"
+    category: "press"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/gdev_trustable_ai_article_2026.jpg"
+    width: 1280
+    height: 640
+    focal: "center center"
+    quote: "The Intelligence Team: Jigyasa Grover and Vikram Tiwari implemented the multi-tier system — orchestrating the split-brain architecture for trust at top speed."
+    summary: "Spotlighted on the official Google for Developers Blog for co-architecting a multi-tier, hallucination-resistant Gemini intelligence layer separating sub-second edge heuristics from deep reasoning."
+    tags: ["Trustable AI", "Architecture Blueprint", "Google GDE"]
+    cta_label: "Read on Google Developers Blog"
     url: "https://developers.googleblog.com/en/beyond-the-chatbot-a-blueprint-for-trustable-ai/"
-  - outlet: "Forbes"
+
+  - id: "forbes-conversational-video-ai-2026"
+    outlet: "Forbes"
+    masthead: "Forbes"
+    masthead_style: "serif"
     date: "Jan 2026"
     title: "Conversational Video AI—Teaching Machines The Art Of Being Human"
     type: "Expert Commentary"
+    category: "press"
+    featured_span: true
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_forbes.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Why believable multimodal interaction hinges on turn-taking latency, emotional grounding, and explicit provenance guardrails rather than raw pixel fidelity alone."
+    summary: "Quoted as an industry AI expert in Forbes exploring the engineering and ethical frontier of real-time conversational video avatars, latency budgets, and human-centered guardrails."
+    tags: ["Forbes", "Multimodal Video AI", "Human-AI Interaction"]
+    cta_label: "Read Article on Forbes"
     url: "https://www.forbes.com/sites/neilsahota/2026/01/24/conversational-video-ai-teaching-machines-the-art-of-being-human/"
-  - outlet: "Data Neighbor Podcast"
+
+  - id: "data-neighbor-podcast-2025"
+    outlet: "Data Neighbor Podcast"
+    masthead: "Data Neighbor"
+    masthead_style: "mono"
     date: "Nov 2025"
     title: "Ep. 40: Why Most AI Agents Fail—and How Production Teams Fix Them"
     type: "Podcast Guest"
+    category: "podcast"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/data_neighbor_podcast_2025.jpg"
+    width: 1280
+    height: 720
+    focal: "left center"
+    takeaway: "Unpacking silent failure modes in multi-step agents—from unbounded tool loops to missing trajectory evaluations—and how Uber-scale ML teams fix them."
+    summary: "In-depth technical conversation dissecting the hidden cost of broken AI agents, deterministic vs. agentic routing decisions, and production evaluation pipelines."
+    tags: ["Agentic Evaluation", "Production ML", "Podcast"]
+    cta_label: "Watch Episode on YouTube"
     url: "https://www.youtube.com/watch?v=tiSoT6vjTDI"
-  - outlet: "CreativePro"
+
+  - id: "creativepro-deepfakes-c2pa-2025"
+    outlet: "CreativePro"
+    masthead: "CreativePro"
+    masthead_style: "sans"
     date: "Oct 2025"
     title: "Interview with Jigyasa Grover: Deepfakes, C2PA Provenance & Agentic AI"
     type: "Feature Q&A"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_creativepro.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Bridging cryptographic C2PA content credentials, synthetic media detection, and responsible generative workflows for creative and enterprise teams."
+    summary: "Long-form editorial Q&A covering Jigyasa Grover's research on deepfakes and misinformation, C2PA cryptographic provenance standards, and practical agentic tooling."
+    tags: ["C2PA Provenance", "Deepfakes", "Feature Q&A"]
+    cta_label: "Read Q&A on CreativePro"
     url: "https://creativepro.com/interview-with-jigyasa-grover-author-instructor-and-machine-learning-engineer/"
-  - outlet: "Google Developers · AI Agent Bake Off"
+
+  - id: "google-ai-agent-bake-off-2025"
+    outlet: "Google Developers · AI Agent Bake Off"
+    masthead: "Google Developers"
+    masthead_style: "sans"
     date: "Jun 2025"
     title: "Season 1 Episode 1 — Building & Testing Agentic AI Systems"
     type: "Video Series"
+    category: "video"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/google_agent_bake_off_2025.jpg"
+    width: 1280
+    height: 720
+    focal: "right center"
+    takeaway: "Putting multi-agent orchestration, tool-calling reliability, and live evaluation benchmarks to the test in the premiere episode of Google's AI Agent Bake-Off."
+    summary: "Featured in the debut episode of Google Cloud and Google Developers' official AI Agent Bake-Off series demonstrating hands-on agentic architecture under time constraints."
+    tags: ["AI Agent Bake-Off", "Google Cloud", "Series Premiere"]
+    cta_label: "Watch Episode on YouTube"
     url: "https://www.youtube.com/watch?v=UPFk3_FUKtI"
-  - outlet: "ShoutOut Colorado"
+
+  - id: "shoutout-colorado-profile-2025"
+    outlet: "ShoutOut Colorado"
+    masthead: "ShoutOut Colorado"
+    masthead_style: "serif"
     date: "Jun 2025"
     title: "Meet Jigyasa Grover: Engineering Large-Scale AI & Teaching 50K+ Learners"
     type: "Feature Interview"
+    category: "press"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/shoutout_colorado_article_2025.jpg"
+    width: 960
+    height: 1280
+    focal: "center 44%"
+    takeaway: "A candid magazine profile on scaling high-throughput personalization systems by day while demystifying AI engineering for tens of thousands of practitioners worldwide."
+    summary: "Magazine profile and photo essay tracing Jigyasa's journey from open-source contributor and author of Sculpting Data for ML to Big Tech ML engineering lead and global educator."
+    tags: ["Magazine Profile", "AI Education", "Leadership"]
+    cta_label: "Read Profile Interview"
     url: "https://shoutoutcolorado.com/meet-jigyasa-grover/"
-  - outlet: "Business Insider"
+
+  - id: "business-insider-career-strategy-2025"
+    outlet: "Business Insider"
+    masthead: "Business Insider"
+    masthead_style: "sans"
     date: "May 2025"
     title: "Resume & Engineering Strategy Behind Landing ML Roles at Meta and X"
     type: "Career Feature"
+    category: "press"
+    featured_span: true
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/business_insider_may_2025.jpg"
+    width: 1200
+    height: 600
+    focal: "center 20%"
+    takeaway: "Jigyasa Grover shares what worked—and what she'd change—about the engineering résumés, open-source proof of work, and systems ownership that landed ML roles at Meta and X."
+    summary: "Profiled by Business Insider ('The Résumés That Landed a Meta Internship and X Full-Time Role') breaking down the concrete engineering portfolio, research artifacts, and resume framing behind Silicon Valley ML offers."
+    tags: ["Business Insider", "ML Engineering", "Silicon Valley"]
+    cta_label: "Read Feature on Business Insider"
     url: "https://www.businessinsider.com/resume-tips-meta-internship-x-machine-learning-engineer-tech-career-2025-5"
-  - outlet: "Humanitarian Frontiers in AI (Innovation Norway)"
+
+  - id: "humanitarian-frontiers-podcast-2025"
+    outlet: "Humanitarian Frontiers in AI (Innovation Norway)"
+    masthead: "Innovation Norway"
+    masthead_style: "mono"
     date: "Apr 2025"
     title: "3Ps: Policy, Product, Pragmatism — You Only Know What You Know"
     type: "Podcast Guest"
+    category: "podcast"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_innovation_norway.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Aligning AI governance policy with pragmatic product engineering when deploying machine learning across high-stakes global and humanitarian contexts."
+    summary: "Invited guest on Innovation Norway's Humanitarian Frontiers in AI podcast discussing dataset blind spots, epistemic humility in LLMs, and operationalizing responsible AI."
+    tags: ["AI Governance", "Innovation Norway", "Apple Podcasts"]
+    cta_label: "Listen on Apple Podcasts"
     url: "https://podcasts.apple.com/us/podcast/3ps-policy-product-pragmatism-you-only-know-what-you-know/id1786419250?i=1000705516618"
-  - outlet: "Appsmith @ Google Cloud Next '25"
+
+  - id: "appsmith-cloud-next-2025"
+    outlet: "Appsmith @ Google Cloud Next '25"
+    masthead: "Appsmith × Cloud Next"
+    masthead_style: "sans"
     date: "Apr 2025"
     title: "Why Companies Fail at AI Adoption — Enterprise AI Interview"
     type: "Video Interview"
+    category: "video"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/appsmith_cloud_next_2025.jpg"
+    width: 1280
+    height: 720
+    focal: "left 28%"
+    takeaway: "Why enterprise AI pilots stall between proof-of-concept and production—and how data readiness, workflow fit, and measurable ROI close the gap."
+    summary: "On-site executive video interview recorded at Google Cloud Next '25 examining enterprise agent adoption anti-patterns, internal tooling governance, and production metrics."
+    tags: ["Enterprise AI", "Google Cloud Next", "Video Interview"]
+    cta_label: "Watch Interview on YouTube"
     url: "https://www.youtube.com/watch?v=JSnLr_Hhl6g"
-  - outlet: "Business Insider"
+
+  - id: "business-insider-leadership-2025"
+    outlet: "Business Insider"
+    masthead: "Business Insider"
+    masthead_style: "sans"
     date: "Mar 2025"
     title: "Big Tech Machine Learning Leadership & Career Frameworks"
     type: "Profile Feature"
+    category: "press"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/business_insider_mar_2025.jpg"
+    width: 1200
+    height: 600
+    focal: "center 24%"
+    takeaway: "Three intentional career lessons—technical roadmapping, high-agency execution, and compounding mentorship—that shaped machine learning leadership across Meta, X, and Google ecosystems."
+    summary: "Featured profile in Business Insider ('3 Lessons an AI Expert Says Shaped Her Tech Career') on sustaining long-term momentum and navigating senior machine learning roles in Big Tech."
+    tags: ["Business Insider", "Tech Leadership", "Profile"]
+    cta_label: "Read Profile on Business Insider"
     url: "https://www.businessinsider.com/lessons-from-the-secret-contributed-big-tech-success-2025-3"
-  - outlet: "People of AI (Google Podcast)"
+
+  - id: "people-of-ai-google-podcast-2024"
+    outlet: "People of AI (Google Podcast)"
+    masthead: "People of AI · Google"
+    masthead_style: "mono"
     date: "Nov 2024"
     title: "Responsible AI in Production Panel at DevFest Silicon Valley"
     type: "Podcast"
-    url: "https://www.youtube.com/@JigyasaGrover"
-  - outlet: "Grazia Daily UK"
+    category: "podcast"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/people_of_ai_2024.jpg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Translating responsible AI principles into concrete latency, safety, and evaluation gates before models ever reach user traffic."
+    summary: "Live recorded panel conversation for Google's People of AI series at DevFest Silicon Valley exploring production guardrails, red-teaming, and practitioner accountability."
+    tags: ["Google Podcast", "Responsible AI", "Silicon Valley"]
+    cta_label: "Watch & Listen on YouTube"
+    url: "https://www.youtube.com/watch?v=Sq_UH9QDjMI"
+
+  - id: "grazia-daily-uk-2024"
+    outlet: "Grazia Daily UK"
+    masthead: "Grazia UK"
+    masthead_style: "serif"
     date: "Sep 2024"
     title: "Can AI Help Parents Manage The Domestic Load? (Subheadline Feature)"
     type: "Consumer Press"
+    category: "press"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/grazia_uk_2024.jpg"
+    width: 1200
+    height: 675
+    focal: "center center"
+    quote: "AI is set to change how we care for and support our kids in some pretty cool ways, but we should be careful about privacy and not rely too much on tech."
+    summary: "Featured right in Grazia Daily UK's article subheadline, offering practical consumer guidance on balancing everyday generative AI convenience with family data privacy."
+    tags: ["Grazia UK", "Consumer AI", "Data Privacy"]
+    cta_label: "Read Feature in Grazia UK"
     url: "https://graziadaily.co.uk/life/real-life/best-ai-tools-parents/"
-  - outlet: "Observer"
+
+  - id: "observer-synthetic-data-2024"
+    outlet: "Observer"
+    masthead: "Observer"
+    masthead_style: "serif"
     date: "Aug 2024"
     title: "Can Synthetic Data Solve Generative AI's Training Data Crisis?"
     type: "Expert Commentary"
+    category: "press"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/observer_synthetic_data_2024.jpg"
+    width: 1200
+    height: 675
+    focal: "center center"
+    quote: "Synthetic data plays a crucial role in enhancing our large language models — currently, you have gigabytes and petabytes of data being used to train a large language model."
+    summary: "Quoted alongside industry researchers in Observer analyzing whether synthetic data can overcome web-scale data exhaustion without triggering distributional drift and model collapse."
+    tags: ["Observer", "Synthetic Data", "LLM Training"]
+    cta_label: "Read Article in Observer"
     url: "https://observer.com/2024/08/synthetic-data-ai-training/"
-  - outlet: "Association of Health Care Journalists (AHCJ)"
+
+  - id: "ahcj-medical-imaging-bias-2024"
+    outlet: "Association of Health Care Journalists (AHCJ)"
+    masthead: "Health Journalism · AHCJ"
+    masthead_style: "serif"
     date: "Aug 2024"
     title: "Overcoming AI's Diversity Problem When Creating Medical Images"
     type: "Expert Interview"
+    category: "press"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/ahcj_article_2024.jpg"
+    width: 1280
+    height: 722
+    focal: "center 20%"
+    quote: "Biases in imagery likely result from the data these models are trained on."
+    summary: "Interviewed by the Association of Health Care Journalists on why text-to-image diffusion models default to demographic stereotypes in clinical visuals and how newsrooms can audit outputs."
+    tags: ["Healthcare AI", "Dataset Bias", "Journalism"]
+    cta_label: "Read Interview on AHCJ"
     url: "https://healthjournalism.org/blog/2024/08/overcoming-ais-diversity-problem-when-creating-images/"
-  - outlet: "Google I/O Keynote"
+
+  - id: "google-io-keynote-2024"
+    outlet: "Google I/O Keynote"
+    masthead: "Google I/O"
+    masthead_style: "sans"
     date: "May 2024"
     title: "Main Stage Developer Feature on Gemini 1.5 Pro Long-Context Engineering"
     type: "Keynote Broadcast (147K+ views)"
+    category: "video"
+    featured_span: true
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/google_io_feature.jpg"
+    width: 1280
+    height: 718
+    focal: "center center"
+    takeaway: "Featured on the Shoreline Amphitheatre main keynote screen—introduced by Sundar Pichai—sharing early production insights on Gemini 1.5 Pro's 1-million-token context window."
+    summary: "Broadcast globally during the flagship Google I/O 2024 opening keynote, highlighting how ultra-long-context multimodal models transform developer workflows and retrieval architectures."
+    tags: ["Google I/O Keynote", "Gemini 1.5 Pro", "147K+ Views"]
+    cta_label: "Watch Google I/O Keynote Segment"
     url: "https://www.youtube.com/live/XEzRZ35urlk?t=516"
-  - outlet: "MIT Sloan Management Review × BCG"
+
+  - id: "mit-sloan-bcg-study-2024"
+    outlet: "MIT Sloan Management Review × BCG"
+    masthead: "MIT Sloan × BCG"
+    masthead_style: "serif"
     date: "Mar 2024"
     title: "Global Expert Study on Enterprise AI Tooling Adoption"
     type: "Research Contributor"
-  - outlet: "Techopedia"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_mit_sloan_bcg.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Contributing practitioner benchmarks on how enterprise engineering organizations evaluate, govern, and scale generative AI developer tooling."
+    summary: "Invited expert contributor to the joint MIT Sloan Management Review and Boston Consulting Group research initiative studying enterprise AI adoption across global organizations."
+    tags: ["MIT Sloan", "BCG Research", "Enterprise AI"]
+    cta_label: "Media & Research Inquiry"
+
+  - id: "techopedia-deepfakes-2023"
+    outlet: "Techopedia"
+    masthead: "Techopedia"
+    masthead_style: "sans"
     date: "Dec 2023"
     title: "Why Deepfake Technology is Both a Strength and Danger for Organizations"
     type: "Expert Commentary"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_techopedia.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Weighing legitimate enterprise localization and accessibility use cases of synthetic media against impersonation fraud and reputational risk."
+    summary: "Expert commentary examining dual-use synthetic media, enterprise verification protocols, and organizational defenses against AI-generated social engineering."
+    tags: ["Techopedia", "Synthetic Media", "AI Security"]
+    cta_label: "Read Commentary on Techopedia"
     url: "https://www.techopedia.com/deepfake-technology-strength-and-danger-for-organizations"
-  - outlet: "Google Developers Blog & IBC"
+
+  - id: "google-dev-blog-whm-2023"
+    outlet: "Google Developers Blog & IBC"
+    masthead: "Google Developers · IBC"
+    masthead_style: "sans"
     date: "Mar 2023"
     title: "Women's History Month ML GDE Spotlight & Deepfakes Industry Feature"
     type: "Spotlight Interview"
+    category: "press"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/gdev_whm_article_2023.jpg"
+    width: 1280
+    height: 640
+    focal: "center center"
+    quote: "One of the most meaningful parts of the Google Developer Experts program is the community — reaching out to communities and saying yes to challenging opportunities."
+    summary: "Official Google Developers Blog Women's History Month profile celebrating Jigyasa Grover's path from open-source Smalltalk contributor to Machine Learning GDE, author, and broadcast technologist."
+    tags: ["Google GDE Spotlight", "IBC Media Tech", "Open Source"]
+    cta_label: "Read Spotlight on Google Blog"
     url: "https://developers.googleblog.com/2023/03/gde-womens-history-month-feature-jigyasa-grover-machine-learning.html"
-  - outlet: "NTD Television & Ticker News Australia"
+
+  - id: "ntd-live-tv-broadcast-2022"
+    outlet: "NTD Television & Ticker News Australia"
+    masthead: "NTD Live TV · Ticker News"
+    masthead_style: "sans"
     date: "2022–2024"
     title: "Live TV Broadcast Commentary on Generative Text-to-Video & AI Systems"
     type: "Live TV Interviews"
+    category: "video"
+    featured_span: true
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/ntd_live_tv_clean.jpg"
+    width: 960
+    height: 768
+    focal: "center center"
+    takeaway: "On-air live television analysis breaking down text-to-video diffusion breakthroughs, training data copyright questions, and safety guardrails for broadcast audiences."
+    summary: "Recurring live television news appearances across NTD Business and Ticker News Australia translating frontier generative video research and AI policy developments in real time."
+    tags: ["Live Television", "Broadcast News", "Text-to-Video AI"]
+    cta_label: "Watch NTD Broadcast Segment"
     url: "https://www.ntd.com/meta-introduces-ai-text-to-video-creator_849271.html"
-  - outlet: "20+ Technical Podcasts (Curated Spotify Playlist)"
+
+  - id: "spotify-podcast-anthology"
+    outlet: "20+ Technical Podcasts (Curated Spotify Playlist)"
+    masthead: "20+ Tech Podcasts"
+    masthead_style: "mono"
     date: "2020–2025"
     title: "Software Engineering Unlocked, Conversations on Applied AI, Women & AI, Equal Inspired & Women in Data (Data Bytes)"
     type: "Podcast Anthology"
+    category: "podcast"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/applied_ai_podcast_wide.jpg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Twenty-plus long-form audio deep dives spanning data-centric ML, authoring Sculpting Data for ML, ad-ranking architectures, and open-source mentorship."
+    summary: "Curated Spotify anthology collecting Jigyasa Grover's guest episodes across Software Engineering Unlocked, Conversations on Applied AI, Women in Data, Women & AI, and more."
+    tags: ["Spotify Playlist", "20+ Episodes", "Data-Centric ML"]
+    cta_label: "Open Curated Spotify Playlist"
     url: "https://open.spotify.com/playlist/6vRPsGPE6v2I81NlWkdGiY"
-  - outlet: "International Business Times · Opensource.com · Women in Silicon Valley"
+
+  - id: "opensource-ibtimes-profiles"
+    outlet: "International Business Times · Opensource.com · Women in Silicon Valley"
+    masthead: "Opensource.com · IBTimes"
+    masthead_style: "serif"
     date: "2017–2023"
     title: "Print, Book & Digital Profiles on Open Source Equity and Python Engineering (Opensource.com Top Article)"
     type: "Print & Digital Press"
+    category: "press"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/opensource_python_article.jpg"
+    width: 520
+    height: 292
+    focal: "center center"
+    takeaway: "Recognized among Opensource.com's top-read Python engineering articles alongside international press profiles on open-source leadership and representation."
+    summary: "Multi-outlet coverage spanning International Business Times, Women in Silicon Valley, and Opensource.com highlighting Jigyasa's Python Software Foundation leadership and technical writing."
+    tags: ["IBTimes", "Opensource.com", "Python"]
+    cta_label: "Read Top Article on Opensource.com"
     url: "https://opensource.com/article/19/10/python-programming-paradigms"
-  - outlet: "United Nations ITU & SiliconANGLE theCUBE"
+
+  - id: "un-itu-thecube-broadcasts-2017"
+    outlet: "United Nations ITU & SiliconANGLE theCUBE"
+    masthead: "theCUBE · UN ITU"
+    masthead_style: "mono"
     date: "2017"
     title: "#ICT4SDG Documentaries, Red Hat Summit & Grace Hopper Scholar Broadcasts"
     type: "Documentary & Broadcast"
+    category: "video"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/thecube_broadcast_2017.jpg"
+    width: 640
+    height: 360
+    focal: "center center"
+    takeaway: "Early global documentary and live broadcast interviews spotlighting open-source research, Red Hat academic honors, and UN Sustainable Development Goals."
+    summary: "Featured in United Nations ITU #ICT4SDG video documentaries and interviewed live on SiliconANGLE's theCUBE studio stage as a Red Hat Women in Open Source Winner and Grace Hopper Scholar."
+    tags: ["UN ITU", "SiliconANGLE theCUBE", "Open Source"]
+    cta_label: "Watch UN ITU Documentary"
     url: "https://www.youtube.com/watch?v=1QlhArGZbfU"
 
 visual_highlights:

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Techopedia">
+  <defs>
+    <linearGradient id="tpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12212B"/>
+      <stop offset="100%" stop-color="#0B141B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#tpBg)"/>
+  <g transform="translate(405, 314)">
+    <rect x="0" y="6" width="82" height="82" rx="18" fill="#10B981"/>
+    <path d="M24 30 H58 M41 30 V68" stroke="#0B141B" stroke-width="9.5" stroke-linecap="round"/>
+    <circle cx="58" cy="64" r="5.5" fill="#0B141B"/>
+    <text x="112" y="71" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="700" letter-spacing="-1.2">techo<tspan fill="#10B981">pedia</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="CreativePro">
+  <defs>
+    <linearGradient id="cpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B29"/>
+      <stop offset="100%" stop-color="#13111A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#cpBg)"/>
+  <g transform="translate(405, 302)">
+    <circle cx="40" cy="40" r="28" fill="#E94E77" fill-opacity="0.92"/>
+    <circle cx="68" cy="40" r="28" fill="#3FB8AF" fill-opacity="0.88"/>
+    <circle cx="54" cy="66" r="28" fill="#F4A261" fill-opacity="0.9"/>
+    <text x="124" y="76" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="700" letter-spacing="-1.2">Creative<tspan fill="#3FB8AF" font-weight="400">Pro</tspan></text>
+  </g>
+</svg>
