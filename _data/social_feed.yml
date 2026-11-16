@@ -2,7 +2,7 @@ channels:
   - id: "linkedin"
     name: "LinkedIn"
     handle: "in/jigyasa-grover"
-    metric: "14K+ Followers · 82% Senior Tech"
+    metric: "14.5K+ Followers · 82% Senior Tech"
     url: "https://www.linkedin.com/in/jigyasa-grover/"
   - id: "x"
     name: "X (Twitter)"
@@ -21,6 +21,18 @@ channels:
     url: "https://www.youtube.com/@JigyasaGrover/playlists"
 
 posts:
+  - platform: "linkedin"
+    platform_label: "LinkedIn"
+    handle: "in/jigyasa-grover"
+    date: "Nov 2026"
+    sponsored: false
+    badge: "Keynote Essay · Codemotion Milan"
+    contexts: ["highlights", "home"]
+    excerpt: "I flew to Milan to tell 3,000 engineers to stop building AI agents. Most 'multi-agent architectures' in production are deterministic state machines paying an unnecessary latency, cost, and non-determinism tax."
+    tag: "#AIEngineering · Codemotion"
+    cta: "Read on LinkedIn"
+    url: "https://www.linkedin.com/posts/jigyasa-grover_aiengineering-aiagents-codemotion-share-7526058089314156544-iEJw"
+
   - platform: "x"
     platform_label: "X Thread"
     handle: "@jigyasa_grover"
@@ -64,7 +76,7 @@ posts:
     tag: "Codemotion Milan"
     cta: "Play Reel"
     external_cta: "Instagram"
-    url: "https://www.instagram.com/jigyasagroverofficial/"
+    url: "https://www.instagram.com/p/DfigH-XuRoe/"
 
   - platform: "linkedin"
     platform_label: "LinkedIn"

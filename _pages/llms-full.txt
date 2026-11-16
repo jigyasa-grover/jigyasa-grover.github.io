@@ -48,6 +48,8 @@ Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pro
 - Topmate (Mentorship & Quick Calls — 5.0★ across 19 ratings, 126+ bookings): https://topmate.io/jigyasagrover
 - Passionfroot (Brand & Developer Content Partnerships): https://www.passionfroot.me/jigyasa-grover
 - Naano (LinkedIn/X Creator Collaborations): https://naano.com/creators/jigyasa-grover
+- 8x (AI & Tech Launch Campaigns): https://8x.business/p/b623ba2ed48544748601a75a3569c6ee
+- Brand & Technical Content Partners: {{ site.data.recognition.brand_partners | join: ", " }}
 
 ### Selected Verified Client, Founder & Learner Testimonials
 {% for t in site.data.testimonials.home %}- "{{ t.quote }}" — {{ t.author }} ({{ t.role }} · {{ t.platform }}, {{ t.rating }})

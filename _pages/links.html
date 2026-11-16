@@ -2,41 +2,37 @@
 layout: default
 title: "Quick Links & Speaker Hub"
 seo_title: "Links, Booking & Slide QR — Jigyasa Grover"
-description: "Official quick links for Jigyasa Grover: 1:1 AI advisory (Intro, Topmate 5.0★), brand partnerships (Passionfroot), Google ADK courses, speaking & essays."
+description: "Official quick links for Jigyasa Grover: 1:1 AI advisory (Intro, Topmate 5.0★), brand partnerships
+(Passionfroot), Google ADK courses, speaking & essays."
 permalink: /links/
 redirect_from:
-  - /bio/
-  - /qr/
+- /bio/
+- /qr/
 ---
 {% assign id = site.data.identity %}
 {% assign next_stage = site.data.speaking.appearances | where: "status", "Upcoming" | first %}
 {% assign latest_post = nil %}
 {% for post in site.posts %}
-  {% if post.url != "/archive/" and post.archival != true %}
-    {% assign latest_post = post %}
-    {% break %}
-  {% endif %}
+{% if post.url != "/archive/" and post.archival != true %}
+{% assign latest_post = post %}
+{% break %}
+{% endif %}
 {% endfor %}
 
 <section class="links-hub" aria-labelledby="links-hub-heading">
   <div class="container links-hub__container">
     <!-- Identity Header -->
     <header class="links-hub__header">
-      <img
-        class="links-hub__avatar"
-        src="/assets/images/opt/profile_photo.jpg"
-        width="104"
-        height="104"
-        fetchpriority="high"
-        alt="Portrait of Jigyasa Grover"
-      />
+      <img class="links-hub__avatar" src="/assets/images/opt/profile_photo.jpg" width="104" height="104"
+        fetchpriority="high" alt="Portrait of Jigyasa Grover" />
       <div class="links-hub__kicker">
         <span class="hero__dot" aria-hidden="true"></span>
         <span>{{ id.award_badge }}</span>
       </div>
       <h1 id="links-hub-heading" class="links-hub__name">Jigyasa Grover</h1>
       <p class="links-hub__bio">
-        ML Tech Lead @ <strong>Uber</strong> · <strong>Google</strong> Developer Advisory Board &amp; AI/ML GDE · LinkedIn Learning Instructor (44K+ learners) · Co-author, <em>Sculpting Data for ML</em>
+        ML Tech Lead @ <strong>Uber</strong> · <strong>Google</strong> Developer Advisory Board &amp; AI/ML GDE ·
+        LinkedIn Learning Instructor (44K+ learners) · Co-author, <em>Sculpting Data for ML</em>
       </p>
 
       <div class="links-hub__socials" aria-label="Verified social profiles">
@@ -51,7 +47,8 @@ redirect_from:
 
     <!-- Live Upcoming Stage Highlight -->
     {% if next_stage %}
-    <a id="links-next-stage" class="links-card links-card--live" href="/work-with-me/?topic=Speaking%20%26%20Workshops#contact">
+    <a id="links-next-stage" class="links-card links-card--live"
+      href="/work-with-me/?topic=Speaking%20%26%20Workshops#contact">
       <div>
         <div class="links-card__eyebrow">
           <span class="stage-ribbon__dot" aria-hidden="true"></span>
@@ -68,7 +65,8 @@ redirect_from:
     <div class="links-stack" aria-label="Primary booking, learning, and collaboration links">
       <div class="links-stack__label">Collaborate &amp; Book (5.0★ Verified)</div>
 
-      <a id="links-intro" class="links-card links-card--featured" href="{{ id.booking.intro.url }}" target="_blank" rel="noopener">
+      <a id="links-intro" class="links-card links-card--featured" href="{{ id.booking.intro.url }}" target="_blank"
+        rel="noopener">
         <div>
           <div class="links-card__eyebrow">5.0★ · 30+ Founder &amp; Executive Reviews</div>
           <div class="links-card__title">Book 1:1 AI Strategy &amp; Architecture Call on Intro</div>
@@ -86,11 +84,23 @@ redirect_from:
         <span class="links-card__arrow" aria-hidden="true">↗</span>
       </a>
 
-      <a id="links-passionfroot" class="links-card" href="{{ id.booking.passionfroot.url }}" target="_blank" rel="noopener">
+      <a id="links-passionfroot" class="links-card" href="{{ id.booking.passionfroot.url }}" target="_blank"
+        rel="noopener">
         <div>
           <div class="links-card__eyebrow">Brand &amp; Developer Ecosystem Partnerships</div>
           <div class="links-card__title">Sponsor Technical Content via Passionfroot</div>
-          <div class="links-card__sub">LinkedIn, X &amp; Instagram technical deep dives (Google, Meta, Qodo, Parallel)</div>
+          <div class="links-card__sub">LinkedIn, X &amp; Instagram technical deep dives (Google, Meta, Fireflies.ai,
+            Qodo, Parallel)</div>
+        </div>
+        <span class="links-card__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a id="links-eightx" class="links-card" href="{{ id.booking.eightx.url }}" target="_blank" rel="noopener">
+        <div>
+          <div class="links-card__eyebrow">AI &amp; Tech Launch Campaigns</div>
+          <div class="links-card__title">Partner on Multi-Part AI Product Launches via 8x</div>
+          <div class="links-card__sub">Verified creator campaigns &amp; launch series for AI platforms and DevTools
+          </div>
         </div>
         <span class="links-card__arrow" aria-hidden="true">↗</span>
       </a>
@@ -106,7 +116,8 @@ redirect_from:
 
       <div class="links-stack__label mt-md">Learn, Read &amp; Watch</div>
 
-      <a id="links-courses" class="links-card" href="{{ site.data.courses.linkedin_learning_profile }}" target="_blank" rel="noopener">
+      <a id="links-courses" class="links-card" href="{{ site.data.courses.linkedin_learning_profile }}" target="_blank"
+        rel="noopener">
         <div>
           <div class="links-card__eyebrow">LinkedIn Learning · 44,000+ Learners · 4.6–4.8★</div>
           <div class="links-card__title">Hands-On Google ADK, Agent Evaluation &amp; Responsible AI Courses</div>
@@ -115,11 +126,13 @@ redirect_from:
         <span class="links-card__arrow" aria-hidden="true">↗</span>
       </a>
 
-      <a id="links-book" class="links-card" href="{{ site.data.publications.featured_book.amazon_url }}" target="_blank" rel="noopener">
+      <a id="links-book" class="links-card" href="{{ site.data.publications.featured_book.amazon_url }}" target="_blank"
+        rel="noopener">
         <div>
           <div class="links-card__eyebrow">Published Book · 95+ Academic Citations · 4.8★</div>
           <div class="links-card__title">Sculpting Data for ML: The First Act of Machine Learning</div>
-          <div class="links-card__sub">Paperback, Kindle &amp; Audible · Forewords by Julian McAuley &amp; Laurence Moroney</div>
+          <div class="links-card__sub">Paperback, Kindle &amp; Audible · Forewords by Julian McAuley &amp; Laurence
+            Moroney</div>
         </div>
         <span class="links-card__arrow" aria-hidden="true">↗</span>
       </a>
@@ -135,18 +148,10 @@ redirect_from:
       </a>
       {% endif %}
 
-      <a
-        id="links-io-keynote"
-        class="links-card"
-        href="{{ site.data.speaking.featured_video.url }}"
-        target="_blank"
-        rel="noopener"
-        data-cinema="XEzRZ35urlk"
-        data-cinema-start="516"
-        data-cinema-mode="wide"
+      <a id="links-io-keynote" class="links-card" href="{{ site.data.speaking.featured_video.url }}" target="_blank"
+        rel="noopener" data-cinema="XEzRZ35urlk" data-cinema-start="516" data-cinema-mode="wide"
         data-cinema-title="{{ site.data.speaking.featured_video.title | escape }}"
-        data-cinema-channel="Google I/O Main Keynote"
-      >
+        data-cinema-channel="Google I/O Main Keynote">
         <div>
           <div class="links-card__eyebrow">Featured Video · 147K+ Views</div>
           <div class="links-card__title">▶ Play Google I/O Main Keynote Feature Inline</div>
@@ -159,7 +164,8 @@ redirect_from:
         <div>
           <div class="links-card__eyebrow">64+ Playlists · 70+ Shorts &amp; Tagged IG Reels</div>
           <div class="links-card__title">Interactive Screening Room &amp; 9:16 AI Reels Hub</div>
-          <div class="links-card__sub">Google Cloud Tech films, Linux Foundation talks, podcasts &amp; behind-the-stage reels</div>
+          <div class="links-card__sub">Google Cloud Tech films, Linux Foundation talks, podcasts &amp; behind-the-stage
+            reels</div>
         </div>
         <span class="links-card__arrow" aria-hidden="true">→</span>
       </a>
@@ -176,14 +182,8 @@ redirect_from:
 
     <!-- Conference Slide & Bio QR Card -->
     <div class="qr-card" aria-labelledby="qr-card-heading">
-      <img
-        class="qr-card__img"
-        src="/assets/images/links-qr.svg"
-        width="128"
-        height="128"
-        loading="lazy"
-        alt="Scan QR code to open jigyasa-grover.github.io/links/"
-      />
+      <img class="qr-card__img" src="/assets/images/links-qr.svg" width="128" height="128" loading="lazy"
+        alt="Scan QR code to open jigyasa-grover.github.io/links/" />
       <div>
         <div class="eyebrow mb-xs">Conference Slide &amp; Bio QR</div>
         <h2 id="qr-card-heading" class="qr-card__title">Share or scan this page onstage</h2>
@@ -191,8 +191,10 @@ redirect_from:
           Point any phone camera here to save Jigyasa's slides, courses, and booking links in one tap.
         </p>
         <div class="btn-group">
-          <button id="copy-links-hub-url" type="button" class="btn btn--secondary btn--compact" data-copy-url="{{ site.url }}/links/">Copy /links/ URL</button>
-          <a class="btn btn--secondary btn--compact" href="/assets/images/press/jigyasa-grover-links-qr.png" download="jigyasa-grover-links-qr.png">Download Slide QR (PNG) ↓</a>
+          <button id="copy-links-hub-url" type="button" class="btn btn--secondary btn--compact"
+            data-copy-url="{{ site.url }}/links/">Copy /links/ URL</button>
+          <a class="btn btn--secondary btn--compact" href="/assets/images/press/jigyasa-grover-links-qr.png"
+            download="jigyasa-grover-links-qr.png">Download Slide QR (PNG) ↓</a>
         </div>
       </div>
     </div>

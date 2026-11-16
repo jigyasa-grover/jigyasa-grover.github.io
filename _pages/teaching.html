@@ -22,9 +22,17 @@ redirect_from:
 
   <div class="callout-strip">
     <div class="eyebrow">Corporate Training &amp; Enablement Delivered With</div>
-    <div class="partner-strip">
-      {% for client in site.data.courses.training_clients %}
-        <span>{{ client }}{% unless forloop.last %} ·{% endunless %}</span>
+    <div class="brand-logo-strip brand-logo-strip--compact" aria-label="Corporate training and enablement clients">
+      {% for client in site.data.courses.training_client_logos %}
+        <span class="brand-logo-strip__item">
+          <img
+            src="{{ client.logo }}"
+            width="{{ client.width }}"
+            height="{{ client.height }}"
+            loading="lazy"
+            alt="{{ client.name }}"
+          />
+        </span>
       {% endfor %}
     </div>
   </div>

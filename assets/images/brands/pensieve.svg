@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 36" width="132" height="36" role="img" aria-label="Pensieve">
+  <g fill="#141413">
+    <ellipse cx="17" cy="18" rx="9.5" ry="5.2" fill="none" stroke="#141413" stroke-width="2.2"/>
+    <ellipse cx="17" cy="18" rx="5.2" ry="2.6" fill="none" stroke="#141413" stroke-width="1.8"/>
+    <circle cx="17" cy="18" r="1.6"/>
+    <text x="33" y="24" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="700" letter-spacing="-0.01em">Pensieve</text>
+  </g>
+</svg>
+

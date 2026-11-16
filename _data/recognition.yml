@@ -586,7 +586,7 @@ visual_highlights:
     width: 576
     height: 1024
     focal: "center 44%"
-    url: "https://conferences.codemotion.com/"
+    url: "https://www.instagram.com/p/DfigH-XuRoe/"
   - title: "Google Gemini Early Access Dinner (2026)"
     subtitle: "Google Developer Advisory Board & AI/ML GDE Ecosystem"
     image: "/assets/images/opt/gemini_dinner_2026.jpg"
@@ -704,11 +704,177 @@ brand_partners:
   - "LinkedIn Learning"
   - "Meta"
   - "Udacity × FedEx"
+  - "Adobe"
+  - "Fireflies.ai"
   - "Qodo"
   - "Parallel Web Systems"
   - "SenseLab (a16z Speedrun)"
-  - "Adobe"
   - "Opaque Systems"
   - "Pensieve"
   - "Guidde"
+  - "Appsmith"
   - "Simplilearn"
+
+brand_partner_logos:
+  - name: "Google"
+    category: "Hyperscaler & Launch"
+    logo: "/assets/images/brands/google.svg"
+    width: 118
+    height: 36
+    proof_label: "Launch Video ↗"
+    url: "https://www.youtube.com/watch?v=3iZzf_NRxDQ"
+  - name: "Google DeepMind"
+    category: "Frontier AI Lab"
+    logo: "/assets/images/brands/google-deepmind.svg"
+    width: 198
+    height: 36
+    proof_label: "Early Access ↗"
+    url: "https://x.com/jigyasa_grover/status/2105464156656939298"
+  - name: "Google Cloud"
+    category: "Cloud & Agentic AI"
+    logo: "/assets/images/brands/google-cloud.svg"
+    width: 162
+    height: 36
+    proof_label: "Creator Collab ↗"
+    url: "https://www.youtube.com/watch?v=W54cRxp-bSA"
+  - name: "LinkedIn Learning"
+    category: "4 Courses · 44K+ Learners"
+    logo: "/assets/images/brands/linkedin-learning.svg"
+    width: 192
+    height: 36
+    proof_label: "4 Courses ↗"
+    url: "https://www.linkedin.com/learning/instructors/jigyasa-grover"
+  - name: "Meta"
+    category: "AI & Ecosystem"
+    logo: "/assets/images/brands/meta.svg"
+    width: 104
+    height: 36
+    proof_label: "Ecosystem ↗"
+    url: "https://ai.meta.com/"
+  - name: "Udacity × FedEx"
+    category: "Enterprise AI Curriculum"
+    logo: "/assets/images/brands/udacity-fedex.svg"
+    width: 184
+    height: 36
+    proof_label: "Curriculum →"
+    url: "/teaching/#courses-catalog-heading"
+  - name: "Adobe"
+    category: "Creative & Enterprise AI"
+    logo: "/assets/images/brands/adobe.svg"
+    width: 112
+    height: 36
+    proof_label: "Partner ↗"
+    url: "https://www.adobe.com/"
+  - name: "Fireflies.ai"
+    category: "AI Meeting & Voice Stack"
+    logo: "/assets/images/brands/fireflies.svg"
+    width: 146
+    height: 36
+    proof_label: "Partner ↗"
+    url: "https://fireflies.ai/"
+  - name: "Qodo"
+    category: "Agentic Code Governance"
+    logo: "/assets/images/brands/qodo.svg"
+    width: 104
+    height: 36
+    proof_label: "Campaign ↗"
+    url: "https://www.linkedin.com/posts/jigyasa-grover_ad-codegovernance-aicodereview-share-7503200004652576768-1r_a"
+  - name: "Parallel Web Systems"
+    category: "Web-Grounded AI APIs"
+    logo: "/assets/images/brands/parallel.svg"
+    width: 124
+    height: 36
+    proof_label: "Read Thread ↗"
+    url: "https://x.com/jigyasa_grover/status/2115293448869753316"
+  - name: "SenseLab (a16z Speedrun)"
+    category: "Multi-Agent Memory"
+    logo: "/assets/images/brands/senselab.svg"
+    width: 138
+    height: 36
+    proof_label: "Campaign ↗"
+    url: "https://www.linkedin.com/posts/jigyasa-grover_ad-agenticai-machinelearning-activity-7508189831764566016-sg2l"
+  - name: "Opaque Systems"
+    category: "Confidential AI & Privacy"
+    logo: "/assets/images/brands/opaque.svg"
+    width: 128
+    height: 36
+    proof_label: "Partner ↗"
+    url: "https://www.opaque.co/"
+  - name: "Pensieve"
+    category: "MCP Context Engineering"
+    logo: "/assets/images/brands/pensieve.svg"
+    width: 132
+    height: 36
+    proof_label: "Campaign ↗"
+    url: "https://www.linkedin.com/posts/jigyasa-grover_ad-contextengineering-agentharness-share-7516155573327790080-WXGO/"
+  - name: "Guidde"
+    category: "AI Video & MCP Docs"
+    logo: "/assets/images/brands/guidde.svg"
+    width: 116
+    height: 36
+    proof_label: "Campaign ↗"
+    url: "https://www.linkedin.com/posts/jigyasa-grover_ad-guidde-aieducation-activity-7513332803313430528-8qYl"
+  - name: "Appsmith"
+    category: "Open-Source AI Apps"
+    logo: "/assets/images/brands/appsmith.svg"
+    width: 138
+    height: 36
+    proof_label: "Watch Reel ↗"
+    url: "https://www.youtube.com/shorts/kqYCl5uCxLI"
+  - name: "Simplilearn"
+    category: "Technical Education"
+    logo: "/assets/images/brands/simplilearn.svg"
+    width: 148
+    height: 36
+    proof_label: "Partner ↗"
+    url: "https://www.simplilearn.com/"
+
+home_ecosystem_logos:
+  - name: "Google"
+    logo: "/assets/images/brands/google.svg"
+    width: 118
+    height: 36
+  - name: "Google DeepMind"
+    logo: "/assets/images/brands/google-deepmind.svg"
+    width: 198
+    height: 36
+  - name: "Google Cloud"
+    logo: "/assets/images/brands/google-cloud.svg"
+    width: 162
+    height: 36
+  - name: "Meta"
+    logo: "/assets/images/brands/meta.svg"
+    width: 104
+    height: 36
+  - name: "LinkedIn Learning"
+    logo: "/assets/images/brands/linkedin-learning.svg"
+    width: 192
+    height: 36
+  - name: "Morgan Stanley"
+    logo: "/assets/images/brands/morgan-stanley.svg"
+    width: 156
+    height: 36
+  - name: "FedEx"
+    logo: "/assets/images/brands/fedex.svg"
+    width: 82
+    height: 36
+  - name: "Accenture"
+    logo: "/assets/images/brands/accenture.svg"
+    width: 112
+    height: 36
+  - name: "Roblox"
+    logo: "/assets/images/brands/roblox.svg"
+    width: 118
+    height: 36
+  - name: "Adobe"
+    logo: "/assets/images/brands/adobe.svg"
+    width: 112
+    height: 36
+  - name: "Fireflies.ai"
+    logo: "/assets/images/brands/fireflies.svg"
+    width: 146
+    height: 36
+  - name: "Qodo"
+    logo: "/assets/images/brands/qodo.svg"
+    width: 104
+    height: 36

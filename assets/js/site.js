@@ -20,7 +20,7 @@
       syncThemeAria();
       try {
         localStorage.setItem("jg-theme", next);
-      } catch (e) {}
+      } catch (e) { }
     });
   }
 
@@ -264,7 +264,7 @@
           }
         }
       }
-    } catch (e) {}
+    } catch (e) { }
 
     var setFieldError = function (inputId, errorId, msg) {
       var input = document.getElementById(inputId);
@@ -545,7 +545,7 @@
           });
           applySocialFilter();
         })
-        .catch(function () {});
+        .catch(function () { });
     }
   });
 
@@ -571,7 +571,7 @@
             followersEl.textContent = data.followers.toLocaleString() + "+";
           }
         })
-        .catch(function () {});
+        .catch(function () { });
     }
   }
 
@@ -608,8 +608,8 @@
 
     var safeRegister = function (toolDef) {
       try {
-        Promise.resolve(modelContext.registerTool(toolDef)).catch(function () {});
-      } catch (e) {}
+        Promise.resolve(modelContext.registerTool(toolDef)).catch(function () { });
+      } catch (e) { }
     };
 
     safeRegister({
@@ -640,7 +640,7 @@
     safeRegister({
       name: "get-collaboration-channels",
       description:
-        "Retrieve Jigyasa Grover's collaboration pillars, direct booking platforms (Intro, Topmate, Passionfroot, Naano), live corporate AI workshops, and LinkedIn Learning courses.",
+        "Retrieve Jigyasa Grover's collaboration pillars, direct booking platforms (Intro, Topmate, Passionfroot, Naano, 8x), brand partners, live corporate AI workshops, and LinkedIn Learning courses.",
       inputSchema: {
         type: "object",
         properties: {
@@ -665,6 +665,7 @@
             work_with_me_url: ctx.collaboration.work_with_me_url,
             booking_platforms: ctx.collaboration.booking_platforms,
             pillars: pillars,
+            brand_partners: ctx.collaboration.brand_partners,
             training_clients: ctx.collaboration.training_clients,
             live_workshops: ctx.collaboration.live_workshops,
             courses: ctx.collaboration.courses
@@ -935,12 +936,12 @@
       if (pressStatusEl) {
         pressStatusEl.textContent = isFiltered
           ? "Showing " +
-            visibleCount +
-            " of " +
-            totalPressCount +
-            " features" +
-            (query ? ' matching "' + pressSearchInput.value.trim() + '"' : "") +
-            "."
+          visibleCount +
+          " of " +
+          totalPressCount +
+          " features" +
+          (query ? ' matching "' + pressSearchInput.value.trim() + '"' : "") +
+          "."
           : "";
       }
     };
@@ -1119,13 +1120,13 @@
         dialogCopy.setAttribute(
           "data-citation",
           "Jigyasa Grover featured in " +
-            outlet +
-            " (" +
-            date +
-            '): "' +
-            title +
-            '"' +
-            (url ? " — " + url : "")
+          outlet +
+          " (" +
+          date +
+          '): "' +
+          title +
+          '"' +
+          (url ? " — " + url : "")
         );
       }
     };
@@ -1245,7 +1246,7 @@
           }
         }
       }
-    } catch (e) {}
+    } catch (e) { }
   }
 
   // 11. Interactive Video Screening Room, 9:16 Reels Deck & Global Instant Cinema Lightbox
@@ -1260,7 +1261,7 @@
           cinemaById[entry.video_id] = entry;
         }
       });
-    } catch (e) {}
+    } catch (e) { }
   }
 
   // 11a. /highlights/ Screening Room Filtering, Instant Search & Progressive Expand
@@ -1674,7 +1675,7 @@
             };
           }
         })
-      ).catch(function () {});
-    } catch (e) {}
+      ).catch(function () { });
+    } catch (e) { }
   }
 })();

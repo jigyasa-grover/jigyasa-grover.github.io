@@ -118,11 +118,20 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
     </div>
 
     <div class="section-divider">
-      <div class="eyebrow mb-xs">Selected Ecosystem &amp; Training Collaborations</div>
-      <div class="partner-strip">
-        {% for partner in site.data.recognition.brand_partners limit: 8 %}
-          <span>{{ partner }}{% unless forloop.last %} ·{% endunless %}</span>
+      <div class="eyebrow mb-xs">Selected Brand, Ecosystem &amp; Training Collaborations</div>
+      <div class="brand-logo-strip" aria-label="Selected brand, ecosystem, and enterprise training collaborations">
+        {% for item in site.data.recognition.home_ecosystem_logos %}
+          <span class="brand-logo-strip__item">
+            <img
+              src="{{ item.logo }}"
+              width="{{ item.width }}"
+              height="{{ item.height }}"
+              loading="lazy"
+              alt="{{ item.name }}"
+            />
+          </span>
         {% endfor %}
+        <a class="brand-logo-strip__more" href="/partnerships/">All 16+ partners →</a>
       </div>
     </div>
   </div>

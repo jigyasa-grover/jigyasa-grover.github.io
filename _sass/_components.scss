@@ -625,6 +625,39 @@
   }
 }
 
+.platform-grid--bento {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  > .platform-box:nth-child(1),
+  > .platform-box:nth-child(2) {
+    grid-column: span 3;
+  }
+
+  > .platform-box:nth-child(n + 3) {
+    grid-column: span 2;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    > .platform-box:nth-child(n) {
+      grid-column: span 1;
+    }
+
+    > .platform-box:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+
+    > .platform-box:nth-child(n) {
+      grid-column: span 1;
+    }
+  }
+}
+
 .platform-box {
   background-color: var(--bg-surface);
   border: 1px solid var(--rule-light);
@@ -930,7 +963,7 @@
   margin: 0;
 }
 
-// Partner Typographic Strip
+// Partner Typographic Strip & Editorial Brand Logo Wall
 .partner-strip {
   display: flex;
   flex-wrap: wrap;
@@ -942,6 +975,161 @@
     font-family: var(--font-serif);
     font-size: 1.12rem;
     color: var(--ink-muted);
+  }
+}
+
+.brand-logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.05rem 1.95rem;
+  padding: 1.05rem 0 0;
+}
+
+.brand-logo-strip__item {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+
+  img {
+    height: 24px;
+    width: auto;
+    max-width: 165px;
+    object-fit: contain;
+    opacity: 0.74;
+    transition: opacity 0.2s var(--ease-editorial);
+  }
+
+  &:hover img {
+    opacity: 1;
+  }
+}
+
+.brand-logo-strip--compact {
+  gap: 0.85rem 1.65rem;
+  padding-top: 0.55rem;
+
+  .brand-logo-strip__item {
+    height: 25px;
+
+    img {
+      height: 21px;
+      max-width: 155px;
+    }
+  }
+}
+
+.brand-logo-strip__more {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  padding: 0.2rem 0;
+
+  &:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+  }
+}
+
+.brand-logo-wall {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 1.25rem 0 2.25rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+  }
+}
+
+.brand-logo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1.05rem 1.15rem 0.9rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--rule-light);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition:
+    border-color 0.2s var(--ease-editorial),
+    box-shadow 0.2s var(--ease-editorial),
+    transform 0.2s var(--ease-editorial);
+
+  &:hover {
+    border-color: var(--ink-primary);
+    box-shadow: var(--shadow-subtle);
+    transform: translateY(-1px);
+
+    .brand-logo-card__mark img {
+      opacity: 1;
+    }
+
+    .brand-logo-card__proof {
+      color: var(--accent);
+    }
+  }
+}
+
+.brand-logo-card__mark {
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+
+  img {
+    height: 25px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    opacity: 0.84;
+    transition: opacity 0.2s var(--ease-editorial);
+  }
+}
+
+.brand-logo-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--rule-light);
+}
+
+.brand-logo-card__cat {
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brand-logo-card__proof {
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  font-weight: 500;
+  color: var(--ink-subtle);
+  flex-shrink: 0;
+  transition: color 0.2s var(--ease-editorial);
+
+  @include mobile {
+    display: none;
+  }
+}
+
+[data-theme="dark"] {
+  .brand-logo-card__mark img,
+  .brand-logo-strip__item img {
+    filter: brightness(0) invert(0.92);
   }
 }
 

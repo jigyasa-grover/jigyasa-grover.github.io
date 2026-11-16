@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 36" width="112" height="36" role="img" aria-label="Udacity">
+  <g fill="#141413">
+    <path d="M8 9.2l3.1-1.7v11.3c0 3 2.1 5 5 5s5-2 5-5V7.5l3.1 1.7v9.7c0 4.7-3.4 8.1-8.1 8.1S8 23.6 8 18.9V9.2z"/>
+    <text x="31" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="17.5" font-weight="600" letter-spacing="-0.02em">Udacity</text>
+  </g>
+</svg>
+

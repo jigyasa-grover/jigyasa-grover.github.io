@@ -15,6 +15,44 @@ training_clients:
   - "CommonSpirit Health"
   - "Udacity"
 
+training_client_logos:
+  - name: "LinkedIn Learning"
+    logo: "/assets/images/brands/linkedin-learning.svg"
+    width: 192
+    height: 36
+  - name: "Morgan Stanley"
+    logo: "/assets/images/brands/morgan-stanley.svg"
+    width: 156
+    height: 36
+  - name: "FedEx"
+    logo: "/assets/images/brands/fedex.svg"
+    width: 82
+    height: 36
+  - name: "Accenture"
+    logo: "/assets/images/brands/accenture.svg"
+    width: 112
+    height: 36
+  - name: "Roblox"
+    logo: "/assets/images/brands/roblox.svg"
+    width: 118
+    height: 36
+  - name: "CommonSpirit Health"
+    logo: "/assets/images/brands/commonspirit.svg"
+    width: 198
+    height: 36
+  - name: "Udacity"
+    logo: "/assets/images/brands/udacity.svg"
+    width: 112
+    height: 36
+  - name: "Silicon Valley Security Group"
+    logo: "/assets/images/brands/svsg.svg"
+    width: 96
+    height: 36
+  - name: "AI Aspire"
+    logo: "/assets/images/brands/ai-aspire.svg"
+    width: 128
+    height: 36
+
 courses:
   - title: "Evaluating AI Agents with Google ADK"
     provider: "LinkedIn Learning"

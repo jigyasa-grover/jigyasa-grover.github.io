@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 36" width="192" height="36" role="img" aria-label="LinkedIn Learning">
+  <g fill="#141413">
+    <path d="M8 8.5A2.5 2.5 0 0 1 10.5 6h15A2.5 2.5 0 0 1 28 8.5v19a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 8 27.5v-19zm4.2 7.3v9.2h3v-9.2h-3zm1.5-4.7a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zm4.6 4.7v9.2h3v-4.8c0-1.3.5-2.1 1.7-2.1 1.1 0 1.6.8 1.6 2.1V25h3v-5.4c0-2.6-1.4-4-3.5-4-1.5 0-2.3.8-2.8 1.5v-1.3h-3z"/>
+    <text x="35" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" letter-spacing="-0.02em">LinkedIn <tspan font-weight="400">Learning</tspan></text>
+  </g>
+</svg>
+

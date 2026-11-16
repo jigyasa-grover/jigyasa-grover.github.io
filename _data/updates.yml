@@ -1,3 +1,7 @@
+- date: "Nov 2026"
+  category: "Open Source & AI"
+  text: "Open-sourced TorchTPU Doctor—cutting PyTorch LoRA step time 2,537× on Cloud TPU v6e with upstream PRs in Hugging Face transformers & peft—and extended it with Gemini 4 Carbon early access from Google DeepMind."
+  url: "/TorchTPUDoctor/"
 - date: "Oct 2026"
   category: "Speaking"
   text: "Delivered invited talks across Europe and the US—Codemotion Milan, Linux Foundation's Open Source Summit Europe (Prague), AGNTCon + MCPCon Europe (Amsterdam), and Tech Fuse DSM."

@@ -46,6 +46,7 @@ sitemap: false
     "work_with_me_url": "{{ site.url }}/work-with-me/",
     "booking_platforms": {{ site.data.identity.booking | jsonify }},
     "pillars": {{ site.data.pillars | jsonify }},
+    "brand_partners": {{ site.data.recognition.brand_partners | jsonify }},
     "training_clients": {{ site.data.courses.training_clients | jsonify }},
     "live_workshops": {{ site.data.courses.workshops | jsonify }},
     "courses": {{ site.data.courses.courses | jsonify }}

@@ -60,6 +60,12 @@ booking:
     badge: "LinkedIn & X Collaborations"
     use_case: "Streamlined B2B and developer creator campaigns on LinkedIn and X."
     cta: "Collaborate via Naano"
+  eightx:
+    name: "8x"
+    url: "https://8x.business/p/b623ba2ed48544748601a75a3569c6ee"
+    badge: "AI & Tech Launch Series"
+    use_case: "Multi-part AI product launch campaigns and technical creator collaborations on 8x."
+    cta: "Partner via 8x"
 
 same_as:
   - "https://g.co/kgs/Lvk5yk"
@@ -82,6 +88,7 @@ same_as:
   - "https://topmate.io/jigyasagrover"
   - "https://www.passionfroot.me/jigyasa-grover"
   - "https://naano.com/creators/jigyasa-grover"
+  - "https://8x.business/p/b623ba2ed48544748601a75a3569c6ee"
   - "https://open.spotify.com/playlist/6vRPsGPE6v2I81NlWkdGiY"
   - "https://jigyasagrover.wordpress.com/"
   - "https://medium.com/@jigyasagrover"

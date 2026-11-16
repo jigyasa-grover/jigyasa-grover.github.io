@@ -5,8 +5,8 @@
   category: "PyTorch & Cloud TPUs"
   featured: true
   home_featured: true
-  home_summary: "AST linter & profiler cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms), with upstream fixes in transformers & peft."
-  summary: "Agent Skill, AST linter, and TorchDispatchMode profiler for native PyTorch (torch_tpu)—cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms) and driving upstream fixes in Hugging Face transformers & peft."
+  home_summary: "7-rule AST linter & profiler cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms), with upstream fixes in transformers & peft."
+  summary: "Agent Skill, 7-rule AST linter (TPU001–TPU007, including higher-order autograd recompile checks), and TorchDispatchMode profiler for native PyTorch (torch_tpu)—cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms) and driving upstream fixes in Hugging Face transformers & peft."
   stack:
     - "PyTorch (torch_tpu)"
     - "Cloud TPU v6e"

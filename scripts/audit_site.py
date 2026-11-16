@@ -420,6 +420,7 @@ def main() -> None:
         for url in (
             "https://www.passionfroot.me/jigyasa-grover",
             "https://naano.com/creators/jigyasa-grover",
+            "https://8x.business/p/b623ba2ed48544748601a75a3569c6ee",
             "https://intro.co/JigyasaGrover",
             "https://topmate.io/jigyasagrover",
         ):
