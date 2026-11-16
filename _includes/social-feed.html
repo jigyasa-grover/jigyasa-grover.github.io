@@ -54,7 +54,11 @@
           </div>
         </div>
 
-        {% if post.image %}
+        {% assign show_post_media = true %}
+        {% if feed_context == "highlights" and post.hide_media_on_highlights %}
+          {% assign show_post_media = false %}
+        {% endif %}
+        {% if post.image and show_post_media %}
         <a
           class="social-card__media{% if post.video_id %} social-card__media--video{% endif %}"
           href="{{ post.url }}"

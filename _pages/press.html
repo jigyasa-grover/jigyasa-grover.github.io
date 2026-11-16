@@ -181,26 +181,15 @@ permalink: /press/
       data-search="{{ m.outlet | downcase | escape }} {{ m.masthead | downcase | escape }} {{ m.title | downcase | escape }} {{ m.type | downcase | escape }} {{ m.quote | downcase | escape }} {{ m.takeaway | downcase | escape }} {{ m.tags | join: ' ' | downcase | escape }}"
     >
       <div class="ledger-row__date">{{ m.date }}</div>
-      <div class="press-ledger-row__main">
-        <img
-          class="press-ledger-row__thumb"
-          src="{{ m.image }}"
-          width="88"
-          height="50"
-          loading="lazy"
-          {% if m.focal and m.visual_mode != 'brand' %}style="object-position: {{ m.focal }};"{% endif %}
-          alt="{{ m.outlet | escape }} thumbnail"
-        />
-        <div>
-          <div class="ledger-row__title">
-            {% if m.url %}
-              <a href="{{ m.url }}" target="_blank" rel="noopener" data-open-clip-link="{{ forloop.index0 }}">{{ m.title }} ↗</a>
-            {% else %}
-              <button type="button" class="press-clip__title-btn" data-open-clip="{{ forloop.index0 }}">{{ m.title }}</button>
-            {% endif %}
-          </div>
-          <p class="ledger-row__sub">{{ m.outlet }} · <span class="press-ledger-row__type">{{ m.type }}</span></p>
+      <div>
+        <div class="ledger-row__title">
+          {% if m.url %}
+            <a href="{{ m.url }}" target="_blank" rel="noopener" data-open-clip-link="{{ forloop.index0 }}">{{ m.title }} ↗</a>
+          {% else %}
+            <button type="button" class="press-clip__title-btn" data-open-clip="{{ forloop.index0 }}">{{ m.title }}</button>
+          {% endif %}
         </div>
+        <p class="ledger-row__sub">{{ m.outlet }} · <span class="press-ledger-row__type">{{ m.type }}</span></p>
       </div>
       <div class="press-ledger-row__actions">
         <button type="button" class="btn btn--secondary btn--compact" data-open-clip="{{ forloop.index0 }}">Preview</button>
@@ -228,7 +217,7 @@ permalink: /press/
           <div id="press-dialog-snapshot-box" class="press-dialog__snapshot-box">
             <img
               id="press-dialog-img"
-              src="/assets/images/opt/google_io_feature.jpg"
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9'/%3E"
               width="1280"
               height="720"
               alt="Selected press feature snapshot"
@@ -366,19 +355,19 @@ permalink: /press/
       </div>
     </a>
 
-    <a class="gallery-card" href="/images/profile_photo.jpg" target="_blank" rel="noopener">
-      <img src="/assets/images/opt/profile_photo.jpg" width="768" height="960" loading="lazy" alt="Editorial portrait of Jigyasa Grover" />
+    <a class="gallery-card" href="/images/IMG_7172.jpg" target="_blank" rel="noopener">
+      <img src="/assets/images/opt/portrait_outdoor.jpg" width="900" height="900" loading="lazy" style="object-position: center 22%;" alt="Candid outdoor portrait of Jigyasa Grover" />
       <div class="gallery-card__body">
-        <div class="gallery-card__title">Editorial Portrait (Vertical)</div>
-        <p class="gallery-card__sub">Download 1440×1800 JPG ↗</p>
+        <div class="gallery-card__title">Candid Portrait (1:1)</div>
+        <p class="gallery-card__sub">Download high-res portrait ↗</p>
       </div>
     </a>
 
-    <a class="gallery-card" href="/assets/images/opt/editorial_lounge_2025.jpg" target="_blank" rel="noopener">
-      <img src="/assets/images/opt/editorial_lounge_2025.jpg" width="825" height="1100" loading="lazy" style="object-position: center 45%;" alt="Editorial feature portrait of Jigyasa Grover" />
+    <a class="gallery-card" href="/assets/images/opt/gemini_dinner_2026.jpg" target="_blank" rel="noopener">
+      <img src="/assets/images/opt/gemini_dinner_2026.jpg" width="1080" height="1080" loading="lazy" style="object-position: center 28%;" alt="Jigyasa Grover at Google Gemini Early Access showcase" />
       <div class="gallery-card__body">
-        <div class="gallery-card__title">Feature Portrait (2025)</div>
-        <p class="gallery-card__sub">Download candid portrait ↗</p>
+        <div class="gallery-card__title">Ecosystem Portrait (2026)</div>
+        <p class="gallery-card__sub">Download Google Gemini event photo ↗</p>
       </div>
     </a>
 
@@ -393,16 +382,16 @@ permalink: /press/
     <a class="gallery-card" href="/assets/images/press/jigyasa-grover-codemotion-speaker-2026.jpg" target="_blank" rel="noopener">
       <img src="/assets/images/opt/codemotion_speaker_2026.jpg" width="576" height="1024" loading="lazy" style="object-position: center 44%;" alt="Jigyasa Grover holding her speaker badge at Codemotion Milan 2026" />
       <div class="gallery-card__body">
-        <div class="gallery-card__title">Speaker Portrait (2026)</div>
+        <div class="gallery-card__title">Keynote Speaker Portrait</div>
         <p class="gallery-card__sub">Download Codemotion Milan photo ↗</p>
       </div>
     </a>
 
-    <a class="gallery-card" href="/images/google_io_feature.jpg" target="_blank" rel="noopener">
-      <img src="/assets/images/opt/google_io_feature.jpg" width="1280" height="718" loading="lazy" alt="Jigyasa Grover featured on the Google I/O 2024 main stage" />
+    <a class="gallery-card" href="/assets/images/opt/women_impact_award.jpg" target="_blank" rel="noopener">
+      <img src="/assets/images/opt/women_impact_award.jpg" width="825" height="1100" loading="lazy" style="object-position: center 62%;" alt="Jigyasa Grover honored onstage at Women Impact Tech in San Francisco" />
       <div class="gallery-card__body">
-        <div class="gallery-card__title">Google I/O Main Stage</div>
-        <p class="gallery-card__sub">Download 3456×1940 stage photo ↗</p>
+        <div class="gallery-card__title">Award Stage Portrait</div>
+        <p class="gallery-card__sub">Download Women Impact Tech photo ↗</p>
       </div>
     </a>
   </div>

@@ -339,11 +339,11 @@ media_features:
     title: "Big Tech Machine Learning Leadership & Career Frameworks"
     type: "Profile Feature"
     category: "press"
-    visual_mode: "snapshot"
-    image: "/assets/images/opt/press/business_insider_mar_2025.jpg"
-    width: 1200
-    height: 600
-    focal: "center 24%"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_business_insider.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
     takeaway: "Three intentional career lessons—technical roadmapping, high-agency execution, and compounding mentorship—that shaped machine learning leadership across Meta, X, and Google ecosystems."
     summary: "Featured profile in Business Insider ('3 Lessons an AI Expert Says Shaped Her Tech Career') on sustaining long-term momentum and navigating senior machine learning roles in Big Tech."
     tags: ["Business Insider", "Tech Leadership", "Profile"]
@@ -660,12 +660,13 @@ visual_highlights:
     height: 1100
     focal: "center 62%"
     url: "https://womenimpacttech.com/"
-  - title: "Women Impact Tech — Honoree Feature"
-    subtitle: "Official Women Impact Tech honoree spotlight"
-    image: "/assets/images/opt/woman_of_impact_2023.jpg"
-    width: 720
-    height: 960
-    url: "https://womenimpacttech.com/"
+  - title: "@GoogleCloudTech Creator Studio (2026)"
+    subtitle: "Filming production ADK & multi-agent architecture breakdowns"
+    image: "/assets/images/opt/gcloud_creator_studio_2026.jpg"
+    width: 960
+    height: 720
+    focal: "center 22%"
+    url: "https://www.youtube.com/shorts/M2TVyZR9pe8"
   - title: "Built In Moxie Women in Tech Award Winner"
     subtitle: "Industry leadership & open-source community impact"
     image: "/assets/images/opt/moxie_award_winner.jpg"

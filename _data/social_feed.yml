@@ -66,6 +66,7 @@ posts:
     sponsored: false
     badge: "Keynote Reel · Milan"
     contexts: ["highlights", "partnerships", "home"]
+    hide_media_on_highlights: true
     image: "/assets/images/opt/codemotion_speaker_2026.jpg"
     width: 576
     height: 1024
@@ -138,6 +139,7 @@ posts:
     partner: "Google Cloud"
     badge: "Multi-Agent Orchestration on Cloud"
     contexts: ["partnerships", "highlights", "home"]
+    hide_media_on_highlights: true
     image: "https://i.ytimg.com/vi/W54cRxp-bSA/hqdefault.jpg"
     width: 480
     height: 360
@@ -154,10 +156,10 @@ posts:
     sponsored: false
     badge: "Gemini Omni Flash Official Launch"
     contexts: ["partnerships", "highlights"]
-    image: "/assets/images/opt/gemini_live_2026.jpg"
-    width: 1200
-    height: 1200
-    focal: "center 38%"
+    image: "/assets/images/opt/press/gemini_omni_flash_2026.jpg"
+    width: 607
+    height: 1080
+    focal: "center 32%"
     video_id: "3iZzf_NRxDQ"
     video_mode: "vertical"
     excerpt: "Featured developer builder in Google's official launch video for Gemini Omni Flash—spotlighting real-time audio-visual grounding and low-latency multimodal UX."
@@ -174,6 +176,10 @@ posts:
     partner: "Google Cloud"
     badge: "The Glow-Up Your AI Agent Needs"
     contexts: ["partnerships"]
+    image: "/assets/images/opt/gcloud_creator_studio_2026.jpg"
+    width: 960
+    height: 720
+    focal: "center 22%"
     video_id: "M2TVyZR9pe8"
     video_mode: "vertical"
     excerpt: "60-second creator reel with @GoogleCloudTech breaking down deterministic guardrails and Vertex AI evaluation loops for production agents."
@@ -188,6 +194,7 @@ posts:
     sponsored: false
     badge: "Ecosystem · Google Gemini"
     contexts: ["highlights", "partnerships", "home"]
+    hide_media_on_highlights: true
     image: "/assets/images/opt/gemini_live_2026.jpg"
     width: 1200
     height: 1200
@@ -204,6 +211,7 @@ posts:
     sponsored: false
     badge: "Google Gemini Early Access"
     contexts: ["highlights", "home"]
+    hide_media_on_highlights: true
     image: "/assets/images/opt/gemini_dinner_2026.jpg"
     width: 1080
     height: 1080

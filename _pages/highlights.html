@@ -274,62 +274,6 @@ permalink: /highlights/
         </a>
       </div>
     </div>
-
-    <div class="ig-spotlight-grid">
-      {% for ig in vids.instagram_spotlights %}
-      <article class="ig-spotlight-card">
-        <a
-          class="ig-spotlight-card__media"
-          href="{{ ig.ig_url }}"
-          target="_blank"
-          rel="noopener"
-          {% if ig.video_id %}
-          data-cinema="{{ ig.video_id }}"
-          data-cinema-mode="vertical"
-          data-cinema-title="{{ ig.title | escape }}"
-          data-cinema-channel="{{ ig.handle | escape }}"
-          data-cinema-external="{{ ig.ig_url | escape }}"
-          {% endif %}
-        >
-          <img
-            src="{{ ig.image }}"
-            width="{{ ig.width }}"
-            height="{{ ig.height }}"
-            loading="lazy"
-            {% if ig.focal %}style="object-position: {{ ig.focal }};"{% endif %}
-            alt="{{ ig.title }} — {{ ig.handle }}"
-          />
-          <span class="ig-spotlight-card__pill">IG · {{ ig.tab }}</span>
-          {% if ig.video_id %}
-          <span class="cinema-chip">
-            <span class="cinema-chip__icon" aria-hidden="true">▶</span>
-            <span>Play Reel</span>
-          </span>
-          {% endif %}
-        </a>
-        <div class="ig-spotlight-card__body">
-          <div class="ig-spotlight-card__handle">{{ ig.handle }} · {{ ig.date }}</div>
-          <h4 class="ig-spotlight-card__title">{{ ig.title }}</h4>
-          <p class="ig-spotlight-card__caption">{{ ig.caption }}</p>
-          <div class="ig-spotlight-card__links">
-            {% if ig.video_id %}
-            <a
-              href="{{ ig.ig_url }}"
-              target="_blank"
-              rel="noopener"
-              data-cinema="{{ ig.video_id }}"
-              data-cinema-mode="vertical"
-              data-cinema-title="{{ ig.title | escape }}"
-              data-cinema-channel="{{ ig.handle | escape }}"
-              data-cinema-external="{{ ig.ig_url | escape }}"
-            >▶ Watch Inline</a>
-            {% endif %}
-            <a href="{{ ig.ig_url }}" target="_blank" rel="noopener">Open on Instagram ↗</a>
-          </div>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
   </div>
 </section>
 

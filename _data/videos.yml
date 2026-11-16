@@ -39,7 +39,6 @@ featured_films:
     role_type: "featured"
     category: "google"
     badge: "Google I/O Main Stage · 147K+ Views"
-    thumbnail: "/assets/images/opt/google_io_feature.jpg"
     url: "https://www.youtube.com/live/XEzRZ35urlk?t=516"
     summary: "Introduced by Sundar Pichai at Shoreline Amphitheatre—sharing practitioner insights on 1-million-token long-context engineering."
     home_spotlight: true
@@ -574,56 +573,3 @@ shorts:
     tag: "Google Open Source"
     date: "2024"
     url: "https://www.youtube.com/shorts/w600RGYsseo"
-
-# Instagram Reels & Tagged Collaborations Hook (@jigyasagroverofficial & /tagged/)
-# Drop any Instagram /reel/<shortcode>/ URL (or optional paired YouTube `video_id` for inline playback)
-# here at any time—cards render automatically on /highlights/ and support instant lightbox play when paired!
-# You can also set `social.behold_feed_url` in `_config.yml` for zero-touch live IG Reel hydration.
-instagram_spotlights:
-  - title: "Codemotion Milan Keynote Reel"
-    handle: "@jigyasagroverofficial"
-    tab: "Reels"
-    date: "Oct 2026"
-    image: "/assets/images/opt/codemotion_speaker_2026.jpg"
-    width: 576
-    height: 1024
-    focal: "center 44%"
-    video_id: "5AflJGyIZt4"
-    ig_url: "https://www.instagram.com/p/DfigH-XuRoe/"
-    caption: "Backstage & auditorium reel from Milan—telling one of Europe's largest developer crowds when NOT to build an AI agent."
-
-  - title: "Google Gemini Omni Flash Official Launch"
-    handle: "@googlegemini × @jigyasagroverofficial"
-    tab: "Tagged"
-    date: "Jul 2026"
-    image: "/assets/images/opt/gemini_live_2026.jpg"
-    width: 1200
-    height: 1200
-    focal: "center 38%"
-    video_id: "3iZzf_NRxDQ"
-    ig_url: "https://www.instagram.com/jigyasagroverofficial/tagged/"
-    caption: "Tagged creator & GDE spotlight in Google's official multimodal Gemini Omni Flash launch reel."
-
-  - title: "@GoogleCloudTech Creator Collab Reel"
-    handle: "@googlecloudtech × @jigyasagroverofficial"
-    tab: "Tagged"
-    date: "Jul 2026"
-    image: "/assets/images/opt/gemini_dinner_2026.jpg"
-    width: 1080
-    height: 1080
-    focal: "center 28%"
-    video_id: "M2TVyZR9pe8"
-    ig_url: "https://www.instagram.com/jigyasagroverofficial/tagged/"
-    caption: "Co-created vertical reel with @GoogleCloudTech on production multi-agent orchestration with ADK & Vertex AI."
-
-  - title: "Conference Stages, Firesides & Creator Collabs"
-    handle: "@jigyasagroverofficial/tagged"
-    tab: "Tagged"
-    date: "2024–2026"
-    image: "/assets/images/opt/panel_stage_full.jpg"
-    width: 799
-    height: 1200
-    focal: "center 5%"
-    video_id: "kqYCl5uCxLI"
-    ig_url: "https://www.instagram.com/jigyasagroverofficial/tagged/"
-    caption: "Floor interviews, conference recaps, and tagged reels from Google Cloud Next, TEDAI SF, Appsmith, Jobright AI & LinkedIn Learning."
