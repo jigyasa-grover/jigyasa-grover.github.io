@@ -6,7 +6,7 @@
   featured: true
   home_featured: true
   home_summary: "7-rule AST linter & profiler cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms), with upstream fixes in transformers & peft."
-  summary: "Agent Skill, 7-rule AST linter (TPU001–TPU007, including higher-order autograd recompile checks), and TorchDispatchMode profiler for native PyTorch (torch_tpu)—cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms) and driving upstream fixes in Hugging Face transformers & peft."
+  summary: "Agent Skill, 7-rule AST linter (TPU001–TPU007, including higher-order autograd recompile checks), and TorchDispatchMode profiler for native PyTorch (torch_tpu), cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms) and driving upstream fixes in Hugging Face transformers & peft."
   stack:
     - "PyTorch (torch_tpu)"
     - "Cloud TPU v6e"
@@ -161,7 +161,7 @@
   year: "2015–2017"
   category: "Open Source & Agent Simulation"
   featured: false
-  summary: "Live spatial visualization UIs for the CORMAS multi-agent ecological platform (IRD Paris / ACM IWST) and searchQuick—recognized with the Red Hat Women in Open Source Award."
+  summary: "Live spatial visualization UIs for the CORMAS multi-agent ecological platform (IRD Paris / ACM IWST) and searchQuick, recognized with the Red Hat Women in Open Source Award."
   stack:
     - "Pharo Smalltalk"
     - "Multi-Agent Simulation"

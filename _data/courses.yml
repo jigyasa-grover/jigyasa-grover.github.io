@@ -97,7 +97,7 @@ courses:
     rating_count: 54
     level: "Intermediate / Senior"
     url: "https://www.linkedin.com/learning/integrating-ai-into-the-product-architecture"
-    summary: "Systems blueprint for embedding foundation and classical ML models—balancing latency SLAs, caching, RAG vs. fine-tuning, and observability."
+    summary: "Systems blueprint for embedding foundation and classical ML models, balancing latency SLAs, caching, RAG vs. fine-tuning, and observability."
     topics:
       - "AI Systems Architecture"
       - "RAG vs. Fine-Tuning"

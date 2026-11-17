@@ -41,7 +41,7 @@ featured_films:
     category: "google"
     badge: "Google I/O Main Stage · 147K+ Views"
     url: "https://www.youtube.com/live/XEzRZ35urlk?t=516"
-    summary: "Introduced by Sundar Pichai at Shoreline Amphitheatre—sharing practitioner insights on 1-million-token long-context engineering."
+    summary: "Introduced by Sundar Pichai at Shoreline Amphitheatre, sharing practitioner insights on 1-million-token long-context engineering."
     home_spotlight: true
     featured_initial: true
 
@@ -243,7 +243,7 @@ featured_films:
     badge: "Google Cloud Next Interview"
     playlist_id: "PLzfGleOE2W8zwSXbU8J762jz2qITwbyOQ"
     url: "https://www.youtube.com/watch?v=JSnLr_Hhl6g"
-    summary: "Recorded at Google Cloud Next—unpacking data readiness, governance bottlenecks, and ROI discipline in enterprise AI."
+    summary: "Recorded at Google Cloud Next, unpacking data readiness, governance bottlenecks, and ROI discipline in enterprise AI."
 
   - id: "people-of-ai-responsible-panel"
     video_id: "Sq_UH9QDjMI"

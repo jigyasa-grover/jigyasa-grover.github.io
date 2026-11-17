@@ -12,8 +12,8 @@ featured_book:
   amazon_url: "https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/"
   goodreads_url: "https://www.goodreads.com/book/show/56698788-sculpting-data-for-ml"
   launch_post_url: "/BOOK-LAUNCH-Sculpting-Data-for-ML/"
-  home_summary: "Hands-on guide to Data-Centric AI—dataset curation, weak supervision, and signal quality, with forewords by Prof. Julian McAuley and Laurence Moroney."
-  summary: "Co-authored with Rishabh Misra—a hands-on Python guide to Data-Centric AI covering dataset curation, weak supervision, labeling workflows, and class imbalance."
+  home_summary: "Hands-on guide to Data-Centric AI: dataset curation, weak supervision, and signal quality, with forewords by Prof. Julian McAuley and Laurence Moroney."
+  summary: "Co-authored with Rishabh Misra, a hands-on Python guide to Data-Centric AI covering dataset curation, weak supervision, labeling workflows, and class imbalance."
   forewords:
     - name: "Prof. Julian McAuley"
       affiliation: "Professor of Computer Science, UC San Diego"

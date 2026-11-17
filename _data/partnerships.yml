@@ -13,7 +13,7 @@ gtm_positioning:
     - number: "01"
       kicker: "Full-Funnel Launch"
       title: "0→1 AI & DevTools Product Launches"
-      summary: "Turn model releases, APIs, and agent frameworks into runnable proof—combining forkable GitHub repos, architectural blog essays, LinkedIn/X launch sequences, and 9:16 creator Reels/Shorts."
+      summary: "Turn model releases, APIs, and agent frameworks into runnable proof by combining forkable GitHub repos, architectural blog essays, LinkedIn/X launch sequences, and 9:16 creator Reels/Shorts."
       tags: ["Launch Bundles", "Passionfroot · Naano · 8x", "Multi-Channel"]
     - number: "02"
       kicker: "DevRel & PLG"
@@ -179,5 +179,5 @@ brief_checklist:
   - label: "Launch window & milestones"
     detail: "Target announcement date, embargo schedule, and any technical review requirements on your side."
   - label: "Sandbox access & budget tier"
-    detail: "SDK/API access details and target scope—or book standard packages instantly via Passionfroot, Naano, or 8x."
+    detail: "SDK/API access details and target scope, or book standard packages instantly via Passionfroot, Naano, or 8x."
 

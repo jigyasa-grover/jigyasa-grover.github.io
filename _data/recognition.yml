@@ -210,7 +210,7 @@ media_features:
     width: 1280
     height: 720
     focal: "left center"
-    takeaway: "Unpacking silent failure modes in multi-step agents—from unbounded tool loops to missing trajectory evaluations—and how Uber-scale ML teams fix them."
+    takeaway: "Unpacking silent failure modes in multi-step agents (from unbounded tool loops to missing trajectory evaluations) and how Uber-scale ML teams fix them."
     summary: "In-depth technical conversation dissecting the hidden cost of broken AI agents, deterministic vs. agentic routing decisions, and production evaluation pipelines."
     tags: ["Agentic Evaluation", "Production ML", "Podcast"]
     cta_label: "Watch Episode on YouTube"
@@ -287,7 +287,7 @@ media_features:
     width: 1200
     height: 600
     focal: "center 20%"
-    takeaway: "Jigyasa Grover shares what worked—and what she'd change—about the engineering résumés, open-source proof of work, and systems ownership that landed ML roles at Meta and X."
+    takeaway: "Jigyasa Grover shares what worked, and what she'd change, about the engineering résumés, open-source proof of work, and systems ownership that landed ML roles at Meta and X."
     summary: "Profiled by Business Insider ('The Résumés That Landed a Meta Internship and X Full-Time Role') breaking down the concrete engineering portfolio, research artifacts, and resume framing behind Silicon Valley ML offers."
     tags: ["Business Insider", "ML Engineering", "Silicon Valley"]
     cta_label: "Read Feature on Business Insider"
@@ -325,7 +325,7 @@ media_features:
     width: 1280
     height: 720
     focal: "left 28%"
-    takeaway: "Why enterprise AI pilots stall between proof-of-concept and production—and how data readiness, workflow fit, and measurable ROI close the gap."
+    takeaway: "Why enterprise AI pilots stall between proof-of-concept and production, and how data readiness, workflow fit, and measurable ROI close the gap."
     summary: "On-site executive video interview recorded at Google Cloud Next '25 examining enterprise agent adoption anti-patterns, internal tooling governance, and production metrics."
     tags: ["Enterprise AI", "Google Cloud Next", "Video Interview"]
     cta_label: "Watch Interview on YouTube"
@@ -344,7 +344,7 @@ media_features:
     width: 1280
     height: 720
     focal: "center center"
-    takeaway: "Three intentional career lessons—technical roadmapping, high-agency execution, and compounding mentorship—that shaped machine learning leadership across Meta, X, and Google ecosystems."
+    takeaway: "Three intentional career lessons (technical roadmapping, high-agency execution, and compounding mentorship) that shaped machine learning leadership across Meta, X, and Google ecosystems."
     summary: "Featured profile in Business Insider ('3 Lessons an AI Expert Says Shaped Her Tech Career') on sustaining long-term momentum and navigating senior machine learning roles in Big Tech."
     tags: ["Business Insider", "Tech Leadership", "Profile"]
     cta_label: "Read Profile on Business Insider"
@@ -440,7 +440,7 @@ media_features:
     width: 1280
     height: 718
     focal: "center center"
-    takeaway: "Featured on the Shoreline Amphitheatre main keynote screen—introduced by Sundar Pichai—sharing early production insights on Gemini 1.5 Pro's 1-million-token context window."
+    takeaway: "Featured on the Shoreline Amphitheatre main keynote screen, introduced by Sundar Pichai, sharing early production insights on Gemini 1.5 Pro's 1-million-token context window."
     summary: "Broadcast globally during the flagship Google I/O 2024 opening keynote, highlighting how ultra-long-context multimodal models transform developer workflows and retrieval architectures."
     tags: ["Google I/O Keynote", "Gemini 1.5 Pro", "147K+ Views"]
     cta_label: "Watch Google I/O Keynote Segment"
