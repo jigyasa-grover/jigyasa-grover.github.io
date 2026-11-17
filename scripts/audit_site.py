@@ -262,6 +262,8 @@ def main() -> None:
             "Claude-User",
             "PerplexityBot",
             "Perplexity-User",
+            "Google-Agent",
+            "Google-CloudVertexBot",
             "Google-Extended",
             "Applebot-Extended",
         ):
@@ -323,6 +325,8 @@ def main() -> None:
             errors.append(f"SUNSET UNIVERSAL ANALYTICS in {rel_path}")
         if "adsbygoogle" in raw:
             errors.append(f"ADSENSE SCRIPT FOUND in {rel_path}")
+        if 'itemtype="https://schema.org/BlogPosting"' in raw:
+            errors.append(f"DUPLICATE INCOMPLETE MICRODATA BlogPosting FOUND in {rel_path}")
 
         standalone_paths = {
             "/index.html",
@@ -393,6 +397,19 @@ def main() -> None:
                     same_as = person_nodes[0].get("sameAs", [])
                     if len(same_as) != len(set(same_as)):
                         errors.append(f"DUPLICATE URLS IN Person.sameAs in {rel_path}")
+                    if not person_nodes[0].get("hasCredential"):
+                        errors.append(f"MISSING Person.hasCredential E-E-A-T SCHEMA in {rel_path}")
+                website_nodes = [n for n in graph if n.get("@id") == "https://jigyasa-grover.github.io/#website"]
+                if website_nodes and not website_nodes[0].get("potentialAction"):
+                    errors.append(f"MISSING WebSite SearchAction in {rel_path}")
+                for node in graph:
+                    if node.get("@type") == "VideoObject" and not node.get("uploadDate"):
+                        errors.append(f"MISSING uploadDate on VideoObject in {rel_path}")
+                    if node.get("@type") == "ItemList":
+                        for li in node.get("itemListElement", []):
+                            item = li.get("item", {})
+                            if item.get("@type") == "VideoObject" and not item.get("uploadDate"):
+                                errors.append(f"MISSING uploadDate on ItemList VideoObject in {rel_path}")
                 if rel_path in ("/index.html", "/about.html") and "ProfilePage" not in gtypes:
                     errors.append(f"MISSING ProfilePage SCHEMA in {rel_path}")
                 if rel_path == "/publications/index.html" and not ({"Book", "ScholarlyArticle"} <= gtypes):

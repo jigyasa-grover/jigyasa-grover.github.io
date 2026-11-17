@@ -35,3 +35,21 @@ partnerships:
     a: "Across LinkedIn (325K+ annual impressions, 14.5K+ followers), GitHub (74+ repos), X, creator video, and her technical blog, 82% of her audience are senior technical practitioners and buyers—Staff+ Engineers, Engineering Directors, VPs, Founders, and C-Suite leaders."
   - q: "What should GTM and marketing teams include when inquiring about a sponsorship?"
     a: "Share your product URL, target developer or enterprise AI buyer persona, preferred channel or Full-Stack Launch Bundle, target launch window, and sandbox access—or book standard packages directly via Passionfroot, Naano, or 8x."
+
+work_with_me:
+  - q: "What collaboration tracks does Jigyasa Grover offer?"
+    a: "Six tracks: AI Startup & GTM Advisory (via Afterdays & Intro), Global Keynotes & Executive Panels, Corporate AI Training & Workshops, AI Go-To-Market & Developer Marketing Partnerships (via Passionfroot, Naano & 8x), Books & Curriculum Authoring, and Press & Broadcast Commentary."
+  - q: "What is the fastest way to book a 1:1 consultation or developer launch campaign?"
+    a: "Book instant 1:1 video consultations on Intro (5.0★ verified reviews), scope sponsored developer or AI launch campaigns directly via Passionfroot, Naano, or 8x, or submit custom scopes through the direct inquiry form (typical response within 48 hours)."
+
+projects:
+  - q: "What open-source AI, Gemini, and Cloud TPU projects has Jigyasa Grover built?"
+    a: "Highlights across her 74+ GitHub repositories include TorchTPU Doctor (2,537× LoRA speedup on Cloud TPU v6e plus upstream Hugging Face PRs), Proof of Work (Gemini agentic video understanding), Startup on a Shoestring (Google Antigravity token circuit breakers), Kinetic Gemma 3 Cloud TPU fine-tuning, Trust at Top Speed (split-brain Gemini Nano + Cloud Run AI Racing Coach), Critic's Cut (multilingual Google ADK multi-agent system), and Vertex AI PAIR LLM Comparator benchmarks."
+  - q: "Are the repositories, Agent Skills, and Colab notebooks free to fork and run?"
+    a: "Yes. Open-source reference implementations, Agent Skills, Google Colab notebooks, and official LinkedIn Learning course companion labs are publicly available at github.com/jigyasa-grover."
+
+press:
+  - q: "Where has Jigyasa Grover been featured in global press and broadcasts?"
+    a: "She has been featured on the Google I/O main keynote stage (introduced by Sundar Pichai), Google's official Gemini Omni Flash global launch video, Google Cloud Tech documentaries, Forbes, Business Insider, Communications of the ACM, Google for Developers Blog, VentureBeat, Observer, MIT Sloan × BCG, Grazia UK, UN ITU, and NTD Live TV."
+  - q: "How should event organizers and journalists pronounce and credit Jigyasa Grover?"
+    a: "Jigyasa Grover is pronounced jig-YAH-sah GROH-ver (/dʒɪɡˈjɑːsɑː ˈɡroʊvər/). Credit her as Machine Learning Engineer (Tech Lead) at Uber, Google Developer Advisory Board (gDAB) member, 13× AI & Open Source Award Winner, and co-author of Sculpting Data for ML, using the approved 50-word or 150-word bios and portraits on this page."

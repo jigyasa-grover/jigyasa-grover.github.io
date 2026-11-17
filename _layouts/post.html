@@ -6,7 +6,7 @@ layout: default
 {% assign read_mins = words | divided_by: 210 | plus: 1 %}
 {% assign canonical_url = site.url | append: page.url %}
 
-<article class="post-shell" itemscope itemtype="https://schema.org/BlogPosting">
+<article class="post-shell">
   <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
@@ -28,7 +28,7 @@ layout: default
         {% if page.url == "/archive/" %}
           <span>Complete Early Open-Source &amp; GSoC Archive (2015–2017)</span>
         {% else %}
-          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
           <span aria-hidden="true">·</span>
           <span>{{ read_mins }} min read</span>
           <span aria-hidden="true">·</span>
@@ -36,10 +36,10 @@ layout: default
         {% endif %}
       </div>
 
-      <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+      <h1 class="post-title">{{ page.title }}</h1>
 
       {% if meta and meta.summary %}
-        <p class="post-summary-box" itemprop="description">{{ meta.summary }}</p>
+        <p class="post-summary-box">{{ meta.summary }}</p>
       {% elsif page.archival and page.original_url %}
         <p class="post-archival-note">
           Preserved from Jigyasa Grover's early open-source &amp; Google Summer of Code journal (<a href="{{ page.original_url }}" target="_blank" rel="noopener">original WordPress entry ↗</a>).
@@ -72,7 +72,7 @@ layout: default
     </header>
 
     <div class="post-layout">
-      <div id="post-prose" class="post-prose" itemprop="articleBody">
+      <div id="post-prose" class="post-prose">
         {{ content }}
       </div>
 

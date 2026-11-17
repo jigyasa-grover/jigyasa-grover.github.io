@@ -118,6 +118,47 @@
         "B2B AI Product Launches",
         "Technical Creator and Brand Partnerships"
       ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Machine Learning Engineer & Principal AI Strategist",
+        "occupationLocation": {
+          "@type": "City",
+          "name": "San Francisco, California, USA"
+        },
+        "skills": "Production ML Ranking, Agentic AI Architecture, Google ADK, Model Context Protocol (MCP), LLM Evaluation, Cloud TPU Fine-Tuning, Developer Go-To-Market (GTM)"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "M.S. in Computer Science (Artificial Intelligence Specialization)",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of California, San Diego",
+            "url": "https://ucsd.edu/"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Google Developer Expert (AI/ML)",
+          "url": "https://developers.google.com/profile/u/jigyasa-grover",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Google Developers"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "badge",
+          "name": "Linux Foundation Open Source Summit Program Committee",
+          "url": "https://www.credly.com/badges/89abb1ed-e032-49e7-adfc-f24efbe2682a",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "The Linux Foundation"
+          }
+        }
+      ],
       "sameAs": {{ id.same_as | jsonify }}
     },
     {
@@ -136,7 +177,15 @@
       "publisher": {
         "@id": "https://jigyasa-grover.github.io/#person"
       },
-      "inLanguage": "en-US"
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://jigyasa-grover.github.io/blog/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
     {% if page.layout == "post" and page.noindex != true %},
     {
@@ -160,6 +209,7 @@
       },
       "image": {{ social_image | jsonify }},
       "inLanguage": "en-US",
+      "isAccessibleForFree": true,
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": ["h1", ".post-summary-box"]
@@ -167,6 +217,13 @@
       {% if post_meta and post_meta.tags %},
       "keywords": {{ post_meta.tags | join: ", " | jsonify }},
       "articleSection": {{ post_meta.category | jsonify }}
+      {% endif %}
+      {% if post_meta and post_meta.repo_url %},
+      "mentions": {
+        "@type": "SoftwareSourceCode",
+        "codeRepository": {{ post_meta.repo_url | jsonify }},
+        "url": {{ post_meta.repo_url | jsonify }}
+      }
       {% endif %}
     }
     {% elsif page.url == "/" or page.url == "/about" %},
@@ -197,13 +254,18 @@
       "url": {{ canonical_url | jsonify }},
       "name": {{ schema_title | jsonify }},
       "description": {{ schema_desc | jsonify }},
+      "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
       "inLanguage": "en-US",
       "about": {
         "@id": "https://jigyasa-grover.github.io/#person"
       },
       "isPartOf": {
         "@id": "https://jigyasa-grover.github.io/#website"
-      }
+      }{% if page.noindex != true %},
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".page-hero__lead"]
+      }{% endif %}
     }
     {% endif %}
     {% if page.url != "/" and page.noindex != true %},
@@ -347,6 +409,28 @@
       "actor": {
         "@id": "https://jigyasa-grover.github.io/#person"
       }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://jigyasa-grover.github.io/speaking/#talks",
+      "name": "Signature AI Keynotes & Conference Sessions by Jigyasa Grover",
+      "itemListElement": [
+        {% for talk in site.data.speaking.signature_talks %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "CreativeWork",
+            "name": {{ talk.title | jsonify }},
+            "description": {{ talk.abstract | jsonify }},
+            "keywords": {{ talk.themes | jsonify }},
+            "author": {
+              "@id": "https://jigyasa-grover.github.io/#person"
+            }
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
     }
     {% endif %}
     {% if page.url == "/highlights/" %},
@@ -364,6 +448,7 @@
             "name": {{ v.title | jsonify }},
             "description": {{ v.summary | jsonify }},
             "thumbnailUrl": {% if v.thumbnail %}{{ "https://jigyasa-grover.github.io" | append: v.thumbnail | jsonify }}{% else %}{{ "https://i.ytimg.com/vi/" | append: v.video_id | append: "/hqdefault.jpg" | jsonify }}{% endif %},
+            "uploadDate": {{ v.upload_date | default: "2025-01-01T00:00:00Z" | jsonify }},
             "contentUrl": {{ v.url | jsonify }},
             "embedUrl": {{ "https://www.youtube.com/embed/" | append: v.video_id | jsonify }},
             "actor": {

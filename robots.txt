@@ -43,6 +43,7 @@ User-agent: Claude-Web
 User-agent: anthropic-ai
 User-agent: PerplexityBot
 User-agent: Perplexity-User
+User-agent: Google-Agent
 User-agent: Google-CloudVertexBot
 User-agent: DuckAssistBot
 User-agent: Meta-ExternalFetcher

@@ -245,6 +245,13 @@
   }
 
   if (searchInput) {
+    try {
+      var blogParams = new URLSearchParams(window.location.search);
+      var initialQuery = blogParams.get("q");
+      if (initialQuery) {
+        searchInput.value = initialQuery;
+      }
+    } catch (e) { }
     searchInput.addEventListener("input", applyBlogFilter);
   }
   applyBlogFilter();
