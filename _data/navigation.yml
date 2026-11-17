@@ -26,6 +26,7 @@ primary:
     match_urls:
       - "/press/"
       - "/highlights/"
+      - "/media-kit/"
 
 footer_explore:
   - label: "About & Biography"
@@ -54,3 +55,5 @@ footer_collaborate:
     url: "/teaching/"
   - label: "Technical Content Partnerships"
     url: "/partnerships/"
+  - label: "Creator & Hardware PR Kit"
+    url: "/media-kit/"

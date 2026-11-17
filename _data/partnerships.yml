@@ -181,3 +181,63 @@ brief_checklist:
   - label: "Sandbox access & budget tier"
     detail: "SDK/API access details and target scope, or book standard packages instantly via Passionfroot, Naano, or 8x."
 
+creator_kit:
+  base_hub: "San Francisco Bay Area (SFO / SJC)"
+  availability: "Local in San Francisco & Silicon Valley for embargoed hands-on demos, studio shoots, and VIP launch dinners; available worldwide for sponsored conference keynotes, Creator-in-Residence programs, and summit hospitality."
+  tracks:
+    - number: "01"
+      kicker: "SF Bay Area & Global Fly-Outs"
+      title: "VIP Creator Events, Launch Dinners & Embargoed Previews"
+      summary: "Camera-ready on-site presence for private AI and hardware previews, creator summits, founder dinners, and hands-on launch showcases, delivering authentic 9:16 Reels, X threads, and LinkedIn executive recaps."
+      tags: ["SF Bay Area Local", "Embargo-Ready", "9:16 Reels + LinkedIn"]
+    - number: "02"
+      kicker: "Hardware & Gadget Seeding"
+      title: "Tech Hardware, AI Devices, Wearables & Studio Gear Reviews"
+      summary: "Practitioner-tested reviews evaluating AI laptops, GPU workstations, smart glasses, AI wearables, edge inference kits, monitors, keyboards, and travel creator gear inside real coding, ML, and 200-plus-flight workflows."
+      tags: ["AI PCs & GPUs", "Smart Glasses & Wearables", "Studio & Travel Tech"]
+    - number: "03"
+      kicker: "Hosted Travel & Hospitality"
+      title: "Conference Creator-in-Residence & Sponsored Stage Coverage"
+      summary: "Official summit creator and keynote packages combining main-stage talks or panels with VIP speaker-lounge executive interviews, vertical event Reels, and high-signal LinkedIn breakdowns (with travel and lodging covered by the organizer or an exhibiting sponsor)."
+      tags: ["Paid Travel & Hotel", "C-Suite Interviews", "Keynote + Creator Bundle"]
+    - number: "04"
+      kicker: "Multi-Platform Sponsorships"
+      title: "AI, Cloud & Consumer Tech Brand Campaigns"
+      summary: "High-trust sponsored storytelling across LinkedIn (82% senior tech buyers), YouTube, Instagram Reels, TikTok, X, GitHub, and technical essays via Passionfroot, Naano, 8x, or direct agency brief."
+      tags: ["Passionfroot · Naano · 8x", "B2B & Prosumer Tech", "Code + Video"]
+  vip_event_highlights:
+    - event: "Google I/O Main Keynote & Creator Ecosystem"
+      location: "Mountain View, CA"
+      detail: "Introduced by Sundar Pichai on the Shoreline main stage (147K+ views) plus multi-year Google I/O AI Gatherings and gDAB briefings."
+      url: "https://www.youtube.com/live/XEzRZ35urlk?t=516"
+    - event: "Google Track Day: On-Track Edge AI Racing Documentary"
+      location: "Thunderhill Raceway, CA"
+      detail: "Field-tested real-time Gemini Nano on-device telemetry inside a live race car for Google Cloud Tech's documentary film."
+      url: "https://www.youtube.com/watch?v=VSgKWy2iRWE"
+    - event: "RAISE AI Summit & MACHINA Official AI Ambassador"
+      location: "Paris, France"
+      detail: "Invited PRO guest and AI Partner/Ambassador covering European enterprise and frontier AI stages at the Louvre."
+      url: "https://www.raisesummit.com/"
+    - event: "Google Invite-Only AI Community Summit"
+      location: "Bali, Indonesia"
+      detail: "Selected global AI/ML Google Developer Expert attendee for closed-door product roadmaps and creator collaborations."
+      url: "https://developers.google.com/profile/u/jigyasa-grover"
+    - event: "Google Gemini Early Access & Creator Friendsgiving"
+      location: "San Francisco, CA"
+      detail: "Hands-on embargoed testing (Gemini Ultra, Omni Flash official launch video, Gemini 4 Carbon) and SF creator dinners."
+      url: "https://www.youtube.com/watch?v=3iZzf_NRxDQ"
+    - event: "Codemotion Milan, TEDAI SF & World Summit AI"
+      location: "Milan · San Francisco · Montréal"
+      detail: "International keynote speaker, Global AI Ambassador, and on-the-ground vertical video creator across flagship summits."
+      url: "https://www.instagram.com/p/DfigH-XuRoe/"
+  hardware_categories:
+    - label: "AI Laptops, Workstations & Local Compute"
+      detail: "High-memory developer laptops, AI PCs, local GPU/TPU dev boxes, ultrawide/portable displays, and ergonomic mechanical keyboards tested under real PyTorch and agentic coding loads."
+    - label: "Smart Glasses, AI Wearables & Edge Devices"
+      detail: "Multimodal smart glasses, voice/meeting capture pins and recorders, smart rings, noise-canceling travel audio, and pocket edge-AI developer kits."
+    - label: "Creator Camera, Audio & Conference Travel Rig"
+      detail: "4K pocket gimbal and mirrorless cameras, dual wireless lavalier mics, desktop XLR/USB microphones, portable key lights, and carry-on power gear built for 20+ countries of stage travel."
+    - label: "PR Seeding & Embargo Protocol"
+      detail: "Trusted pre-GA tester (Google Gemini Ultra, Omni Flash & Carbon) experienced with strict hardware/software embargoes. Request SF Bay Area shipping details via the inquiry form."
+
+

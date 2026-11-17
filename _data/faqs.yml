@@ -17,8 +17,8 @@ advisory:
 speaking:
   - q: "What are Jigyasa's signature keynote and conference topics?"
     a: "Agentic AI architecture ('When NOT to Build an Agent'), Agent-Native APIs & Cost Guardrails, Quantitative LLM Evaluation & AI Security, Split-Brain Edge + Cloud Real-Time AI, and Data-Centric ML."
-  - q: "Where is she based for event travel?"
-    a: "San Francisco Bay Area (SFO / SJC), available for in-person international keynotes, executive summits, and virtual events."
+  - q: "Where is she based for event travel, and how are travel and accommodation handled?"
+    a: "She is based in the San Francisco Bay Area (SFO / SJC) and travels globally for keynotes, executive panels, and official conference Creator-in-Residence programs with travel and hotel hospitality covered by the event organizer or an exhibiting ecosystem sponsor."
 
 teaching:
   - q: "What organizations has Jigyasa delivered corporate AI training with?"
@@ -53,3 +53,11 @@ press:
     a: "She has been featured on the Google I/O main keynote stage (introduced by Sundar Pichai), Google's official Gemini Omni Flash global launch video, Google Cloud Tech documentaries, Forbes, Business Insider, Communications of the ACM, Google for Developers Blog, VentureBeat, Observer, MIT Sloan × BCG, Grazia UK, UN ITU, and NTD Live TV."
   - q: "How should event organizers and journalists pronounce and credit Jigyasa Grover?"
     a: "Jigyasa Grover is pronounced jig-YAH-sah GROH-ver (/dʒɪɡˈjɑːsɑː ˈɡroʊvər/). Credit her as Machine Learning Engineer (Tech Lead) at Uber, Google Developer Advisory Board (gDAB) member, 13× AI & Open Source Award Winner, and co-author of Sculpting Data for ML, using the approved 50-word or 150-word bios and portraits on this page."
+
+media_kit:
+  - q: "Does Jigyasa accept tech hardware, AI gadgets, and electronics for review or PR seeding?"
+    a: "Yes. She reviews and features select AI laptops, developer workstations, smart glasses, AI wearables, edge inference kits, and creator studio/travel electronics that fit authentic ML engineering and global travel workflows. PR teams can request SF Bay Area shipping details and embargo coordination via Work With Me."
+  - q: "Is she available for VIP creator events in San Francisco and sponsored global summits?"
+    a: "Yes. Based in the San Francisco Bay Area (SFO / SJC), she attends local embargoed hardware demos, founder/creator dinners, and launch showcases, and travels internationally for hosted creator summits and flagship launches."
+  - q: "How do conference Creator-in-Residence or sponsor-backed travel packages work?"
+    a: "Conferences and exhibiting cloud, AI, or hardware sponsors can book a combined Stage + Creator Coverage package (keynote or panel, on-site executive interviews, 9:16 vertical event Reels, and LinkedIn recaps) with flights and hotel hospitality covered."

@@ -285,7 +285,11 @@
       },
       "Content & Brand Partnerships": {
         hint: "product URL & target developer persona, preferred surface or Full-Stack Launch Bundle (GitHub repo, blog essay, LinkedIn/X, 9:16 video), launch window, and sandbox access.",
-        placeholder: "Share your product URL, target audience, preferred surface or bundle, launch window, and budget range…"
+        placeholder: "Share your product URL, target audience, preferred surface or bundle, launch window, and scope…"
+      },
+      "Creator Events & Hardware PR": {
+        hint: "event date & city (SF Bay Area local or hosted global travel/hotel), or hardware/gadget product details, embargo schedule, and whether you need SF shipping coordinates.",
+        placeholder: "Share VIP event details, sponsored conference travel dates, or hardware/gadget PR seeding specs & embargo timeline…"
       },
       "Technical Collaborations": {
         hint: "publisher, research group, or open-source project context, proposed deliverable (curriculum, chapter, benchmark, or co-authored study), and schedule.",
@@ -738,7 +742,9 @@
           }
           return formatToolResult({
             work_with_me_url: ctx.collaboration.work_with_me_url,
+            media_kit_url: ctx.collaboration.media_kit_url,
             booking_platforms: ctx.collaboration.booking_platforms,
+            creator_kit: ctx.collaboration.creator_kit,
             gtm_and_ai_marketing: ctx.collaboration.gtm_and_ai_marketing,
             partnership_surfaces: ctx.collaboration.partnership_surfaces,
             partnership_packages: ctx.collaboration.partnership_packages,
@@ -927,6 +933,7 @@
                 "Corporate AI Training",
                 "Technical Collaborations",
                 "Content & Brand Partnerships",
+                "Creator Events & Hardware PR",
                 "Media & Interviews",
                 "Other Inquiries"
               ],
