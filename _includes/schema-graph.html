@@ -32,13 +32,20 @@
       "familyName": "Grover",
       "url": "https://jigyasa-grover.github.io/",
       "image": "https://jigyasa-grover.github.io/assets/images/opt/profile_photo.jpg",
-      "jobTitle": "Machine Learning Engineer, Agentic AI Educator, Author & Advisor",
+      "jobTitle": "Machine Learning Engineer (Tech Lead), B2B AI & DevTools Creator, Educator, Author & Advisor",
       "description": {{ id.short_bio_50 | jsonify }},
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "Google Knowledge Graph",
-        "value": "https://g.co/kgs/Lvk5yk"
-      },
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Google Knowledge Graph",
+          "value": "https://g.co/kgs/Lvk5yk"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Google Knowledge Graph MID",
+          "value": "/g/11nkd9r5jp"
+        }
+      ],
       "homeLocation": {
         "@type": "Place",
         "name": "San Francisco Bay Area, California, USA"
@@ -118,16 +125,77 @@
         "AI Go-To-Market (GTM) Strategy",
         "Developer Marketing and DevRel",
         "B2B AI Product Launches",
-        "Technical Creator and Brand Partnerships"
+        "Technical Creator and Brand Partnerships",
+        "AI Hardware and Developer Workstation Reviews",
+        "YouTube Shorts and Technical Video Creation",
+        "Technical Newsletter and Engineering Blogging"
       ],
-      "hasOccupation": {
-        "@type": "Occupation",
-        "name": "Machine Learning Engineer & Principal AI Strategist",
-        "occupationLocation": {
-          "@type": "City",
-          "name": "San Francisco, California, USA"
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Machine Learning Engineer (Tech Lead) & Principal AI Strategist",
+          "occupationLocation": {
+            "@type": "City",
+            "name": "San Francisco, California, USA"
+          },
+          "skills": "Production ML Ranking, Agentic AI Architecture, Google ADK, Model Context Protocol (MCP), LLM Evaluation, Cloud TPU Fine-Tuning, Developer Go-To-Market (GTM)"
         },
-        "skills": "Production ML Ranking, Agentic AI Architecture, Google ADK, Model Context Protocol (MCP), LLM Evaluation, Cloud TPU Fine-Tuning, Developer Go-To-Market (GTM)"
+        {
+          "@type": "Occupation",
+          "name": "B2B AI, DevTools & Tech Hardware Creator",
+          "occupationLocation": {
+            "@type": "City",
+            "name": "San Francisco, California, USA"
+          },
+          "skills": "Sponsored Developer Launches, Runnable GitHub Reference Apps, YouTube Shorts (@JigyasaGrover), Instagram Reels, LinkedIn & X Thought Leadership, AI Hardware & Gadget Reviews, Conference Creator-in-Residence"
+        }
+      ],
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/FollowAction",
+          "interactionService": {
+            "@type": "WebSite",
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/jigyasa-grover/"
+          },
+          "userInteractionCount": 14500
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/WatchAction",
+          "interactionService": {
+            "@type": "WebSite",
+            "name": "YouTube (@JigyasaGrover)",
+            "url": "https://www.youtube.com/@JigyasaGrover"
+          },
+          "userInteractionCount": 300000
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/SubscribeAction",
+          "interactionService": {
+            "@type": "WebSite",
+            "name": "LinkedIn Learning",
+            "url": "https://www.linkedin.com/learning/instructors/jigyasa-grover"
+          },
+          "userInteractionCount": 44000
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/FollowAction",
+          "interactionService": {
+            "@type": "WebSite",
+            "name": "X (Twitter)",
+            "url": "https://x.com/jigyasa_grover"
+          },
+          "userInteractionCount": 2500
+        }
+      ],
+      "agentInteractionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "https://schema.org/WriteAction",
+        "userInteractionCount": 90
       },
       "hasCredential": [
         {
@@ -303,6 +371,23 @@
         }
         {% endif %}
       ]
+    }
+    {% endif %}
+    {% if page.url == "/blog/" %},
+    {
+      "@type": "Blog",
+      "@id": "https://jigyasa-grover.github.io/blog/#blog",
+      "url": "https://jigyasa-grover.github.io/blog/",
+      "name": "Jigyasa Grover — AI Engineering Blog & Technical Newsletter",
+      "description": {{ schema_desc | jsonify }},
+      "inLanguage": "en-US",
+      "webFeed": "https://jigyasa-grover.github.io/feed.xml",
+      "author": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "publisher": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      }
     }
     {% endif %}
     {% if page.url == "/publications/" %},

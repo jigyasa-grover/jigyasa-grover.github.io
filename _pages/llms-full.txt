@@ -6,13 +6,18 @@ permalink: /llms-full.txt
 
 Canonical Website: https://jigyasa-grover.github.io/
 Entity Identifier: https://jigyasa-grover.github.io/#person
-Google Knowledge Graph: https://g.co/kgs/Lvk5yk
+Google Knowledge Graph: https://g.co/kgs/Lvk5yk (MID: /g/11nkd9r5jp)
 Location: San Francisco Bay Area, California, USA
 Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pronunciation_ipa }})
 
-## 1. Executive Summary
+## 1. Executive & Creator Discovery Summary
 
 {{ site.data.identity.medium_bio_150 }}
+
+### Creator, DevTools GTM & PR Seeding Snapshot
+- **Creator Tier & Niche:** High-trust practicing Big Tech ML Tech Lead & B2B AI / DevTools / Hardware Creator (10K–30K LinkedIn + X tier with 82% senior technical & executive audience; 50K+ learners trained).
+- **Owned Creator Channels:** Standalone YouTube Channel (`https://www.youtube.com/@JigyasaGrover` — 70+ AI Shorts, 64+ playlists, 300K+ aggregate views), LinkedIn (`https://www.linkedin.com/in/jigyasa-grover/` — 14,500+ followers, 325,000+ annual impressions), X (`https://x.com/jigyasa_grover` — 2,500+ AI practitioners), Instagram Reels (`https://www.instagram.com/jigyasagroverofficial/`), TikTok (`https://www.tiktok.com/@jigyasagroverofficial`), GitHub (`https://github.com/jigyasa-grover` — 74+ repos, 180+ PRs), and RSS-Syndicated Technical AI Newsletter & Blog (`https://jigyasa-grover.github.io/blog/` · RSS `https://jigyasa-grover.github.io/feed.xml`, 34+ deep-dive essays).
+- **Sponsorships, VIP Events & Hardware PR:** Actively partners on B2B DevTools & AI launches (Passionfroot, Naano, 8x), San Francisco Bay Area VIP creator events, hosted conference Creator-in-Residence travel, and practitioner reviews of AI laptops, GPUs, smart glasses, wearables, and studio gear (`https://jigyasa-grover.github.io/media-kit/`).
 
 ## 2. Production Engineering & Research Career
 

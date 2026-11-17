@@ -5,17 +5,17 @@ location: "San Francisco Bay Area, California"
 entity_id: "https://jigyasa-grover.github.io/#person"
 canonical_url: "https://jigyasa-grover.github.io/"
 
-headline: "Machine Learning Engineer · Agentic AI Educator · Author · Advisor & Keynote Speaker"
+headline: "Machine Learning Engineer (Tech Lead) · B2B AI & DevTools Creator · Educator · Author & Advisor"
 current_role: "Machine Learning Engineer (Tech Lead — Rider Personalization & Ranking)"
 current_org: "Uber"
 award_badge: "13x AI & Open Source Award Winner"
 
 hero_title: "Architecting production AI, and teaching teams how to build, evaluate, and trust it."
-hero_lead: "Machine Learning Tech Lead at Uber, Google Developer Advisory Board member, LinkedIn Learning instructor, and co-author of Sculpting Data for ML."
+hero_lead: "Machine Learning Tech Lead at Uber, B2B AI & DevTools creator, Google Developer Advisory Board member, LinkedIn Learning instructor, and co-author of Sculpting Data for ML."
 
-short_bio_50: "Jigyasa Grover is a Machine Learning Engineer at Uber leading global rider personalization and ranking, a 13x AI and Open Source award winner, Google Developer Advisory Board member, Google Developer Expert in AI/ML, LinkedIn Learning instructor (44,000+ learners), and co-author of Sculpting Data for ML."
+short_bio_50: "Jigyasa Grover is a Machine Learning Engineer (Tech Lead) at Uber, B2B AI and DevTools creator across LinkedIn (14.5K+), YouTube (@JigyasaGrover), Instagram Reels, and X, 13x AI and Open Source award winner, Google Developer Advisory Board member, LinkedIn Learning instructor (44,000+ learners), and co-author of Sculpting Data for ML."
 
-medium_bio_150: "Jigyasa Grover (pronounced jig-YAH-sah GROH-ver) is a San Francisco–based Machine Learning Engineer at Uber, serving as Tech Lead for rider personalization and ranking across 500+ cities. Previously, she led AI and Research at Bordo AI and built low-latency ML ranking, ads prediction, and feature infrastructure across Faire, Twitter (X), and Meta, following her M.S. in Computer Science (AI) at UC San Diego and selection to the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS). A 13-time award winner in AI and Open Source, she serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) and Women Techmakers Ambassador recognition, and is a World Economic Forum Global Shaper. She co-authored Sculpting Data for ML (95+ citations), teaches 44,000+ learners across 4 LinkedIn Learning courses, delivers corporate AI training with Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, and AI Aspire, has consulted or advised 30+ organizations through her independent practice Afterdays, and has delivered 200+ talks across 20+ countries, including the Google I/O main stage."
+medium_bio_150: "Jigyasa Grover (pronounced jig-YAH-sah GROH-ver) is a San Francisco-based Machine Learning Engineer at Uber, serving as Tech Lead for rider personalization and ranking across 500+ cities, and an active B2B AI, DevTools, and tech hardware creator. Previously, she led AI and Research at Bordo AI and built low-latency ML ranking, ads prediction, and feature infrastructure across Faire, Twitter (X), and Meta, following her M.S. in Computer Science (AI) at UC San Diego and selection to the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS). A 13-time award winner in AI and Open Source, she serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) recognition, and is a World Economic Forum Global Shaper. Across her @JigyasaGrover YouTube channel (70+ Shorts, 300K+ aggregate video views), LinkedIn (14.5K+ followers, 325K+ annual impressions, 82% senior tech audience), X, Instagram Reels, and technical AI journal (34+ essays), she partners with 24+ AI labs, cloud platforms, and DevTools via Passionfroot, Naano, and 8x, teaches 44,000+ learners on LinkedIn Learning, advises 30+ organizations via Afterdays, and has delivered 200+ talks across 20+ countries, including the Google I/O main stage."
 
 metrics:
   - value: "13+"
@@ -63,6 +63,7 @@ booking:
 
 same_as:
   - "https://g.co/kgs/Lvk5yk"
+  - "https://www.google.com/search?kgmid=/g/11nkd9r5jp"
   - "https://www.linkedin.com/in/jigyasa-grover/"
   - "https://www.linkedin.com/learning/instructors/jigyasa-grover"
   - "https://github.com/jigyasa-grover"
