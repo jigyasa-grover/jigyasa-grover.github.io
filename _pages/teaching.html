@@ -3,42 +3,58 @@ layout: page
 title: "Corporate AI Training, Workshops & Courses"
 heading: "Hands-on AI engineering enablement for technical teams and leaders."
 eyebrow: "Pillar 03 · Courses & Workshops"
-lead: "Taking engineering organizations from prompt prototypes to evaluated, production-grade agentic and ML systems."
+lead: "Taking engineering organizations from prompt prototypes to evaluated, production-grade agentic, ML, and developer
+AI workflows."
 hero_cta_label: "Book an AI Workshop →"
 hero_cta_url: "/work-with-me/?topic=Corporate%20AI%20Training#contact"
 seo_title: "Corporate AI Training, Workshops & Courses — Jigyasa Grover"
-description: "Enterprise AI training and LinkedIn Learning courses (44K+ learners) delivered with Morgan Stanley, FedEx, Accenture, Roblox, SVSG, AI Aspire & Udacity."
+description: "Enterprise AI training and LinkedIn Learning courses (44K+ learners) delivered with Morgan Stanley, FedEx,
+Accenture, Roblox, SVSG, AI Aspire & Udacity."
 faq_key: "teaching"
 permalink: /teaching/
 redirect_from:
-  - /workshops/
-  - /courses/
+- /workshops/
+- /courses/
 ---
+{% assign cdata = site.data.courses %}
 
-<!-- Enterprise Live Workshops -->
+<!-- 1. Enterprise Live Workshops & Engagement Formats -->
 <section class="content-section" aria-labelledby="workshops-heading">
-  <div class="eyebrow">Live Corporate Enablement</div>
-  <h2 id="workshops-heading">Customizable enterprise AI workshops</h2>
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Live Corporate Enablement</div>
+      <h2 id="workshops-heading">Customizable enterprise AI workshops</h2>
+    </div>
+    <a class="section-header__link" href="#capabilities-heading">All 6 production capability domains ↓</a>
+  </div>
 
   <div class="callout-strip">
     <div class="eyebrow">Corporate Training &amp; Enablement Delivered With</div>
     <div class="brand-logo-strip brand-logo-strip--compact" aria-label="Corporate training and enablement clients">
-      {% for client in site.data.courses.training_client_logos %}
-        <span class="brand-logo-strip__item">
-          <img
-            src="{{ client.logo }}"
-            width="{{ client.width }}"
-            height="{{ client.height }}"
-            loading="lazy"
-            alt="{{ client.name }}"
-          />
-        </span>
+      {% for client in cdata.training_client_logos %}
+      <span class="brand-logo-strip__item">
+        <img src="{{ client.logo }}" width="{{ client.width }}" height="{{ client.height }}" loading="lazy"
+          alt="{{ client.name }}" />
+      </span>
       {% endfor %}
     </div>
   </div>
 
+  <div class="mode-strip mb-lg" aria-label="Team engagement formats">
+    {% for mode in cdata.engagement_modes %}
+    <div class="mode-strip__cell">
+      <div class="mode-strip__meta">{{ mode.number }} · {{ mode.kicker }}</div>
+      <h3 class="mode-strip__title">{{ mode.title }}</h3>
+      <p class="mode-strip__desc">{{ mode.summary }}</p>
+      {% if mode.cta_url %}
+      <a class="mode-strip__link" href="{{ mode.cta_url }}">{{ mode.cta_label }}</a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
   <div class="project-grid">
-    {% for w in site.data.courses.workshops %}
+    {% for w in cdata.workshops %}
     <article class="project-dossier">
       <div>
         <div class="project-dossier__meta">
@@ -48,42 +64,88 @@ redirect_from:
         <h3 class="project-dossier__title">{{ w.title }}</h3>
         <p class="project-dossier__summary">{{ w.abstract }}</p>
       </div>
-      <div class="dossier-footnote">
-        <strong>Audience:</strong> {{ w.audience }}
+      <div>
+        {% if w.tools %}
+        <div class="tag-row">
+          {% for t in w.tools %}
+          <span class="mono-tag">{{ t }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        <div class="dossier-footnote">
+          <strong>Audience:</strong> {{ w.audience }}
+        </div>
       </div>
     </article>
     {% endfor %}
   </div>
 
-  <div class="btn-group mt-lg">
-    <a class="btn btn--accent" href="/work-with-me/?topic=Corporate%20AI%20Training#contact">Request a Workshop Syllabus →</a>
+  <div class="ld-callout mt-lg">
+    <p class="ld-callout__text">
+      <strong>Corporate L&amp;D &amp; Custom Cohorts:</strong> {{ cdata.ld_reimbursement_note }}
+    </p>
+    <div class="btn-group">
+      <a class="btn btn--accent" href="/work-with-me/?topic=Corporate%20AI%20Training#contact">Request a Workshop
+        Syllabus →</a>
+      <a class="btn btn--secondary" href="/advisory/">Need Architecture Advisory? →</a>
+    </div>
   </div>
 </section>
 
-<!-- Published Video Courses -->
+<!-- 2. Broad Production Capability Domains & Room Calibration -->
+<section class="content-section--bordered" aria-labelledby="capabilities-heading">
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Applied to Your Stack · Not a Fixed Generic Curriculum</div>
+      <h2 id="capabilities-heading">Production AI &amp; ML capability areas</h2>
+    </div>
+    <a class="section-header__link" href="/projects/">Inspect open-source lab repos →</a>
+  </div>
+
+  <div class="capability-matrix mb-lg">
+    {% for dom in cdata.capability_domains %}
+    <article class="capability-cell">
+      <div class="capability-cell__num">{{ dom.number }}</div>
+      <h3 class="capability-cell__title">{{ dom.title }}</h3>
+      <p class="capability-cell__summary">{{ dom.summary }}</p>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="room-box" aria-labelledby="room-calibration-heading">
+    <div class="eyebrow mb-xs">Calibrated for Technical Depth</div>
+    <h3 id="room-calibration-heading" class="room-box__heading">The right depth for the people in the room</h3>
+    <div class="room-box__grid">
+      {% for rp in cdata.room_profiles %}
+      <div class="room-box__item">
+        <div class="room-box__group">{{ rp.group }}</div>
+        <p class="room-box__focus">{{ rp.focus }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 3. Published Video Courses -->
 <section class="content-section--bordered" aria-labelledby="courses-catalog-heading">
   <div class="section-header">
     <div>
-      <div class="eyebrow">On-Demand Curriculum · {{ site.data.courses.total_learners }} Learners · {{ site.data.courses.avg_rating }} ({{ site.data.courses.total_ratings }} Ratings)</div>
+      <div class="eyebrow">On-Demand Curriculum · {{ cdata.total_learners }} Learners · {{ cdata.avg_rating }} ({{
+        cdata.total_ratings }} Ratings)</div>
       <h2 id="courses-catalog-heading">LinkedIn Learning &amp; Udacity Courses</h2>
     </div>
     <div class="btn-group">
-      <a
-        class="btn btn--secondary btn--compact"
-        href="https://www.youtube.com/shorts/WMSSAYHlMYo"
-        target="_blank"
-        rel="noopener"
-        data-cinema="WMSSAYHlMYo"
-        data-cinema-mode="vertical"
+      <a class="btn btn--secondary btn--compact" href="https://www.youtube.com/shorts/WMSSAYHlMYo" target="_blank"
+        rel="noopener" data-cinema="WMSSAYHlMYo" data-cinema-mode="vertical"
         data-cinema-title="Behind the scenes filming at LinkedIn Learning Studios"
-        data-cinema-channel="@JigyasaGrover × LinkedIn Learning"
-      >▶ Studio Reel</a>
-      <a class="section-header__link" href="{{ site.data.courses.linkedin_learning_profile }}" target="_blank" rel="noopener">LinkedIn Learning Profile ↗</a>
+        data-cinema-channel="@JigyasaGrover × LinkedIn Learning">▶ Studio Reel</a>
+      <a class="section-header__link" href="{{ cdata.linkedin_learning_profile }}" target="_blank"
+        rel="noopener">LinkedIn Learning Profile ↗</a>
     </div>
   </div>
 
   <div class="project-grid">
-    {% for c in site.data.courses.courses %}
+    {% for c in cdata.courses %}
     <article class="project-dossier">
       <div>
         <div class="project-dossier__meta">
@@ -96,7 +158,7 @@ redirect_from:
       <div>
         <div class="tag-row">
           {% for t in c.topics %}
-            <span class="mono-tag">{{ t }}</span>
+          <span class="mono-tag">{{ t }}</span>
           {% endfor %}
         </div>
         <div class="dossier-links">

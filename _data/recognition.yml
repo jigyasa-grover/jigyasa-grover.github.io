@@ -715,6 +715,14 @@ brand_partners:
   - "Guidde"
   - "Appsmith"
   - "Simplilearn"
+  - "CreativePro"
+  - "O'Reilly Media"
+  - "Packt"
+  - "Forbes"
+  - "Business Insider"
+  - "VentureBeat"
+  - "Grazia UK"
+  - "Ticker News"
 
 brand_partner_logos:
   - name: "Google"
@@ -771,8 +779,8 @@ brand_partner_logos:
     logo: "/assets/images/brands/fireflies.svg"
     width: 146
     height: 36
-    proof_label: "Partner ↗"
-    url: "https://fireflies.ai/"
+    proof_label: "Read Post ↗"
+    url: "https://x.com/jigyasa_grover/status/2120834106783306142"
   - name: "Qodo"
     category: "Agentic Code Governance"
     logo: "/assets/images/brands/qodo.svg"
@@ -829,6 +837,208 @@ brand_partner_logos:
     height: 36
     proof_label: "Partner ↗"
     url: "https://www.simplilearn.com/"
+  - name: "CreativePro"
+    category: "Design + AI Education"
+    logo: "/assets/images/brands/creativepro.svg"
+    width: 152
+    height: 36
+    proof_label: "Feature ↗"
+    url: "https://creativepro.com/event/design-ai-summit-2025/"
+  - name: "O'Reilly Media"
+    category: "Technical Book Review"
+    logo: "/assets/images/brands/oreilly.svg"
+    width: 124
+    height: 36
+    proof_label: "Editorial ↗"
+    url: "https://www.oreilly.com/library/view/scalable-ai-systems/0642572342883/"
+  - name: "Packt"
+    category: "AI Book Reviewer"
+    logo: "/assets/images/brands/packt.svg"
+    width: 102
+    height: 36
+    proof_label: "Review ↗"
+    url: "/ExploringDeepfakes/"
+  - name: "Forbes"
+    category: "Media & AI Commentary"
+    logo: "/assets/images/brands/forbes.svg"
+    width: 96
+    height: 36
+    proof_label: "Read Feature ↗"
+    url: "https://www.forbes.com/sites/rdaniel-foster/2026/01/24/conversational-video-ai-teaching-machines-the-art-of-being-human/"
+  - name: "Business Insider"
+    category: "Tech & Career Features"
+    logo: "/assets/images/brands/business-insider.svg"
+    width: 176
+    height: 36
+    proof_label: "Read Profile ↗"
+    url: "https://www.businessinsider.com/lessons-from-the-secret-contributed-big-tech-success-2025-3"
+  - name: "VentureBeat"
+    category: "Women in AI & Transform"
+    logo: "/assets/images/brands/venturebeat.svg"
+    width: 156
+    height: 36
+    proof_label: "Award & Press ↗"
+    url: "https://venturebeat.com/2022/07/19/transform-2020-women-in-ai-and-ai-innovation-awards-the-winners-are/"
+  - name: "Grazia UK"
+    category: "Editorial Feature"
+    logo: "/assets/images/brands/grazia.svg"
+    width: 106
+    height: 36
+    proof_label: "Press →"
+    url: "/press/"
+  - name: "Ticker News"
+    category: "Live Broadcast TV"
+    logo: "/assets/images/brands/ticker-news.svg"
+    width: 144
+    height: 36
+    proof_label: "Broadcast →"
+    url: "/press/"
+
+advisory_client_logos:
+  - name: "Google"
+    logo: "/assets/images/brands/google.svg"
+    width: 118
+    height: 36
+  - name: "Anthropic"
+    logo: "/assets/images/brands/anthropic.svg"
+    width: 158
+    height: 36
+  - name: "Meta"
+    logo: "/assets/images/brands/meta.svg"
+    width: 104
+    height: 36
+  - name: "Apple"
+    logo: "/assets/images/brands/apple.svg"
+    width: 104
+    height: 36
+  - name: "Microsoft"
+    logo: "/assets/images/brands/microsoft.svg"
+    width: 138
+    height: 36
+  - name: "Amazon"
+    logo: "/assets/images/brands/amazon.svg"
+    width: 112
+    height: 36
+  - name: "Spotify"
+    logo: "/assets/images/brands/spotify.svg"
+    width: 122
+    height: 36
+  - name: "Adobe"
+    logo: "/assets/images/brands/adobe.svg"
+    width: 112
+    height: 36
+  - name: "Figma"
+    logo: "/assets/images/brands/figma.svg"
+    width: 108
+    height: 36
+  - name: "Atlassian"
+    logo: "/assets/images/brands/atlassian.svg"
+    width: 136
+    height: 36
+  - name: "Coinbase"
+    logo: "/assets/images/brands/coinbase.svg"
+    width: 128
+    height: 36
+  - name: "Grammarly"
+    logo: "/assets/images/brands/grammarly.svg"
+    width: 144
+    height: 36
+  - name: "Windsurf"
+    logo: "/assets/images/brands/windsurf.svg"
+    width: 134
+    height: 36
+  - name: "Superhuman"
+    logo: "/assets/images/brands/superhuman.svg"
+    width: 166
+    height: 36
+  - name: "Remitly"
+    logo: "/assets/images/brands/remitly.svg"
+    width: 118
+    height: 36
+  - name: "FedEx"
+    logo: "/assets/images/brands/fedex.svg"
+    width: 82
+    height: 36
+  - name: "HP"
+    logo: "/assets/images/brands/hp.svg"
+    width: 82
+    height: 36
+  - name: "Southwest Airlines"
+    logo: "/assets/images/brands/southwest.svg"
+    width: 144
+    height: 36
+  - name: "Neutrogena"
+    logo: "/assets/images/brands/neutrogena.svg"
+    width: 132
+    height: 36
+  - name: "Eero"
+    logo: "/assets/images/brands/eero.svg"
+    width: 76
+    height: 36
+  - name: "CommonSpirit Health"
+    logo: "/assets/images/brands/commonspirit.svg"
+    width: 198
+    height: 36
+  - name: "Innodata"
+    logo: "/assets/images/brands/innodata.svg"
+    width: 132
+    height: 36
+  - name: "Base44"
+    logo: "/assets/images/brands/base44.svg"
+    width: 120
+    height: 36
+  - name: "Diem AI"
+    logo: "/assets/images/brands/diem.svg"
+    width: 116
+    height: 36
+  - name: "Okareo"
+    logo: "/assets/images/brands/okareo.svg"
+    width: 122
+    height: 36
+  - name: "BackOps AI"
+    logo: "/assets/images/brands/backops.svg"
+    width: 144
+    height: 36
+  - name: "Bezoku AI"
+    logo: "/assets/images/brands/bezoku.svg"
+    width: 136
+    height: 36
+  - name: "Optica Labs AI"
+    logo: "/assets/images/brands/optica-labs.svg"
+    width: 148
+    height: 36
+  - name: "Founders Circle Capital"
+    logo: "/assets/images/brands/founders-circle.svg"
+    width: 176
+    height: 36
+  - name: "Capital Hill Ventures"
+    logo: "/assets/images/brands/capital-hill.svg"
+    width: 168
+    height: 36
+  - name: "Preston-Werner Ventures"
+    logo: "/assets/images/brands/preston-werner.svg"
+    width: 184
+    height: 36
+  - name: "Fusion Hill"
+    logo: "/assets/images/brands/fusion-hill.svg"
+    width: 138
+    height: 36
+  - name: "AI Assurance Council"
+    logo: "/assets/images/brands/ai-assurance.svg"
+    width: 166
+    height: 36
+  - name: "Corinium Global Intelligence"
+    logo: "/assets/images/brands/corinium.svg"
+    width: 132
+    height: 36
+  - name: "VigiTrust"
+    logo: "/assets/images/brands/vigitrust.svg"
+    width: 132
+    height: 36
+  - name: "World Economic Forum"
+    logo: "/assets/images/brands/wef.svg"
+    width: 184
+    height: 36
 
 home_ecosystem_logos:
   - name: "Google"
@@ -839,17 +1049,49 @@ home_ecosystem_logos:
     logo: "/assets/images/brands/google-deepmind.svg"
     width: 198
     height: 36
-  - name: "Google Cloud"
-    logo: "/assets/images/brands/google-cloud.svg"
-    width: 162
+  - name: "Anthropic"
+    logo: "/assets/images/brands/anthropic.svg"
+    width: 158
+    height: 36
+  - name: "Apple"
+    logo: "/assets/images/brands/apple.svg"
+    width: 104
+    height: 36
+  - name: "Microsoft"
+    logo: "/assets/images/brands/microsoft.svg"
+    width: 138
     height: 36
   - name: "Meta"
     logo: "/assets/images/brands/meta.svg"
     width: 104
     height: 36
-  - name: "LinkedIn Learning"
-    logo: "/assets/images/brands/linkedin-learning.svg"
-    width: 192
+  - name: "Amazon"
+    logo: "/assets/images/brands/amazon.svg"
+    width: 112
+    height: 36
+  - name: "Google Cloud"
+    logo: "/assets/images/brands/google-cloud.svg"
+    width: 162
+    height: 36
+  - name: "Spotify"
+    logo: "/assets/images/brands/spotify.svg"
+    width: 122
+    height: 36
+  - name: "Adobe"
+    logo: "/assets/images/brands/adobe.svg"
+    width: 112
+    height: 36
+  - name: "Figma"
+    logo: "/assets/images/brands/figma.svg"
+    width: 108
+    height: 36
+  - name: "Atlassian"
+    logo: "/assets/images/brands/atlassian.svg"
+    width: 136
+    height: 36
+  - name: "Coinbase"
+    logo: "/assets/images/brands/coinbase.svg"
+    width: 128
     height: 36
   - name: "Morgan Stanley"
     logo: "/assets/images/brands/morgan-stanley.svg"
@@ -867,9 +1109,85 @@ home_ecosystem_logos:
     logo: "/assets/images/brands/roblox.svg"
     width: 118
     height: 36
-  - name: "Adobe"
-    logo: "/assets/images/brands/adobe.svg"
+  - name: "Grammarly"
+    logo: "/assets/images/brands/grammarly.svg"
+    width: 144
+    height: 36
+  - name: "Windsurf"
+    logo: "/assets/images/brands/windsurf.svg"
+    width: 134
+    height: 36
+  - name: "Superhuman"
+    logo: "/assets/images/brands/superhuman.svg"
+    width: 166
+    height: 36
+  - name: "Remitly"
+    logo: "/assets/images/brands/remitly.svg"
+    width: 118
+    height: 36
+  - name: "HP"
+    logo: "/assets/images/brands/hp.svg"
+    width: 82
+    height: 36
+  - name: "Southwest Airlines"
+    logo: "/assets/images/brands/southwest.svg"
+    width: 144
+    height: 36
+  - name: "Neutrogena"
+    logo: "/assets/images/brands/neutrogena.svg"
+    width: 132
+    height: 36
+  - name: "LinkedIn Learning"
+    logo: "/assets/images/brands/linkedin-learning.svg"
+    width: 192
+    height: 36
+  - name: "Udacity"
+    logo: "/assets/images/brands/udacity.svg"
     width: 112
+    height: 36
+  - name: "CommonSpirit Health"
+    logo: "/assets/images/brands/commonspirit.svg"
+    width: 198
+    height: 36
+  - name: "O'Reilly Media"
+    logo: "/assets/images/brands/oreilly.svg"
+    width: 124
+    height: 36
+  - name: "Springer Nature"
+    logo: "/assets/images/brands/springer.svg"
+    width: 126
+    height: 36
+  - name: "The Linux Foundation"
+    logo: "/assets/images/brands/linux-foundation.svg"
+    width: 186
+    height: 36
+  - name: "Red Hat"
+    logo: "/assets/images/brands/red-hat.svg"
+    width: 124
+    height: 36
+  - name: "World Economic Forum"
+    logo: "/assets/images/brands/wef.svg"
+    width: 184
+    height: 36
+  - name: "United Nations ITU"
+    logo: "/assets/images/brands/un-itu.svg"
+    width: 112
+    height: 36
+  - name: "Forbes"
+    logo: "/assets/images/brands/forbes.svg"
+    width: 96
+    height: 36
+  - name: "Business Insider"
+    logo: "/assets/images/brands/business-insider.svg"
+    width: 176
+    height: 36
+  - name: "VentureBeat"
+    logo: "/assets/images/brands/venturebeat.svg"
+    width: 156
+    height: 36
+  - name: "MIT Sloan SMR × BCG"
+    logo: "/assets/images/brands/mit-bcg.svg"
+    width: 156
     height: 36
   - name: "Fireflies.ai"
     logo: "/assets/images/brands/fireflies.svg"
@@ -878,4 +1196,136 @@ home_ecosystem_logos:
   - name: "Qodo"
     logo: "/assets/images/brands/qodo.svg"
     width: 104
+    height: 36
+  - name: "Parallel Web Systems"
+    logo: "/assets/images/brands/parallel.svg"
+    width: 124
+    height: 36
+  - name: "SenseLab"
+    logo: "/assets/images/brands/senselab.svg"
+    width: 138
+    height: 36
+  - name: "Opaque Systems"
+    logo: "/assets/images/brands/opaque.svg"
+    width: 128
+    height: 36
+  - name: "Pensieve"
+    logo: "/assets/images/brands/pensieve.svg"
+    width: 132
+    height: 36
+  - name: "Guidde"
+    logo: "/assets/images/brands/guidde.svg"
+    width: 116
+    height: 36
+  - name: "Appsmith"
+    logo: "/assets/images/brands/appsmith.svg"
+    width: 138
+    height: 36
+  - name: "Simplilearn"
+    logo: "/assets/images/brands/simplilearn.svg"
+    width: 148
+    height: 36
+  - name: "Diem AI"
+    logo: "/assets/images/brands/diem.svg"
+    width: 116
+    height: 36
+  - name: "Founders Circle Capital"
+    logo: "/assets/images/brands/founders-circle.svg"
+    width: 176
+    height: 36
+  - name: "Capital Hill Ventures"
+    logo: "/assets/images/brands/capital-hill.svg"
+    width: 168
+    height: 36
+  - name: "Preston-Werner Ventures"
+    logo: "/assets/images/brands/preston-werner.svg"
+    width: 184
+    height: 36
+  - name: "Eero"
+    logo: "/assets/images/brands/eero.svg"
+    width: 76
+    height: 36
+  - name: "Innodata"
+    logo: "/assets/images/brands/innodata.svg"
+    width: 132
+    height: 36
+  - name: "Base44"
+    logo: "/assets/images/brands/base44.svg"
+    width: 120
+    height: 36
+  - name: "Okareo"
+    logo: "/assets/images/brands/okareo.svg"
+    width: 122
+    height: 36
+  - name: "BackOps AI"
+    logo: "/assets/images/brands/backops.svg"
+    width: 144
+    height: 36
+  - name: "Bezoku AI"
+    logo: "/assets/images/brands/bezoku.svg"
+    width: 136
+    height: 36
+  - name: "Optica Labs AI"
+    logo: "/assets/images/brands/optica-labs.svg"
+    width: 148
+    height: 36
+  - name: "Fusion Hill"
+    logo: "/assets/images/brands/fusion-hill.svg"
+    width: 138
+    height: 36
+  - name: "Packt"
+    logo: "/assets/images/brands/packt.svg"
+    width: 102
+    height: 36
+  - name: "CreativePro"
+    logo: "/assets/images/brands/creativepro.svg"
+    width: 152
+    height: 36
+  - name: "LeadDev"
+    logo: "/assets/images/brands/leaddev.svg"
+    width: 124
+    height: 36
+  - name: "SiliconANGLE theCUBE"
+    logo: "/assets/images/brands/thecube.svg"
+    width: 132
+    height: 36
+  - name: "Grazia UK"
+    logo: "/assets/images/brands/grazia.svg"
+    width: 106
+    height: 36
+  - name: "Ticker News"
+    logo: "/assets/images/brands/ticker-news.svg"
+    width: 144
+    height: 36
+  - name: "Silicon Valley Security Group"
+    logo: "/assets/images/brands/svsg.svg"
+    width: 96
+    height: 36
+  - name: "AI Aspire"
+    logo: "/assets/images/brands/ai-aspire.svg"
+    width: 128
+    height: 36
+  - name: "AI Assurance Council"
+    logo: "/assets/images/brands/ai-assurance.svg"
+    width: 166
+    height: 36
+  - name: "Corinium Global Intelligence"
+    logo: "/assets/images/brands/corinium.svg"
+    width: 132
+    height: 36
+  - name: "VigiTrust"
+    logo: "/assets/images/brands/vigitrust.svg"
+    width: 132
+    height: 36
+  - name: "Girls Who Code"
+    logo: "/assets/images/brands/girls-who-code.svg"
+    width: 168
+    height: 36
+  - name: "Apache Software Foundation"
+    logo: "/assets/images/brands/apache.svg"
+    width: 124
+    height: 36
+  - name: "Python Software Foundation"
+    logo: "/assets/images/brands/python.svg"
+    width: 122
     height: 36

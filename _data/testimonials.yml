@@ -1,17 +1,13 @@
 # Verified verbatim testimonials, learner reviews, and platform ratings
-# Sources: Intro (https://intro.co/JigyasaGrover), Topmate (https://topmate.io/jigyasagrover),
+# Sources: Intro (https://intro.co/JigyasaGrover),
 # LinkedIn Learning (https://www.linkedin.com/learning/instructors/jigyasa-grover),
-# and Goodreads (https://www.goodreads.com/book/show/56698788-sculpting-data-for-ml).
+# Goodreads (https://www.goodreads.com/book/show/56698788-sculpting-data-for-ml), and verified 1:1 client feedback.
 
 platform_ratings:
   - platform: "Intro"
     score: "5.0★ / 5.0"
     detail: "6 verified 1:1 reviews"
     url: "https://intro.co/JigyasaGrover"
-  - platform: "Topmate"
-    score: "5.0★ / 5.0"
-    detail: "19 ratings · 126+ bookings"
-    url: "https://topmate.io/jigyasagrover"
   - platform: "LinkedIn Learning"
     score: "4.6–4.8★"
     detail: "180+ ratings · 44,000+ learners"
@@ -22,13 +18,6 @@ platform_ratings:
     url: "https://www.goodreads.com/book/show/56698788-sculpting-data-for-ml"
 
 home:
-  - author: "Tracy Barba"
-    role: "Executive Consultation"
-    platform: "Topmate"
-    rating: "5.0★"
-    url: "https://topmate.io/jigyasagrover"
-    quote: "Jigyasa is an expert, and even 15 minutes of her time was incredibly valuable to me and my organization."
-
   - author: "Rahilla"
     role: "AI & Marketplace Strategy"
     platform: "Intro"
@@ -36,11 +25,16 @@ home:
     url: "https://intro.co/JigyasaGrover"
     quote: "Jigyasa is wonderful to connect with and has incredible insight on trends in AI and how to build & market for marketplaces globally."
 
+  - author: "Tracy Barba"
+    role: "Executive Consultation"
+    platform: "1:1 Consultation"
+    rating: "5.0★"
+    quote: "Jigyasa is an expert, and even 15 minutes of her time was incredibly valuable to me and my organization."
+
   - author: "Verified Advisory Client"
     role: "Product & Large-Scale ML"
-    platform: "Topmate"
+    platform: "1:1 Advisory"
     rating: "5.0★"
-    url: "https://topmate.io/jigyasagrover"
     quote: "Jigyasa has a lot to share if you can ask the right questions. She has tons of exposure to developing and rolling out products to millions of customers."
 
 advisory:
@@ -60,16 +54,14 @@ advisory:
 
   - author: "Sirisha Kaipa"
     role: "Startup Founder"
-    platform: "Topmate"
+    platform: "1:1 Advisory"
     rating: "5.0★"
-    url: "https://topmate.io/jigyasagrover"
     quote: "She is a true star, and yet is so down-to-earth and easy to talk to. She doesn't have any airs about her, and any question is a good question. I came out of the 30 mins meeting with lot of insights and resources that I can apply at my startup."
 
   - author: "Uugii Tsenddorj"
     role: "Startup Founder · Pitch & Strategy"
-    platform: "Topmate"
+    platform: "1:1 Advisory"
     rating: "5.0★"
-    url: "https://topmate.io/jigyasagrover"
     quote: "Her attention and suggestions significantly enhanced my deck for presenting to judges, mentors, and other Sac ecosystem stakeholders. She provided actionable advice that was insightful. I highly recommend her to any startup or innovator seeking expert guidance."
 
 work_with_me:
@@ -82,16 +74,14 @@ work_with_me:
 
   - author: "Verified Consultation Client"
     role: "AI Strategy & Assumptions Review"
-    platform: "Topmate"
+    platform: "1:1 Advisory"
     rating: "5.0★"
-    url: "https://topmate.io/jigyasagrover"
     quote: "Jigyasa's responses to our inquiries on various assumptions in AI were clear-cut and insightful!"
 
   - author: "Verified Mentee"
     role: "Technical Brand & Advocacy"
-    platform: "Topmate"
+    platform: "1:1 Mentorship"
     rating: "5.0★"
-    url: "https://topmate.io/jigyasagrover"
     quote: "Loved the way Jigyasa broke down the approach to build a personal brand into actionable steps!"
 
 teaching:
@@ -111,9 +101,8 @@ teaching:
 
   - author: "Olusegun Awoyemi"
     role: "Doctoral Researcher · Academic Mentorship"
-    platform: "Topmate"
+    platform: "1:1 Mentorship"
     rating: "5.0★"
-    url: "https://topmate.io/jigyasagrover"
     quote: "I appreciate your time, interest, and knowledge and acknowledge your contribution to my study. Thank you for being part of my doctoral journey!"
 
 publications:

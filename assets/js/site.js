@@ -249,10 +249,56 @@
   }
   applyBlogFilter();
 
-  // 6. Contact Form Pre-Selection, Validation & Anti-Spam Submission
+  // 6. Contact Form Pre-Selection, Topic Scoping Prompts, Validation & Anti-Spam Submission
   var contactForm = document.getElementById("contact-form");
   if (contactForm) {
     var topicSelect = document.getElementById("contact-topic");
+    var messageInput = document.getElementById("contact-message");
+    var scopingHint = document.getElementById("contact-scoping-hint");
+
+    var scopingByTopic = {
+      "Speaking & Workshops": {
+        hint: "event dates & city (or virtual), expected audience profile/size, keynote vs. panel/workshop format, and travel/honorarium details.",
+        placeholder: "Share event dates, location (SFO departure or virtual), audience profile, session format, and timeline…"
+      },
+      "Advisory & Consulting": {
+        hint: "your product & current stage, core ML/agentic architecture challenge (ranking, evals, MCP, cost SLAs), and whether you want a 1:1 review or ongoing Afterdays retainer.",
+        placeholder: "Share your product/stage, architecture or roadmap questions, target timeline, and preferred advisory cadence…"
+      },
+      "Corporate AI Training": {
+        hint: "team size & engineering roles, target capability domain (Agentic AI/ADK, Evals, Ranking, Data-Centric ML, TPUs, or AI Workflows), format (90m / half-day / full-day), and dates.",
+        placeholder: "Share your engineering team size/roles, tech stack, workshop topic or custom goals, and target dates…"
+      },
+      "Content & Brand Partnerships": {
+        hint: "product URL & target developer persona, preferred surface or Full-Stack Launch Bundle (GitHub repo, blog essay, LinkedIn/X, 9:16 video), launch window, and sandbox access.",
+        placeholder: "Share your product URL, target audience, preferred surface or bundle, launch window, and budget range…"
+      },
+      "Technical Collaborations": {
+        hint: "publisher, research group, or open-source project context, proposed deliverable (curriculum, chapter, benchmark, or co-authored study), and schedule.",
+        placeholder: "Share the project, publication, or curriculum scope, timeline, and how you would like to collaborate…"
+      },
+      "Media & Interviews": {
+        hint: "outlet or podcast name, topic angle (Agentic AI, production ML, AI safety, synthetic media), recording/filing deadline, and interview format.",
+        placeholder: "Share your publication or show, story angle, deadline, and whether you need written commentary or live broadcast…"
+      },
+      "default": {
+        hint: "relevant dates or timeline, audience or engineering team profile, technical goals, and preferred scope.",
+        placeholder: "Share relevant dates, audience, technical goals, or how you would like to collaborate…"
+      }
+    };
+
+    var syncTopicScoping = function () {
+      if (!topicSelect) return;
+      var val = topicSelect.value || "";
+      var cfg = scopingByTopic[val] || scopingByTopic["default"];
+      if (scopingHint) {
+        scopingHint.innerHTML = "<strong>Helpful context to include:</strong> " + cfg.hint;
+      }
+      if (messageInput) {
+        messageInput.setAttribute("placeholder", cfg.placeholder);
+      }
+    };
+
     try {
       var params = new URLSearchParams(window.location.search);
       var requestedTopic = params.get("topic");
@@ -265,6 +311,11 @@
         }
       }
     } catch (e) { }
+
+    if (topicSelect) {
+      topicSelect.addEventListener("change", syncTopicScoping);
+      syncTopicScoping();
+    }
 
     var setFieldError = function (inputId, errorId, msg) {
       var input = document.getElementById(inputId);
@@ -640,7 +691,7 @@
     safeRegister({
       name: "get-collaboration-channels",
       description:
-        "Retrieve Jigyasa Grover's collaboration pillars, direct booking platforms (Intro, Topmate, Passionfroot, Naano, 8x), brand partners, live corporate AI workshops, and LinkedIn Learning courses.",
+        "Retrieve Jigyasa Grover's collaboration pillars, direct booking platforms (Intro, Passionfroot, Naano, 8x), brand partners, live corporate AI workshops, and LinkedIn Learning courses.",
       inputSchema: {
         type: "object",
         properties: {

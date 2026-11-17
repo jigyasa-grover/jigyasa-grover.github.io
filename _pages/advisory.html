@@ -34,11 +34,28 @@ permalink: /advisory/
     </p>
     <div class="btn-group mt-sm">
       <a class="btn btn--primary" href="{{ id.booking.intro.url }}" target="_blank" rel="noopener">Book 1:1 on Intro (5.0★) ↗</a>
-      <a class="btn btn--secondary" href="{{ id.booking.topmate.url }}" target="_blank" rel="noopener">Book on Topmate (5.0★) ↗</a>
       <a class="btn btn--accent" href="/work-with-me/?topic=Advisory%20%26%20Consulting#contact">Ongoing Retainer →</a>
     </div>
   </div>
 </div>
+
+<section class="content-section" aria-labelledby="advisory-clients-heading">
+  <div class="eyebrow">30+ Advisory &amp; Consulting Organizations</div>
+  <h2 id="advisory-clients-heading">Selected enterprises, AI labs, startups &amp; venture funds advised</h2>
+  <div class="brand-tile-grid" role="list" aria-label="Organizations advised and consulted by Jigyasa Grover">
+    {% for item in site.data.recognition.advisory_client_logos %}
+      <div class="brand-tile" role="listitem">
+        <img
+          src="{{ item.logo }}"
+          width="{{ item.width }}"
+          height="{{ item.height }}"
+          loading="lazy"
+          alt="{{ item.name }}"
+        />
+      </div>
+    {% endfor %}
+  </div>
+</section>
 
 <div class="project-grid content-section">
   <article class="project-dossier">
@@ -102,10 +119,20 @@ permalink: /advisory/
   </article>
 </div>
 
+<div class="callout-strip split-panel mb-xl">
+  <div>
+    <div class="eyebrow">Advisory + Hands-On Team Enablement</div>
+    <p class="mb-0">
+      Need to upskill your engineering org alongside architectural advisory? Pair an Afterdays retainer with private team workshops on <strong>Google ADK &amp; MCP</strong>, <strong>coding-agent workflows</strong>, <strong>LLM evaluation</strong>, or <strong>ranking systems</strong>.
+    </p>
+  </div>
+  <a class="btn btn--secondary btn--compact" href="/teaching/">Explore Team Workshops →</a>
+</div>
+
 <section class="content-section--bordered" aria-labelledby="advisory-reviews-heading">
   <div class="section-header">
     <div>
-      <div class="eyebrow">Verified 5.0★ Track Record · Intro &amp; Topmate</div>
+      <div class="eyebrow">Verified 5.0★ Track Record · Intro &amp; Advisory Clients</div>
       <h2 id="advisory-reviews-heading">What founders &amp; advisory clients say</h2>
     </div>
     <a class="section-header__link" href="{{ id.booking.intro.url }}" target="_blank" rel="noopener">All reviews on Intro ↗</a>

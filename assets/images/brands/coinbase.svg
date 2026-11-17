@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 36" width="128" height="36" role="img" aria-label="Coinbase">
+  <g fill="#141413">
+    <path d="M17 7.5a10.5 10.5 0 1 0 0 21 10.5 10.5 0 0 0 0-21zm0 16.2a5.7 5.7 0 1 1 5.3-7.8h-3.4a2.5 2.5 0 1 0 0 4.2h3.4a5.7 5.7 0 0 1-5.3 3.6z"/>
+    <text x="33" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="18.5" font-weight="700" letter-spacing="-0.03em">coinbase</text>
+  </g>
+</svg>
+

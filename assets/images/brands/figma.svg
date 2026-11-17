@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 36" width="108" height="36" role="img" aria-label="Figma">
+  <g fill="#141413">
+    <path d="M13.5 7.5a3.5 3.5 0 0 0 0 7h3.5v-7h-3.5zm3.5 0v7h3.5a3.5 3.5 0 1 0 0-7H17zm-3.5 7a3.5 3.5 0 0 0 0 7h3.5v-7h-3.5zm7 3.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm-7 3.5h-3.5a3.5 3.5 0 1 0 3.5 3.5v-3.5z" fill-rule="evenodd"/>
+    <circle cx="20.5" cy="18" r="3.2"/>
+    <text x="30" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="18.5" font-weight="600" letter-spacing="-0.02em">Figma</text>
+  </g>
+</svg>
+

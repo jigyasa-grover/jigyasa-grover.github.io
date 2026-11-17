@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 36" width="184" height="36" role="img" aria-label="World Economic Forum">
+  <g fill="#141413">
+    <circle cx="16.5" cy="18" r="8.8" fill="none" stroke="#141413" stroke-width="2"/>
+    <ellipse cx="16.5" cy="18" rx="4.2" ry="8.8" fill="none" stroke="#141413" stroke-width="1.5"/>
+    <line x1="7.7" y1="18" x2="25.3" y2="18" stroke="#141413" stroke-width="1.5"/>
+    <text x="31" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="600" letter-spacing="-0.01em">World Economic Forum</text>
+  </g>
+</svg>
+

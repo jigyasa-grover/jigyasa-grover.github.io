@@ -47,10 +47,14 @@ sitemap: false
     "booking_platforms": {{ site.data.identity.booking | jsonify }},
     "pillars": {{ site.data.pillars | jsonify }},
     "brand_partners": {{ site.data.recognition.brand_partners | jsonify }},
+    "partnership_surfaces": {{ site.data.partnerships.surfaces | jsonify }},
+    "partnership_packages": {{ site.data.partnerships.packages | jsonify }},
     "training_clients": {{ site.data.courses.training_clients | jsonify }},
     "live_workshops": {{ site.data.courses.workshops | jsonify }},
+    "capability_domains": {{ site.data.courses.capability_domains | jsonify }},
     "courses": {{ site.data.courses.courses | jsonify }}
   },
+  "learning_tracks": {{ site.data.learning_tracks | jsonify }},
   "speaking": {
     "featured_keynote": {{ site.data.speaking.featured_video | jsonify }},
     "signature_talks": {{ site.data.speaking.signature_talks | jsonify }}

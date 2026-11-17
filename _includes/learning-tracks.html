@@ -1,0 +1,24 @@
+<div class="tracks-grid{% if include.compact %} tracks-grid--compact{% endif %}">
+  {% for track in site.data.learning_tracks %}
+  <article class="track-card" id="track-{{ track.id }}">
+    <div>
+      <div class="track-card__top">
+        <span class="track-card__num">{{ track.number }}</span>
+        <span class="track-card__kicker">{{ track.kicker }}</span>
+      </div>
+      <h3 class="track-card__title">{{ track.title }}</h3>
+      <p class="track-card__summary">{{ track.summary }}</p>
+    </div>
+
+    <ol class="track-steps">
+      {% for step in track.steps %}
+      <li class="track-step">
+        <span class="track-step__badge">{{ step.format }}</span>
+        <a class="track-step__link" href="{{ step.url }}">{{ step.title }}</a>
+      </li>
+      {% endfor %}
+    </ol>
+  </article>
+  {% endfor %}
+</div>
+

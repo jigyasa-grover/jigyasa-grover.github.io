@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 36" width="138" height="36" role="img" aria-label="Microsoft">
+  <g fill="#141413">
+    <rect x="7" y="8.5" width="8.5" height="8.5"/>
+    <rect x="17" y="8.5" width="8.5" height="8.5"/>
+    <rect x="7" y="18.5" width="8.5" height="8.5"/>
+    <rect x="17" y="18.5" width="8.5" height="8.5"/>
+    <text x="32" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="-0.015em">Microsoft</text>
+  </g>
+</svg>
+

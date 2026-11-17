@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122 36" width="122" height="36" role="img" aria-label="Okareo">
+  <g fill="#141413">
+    <circle cx="17" cy="18" r="8.8" fill="none" stroke="#141413" stroke-width="2.6"/>
+    <path d="M13.5 18l2.4 2.4 4.8-4.8" fill="none" stroke="#141413" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="32" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="18.5" font-weight="700" letter-spacing="-0.02em">Okareo</text>
+  </g>
+</svg>
+

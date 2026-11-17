@@ -7,10 +7,12 @@ This repository powers **[jigyasa-grover.github.io](https://jigyasa-grover.githu
 - `index.html`: Flagship homepage (`/`).
 - `_pages/`: All standalone route templates and machine-readable GEO/WebMCP endpoints (`404.html`, `about.html`, `advisory.html`, `blog.html`, `experience.html`, `highlights.html`, `links.html`, `partnerships.html`, `press.html`, `projects.html`, `publications.html`, `speaking.html`, `teaching.html`, `work-with-me.html`, `llms.txt`, `well-known-llms.txt`, `llms-full.txt`, `agent-context.json`). Every file in `_pages/` declares an explicit `permalink:`.
 - `_data/`: Single source of truth YAML datasets:
-  - `identity.yml`: Canonical `Person` entity (`#person`), short/medium bios, career roles, education, booking links (`Intro`, `Topmate`, `Passionfroot`, `Naano`), and `sameAs` profile URLs.
+  - `identity.yml`: Canonical `Person` entity (`#person`), short/medium bios, career roles, education, booking links (`Intro`, `Passionfroot`, `Naano`, `8x`), and `sameAs` profile URLs.
   - `navigation.yml`: Header and footer menus.
   - `pillars.yml`: Six collaboration pillars surfaced on `/` and `/work-with-me/`.
-  - `courses.yml`: LinkedIn Learning / Udacity courses, live corporate workshops, and `training_clients`.
+  - `partnerships.yml`: Developer sponsorship surfaces, Full-Stack Launch Bundle comparison matrix, and partnership brief checklist rendered on `/partnerships/`.
+  - `courses.yml`: LinkedIn Learning / Udacity courses, live corporate workshops, engagement modes, 6-domain production capability matrix, and `training_clients`.
+  - `learning_tracks.yml`: Curated end-to-end production AI/ML reading & repo tracks rendered on `/blog/` and `/projects/`.
   - `speaking.yml`: Featured Google I/O keynote, signature talk abstracts, and conference appearances.
   - `projects.yml`: Featured and archival engineering systems and open-source repos.
   - `github.yml`: Public GitHub profile metrics, achievements, organizations, and pinned upstream FOSS / course repos.
@@ -18,7 +20,7 @@ This repository powers **[jigyasa-grover.github.io](https://jigyasa-grover.githu
   - `recognition.yml`: 13× awards, media features, visual highlights gallery (with per-photo `focal` coordinates), and brand partners.
   - `updates.yml`: Curated high-profile press, award, keynote & career milestones (2017–2026).
   - `social_feed.yml`: Unified LinkedIn, X (Twitter), Instagram, and YouTube feed rendered on `/`, `/highlights/`, and `/partnerships/`.
-  - `testimonials.yml`: Verified verbatim reviews and platform ratings (`Intro`, `Topmate`, `LinkedIn Learning`, `Goodreads`) rendered via `_includes/testimonials-grid.html`.
+  - `testimonials.yml`: Verified verbatim reviews and platform ratings (`Intro`, `LinkedIn Learning`, `Goodreads`) rendered via `_includes/testimonials-grid.html`.
   - `posts_meta.yml`: Curated summaries, categories, and tags for the 34 indexed technical & open-source articles.
   - `faqs.yml`: Structured Q&A blocks rendered visually via `_includes/faq-section.html` and injected into `FAQPage` JSON-LD via `_includes/schema-graph.html`.
 - `_posts/`: Preserved Markdown technical articles & self-hosted historical WordPress archive (`permalink: /:title/`; 34 indexed essays + 57 `archival: true, noindex: true, sitemap: false` early 2015–2017 entries + `/archive/`).

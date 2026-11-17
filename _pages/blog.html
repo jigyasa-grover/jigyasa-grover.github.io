@@ -3,94 +3,137 @@ layout: page
 title: "Technical Writing & Essays"
 heading: "Deep dives on Agentic AI, LLM evaluation, fine-tuning, and data-centric ML."
 eyebrow: "Technical Journal"
-lead: "34 technical essays, architectural tutorials, and research readings—plus 57 self-hosted early open-source & Google Summer of Code archives (2015–2017)."
-hero_cta_label: "Subscribe via RSS"
-hero_cta_url: "/feed.xml"
+lead: "34 technical essays, architectural tutorials, and research readings—plus 57 self-hosted early open-source &
+Google Summer of Code archives (2015–2017)."
+hero_cta_label: "Follow on LinkedIn ↗"
+hero_cta_url: "https://www.linkedin.com/in/jigyasa-grover/"
 seo_title: "Technical Blog & AI Engineering Essays — Jigyasa Grover"
-description: "34 technical essays by Jigyasa Grover on Agentic AI, Gemini, Cloud TPU fine-tuning, CTR ranking, data-centric ML & Python—plus 57 early open-source archives."
+description: "34 technical essays by Jigyasa Grover on Agentic AI, Gemini, Cloud TPU fine-tuning, CTR ranking,
+data-centric ML & Python—plus 57 early open-source archives."
 permalink: /blog/
 ---
 
-<div class="filter-bar" role="region" aria-label="Filter and search technical articles">
-  <div class="filter-pills" role="group" aria-label="Filter by topic">
-    <button id="blog-filter-all" type="button" class="filter-btn is-active" data-blog-filter="all" aria-pressed="true">All Articles (34)</button>
-    <button id="blog-filter-agentic-eval" type="button" class="filter-btn" data-blog-filter="agentic ai & evaluation" aria-pressed="false">Agentic AI &amp; Evaluation</button>
-    <button id="blog-filter-agentic-infra" type="button" class="filter-btn" data-blog-filter="agentic infrastructure" aria-pressed="false">Agentic Infrastructure</button>
-    <button id="blog-filter-finetuning" type="button" class="filter-btn" data-blog-filter="fine-tuning & compute" aria-pressed="false">Fine-Tuning &amp; Compute</button>
-    <button id="blog-filter-ranking" type="button" class="filter-btn" data-blog-filter="personalization & ranking" aria-pressed="false">Personalization &amp; Ranking</button>
-    <button id="blog-filter-data-centric" type="button" class="filter-btn" data-blog-filter="data-centric ai" aria-pressed="false">Data-Centric AI</button>
-    <button id="blog-filter-responsible-ai" type="button" class="filter-btn" data-blog-filter="responsible ai & privacy" aria-pressed="false">Responsible AI &amp; Privacy</button>
-    <button id="blog-filter-oss-python" type="button" class="filter-btn" data-blog-filter="open source & python" aria-pressed="false">Open Source &amp; Python</button>
-    <button id="blog-filter-early-archive" type="button" class="filter-btn" data-blog-filter="early archive (2015–17)" aria-pressed="false">Early Archive (2015–17)</button>
+<!-- 1. Start Here: Guided Production Learning Tracks -->
+<section class="content-section" aria-labelledby="learning-tracks-heading">
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Start Here · Curated Production Roadmaps</div>
+      <h2 id="learning-tracks-heading">Signature engineering tracks</h2>
+    </div>
+    <a class="section-header__link" href="#all-essays-heading">Jump to all 34 essays &amp; search ↓</a>
   </div>
 
-  <div>
-    <label for="blog-search" class="sr-only">Search all 91 articles &amp; archives by keyword</label>
-    <input id="blog-search" type="search" class="search-input" placeholder="Search all 91 articles &amp; archives…" />
-    <span id="blog-results-status" class="sr-only" role="status" aria-live="polite"></span>
-  </div>
-</div>
+  {% include learning-tracks.html %}
 
-<div class="ledger">
-  {% for post in site.posts %}
+  <div class="follow-strip mt-lg" aria-label="Follow new technical essays and repositories">
+    <div>
+      <span class="eyebrow mb-0">Stay in the Loop</span>
+      <span class="follow-strip__text">Follow new production benchmarks, runnable repos, and architectural
+        postmortems:</span>
+    </div>
+    <div class="follow-strip__links">
+      <a href="https://www.linkedin.com/in/jigyasa-grover/" target="_blank" rel="noopener">LinkedIn (14.5K+) ↗</a>
+      <a href="https://github.com/jigyasa-grover" target="_blank" rel="noopener">GitHub (74+ Repos) ↗</a>
+      <a href="https://www.youtube.com/@JigyasaGrover" target="_blank" rel="noopener">YouTube ↗</a>
+      <a href="https://x.com/jigyasa_grover" target="_blank" rel="noopener">X (@jigyasa_grover) ↗</a>
+      <a href="/feed.xml">RSS Feed</a>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Searchable & Filterable Technical Ledger -->
+<section class="content-section--bordered content-section--last" aria-labelledby="all-essays-heading">
+  <div class="eyebrow">Complete Technical Index</div>
+  <h2 id="all-essays-heading" class="mb-lg">Browse &amp; filter articles</h2>
+
+  <div class="filter-bar" role="region" aria-label="Filter and search technical articles">
+    <div class="filter-pills" role="group" aria-label="Filter by topic">
+      <button id="blog-filter-all" type="button" class="filter-btn is-active" data-blog-filter="all"
+        aria-pressed="true">All Articles (34)</button>
+      <button id="blog-filter-agentic-eval" type="button" class="filter-btn" data-blog-filter="agentic ai & evaluation"
+        aria-pressed="false">Agentic AI &amp; Evaluation</button>
+      <button id="blog-filter-agentic-infra" type="button" class="filter-btn" data-blog-filter="agentic infrastructure"
+        aria-pressed="false">Agentic Infrastructure</button>
+      <button id="blog-filter-finetuning" type="button" class="filter-btn" data-blog-filter="fine-tuning & compute"
+        aria-pressed="false">Fine-Tuning &amp; Compute</button>
+      <button id="blog-filter-ranking" type="button" class="filter-btn" data-blog-filter="personalization & ranking"
+        aria-pressed="false">Personalization &amp; Ranking</button>
+      <button id="blog-filter-data-centric" type="button" class="filter-btn" data-blog-filter="data-centric ai"
+        aria-pressed="false">Data-Centric AI</button>
+      <button id="blog-filter-responsible-ai" type="button" class="filter-btn"
+        data-blog-filter="responsible ai & privacy" aria-pressed="false">Responsible AI &amp; Privacy</button>
+      <button id="blog-filter-oss-python" type="button" class="filter-btn" data-blog-filter="open source & python"
+        aria-pressed="false">Open Source &amp; Python</button>
+      <button id="blog-filter-early-archive" type="button" class="filter-btn" data-blog-filter="early archive (2015–17)"
+        aria-pressed="false">Early Archive (2015–17)</button>
+    </div>
+
+    <div>
+      <label for="blog-search" class="sr-only">Search all 91 articles &amp; archives by keyword</label>
+      <input id="blog-search" type="search" class="search-input" placeholder="Search all 91 articles &amp; archives…" />
+      <span id="blog-results-status" class="sr-only" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+
+  <div class="ledger">
+    {% for post in site.posts %}
     {% unless post.url == "/archive/" %}
-      {% assign meta = site.data.posts_meta[post.url] %}
-      {% assign words = post.content | strip_html | number_of_words %}
-      {% assign mins = words | divided_by: 210 | plus: 1 %}
-      {% if post.archival %}
-        {% assign cat_name = "Early Archive (2015–17)" %}
-        {% assign row_tags = post.archive_tags %}
-        {% assign row_summary = post.description %}
-      {% else %}
-        {% assign cat_name = meta.category | default: "AI Engineering" %}
-        {% assign row_tags = meta.tags %}
-        {% assign row_summary = meta.summary %}
-      {% endif %}
-      {% assign tags_joined = row_tags | join: " " %}
-      <article
-        class="ledger-row"
-        data-post-item
-        data-category="{{ cat_name | downcase | escape }}"
-        {% if post.archival %}data-archival="true" hidden{% endif %}
-        data-search="{{ post.title | escape }} {{ row_summary | escape }} {{ cat_name | escape }} {{ tags_joined | escape }}"
-      >
-        <div class="ledger-row__date">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-          <div class="ledger-row__meta-sub">{{ mins }} min read</div>
-        </div>
+    {% assign meta = site.data.posts_meta[post.url] %}
+    {% assign words = post.content | strip_html | number_of_words %}
+    {% assign mins = words | divided_by: 210 | plus: 1 %}
+    {% if post.archival %}
+    {% assign cat_name = "Early Archive (2015–17)" %}
+    {% assign row_tags = post.archive_tags %}
+    {% assign row_summary = post.description %}
+    {% else %}
+    {% assign cat_name = meta.category | default: "AI Engineering" %}
+    {% assign row_tags = meta.tags %}
+    {% assign row_summary = meta.summary %}
+    {% endif %}
+    {% assign tags_joined = row_tags | join: " " %}
+    <article class="ledger-row" data-post-item data-category="{{ cat_name | downcase | escape }}" {% if post.archival
+      %}data-archival="true" hidden{% endif %}
+      data-search="{{ post.title | escape }} {{ row_summary | escape }} {{ cat_name | escape }} {{ tags_joined | escape }}">
+      <div class="ledger-row__date">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <div class="ledger-row__meta-sub">{{ mins }} min read</div>
+      </div>
 
-        <div>
-          <div class="ledger-row__title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-          {% if row_summary %}
-            <p class="ledger-row__sub mb-sm">{{ row_summary }}</p>
-          {% else %}
-            <p class="ledger-row__sub mb-sm">{{ post.excerpt | strip_html | truncate: 180 }}</p>
-          {% endif %}
-          {% if row_tags %}
-            <div class="tag-row mb-0">
-              {% for t in row_tags %}
-                <span class="mono-tag">{{ t }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
+      <div>
+        <div class="ledger-row__title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+        {% if row_summary %}
+        <p class="ledger-row__sub mb-sm">{{ row_summary }}</p>
+        {% else %}
+        <p class="ledger-row__sub mb-sm">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+        {% endif %}
+        {% if row_tags %}
+        <div class="tag-row mb-0">
+          {% for t in row_tags %}
+          <span class="mono-tag">{{ t }}</span>
+          {% endfor %}
         </div>
+        {% endif %}
+      </div>
 
-        <div class="ledger-row__aside">{{ cat_name }}</div>
-      </article>
+      <div class="ledger-row__aside">{{ cat_name }}</div>
+    </article>
     {% endunless %}
-  {% endfor %}
-</div>
-
-<p id="blog-empty-state" class="empty-state">
-  No articles matched your current filter. Clear your search term or select "All Articles (34)".
-</p>
-
-<!-- Complete Self-Hosted Open-Source & GSoC Archive Notice -->
-<div class="contact-panel split-panel mt-xl">
-  <div>
-    <div class="eyebrow mb-xs">Complete Self-Hosted Archive (2015 – 2026)</div>
-    <h2 class="split-panel__title">Looking for earlier Google Summer of Code, Loklak &amp; Pharo logs?</h2>
-    <p class="split-panel__desc">All 91 historical posts and media from WordPress (2015–2026) are preserved directly on this website. Select <strong>Early Archive (2015–17)</strong> above or browse the chronological <a href="/archive/">/archive/</a> index.</p>
+    {% endfor %}
   </div>
-  <a class="btn btn--secondary" href="/archive/">Browse Early Archive (57) →</a>
-</div>
+
+  <p id="blog-empty-state" class="empty-state">
+    No articles matched your current filter. Clear your search term or select "All Articles (34)".
+  </p>
+
+  <!-- Complete Self-Hosted Open-Source & GSoC Archive Notice -->
+  <div class="contact-panel split-panel mt-xl">
+    <div>
+      <div class="eyebrow mb-xs">Complete Self-Hosted Archive (2015 – 2026)</div>
+      <h3 class="split-panel__title">Looking for earlier Google Summer of Code, Loklak &amp; Pharo logs?</h3>
+      <p class="split-panel__desc">All 91 historical posts and media from WordPress (2015–2026) are preserved directly
+        on this website. Select <strong>Early Archive (2015–17)</strong> above or browse the chronological <a
+          href="/archive/">/archive/</a> index.</p>
+    </div>
+    <a class="btn btn--secondary" href="/archive/">Browse Early Archive (57) →</a>
+  </div>
+</section>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 36" width="132" height="36" role="img" aria-label="VigiTrust">
+  <g fill="#141413">
+    <path d="M9 10l7.5 16.5L24 10h-3.4l-4.1 9.6L12.4 10H9z"/>
+    <text x="30" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="-0.02em">Vigi<tspan font-weight="500">Trust</tspan></text>
+  </g>
+</svg>

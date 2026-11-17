@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166 36" width="166" height="36" role="img" aria-label="AI Assurance Council">
+  <g fill="#141413">
+    <path d="M16.5 7.5L25 11v6.5c0 5.4-3.6 9.8-8.5 11.2C11.6 27.3 8 22.9 8 17.5V11l8.5-3.5zm-1.2 12.6l5.4-5.4-1.8-1.8-3.6 3.6-1.8-1.8-1.8 1.8 3.6 3.6z"/>
+    <text x="31" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="600" letter-spacing="-0.015em">AI Assurance</text>
+  </g>
+</svg>

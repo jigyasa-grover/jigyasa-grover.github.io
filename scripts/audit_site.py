@@ -422,7 +422,6 @@ def main() -> None:
             "https://naano.com/creators/jigyasa-grover",
             "https://8x.business/p/b623ba2ed48544748601a75a3569c6ee",
             "https://intro.co/JigyasaGrover",
-            "https://topmate.io/jigyasagrover",
         ):
             if url not in wwm_html:
                 errors.append(f"MISSING BOOKING URL on /work-with-me/: {url}")

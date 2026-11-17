@@ -3,7 +3,8 @@ layout: page
 title: "Technical Content & Brand Partnerships"
 heading: "Code-backed technical storytelling for AI platforms, cloud, and developer tools."
 eyebrow: "Pillar 04 · Brand Partnerships"
-lead: "Authentic tutorials, reference architectures, and product launches built by a practicing ML Tech Lead."
+lead: "Authentic tutorials, runnable reference architectures, creator video, and product launches built by a practicing
+ML Tech Lead."
 hero_cta_label: "View on Passionfroot ↗"
 hero_cta_url: "https://www.passionfroot.me/jigyasa-grover"
 seo_title: "Developer Content & AI Brand Partnerships — Jigyasa Grover"
@@ -13,10 +14,16 @@ faq_key: "partnerships"
 permalink: /partnerships/
 ---
 {% assign b = site.data.identity.booking %}
+{% assign pdata = site.data.partnerships %}
 
 <section class="content-section" aria-labelledby="audience-profile-heading">
-  <div class="eyebrow">Audience &amp; Formats</div>
-  <h2 id="audience-profile-heading">Reaching senior builders &amp; technical buyers</h2>
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Audience &amp; Distribution Surfaces</div>
+      <h2 id="audience-profile-heading">Pick the surface that matches your launch</h2>
+    </div>
+    <a class="section-header__link" href="#packages-heading">Compare packages &amp; bundles ↓</a>
+  </div>
 
   <div class="proof-ledger proof-ledger--inline">
     <div class="proof-ledger__grid">
@@ -36,40 +43,95 @@ permalink: /partnerships/
         <p class="proof-item__detail">Runnable reference apps accompanying deep dives</p>
       </div>
       <div class="proof-item">
-        <div class="proof-item__value">16+</div>
-        <div class="proof-item__label">Brand Partners</div>
-        <p class="proof-item__detail">Hyperscalers, AI labs &amp; developer tool startups</p>
+        <div class="proof-item__value">24+</div>
+        <div class="proof-item__label">Brand &amp; Media Partners</div>
+        <p class="proof-item__detail">Hyperscalers, AI labs, DevTools &amp; publishers</p>
       </div>
     </div>
   </div>
 
-  <div class="project-grid">
-    <article class="project-dossier">
+  <div class="surface-grid">
+    {% for s in pdata.surfaces %}
+    <article class="surface-card">
       <div>
-        <div class="project-dossier__meta"><span>Format 01</span><span>Deep Technical Content</span></div>
-        <h3 class="project-dossier__title">Reference Apps &amp; Tutorials</h3>
-        <p class="project-dossier__summary">
-          End-to-end engineering builds—such as Cloud TPU fine-tuning, ADK multi-agent pipelines, or LLM
-          benchmarks—paired with open-source code and permanent blog essays.
+        <div class="surface-card__meta">
+          <span class="surface-card__num">{{ s.number }} · {{ s.kicker }}</span>
+          <span class="surface-card__stat">{{ s.stat }}</span>
+        </div>
+        <h3 class="surface-card__title">{{ s.channel }}</h3>
+        <p class="surface-card__summary">{{ s.summary }}</p>
+      </div>
+      <div>
+        <p class="surface-card__best-for">
+          <strong>Best for:</strong> {{ s.best_for }}
         </p>
+        <div class="dossier-links">
+          <a href="{{ s.url }}" {% if s.url contains "http" %}target="_blank" rel="noopener" {% endif %}>{{ s.cta_label
+            }}</a>
+        </div>
       </div>
     </article>
+    {% endfor %}
+  </div>
+</section>
 
-    <article class="project-dossier">
-      <div>
-        <div class="project-dossier__meta"><span>Format 02</span><span>Developer Launches</span></div>
-        <h3 class="project-dossier__title">LinkedIn, X &amp; Creator Video Reels</h3>
-        <p class="project-dossier__summary">
-          High-signal launch analyses, 60-second vertical Shorts/Reels, and studio developer films written and filmed
-          for Staff+ engineers and technical buyers.
-        </p>
-      </div>
-      <div class="dossier-links">
-        <a href="/highlights/#reels-deck">▶ Preview Creator Reels →</a>
-        <a href="https://www.instagram.com/jigyasagroverofficial/tagged/" target="_blank" rel="noopener">Tagged IG
-          Collabs ↗</a>
-      </div>
-    </article>
+<section class="content-section--bordered" aria-labelledby="packages-heading">
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Deliverables &amp; Launch Bundles</div>
+      <h2 id="packages-heading">Choose a focused format—or bundle into one technical story</h2>
+    </div>
+    <a class="section-header__link" href="/work-with-me/?topic=Content%20%26%20Brand%20Partnerships#contact">Request
+      custom scope →</a>
+  </div>
+
+  <div class="bundle-callout mb-lg">
+    <div>
+      <div class="eyebrow mb-xs">Most Requested · Unified Launch Sequence</div>
+      <h3 class="bundle-callout__title">Full-Stack Technical Launch Bundle</h3>
+      <p class="bundle-callout__desc">
+        When a product needs more than a passing mention, we build a working reference implementation with your SDK or
+        model, document the architecture and trade-offs in a permanent blog deep dive, and carry that single technical
+        story across GitHub, LinkedIn, X, and 9:16 creator video.
+      </p>
+    </div>
+    <a class="btn btn--accent" href="/work-with-me/?topic=Content%20%26%20Brand%20Partnerships#contact">Scope a Launch
+      Bundle →</a>
+  </div>
+
+  <div class="comparison-table-wrap" role="region" aria-labelledby="packages-heading" tabindex="0">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th scope="col">Deliverable / Feature</th>
+          {% for pkg in pdata.packages %}
+          <th scope="col" {% if pkg.featured %}class="is-featured-col" {% endif %}>
+            <span class="comparison-table__pkg-name">{{ pkg.name }}</span>
+            <span class="comparison-table__pkg-sub">{{ pkg.subtitle }}</span>
+          </th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in pdata.comparison_rows %}
+        <tr>
+          <th scope="row">{{ row.feature }}</th>
+          {% for val in row.values %}
+          {% assign pkg = pdata.packages[forloop.index0] %}
+          <td {% if pkg.featured %}class="is-featured-col" {% endif %}>
+            {% if val == "Included" or val == "Multi-Post Sequence" %}
+            <span class="matrix-pill matrix-pill--included">{{ val }}</span>
+            {% elsif val == "Add-on" or val == "Optional" or val == "Recap Optional" %}
+            <span class="matrix-pill matrix-pill--addon">{{ val }}</span>
+            {% else %}
+            {{ val }}
+            {% endif %}
+          </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 </section>
 
@@ -127,13 +189,32 @@ permalink: /partnerships/
 
     <div class="platform-box">
       <div>
-        <div class="platform-box__badge">Custom Scope</div>
-        <h3 class="platform-box__name">Direct Inquiry</h3>
-        <p class="platform-box__desc">Custom whitepapers, live developer webinars, stage demos, or multi-part technical
-          series.</p>
+        <div class="platform-box__badge">Custom Scope · 48h Response</div>
+        <h3 class="platform-box__name">Direct Launch Brief</h3>
+        <p class="platform-box__desc">Custom reference builds, live developer webinars, stage demos, or multi-part
+          technical series.</p>
       </div>
       <a class="btn btn--accent" href="/work-with-me/?topic=Content%20%26%20Brand%20Partnerships#contact">Inquire
         Directly →</a>
+    </div>
+  </div>
+
+  <div class="brief-checklist mt-lg" aria-labelledby="brief-checklist-heading">
+    <div class="brief-checklist__header">
+      <div>
+        <div class="eyebrow mb-xs">Fast Scoping · Typical Response Within 2 Business Days</div>
+        <h3 id="brief-checklist-heading" class="brief-checklist__title">What to include in your partnership inquiry</h3>
+      </div>
+      <a class="btn btn--secondary btn--compact"
+        href="/work-with-me/?topic=Content%20%26%20Brand%20Partnerships#contact">Open Brief Form →</a>
+    </div>
+    <div class="brief-checklist__grid">
+      {% for item in pdata.brief_checklist %}
+      <div class="brief-checklist__item">
+        <div class="brief-checklist__label">{{ item.label }}</div>
+        <p class="brief-checklist__detail">{{ item.detail }}</p>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

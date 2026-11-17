@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 36" width="144" height="36" role="img" aria-label="Ticker News">
+  <g fill="#141413">
+    <circle cx="11" cy="18" r="3.5"/>
+    <text x="20" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="800" letter-spacing="0.05em">TICKER NEWS</text>
+  </g>
+</svg>
+

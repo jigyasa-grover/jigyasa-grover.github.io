@@ -45,12 +45,14 @@ Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pro
 ### Official Booking & Collaboration Links
 - Direct Inquiry Form: https://jigyasa-grover.github.io/work-with-me/#contact
 - Intro (1:1 Video Consultations — 5.0★ across 6 verified reviews): https://intro.co/JigyasaGrover
-- Topmate (Mentorship & Quick Calls — 5.0★ across 19 ratings, 126+ bookings): https://topmate.io/jigyasagrover
 - Passionfroot (Brand & Developer Content Partnerships): https://www.passionfroot.me/jigyasa-grover
 - Naano (LinkedIn/X Creator Collaborations): https://naano.com/creators/jigyasa-grover
 - 8x (AI & Tech Launch Campaigns): https://8x.business/p/b623ba2ed48544748601a75a3569c6ee
 - Brand & Technical Content Partners: {{ site.data.recognition.brand_partners | join: ", " }}
 
+### Developer Brand Partnership Surfaces & Launch Bundles
+{% for s in site.data.partnerships.surfaces %}- **{{ s.channel }}** ({{ s.stat }}): {{ s.summary }} *Best for:* {{ s.best_for }}
+{% endfor %}
 ### Selected Verified Client, Founder & Learner Testimonials
 {% for t in site.data.testimonials.home %}- "{{ t.quote }}" — {{ t.author }} ({{ t.role }} · {{ t.platform }}, {{ t.rating }})
 {% endfor %}{% for t in site.data.testimonials.advisory %}- "{{ t.quote }}" — {{ t.author }} ({{ t.role }} · {{ t.platform }}, {{ t.rating }})
@@ -61,6 +63,9 @@ Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pro
 
 - LinkedIn Learning Instructor Profile: https://www.linkedin.com/learning/instructors/jigyasa-grover ({{ site.data.courses.total_learners }} learners, {{ site.data.courses.total_bookmarks }} bookmarks, {{ site.data.courses.avg_rating }} across {{ site.data.courses.total_ratings }} ratings)
 - Corporate AI Training & Enablement Organizations: {{ site.data.courses.training_clients | join: ", " }}, and more
+- Live Workshops & Team Enablement:
+{% for w in site.data.courses.workshops %}  - **{{ w.title }}** ({{ w.duration }} · {{ w.audience }}): {{ w.abstract }}
+{% endfor %}- Production Capability Domains: {% for d in site.data.courses.capability_domains %}{{ d.title }}{% unless forloop.last %}, {% endunless %}{% endfor %}
 {% for c in site.data.courses.courses %}- **{{ c.title }}** ({{ c.provider }}, {{ c.year }}, {% if c.rating_value %}{{ c.rating_value }}★ across {{ c.rating_count }} ratings, {% endif %}{{ c.learners }}): {{ c.summary }} — {{ c.url }}
 {% endfor %}
 
@@ -115,7 +120,13 @@ Featured Video: {{ site.data.speaking.featured_video.title }} ({{ site.data.spea
   A: {{ item.a }}
 {% endfor %}{% endfor %}
 
-## 14. Complete Technical Writing & Essays Index
+## 14. Signature Engineering Blueprints & Learning Tracks
+
+{% for tr in site.data.learning_tracks %}### {{ tr.number }}: {{ tr.title }}
+{{ tr.summary }}
+{% for st in tr.steps %}- [{{ st.format }}] {{ st.title }} — https://jigyasa-grover.github.io{{ st.url }}
+{% endfor %}
+{% endfor %}## 15. Complete Technical Writing & Essays Index
 
 {% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign m = site.data.posts_meta[post.url] %}- **{{ post.title }}** ({{ post.date | date: "%Y-%m-%d" }}{% if m.category %} · {{ m.category }}{% endif %}) — https://jigyasa-grover.github.io{{ post.url }}{% if m.summary %}: {{ m.summary }}{% endif %}
 {% endunless %}{% endfor %}

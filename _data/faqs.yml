@@ -4,13 +4,13 @@ about:
   - q: "What is her engineering background?"
     a: "Before Uber, she led AI & Research at Bordo AI, built a 0→1 feature store and ads bidding engine at Faire, owned sub-50ms billion-request ads ranking at Twitter/X, and worked at Meta, alongside completing her M.S. in CS (AI) at UC San Diego and attending the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS)."
   - q: "How can founders, organizers, or brands work with her?"
-    a: "Submit an inquiry on Work With Me, book a 1:1 consultation via Intro or Topmate, or scope developer brand campaigns via Passionfroot, Naano, or 8x."
+    a: "Submit an inquiry on Work With Me, book a 1:1 consultation via Intro, or scope developer brand campaigns via Passionfroot, Naano, or 8x."
 
 advisory:
   - q: "What topics does Jigyasa advise startups and engineering leaders on?"
     a: "Production ML ranking and personalization, feature stores, multi-agent orchestration vs. deterministic workflows, LLM evaluation harnesses, inference cost guardrails, and developer GTM."
   - q: "How are advisory engagements structured?"
-    a: "Book focused 1:1 architecture or strategy calls via Intro or Topmate, or inquire via Work With Me for ongoing startup advisory retainers through her independent practice, Afterdays."
+    a: "Book focused 1:1 architecture or strategy calls via Intro, or inquire via Work With Me for ongoing startup advisory retainers through her independent practice, Afterdays."
 
 speaking:
   - q: "What are Jigyasa's signature keynote and conference topics?"
@@ -21,11 +21,13 @@ speaking:
 teaching:
   - q: "What organizations has Jigyasa delivered corporate AI training with?"
     a: "She has trained 44,000+ learners on LinkedIn Learning and delivered corporate AI training and workshops with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, CommonSpirit Health, and Udacity."
-  - q: "Can workshops be tailored to our internal stack?"
-    a: "Yes—sessions run as 90-minute executive briefings, half-day intensives, or full-day labs customized to Python, Google ADK / Vertex AI, or multi-provider LLM stacks."
+  - q: "Can workshops be tailored to our internal stack and L&D budget?"
+    a: "Yes—sessions run as 90-minute executive briefings, half-day intensives, or full-day labs across Agentic AI/MCP, LLM evals, ranking, data-centric ML, Cloud TPUs, and developer AI workflows, with runnable repos and L&D-eligible certificates."
 
 partnerships:
-  - q: "What developer partnerships does Jigyasa take on?"
-    a: "Code-backed technical deep dives, open-source reference apps, SDK teardowns, and LinkedIn/X launch analyses for AI platforms, cloud providers, and DevTools."
+  - q: "What developer partnerships and launch bundles does Jigyasa take on?"
+    a: "Single-channel or full-stack launch bundles combining runnable GitHub reference repos, permanent technical blog essays, LinkedIn/X launch analyses, 9:16 creator Reels/Shorts, and live developer webinars."
   - q: "Who makes up her audience?"
-    a: "Across LinkedIn (325K+ annual impressions), GitHub, X, and her blog, 82% of readers are senior practitioners and decision-makers—Staff+ Engineers, Directors, VPs, and Founders."
+    a: "Across LinkedIn (325K+ annual impressions), GitHub, X, video reels, and her blog, 82% of readers are senior practitioners and buyers—Staff+ Engineers, Directors, VPs, and Founders."
+  - q: "What should brands include when inquiring about a sponsorship?"
+    a: "Share your product URL, target developer persona, preferred channel or full-stack bundle, target launch window, and sandbox access—or book standard packages directly via Passionfroot, Naano, or 8x."

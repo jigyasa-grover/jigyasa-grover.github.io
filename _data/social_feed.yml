@@ -21,6 +21,19 @@ channels:
     url: "https://www.youtube.com/@JigyasaGrover/playlists"
 
 posts:
+  - platform: "x"
+    platform_label: "X (Twitter)"
+    handle: "@jigyasa_grover"
+    date: "Nov 2026"
+    sponsored: true
+    partner: "Fireflies.ai"
+    badge: "Fred Launch · Unified AI Workflow"
+    contexts: ["partnerships", "highlights"]
+    excerpt: "Looking at my stack (separate apps for call notes, voice dictation, prep, clips & manual follow-ups) and seeing @firefliesai consolidate notes, meeting prep, system-wide dictation, and post-call agents into one workflow."
+    tag: "@firefliesai · Partner"
+    cta: "View on X"
+    url: "https://x.com/jigyasa_grover/status/2120834106783306142"
+
   - platform: "linkedin"
     platform_label: "LinkedIn"
     handle: "in/jigyasa-grover"
