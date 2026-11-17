@@ -1174,9 +1174,142 @@
   gap: 0.5rem 1.25rem;
 }
 
+.brand-marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+  margin-top: 1rem;
+  padding: 0.45rem 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+
+  &:hover .brand-marquee__track {
+    animation-play-state: paused;
+  }
+}
+
+.brand-marquee__row {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.brand-marquee__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: brandMarqueeScroll 76s linear infinite;
+}
+
+.brand-marquee__track--reverse {
+  animation-direction: reverse;
+  animation-duration: 84s;
+}
+
+.brand-marquee__group {
+  display: flex;
+  align-items: center;
+  gap: 2.6rem;
+  padding-right: 2.6rem;
+  flex-shrink: 0;
+}
+
+.brand-marquee__item {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  flex-shrink: 0;
+
+  img {
+    height: 22px;
+    width: auto;
+    max-width: 165px;
+    object-fit: contain;
+    opacity: 0.72;
+    transition: opacity 0.2s var(--ease-editorial);
+  }
+
+  &:hover img {
+    opacity: 1;
+  }
+}
+
+@keyframes brandMarqueeScroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-marquee {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .brand-marquee__row {
+    overflow-x: auto;
+  }
+
+  .brand-marquee__track {
+    animation: none;
+  }
+
+  .brand-marquee__group[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+.brand-drawer {
+  margin-top: 0.65rem;
+
+  &[open] .brand-drawer__summary::after {
+    content: " ↑";
+  }
+}
+
+.brand-drawer__summary {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-subtle);
+  letter-spacing: 0.02em;
+  user-select: none;
+  transition: color 0.2s var(--ease-editorial);
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::after {
+    content: " ↓";
+    margin-left: 0.25rem;
+  }
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.brand-tile-grid--compact .brand-tile {
+  height: 44px;
+  padding: 0.45rem 0.65rem;
+
+  img {
+    height: 19px;
+  }
+}
+
 [data-theme="dark"] {
   .brand-logo-card__mark img,
   .brand-logo-strip__item img,
+  .brand-marquee__item img,
   .brand-tile img {
     filter: brightness(0) invert(0.92);
   }

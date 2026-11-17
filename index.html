@@ -119,18 +119,45 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
 
     <div class="section-divider">
       <div class="eyebrow mb-xs">Selected Brand, Advisory, Ecosystem &amp; Training Collaborations</div>
-      <div class="brand-tile-grid" role="list" aria-label="Selected brand, advisory, ecosystem, and enterprise training collaborations">
-        {% for item in site.data.recognition.home_ecosystem_logos %}
-          <div class="brand-tile" role="listitem">
-            <img
-              src="{{ item.logo }}"
-              width="{{ item.width }}"
-              height="{{ item.height }}"
-              loading="lazy"
-              alt="{{ item.name }}"
-            />
+      {% assign row1_logos = site.data.recognition.home_ecosystem_logos | slice: 0, 36 %}
+      {% assign row2_logos = site.data.recognition.home_ecosystem_logos | slice: 36, 36 %}
+      <div class="brand-marquee" aria-label="Selected brand, advisory, ecosystem, and enterprise training collaborations">
+        <div class="brand-marquee__row">
+          <div class="brand-marquee__track">
+            <div class="brand-marquee__group">
+              {% for item in row1_logos %}
+                <span class="brand-marquee__item">
+                  <img src="{{ item.logo }}" width="{{ item.width }}" height="{{ item.height }}" decoding="async" alt="{{ item.name }}" />
+                </span>
+              {% endfor %}
+            </div>
+            <div class="brand-marquee__group" aria-hidden="true">
+              {% for item in row1_logos %}
+                <span class="brand-marquee__item">
+                  <img src="{{ item.logo }}" width="{{ item.width }}" height="{{ item.height }}" decoding="async" alt="" />
+                </span>
+              {% endfor %}
+            </div>
           </div>
-        {% endfor %}
+        </div>
+        <div class="brand-marquee__row">
+          <div class="brand-marquee__track brand-marquee__track--reverse">
+            <div class="brand-marquee__group">
+              {% for item in row2_logos %}
+                <span class="brand-marquee__item">
+                  <img src="{{ item.logo }}" width="{{ item.width }}" height="{{ item.height }}" decoding="async" alt="{{ item.name }}" />
+                </span>
+              {% endfor %}
+            </div>
+            <div class="brand-marquee__group" aria-hidden="true">
+              {% for item in row2_logos %}
+                <span class="brand-marquee__item">
+                  <img src="{{ item.logo }}" width="{{ item.width }}" height="{{ item.height }}" decoding="async" alt="" />
+                </span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
       </div>
       <div class="brand-showcase__footer">
         <span class="brand-showcase__note">70+ organizations across AI consulting, developer launches, corporate training, boards &amp; open source</span>
@@ -140,6 +167,22 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, Google Develop
           <a class="brand-logo-strip__more" href="/teaching/">Corporate Training →</a>
         </div>
       </div>
+      <details class="brand-drawer">
+        <summary class="brand-drawer__summary">View all 72 organizations at once</summary>
+        <div class="brand-tile-grid brand-tile-grid--compact" role="list" aria-label="Full directory of 72 collaborating organizations">
+          {% for item in site.data.recognition.home_ecosystem_logos %}
+            <div class="brand-tile" role="listitem">
+              <img
+                src="{{ item.logo }}"
+                width="{{ item.width }}"
+                height="{{ item.height }}"
+                loading="lazy"
+                alt="{{ item.name }}"
+              />
+            </div>
+          {% endfor %}
+        </div>
+      </details>
     </div>
   </div>
 </section>
