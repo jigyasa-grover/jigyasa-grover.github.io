@@ -60,7 +60,8 @@ sitemap: false
   "learning_tracks": {{ site.data.learning_tracks | jsonify }},
   "speaking": {
     "featured_keynote": {{ site.data.speaking.featured_video | jsonify }},
-    "signature_talks": {{ site.data.speaking.signature_talks | jsonify }}
+    "signature_talks": {{ site.data.speaking.signature_talks | jsonify }},
+    "global_footprint": {{ site.data.speaking.speaking_globe | jsonify }}
   },
   "videos": {
     "watch_hub_url": "{{ site.url }}/highlights/#watch-hub",

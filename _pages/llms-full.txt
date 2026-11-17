@@ -105,6 +105,7 @@ Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pro
 ## 9. Signature Speaking Topics & Global Conferences
 
 Featured Video: {{ site.data.speaking.featured_video.title }} ({{ site.data.speaking.featured_video.url }}) — {{ site.data.speaking.featured_video.caption }}
+Global Stage Footprint (200+ talks across {{ site.data.speaking.speaking_globe.countries.size }} countries): {{ site.data.speaking.speaking_globe.countries | join: ", " }}.
 
 {% for t in site.data.speaking.signature_talks %}- **{{ t.title }}** ({{ t.format }}): {{ t.abstract }} [Delivered at: {{ t.stages }}]
 {% endfor %}

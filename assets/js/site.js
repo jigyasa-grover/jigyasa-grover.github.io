@@ -1885,4 +1885,745 @@
     };
     window.addEventListener("scroll", checkReadDepth, { passive: true });
   }
+
+  // 12. Interactive 3D Orthographic Speaking Globe & Stage Atlas (/speaking/)
+  var globeSection = document.querySelector("[data-speaking-globe]");
+  if (globeSection) {
+    var globeCanvas = document.getElementById("speaking-globe-canvas");
+    var globeDataEl = document.getElementById("speaking-globe-data");
+    var hoverTipEl = document.getElementById("globe-hover-tip");
+    var spinToggleBtn = document.getElementById("globe-spin-toggle");
+    var regionBtns = Array.prototype.slice.call(globeSection.querySelectorAll("[data-globe-region]"));
+    var cityChipBtns = Array.prototype.slice.call(globeSection.querySelectorAll("[data-globe-pin]"));
+
+    var badgeEl = document.getElementById("globe-pin-badge");
+    var titleEl = document.getElementById("globe-pin-title");
+    var venuesEl = document.getElementById("globe-pin-venues");
+    var noteEl = document.getElementById("globe-pin-note");
+    var videoLinkEl = document.getElementById("globe-pin-video");
+
+    var globeData = null;
+    try {
+      globeData = globeDataEl ? JSON.parse(globeDataEl.textContent) : null;
+    } catch (e) {
+      globeData = null;
+    }
+
+    if (globeCanvas && globeData && globeData.pins && globeData.pins.length) {
+      var gCtx = globeCanvas.getContext("2d");
+      var pins = globeData.pins;
+      var homeHub = globeData.home_hub || { id: "san-francisco", lat: 37.77, lon: -122.42 };
+      var DEG2RAD = Math.PI / 180;
+
+      var toVec3 = function (latDeg, lonDeg) {
+        var phi = latDeg * DEG2RAD;
+        var lam = lonDeg * DEG2RAD;
+        var cPhi = Math.cos(phi);
+        return {
+          x: cPhi * Math.sin(lam),
+          y: Math.sin(phi),
+          z: cPhi * Math.cos(lam)
+        };
+      };
+
+      // Decode compact 240x120 Natural Earth 110m 1-bit land mask & sample uniform Fibonacci-sphere land dots
+      var MASK_W = 240;
+      var MASK_H = 120;
+      var EARTH_B64 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPj/z////3EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/++f///w8AAPADgAEAAOADAAAAAAAAAAAAAAAg3N4f/v///wcAAB8AAAAAAAA4AAAAAAAAAAAAAAADAOAH/P///wcAAA4AAAAAAAAwAAAAAAAAAAAAAAC8cQwBAP///wcAAAAAAIAHAMD/DwDwAAAAAAAAAOAAAAAAAPz//wMAAAAAAGAAAPz/AQAAAAAAAAAAAOBdc/MDAPj//wEAAAAAABjAwP///z9gAAAAA4AAAED8A/P/AOD//wEAAAAAADjg/v///z//HwCAAPj/A0/8X4PwB/D//wAAAOA/AADh/v///////wM+A/7///8Pw56BB+D/DwAAAPz/Y+zf/f//////////N/D///////+Bf/D/AQAAAP7/x////v//////////GP7//////7/wJ+AfAH4AAD9++P//////////////AOD//////88GH8AfAAwAwJ////////////////9/APz//////wNxDIAPAAAA8M///////////////98/APzf/////wHwAwAGAAAA+M///////////////+ADAPAB+P///wHwMwAAAAAA8A//////////////ZBgAAIACgP///wPgfwAAAAAQAAf///////////8fAA4AACAAAP///z/gfwAAAAAwYMf///////////8PAB8AAAQAAP7////5/wMAAABoQOj///////////8DAA8AAAAAgPz////5/wcAAADs+P////////////9/AAcAAAAAAPj////7/wMAAADg+f////////////9/AAEAAAAAAPj/////zwAAAAAw/v////////////+/AAAAAAAAAPD/////Gw4AAACg//////////////8fAAAAAAAAAOD/////HxAAAADA//////////////8fAAAAAAAAAOD//////wAAAACA//9P/vj///////8PAAAAAAAAAOD/////EwAAAACA//wHfPz////////HAAAAAAAAAOD/////AQAAAAD8g/EH8Pj////////gAAAAAAAAAOD/////AAAAAAD8Aebn+fH//////z8AAAAAAAAAAOD///9/AAAAAAD8AGT8//H//////xpgAAAAAAAAAMD///8/AAAAAAD8AMT8//H/////fzggAAAAAAAAAID///8fAAAAAABwdAD8/////////zE4AAAAAAAAAID///8fAAAAAACwfwBD/////////zA/AAAAAAAAAAD+//8PAAAAAAD4fwAA/////////wAHAAAAAAAAAAD8//8DAAAAAAD8/2OA/////////4EAAAAAAAAAAADo//8DAAAAAAD8/+///////////wEAAAAAAAAAAADo/wkCAAAAAAD+//////z//////wEAAAAAAAAAAADYfwACAAAAAID///8///n//////wEAAAAAAAAAAACgfwAWAAAAAMD///9//+H//////wAAAAAAAAAAAAAgfwAAAAAAAMD///9//jPg////fwAAAAAAAAAAAAAAfgAAAAAAAOD//////H/A////PwEAAAAAAAAAAAAAfAAIAAAAAOD//////f/A/+f/BwAAAAAAAAAAAAAAfDBwAAAAAOD/////+X8A/sN/AAAAAAAAAAAAAAAA+DgAAwAAAOD/////+T8A/oB/AwAAAAAAAAAAAAAA4B8AAAAAAOD/////8x8AfoB/AAMAAAAAAAAAAAAAgPwAAAAAAOD/////8wcAPoD+AAEAAAAAAAAAAAAAAPgBAAAAAOD/////7wEAHAD+AQEAAAAAAAAAAAAAAMAAAAAAAOD/////PwAAHAD8AQQAAAAAAAAAAAAAAICAAgAAAMD/////HwMAGADgAAoAAAAAAAAAAAAAAADBfgAAAID//////wMAGABAAAAAAAAAAAAAAAAAAADy/wAAAID//////wEAIAAGAAwAAAAAAAAAAAAAAADw/wEAAAD//////wEAIAAIAAgAAAAAAAAAAAAAAADw/x8AAAD8+P///wAAAAAZYAAAAAAAAAAAAAAAAADg/z8AAAAAwP///wAAAAAbMAAAAAAAAAAAAAAAAADw/z8AAAAAwP//fwAAAAAWfAAAAAAAAAAAAAAAAAD4/38AAAAAwP//HwAAAAAcficAAAAAAAAAAAAAAAD8//8BAAAAwP//DwAAAAAYPiABAAAAAAAAAAAAAAD8//8DAAAAwP//BwAAAAA4vgEaAAAAAAAAAAAAAAD8//8/AAAAgP//BwAAAABwEBL+AAAAAAAAAAAAAAD8////AAAAAP//AwAAAABgAADwAQAAAAAAAAAAAAD8////AQAAAP//AwAAAADABADyAwEAAAAAAAAAAAD4////AQAAAP7/AwAAAAAAHADwBgQAAAAAAAAAAADw////AAAAAP7/BwAAAAAAAAQADAAAAAAAAAAAAADw//9/AAAAAP7/BwAAAAAAAAAAAAAAAAAAAAAAAADg//9/AAAAAP7/BwAAAAAAAICHAAAAAAAAAAAAAADg//8/AAAAAP//BwEAAAAAANDHAAAAAAAAAAAAAADA//8/AAAAAP//hwMAAAAAAPjHAQAAAAAAAAAAAAAA//8/AAAAAP//4QEAAAAAAPzfAQAAAAAAAAAAAAAA/v8/AAAAAP//4AEAAAAAAP7/AwAAAAAAAAAAAAAA/v8fAAAAAP5/wAAAAAAAgP//ByAAAAAAAAAAAAAA/v8fAAAAAP7/4AAAAAAA4P//D0AAAAAAAAAAAAAA/v8HAAAAAPz/4AAAAAAA8P//HwAAAAAAAAAAAAAA/v8AAAAAAPx/YAAAAAAA8P//PwAAAAAAAAAAAAAA/v8AAAAAAPw/AAAAAAAA8P//PwAAAAAAAAAAAAAA/v8AAAAAAPw/AAAAAAAA8P//PwAAAAAAAAAAAAAA/38AAAAAAPgfAAAAAAAA4P//PwAAAAAAAAAAAAAA/z8AAAAAAPAPAAAAAAAA4P//PwAAAAAAAAAAAAAA/x8AAAAAAPAHAAAAAAAA4B/+PwAAAAAAAAAAAAAA/w8AAAAAAPABAAAAAAAA4Af0HwAAAAAAAAAAAAAA/wMAAAAAAAAAAAAAAAAAAADwDwAIAAAAAAAAAACA/wMAAAAAAAAAAAAAAAAAAADgDwAQAAAAAAAAAACA/wEAAAAAAAAAAAAAAAAAAADAAgBwAAAAAAAAAACAfwAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAACAHwAAAAAAAAAAAAAAAAAAAAAABgAQAAAAAAAAAACAHwAAAAAAAAAAAAAAAAAAAAAABgAMAAAAAAAAAADADwAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAADABwAAAAAAAAAAAAAAAAAAAAAAAIADAAAAAAAAAADADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADABwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAgwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACABwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAADwAAAR4Pv4HAAAAAAAAAAAAAAAACAAAAAAAAAAA4P8/4P//////BwAAAAAAAAAAAAAAPwAAAAAAAADg//8//P///////wMAAAAAAAAAAACAewAAAADI/v////8///////////8BAAAAAAAAABAAeAAAAID///////////////////8DAAAAAAAe4P//fwAAAMD//////////////////38AAADA////////BwAAAPz//////////////////x8AAEDz//////8/AAAA8P///////////////////x8AABj///////8PAIAH/////////////////////38AAADA//////8/gPAD4P///////////////////wcAAAD+////////P4Dx/////////////////////w8AAAD8//////////////////////////////////8A/wMA/v//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
+      var rawMask = window.atob ? window.atob(EARTH_B64) : "";
+      var maskBytes = new Uint8Array(rawMask.length);
+      for (var mi = 0; mi < rawMask.length; mi++) {
+        maskBytes[mi] = rawMask.charCodeAt(mi);
+      }
+
+      var isLandCell = function (latDeg, lonDeg) {
+        if (!maskBytes.length) return false;
+        var r = Math.floor(((90 - latDeg) / 180) * MASK_H);
+        var c = Math.floor(((lonDeg + 180) / 360) * MASK_W);
+        if (r < 0) r = 0;
+        if (r >= MASK_H) r = MASK_H - 1;
+        if (c < 0) c = 0;
+        if (c >= MASK_W) c = MASK_W - 1;
+        var bitIdx = r * MASK_W + c;
+        return Boolean(maskBytes[bitIdx >> 3] & (1 << (bitIdx & 7)));
+      };
+
+      var landDots = [];
+      var FIB_COUNT = 5600;
+      var GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5));
+      for (var fi = 0; fi < FIB_COUNT; fi++) {
+        var fy = 1 - (fi / (FIB_COUNT - 1)) * 2;
+        var fr = Math.sqrt(Math.max(0, 1 - fy * fy));
+        var theta = GOLDEN_ANGLE * fi;
+        var fx = Math.cos(theta) * fr;
+        var fz = Math.sin(theta) * fr;
+        var latD = Math.asin(fy) / DEG2RAD;
+        var lonD = Math.atan2(fx, fz) / DEG2RAD;
+        if (isLandCell(latD, lonD)) {
+          landDots.push({ x: fx, y: fy, z: fz });
+        }
+      }
+
+      // Precompute 30-degree graticule polylines
+      var graticuleLines = [];
+      for (var glat = -60; glat <= 60; glat += 30) {
+        var latRing = [];
+        for (var glon = -180; glon <= 180; glon += 6) {
+          latRing.push(toVec3(glat, glon));
+        }
+        graticuleLines.push(latRing);
+      }
+      for (var mlon = -150; mlon <= 180; mlon += 30) {
+        var lonRing = [];
+        for (var mlat = -75; mlat <= 75; mlat += 5) {
+          lonRing.push(toVec3(mlat, mlon));
+        }
+        graticuleLines.push(lonRing);
+      }
+
+      var pinItems = pins.map(function (p) {
+        var v = toVec3(p.lat, p.lon);
+        return {
+          data: p,
+          x: v.x,
+          y: v.y,
+          z: v.z,
+          sx: 0,
+          sy: 0,
+          sz: 0
+        };
+      });
+      var hubVec = toVec3(homeHub.lat, homeHub.lon);
+
+      var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var autoSpin = !reducedMotion;
+      if (spinToggleBtn) {
+        spinToggleBtn.setAttribute("aria-pressed", String(autoSpin));
+        spinToggleBtn.textContent = autoSpin ? "Pause Spin" : "Resume Spin";
+      }
+
+      // Start centered on Europe / Atlantic so upcoming Paris + European & East Coast stages shine immediately
+      var camLat = 34;
+      var camLon = 6;
+      var targetLat = null;
+      var targetLon = null;
+      var velLon = 0;
+      var velLat = 0;
+      var isDragging = false;
+      var dragMoved = false;
+      var lastPtrX = 0;
+      var lastPtrY = 0;
+
+      var activePinId = pins[0].id;
+      var hoveredPinId = null;
+      var activeRegion = "all";
+      var isInView = true;
+      var animFrameId = null;
+
+      var getPalette = function () {
+        var dark = document.documentElement.getAttribute("data-theme") === "dark";
+        return dark
+          ? {
+              sphereTop: "#24221E",
+              sphereBot: "#151412",
+              rim: "rgba(239, 236, 230, 0.22)",
+              graticule: "rgba(239, 236, 230, 0.06)",
+              dotRgb: "224, 218, 206",
+              arc: "rgba(226, 109, 137, 0.58)",
+              pinStage: "#E26D89",
+              pinUpcoming: "#6BC2B2",
+              pinHub: "#EFECE6",
+              pinBack: "rgba(239, 236, 230, 0.16)",
+              haloStage: "rgba(226, 109, 137, 0.28)",
+              haloUpcoming: "rgba(107, 194, 178, 0.28)",
+              labelBg: "rgba(20, 19, 17, 0.92)",
+              labelBorder: "rgba(239, 236, 230, 0.28)",
+              labelText: "#EFECE6"
+            }
+          : {
+              sphereTop: "#FCFBF8",
+              sphereBot: "#EDE8DF",
+              rim: "rgba(20, 20, 19, 0.2)",
+              graticule: "rgba(20, 20, 19, 0.055)",
+              dotRgb: "74, 69, 61",
+              arc: "rgba(154, 27, 56, 0.45)",
+              pinStage: "#9A1B38",
+              pinUpcoming: "#1B4D44",
+              pinHub: "#141413",
+              pinBack: "rgba(20, 20, 19, 0.14)",
+              haloStage: "rgba(154, 27, 56, 0.2)",
+              haloUpcoming: "rgba(27, 77, 68, 0.22)",
+              labelBg: "rgba(20, 20, 19, 0.9)",
+              labelBorder: "rgba(255, 255, 255, 0.2)",
+              labelText: "#FAF8F5"
+            };
+      };
+
+      var palette = getPalette();
+      if (window.MutationObserver) {
+        new MutationObserver(function () {
+          palette = getPalette();
+        }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+      }
+
+      var wrapLon = function (lon) {
+        var w = ((lon + 180) % 360 + 360) % 360 - 180;
+        return w;
+      };
+
+      var flyTo = function (lat, lon) {
+        targetLat = Math.max(-62, Math.min(62, lat));
+        var diff = wrapLon(lon - camLon);
+        targetLon = camLon + diff;
+        velLon = 0;
+        velLat = 0;
+      };
+
+      var updateDossier = function (pinId, shouldFly) {
+        var found = null;
+        for (var i = 0; i < pinItems.length; i++) {
+          if (pinItems[i].data.id === pinId) {
+            found = pinItems[i].data;
+            break;
+          }
+        }
+        if (!found) return;
+        activePinId = found.id;
+
+        if (badgeEl) badgeEl.textContent = found.badge || "";
+        if (titleEl) titleEl.textContent = found.city + ", " + found.country;
+        if (venuesEl) venuesEl.textContent = found.venues || "";
+        if (noteEl) noteEl.textContent = found.note || "";
+        if (videoLinkEl) {
+          if (found.video_url) {
+            videoLinkEl.href = found.video_url;
+            videoLinkEl.hidden = false;
+          } else {
+            videoLinkEl.hidden = true;
+          }
+        }
+
+        cityChipBtns.forEach(function (btn) {
+          var match = btn.getAttribute("data-globe-pin") === activePinId;
+          btn.classList.toggle("is-active", match);
+          btn.setAttribute("aria-pressed", String(match));
+        });
+
+        if (shouldFly) {
+          flyTo(found.lat * 0.78, found.lon);
+        }
+      };
+
+      var setRegionFilter = function (reg) {
+        activeRegion = reg || "all";
+        regionBtns.forEach(function (b) {
+          var match = b.getAttribute("data-globe-region") === activeRegion;
+          b.classList.toggle("is-active", match);
+          b.setAttribute("aria-pressed", String(match));
+        });
+
+        var firstInRegion = null;
+        cityChipBtns.forEach(function (chip) {
+          var cReg = chip.getAttribute("data-pin-region");
+          var vis = activeRegion === "all" || cReg === activeRegion;
+          chip.hidden = !vis;
+          if (vis && !firstInRegion) {
+            firstInRegion = chip.getAttribute("data-globe-pin");
+          }
+        });
+
+        if (activeRegion === "europe") {
+          flyTo(48, 11);
+          updateDossier("paris", false);
+        } else if (activeRegion === "americas") {
+          flyTo(38, -98);
+          updateDossier("san-francisco", false);
+        } else if (activeRegion === "apac") {
+          flyTo(10, 102);
+          updateDossier("bali", false);
+        } else if (firstInRegion) {
+          flyTo(32, 6);
+        }
+      };
+
+      regionBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          autoSpin = false;
+          if (spinToggleBtn) {
+            spinToggleBtn.setAttribute("aria-pressed", "false");
+            spinToggleBtn.textContent = "Resume Spin";
+          }
+          setRegionFilter(btn.getAttribute("data-globe-region"));
+        });
+      });
+
+      cityChipBtns.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          autoSpin = false;
+          if (spinToggleBtn) {
+            spinToggleBtn.setAttribute("aria-pressed", "false");
+            spinToggleBtn.textContent = "Resume Spin";
+          }
+          updateDossier(chip.getAttribute("data-globe-pin"), true);
+        });
+      });
+
+      if (spinToggleBtn) {
+        spinToggleBtn.addEventListener("click", function () {
+          autoSpin = !autoSpin;
+          targetLat = null;
+          targetLon = null;
+          spinToggleBtn.setAttribute("aria-pressed", String(autoSpin));
+          spinToggleBtn.textContent = autoSpin ? "Pause Spin" : "Resume Spin";
+        });
+      }
+
+      // Slerp great-circle points between SFO hub and target pin
+      var buildArcPoints = function (vA, vB) {
+        var dot = Math.max(-1, Math.min(1, vA.x * vB.x + vA.y * vB.y + vA.z * vB.z));
+        var omega = Math.acos(dot);
+        if (omega < 0.03) return [];
+        var sinOmega = Math.sin(omega);
+        var pts = [];
+        var steps = 36;
+        for (var s = 0; s <= steps; s++) {
+          var t = s / steps;
+          var wA = Math.sin((1 - t) * omega) / sinOmega;
+          var wB = Math.sin(t * omega) / sinOmega;
+          var lift = 1 + 0.085 * Math.sin(Math.PI * t);
+          pts.push({
+            x: (vA.x * wA + vB.x * wB) * lift,
+            y: (vA.y * wA + vB.y * wB) * lift,
+            z: (vA.z * wA + vB.z * wB) * lift
+          });
+        }
+        return pts;
+      };
+
+      var canvasCssSize = 440;
+      var syncCanvasSize = function () {
+        var rect = globeCanvas.getBoundingClientRect();
+        var sz = Math.max(260, Math.round(rect.width || 420));
+        canvasCssSize = sz;
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        if (globeCanvas.width !== sz * dpr || globeCanvas.height !== sz * dpr) {
+          globeCanvas.width = sz * dpr;
+          globeCanvas.height = sz * dpr;
+          gCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+      };
+      syncCanvasSize();
+      window.addEventListener("resize", syncCanvasSize, { passive: true });
+
+      var projectVec = function (v, cLam, sLam, cPhi, sPhi, cx, cy, R) {
+        var x1 = v.x * cLam - v.z * sLam;
+        var y1 = v.y;
+        var z1 = v.x * sLam + v.z * cLam;
+        var sy = y1 * cPhi - z1 * sPhi;
+        var sz = y1 * sPhi + z1 * cPhi;
+        return {
+          px: cx + x1 * R,
+          py: cy - sy * R,
+          sz: sz
+        };
+      };
+
+      var renderGlobeFrame = function (now) {
+        if (!isInView) {
+          animFrameId = window.requestAnimationFrame(renderGlobeFrame);
+          return;
+        }
+
+        if (!isDragging) {
+          if (targetLat !== null && targetLon !== null) {
+            var dLat = targetLat - camLat;
+            var dLon = targetLon - camLon;
+            camLat += dLat * 0.11;
+            camLon += dLon * 0.11;
+            if (Math.abs(dLat) < 0.08 && Math.abs(dLon) < 0.08) {
+              camLat = targetLat;
+              camLon = wrapLon(targetLon);
+              targetLat = null;
+              targetLon = null;
+            }
+          } else {
+            if (autoSpin) {
+              camLon = wrapLon(camLon + 0.14);
+            } else if (Math.abs(velLon) > 0.002 || Math.abs(velLat) > 0.002) {
+              camLon = wrapLon(camLon + velLon);
+              camLat = Math.max(-65, Math.min(65, camLat + velLat));
+              velLon *= 0.92;
+              velLat *= 0.92;
+            }
+          }
+        }
+
+        var W = canvasCssSize;
+        var H = canvasCssSize;
+        var cx = W * 0.5;
+        var cy = H * 0.5;
+        var R = W * 0.415;
+
+        gCtx.clearRect(0, 0, W, H);
+
+        // 1. Shaded editorial globe sphere
+        var grad = gCtx.createRadialGradient(cx - R * 0.28, cy - R * 0.28, R * 0.08, cx, cy, R);
+        grad.addColorStop(0, palette.sphereTop);
+        grad.addColorStop(1, palette.sphereBot);
+        gCtx.beginPath();
+        gCtx.arc(cx, cy, R, 0, Math.PI * 2);
+        gCtx.fillStyle = grad;
+        gCtx.fill();
+
+        var lam0 = camLon * DEG2RAD;
+        var phi0 = camLat * DEG2RAD;
+        var cLam = Math.cos(lam0);
+        var sLam = Math.sin(lam0);
+        var cPhi = Math.cos(phi0);
+        var sPhi = Math.sin(phi0);
+
+        // Clip internal graticules & continents to sphere horizon
+        gCtx.save();
+        gCtx.beginPath();
+        gCtx.arc(cx, cy, R, 0, Math.PI * 2);
+        gCtx.clip();
+
+        // 2. Subtle 30-degree graticule lines
+        gCtx.strokeStyle = palette.graticule;
+        gCtx.lineWidth = 0.85;
+        for (var gi = 0; gi < graticuleLines.length; gi++) {
+          var ring = graticuleLines[gi];
+          gCtx.beginPath();
+          var penDown = false;
+          for (var rj = 0; rj < ring.length; rj++) {
+            var gp = projectVec(ring[rj], cLam, sLam, cPhi, sPhi, cx, cy, R);
+            if (gp.sz > 0) {
+              if (!penDown) {
+                gCtx.moveTo(gp.px, gp.py);
+                penDown = true;
+              } else {
+                gCtx.lineTo(gp.px, gp.py);
+              }
+            } else {
+              penDown = false;
+            }
+          }
+          gCtx.stroke();
+        }
+
+        // 3. Real Natural Earth Fibonacci landmass dot-matrix with spherical limb shading
+        var dotRadius = Math.max(1.05, R * 0.0068);
+        for (var di = 0; di < landDots.length; di++) {
+          var ld = landDots[di];
+          var x1 = ld.x * cLam - ld.z * sLam;
+          var z1 = ld.x * sLam + ld.z * cLam;
+          var sz = ld.y * sPhi + z1 * cPhi;
+          if (sz > 0.02) {
+            var sy = ld.y * cPhi - z1 * sPhi;
+            var alpha = 0.16 + 0.62 * Math.pow(sz, 0.75);
+            gCtx.fillStyle = "rgba(" + palette.dotRgb + "," + alpha.toFixed(2) + ")";
+            gCtx.fillRect(cx + x1 * R - dotRadius, cy - sy * R - dotRadius, dotRadius * 2, dotRadius * 2);
+          }
+        }
+        gCtx.restore();
+
+        // Outer crisp rim
+        gCtx.beginPath();
+        gCtx.arc(cx, cy, R, 0, Math.PI * 2);
+        gCtx.strokeStyle = palette.rim;
+        gCtx.lineWidth = 1.15;
+        gCtx.stroke();
+
+        // 4. Great-circle flight arc from SFO Home Hub to selected city
+        var activeItem = null;
+        for (var pi = 0; pi < pinItems.length; pi++) {
+          var item = pinItems[pi];
+          var pr = projectVec(item, cLam, sLam, cPhi, sPhi, cx, cy, R);
+          item.sx = pr.px;
+          item.sy = pr.py;
+          item.sz = pr.sz;
+          if (item.data.id === activePinId) {
+            activeItem = item;
+          }
+        }
+
+        if (activeItem && activeItem.data.id !== homeHub.id) {
+          var arcPts = buildArcPoints(hubVec, activeItem);
+          if (arcPts.length) {
+            gCtx.save();
+            gCtx.strokeStyle = palette.arc;
+            gCtx.lineWidth = 1.5;
+            gCtx.setLineDash([3, 3]);
+            gCtx.beginPath();
+            var started = false;
+            for (var ai = 0; ai < arcPts.length; ai++) {
+              var ap = projectVec(arcPts[ai], cLam, sLam, cPhi, sPhi, cx, cy, R);
+              if (ap.sz > -0.05) {
+                if (!started) {
+                  gCtx.moveTo(ap.px, ap.py);
+                  started = true;
+                } else {
+                  gCtx.lineTo(ap.px, ap.py);
+                }
+              } else {
+                started = false;
+              }
+            }
+            gCtx.stroke();
+            gCtx.restore();
+          }
+        }
+
+        // 5. Render back-hemisphere ghost pins first, then front-hemisphere interactive pins
+        var pulse = (Math.sin((now || 0) * 0.0035) + 1) * 0.5;
+        for (var bi = 0; bi < pinItems.length; bi++) {
+          var bp = pinItems[bi];
+          if (bp.sz <= 0) {
+            gCtx.beginPath();
+            gCtx.arc(bp.sx, bp.sy, 2.2, 0, Math.PI * 2);
+            gCtx.fillStyle = palette.pinBack;
+            gCtx.fill();
+          }
+        }
+
+        var labelTarget = null;
+        for (var fi2 = 0; fi2 < pinItems.length; fi2++) {
+          var fp = pinItems[fi2];
+          if (fp.sz <= 0) continue;
+          var inReg = activeRegion === "all" || fp.data.region === activeRegion;
+          var isSel = fp.data.id === activePinId;
+          var isHov = fp.data.id === hoveredPinId;
+          var kind = fp.data.kind;
+
+          if (isHov) {
+            labelTarget = fp;
+          } else if (isSel && !labelTarget) {
+            labelTarget = fp;
+          }
+
+          if (kind === "upcoming" || isSel) {
+            var haloR = isSel ? 11 + pulse * 4 : 9 + pulse * 4;
+            gCtx.beginPath();
+            gCtx.arc(fp.sx, fp.sy, haloR, 0, Math.PI * 2);
+            gCtx.fillStyle = kind === "upcoming" ? palette.haloUpcoming : palette.haloStage;
+            gCtx.fill();
+          }
+
+          var baseR = isSel || isHov ? 5.6 : kind === "hub" || kind === "upcoming" ? 4.8 : inReg ? 3.8 : 2.5;
+          gCtx.beginPath();
+          gCtx.arc(fp.sx, fp.sy, baseR, 0, Math.PI * 2);
+          gCtx.fillStyle =
+            kind === "hub" ? palette.pinHub : kind === "upcoming" ? palette.pinUpcoming : palette.pinStage;
+          gCtx.globalAlpha = inReg || isSel ? 1 : 0.35;
+          gCtx.fill();
+          gCtx.lineWidth = 1.4;
+          gCtx.strokeStyle = palette.sphereTop;
+          gCtx.stroke();
+          gCtx.globalAlpha = 1;
+        }
+
+        // 6. Crisp floating callout pill on active/hovered front-facing city
+        if (labelTarget && labelTarget.sz > 0.05) {
+          var lbl = labelTarget.data.city;
+          gCtx.font = '600 11px "Plus Jakarta Sans", -apple-system, sans-serif';
+          var tw = gCtx.measureText(lbl).width;
+          var padX = 8;
+          var boxW = tw + padX * 2;
+          var boxH = 22;
+          var bx = Math.max(8, Math.min(W - boxW - 8, labelTarget.sx - boxW * 0.5));
+          var by = labelTarget.sy - 28;
+          if (by < 8) by = labelTarget.sy + 10;
+
+          gCtx.fillStyle = palette.labelBg;
+          gCtx.strokeStyle = palette.labelBorder;
+          gCtx.lineWidth = 1;
+          gCtx.beginPath();
+          if (gCtx.roundRect) {
+            gCtx.roundRect(bx, by, boxW, boxH, 3);
+          } else {
+            gCtx.rect(bx, by, boxW, boxH);
+          }
+          gCtx.fill();
+          gCtx.stroke();
+
+          gCtx.fillStyle = palette.labelText;
+          gCtx.textBaseline = "middle";
+          gCtx.fillText(lbl, bx + padX, by + boxH * 0.5 + 0.5);
+        }
+
+        animFrameId = window.requestAnimationFrame(renderGlobeFrame);
+      };
+
+      // Pointer drag + pin hit-testing
+      var findNearestPin = function (clientX, clientY) {
+        var rect = globeCanvas.getBoundingClientRect();
+        var mx = clientX - rect.left;
+        var my = clientY - rect.top;
+        var best = null;
+        var bestDist = 18;
+        for (var i = 0; i < pinItems.length; i++) {
+          var p = pinItems[i];
+          if (p.sz <= 0.02) continue;
+          var dx = p.sx - mx;
+          var dy = p.sy - my;
+          var d = Math.sqrt(dx * dx + dy * dy);
+          if (d < bestDist) {
+            bestDist = d;
+            best = { item: p, mx: mx, my: my };
+          }
+        }
+        return best;
+      };
+
+      globeCanvas.addEventListener("pointerdown", function (e) {
+        isDragging = true;
+        dragMoved = false;
+        targetLat = null;
+        targetLon = null;
+        lastPtrX = e.clientX;
+        lastPtrY = e.clientY;
+        globeCanvas.classList.add("is-dragging");
+        if (globeCanvas.setPointerCapture) {
+          try { globeCanvas.setPointerCapture(e.pointerId); } catch (err) {}
+        }
+      });
+
+      globeCanvas.addEventListener("pointermove", function (e) {
+        if (isDragging) {
+          var dx = e.clientX - lastPtrX;
+          var dy = e.clientY - lastPtrY;
+          if (Math.abs(dx) > 2 || Math.abs(dy) > 2) {
+            dragMoved = true;
+            autoSpin = false;
+            if (spinToggleBtn) {
+              spinToggleBtn.setAttribute("aria-pressed", "false");
+              spinToggleBtn.textContent = "Resume Spin";
+            }
+          }
+          velLon = -dx * 0.32;
+          velLat = dy * 0.28;
+          camLon = wrapLon(camLon + velLon);
+          camLat = Math.max(-65, Math.min(65, camLat + velLat));
+          lastPtrX = e.clientX;
+          lastPtrY = e.clientY;
+          if (hoverTipEl) hoverTipEl.hidden = true;
+          return;
+        }
+
+        var hit = findNearestPin(e.clientX, e.clientY);
+        if (hit) {
+          hoveredPinId = hit.item.data.id;
+          globeCanvas.classList.add("is-pointer");
+          if (hoverTipEl) {
+            hoverTipEl.textContent = hit.item.data.city + " · " + hit.item.data.country;
+            hoverTipEl.style.left = hit.item.sx + "px";
+            hoverTipEl.style.top = hit.item.sy + "px";
+            hoverTipEl.hidden = false;
+          }
+        } else {
+          hoveredPinId = null;
+          globeCanvas.classList.remove("is-pointer");
+          if (hoverTipEl) hoverTipEl.hidden = true;
+        }
+      });
+
+      var endPointerDrag = function (e) {
+        if (!isDragging) return;
+        isDragging = false;
+        globeCanvas.classList.remove("is-dragging");
+        if (!dragMoved && e) {
+          var hit = findNearestPin(e.clientX, e.clientY);
+          if (hit) {
+            autoSpin = false;
+            if (spinToggleBtn) {
+              spinToggleBtn.setAttribute("aria-pressed", "false");
+              spinToggleBtn.textContent = "Resume Spin";
+            }
+            updateDossier(hit.item.data.id, true);
+          }
+        }
+      };
+
+      globeCanvas.addEventListener("pointerup", endPointerDrag);
+      globeCanvas.addEventListener("pointercancel", endPointerDrag);
+      globeCanvas.addEventListener("pointerleave", function () {
+        hoveredPinId = null;
+        if (hoverTipEl) hoverTipEl.hidden = true;
+      });
+
+      if (window.IntersectionObserver) {
+        new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              isInView = entry.isIntersecting;
+            });
+          },
+          { threshold: 0.05 }
+        ).observe(globeSection);
+      }
+
+      animFrameId = window.requestAnimationFrame(renderGlobeFrame);
+
+      if (modelContext && typeof modelContext.registerTool === "function") {
+        try {
+          Promise.resolve(
+            modelContext.registerTool({
+              name: "explore-speaking-globe",
+              description:
+                "Rotate Jigyasa Grover's interactive 3D Speaking Globe on /speaking/ to a region (all, europe, americas, apac) or select a specific city pin to inspect conferences and talks delivered there.",
+              inputSchema: {
+                type: "object",
+                properties: {
+                  region: {
+                    type: "string",
+                    enum: ["all", "europe", "americas", "apac"],
+                    description: "Optional region filter and camera preset."
+                  },
+                  cityQuery: {
+                    type: "string",
+                    description: "Optional city or country name to center on the globe (e.g., Paris, Milan, Copenhagen, San Francisco, Bali, Singapore, New Delhi)."
+                  }
+                }
+              },
+              execute: function (args) {
+                if (args && args.region) {
+                  setRegionFilter(String(args.region).toLowerCase());
+                }
+                if (args && args.cityQuery) {
+                  var q = String(args.cityQuery).toLowerCase();
+                  for (var ci = 0; ci < pins.length; ci++) {
+                    var hay = (pins[ci].city + " " + pins[ci].country + " " + pins[ci].venues).toLowerCase();
+                    if (hay.indexOf(q) !== -1) {
+                      autoSpin = false;
+                      updateDossier(pins[ci].id, true);
+                      break;
+                    }
+                  }
+                }
+                globeSection.scrollIntoView({ behavior: "smooth", block: "center" });
+                return {
+                  content: [
+                    {
+                      type: "text",
+                      text: JSON.stringify(
+                        {
+                          selected_city: titleEl ? titleEl.textContent : "",
+                          venues: venuesEl ? venuesEl.textContent : "",
+                          total_countries: (globeData.countries || []).length,
+                          countries: globeData.countries || []
+                        },
+                        null,
+                        2
+                      )
+                    }
+                  ]
+                };
+              }
+            })
+          ).catch(function () {});
+        } catch (err) {}
+      }
+    }
+  }
+
 })();
