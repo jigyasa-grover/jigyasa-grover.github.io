@@ -691,14 +691,14 @@
     safeRegister({
       name: "get-collaboration-channels",
       description:
-        "Retrieve Jigyasa Grover's collaboration pillars, direct booking platforms (Intro, Passionfroot, Naano, 8x), brand partners, live corporate AI workshops, and LinkedIn Learning courses.",
+        "Retrieve Jigyasa Grover's collaboration pillars, AI Go-To-Market (GTM) & developer marketing surfaces, direct booking platforms (Intro, Passionfroot, Naano, 8x), brand partners, live corporate AI workshops, and LinkedIn Learning courses.",
       inputSchema: {
         type: "object",
         properties: {
           pillar: {
             type: "string",
             description:
-              "Optional collaboration focus filter (e.g., advisory, speaking, training, partnerships, technical, media)."
+              "Optional collaboration focus filter (e.g., gtm, marketing, partnerships, advisory, speaking, training, technical, media)."
           }
         }
       },
@@ -708,18 +708,52 @@
           var pillars = ctx.collaboration.pillars || [];
           if (filter) {
             pillars = pillars.filter(function (p) {
-              var hay = ((p.id || "") + " " + (p.title || "") + " " + (p.inquiry_topic || "")).toLowerCase();
+              var hay = (
+                (p.id || "") +
+                " " +
+                (p.title || "") +
+                " " +
+                (p.summary || "") +
+                " " +
+                (p.inquiry_topic || "")
+              ).toLowerCase();
               return hay.indexOf(filter) !== -1;
             });
           }
           return formatToolResult({
             work_with_me_url: ctx.collaboration.work_with_me_url,
             booking_platforms: ctx.collaboration.booking_platforms,
+            gtm_and_ai_marketing: ctx.collaboration.gtm_and_ai_marketing,
+            partnership_surfaces: ctx.collaboration.partnership_surfaces,
+            partnership_packages: ctx.collaboration.partnership_packages,
             pillars: pillars,
             brand_partners: ctx.collaboration.brand_partners,
             training_clients: ctx.collaboration.training_clients,
             live_workshops: ctx.collaboration.live_workshops,
             courses: ctx.collaboration.courses
+          });
+        });
+      }
+    });
+
+    safeRegister({
+      name: "get-gtm-and-marketing-kit",
+      description:
+        "Retrieve Jigyasa Grover's AI Go-To-Market (GTM), developer marketing (DevRel), and B2B creator launch kit—including 82% senior technical buyer ICP metrics, distribution surfaces, launch bundles, verified AI launch campaigns, and Passionfroot/Naano/8x/Intro booking URLs.",
+      inputSchema: {
+        type: "object",
+        properties: {}
+      },
+      execute: function () {
+        return loadAgentContext().then(function (ctx) {
+          return formatToolResult({
+            partnerships_url: "https://jigyasa-grover.github.io/partnerships/",
+            advisory_url: "https://jigyasa-grover.github.io/advisory/",
+            gtm_and_ai_marketing: ctx.collaboration.gtm_and_ai_marketing,
+            partnership_surfaces: ctx.collaboration.partnership_surfaces,
+            partnership_packages: ctx.collaboration.partnership_packages,
+            brand_partners: ctx.collaboration.brand_partners,
+            booking_platforms: ctx.collaboration.booking_platforms
           });
         });
       }

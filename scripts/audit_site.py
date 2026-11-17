@@ -210,6 +210,8 @@ def main() -> None:
                 errors.append(f"LLM ENDPOINT UNEXPECTEDLY SHORT: {llm_rel}")
             if "{{" in content or "{%" in content:
                 errors.append(f"UNRENDERED LIQUID TAG IN {llm_rel}")
+            if "Go-To-Market" not in content:
+                errors.append(f"MISSING AI Go-To-Market POSITIONING IN {llm_rel}")
 
     robots_path = SITE_DIR / "robots.txt"
     if robots_path.is_file():
@@ -401,6 +403,8 @@ def main() -> None:
                     errors.append("MISSING VideoObject SCHEMA in /speaking/")
                 if rel_path == "/teaching/index.html" and "CourseInstance" not in blk:
                     errors.append("MISSING CourseInstance SCHEMA in /teaching/")
+                if rel_path in ("/partnerships/index.html", "/advisory/index.html") and "Service" not in gtypes:
+                    errors.append(f"MISSING Service SCHEMA in {rel_path}")
             except Exception as exc:
                 errors.append(f"INVALID JSON-LD in {rel_path}: {exc}")
 
@@ -434,6 +438,8 @@ def main() -> None:
             for key in ("identity", "collaboration", "speaking", "articles"):
                 if key not in agent_ctx:
                     errors.append(f"MISSING KEY '{key}' in /agent-context.json")
+            if "gtm_and_ai_marketing" not in agent_ctx.get("collaboration", {}):
+                errors.append("MISSING 'gtm_and_ai_marketing' in /agent-context.json collaboration")
             if len(agent_ctx.get("articles", [])) < 34:
                 errors.append("UNEXPECTEDLY FEW ARTICLES in /agent-context.json")
         except Exception as exc:

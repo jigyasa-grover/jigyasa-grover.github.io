@@ -50,8 +50,16 @@ Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pro
 - 8x (AI & Tech Launch Campaigns): https://8x.business/p/b623ba2ed48544748601a75a3569c6ee
 - Brand & Technical Content Partners: {{ site.data.recognition.brand_partners | join: ", " }}
 
-### Developer Brand Partnership Surfaces & Launch Bundles
-{% for s in site.data.partnerships.surfaces %}- **{{ s.channel }}** ({{ s.stat }}): {{ s.summary }} *Best for:* {{ s.best_for }}
+### AI Go-To-Market (GTM), Developer Marketing & Launch Bundles
+- **Headline:** {{ site.data.partnerships.gtm_positioning.headline }}
+- **Overview:** {{ site.data.partnerships.gtm_positioning.summary }}
+- **Target Buyer ICP:** {{ site.data.partnerships.gtm_positioning.target_icp }}
+- **GTM Motions Supported:**
+{% for m in site.data.partnerships.gtm_positioning.gtm_motions %}  - **{{ m.title }}** ({{ m.kicker }}): {{ m.summary }}
+{% endfor %}- **Verified AI Product Launch Highlights:**
+{% for h in site.data.partnerships.gtm_positioning.verified_launch_highlights %}  - **{{ h.partner }}**: {{ h.campaign }} ({{ h.url }})
+{% endfor %}- **Distribution Surfaces:**
+{% for s in site.data.partnerships.surfaces %}  - **{{ s.channel }}** ({{ s.stat }}): {{ s.summary }} *Best for:* {{ s.best_for }}
 {% endfor %}
 ### Selected Verified Client, Founder & Learner Testimonials
 {% for t in site.data.testimonials.home %}- "{{ t.quote }}" — {{ t.author }} ({{ t.role }} · {{ t.platform }}, {{ t.rating }})

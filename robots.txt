@@ -39,6 +39,8 @@ User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
 User-agent: Claude-SearchBot
 User-agent: Claude-User
+User-agent: Claude-Web
+User-agent: anthropic-ai
 User-agent: PerplexityBot
 User-agent: Perplexity-User
 User-agent: Google-CloudVertexBot
@@ -73,6 +75,9 @@ Allow: /
 Allow: /llms.txt
 Allow: /.well-known/llms.txt
 Allow: /llms-full.txt
+Allow: /agent-context.json
+Allow: /feed.xml
+Allow: /sitemap.xml
 
 # 4. Social, Developer & Messaging Rich-Preview Unfurlers
 User-agent: LinkedInBot

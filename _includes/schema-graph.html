@@ -112,7 +112,11 @@
         "Cloud TPU Fine-Tuning",
         "Data-Centric AI",
         "Privacy-Preserving Machine Learning",
-        "AI Security and Red-Teaming"
+        "AI Security and Red-Teaming",
+        "AI Go-To-Market (GTM) Strategy",
+        "Developer Marketing and DevRel",
+        "B2B AI Product Launches",
+        "Technical Creator and Brand Partnerships"
       ],
       "sameAs": {{ id.same_as | jsonify }}
     },
@@ -411,6 +415,66 @@
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}
       ]
+    }
+    {% endif %}
+    {% if page.url == "/advisory/" %},
+    {
+      "@type": "Service",
+      "@id": "https://jigyasa-grover.github.io/advisory/#service",
+      "name": "AI Startup Architecture, Product & Go-To-Market (GTM) Advisory — Afterdays",
+      "serviceType": "AI Technical Advisory, Agentic Architecture Audits & Developer Go-To-Market (GTM) Strategy",
+      "description": {{ site.data.pillars[0].summary | jsonify }},
+      "url": "https://jigyasa-grover.github.io/advisory/",
+      "provider": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "areaServed": "Global",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "AI Founders, VPs of Engineering, Product Leaders, and Venture Capital Investors"
+      },
+      "sameAs": [
+        "https://intro.co/JigyasaGrover"
+      ]
+    }
+    {% endif %}
+    {% if page.url == "/partnerships/" %},
+    {
+      "@type": "Service",
+      "@id": "https://jigyasa-grover.github.io/partnerships/#service",
+      "name": {{ site.data.partnerships.gtm_positioning.headline | jsonify }},
+      "serviceType": "AI Go-To-Market (GTM), Developer Marketing, DevRel & Technical Creator Launch Partnerships",
+      "description": {{ site.data.partnerships.gtm_positioning.summary | jsonify }},
+      "url": "https://jigyasa-grover.github.io/partnerships/",
+      "provider": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "areaServed": "Global",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": {{ site.data.partnerships.gtm_positioning.target_icp | jsonify }}
+      },
+      "sameAs": [
+        "https://www.passionfroot.me/jigyasa-grover",
+        "https://naano.com/creators/jigyasa-grover",
+        "https://8x.business/p/b623ba2ed48544748601a75a3569c6ee"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Go-To-Market & Developer Launch Bundles",
+        "itemListElement": [
+          {% for pkg in site.data.partnerships.packages %}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": {{ pkg.name | jsonify }},
+              "description": {{ pkg.subtitle | jsonify }}
+            }
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      }
     }
     {% endif %}
     {% if page.faq_key and site.data.faqs[page.faq_key] %},

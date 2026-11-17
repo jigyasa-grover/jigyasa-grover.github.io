@@ -1,15 +1,13 @@
 ---
 layout: page
-title: "Technical Content & Brand Partnerships"
-heading: "Code-backed technical storytelling for AI platforms, cloud, and developer tools."
-eyebrow: "Pillar 04 · Brand Partnerships"
-lead: "Authentic tutorials, runnable reference architectures, creator video, and product launches built by a practicing
-ML Tech Lead."
+title: "AI Go-To-Market, Content & Brand Partnerships"
+heading: "Practitioner-led AI go-to-market (GTM), developer marketing, and technical storytelling."
+eyebrow: "Pillar 04 · AI GTM, Developer Marketing & Brand Partnerships"
+lead: "Authentic tutorials, runnable reference architectures, creator video, and full-funnel AI product launches built by an active ML Tech Lead."
 hero_cta_label: "View on Passionfroot ↗"
 hero_cta_url: "https://www.passionfroot.me/jigyasa-grover"
-seo_title: "Developer Content & AI Brand Partnerships — Jigyasa Grover"
-description: "Partner with Jigyasa Grover on code-backed AI tutorials, reference apps, and developer launches across
-LinkedIn & X via Passionfroot, Naano, or 8x."
+seo_title: "AI GTM, Developer Marketing & Brand Partnerships — Jigyasa Grover"
+description: "Partner with Jigyasa Grover on AI go-to-market (GTM), developer marketing, reference repos & product launches (82% senior tech audience) via Passionfroot & 8x."
 faq_key: "partnerships"
 permalink: /partnerships/
 ---
@@ -69,6 +67,31 @@ permalink: /partnerships/
           <a href="{{ s.url }}" {% if s.url contains "http" %}target="_blank" rel="noopener" {% endif %}>{{ s.cta_label
             }}</a>
         </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="content-section--bordered" aria-labelledby="gtm-motions-heading">
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">AI Go-To-Market (GTM) &amp; Marketing Motions</div>
+      <h2 id="gtm-motions-heading">How AI platforms, hyperscalers &amp; DevTools win technical buyers</h2>
+    </div>
+    <a class="section-header__link" href="/advisory/">Need 1:1 GTM &amp; SDK advisory? →</a>
+  </div>
+
+  <div class="project-grid">
+    {% for m in pdata.gtm_positioning.gtm_motions %}
+    <article class="project-dossier">
+      <div>
+        <div class="project-dossier__meta"><span>{{ m.number }} · {{ m.kicker }}</span><span>AI GTM</span></div>
+        <h3 class="project-dossier__title project-dossier__title--md">{{ m.title }}</h3>
+        <p class="project-dossier__summary">{{ m.summary }}</p>
+      </div>
+      <div class="tag-row mb-0">
+        {% for tag in m.tags %}<span class="mono-tag">{{ tag }}</span>{% endfor %}
       </div>
     </article>
     {% endfor %}
