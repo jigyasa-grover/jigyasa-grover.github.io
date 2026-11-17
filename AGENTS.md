@@ -38,7 +38,10 @@ This repository powers **[jigyasa-grover.github.io](https://jigyasa-grover.githu
    - Never delete or rename files inside `images/` referenced by historical posts.
 2. **Data-First Updates**:
    - Update biographical facts, courses, speaking appearances, awards, or corporate training partners in `_data/*.yml` rather than duplicating prose across templates—this keeps HTML pages, JSON-LD `@graph`, `/llms.txt`, `/llms-full.txt`, and `/agent-context.json` automatically synchronized.
-3. **Design System Discipline**:
+3. **Design System & Editorial Prose Discipline**:
    - Place layout, spacing, and component styling in `_sass/_layout.scss` or `_sass/_components.scss` rather than inline `style="..."` attributes (inline `object-position` is reserved strictly for per-photo focal cropping).
+   - Avoid unspaced prose em dashes (`word—word`) in headlines, bios, leads, and YAML copy; use crisp human punctuation (commas, colons, periods, or parentheses) instead.
 4. **Mandatory Verification Before Commit**:
    - Always run `make audit` (or `bundle exec jekyll build --trace && python3 scripts/audit_site.py`) and confirm **0 errors** before committing.
+5. **Commit Message Convention**:
+   - Always format commit messages as `<type>(<scope>): <lowercase concise summary>` (allowed types: `feat`, `fix`, `polish`, `content`, `style`, `docs`, `chore`), e.g., `feat(seo): add IndexNow automation & sitemap lastmod` or `polish(home): streamline hero copy`.
