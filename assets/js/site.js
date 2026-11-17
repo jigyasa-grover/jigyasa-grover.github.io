@@ -2,6 +2,11 @@
   "use strict";
 
   var formLoadedAt = Date.now();
+  var trackEvent = function (name, params) {
+    if (typeof window !== "undefined" && typeof window.jgTrack === "function") {
+      window.jgTrack(name, params);
+    }
+  };
 
   // 1. Dark / Light Reading Theme Toggle
   var themeBtn = document.getElementById("theme-toggle");
@@ -113,6 +118,7 @@
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(text).then(function () {
             btn.textContent = "Copied";
+            trackEvent("copy_code_snippet", { page_path: window.location.pathname });
             setTimeout(function () {
               btn.textContent = "Copy";
             }, 1800);
@@ -162,6 +168,7 @@
         var original = btn.textContent;
         navigator.clipboard.writeText(email).then(function () {
           btn.textContent = "Copied: " + email;
+          trackEvent("copy_contact_email", { source_path: window.location.pathname });
           setTimeout(function () {
             btn.textContent = original;
           }, 2200);
@@ -424,6 +431,7 @@
             var confirmText = "Thank you, " + nameVal + ". Your inquiry regarding " + topicVal + " has been received.";
             statusEl.className = "form-status is-visible is-success";
             statusEl.textContent = confirmText;
+            trackEvent("generate_lead", { inquiry_category: topicVal, delivery_mode: "api", source_path: window.location.pathname });
             contactForm.reset();
             return { ok: true, message: confirmText };
           })
@@ -475,6 +483,7 @@
         if (typeof e.respondWith === "function") {
           e.respondWith(Promise.resolve({ ok: true, mailto: mailtoHref }));
         }
+        trackEvent("generate_lead", { inquiry_category: topicVal, delivery_mode: "mailto", source_path: window.location.pathname });
         window.location.href = mailtoHref;
       }
     });
@@ -1585,6 +1594,12 @@
 
     lightbox.hidden = false;
     document.body.style.overflow = "hidden";
+    trackEvent("video_play", {
+      video_id: item.video_id,
+      video_title: title,
+      video_mode: mode,
+      source_path: window.location.pathname
+    });
     if (closeCinemaBtn) closeCinemaBtn.focus();
   };
 
@@ -1769,5 +1784,98 @@
         })
       ).catch(function () { });
     } catch (e) { }
+  }
+
+  // 12. First-Party Outbound Click, Booking Conversion, Search & Article Read Telemetry
+  document.addEventListener("click", function (e) {
+    var target = e.target;
+    if (!target || typeof target.closest !== "function") return;
+    var link = target.closest("a[href]");
+    if (!link) return;
+    var href = link.getAttribute("href") || "";
+    if (!href || href.indexOf("mailto:") === 0) {
+      if (href.indexOf("mailto:") === 0) {
+        trackEvent("contact_mailto_click", { source_path: window.location.pathname });
+      }
+      return;
+    }
+    if (href.indexOf("http://") !== 0 && href.indexOf("https://") !== 0) return;
+    try {
+      var parsed = new URL(href);
+      var host = (parsed.hostname || "").toLowerCase().replace(/^www\./, "");
+      if (!host || host === "jigyasa-grover.github.io") return;
+
+      var srcPath = window.location.pathname || "/";
+      if (
+        host === "intro.co" ||
+        host === "passionfroot.me" ||
+        host === "naano.com" ||
+        host === "8x.business"
+      ) {
+        trackEvent("book_consultation_click", {
+          platform: host,
+          link_url: href,
+          source_path: srcPath
+        });
+      } else if (
+        (host === "linkedin.com" && parsed.pathname.indexOf("/learning") === 0) ||
+        host.indexOf("amazon.") === 0 ||
+        host === "goodreads.com" ||
+        host === "udacity.com"
+      ) {
+        trackEvent("course_or_book_click", {
+          destination: host,
+          link_url: href,
+          source_path: srcPath
+        });
+      }
+      trackEvent("outbound_click", {
+        outbound_domain: host,
+        link_url: href,
+        source_path: srcPath
+      });
+    } catch (err) { }
+  });
+
+  var attachSearchTelemetry = function (inputEl, surfaceName) {
+    if (!inputEl) return;
+    var timer = null;
+    var lastLogged = "";
+    inputEl.addEventListener("input", function () {
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(function () {
+        var q = (inputEl.value || "").trim();
+        if (q.length >= 2 && q.toLowerCase() !== lastLogged) {
+          lastLogged = q.toLowerCase();
+          trackEvent("view_search_results", {
+            search_term: q,
+            search_surface: surfaceName
+          });
+        }
+      }, 900);
+    });
+  };
+  attachSearchTelemetry(searchInput, "blog");
+  attachSearchTelemetry(document.getElementById("press-search"), "press");
+
+  if (prose) {
+    var seen50 = false;
+    var seen90 = false;
+    var checkReadDepth = function () {
+      if (seen50 && seen90) return;
+      var rect = prose.getBoundingClientRect();
+      var total = rect.height || 1;
+      var viewed = window.innerHeight - rect.top;
+      var ratio = viewed / total;
+      if (!seen50 && ratio >= 0.5) {
+        seen50 = true;
+        trackEvent("article_read_milestone", { percent_scrolled: 50, page_path: window.location.pathname });
+      }
+      if (!seen90 && ratio >= 0.9) {
+        seen90 = true;
+        trackEvent("article_read_milestone", { percent_scrolled: 90, page_path: window.location.pathname });
+      }
+    };
+    window.addEventListener("scroll", checkReadDepth, { passive: true });
   }
 })();

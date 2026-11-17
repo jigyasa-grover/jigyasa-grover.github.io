@@ -7,6 +7,8 @@ comments: true
 mathjax: true
 og_image: "/assets/images/opt/torchtpu-doctor-cover.jpg"
 og_image_alt: "TorchTPU Doctor: Agent Skill & Performance Profiler for PyTorch on Cloud TPUs"
+redirect_from:
+  - /torchtpu-doctor/
 ---
 
 > **Your PyTorch script runs on a Cloud TPU without throwing a single exception—while quietly losing 2,537× in step throughput.**

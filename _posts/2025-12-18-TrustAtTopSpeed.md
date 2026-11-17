@@ -4,6 +4,8 @@ type: blog
 title: Trust at Top Speed - AI Racing Coach powered by Gemini 🏁
 comments: true
 mathjax: true
+redirect_from:
+  - /trust-at-top-speed/
 ---
 
 <blockquote>"What you all have done in a few days, we haven’t seen in 40 years!"</blockquote>
@@ -77,7 +79,7 @@ mathjax: true
 <li><strong>Predictive Geofencing</strong>. Best coaching comes <em>before</em> you need it. We defined geofences around every corner using Haversine distance. This allowed the AI to trigger "Feed Forward" advice, <em>"APPROACHING Turn 4: Smooth release"</em>, exactly 200 meters before the braking zone.</li>
 <ul class="wp-block-list"><!-- wp:list-item --><!-- /wp:list-item --></ul>
 
-<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/image-68f4e07f.png"><img src="/assets/images/wp-archive/2025/image-68f4e07f.png" alt="" class="wp-image-3661"/></a><figcaption class="wp-element-caption"><sub><em>Credits: Vikram Tiwari</em></sub></figcaption></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/image-68f4e07f.png"><img src="/assets/images/wp-archive/2025/image-68f4e07f.png" alt="Split-brain Gemini Nano edge reflex and Cloud Run telemetry reasoning architecture for the AI Racing Coach" class="wp-image-3661"/></a><figcaption class="wp-element-caption"><sub><em>Credits: Vikram Tiwari</em></sub></figcaption></figure>
 
 <h2 class="wp-block-heading"><strong>The Workflow: From Noob to Pro</strong> ⚡️</h2>
 
@@ -138,7 +140,7 @@ mathjax: true
 <p>The data is in, the laps are logged, and we’ve only just glimpsed the future of augmented intelligence. Hammer time!</p>
 
 <br>
-<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/screenshot-2025-12-18-at-9-35-58-pm-441a0a1e.jpg"><img src="/assets/images/wp-archive/2025/screenshot-2025-12-18-at-9-35-58-pm-441a0a1e.jpg" alt="" class="wp-image-3653"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/screenshot-2025-12-18-at-9-35-58-pm-441a0a1e.jpg"><img src="/assets/images/wp-archive/2025/screenshot-2025-12-18-at-9-35-58-pm-441a0a1e.jpg" alt="Thunderhill Raceway Park field test team with the BMW E46 M3 AI Racing Coach telemetry car" class="wp-image-3653"/></a></figure>
 
 <br><br>
 

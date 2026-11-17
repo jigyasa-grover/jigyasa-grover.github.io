@@ -4,13 +4,15 @@ type: blog
 title: In my Kinetic era - Fine-tuning Gemma 3 to speak Gen Z on a Cloud TPU with one decorator 🤌🏻
 comments: true
 mathjax: true
+redirect_from:
+  - /kinetic-finetuning-on-cloud-tpu/
 ---
 
 <p><strong>TL; DR </strong>We fine-tuned Google's <a href="https://huggingface.co/google/gemma-3-1b-it">Gemma 3 1B</a> to respond in Gen Z slang using supervised fine-tuning (SFT) on just 30 prompt/response pairs. The entire job runs on a Cloud TPU v5 Lite, deployed with a single Python decorator using the <em>*new*</em> <a href="https://github.com/keras-team/kinetic">Kinetic</a> framework from the Keras team.</p> 
 
 <p>Zero Docker. Zero Kubernetes YAML. Just <code>@kinetic.run()</code>!</p>
 
-<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2026/kinetic-era-2-abfee7c9.png"><img src="/assets/images/wp-archive/2026/kinetic-era-2-abfee7c9.png" alt="" class="wp-image-3710"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2026/kinetic-era-2-abfee7c9.png"><img src="/assets/images/wp-archive/2026/kinetic-era-2-abfee7c9.png" alt="Supervised fine-tuning of Gemma 3 1B on Cloud TPU v5 Lite with the Keras Kinetic decorator" class="wp-image-3710"/></a></figure>
 
 <h2 class="wp-block-heading">The Problem: Getting code onto a TPU is annoyingly hard</h2>
 

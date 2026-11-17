@@ -3,36 +3,119 @@ layout: page
 title: "Page Not Found"
 heading: "404 — That URL could not be found."
 eyebrow: "Navigation Assistance"
-lead: "The page may have moved or the URL may contain a typo. Explore the primary sections of Jigyasa Grover's digital home below."
+lead: "The page may have moved or the URL may contain a casing or punctuation typo. Search all technical essays or jump directly to a core section below."
 permalink: /404.html
 noindex: true
 sitemap: false
 ---
 
+<script>
+  (function () {
+    try {
+      var rawPath = window.location.pathname || "/";
+      if (!rawPath || rawPath === "/" || rawPath === "/404.html") return;
+
+      var routeMap = {
+        "about": "/about",
+        "blog": "/blog/",
+        "writing": "/blog/",
+        "articles": "/blog/",
+        "archive": "/archive/",
+        "publications": "/publications/",
+        "books": "/publications/",
+        "papers": "/publications/",
+        "projects": "/projects/",
+        "projectsdepricated": "/projects/",
+        "highlights": "/highlights/",
+        "featured": "/highlights/",
+        "watch": "/highlights/",
+        "press": "/press/",
+        "media": "/press/",
+        "speaking": "/speaking/",
+        "talks": "/speaking/",
+        "teaching": "/teaching/",
+        "courses": "/teaching/",
+        "workshops": "/teaching/",
+        "advisory": "/advisory/",
+        "consulting": "/advisory/",
+        "partnerships": "/partnerships/",
+        "sponsors": "/partnerships/",
+        "workwithme": "/work-with-me/",
+        "collaborate": "/work-with-me/",
+        "contact": "/work-with-me/",
+        "experience": "/experience/",
+        "links": "/links/",
+        "bio": "/links/"{% for post in site.posts %}{% unless post.url == "/archive/" %},
+        {{ post.url | downcase | remove: "/" | remove: "-" | remove: "_" | jsonify }}: {{ post.url | jsonify }}{% endunless %}{% endfor %}
+      };
+
+      var cleaned = decodeURIComponent(rawPath)
+        .replace(/\/{2,}/g, "/")
+        .replace(/\/https?:\/\/jigyasa-grover\.github\.io(\/[^?#]*)?$/i, "")
+        .replace(/\/?\(https?:\/\/.*$/i, "")
+        .replace(/^\/blog\//i, "/");
+
+      var normKey = cleaned.toLowerCase().replace(/[^a-z0-9]/g, "");
+      var resolved = routeMap[normKey] || "";
+
+      if (resolved && resolved !== rawPath) {
+        if (typeof window.jgTrack === "function") {
+          window.jgTrack("404_auto_recovered", {
+            broken_path: rawPath,
+            target_path: resolved
+          });
+        }
+        window.location.replace(resolved + (window.location.search || "") + (window.location.hash || ""));
+        return;
+      }
+
+      if (typeof window.jgTrack === "function") {
+        window.jgTrack("page_not_found", {
+          broken_path: rawPath,
+          referrer: document.referrer || "(direct)"
+        });
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<form action="/blog/" method="get" class="filter-bar mb-xl" role="search" aria-label="Search technical articles">
+  <div>
+    <label for="not-found-search" class="eyebrow">Instant Article &amp; Topic Search</label>
+    <p class="mb-0">Looking for a specific benchmark, Google ADK tutorial, TPU profiler, or research note?</p>
+  </div>
+  <div class="btn-group">
+    <input id="not-found-search" name="q" type="search" class="search-input" placeholder="Search Gemini, TPU, ADK, Cleanlab, CTR…" />
+    <button type="submit" class="btn btn--primary">Search Blog →</button>
+  </div>
+</form>
+
 <div class="project-grid">
   <div class="project-dossier">
     <div>
-      <div class="project-dossier__meta"><span>01</span><span>Identity &amp; Work</span></div>
-      <h2 class="project-dossier__title"><a href="/about">About &amp; Engineering Portfolio</a></h2>
-      <p class="project-dossier__summary">Read Jigyasa Grover's full biography, production ML career at Uber/Twitter/Faire, and open-source AI projects.</p>
+      <div class="project-dossier__meta"><span>01</span><span>Identity &amp; Engineering</span></div>
+      <h2 class="project-dossier__title"><a href="/about">About, Projects &amp; Publications</a></h2>
+      <p class="project-dossier__summary">Explore Jigyasa Grover's production ML career at Uber, X, Meta &amp; Faire, 74+ open-source repositories, and <em>Sculpting Data for ML</em>.</p>
     </div>
     <div class="dossier-links">
       <a href="/">Home →</a>
       <a href="/about">About →</a>
       <a href="/projects/">Projects →</a>
+      <a href="/publications/">Publications →</a>
     </div>
   </div>
 
   <div class="project-dossier">
     <div>
-      <div class="project-dossier__meta"><span>02</span><span>Collaborate</span></div>
-      <h2 class="project-dossier__title"><a href="/work-with-me/">Work With Me &amp; Technical Writing</a></h2>
-      <p class="project-dossier__summary">Explore startup advisory, conference keynotes, corporate AI workshops, developer partnerships, and 33+ technical articles.</p>
+      <div class="project-dossier__meta"><span>02</span><span>Collaborate &amp; Read</span></div>
+      <h2 class="project-dossier__title"><a href="/work-with-me/">Work With Me &amp; Most-Read Essays</a></h2>
+      <p class="project-dossier__summary">Book 1:1 AI advisory, corporate Google ADK &amp; evaluation training, conference keynotes, or read flagship engineering deep dives.</p>
     </div>
     <div class="dossier-links">
       <a href="/work-with-me/">Work With Me →</a>
-      <a href="/speaking/">Speaking →</a>
-      <a href="/blog/">Technical Blog →</a>
+      <a href="/TrustAtTopSpeed/">AI Racing Coach →</a>
+      <a href="/TorchTPUDoctor/">TorchTPU Doctor →</a>
+      <a href="/blog/">All 34 Essays →</a>
     </div>
   </div>
 </div>

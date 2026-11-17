@@ -17,7 +17,7 @@ mathjax: true
 <p><strong>DATA QUALITY</strong> refers to the qualitative/quantitative state of information we possess. Factors like accuracy, completeness, consistency, reliability, and whether data is up to date can help us measure it ⚖️ Check out this cool illustration by <a href="https://twitter.com/GradientFlowR">@GradientFlowR</a>!</p>
 
 
-<figure class="wp-block-image"><img src="https://pbs.twimg.com/media/E-50EQxVIAA--sb.jpg" alt=""/></figure>
+<figure class="wp-block-image"><img src="https://pbs.twimg.com/media/E-50EQxVIAA--sb.jpg" alt="Dimensions of data quality in machine learning pipelines: accuracy, completeness, consistency, reliability, and timeliness"/></figure>
 
 
 <p>However sophisticated our <a href="https://twitter.com/hashtag/MachineLearning">#MachineLearning</a> models might be, poor quality data can never help effectively solve the problem at hand. Here are some pointers to keep a quality check on our data going forward 🤟🏻</p>

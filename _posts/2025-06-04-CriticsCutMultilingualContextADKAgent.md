@@ -4,6 +4,9 @@ type: blog
 title: Critic’s Cut 🎥 Powering Multilingual, Context-Aware Movie Reviews with ADK & Gemini 2.0
 comments: true
 mathjax: true
+redirect_from:
+  - /CriticsCutBuildingASafeMultilingualMovieReviewAgentUsingGoogleADKGemini/
+  - /blog/critics-cut-adk-gemini/
 ---
 
 <p>The landscape of conversational AI is rapidly evolving. Conversational AI is no longer just about simple Q&amp;A. Modern agents need to understand dialogue history, integrate external tools, adhere to safety protocols, and ideally, communicate across language barriers. This post provides a technical deep dive into <strong><em>"Critic's Cut"</em></strong>, a movie review agent built to embody these principles using:</p>
@@ -14,7 +17,7 @@ mathjax: true
 <li>Safety libraries like <a href="https://microsoft.github.io/presidio/analyzer/">Microsoft's Presidio Analyzer </a>and <a href="https://pypi.org/project/better-profanity/">Better Profanity</a></li>
 <br>
 
-<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/image-7b993ce9.jpg"><img src="/assets/images/wp-archive/2025/image-7b993ce9.jpg" alt="" class="wp-image-3542"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/image-7b993ce9.jpg"><img src="/assets/images/wp-archive/2025/image-7b993ce9.jpg" alt="Critic's Cut multilingual movie review multi-agent architecture built with Google ADK and Gemini 2.0" class="wp-image-3542"/></a></figure>
 
 <h2 class="wp-block-heading">Overview</h2>
 <p>The goal of this project is to demonstrate a simple agent that:</p>

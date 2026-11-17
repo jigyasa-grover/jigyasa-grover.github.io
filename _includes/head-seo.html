@@ -18,6 +18,8 @@
 {% assign post_meta = site.data.posts_meta[page.url] %}
 {% if page.seo_title %}
   {% assign meta_title = page.seo_title %}
+{% elsif post_meta and post_meta.seo_title %}
+  {% assign meta_title = post_meta.seo_title %}
 {% elsif page.url == "/" %}
   {% assign meta_title = site.title %}
 {% elsif page.title %}
@@ -43,6 +45,10 @@
   {% assign social_image = site.url | append: page.og_image %}
   {% assign is_default_og = false %}
   {% assign social_image_alt = page.og_image_alt | default: meta_title %}
+{% elsif post_meta and post_meta.og_image %}
+  {% assign social_image = site.url | append: post_meta.og_image %}
+  {% assign is_default_og = false %}
+  {% assign social_image_alt = post_meta.og_image_alt | default: meta_title %}
 {% else %}
   {% assign social_image = site.url | append: site.og_image %}
   {% assign is_default_og = true %}

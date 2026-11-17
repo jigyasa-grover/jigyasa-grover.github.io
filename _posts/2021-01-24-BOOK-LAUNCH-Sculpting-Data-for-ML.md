@@ -1,7 +1,7 @@
 ---
 layout: post
 type: blog
-title: BOOK LAUNCH 🎉</br>Sculpting Data For ML - The first act of Machine Learning
+title: "BOOK LAUNCH 🎉 Sculpting Data for ML — The First Act of Machine Learning"
 comments: true
 mathjax: true
 ---
@@ -12,7 +12,7 @@ mathjax: true
 
 <p>Excited to share that our book&nbsp;<strong><a href="https://www.amazon.com/dp/B08RN47C5T" target="_blank">"Sculpting Data for ML: The first act of Machine Learning"</a></strong>&nbsp;launched worldwide on January 18, 2021 🚀 The book is a culmination of our experiences in Machine Learning and Data Science. It introduces the readers to the first act of Machine Learning,&nbsp;<em>Dataset Curation</em>&nbsp;which often does not gets its due limelight in Academia or Industry.</p>
 
-<p>The book puts forward practical tips to identify valuable information from the extensive amount of crude data available at our fingertips. The&nbsp;<strong>step-by-step guide</strong>&nbsp;accompanies code examples in&nbsp;<strong>Python</strong>&nbsp;from the extraction of real-world datasets created by the authors themselves. It also illustrates ways to hone the skills of extracting meaningful datasets. In addition, the book dives deep into how data fits into the Machine Learning ecosystem and tries to highlight the impact good quality data can have on the Machine Learning system's performance.,/p>
+<p>The book puts forward practical tips to identify valuable information from the extensive amount of crude data available at our fingertips. The&nbsp;<strong>step-by-step guide</strong>&nbsp;accompanies code examples in&nbsp;<strong>Python</strong>&nbsp;from the extraction of real-world datasets created by the authors themselves. It also illustrates ways to hone the skills of extracting meaningful datasets. In addition, the book dives deep into how data fits into the Machine Learning ecosystem and tries to highlight the impact good quality data can have on the Machine Learning system's performance.</p>
 
 <center> <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B08RN47C5T&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_1mIeGbSZ013C3&tag=mobile0a1329f-20" style="padding:40px"></iframe> </center>
 

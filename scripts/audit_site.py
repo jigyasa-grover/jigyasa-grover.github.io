@@ -15,7 +15,6 @@ SITE_DIR = REPO_ROOT / "_site"
 # GitHub Project Pages hosted separately under jigyasa-grover.github.io/<repo>/
 EXTERNAL_SUBREPOS = {
     "/proof-of-work/",
-    "/kinetic-finetuning-on-cloud-tpu/",
     "/sQuick_new/",
 }
 
@@ -54,8 +53,14 @@ EXPECTED_ROUTES = [
     "/blog/",
     "/publications/",
     "/highlights/",
+    "/featured/",
     "/projects/",
     "/projectsDepricated/",
+    "/kinetic-finetuning-on-cloud-tpu/",
+    "/trust-at-top-speed/",
+    "/torchtpu-doctor/",
+    "/startup-on-a-shoestring/",
+    "/colab-vscode-extension/",
     "/experience/",
     "/404.html",
     "/work-with-me/",
@@ -116,6 +121,7 @@ class PageInspector(HTMLParser):
         self.srcs = []
         self.h1_count = 0
         self.imgs_missing_alt = []
+        self.imgs_empty_alt = []
         self.is_redirect = False
 
     def handle_starttag(self, tag, attrs) -> None:
@@ -145,6 +151,8 @@ class PageInspector(HTMLParser):
                 self.srcs.append(ad["src"])
             if "alt" not in ad:
                 self.imgs_missing_alt.append(ad.get("src", "unknown"))
+            elif not (ad.get("alt") or "").strip():
+                self.imgs_empty_alt.append(ad.get("src", "unknown"))
 
     def handle_endtag(self, tag) -> None:
         if tag == "title":
@@ -366,9 +374,14 @@ def main() -> None:
         if not title:
             errors.append(f"EMPTY <title> in {rel_path}")
         else:
+            if "<" in title or ">" in title:
+                errors.append(f"RAW HTML TAG LEAKED INTO <title> in {rel_path}: '{title}'")
             if title in titles_seen:
                 warnings.append(f"DUPLICATE <title> '{title}' in {rel_path} and {titles_seen[title]}")
             titles_seen[title] = rel_path
+
+        robots_meta_early = next((m.get("content", "") for m in parser.metas if m.get("name") == "robots"), "")
+        is_indexed = "noindex" not in robots_meta_early
 
         desc = next((m.get("content", "").strip() for m in parser.metas if m.get("name") == "description"), "")
         if not desc:
@@ -383,13 +396,15 @@ def main() -> None:
         if parser.h1_count != 1:
             errors.append(f"H1 COUNT={parser.h1_count} (expected 1) in {rel_path}")
 
-        if not is_post and parser.imgs_missing_alt:
+        if (not is_post or is_indexed) and parser.imgs_missing_alt:
             errors.append(f"IMAGES MISSING ALT in {rel_path}: {parser.imgs_missing_alt}")
+        if is_post and is_indexed and parser.imgs_empty_alt:
+            errors.append(f"INDEXED POST IMAGES WITH EMPTY ALT in {rel_path}: {parser.imgs_empty_alt}")
 
-        if not is_post and rel_path != "/404.html":
+        if is_indexed and rel_path != "/404.html":
             if len(title) > 68:
                 errors.append(f"TITLE TOO LONG FOR SERP ({len(title)} > 68 chars) in {rel_path}: '{title}'")
-            if not (110 <= len(desc) <= 165):
+            if not is_post and not (110 <= len(desc) <= 165):
                 errors.append(f"META DESCRIPTION LENGTH ({len(desc)} chars, expected 110-165) in {rel_path}")
 
         if not parser.jsonld_blocks:

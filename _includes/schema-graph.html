@@ -4,6 +4,8 @@
 {% assign canonical_url = site.url | append: clean_path %}
 {% if page.seo_title %}
   {% assign schema_title = page.seo_title %}
+{% elsif post_meta and post_meta.seo_title %}
+  {% assign schema_title = post_meta.seo_title %}
 {% elsif page.title %}
   {% assign schema_title = page.title %}
 {% else %}
@@ -196,7 +198,7 @@
       "headline": {{ page.title | jsonify }},
       "description": {{ schema_desc | jsonify }},
       "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-      "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
       "wordCount": {{ page.content | number_of_words }},
       "author": {
         "@id": "https://jigyasa-grover.github.io/#person"

@@ -70,6 +70,7 @@ sitemap: false
     {% assign emitted = false %}{% for post in site.posts %}{% unless post.url == "/archive/" %}{% assign meta = site.data.posts_meta[post.url] %}{% if post.archival %}{% assign cat_name = "Early Archive (2015–17)" %}{% assign row_tags = post.archive_tags %}{% assign row_summary = post.description %}{% else %}{% assign cat_name = meta.category | default: "AI Engineering" %}{% assign row_tags = meta.tags %}{% assign row_summary = meta.summary %}{% endif %}{% if emitted %},
     {% endif %}{% assign emitted = true %}{
       "title": {{ post.title | jsonify }},
+      "seo_title": {{ meta.seo_title | default: post.title | jsonify }},
       "url": {{ site.url | append: post.url | jsonify }},
       "path": {{ post.url | jsonify }},
       "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},

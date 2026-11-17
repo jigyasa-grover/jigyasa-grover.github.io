@@ -35,7 +35,7 @@ mathjax: true
 <blockquote>Gemini 1.5 Pro revolutionizes research publication summarization with a million-token capacity, adept cross-modal reasoning, and superior performance metrics, promising accelerated summarization, reduced errors, and enhanced insight extraction for researchers!</blockquote>
 
 <br>
-<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/image-1-847c1ce5.png"><img src="/assets/images/wp-archive/2024/image-1-847c1ce5.png" alt="" class="wp-image-3330"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/image-1-847c1ce5.png"><img src="/assets/images/wp-archive/2024/image-1-847c1ce5.png" alt="Gemini 1.5 Pro cross-modal analysis of Berkeley BAIR's Compound AI Systems research" class="wp-image-3330"/></a></figure>
 
 <br>
 <h2 class="wp-block-heading">V1 - The Shift from Models to Compound AI Systems</h2>

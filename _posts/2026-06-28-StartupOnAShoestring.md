@@ -4,6 +4,8 @@ type: blog
 title: Startup on a Shoestring - Building with a 50¢ Budget using Google Antigravity Cost & Token Monitors 💸
 comments: true
 mathjax: true
+redirect_from:
+  - /startup-on-a-shoestring/
 ---
 
 _IMAGINE:_ You write a prompt for an autonomous developer agent to fix a minor CSS alignment bug on your startup landing page. You walk away to grab a cup of coffee. Ten minutes later, you return to a $250 API bill. 

@@ -2,6 +2,10 @@
   category: "Fine-Tuning & Compute"
   tags: ["TorchTPU", "PyTorch", "Cloud TPU", "Agent Skills"]
   featured: true
+  home_spotlight: true
+  seo_title: "TorchTPU Doctor: PyTorch Cloud TPU Profiler — Jigyasa Grover"
+  og_image: "/assets/images/opt/torchtpu-doctor-cover.jpg"
+  og_image_alt: "TorchTPU Doctor — 7-rule AST linter and Cloud TPU v6e PyTorch profiler by Jigyasa Grover"
   summary: "Catching silent CPU fallbacks, hidden Hugging Face host syncs, and XLA recompiles in PyTorch on Cloud TPU v6e—cutting LoRA step time 2,537× (47.3s → 18.6ms) alongside upstream PRs to transformers & peft."
   repo_url: "https://github.com/jigyasa-grover/TorchTPU-Doctor"
   live_url: "https://colab.research.google.com/github/jigyasa-grover/TorchTPU-Doctor/blob/main/notebooks/torchtpu_doctor_demo.ipynb"
@@ -10,6 +14,10 @@
   category: "Agentic AI & Evaluation"
   tags: ["Agentic AI", "Gemini", "Multimodal Video", "AI Evaluation"]
   featured: true
+  home_spotlight: true
+  seo_title: "Proof of Work: Agentic Video Evals with Gemini — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2026/cover-d3562309.jpg"
+  og_image_alt: "Proof of Work — Agentic video evaluation pipeline with Google Gemini"
   summary: "How Proof of Work uses Gemini's agentic video understanding to evaluate software engineering process, debugging discipline, and hypothesis iteration from continuous screen recordings."
   repo_url: "https://github.com/jigyasa-grover/proof-of-work"
   live_url: "https://jigyasa-grover.github.io/proof-of-work/"
@@ -18,6 +26,10 @@
   category: "Agentic Infrastructure"
   tags: ["Agentic AI", "Token Economics", "Cost Guardrails", "FastAPI"]
   featured: true
+  home_spotlight: true
+  seo_title: "Agent Cost & Token Guardrails (Antigravity SDK) — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2026/cover-c3565608.jpg"
+  og_image_alt: "Startup on a Shoestring — Agent token budget and cost monitors using Google Antigravity SDK"
   summary: "Preventing quadratic token inflation and runaway self-correction loops in autonomous agents using Google Antigravity SDK lifecycle hooks and FastAPI SSE telemetry."
   repo_url: "https://github.com/jigyasa-grover/startup-on-a-shoestring"
 
@@ -25,33 +37,49 @@
   category: "Fine-Tuning & Compute"
   tags: ["Gemma 3", "Cloud TPU", "Supervised Fine-Tuning", "Keras Kinetic"]
   featured: true
+  home_spotlight: true
+  seo_title: "Fine-Tuning Gemma 3 on Cloud TPU with Kinetic — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2026/kinetic-era-2-abfee7c9.png"
+  og_image_alt: "Supervised fine-tuning of Gemma 3 1B on Cloud TPU v5 Lite using Keras Kinetic"
   summary: "Supervised fine-tuning (SFT) of Google's Gemma 3 1B on a Cloud TPU v5 Lite using a single Python decorator—zero Docker or Kubernetes YAML required."
   repo_url: "https://github.com/jigyasa-grover/kinetic-finetuning-on-cloud-tpu"
-  live_url: "https://jigyasa-grover.github.io/kinetic-finetuning-on-cloud-tpu/"
 
 "/TrustAtTopSpeed/":
-  category: "Edge & Real-Time AI"
-  tags: ["Gemini Nano", "Edge AI", "Cloud Run", "Real-Time Telemetry"]
+  category: "Agentic Infrastructure"
+  tags: ["Gemini Nano", "Edge & Real-Time AI", "Cloud Run", "Telemetry"]
   featured: true
+  home_spotlight: true
+  seo_title: "Trust at Top Speed: Gemini AI Racing Coach — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2025/image-68f4e07f.png"
+  og_image_alt: "Split-brain Gemini Nano + Cloud Run AI Racing Coach architecture at Thunderhill Raceway"
   summary: "Building and field-testing a split-brain AI Racing Coach at Thunderhill Raceway Park combining sub-15ms on-device Gemini Nano cues, physics safety gates, and Cloud Run telemetry reasoning."
 
 "/ColabVSCodeExtension/":
-  category: "Developer Tooling"
-  tags: ["Google Colab", "VS Code", "Cloud GPUs & TPUs", "Gemini Code Assist"]
+  category: "Agentic Infrastructure"
+  tags: ["Google Colab", "VS Code", "Cloud GPUs & TPUs", "Developer Tooling"]
   featured: false
+  seo_title: "Google Colab in VS Code + Gemini Code Assist — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2025/supercharging-vs-code-vibe-coding-with-gemini-code-assis-943b0e18.jpg"
+  og_image_alt: "Running cloud GPUs and TPUs inside VS Code with the Google Colab extension and Gemini Code Assist"
   summary: "Running modular, version-controlled Python ML workloads on cloud GPUs and TPUs directly inside VS Code using the Google Colab extension and Gemini Code Assist."
 
 "/CriticsCutMultilingualContextADKAgent/":
   category: "Agentic AI & Evaluation"
   tags: ["Google ADK", "Multi-Agent", "Safety Guardrails", "Gemini 2.0"]
   featured: true
+  seo_title: "Multilingual Multi-Agent Safety in Google ADK — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2025/image-7b993ce9.jpg"
+  og_image_alt: "Critic's Cut multilingual safety-gated multi-agent architecture in Google ADK"
   summary: "Architectural deep dive into Critic's Cut: building a context-aware, multilingual multi-agent system with Google's Agent Development Kit (ADK), tool integration, and PII safety callbacks."
   repo_url: "https://github.com/jigyasa-grover/critics-cut"
 
 "/SmartSuitcasePackingUsingGeminiImagenOpenWeather/":
-  category: "Multimodal AI"
-  tags: ["Gemini 2.0", "Imagen 3", "Tool Calling", "Multimodal"]
+  category: "Agentic AI & Evaluation"
+  tags: ["Gemini 2.0", "Imagen 3", "Tool Calling", "Multimodal AI"]
   featured: false
+  seo_title: "Gemini 2.0 + Imagen 3 Tool-Calling Agent — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2025/image-3-eb95a8b8.jpg"
+  og_image_alt: "Weather-aware multimodal travel planning agent built with Gemini 2.0, Imagen 3, and OpenWeather"
   summary: "Combining Gemini 2.0 structured reasoning, Imagen 3 visual generation, and real-time OpenWeather API data for weather-aware travel planning."
   repo_url: "https://github.com/jigyasa-grover/smart-suitcase-packing"
 
@@ -59,13 +87,19 @@
   category: "Agentic AI & Evaluation"
   tags: ["LLM Evaluation", "Vertex AI", "LLM Comparator", "Responsible AI"]
   featured: true
+  seo_title: "Evaluating LLMs with Vertex AI LLM Comparator — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2024/1-1-9c14fb5a.png"
+  og_image_alt: "Quantitative side-by-side LLM evaluation dashboard using PAIR LLM Comparator on Vertex AI"
   summary: "Quantitative side-by-side LLM evaluation on Google Vertex AI using PAIR's open-source LLM Comparator across accuracy, clarity, safety, and communication rubrics."
   repo_url: "https://github.com/jigyasa-grover/Smarter-than-a-5th-Grader-Using-LLM-Comparator-on-Google-Vertex-AI"
 
 "/BookBuddyInteractiveStorytellingUsingAGemmaBasedRAG/":
-  category: "RAG & Foundation Models"
+  category: "Agentic AI & Evaluation"
   tags: ["Gemma", "RAG", "Vector Search", "Open Models"]
   featured: false
+  seo_title: "Building a Gemma RAG Pipeline (Book Buddy) — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2024/book-buddy-af714930.png"
+  og_image_alt: "Book Buddy interactive storytelling Retrieval-Augmented Generation (RAG) architecture with Gemma"
   summary: "Designing a Retrieval-Augmented Generation (RAG) pipeline with Google's open-weights Gemma model for grounded interactive narratives and educational Q&A."
   repo_url: "https://github.com/jigyasa-grover/Book-Buddy-Interactive-Storytelling-using-a-Gemma-based-RAG"
 
@@ -73,18 +107,27 @@
   category: "Fine-Tuning & Compute"
   tags: ["Gemini Pro", "Supervised Fine-Tuning", "Vertex AI", "NLP"]
   featured: false
+  seo_title: "Supervised Fine-Tuning of Gemini Pro on Vertex — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2024/huge-d46b5d35.jpg"
+  og_image_alt: "Supervised fine-tuning workflow for Google Gemini Pro on Vertex AI"
   summary: "Step-by-step supervised fine-tuning of Gemini Pro for structured domain adaptation and editorial headline generation."
 
 "/BifocalPerspectiveOfCAS/":
-  category: "Systems & Simulation"
-  tags: ["Complex Adaptive Systems", "Multi-Agent Systems", "Simulation"]
+  category: "Agentic AI & Evaluation"
+  tags: ["Compound AI Systems", "Gemini 1.5 Pro", "Long-Context LLMs", "BAIR"]
   featured: false
-  summary: "Examining Complex Adaptive Systems (CAS) through emergent multi-agent interactions, feedback loops, and computational modeling."
+  seo_title: "Compound AI Systems Analyzed with Gemini 1.5 Pro — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2024/image-1-847c1ce5.png"
+  og_image_alt: "Analyzing Berkeley BAIR's Compound AI Systems paradigm using Google Gemini 1.5 Pro"
+  summary: "Dissecting Berkeley BAIR's shift from monolithic models to Compound AI Systems using Gemini 1.5 Pro's million-token context window and cross-modal reasoning."
 
 "/HyperPersonalizedAdsGenAI/":
   category: "Personalization & Ranking"
   tags: ["Personalization", "Ads ML", "Gemini Pro Vision", "Multimodal"]
   featured: false
+  seo_title: "Hyper-Personalized Ads with Gemini Pro Vision — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2024/image-9-30e43097.jpg"
+  og_image_alt: "Hyper-personalized ad campaign ranking and creative synthesis using Gemini Pro Vision"
   summary: "Bridging production ad-ranking personalization with multimodal generative synthesis using Gemini Pro Vision."
   repo_url: "https://github.com/jigyasa-grover/Hyper-Personalized-Ad-Campaigns-using-Generative-AI-Quick-Demo-using-Gemini-Pro-Vision"
 
@@ -92,125 +135,171 @@
   category: "Responsible AI & Privacy"
   tags: ["Deepfakes", "Synthetic Media", "AI Safety", "Detection"]
   featured: false
+  seo_title: "Exploring Deepfakes: Detection & AI Provenance — Jigyasa Grover"
+  og_image: "/images/bookreview.jpg"
+  og_image_alt: "Technical review of deepfake synthesis architectures, detection limits, and provenance defenses"
   summary: "Technical breakdown of generative synthetic media, deepfake synthesis architectures, detection limits, and organizational provenance defenses."
 
 "/Top3MLPapers/":
-  category: "ML Research & Foundations"
+  category: "Personalization & Ranking"
   tags: ["ML Papers", "Recommender Systems", "Deep Learning"]
   featured: false
+  seo_title: "Top 3 Machine Learning & Ranking Papers — Jigyasa Grover"
   summary: "Practitioner notes on foundational machine learning papers shaping modern representation learning and production recommendation systems."
 
 "/DataCleaning-Cleanlab/":
   category: "Data-Centric AI"
   tags: ["Data-Centric AI", "Confident Learning", "Cleanlab", "Label Noise"]
   featured: false
+  seo_title: "Detecting Label Noise in ML with Cleanlab — Jigyasa Grover"
   summary: "Automatically detecting and fixing mislabeled training examples in real-world datasets using confident learning and Cleanlab."
 
 "/HumanDataAnnotators/":
   category: "Data-Centric AI"
   tags: ["Data Curation", "Human-in-the-Loop", "Annotation Quality"]
   featured: false
+  seo_title: "Human Data Annotators & ML Label Quality — Jigyasa Grover"
   summary: "Designing fair, high-signal human annotation rubrics, inter-annotator agreement workflows, and quality feedback loops for ML datasets."
 
 "/DifferentialPrivacy/":
   category: "Responsible AI & Privacy"
   tags: ["Differential Privacy", "Privacy-Preserving ML", "Security"]
   featured: false
+  seo_title: "Differential Privacy in Machine Learning — Jigyasa Grover"
   summary: "Mathematical intuition and engineering trade-offs behind epsilon-differential privacy, calibrated noise injection, and privacy budgets in ML."
 
 "/PrivacyPreservingML1/":
   category: "Responsible AI & Privacy"
   tags: ["Privacy-Preserving ML", "Federated Learning", "Inference Attacks"]
   featured: false
+  seo_title: "Privacy-Preserving Machine Learning Guide — Jigyasa Grover"
   summary: "Part 1 of a technical series examining membership, property, and model-inversion attacks alongside modern privacy-preserving ML defenses."
 
 "/DataLakes/":
   category: "Data-Centric AI"
   tags: ["Data Architecture", "Data Lakes", "ML Pipelines"]
   featured: false
+  seo_title: "Data Lakes & Feature Governance for ML — Jigyasa Grover"
   summary: "How data lakes, schema governance, and feature lineage underpin reliable downstream machine learning pipelines."
 
 "/Data-Quality/":
   category: "Data-Centric AI"
   tags: ["Data Quality", "Sculpting Data for ML", "Production ML"]
   featured: false
+  seo_title: "Data Quality Dimensions in Production ML — Jigyasa Grover"
+  og_image: "/assets/images/opt/book_cover.jpg"
+  og_image_alt: "Sculpting Data for ML — Data quality dimensions for machine learning pipelines"
   summary: "Quantifying completeness, consistency, timeliness, and validity across training and serving data pipelines."
 
 "/Data-Centric-ML/":
   category: "Data-Centric AI"
   tags: ["Data-Centric AI", "Dataset Engineering", "Sculpting Data for ML"]
   featured: false
+  seo_title: "Data-Centric Machine Learning in Practice — Jigyasa Grover"
+  og_image: "/assets/images/opt/book_cover.jpg"
+  og_image_alt: "Sculpting Data for ML — Data-centric machine learning methodology"
   summary: "Why systematic dataset engineering outperforms endless hyperparameter tuning when taking ML models from benchmark notebooks to production."
 
 "/Data-Cascades/":
   category: "Data-Centric AI"
   tags: ["Data Cascades", "Production ML", "Technical Debt"]
   featured: false
+  seo_title: "Preventing Data Cascades in Production ML — Jigyasa Grover"
+  og_image: "/assets/images/opt/book_cover.jpg"
+  og_image_alt: "Preventing upstream data cascades in production machine learning systems"
   summary: "Understanding compounding upstream data issues—data cascades—in high-stakes machine learning deployments and how to prevent them early."
 
 "/Polishing-Your-Dataset/":
   category: "Data-Centric AI"
   tags: ["Feature Engineering", "Data Cleaning", "Sculpting Data for ML"]
   featured: false
+  seo_title: "5 Dataset Cleaning & Preprocessing Tips — Jigyasa Grover"
+  og_image: "/assets/images/opt/book_cover.jpg"
+  og_image_alt: "Five dataset curation and preprocessing techniques from Sculpting Data for ML"
   summary: "Practical preprocessing, outlier handling, and signal normalization techniques from Sculpting Data for ML."
 
 "/BOOK-LAUNCH-Sculpting-Data-for-ML/":
   category: "Data-Centric AI"
   tags: ["Book", "Sculpting Data for ML", "Dataset Curation"]
   featured: false
+  seo_title: "Sculpting Data for ML: Book Overview — Jigyasa Grover"
+  og_image: "/assets/images/opt/book_cover.jpg"
+  og_image_alt: "Book cover of Sculpting Data for ML: The First Act of Machine Learning"
   summary: "Introducing Sculpting Data for ML: The First Act of Machine Learning—why we wrote a hands-on guide to dataset curation and data-centric engineering."
 
 "/top-5-trends-in-artificial-intelligence-for-2023/":
-  category: "ML Research & Foundations"
+  category: "Responsible AI & Privacy"
   tags: ["Generative AI", "Explainable AI", "AI Governance", "Data-Centric AI"]
   featured: false
+  seo_title: "5 Enterprise AI & Governance Shifts — Jigyasa Grover"
   summary: "Reflections with SaugaTalks on five defining shifts shaping enterprise AI adoption: generative models, data governance, explainability, spatial computing, and low-code ML."
 
 "/research-reading-approaches-to-click-through-rate-estimation-3-x/":
   category: "Personalization & Ranking"
   tags: ["CTR Prediction", "Ads Ranking", "DIEN", "Recommender Systems"]
   featured: false
+  seo_title: "CTR Estimation Part 3: Alibaba DIEN Ranking — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2019/screen-shot-2019-12-24-at-5-26-26-pm-c1bc640f.png"
+  og_image_alt: "Alibaba Deep Interest Evolution Network (DIEN) architecture for sequential CTR prediction"
   summary: "Part 3 of the CTR estimation research series: dissecting Alibaba's AAAI 2019 Deep Interest Evolution Network (DIEN) for modeling temporal user interest shifts."
 
 "/research-reading-approaches-to-click-through-rate-estimation-2-x/":
   category: "Personalization & Ranking"
   tags: ["CTR Prediction", "Sponsored Search", "Deep Semantic Models", "Ads ML"]
   featured: false
+  seo_title: "CTR Estimation Part 2: Yahoo! Semantic Ads — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2019/screen-shot-2019-12-24-at-4-50-59-pm-5ff2dd16.png"
+  og_image_alt: "Yahoo! Research deeply supervised semantic architecture for sponsored search CTR prediction"
   summary: "Part 2 of the CTR estimation research series: examining Yahoo! Research's Deeply Supervised Semantic Model for sponsored search click prediction."
 
 "/research-reading-approaches-to-click-through-rate-estimation-1-x/":
   category: "Personalization & Ranking"
   tags: ["CTR Prediction", "Model Ensembles", "Search Ads", "GBDT + Neural Nets"]
   featured: false
+  seo_title: "CTR Estimation Part 1: Bing GBDT + DNN Ads — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2019/screen-shot-2019-12-24-at-1-49-01-pm-e1577176734426-3e41577c.png"
+  og_image_alt: "Microsoft Bing GBDT + neural ensemble architecture for large-scale search ad CTR prediction"
   summary: "Part 1 of the CTR estimation research series: analyzing Microsoft Bing's production model-ensemble architectures for large-scale search ad click prediction."
 
 "/perceiving-python-programming-paradigms/":
   category: "Open Source & Python"
   tags: ["Python", "Programming Paradigms", "Functional Programming", "Software Architecture"]
   featured: false
+  seo_title: "Python Programming Paradigms Explained — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2019/screen-shot-2019-09-25-at-2-18-41-pm-29d65656.png"
+  og_image_alt: "Imperative, procedural, object-oriented, and functional programming paradigms in Python"
   summary: "In-depth guide to imperative, procedural, object-oriented, and functional programming paradigms in Python—featured among Opensource.com's Top Articles."
 
 "/dive-into-open-source-go-beyond-coding/":
   category: "Open Source & Python"
   tags: ["Open Source", "Technical Documentation", "Community Leadership", "Mentorship"]
   featured: false
+  seo_title: "Contributing to Open Source Beyond Code — Jigyasa Grover"
   summary: "How engineers, technical writers, designers, and researchers create high-leverage impact in open-source ecosystems beyond writing code."
 
 "/keynotin-at-open-source-101/":
   category: "Open Source & Python"
   tags: ["Open Source 101", "Keynote", "Community", "Developer Advocacy"]
   featured: false
+  seo_title: "Open Source 101 Keynote Takeaways — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2018/whatsapp-image-2018-03-04-at-1-24-51-pm-071946ff.jpeg"
+  og_image_alt: "Jigyasa Grover delivering the Open Source 101 keynote"
   summary: "Notes and takeaways from delivering the keynote at Open Source 101 on sustaining open-source communities and lowering contributor barriers."
 
 "/paris-france-to-maribor-slovenia-and-beyond-chronicles-of-cormas-pharo/":
-  category: "Systems & Simulation"
+  category: "Open Source & Python"
   tags: ["Multi-Agent Simulation", "CORMAS", "Pharo Smalltalk", "ESUG"]
   featured: false
+  seo_title: "CORMAS Multi-Agent Simulation in Pharo — Jigyasa Grover"
+  og_image: "/assets/images/wp-archive/2017/photogrid_1486052550585-0e97d0b5.jpg"
+  og_image_alt: "CORMAS multi-agent simulation development in Pharo across Paris and ESUG Maribor"
   summary: "Engineering chronicle on modernizing the CORMAS multi-agent ecological simulation platform in Pharo Smalltalk across Paris and ESUG Maribor."
 
 "/winning-red-hat-women-in-open-source-academic-award-2017-the-summit-a-week-in-boston-and-more/":
   category: "Open Source & Python"
   tags: ["Red Hat Award", "Women in Open Source", "Red Hat Summit", "FOSS"]
   featured: false
+  seo_title: "Red Hat Women in Open Source Award 2017 — Jigyasa Grover"
+  og_image: "/assets/images/opt/red_hat_award_winner.jpg"
+  og_image_alt: "Jigyasa Grover receiving the 2017 Red Hat Women in Open Source Academic Award at Red Hat Summit"
   summary: "Receiving the 2017 Red Hat Women in Open Source Academic Award at Red Hat Summit in Boston and reflections on open-source mentorship."
-

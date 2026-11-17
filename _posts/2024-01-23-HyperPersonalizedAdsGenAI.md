@@ -12,7 +12,7 @@ mathjax: true
 
 <p>Imagine a <em>town crier</em> in the bustling digital marketplace, ringing their bell and shouting the message to the entire crowd 📣 Similarly, general ad campaigns broadcast a brand's message to a wide audience with the hope that it will resonate with <em>at least</em> a portion of the online population!</p>
 
-<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/image-9-30e43097.jpg"><img src="/assets/images/wp-archive/2024/image-9-30e43097.jpg" alt="" class="wp-image-3238"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/image-9-30e43097.jpg"><img src="/assets/images/wp-archive/2024/image-9-30e43097.jpg" alt="Hyper-personalized ad campaign ranking and generative AI pipeline overview" class="wp-image-3238"/></a></figure>
 
 <p>Let us take the example of the latest smartphone by a company called <em>Blueberry</em> 🫐 Blueberry launches an ad campaign featuring the phone's sleek design and advanced features. This campaign is shown to a broad audience without any tweaks across multiple websites, social platforms, and apps, aiming to <em>create awareness</em> and <em>generate interest</em> in the general population.</p>
 
@@ -30,7 +30,7 @@ mathjax: true
 
 <p>Think of them as a skilled tailor who takes note of your preferences and style. In online advertising, this involves using data (such as your browsing history, search terms, and basic demographics) to deliver more relevant ads. It's like stepping into a store where the racks magically display items in your favorite colors and styles!</p>
 
-<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/image-10-9c2b08f2.jpg"><img src="/assets/images/wp-archive/2024/image-10-9c2b08f2.jpg" alt="" class="wp-image-3240"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/image-10-9c2b08f2.jpg"><img src="/assets/images/wp-archive/2024/image-10-9c2b08f2.jpg" alt="User cohort segmentation and multimodal creative synthesis architecture" class="wp-image-3240"/></a></figure>
 
 <p>Imagine you have been browsing travel blogs and websites about tropical destinations 🏝️ The next time you are online, you start seeing ads for beach resorts, flights to exotic islands, and travel packages that align with your apparent interests - this is what personalized ads look like. </p>
 
@@ -48,7 +48,7 @@ mathjax: true
 
 <p>Now, picture having your own personal stylist who knows your tastes inside-out, anticipates your needs,  and delights you with spot-on recommendations! Hyper-personalized ad campaigns strive to achieve this level of intimacy in the digital world. They leverage AI to analyze a vast array of data points, creating ads that <em>feel incredibly personal and timely</em> ⌚️</p>
 
-<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/image-11-17fc020f.png"><img src="/assets/images/wp-archive/2024/image-11-17fc020f.png" alt="" class="wp-image-3242"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/image-11-17fc020f.png"><img src="/assets/images/wp-archive/2024/image-11-17fc020f.png" alt="Gemini Pro Vision multimodal product analysis for personalized ad copy" class="wp-image-3242"/></a></figure>
 
 <p>Suppose it is a hot summer day and your real-time location data shows you are strolling near a popular ice cream parlor 🍦 Suddenly, you receive a notification or see an ad on your phone offering a refreshing discount on a cold treat - just when you need it the most!</p>
 
@@ -106,11 +106,11 @@ mathjax: true
 
 <p>The following demo takes in a product image and generates personalized ad strategies, copy text and quirky hashtags for promotion purposes. It is an initial version where a user persona can be simply described as their age, gender, location, and occupation. Feel free to check it out here: <a href="https://github.com/jigyasa-grover/Hyper-Personalized-Ad-Campaigns-using-Generative-AI-Quick-Demo-using-Gemini-Pro-Vision" target="_blank" rel="noreferrer noopener">github.com/jigyasa-grover/Hyper-Personalized-Ad-Campaigns-using-Generative-AI-Quick-Demo-using-Gemini-Pro-Vision</a> 👀</p>
 
-<a href="https://colab.research.google.com/github/jigyasa-grover/Hyper-Personalized-Ad-Campaigns-using-Generative-AI-Quick-Demo-using-Gemini-Pro-Vision/blob/main/Hyper_Personalized_Ad_Campaigns_using_Generative_AI_Gemini_Pro_Vision.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="250" height="50"></a>
+<a href="https://colab.research.google.com/github/jigyasa-grover/Hyper-Personalized-Ad-Campaigns-using-Generative-AI-Quick-Demo-using-Gemini-Pro-Vision/blob/main/Hyper_Personalized_Ad_Campaigns_using_Generative_AI_Gemini_Pro_Vision.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="250" height="50" alt="Open Hyper-Personalized Ads Gemini Pro Vision notebook in Google Colab"></a>
 
-<figure class="wp-block-image size-full is-style-default"><a href="/assets/images/wp-archive/2024/screenshot-2024-01-23-at-3-15-37e280afpm-05861f35.png"><img src="/assets/images/wp-archive/2024/screenshot-2024-01-23-at-3-15-37e280afpm-05861f35.png" alt="" class="wp-image-3247"/></a></figure>
+<figure class="wp-block-image size-full is-style-default"><a href="/assets/images/wp-archive/2024/screenshot-2024-01-23-at-3-15-37e280afpm-05861f35.png"><img src="/assets/images/wp-archive/2024/screenshot-2024-01-23-at-3-15-37e280afpm-05861f35.png" alt="Sample product visual input fed to Gemini Pro Vision in Google Colab" class="wp-image-3247"/></a></figure>
 
-<figure class="wp-block-image size-full"><a href="/assets/images/wp-archive/2024/image-13-12da4c65.png"><img src="/assets/images/wp-archive/2024/image-13-12da4c65.png" alt="" class="wp-image-3246"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/assets/images/wp-archive/2024/image-13-12da4c65.png"><img src="/assets/images/wp-archive/2024/image-13-12da4c65.png" alt="Audience-tailored ad headlines and copy generated by Gemini Pro Vision" class="wp-image-3246"/></a></figure>
 
 <hr>
 
