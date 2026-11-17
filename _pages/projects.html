@@ -1,13 +1,13 @@
 ---
 layout: page
 title: "Selected Engineering Work & Open Source"
-heading: "Agentic AI systems, TPU fine-tuning, evaluation harnesses, and open-source tools."
-eyebrow: "Engineering Portfolio"
-lead: "Runnable repositories, upstream open-source contributions, course labs, and architectural postmortems."
+heading: "Upstream Hugging Face fixes, Cloud TPU tooling, and production AI systems."
+eyebrow: "Engineering & Open-Source Portfolio"
+lead: "180+ public pull requests across Hugging Face (transformers, peft) and open-source ecosystems, alongside 74+ runnable AI repositories and benchmarks."
 hero_cta_label: "GitHub (@jigyasa-grover) ↗"
 hero_cta_url: "https://github.com/jigyasa-grover"
-seo_title: "Selected AI & Open-Source Engineering Projects — Jigyasa Grover"
-description: "74+ GitHub repositories & 180+ open-source PRs by Jigyasa Grover: TorchTPU Doctor, Google ADK agents, Gemma 3 TPUs, AI Racing Coach & LinkedIn Learning labs."
+seo_title: "Open-Source & AI Engineering Projects — Jigyasa Grover"
+description: "Upstream Hugging Face (transformers, peft) PRs & 74+ GitHub repos by Jigyasa Grover: TorchTPU Doctor, Google ADK agents, Gemma 3 TPUs & AI Racing Coach."
 faq_key: "projects"
 permalink: /projects/
 redirect_from:
@@ -47,16 +47,31 @@ redirect_from:
   </div>
 </section>
 
-<!-- Guided End-to-End Blueprints -->
-<section class="content-section--bordered" aria-labelledby="project-tracks-heading">
+<!-- Pinned Upstream FOSS & Course Companion Repositories (Elevated First) -->
+<section class="content-section--bordered" aria-labelledby="upstream-foss-heading">
   <div class="section-header">
     <div>
-      <div class="eyebrow">Code + Essays + Courses</div>
-      <h2 id="project-tracks-heading">Follow an end-to-end production track</h2>
+      <div class="eyebrow">Upstream Open Source · Hugging Face, PyTorch/TPU &amp; Course Labs</div>
+      <h2 id="upstream-foss-heading">Upstream contributions &amp; official course repositories</h2>
     </div>
-    <a class="section-header__link" href="/blog/">All 34 architectural deep dives →</a>
+    <a class="section-header__link" href="/TorchTPUDoctor/#7-upstream-ecosystem-contributions-transformers-peft-torch_tpu">Read Hugging Face TPU benchmark report →</a>
   </div>
-  {% include learning-tracks.html compact=true %}
+
+  <div class="ledger">
+    {% for item in gh.pinned_upstream %}
+    <div class="ledger-row">
+      <div class="ledger-row__date">
+        <div>{{ item.role }}</div>
+        <div class="ledger-row__meta-sub">{{ item.stack }}</div>
+      </div>
+      <div>
+        <div class="ledger-row__title"><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.repo }} ↗</a></div>
+        <p class="ledger-row__sub">{{ item.summary }}</p>
+      </div>
+      <div class="ledger-row__aside"><a class="section-header__link" href="{{ item.url }}" target="_blank" rel="noopener">View ↗</a></div>
+    </div>
+    {% endfor %}
+  </div>
 </section>
 
 <!-- Original Systems & Prototypes -->
@@ -93,7 +108,8 @@ redirect_from:
         <div class="dossier-links">
           {% if proj.post_url %}<a href="{{ proj.post_url }}">Write-Up →</a>{% endif %}
           {% if proj.live_url %}<a href="{{ proj.live_url }}" target="_blank" rel="noopener">Live Demo ↗</a>{% endif %}
-          {% if proj.repo_url %}<a href="{{ proj.repo_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
+          {% if proj.repo_url %}<a href="{{ proj.repo_url }}" target="_blank" rel="noopener">{{ proj.repo_label | default: "GitHub ↗" }}</a>{% endif %}
+          {% if proj.secondary_repo_url %}<a href="{{ proj.secondary_repo_url }}" target="_blank" rel="noopener">{{ proj.secondary_repo_label | default: "PR ↗" }}</a>{% endif %}
           {% if proj.video_url %}<a href="{{ proj.video_url }}" target="_blank" rel="noopener">▶ Watch Film</a>{% endif %}
           {% if proj.id == "trust-at-top-speed" %}<a href="https://www.youtube.com/watch?v=SzmfH4P00vI" target="_blank" rel="noopener">▶ Antigravity Film</a>{% endif %}
           {% if proj.feature_url %}<a href="{{ proj.feature_url }}" target="_blank" rel="noopener">Google Blog ↗</a>{% endif %}
@@ -104,38 +120,23 @@ redirect_from:
   </div>
 </section>
 
-<!-- Pinned Upstream FOSS & Course Companion Repositories -->
-<section class="content-section--bordered" aria-labelledby="upstream-foss-heading">
+<!-- Guided End-to-End Blueprints -->
+<section class="content-section--bordered" aria-labelledby="project-tracks-heading">
   <div class="section-header">
     <div>
-      <div class="eyebrow">Pinned on GitHub · Upstream FOSS &amp; Course Curriculum</div>
-      <h2 id="upstream-foss-heading">Upstream contributions &amp; official course labs</h2>
+      <div class="eyebrow">Code + Essays + Courses</div>
+      <h2 id="project-tracks-heading">Follow an end-to-end production track</h2>
     </div>
-    <a class="section-header__link" href="/teaching/">All AI courses &amp; workshops →</a>
+    <a class="section-header__link" href="/blog/">All 34 architectural deep dives →</a>
   </div>
-
-  <div class="ledger">
-    {% for item in gh.pinned_upstream %}
-    <div class="ledger-row">
-      <div class="ledger-row__date">
-        <div>{{ item.role }}</div>
-        <div class="ledger-row__meta-sub">{{ item.stack }}</div>
-      </div>
-      <div>
-        <div class="ledger-row__title"><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.repo }} ↗</a></div>
-        <p class="ledger-row__sub">{{ item.summary }}</p>
-      </div>
-      <div class="ledger-row__aside"><a class="section-header__link" href="{{ item.url }}" target="_blank" rel="noopener">Repo ↗</a></div>
-    </div>
-    {% endfor %}
-  </div>
+  {% include learning-tracks.html compact=true %}
 </section>
 
 <section class="contact-panel split-panel mt-xl" aria-labelledby="github-more-heading">
   <div>
     <div class="eyebrow mb-xs">Arctic Code Vault Contributor · 74+ Public Repositories</div>
     <h2 id="github-more-heading" class="split-panel__title">Explore all repositories, notebooks &amp; open-source commits</h2>
-    <p class="split-panel__desc">Browse Python ML benchmarks, Google ADK agent workflows, Vertex AI evaluation notebooks, and Pharo Smalltalk packages on GitHub.</p>
+    <p class="split-panel__desc">Browse upstream Hugging Face patches, Python ML benchmarks, Google ADK agent workflows, Vertex AI evaluation notebooks, and Pharo Smalltalk packages on GitHub.</p>
   </div>
   <div class="btn-group">
     <a class="btn btn--primary" href="{{ gh.url }}" target="_blank" rel="noopener">GitHub Profile ↗</a>

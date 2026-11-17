@@ -5,7 +5,7 @@ gtm_positioning:
   reach_metrics:
     - "82% senior technical & executive buyer audience"
     - "325,000+ annual LinkedIn impressions (14,500+ followers)"
-    - "74+ public GitHub repositories & 180+ open-source PRs"
+    - "74+ public GitHub repositories & 180+ open-source PRs (including Hugging Face transformers & peft)"
     - "34+ SEO & GEO-indexed technical deep-dive essays"
     - "24+ AI lab, hyperscaler, DevTools & media brand partners"
     - "30+ AI startups, enterprises & VCs advised via Afterdays (including Anthropic & Google gDAB)"
@@ -53,9 +53,9 @@ gtm_positioning:
 surfaces:
   - number: "01"
     channel: "GitHub & Open-Source Repos"
-    kicker: "Runnable Code"
+    kicker: "Hugging Face OSS · Runnable Code"
     stat: "74+ Repos · 180+ PRs"
-    summary: "End-to-end reference implementations, MCP connectors, Agent Skills, Colab notebooks, and benchmark harnesses developers can fork and run immediately."
+    summary: "End-to-end reference implementations, MCP connectors, Agent Skills, Colab notebooks, and benchmark harnesses built by an upstream Hugging Face (transformers, peft) contributor."
     best_for: "AI SDKs, Cloud/TPU compute, agent frameworks, and developer GTM adoption."
     url: "https://github.com/jigyasa-grover"
     cta_label: "Explore GitHub ↗"

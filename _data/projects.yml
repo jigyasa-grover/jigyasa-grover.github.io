@@ -1,12 +1,12 @@
 - id: "torchtpu-doctor"
-  title: "TorchTPU Doctor — Agent Skill & Profiler for PyTorch on Cloud TPUs"
+  title: "TorchTPU Doctor: Agent Skill & Profiler for PyTorch on Cloud TPUs"
   short_title: "TorchTPU Doctor"
   year: "2026"
   category: "PyTorch & Cloud TPUs"
   featured: true
   home_featured: true
-  home_summary: "7-rule AST linter & profiler cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms), with upstream fixes in transformers & peft."
-  summary: "Agent Skill, 7-rule AST linter (TPU001–TPU007, including higher-order autograd recompile checks), and TorchDispatchMode profiler for native PyTorch (torch_tpu), cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms) and driving upstream fixes in Hugging Face transformers & peft."
+  home_summary: "7-rule AST linter & TorchDispatchMode profiler cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms)."
+  summary: "Agent Skill, 7-rule AST linter (TPU001–TPU007, including higher-order autograd recompile checks), and TorchDispatchMode profiler for native PyTorch (torch_tpu), cutting Cloud TPU v6e LoRA step time 2,537× (47.3s → 18.6ms) and uncovering upstream bottlenecks in Hugging Face transformers & peft."
   stack:
     - "PyTorch (torch_tpu)"
     - "Cloud TPU v6e"
@@ -15,40 +15,27 @@
   repo_url: "https://github.com/jigyasa-grover/TorchTPU-Doctor"
   post_url: "/TorchTPUDoctor/"
 
-- id: "proof-of-work"
-  title: "Proof of Work — Agentic Video Teaching Assistant"
-  short_title: "Proof of Work"
+- id: "huggingface-tpu-upstream"
+  title: "Hugging Face transformers & peft: Upstream Cloud TPU Fixes"
+  short_title: "Hugging Face transformers & peft"
   year: "2026"
-  category: "Multimodal Agent Evals"
+  category: "Upstream Open Source · 190K+ ★"
   featured: true
   home_featured: true
-  home_summary: "Multimodal Gemini agent evaluating engineering reasoning and debugging maturity from continuous screen recordings."
-  summary: "Multimodal Gemini agent that evaluates software engineering process, debugging maturity, and hypothesis iteration from continuous screen recordings with timestamped visual evidence."
+  home_summary: "Authored upstream PyTorch/TPU fixes cutting eager LoRA step latency 2.06× in transformers (#50267) and eliminating CPU fallbacks in peft (#4099)."
+  summary: "Authored upstream PyTorch and Cloud TPU patches in huggingface/transformers (#50267, removing two blocking SDPA device-to-host syncs per forward pass for a 2.06× eager LoRA speedup) and huggingface/peft (#4099 / #4101, adding torch.accelerator PrivateUse1 TPU routing to infer_device()), coordinated via google-pytorch/torch_tpu (#6127)."
   stack:
-    - "Gemini Multimodal Video"
-    - "Agentic Evaluation"
-    - "TypeScript"
-  live_url: "https://jigyasa-grover.github.io/proof-of-work/"
-  repo_url: "https://github.com/jigyasa-grover/proof-of-work"
-  post_url: "/ProofOfWork/"
-
-- id: "startup-on-a-shoestring"
-  title: "Startup on a Shoestring — Agent Cost & Token Guardrails"
-  short_title: "Startup on a Shoestring"
-  year: "2026"
-  category: "Agentic Infrastructure & FinOps"
-  featured: true
-  home_featured: false
-  summary: "Per-turn and cumulative budget circuit-breakers built on Google Antigravity SDK lifecycle hooks and FastAPI SSE telemetry to halt runaway token loops."
-  stack:
-    - "Google Antigravity SDK"
-    - "Python"
-    - "FastAPI SSE"
-  repo_url: "https://github.com/jigyasa-grover/startup-on-a-shoestring"
-  post_url: "/StartupOnAShoestring/"
+    - "huggingface/transformers"
+    - "huggingface/peft"
+    - "PyTorch (torch_tpu)"
+  repo_url: "https://github.com/huggingface/transformers/pull/50267"
+  repo_label: "transformers #50267 ↗"
+  secondary_repo_url: "https://github.com/huggingface/peft/pull/4099"
+  secondary_repo_label: "peft #4099 ↗"
+  post_url: "/TorchTPUDoctor/#7-upstream-ecosystem-contributions-transformers-peft-torch_tpu"
 
 - id: "trust-at-top-speed"
-  title: "Trust at Top Speed — Split-Brain Edge/Cloud AI Racing Coach"
+  title: "Trust at Top Speed: Split-Brain Edge/Cloud AI Racing Coach"
   short_title: "Trust at Top Speed"
   year: "2025"
   category: "Edge + Cloud Real-Time AI"
@@ -64,11 +51,26 @@
   video_url: "https://www.youtube.com/watch?v=VSgKWy2iRWE"
   feature_url: "https://developers.googleblog.com/en/beyond-the-chatbot-a-blueprint-for-trustable-ai/"
 
+- id: "startup-on-a-shoestring"
+  title: "Startup on a Shoestring: Agent Cost & Token Guardrails"
+  short_title: "Startup on a Shoestring"
+  year: "2026"
+  category: "Agentic Infrastructure & FinOps"
+  featured: true
+  home_featured: false
+  summary: "Per-turn and cumulative budget circuit-breakers built on Google Antigravity SDK lifecycle hooks and FastAPI SSE telemetry to halt runaway token loops."
+  stack:
+    - "Google Antigravity SDK"
+    - "Python"
+    - "FastAPI SSE"
+  repo_url: "https://github.com/jigyasa-grover/startup-on-a-shoestring"
+  post_url: "/StartupOnAShoestring/"
+
 - id: "critics-cut"
-  title: "Critic's Cut — Multilingual Safety-Gated ADK Agent"
+  title: "Critic's Cut: Multilingual Safety-Gated ADK Agent"
   year: "2025–2026"
   category: "Multi-Agent Orchestration"
-  featured: false
+  featured: true
   summary: "Production-patterned multi-agent workflow built with Google ADK, Model Context Protocol (MCP) tools, Microsoft Presidio PII redaction, and trajectory evals."
   stack:
     - "Google ADK"
@@ -88,6 +90,7 @@
     - "Gemma 3 1B"
     - "Cloud TPU v5 Lite"
     - "Keras Kinetic"
+  live_url: "https://jigyasa-grover.github.io/kinetic-finetuning-on-cloud-tpu/"
   repo_url: "https://github.com/jigyasa-grover/kinetic-finetuning-on-cloud-tpu"
   post_url: "/KineticFinetuningOnCloudTPU/"
 
@@ -106,7 +109,7 @@
   video_url: "https://www.youtube.com/watch?v=GAd5J257vA0"
 
 - id: "book-buddy-gemma-rag"
-  title: "Book Buddy — Grounded Storytelling with Gemma RAG"
+  title: "Book Buddy: Grounded Storytelling with Gemma RAG"
   year: "2024"
   category: "Retrieval-Augmented Generation"
   featured: false
@@ -119,7 +122,7 @@
   post_url: "/BookBuddyInteractiveStorytellingUsingAGemmaBasedRAG/"
 
 - id: "smart-suitcase-packing"
-  title: "Smart Suitcase — Multimodal Weather-Aware Trip Planner"
+  title: "Smart Suitcase: Multimodal Weather-Aware Trip Planner"
   year: "2025"
   category: "Multimodal AI Applications"
   featured: false
@@ -130,6 +133,22 @@
     - "OpenWeather API"
   repo_url: "https://github.com/jigyasa-grover/smart-suitcase-packing"
   post_url: "/SmartSuitcasePackingUsingGeminiImagenOpenWeather/"
+
+- id: "proof-of-work"
+  title: "Proof of Work: Agentic Video Teaching Assistant"
+  short_title: "Proof of Work"
+  year: "2026"
+  category: "Multimodal Agent Evals"
+  featured: false
+  home_featured: false
+  summary: "Multimodal Gemini prototype evaluating software engineering debugging sessions and hypothesis iteration from continuous screen recordings."
+  stack:
+    - "Gemini Multimodal Video"
+    - "Agentic Evaluation"
+    - "TypeScript"
+  live_url: "https://jigyasa-grover.github.io/proof-of-work/"
+  repo_url: "https://github.com/jigyasa-grover/proof-of-work"
+  post_url: "/ProofOfWork/"
 
 - id: "hyper-personalized-ads"
   title: "Hyper-Personalized Ad Synthesis & Copy Fine-Tuning"

@@ -43,8 +43,8 @@ work_with_me:
     a: "Book instant 1:1 video consultations on Intro (5.0★ verified reviews), scope sponsored developer or AI launch campaigns directly via Passionfroot, Naano, or 8x, or submit custom scopes through the direct inquiry form (typical response within 48 hours)."
 
 projects:
-  - q: "What open-source AI, Gemini, and Cloud TPU projects has Jigyasa Grover built?"
-    a: "Highlights across her 74+ GitHub repositories include TorchTPU Doctor (2,537× LoRA speedup on Cloud TPU v6e plus upstream Hugging Face PRs), Proof of Work (Gemini agentic video understanding), Startup on a Shoestring (Google Antigravity token circuit breakers), Kinetic Gemma 3 Cloud TPU fine-tuning, Trust at Top Speed (split-brain Gemini Nano + Cloud Run AI Racing Coach), Critic's Cut (multilingual Google ADK multi-agent system), and Vertex AI PAIR LLM Comparator benchmarks."
+  - q: "What open-source AI, Hugging Face, and Cloud TPU contributions has Jigyasa Grover authored?"
+    a: "Across 180+ public pull requests and 74+ GitHub repositories, highlights include upstream PyTorch/Cloud TPU fixes in Hugging Face transformers (#50267, 2.06× faster eager LoRA steps) and peft (#4099 / #4101, torch.accelerator TPU device routing), TorchTPU Doctor (2,537× LoRA speedup on Cloud TPU v6e), Startup on a Shoestring (Google Antigravity token circuit breakers), Kinetic Gemma 3 Cloud TPU fine-tuning, Trust at Top Speed (split-brain Gemini Nano + Cloud Run AI Racing Coach), and Critic's Cut (multilingual Google ADK multi-agent system)."
   - q: "Are the repositories, Agent Skills, and Colab notebooks free to fork and run?"
     a: "Yes. Open-source reference implementations, Agent Skills, Google Colab notebooks, and official LinkedIn Learning course companion labs are publicly available at github.com/jigyasa-grover."
 
