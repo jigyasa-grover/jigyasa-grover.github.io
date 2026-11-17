@@ -183,6 +183,7 @@ appearances:
     role: "Invited Panelist, Guest Lecturer & Research Speaker"
 
 speaking_globe:
+  enabled: false
   home_hub:
     id: "san-francisco"
     label: "San Francisco Bay Area (SFO)"
