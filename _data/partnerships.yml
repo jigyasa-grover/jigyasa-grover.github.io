@@ -1,6 +1,6 @@
 gtm_positioning:
-  headline: "AI Go-To-Market (GTM), Developer Marketing & Product Launch Partnerships"
-  summary: "Practitioner-led AI go-to-market (GTM) execution, developer marketing (DevRel), B2B creator campaigns, and technical positioning built by an active Uber ML Tech Lead, Google Developer Advisory Board (gDAB) member, and 13x AI Award Winner."
+  headline: "AI DevTool Creator, Go-To-Market (GTM) & Developer Relations Partnerships"
+  summary: "Practitioner-led AI DevTool creator campaigns, go-to-market (GTM) execution, developer relations (DevRel) partnerships, and technical advisory built by an active Uber ML Tech Lead, Google Developer Advisory Board (gDAB) member, and 13x AI Award Winner."
   target_icp: "82% senior technical decision-makers and buyers — Staff+ ML & Software Engineers, Engineering Directors, VPs of AI/Engineering, Founders, and C-Suite executives."
   reach_metrics:
     - "82% senior technical & executive buyer audience"
@@ -52,11 +52,11 @@ gtm_positioning:
 
 surfaces:
   - number: "01"
-    channel: "GitHub & Open-Source Repos"
+    channel: "GitHub & Open-Source Anchor Repos"
     kicker: "Hugging Face OSS · Runnable Code"
     stat: "74+ Repos · 180+ PRs"
-    summary: "End-to-end reference implementations, MCP connectors, Agent Skills, Colab notebooks, and benchmark harnesses built by an upstream Hugging Face (transformers, peft) contributor."
-    best_for: "AI SDKs, Cloud/TPU compute, agent frameworks, and developer GTM adoption."
+    summary: "End-to-end reference implementations, sponsored integration modules, MCP connectors, Agent Skills, Colab notebooks, and benchmark harnesses built by an upstream Hugging Face (transformers, peft) contributor."
+    best_for: "AI SDKs, Cloud/TPU compute, eval/observability frameworks, and DevTools adoption."
     url: "https://github.com/jigyasa-grover"
     cta_label: "Explore GitHub ↗"
 
