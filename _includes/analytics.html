@@ -5,5 +5,20 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', '{{ site.google_analytics_ga4 }}', { 'anonymize_ip': true });
+  (function () {
+    try {
+      var ref = (document.referrer || '').toLowerCase();
+      var utm = (new URLSearchParams(window.location.search).get('utm_source') || '').toLowerCase();
+      var src = '';
+      if (utm.indexOf('chatgpt') !== -1 || ref.indexOf('chatgpt.com') !== -1 || ref.indexOf('chat.openai.com') !== -1) src = 'chatgpt';
+      else if (utm.indexOf('perplexity') !== -1 || ref.indexOf('perplexity.ai') !== -1) src = 'perplexity';
+      else if (utm.indexOf('claude') !== -1 || ref.indexOf('claude.ai') !== -1) src = 'claude';
+      else if (utm.indexOf('gemini') !== -1 || ref.indexOf('gemini.google.com') !== -1) src = 'gemini';
+      else if (ref.indexOf('copilot.microsoft.com') !== -1) src = 'copilot';
+      if (src) {
+        gtag('event', 'ai_citation_visit', { ai_engine: src, landing_path: window.location.pathname });
+      }
+    } catch (e) {}
+  })();
 </script>
 {% endif %}

@@ -83,6 +83,7 @@ EXPECTED_ROUTES = [
     "/.well-known/llms.txt",
     "/llms-full.txt",
     "/agent-context.json",
+    "/b7e4c9a12d8f4e639a501c7b8d2e4f6a.txt",
     "/favicon.ico",
     "/favicon.svg",
     "/apple-touch-icon.png",
@@ -287,6 +288,15 @@ def main() -> None:
             errors.append("404.html SHOULD NOT APPEAR IN sitemap.xml")
         if "/archive/" in sm_raw:
             errors.append("/archive/ STUB SHOULD NOT APPEAR IN sitemap.xml")
+        sm_tree = ET.fromstring(sm_raw)
+        sm_ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+        missing_lastmod = [
+            u.findtext("sm:loc", default="", namespaces=sm_ns)
+            for u in sm_tree.findall("sm:url", sm_ns)
+            if not u.findtext("sm:lastmod", default="", namespaces=sm_ns)
+        ]
+        if missing_lastmod:
+            errors.append(f"URLS MISSING <lastmod> IN sitemap.xml: {missing_lastmod}")
 
     # 5. Inspect all generated HTML pages
     html_files = sorted(

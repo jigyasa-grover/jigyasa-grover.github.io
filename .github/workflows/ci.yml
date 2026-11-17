@@ -30,3 +30,37 @@ jobs:
 
       - name: Run automated SEO, link, JSON-LD & GEO audit
         run: python3 scripts/audit_site.py
+
+      - name: Notify Bing, ChatGPT Search & IndexNow on master push
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import json, time, urllib.request, xml.etree.ElementTree as ET
+          key_url = "https://jigyasa-grover.github.io/b7e4c9a12d8f4e639a501c7b8d2e4f6a.txt"
+          for _ in range(12):
+              try:
+                  with urllib.request.urlopen(key_url, timeout=5) as r:
+                      if r.status == 200:
+                          break
+              except Exception:
+                  pass
+              time.sleep(5)
+          tree = ET.parse("_site/sitemap.xml")
+          ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+          urls = [el.text.strip() for el in tree.findall(".//sm:loc", ns) if el.text]
+          payload = json.dumps({
+              "host": "jigyasa-grover.github.io",
+              "key": "b7e4c9a12d8f4e639a501c7b8d2e4f6a",
+              "keyLocation": key_url,
+              "urlList": urls,
+          }).encode("utf-8")
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=payload,
+              headers={"Content-Type": "application/json; charset=utf-8"},
+              method="POST",
+          )
+          with urllib.request.urlopen(req, timeout=15) as resp:
+              print(f"IndexNow submitted {len(urls)} URLs -> HTTP {resp.status}")
+          PY
