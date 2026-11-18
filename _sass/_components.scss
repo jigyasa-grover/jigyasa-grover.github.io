@@ -4126,3 +4126,198 @@
   color: var(--ink-primary);
   margin-right: 0.45rem;
 }
+
+// ============================================================================
+// Reviewed & Cited Industry Bookshelf (/publications/ + Homepage Book Card)
+// ============================================================================
+.book-compact__shelf {
+  grid-column: 1 / -1;
+  margin-top: 0.35rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--rule-light);
+}
+
+.book-compact__shelf-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.book-compact__shelf-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  color: var(--ink-muted);
+}
+
+.book-compact__shelf-link {
+  font-family: var(--font-mono);
+  font-size: 0.71rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+  }
+}
+
+.book-compact__shelf-covers {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.book-compact__mini-cover {
+  display: block;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--rule-light);
+  box-shadow: var(--shadow-subtle);
+  overflow: hidden;
+  transition: transform 180ms var(--ease-editorial), border-color 180ms var(--ease-editorial), box-shadow 180ms var(--ease-editorial);
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--rule-strong);
+    box-shadow: var(--shadow-elevated);
+  }
+}
+
+.reviewed-books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.35rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.reviewed-book-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--rule-light);
+  border-radius: var(--radius-xs);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: border-color 180ms var(--ease-editorial), box-shadow 180ms var(--ease-editorial), transform 180ms var(--ease-editorial);
+
+  &:hover {
+    border-color: var(--rule-strong);
+    box-shadow: var(--shadow-elevated);
+    transform: translateY(-2px);
+  }
+}
+
+.reviewed-book-card__cover-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.35rem 1.75rem 1.25rem;
+  background-color: var(--bg-subtle);
+  border-bottom: 1px solid var(--rule-light);
+  text-decoration: none;
+}
+
+.reviewed-book-card__cover {
+  width: unquote("min(100%, 152px)");
+  aspect-ratio: 3 / 4;
+  background-color: #FFFFFF;
+  border: 1px solid var(--rule-strong);
+  box-shadow: 0 8px 20px rgba(20, 20, 19, 0.14);
+  overflow: hidden;
+  transition: transform 220ms var(--ease-editorial);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+.reviewed-book-card:hover .reviewed-book-card__cover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.reviewed-book-card__body {
+  padding: 1.15rem 1.15rem 1.05rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: 0.9rem;
+}
+
+.reviewed-book-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.reviewed-book-card__role {
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.reviewed-book-card__pub {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+}
+
+.reviewed-book-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.28;
+  margin: 0 0 0.25rem;
+
+  a {
+    color: var(--ink-primary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.reviewed-book-card__authors {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  margin: 0 0 0.55rem;
+}
+
+.reviewed-book-card__summary {
+  font-size: 0.84rem;
+  line-height: 1.52;
+  color: var(--ink-secondary);
+  margin: 0;
+}

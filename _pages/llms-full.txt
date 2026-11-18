@@ -87,6 +87,7 @@ Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pro
 ## 7. Books & Peer-Reviewed Publications
 
 - **Book:** *{{ site.data.publications.featured_book.title }}* ({{ site.data.publications.featured_book.year }}, ISBN {{ site.data.publications.featured_book.isbn }}, {{ site.data.publications.featured_book.rating_value }}★ on Goodreads, {{ site.data.publications.featured_book.citations }}). {{ site.data.publications.featured_book.summary }} Amazon: {{ site.data.publications.featured_book.amazon_url }} | Goodreads: {{ site.data.publications.featured_book.goodreads_url }}
+- **Technical Book Reviewing & Citations:** {% for b in site.data.publications.reviewed_books %}*{{ b.title }}* by {{ b.authors }} ({{ b.publisher }}, {{ b.year }} · {{ b.role }}){% unless forloop.last %}; {% endunless %}{% endfor %}.
 {% for r in site.data.publications.research_publications %}- **{{ r.title }}** ({{ r.venue }}, {{ r.year }}): {{ r.summary }} URL: {{ r.doi_url }}
 {% endfor %}
 

@@ -66,8 +66,66 @@ research_publications:
 
 editorial_reviewing:
   - org: "O'Reilly Media"
-    role: "Technical Book Reviewer — Scalable AI Systems (2026) & Machine Learning with Python Cookbook, 2nd Ed. (2023); cited in AI-Assisted Programming"
+    role: "Technical Book Reviewer: Scalable AI Systems (2026) & Machine Learning with Python Cookbook, 2nd Ed. (2023); cited in AI-Assisted Programming"
     url: "https://www.oreilly.com/library/view/scalable-ai-systems/0642572342883/"
   - org: "Packt Publishing"
-    role: "Technical Book Reviewer — Exploring Deepfakes (2023) & Applied AI Manuscripts"
+    role: "Technical Book Reviewer: Exploring Deepfakes (2023) & Applied AI Manuscripts"
     url: "https://www.packtpub.com/"
+
+reviewed_books:
+  - id: "scalable-ai-systems"
+    title: "Scalable AI Systems"
+    subtitle: "Architecting from Prototype to Production-Ready AI"
+    authors: "Swagata Ashwani & Ashwani Nandini"
+    publisher: "O'Reilly Media"
+    year: "2026"
+    role: "Technical Reviewer"
+    cover_image: "/assets/images/opt/books/scalable_ai_systems.jpg"
+    width: 400
+    height: 525
+    url: "https://www.oreilly.com/library/view/scalable-ai-systems/0642572342883/"
+    cta_label: "O'Reilly ↗"
+    summary: "Reviewed production AI and GenAI reference architectures, evaluation quality gates, observability layers, and governance checklists."
+
+  - id: "ml-python-cookbook-2e"
+    title: "Machine Learning with Python Cookbook (2nd Ed.)"
+    subtitle: "Practical Solutions from Preprocessing to Deep Learning"
+    authors: "Kyle Gallatin & Chris Albon"
+    publisher: "O'Reilly Media"
+    year: "2023"
+    role: "Technical Reviewer"
+    cover_image: "/assets/images/opt/books/ml_python_cookbook_2e.jpg"
+    width: 381
+    height: 500
+    url: "https://www.oreilly.com/library/view/machine-learning-with/9781098135713/"
+    cta_label: "O'Reilly ↗"
+    summary: "Reviewed practical Python recipes spanning feature preprocessing, model selection, PyTorch deep learning, and production ML workflows."
+
+  - id: "exploring-deepfakes"
+    title: "Exploring Deepfakes"
+    subtitle: "Deploy Powerful AI Techniques for Face Replacement and More"
+    authors: "Bryan Lyon & Matt Tora"
+    publisher: "Packt Publishing"
+    year: "2023"
+    role: "Technical Reviewer"
+    cover_image: "/assets/images/opt/books/exploring_deepfakes.jpg"
+    width: 406
+    height: 500
+    url: "https://www.amazon.com/Exploring-Deepfakes-techniques-replacement-comprehensive/dp/1801810699"
+    cta_label: "Amazon ↗"
+    review_post_url: "/ExploringDeepfakes/"
+    summary: "Reviewed generative face-replacement architectures, synthesis pipelines, provenance defenses, and synthetic media guardrails."
+
+  - id: "ai-assisted-programming"
+    title: "AI-Assisted Programming"
+    subtitle: "Better Planning, Coding, Testing, and Deployment"
+    authors: "Tom Taulli"
+    publisher: "O'Reilly Media"
+    year: "2024"
+    role: "Cited Work"
+    cover_image: "/assets/images/opt/books/ai_assisted_programming.jpg"
+    width: 381
+    height: 500
+    url: "https://www.oreilly.com/library/view/ai-assisted-programming/9781098164553/"
+    cta_label: "O'Reilly ↗"
+    summary: "Cites Sculpting Data for ML on dataset quality, developer workflows, and reliable AI-assisted software engineering."

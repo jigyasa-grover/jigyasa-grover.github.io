@@ -429,6 +429,32 @@ description: "Official site of Jigyasa Grover: Uber ML Tech Lead, B2B AI & DevTo
             <a href="/publications/">Papers →</a>
           </div>
         </div>
+
+        <div class="book-compact__shelf">
+          <div class="book-compact__shelf-head">
+            <span class="book-compact__shelf-label">Reviewed &amp; Cited · O'Reilly &amp; Packt</span>
+            <a class="book-compact__shelf-link" href="/publications/#reviewed-books">Details →</a>
+          </div>
+          <div class="book-compact__shelf-covers">
+            {% for rb in site.data.publications.reviewed_books %}
+            <a
+              class="book-compact__mini-cover"
+              href="{{ rb.url }}"
+              target="_blank"
+              rel="noopener"
+              title="{{ rb.role }}: {{ rb.title }} ({{ rb.publisher }}, {{ rb.year }})"
+            >
+              <img
+                src="{{ rb.cover_image }}"
+                width="{{ rb.width }}"
+                height="{{ rb.height }}"
+                loading="lazy"
+                alt="{{ rb.role }}: {{ rb.title }} ({{ rb.publisher }}, {{ rb.year }})"
+              />
+            </a>
+            {% endfor %}
+          </div>
+        </div>
       </div>
 
       <div class="ledger ledger--compact">

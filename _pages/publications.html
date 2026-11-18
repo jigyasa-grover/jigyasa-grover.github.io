@@ -54,8 +54,55 @@ permalink: /publications/
   </div>
 </section>
 
+<!-- Reviewed & Cited Industry Bookshelf (Visual Cover Shelf) -->
+<section id="reviewed-books" class="content-section--bordered" aria-labelledby="reviewing-heading">
+  <div class="section-header section-header--compact">
+    <div>
+      <div class="eyebrow">Editorial Review &amp; Citations · O'Reilly &amp; Packt</div>
+      <h2 id="reviewing-heading">Books reviewed &amp; cited in</h2>
+    </div>
+  </div>
+
+  <div class="reviewed-books-grid mt-md">
+    {% for b in pub.reviewed_books %}
+    <article class="reviewed-book-card">
+      <a class="reviewed-book-card__cover-wrap" href="{{ b.url }}" target="_blank" rel="noopener" aria-label="{{ b.title }} ({{ b.publisher }}, {{ b.year }})">
+        <div class="reviewed-book-card__cover">
+          <img
+            src="{{ b.cover_image }}"
+            width="{{ b.width }}"
+            height="{{ b.height }}"
+            loading="lazy"
+            alt="Book cover of {{ b.title }} by {{ b.authors }} ({{ b.publisher }})"
+          />
+        </div>
+      </a>
+      <div class="reviewed-book-card__body">
+        <div>
+          <div class="reviewed-book-card__meta">
+            <span class="reviewed-book-card__role">{{ b.role }}</span>
+            <span class="reviewed-book-card__pub">{{ b.publisher }} · {{ b.year }}</span>
+          </div>
+          <h3 class="reviewed-book-card__title">
+            <a href="{{ b.url }}" target="_blank" rel="noopener">{{ b.title }}</a>
+          </h3>
+          <p class="reviewed-book-card__authors">By {{ b.authors }}</p>
+          <p class="reviewed-book-card__summary">{{ b.summary }}</p>
+        </div>
+        <div class="dossier-links">
+          <a href="{{ b.url }}" target="_blank" rel="noopener">{{ b.cta_label }}</a>
+          {% if b.review_post_url %}
+          <a href="{{ b.review_post_url }}">Review Essay →</a>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
 <!-- Peer-Reviewed Chapters & Academic Papers -->
-<section class="content-section--bordered" aria-labelledby="research-papers-heading">
+<section class="content-section--bordered content-section--last" aria-labelledby="research-papers-heading">
   <div class="eyebrow">Peer-Reviewed Research</div>
   <h2 id="research-papers-heading">Chapters &amp; conference papers</h2>
 
@@ -69,23 +116,6 @@ permalink: /publications/
         <p class="ledger-row__sub">{{ r.summary }}</p>
       </div>
       <div class="ledger-row__aside"><a href="{{ r.doi_url }}" target="_blank" rel="noopener">DOI / Link ↗</a></div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
-<!-- Technical Manuscript Reviewing -->
-<section class="content-section--bordered content-section--last" aria-labelledby="reviewing-heading">
-  <div class="eyebrow">Editorial Review</div>
-  <h2 id="reviewing-heading">Technical book reviewing</h2>
-  <div class="ledger">
-    {% for ed in pub.editorial_reviewing %}
-    <div class="ledger-row">
-      <div class="ledger-row__date"><a href="{{ ed.url }}" target="_blank" rel="noopener">{{ ed.org }} ↗</a></div>
-      <div>
-        <p class="ledger-row__sub ledger-row__sub--primary">{{ ed.role }}</p>
-      </div>
-      <div class="ledger-row__aside">Reviewer</div>
     </div>
     {% endfor %}
   </div>
