@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="RE-WORK Deep Learning">
+  <defs>
+    <linearGradient id="rwBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1D2B"/>
+      <stop offset="100%" stop-color="#10121C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#rwBg)"/>
+  <g transform="translate(390, 294)">
+    <text x="0" y="74" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="74" font-weight="800" letter-spacing="2">RE<tspan fill="#38BDF8">•</tspan>WORK</text>
+    <text x="4" y="110" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="600" letter-spacing="3.5">GLOBAL AI RESEARCH CURATION</text>
+  </g>
+</svg>
+

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186 36" width="186" height="36" role="img" aria-label="Interview Kickstart">
+  <g fill="#141413">
+    <rect x="6" y="9" width="4" height="18" rx="1.5"/>
+    <path d="M14 9h4v7.6l6.2-7.6h4.8l-6.9 8.3L29.5 27h-4.9l-5.2-7.2-1.4 1.6V27h-4V9z"/>
+    <text x="36" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" letter-spacing="-0.015em">Interview Kickstart</text>
+  </g>
+</svg>
+

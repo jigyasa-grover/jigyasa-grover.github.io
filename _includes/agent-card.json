@@ -79,7 +79,7 @@
     {
       "id": "technical-research-and-open-source",
       "name": "Technical Essays, Open-Source Benchmarks & Publications",
-      "description": "Search 34 indexed technical essays, 74+ public GitHub repositories, Cloud TPU & agentic AI benchmarks, and peer-reviewed publications including Sculpting Data for ML.",
+      "description": "Search 34 indexed technical essays, 76+ public GitHub repositories, Cloud TPU & agentic AI benchmarks, and peer-reviewed publications including Sculpting Data for ML.",
       "tags": ["open-source", "cloud-tpu", "pytorch", "gemini", "data-centric-ai", "publications"],
       "examples": [
         "Fetch Markdown technical deep dives on TorchTPU Doctor, Google ADK, and Gemini agent evaluation",

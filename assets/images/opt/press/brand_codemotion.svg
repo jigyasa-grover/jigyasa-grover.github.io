@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Codemotion Magazine">
+  <defs>
+    <linearGradient id="cmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#191624"/>
+      <stop offset="100%" stop-color="#0E0C15"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#cmBg)"/>
+  <g transform="translate(310, 290)">
+    <polygon points="0,70 46,18 46,48 26,70 46,92 46,122" fill="#FF5C35"/>
+    <polygon points="94,70 48,18 48,48 68,70 48,92 48,122" fill="#FFB800"/>
+    <text x="122" y="78" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="68" font-weight="800" letter-spacing="-1.4">CODEMOTION</text>
+    <text x="124" y="114" fill="#A8A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="600" letter-spacing="4">MAGAZINE · AI &amp; ARCHITECTURE</text>
+  </g>
+</svg>
+

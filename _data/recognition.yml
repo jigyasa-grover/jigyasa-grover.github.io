@@ -49,10 +49,11 @@ awards:
     title: "Women in Digital — Rising Star Award"
     issuer: "Information Services Group (ISG)"
     url: "https://www.businesswire.com/news/home/20220914005681/en/ISG-Announces-Winners-of-ISG-Women-in-Digital-Awards"
-  - year: "2022"
+  - id: "builtin"
+    year: "2022"
     title: "Moxie Women in Tech Award Winner"
     issuer: "Built In"
-    url: "https://builtin.com/women-tech/moxie-award-winners"
+    url: "https://builtin.com/articles/2022-moxie-award-winners"
     image: "/assets/images/opt/moxie_award_winner.jpg"
   - year: "2022"
     title: "Chief Data & Analytics Officer (CDAO) Rising Star Award"
@@ -83,6 +84,9 @@ press_mastheads:
   - label: "Google Cloud"
     query: "Google Cloud"
     style: "sans"
+  - label: "Codemotion"
+    query: "Codemotion"
+    style: "sans"
   - label: "Observer"
     query: "Observer"
     style: "serif"
@@ -100,6 +104,25 @@ press_mastheads:
     style: "mono"
 
 media_features:
+  - id: "codemotion-magazine-agents-2026"
+    outlet: "Codemotion Magazine"
+    masthead: "Codemotion Magazine"
+    masthead_style: "sans"
+    date: "Oct 2026"
+    title: "The AI You Didn't Know You Were Using Wrong: When NOT to Build an Agent"
+    type: "Editorial Feature"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_codemotion.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Pushing back against throwing autonomous agents at deterministic problems: weighing blast radius, 20 to 30x recursive token loops, latency drift, and attack surface."
+    summary: "Editorial feature in Codemotion Magazine spotlighting Jigyasa Grover's Milan architectural rubric for choosing between deterministic workflows, services, and multi-agent systems."
+    tags: ["Codemotion", "Agentic Architecture", "Production AI"]
+    cta_label: "Read in Codemotion Magazine"
+    url: "https://www.codemotion.com/magazine/ai-ml/the-ai-you-didnt-know-you-were-using-wrong/"
+
   - id: "google-gemini-omni-flash-2026"
     outlet: "Google · Gemini Omni Flash Official Launch"
     masthead: "Google · Gemini"
@@ -138,6 +161,25 @@ media_features:
     tags: ["Google Cloud Next", "Split-Brain AI", "Telemetry"]
     cta_label: "Watch Documentary on YouTube"
     url: "https://www.youtube.com/watch?v=VSgKWy2iRWE"
+
+  - id: "google-cloud-live-next26-recap"
+    outlet: "Google Cloud Tech (Official Livestream)"
+    masthead: "Google Cloud"
+    masthead_style: "sans"
+    date: "Apr 2026"
+    title: "Google Cloud Live: Official Developer Recap of Next '26"
+    type: "Official Broadcast"
+    category: "video"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/gcloud_live_next26_2026.jpg"
+    width: 1280
+    height: 720
+    focal: "left center"
+    takeaway: "Co-analyzing Cloud Next '26 developer launches, open-source Race Condition telemetry simulations, and multi-agent ADK architectures live with Google Cloud."
+    summary: "Joined Google Cloud's Aja Hammerly on the official Google Cloud Live broadcast to break down flagship Next '26 developer tooling, Cloud TPUs, and production agentic workflows."
+    tags: ["Google Cloud Live", "Cloud Next '26", "Developer Recap"]
+    cta_label: "Watch Livestream on YouTube"
+    url: "https://www.youtube.com/watch?v=N7N0TU9tkzw"
 
   - id: "cacm-ai-native-stack-2026"
     outlet: "Communications of the ACM"
@@ -182,7 +224,7 @@ media_features:
     masthead: "Forbes"
     masthead_style: "serif"
     date: "Jan 2026"
-    title: "Conversational Video AI—Teaching Machines The Art Of Being Human"
+    title: "Conversational Video AI: Teaching Machines The Art Of Being Human"
     type: "Expert Commentary"
     category: "press"
     featured_span: true
@@ -191,11 +233,30 @@ media_features:
     width: 1280
     height: 720
     focal: "center center"
-    takeaway: "Why believable multimodal interaction hinges on turn-taking latency, emotional grounding, and explicit provenance guardrails rather than raw pixel fidelity alone."
-    summary: "Quoted as an industry AI expert in Forbes exploring the engineering and ethical frontier of real-time conversational video avatars, latency budgets, and human-centered guardrails."
-    tags: ["Forbes", "Multimodal Video AI", "Human-AI Interaction"]
+    takeaway: "Why human-like multimodal AI hinges on epistemic humility models (tracking uncertainty and admitting unknowns rather than bluffing coherence) alongside turn-taking latency."
+    summary: "Quoted by R. Daniel Foster in Forbes on epistemic humility models, real-time conversational video avatars, uncertainty calibration, and human-centered guardrails."
+    tags: ["Forbes", "Multimodal Video AI", "Epistemic Humility"]
     cta_label: "Read Article on Forbes"
-    url: "https://www.forbes.com/sites/neilsahota/2026/01/24/conversational-video-ai-teaching-machines-the-art-of-being-human/"
+    url: "https://www.forbes.com/sites/rdaniel-foster/2026/01/24/conversational-video-ai-teaching-machines-the-art-of-being-human/"
+
+  - id: "devto-gde-ces-2026"
+    outlet: "DEV Community & Official Google GDE"
+    masthead: "DEV · Google GDE"
+    masthead_style: "mono"
+    date: "Jan 2026"
+    title: "CES 2026 Top 5 AI Hardware Picks & Google's MapReduce LEGO Tribute"
+    type: "Authored Column"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_devto.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Practitioner hardware dispatches evaluating CES 2026 robotics and spatial computing alongside distributed systems history from Google's AI Community Summit."
+    summary: "Series of three technical and hardware essays on DEV Community and the official Google GDE publication covering CES 2026 robotics picks, VR history, and Google's 2004 MapReduce paper."
+    tags: ["CES 2026 Hardware", "Google GDE", "DEV Community"]
+    cta_label: "Read CES 2026 Picks on DEV"
+    url: "https://dev.to/jigyasagrover/ces-2026-my-top-5-picks-lf4"
 
   - id: "data-neighbor-podcast-2025"
     outlet: "Data Neighbor Podcast"
@@ -388,6 +449,25 @@ media_features:
     cta_label: "Read Feature in Grazia UK"
     url: "https://graziadaily.co.uk/life/real-life/best-ai-tools-parents/"
 
+  - id: "women-in-data-ai-insider-2024"
+    outlet: "Data Bytes by Women in Data (The AI Insider)"
+    masthead: "Women in Data"
+    masthead_style: "mono"
+    date: "Sep 2024"
+    title: "The AI Insider: Data Curation and Privacy Mastery with Jigyasa Grover"
+    type: "Podcast Guest"
+    category: "podcast"
+    visual_mode: "snapshot"
+    image: "/assets/images/opt/press/women_in_data_podcast_2024.jpg"
+    width: 1280
+    height: 720
+    focal: "right center"
+    takeaway: "Practical blueprints for dataset curation, synthetic data hygiene, bias mitigation, and privacy-preserving ML in enterprise pipelines."
+    summary: "Full-length video and audio episode on Women in Data's Data Bytes podcast unpacking data-centric machine learning, differential privacy, and open-source model benchmarking."
+    tags: ["Women in Data", "Data Curation", "Privacy ML"]
+    cta_label: "Watch Podcast on YouTube"
+    url: "https://www.youtube.com/watch?v=3zOqqUHKlbc"
+
   - id: "observer-synthetic-data-2024"
     outlet: "Observer"
     masthead: "Observer"
@@ -502,6 +582,44 @@ media_features:
     cta_label: "Read Spotlight on Google Blog"
     url: "https://developers.googleblog.com/2023/03/gde-womens-history-month-feature-jigyasa-grover-machine-learning.html"
 
+  - id: "hyperight-dis-interview-2023"
+    outlet: "Hyperight · Data Innovation Summit"
+    masthead: "Hyperight"
+    masthead_style: "sans"
+    date: "Mar 2023"
+    title: "Sculpting Data for Machine Learning: Production Ranking & Dataset Engineering Q&A"
+    type: "Feature Interview"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_hyperight.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "How billion-impression online ads prediction and feature hydration depend on disciplined upstream dataset curation before model architecture."
+    summary: "In-depth editorial interview published by Hyperight ahead of the Data Innovation Summit exploring large-scale ads ranking, feature engineering, and Sculpting Data for ML."
+    tags: ["Hyperight", "Data Innovation Summit", "Ads Ranking"]
+    cta_label: "Read Interview on Hyperight"
+    url: "https://hyperight.com/sculpting-data-for-machine-learning-interview-with-jigyasa-grover-rishabh-misra-twitter/"
+
+  - id: "rework-top-17-ai-papers-2022"
+    outlet: "RE•WORK Deep Learning Blog"
+    masthead: "RE•WORK"
+    masthead_style: "sans"
+    date: "Aug 2022"
+    title: "The Top 17 'Must-Read' AI Research Papers in 2022"
+    type: "Expert Research Curation"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_rework.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Curating foundational breakthroughs in multimodal representation learning, recommender systems, and data-centric evaluation alongside global AI leaders."
+    summary: "Invited by RE•WORK alongside leading industry researchers to select and annotate the essential machine learning papers shaping enterprise AI deployments."
+    tags: ["RE•WORK", "ML Research", "Paper Curation"]
+    cta_label: "Read Feature on RE•WORK"
+    url: "https://blog.re-work.co/the-top-17-must-read-ai-papers-in-2022/"
+
   - id: "ntd-live-tv-broadcast-2022"
     outlet: "NTD Television & Ticker News Australia"
     masthead: "NTD Live TV · Ticker News"
@@ -541,12 +659,31 @@ media_features:
     cta_label: "Open Curated Spotify Playlist"
     url: "https://open.spotify.com/playlist/6vRPsGPE6v2I81NlWkdGiY"
 
+  - id: "se-unlocked-podcast-2020"
+    outlet: "Software Engineering Unlocked (Dr. Michaela Greiler)"
+    masthead: "SE Unlocked"
+    masthead_style: "mono"
+    date: "May 2020"
+    title: "Becoming a Machine Learning Engineer & Scaling Ranking Systems at Twitter"
+    type: "Podcast Guest"
+    category: "podcast"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_se_unlocked.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "From Google Summer of Code and UC San Diego graduate research to owning high-throughput timelines and ads ML engineering in San Francisco."
+    summary: "Long-form interview with Dr. Michaela Greiler on Software Engineering Unlocked covering open-source foundations, graduate AI research, and production ML engineering life at Twitter."
+    tags: ["Software Engineering Unlocked", "Twitter ML", "Podcast"]
+    cta_label: "Listen & Read Transcript"
+    url: "https://www.software-engineering-unlocked.com/machine-learning-engineer-twitter/"
+
   - id: "opensource-ibtimes-profiles"
-    outlet: "International Business Times · Opensource.com · Women in Silicon Valley"
+    outlet: "International Business Times · Opensource.com · Women Who Code · HelloMeets"
     masthead: "Opensource.com · IBTimes"
     masthead_style: "serif"
-    date: "2017–2023"
-    title: "Print, Book & Digital Profiles on Open Source Equity and Python Engineering (Opensource.com Top Article)"
+    date: "2015–2023"
+    title: "Opensource.com Top Python Article & Early Press Profiles (IBTimes, Women in Silicon Valley, WWC 'Applaud Her' 3× & Buzzingg)"
     type: "Print & Digital Press"
     category: "press"
     visual_mode: "snapshot"
@@ -554,9 +691,9 @@ media_features:
     width: 520
     height: 292
     focal: "center center"
-    takeaway: "Recognized among Opensource.com's top-read Python engineering articles alongside international press profiles on open-source leadership and representation."
-    summary: "Multi-outlet coverage spanning International Business Times, Women in Silicon Valley, and Opensource.com highlighting Jigyasa's Python Software Foundation leadership and technical writing."
-    tags: ["IBTimes", "Opensource.com", "Python"]
+    takeaway: "Recognized among Opensource.com's top-read Python engineering articles alongside early international profiles (2015–2023) on open-source leadership, GSoC, and equity."
+    summary: "Multi-outlet coverage spanning Opensource.com ('Perceiving Python Programming Paradigms'), International Business Times, Women in Silicon Valley, Women Who Code ('Applaud Her' May/Oct/Nov 2015), HelloMeets ('More Power to Hackers', 2016), and Buzzingg."
+    tags: ["IBTimes", "Opensource.com", "Open Source Equity"]
     cta_label: "Read Top Article on Opensource.com"
     url: "https://opensource.com/article/19/10/python-programming-paradigms"
 

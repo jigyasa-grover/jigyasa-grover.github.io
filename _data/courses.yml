@@ -15,6 +15,7 @@ training_clients:
   - "CreativePro"
   - "Silicon Valley Security Group"
   - "AI Aspire"
+  - "Interview Kickstart"
 
 training_client_logos:
   - name: "LinkedIn Learning"
@@ -56,6 +57,10 @@ training_client_logos:
   - name: "AI Aspire"
     logo: "/assets/images/brands/ai-aspire.svg"
     width: 128
+    height: 36
+  - name: "Interview Kickstart"
+    logo: "/assets/images/brands/interview-kickstart.svg"
+    width: 186
     height: 36
 
 courses:
@@ -128,6 +133,18 @@ courses:
       - "Google Cloud"
       - "Platform Engineering"
       - "Enterprise Enablement"
+
+  - title: "Agentic AI & Production ML Career Intensive"
+    provider: "Interview Kickstart"
+    year: "2024–2026"
+    learners: "Senior Engineering Cohorts"
+    level: "Senior / Staff Engineering"
+    url: "https://interviewkickstart.com/agentic-ai-career-boost"
+    summary: "Featured industry instructor guiding experienced software and ML engineers through LangGraph multi-agent orchestration, vector retrieval, and large-scale ML system design."
+    topics:
+      - "Agentic AI"
+      - "ML System Design"
+      - "LangGraph & RAG"
 
 workshops:
   - title: "When (and How) to Build Production AI Agents"

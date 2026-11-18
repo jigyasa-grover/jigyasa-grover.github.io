@@ -42,7 +42,7 @@
   kicker: "Book · CTR Ranking · Edge/Cloud"
   summary: "Master dataset engineering, billion-request CTR prediction architectures, and ~15ms edge/cloud inference budgets."
   steps:
-    - format: "Book · 95+ Citations"
+    - format: "Book · 100+ Citations"
       title: "Sculpting Data for ML & Preventing Upstream Data Cascades"
       url: "/Data-Cascades/"
     - format: "Confident Learning"

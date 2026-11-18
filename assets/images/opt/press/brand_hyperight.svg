@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Hyperight and Data Innovation Summit">
+  <defs>
+    <linearGradient id="hyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2027"/>
+      <stop offset="100%" stop-color="#162A36"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#hyBg)"/>
+  <g transform="translate(355, 294)">
+    <rect x="0" y="20" width="14" height="84" rx="4" fill="#00C2CB"/>
+    <text x="36" y="74" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="1.5">HYPERIGHT</text>
+    <text x="38" y="108" fill="#8CDCE0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="600" letter-spacing="3.5">DATA INNOVATION SUMMIT · NORDICS</text>
+  </g>
+</svg>
+

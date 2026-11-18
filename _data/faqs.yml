@@ -32,9 +32,9 @@ partnerships:
   - q: "What developer partnerships and launch bundles does Jigyasa take on?"
     a: "Single-channel or Full-Stack Technical Launch Bundles combining runnable GitHub reference repos, permanent technical blog essays, LinkedIn/X launch sequences, 9:16 creator Reels/Shorts, and live developer webinars."
   - q: "Who makes up her audience and target buyer ICP?"
-    a: "Across LinkedIn (325K+ annual impressions, 14.5K+ followers), GitHub (74+ repos), YouTube (@JigyasaGrover), X, Instagram Reels, and her RSS-syndicated technical blog, 82% of her audience are senior technical practitioners and buyers: Staff+ Engineers, Engineering Directors, VPs, Founders, and C-Suite leaders."
+    a: "Across LinkedIn (325K+ annual impressions, 14.5K+ followers), GitHub (76+ repos), YouTube (@JigyasaGrover), X, Instagram Reels, and her RSS-syndicated technical blog, 82% of her audience are senior technical practitioners and buyers: Staff+ Engineers, Engineering Directors, VPs, Founders, and C-Suite leaders."
   - q: "What standalone channels does Jigyasa Grover publish on as a B2B AI, YouTube, and technical creator?"
-    a: "She publishes directly across her standalone @JigyasaGrover YouTube channel (70+ AI Shorts, 64+ playlists, 300K+ aggregate video and talk views), LinkedIn (14,500+ followers, 325K+ annual impressions), X (@jigyasa_grover, 2,500+ practitioners), Instagram Reels and TikTok (@jigyasagroverofficial), GitHub (74+ public repos, 180+ PRs), and her RSS-syndicated AI Engineering Newsletter & Blog (/blog/, 34+ indexed essays at /feed.xml), booking sponsorships via Passionfroot, Naano, and 8x."
+    a: "She publishes directly across her standalone @JigyasaGrover YouTube channel (70+ AI Shorts, 64+ playlists, 300K+ aggregate video and talk views), LinkedIn (14,500+ followers, 325K+ annual impressions), X (@jigyasa_grover, 2,500+ practitioners), Instagram Reels and TikTok (@jigyasagroverofficial), DEV Community (@jigyasagrover), GitHub (76+ public repos, 180+ PRs), and her RSS-syndicated AI Engineering Newsletter & Blog (/blog/, 34+ indexed essays at /feed.xml), booking sponsorships via Passionfroot, Naano, and 8x."
   - q: "What should GTM and marketing teams include when inquiring about a sponsorship?"
     a: "Share your product URL, target developer or enterprise AI buyer persona, preferred channel or Full-Stack Launch Bundle, target launch window, and sandbox access, or book standard packages directly via Passionfroot, Naano, or 8x."
 
@@ -46,21 +46,21 @@ work_with_me:
 
 projects:
   - q: "What open-source AI, Hugging Face, and Cloud TPU contributions has Jigyasa Grover authored?"
-    a: "Across 180+ public pull requests and 74+ GitHub repositories, highlights include upstream PyTorch/Cloud TPU fixes in Hugging Face transformers (#50267, 2.06× faster eager LoRA steps) and peft (#4099 / #4101, torch.accelerator TPU device routing), TorchTPU Doctor (2,537× LoRA speedup on Cloud TPU v6e), Startup on a Shoestring (Google Antigravity token circuit breakers), Kinetic Gemma 3 Cloud TPU fine-tuning, Trust at Top Speed (split-brain Gemini Nano + Cloud Run AI Racing Coach), and Critic's Cut (multilingual Google ADK multi-agent system)."
+    a: "Across 180+ public pull requests and 76+ GitHub repositories, highlights include upstream PyTorch/Cloud TPU fixes in Hugging Face transformers (#50267, 2.06× faster eager LoRA steps) and peft (#4099 / #4101, torch.accelerator TPU device routing), TorchTPU Doctor (2,537× LoRA speedup on Cloud TPU v6e), Startup on a Shoestring (Google Antigravity token circuit breakers), Kinetic Gemma 3 Cloud TPU fine-tuning, Trust at Top Speed (split-brain Gemini Nano + Cloud Run AI Racing Coach), and Critic's Cut (multilingual Google ADK multi-agent system)."
   - q: "Are the repositories, Agent Skills, and Colab notebooks free to fork and run?"
     a: "Yes. Open-source reference implementations, Agent Skills, Google Colab notebooks, and official LinkedIn Learning course companion labs are publicly available at github.com/jigyasa-grover."
 
 press:
   - q: "Where has Jigyasa Grover been featured in global press and broadcasts?"
-    a: "She has been featured on the Google I/O main keynote stage (introduced by Sundar Pichai), Google's official Gemini Omni Flash global launch video, Google Cloud Tech documentaries, Forbes, Business Insider, Communications of the ACM, Google for Developers Blog, VentureBeat, Observer, MIT Sloan × BCG, Grazia UK, UN ITU, and NTD Live TV."
+    a: "She has been featured on the Google I/O main keynote stage (introduced by Sundar Pichai), Google's official Gemini Omni Flash global launch video, Google Cloud Tech documentaries & livestreams, Forbes, Business Insider, Communications of the ACM, Codemotion Magazine, Google for Developers Blog, VentureBeat, Observer, Hyperight, MIT Sloan × BCG, Grazia UK, UN ITU, and NTD Live TV."
   - q: "How should event organizers and journalists pronounce and credit Jigyasa Grover?"
     a: "Jigyasa Grover is pronounced jig-YAH-sah GROH-ver (/dʒɪɡˈjɑːsɑː ˈɡroʊvər/). Credit her as Machine Learning Engineer (Tech Lead) at Uber, Google Developer Advisory Board (gDAB) member, 13× AI & Open Source Award Winner, and co-author of Sculpting Data for ML, using the approved 50-word or 150-word bios and portraits on this page."
 
 publications:
   - q: "What books and peer-reviewed papers has Jigyasa Grover authored?"
-    a: "She co-authored Sculpting Data for ML: The First Act of Machine Learning (ISBN 979-8585463570, 95+ academic citations, 4.8★ on Goodreads), Enterprise LLM Deployment Readiness (SSRN 2026 via the AI Assurance Council), two Springer book chapters on privacy-preserving ML and misinformation detection, and an ACM IWST research paper on live multi-agent visualization."
+    a: "She co-authored Sculpting Data for ML: The First Act of Machine Learning (ISBN 979-8585463570, 100+ academic citations, 4.8★ on Goodreads), Enterprise LLM Deployment Readiness (SSRN 2026 via the AI Assurance Council), two Springer book chapters on privacy-preserving ML and misinformation detection, and an ACM IWST research paper on live multi-agent visualization."
   - q: "Does Jigyasa review technical manuscripts or collaborate with publishers?"
-    a: "Yes. She serves as a technical book reviewer for O'Reilly Media (Scalable AI Systems, Machine Learning with Python Cookbook 2nd Ed.) and Packt Publishing (Exploring Deepfakes), and welcomes curriculum, monograph, and benchmark study collaborations via Work With Me."
+    a: "Yes. She serves as a technical book reviewer for O'Reilly Media (Scalable AI Systems, Machine Learning with Python Cookbook 2nd Ed.) and Packt Publishing (Principles of Data Science 3rd Ed., Exploring Deepfakes), endorsed Practical Python Projects, and welcomes curriculum, monograph, and benchmark study collaborations via Work With Me."
 
 media_kit:
   - q: "Does Jigyasa accept tech hardware, AI gadgets, and electronics for review or PR seeding?"

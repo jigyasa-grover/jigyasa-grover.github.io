@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Software Engineering Unlocked Podcast">
+  <defs>
+    <linearGradient id="seuBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B2E"/>
+      <stop offset="100%" stop-color="#12101D"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#seuBg)"/>
+  <g transform="translate(260, 290)">
+    <circle cx="48" cy="64" r="40" fill="none" stroke="#F59E0B" stroke-width="6"/>
+    <circle cx="48" cy="64" r="14" fill="#F59E0B"/>
+    <text x="114" y="64" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-0.6">Software Engineering</text>
+    <text x="114" y="108" fill="#FCD34D" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" letter-spacing="3">UNLOCKED PODCAST</text>
+  </g>
+</svg>
+

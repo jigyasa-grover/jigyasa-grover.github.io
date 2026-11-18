@@ -4,7 +4,7 @@ featured_book:
   year: "2021"
   isbn: "979-8585463570"
   formats: "Paperback · Kindle · Audible"
-  citations: "95+ citations"
+  citations: "100+ citations"
   rating_value: 4.8
   rating_count: 5
   review_count: 1
@@ -55,7 +55,7 @@ research_publications:
     year: "2017"
     type: "ACM Paper"
     doi_url: "https://dl.acm.org/doi/10.1145/3139903.3139915"
-    summary: "Introduces live spatial visualization interfaces for multi-agent ecological modeling in CORMAS and Pharo."
+    summary: "Co-authored with N. Papoulias, S. Stinckwich, and P. Bommel (IRD Paris), introducing live spatial visualization interfaces for multi-agent ecological modeling in CORMAS and Pharo."
 
   - title: "Pharo by Example 5.0"
     venue: "Square Bracket Associates"
@@ -66,10 +66,10 @@ research_publications:
 
 editorial_reviewing:
   - org: "O'Reilly Media"
-    role: "Technical Book Reviewer: Scalable AI Systems (2026) & Machine Learning with Python Cookbook, 2nd Ed. (2023); cited in AI-Assisted Programming"
+    role: "Technical Book Reviewer: Scalable AI Systems (2026) & Machine Learning with Python Cookbook, 2nd Ed. (2023); cited in AI-Assisted Programming (2024)"
     url: "https://www.oreilly.com/library/view/scalable-ai-systems/0642572342883/"
-  - org: "Packt Publishing"
-    role: "Technical Book Reviewer: Exploring Deepfakes (2023) & Applied AI Manuscripts"
+  - org: "Packt Publishing & Independent Technical Presses"
+    role: "Technical Book Reviewer: Principles of Data Science, 3rd Ed. (2024) & Exploring Deepfakes (2023); featured endorser of Practical Python Projects"
     url: "https://www.packtpub.com/"
 
 reviewed_books:
@@ -86,6 +86,20 @@ reviewed_books:
     url: "https://www.oreilly.com/library/view/scalable-ai-systems/0642572342883/"
     cta_label: "O'Reilly ↗"
     summary: "Reviewed production AI and GenAI reference architectures, evaluation quality gates, observability layers, and governance checklists."
+
+  - id: "principles-of-data-science-3e"
+    title: "Principles of Data Science (3rd Ed.)"
+    subtitle: "Essential Math and Coding Skills for Data Fluency and ML"
+    authors: "Sinan Ozdemir"
+    publisher: "Packt Publishing"
+    year: "2024"
+    role: "Technical Reviewer"
+    cover_image: "/assets/images/opt/books/principles_of_data_science_3e.jpg"
+    width: 406
+    height: 500
+    url: "https://www.amazon.com/dp/1837636303"
+    cta_label: "Amazon ↗"
+    summary: "Reviewed foundational statistical modeling, Python data fluency pipelines, machine learning algorithms, and modern AI governance chapters."
 
   - id: "ml-python-cookbook-2e"
     title: "Machine Learning with Python Cookbook (2nd Ed.)"

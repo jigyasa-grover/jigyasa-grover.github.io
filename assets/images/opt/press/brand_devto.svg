@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="DEV Community and Google Developer Experts">
+  <defs>
+    <linearGradient id="devBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141820"/>
+      <stop offset="100%" stop-color="#0B0E14"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#devBg)"/>
+  <g transform="translate(340, 286)">
+    <rect x="0" y="12" width="144" height="104" rx="14" fill="#FFFFFF"/>
+    <text x="20" y="83" fill="#0B0E14" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="56" font-weight="900" letter-spacing="-2">DEV</text>
+    <text x="174" y="74" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="54" font-weight="700" letter-spacing="-1">Community</text>
+    <text x="176" y="110" fill="#8AB4F8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="600" letter-spacing="3">GOOGLE GDE · HARDWARE &amp; AI</text>
+  </g>
+</svg>
+
