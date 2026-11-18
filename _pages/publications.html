@@ -17,18 +17,15 @@ permalink: /publications/
 <section class="content-section" aria-labelledby="featured-book-heading">
   <div class="feature-split feature-split--book">
     <div class="media-frame media-frame--book">
-      <img
-        src="{{ pub.featured_book.cover_image }}"
-        width="517"
-        height="800"
-        fetchpriority="high"
-        alt="Cover of Sculpting Data for ML: The First Act of Machine Learning"
-      />
-      <div class="media-frame__caption">ISBN {{ pub.featured_book.isbn }} · {{ pub.featured_book.rating_value }}★ on Goodreads · {{ pub.featured_book.citations }}</div>
+      <img src="{{ pub.featured_book.cover_image }}" width="517" height="800" fetchpriority="high"
+        alt="Cover of Sculpting Data for ML: The First Act of Machine Learning" />
+      <div class="media-frame__caption">ISBN {{ pub.featured_book.isbn }} · {{ pub.featured_book.rating_value }}★ on
+        Goodreads · {{ pub.featured_book.citations }}</div>
     </div>
 
     <div>
-      <div class="eyebrow">Published Book ({{ pub.featured_book.year }}) · {{ pub.featured_book.rating_value }}★ Goodreads</div>
+      <div class="eyebrow">Published Book ({{ pub.featured_book.year }}) · {{ pub.featured_book.rating_value }}★
+        Goodreads</div>
       <h2 id="featured-book-heading">{{ pub.featured_book.title }}</h2>
       <p>{{ pub.featured_book.summary }}</p>
 
@@ -36,14 +33,17 @@ permalink: /publications/
         <div class="endorsement-box__label">Forewords &amp; Endorsements By</div>
         <ul class="endorsement-box__list">
           {% for f in pub.featured_book.forewords %}
-          <li><a href="{{ f.url }}" target="_blank" rel="noopener"><strong>{{ f.name }}</strong></a> — {{ f.affiliation }}</li>
+          <li><a href="{{ f.url }}" target="_blank" rel="noopener"><strong>{{ f.name }}</strong></a> — {{ f.affiliation
+            }}</li>
           {% endfor %}
         </ul>
       </div>
 
       <div class="btn-group">
-        <a class="btn btn--primary" href="{{ pub.featured_book.amazon_url }}" target="_blank" rel="noopener">Amazon (Print, Kindle &amp; Audible) ↗</a>
-        <a class="btn btn--secondary" href="{{ pub.featured_book.goodreads_url }}" target="_blank" rel="noopener">Goodreads ({{ pub.featured_book.rating_value }}★) ↗</a>
+        <a class="btn btn--primary" href="{{ pub.featured_book.amazon_url }}" target="_blank" rel="noopener">Amazon
+          (Print, Kindle &amp; Audible) ↗</a>
+        <a class="btn btn--secondary" href="{{ pub.featured_book.goodreads_url }}" target="_blank"
+          rel="noopener">Goodreads ({{ pub.featured_book.rating_value }}★) ↗</a>
         <a class="btn btn--secondary" href="{{ pub.featured_book.launch_post_url }}">Launch Essay →</a>
       </div>
     </div>
@@ -58,23 +58,19 @@ permalink: /publications/
 <section id="reviewed-books" class="content-section--bordered" aria-labelledby="reviewing-heading">
   <div class="section-header section-header--compact">
     <div>
-      <div class="eyebrow">Editorial Review &amp; Citations · O'Reilly &amp; Packt</div>
-      <h2 id="reviewing-heading">Books reviewed &amp; cited in</h2>
+      <div class="eyebrow">Editorial Review, Endorsements &amp; Citations · O'Reilly, Packt &amp; Python</div>
+      <h2 id="reviewing-heading">Books reviewed, endorsed &amp; cited in</h2>
     </div>
   </div>
 
   <div class="reviewed-books-grid mt-md">
     {% for b in pub.reviewed_books %}
     <article class="reviewed-book-card">
-      <a class="reviewed-book-card__cover-wrap" href="{{ b.url }}" target="_blank" rel="noopener" aria-label="{{ b.title }} ({{ b.publisher }}, {{ b.year }})">
+      <a class="reviewed-book-card__cover-wrap" href="{{ b.url }}" target="_blank" rel="noopener"
+        aria-label="{{ b.title }} ({{ b.publisher }}, {{ b.year }})">
         <div class="reviewed-book-card__cover">
-          <img
-            src="{{ b.cover_image }}"
-            width="{{ b.width }}"
-            height="{{ b.height }}"
-            loading="lazy"
-            alt="Book cover of {{ b.title }} by {{ b.authors }} ({{ b.publisher }})"
-          />
+          <img src="{{ b.cover_image }}" width="{{ b.width }}" height="{{ b.height }}" loading="lazy"
+            alt="Book cover of {{ b.title }} by {{ b.authors }} ({{ b.publisher }})" />
         </div>
       </a>
       <div class="reviewed-book-card__body">
@@ -111,7 +107,8 @@ permalink: /publications/
     <div class="ledger-row">
       <div class="ledger-row__date">{{ r.year }} · {{ r.type }}</div>
       <div>
-        <div class="ledger-row__title"><a href="{{ r.doi_url }}" target="_blank" rel="noopener">{{ r.title }} ↗</a></div>
+        <div class="ledger-row__title"><a href="{{ r.doi_url }}" target="_blank" rel="noopener">{{ r.title }} ↗</a>
+        </div>
         <p class="venue-label">{{ r.venue }}</p>
         <p class="ledger-row__sub">{{ r.summary }}</p>
       </div>

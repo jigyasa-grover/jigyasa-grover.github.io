@@ -129,3 +129,17 @@ reviewed_books:
     url: "https://www.oreilly.com/library/view/ai-assisted-programming/9781098164553/"
     cta_label: "O'Reilly ↗"
     summary: "Cites Sculpting Data for ML on dataset quality, developer workflows, and reliable AI-assisted software engineering."
+
+  - id: "practical-python-projects"
+    title: "Practical Python Projects"
+    subtitle: "Bite-Sized Weekend Projects to Enhance Your Python Knowledge"
+    authors: "Yasoob Khalid"
+    publisher: "Practical Python"
+    year: "2020"
+    role: "Featured Endorsement"
+    cover_image: "/assets/images/opt/books/practical_python_projects.jpg"
+    width: 385
+    height: 500
+    url: "https://practicalpython.yasoob.me/"
+    cta_label: "Book Site ↗"
+    summary: "Featured practitioner endorsement & citation highlighting end-to-end Python engineering, library integration, and project-based learning."
