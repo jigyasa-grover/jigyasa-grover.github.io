@@ -6,9 +6,16 @@
   seo_title: "TorchTPU Doctor: PyTorch Cloud TPU Profiler — Jigyasa Grover"
   og_image: "/assets/images/opt/torchtpu-doctor-cover.jpg"
   og_image_alt: "TorchTPU Doctor — 7-rule AST linter and Cloud TPU v6e PyTorch profiler by Jigyasa Grover"
-  summary: "Catching silent CPU fallbacks, hidden Hugging Face host syncs, and XLA recompiles in PyTorch on Cloud TPU v6e—cutting LoRA step time 2,537× (47.3s → 18.6ms) alongside upstream PRs to transformers & peft."
+  summary: "Catching silent CPU fallbacks, hidden Hugging Face host syncs, and XLA recompiles in PyTorch on Cloud TPU v6e, cutting LoRA step time 2,537× (47.3s → 18.6ms) alongside upstream PRs to transformers & peft."
   repo_url: "https://github.com/jigyasa-grover/TorchTPU-Doctor"
   live_url: "https://colab.research.google.com/github/jigyasa-grover/TorchTPU-Doctor/blob/main/notebooks/torchtpu_doctor_demo.ipynb"
+  skill_url: "https://raw.githubusercontent.com/jigyasa-grover/TorchTPU-Doctor/main/.agents/skills/torchtpu-doctor/SKILL.md"
+  md_url: "/TorchTPUDoctor/index.md"
+  faqs:
+    - q: "Why does a standard CUDA PyTorch LoRA script stall on Google Cloud TPU v6e?"
+      a: "Three silent bottlenecks cause 44s to 77s step stalls on torch_tpu: unpatched device helpers like peft's infer_device() falling back to CPU, dynamic batch sequence padding triggering full StableHLO XLA recompilations every step, and scalar .item() or boolean host syncs inside Hugging Face transformers flushing the TPU HBM queue."
+    - q: "How much faster is LoRA fine-tuning with TorchTPU Doctor?"
+      a: "Applying TorchTPU Doctor's 7-rule AST linter, runtime sync patches, static shape bucketing, and torch.compile(backend='tpu', dynamic=False) cuts Qwen2.5-0.5B-Instruct LoRA step latency on Cloud TPU v6e-1 from 47.3 seconds/step down to 18.6 ms/step (a 2,537× speedup)."
 
 "/ProofOfWork/":
   category: "Agentic AI & Evaluation"
@@ -21,6 +28,12 @@
   summary: "How Proof of Work uses Gemini's agentic video understanding to evaluate software engineering process, debugging discipline, and hypothesis iteration from continuous screen recordings."
   repo_url: "https://github.com/jigyasa-grover/proof-of-work"
   live_url: "https://jigyasa-grover.github.io/proof-of-work/"
+  md_url: "/ProofOfWork/index.md"
+  faqs:
+    - q: "How does Proof of Work evaluate engineering process instead of final code output?"
+      a: "Proof of Work ingests continuous coding screen recordings with Gemini multimodal video reasoning, segmenting debugging loops, hypothesis testing, documentation lookups, and verification habits into timestamped rubric scores rather than grading only the final commit."
+    - q: "Why use multimodal video understanding for technical assessments?"
+      a: "In an era of AI code generation, static take-home repositories cannot distinguish blind copy-pasting from disciplined systems engineering; temporal video analysis captures how candidates diagnose failures and validate invariants."
 
 "/StartupOnAShoestring/":
   category: "Agentic Infrastructure"
@@ -32,6 +45,12 @@
   og_image_alt: "Startup on a Shoestring — Agent token budget and cost monitors using Google Antigravity SDK"
   summary: "Preventing quadratic token inflation and runaway self-correction loops in autonomous agents using Google Antigravity SDK lifecycle hooks and FastAPI SSE telemetry."
   repo_url: "https://github.com/jigyasa-grover/startup-on-a-shoestring"
+  md_url: "/StartupOnAShoestring/index.md"
+  faqs:
+    - q: "What causes runaway token spend in multi-step AI agents?"
+      a: "Each autonomous tool call appends full prior history and verbose tool payloads back into the prompt window, creating quadratic input-token growth and unbounded retry loops when an external tool errors."
+    - q: "How do lifecycle hooks enforce a strict per-session agent budget?"
+      a: "Pre-model and post-tool lifecycle hooks meter cumulative input/output tokens in real time, prune redundant tool outputs, downgrade model tiers when approaching soft thresholds, and trip deterministic circuit breakers before crossing hard cent budgets."
 
 "/KineticFinetuningOnCloudTPU/":
   category: "Fine-Tuning & Compute"
@@ -41,8 +60,15 @@
   seo_title: "Fine-Tuning Gemma 3 on Cloud TPU with Kinetic — Jigyasa Grover"
   og_image: "/assets/images/wp-archive/2026/kinetic-era-2-abfee7c9.png"
   og_image_alt: "Supervised fine-tuning of Gemma 3 1B on Cloud TPU v5 Lite using Keras Kinetic"
-  summary: "Supervised fine-tuning (SFT) of Google's Gemma 3 1B on a Cloud TPU v5 Lite using a single Python decorator—zero Docker or Kubernetes YAML required."
+  summary: "Supervised fine-tuning (SFT) of Google's Gemma 3 1B on a Cloud TPU v5 Lite using a single Python decorator, with zero Docker or Kubernetes YAML required."
   repo_url: "https://github.com/jigyasa-grover/kinetic-finetuning-on-cloud-tpu"
+  live_url: "https://jigyasa-grover.github.io/kinetic-finetuning-on-cloud-tpu/"
+  md_url: "/KineticFinetuningOnCloudTPU/index.md"
+  faqs:
+    - q: "How can you fine-tune Gemma 3 on a Google Cloud TPU without Docker or Kubernetes YAML?"
+      a: "Wrapping a standard Python training function with a Keras Kinetic decorator packages local dependencies, provisions a Cloud TPU v5 Lite slice on demand, streams logs back to your terminal, and tears down compute automatically on completion."
+    - q: "Why choose LoRA supervised fine-tuning on Gemma 3 1B?"
+      a: "Low-Rank Adaptation (LoRA) updates a small fraction of adapter weights on Gemma 3 1B, converging rapidly on a single Cloud TPU v5 Lite chip while preserving low-latency serving."
 
 "/TrustAtTopSpeed/":
   category: "Agentic Infrastructure"
@@ -53,6 +79,12 @@
   og_image: "/assets/images/wp-archive/2025/image-68f4e07f.png"
   og_image_alt: "Split-brain Gemini Nano + Cloud Run AI Racing Coach architecture at Thunderhill Raceway"
   summary: "Building and field-testing a split-brain AI Racing Coach at Thunderhill Raceway Park combining sub-15ms on-device Gemini Nano cues, physics safety gates, and Cloud Run telemetry reasoning."
+  md_url: "/TrustAtTopSpeed/index.md"
+  faqs:
+    - q: "What is a split-brain edge and cloud AI architecture?"
+      a: "A split-brain AI architecture pairs deterministic physics guardrails and sub-15ms on-device inference (Gemini Nano) for immediate safety-critical cues with asynchronous cloud reasoning (Gemini on Cloud Run) for deeper post-lap telemetry synthesis."
+    - q: "Why can't real-time physical coaching rely solely on cloud LLMs?"
+      a: "At highway and track speeds, network round-trips and cellular dead zones introduce hundreds of milliseconds of jitter; hard real-time braking and apex cues must execute locally behind deterministic G-force thresholds."
 
 "/ColabVSCodeExtension/":
   category: "Agentic Infrastructure"

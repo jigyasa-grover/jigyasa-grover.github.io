@@ -1,0 +1,65 @@
+---
+layout: null
+permalink: /.well-known/mcp.json
+sitemap: false
+---
+{
+  "schema_version": "1.0",
+  "protocol": "W3C WebMCP + Static Agent Context",
+  "name": "jigyasa-grover-webmcp",
+  "title": "Jigyasa Grover — WebMCP & Agentic Discovery Manifest",
+  "canonical_url": "https://jigyasa-grover.github.io/",
+  "entity_id": "https://jigyasa-grover.github.io/#person",
+  "discovery": {
+    "agent_context": "https://jigyasa-grover.github.io/agent-context.json",
+    "a2a_agent_card": "https://jigyasa-grover.github.io/.well-known/agent-card.json",
+    "llms_txt": "https://jigyasa-grover.github.io/llms.txt",
+    "llms_full_txt": "https://jigyasa-grover.github.io/llms-full.txt",
+    "rss_feed": "https://jigyasa-grover.github.io/feed.xml"
+  },
+  "webmcp_browser_tools": [
+    {
+      "name": "get-speaker-and-profile-kit",
+      "mode": "imperative",
+      "description": "Retrieve verified 50-word and 150-word speaker bios, phonetic pronunciation, signature talk abstracts, and high-res press portrait URLs."
+    },
+    {
+      "name": "get-collaboration-channels",
+      "mode": "imperative",
+      "description": "Retrieve collaboration pillars, booking platforms (Intro, Passionfroot, Naano, 8x), corporate workshops, and courses."
+    },
+    {
+      "name": "get-gtm-and-marketing-kit",
+      "mode": "imperative",
+      "description": "Retrieve AI Go-To-Market (GTM), developer marketing, audience ICP (82% senior technical buyers), launch bundles, and campaign proof URLs."
+    },
+    {
+      "name": "search-technical-articles",
+      "mode": "imperative+declarative",
+      "route": "https://jigyasa-grover.github.io/blog/",
+      "description": "Search 91 technical essays and open-source archives by keyword or topic category."
+    },
+    {
+      "name": "draft-collaboration-inquiry",
+      "mode": "declarative+imperative",
+      "route": "https://jigyasa-grover.github.io/work-with-me/#contact",
+      "description": "Populate the collaboration inquiry form and focus the submit button for human confirmation."
+    },
+    {
+      "name": "search-press-features",
+      "mode": "declarative+imperative",
+      "route": "https://jigyasa-grover.github.io/press/",
+      "description": "Filter and search press clippings, broadcast segments, and podcast interviews."
+    }
+  ],
+  "open_source_agent_skills": [
+    {
+      "name": "torchtpu-doctor",
+      "description": "Agent Skill, 7-rule AST linter, and TorchDispatchMode profiler eliminating silent PyTorch performance cliffs on Google Cloud TPUs (2,537x LoRA step speedup on v6e).",
+      "skill_md_url": "https://raw.githubusercontent.com/jigyasa-grover/TorchTPU-Doctor/main/.agents/skills/torchtpu-doctor/SKILL.md",
+      "repository_url": "https://github.com/jigyasa-grover/TorchTPU-Doctor",
+      "article_markdown_url": "https://jigyasa-grover.github.io/TorchTPUDoctor/index.md"
+    }
+  ]
+}
+

@@ -63,13 +63,19 @@ permalink: /press/
       </div>
 
       <div class="press-toolbar__controls">
-        <input
-          type="search"
-          id="press-search"
-          class="search-input press-toolbar__search"
-          placeholder="Search outlet or topic…"
-          aria-label="Search press features"
-        />
+        <form id="press-search-form" action="/press/" method="get" role="search"
+          toolname="search-press-features"
+          tooldescription="Search Jigyasa Grover's featured press clippings, TV broadcasts, and podcast appearances by outlet or topic.">
+          <input
+            type="search"
+            id="press-search"
+            name="q"
+            class="search-input press-toolbar__search"
+            placeholder="Search outlet or topic…"
+            aria-label="Search press features"
+            toolparamdescription="Publication name or topic keyword (e.g., Forbes, Business Insider, Google I/O, ACM, deepfakes)."
+          />
+        </form>
         <div class="press-view-toggle" role="group" aria-label="Choose press layout view">
           <button type="button" class="press-view-btn is-active" data-press-view="wall" aria-pressed="true" title="Visual Editorial Grid">
             <span aria-hidden="true">⊞</span> Cards

@@ -663,6 +663,23 @@
         {% endfor %}
       ]
     }
+    {% elsif post_meta and post_meta.faqs %},
+    {
+      "@type": "FAQPage",
+      "@id": {{ canonical_url | append: "#faq" | jsonify }},
+      "mainEntity": [
+        {% for item in post_meta.faqs %}
+        {
+          "@type": "Question",
+          "name": {{ item.q | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ item.a | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
     {% endif %}
   ]
 }

@@ -1,0 +1,91 @@
+{
+  "protocolVersion": "0.2.1",
+  "name": "Jigyasa Grover — Official Domain & Collaboration Agent Card",
+  "description": {{ site.data.identity.short_bio_50 | jsonify }},
+  "url": "https://jigyasa-grover.github.io/",
+  "version": "1.0.0",
+  "documentationUrl": "https://jigyasa-grover.github.io/llms-full.txt",
+  "iconUrl": "https://jigyasa-grover.github.io/apple-touch-icon.png",
+  "provider": {
+    "organization": "Afterdays · Jigyasa Grover",
+    "url": "https://jigyasa-grover.github.io/work-with-me/"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "webmcp": true
+  },
+  "authentication": {
+    "schemes": ["public"]
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["application/json", "text/markdown"],
+  "endpoints": {
+    "agent_context_json": "https://jigyasa-grover.github.io/agent-context.json",
+    "llms_txt": "https://jigyasa-grover.github.io/llms.txt",
+    "llms_full_txt": "https://jigyasa-grover.github.io/llms-full.txt",
+    "mcp_manifest": "https://jigyasa-grover.github.io/.well-known/mcp.json",
+    "rss_feed": "https://jigyasa-grover.github.io/feed.xml",
+    "direct_inquiry": "https://jigyasa-grover.github.io/work-with-me/#contact",
+    "booking": {
+      "intro_1on1": {{ site.data.identity.booking.intro.url | jsonify }},
+      "passionfroot_sponsorships": {{ site.data.identity.booking.passionfroot.url | jsonify }},
+      "naano_campaigns": {{ site.data.identity.booking.naano.url | jsonify }},
+      "eightx_launches": {{ site.data.identity.booking.eightx.url | jsonify }}
+    }
+  },
+  "skills": [
+    {
+      "id": "gtm-and-developer-marketing",
+      "name": "AI Go-To-Market (GTM), Developer Marketing & Creator Launches",
+      "description": {{ site.data.partnerships.gtm_positioning.summary | jsonify }},
+      "tags": ["ai-gtm", "developer-marketing", "devrel", "sponsorships", "product-launches", "b2b-creator"],
+      "examples": [
+        "Scope a Full-Stack Technical Launch Bundle (GitHub repo, blog deep dive, LinkedIn/X, and 9:16 creator video)",
+        "Retrieve audience ICP metrics (82% senior technical buyers, 325K+ annual LinkedIn impressions) and booking links"
+      ]
+    },
+    {
+      "id": "ai-startup-and-architecture-advisory",
+      "name": "AI Startup, Ranking, Agentic Architecture & GTM Advisory",
+      "description": {{ site.data.pillars[0].summary | jsonify }},
+      "tags": ["ai-advisory", "agentic-ai", "ml-ranking", "llm-evaluation", "afterdays", "startup-gtm"],
+      "examples": [
+        "Book a 1:1 architecture or developer GTM consultation on Intro",
+        "Inquire about an ongoing Afterdays startup advisory retainer"
+      ]
+    },
+    {
+      "id": "keynote-and-conference-speaking",
+      "name": "Keynotes, Technical Sessions & Executive Panels",
+      "description": {{ site.data.pillars[1].summary | jsonify }},
+      "tags": ["keynote-speaker", "agentic-ai", "mcp", "google-gde", "production-ml", "conferences"],
+      "examples": [
+        "Retrieve approved 50-word and 150-word speaker bios, phonetic pronunciation, and high-res press portraits",
+        "Invite Jigyasa Grover to keynote an engineering summit or executive offsite"
+      ]
+    },
+    {
+      "id": "corporate-ai-training-and-courses",
+      "name": "Corporate AI Workshops & LinkedIn Learning Courses",
+      "description": {{ site.data.pillars[2].summary | jsonify }},
+      "tags": ["corporate-training", "ai-workshops", "google-adk", "mcp", "linkedin-learning", "llm-evals"],
+      "examples": [
+        "Request a custom half-day or full-day engineering workshop on Google ADK, MCP, and LLM evaluation",
+        "Browse 4 LinkedIn Learning AI courses reaching 44,000+ learners"
+      ]
+    },
+    {
+      "id": "technical-research-and-open-source",
+      "name": "Technical Essays, Open-Source Benchmarks & Publications",
+      "description": "Search 34 indexed technical essays, 74+ public GitHub repositories, Cloud TPU & agentic AI benchmarks, and peer-reviewed publications including Sculpting Data for ML.",
+      "tags": ["open-source", "cloud-tpu", "pytorch", "gemini", "data-centric-ai", "publications"],
+      "examples": [
+        "Fetch Markdown technical deep dives on TorchTPU Doctor, Google ADK, and Gemini agent evaluation",
+        "Retrieve citations for Sculpting Data for ML and Enterprise LLM Deployment Readiness (SSRN 2026)"
+      ]
+    }
+  ]
+}
+

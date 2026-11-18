@@ -93,8 +93,16 @@ EXPECTED_ROUTES = [
     "/feed.xml",
     "/llms.txt",
     "/.well-known/llms.txt",
+    "/.well-known/agent-card.json",
+    "/.well-known/agent.json",
+    "/.well-known/mcp.json",
     "/llms-full.txt",
     "/agent-context.json",
+    "/TorchTPUDoctor/index.md",
+    "/ProofOfWork/index.md",
+    "/StartupOnAShoestring/index.md",
+    "/KineticFinetuningOnCloudTPU/index.md",
+    "/TrustAtTopSpeed/index.md",
     "/b7e4c9a12d8f4e639a501c7b8d2e4f6a.txt",
     "/favicon.ico",
     "/favicon.svg",
@@ -494,6 +502,29 @@ def main() -> None:
                 errors.append("UNEXPECTEDLY FEW ARTICLES in /agent-context.json")
         except Exception as exc:
             errors.append(f"INVALID JSON in /agent-context.json: {exc}")
+
+    for wk_json in (".well-known/agent-card.json", ".well-known/agent.json", ".well-known/mcp.json"):
+        wk_path = SITE_DIR / wk_json
+        if wk_path.is_file():
+            try:
+                parsed_wk = json.loads(wk_path.read_text(encoding="utf-8"))
+                if not isinstance(parsed_wk, dict):
+                    errors.append(f"EXPECTED JSON OBJECT in /{wk_json}")
+            except Exception as exc:
+                errors.append(f"INVALID JSON in /{wk_json}: {exc}")
+
+    for md_rel in (
+        "TorchTPUDoctor/index.md",
+        "ProofOfWork/index.md",
+        "StartupOnAShoestring/index.md",
+        "KineticFinetuningOnCloudTPU/index.md",
+        "TrustAtTopSpeed/index.md",
+    ):
+        md_path = SITE_DIR / md_rel
+        if md_path.is_file():
+            md_txt = md_path.read_text(encoding="utf-8")
+            if "{{" in md_txt or "{%" in md_txt or len(md_txt.strip()) < 300:
+                errors.append(f"INVALID OR SHORT MARKDOWN TWIN: /{md_rel}")
 
     site_js_path = SITE_DIR / "assets" / "js" / "site.js"
     if site_js_path.is_file():

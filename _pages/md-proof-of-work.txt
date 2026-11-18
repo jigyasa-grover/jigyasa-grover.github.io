@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /ProofOfWork/index.md
+sitemap: false
+---
+{% include post-markdown-twin.md post_url="/ProofOfWork/" %}
+

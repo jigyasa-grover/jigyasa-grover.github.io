@@ -9,6 +9,7 @@ hero_cta_url: "https://scholar.google.com/citations?user=CwlnmQQAAAAJ"
 seo_title: "Books & Research Publications — Jigyasa Grover"
 description: "Books and peer-reviewed research by Jigyasa Grover: Sculpting Data for ML, Enterprise LLM Deployment Readiness (SSRN 2026), Springer & ACM papers."
 og_image: "/assets/images/opt/book_cover.jpg"
+faq_key: "publications"
 permalink: /publications/
 ---
 {% assign pub = site.data.publications %}
@@ -45,7 +46,15 @@ permalink: /publications/
         <a class="btn btn--secondary" href="{{ pub.featured_book.goodreads_url }}" target="_blank"
           rel="noopener">Goodreads ({{ pub.featured_book.rating_value }}★) ↗</a>
         <a class="btn btn--secondary" href="{{ pub.featured_book.launch_post_url }}">Launch Essay →</a>
+        <button type="button" class="btn btn--secondary" data-copy-target="bibtex-sculpting-data">Copy BibTeX</button>
       </div>
+      <pre id="bibtex-sculpting-data" class="sr-only">@book{grover2021sculpting,
+  title     = {Sculpting Data for ML: The First Act of Machine Learning},
+  author    = {Grover, Jigyasa and Misra, Rishabh},
+  year      = {2021},
+  isbn      = {979-8585463570},
+  url       = {https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/}
+}</pre>
     </div>
   </div>
 
@@ -98,7 +107,7 @@ permalink: /publications/
 </section>
 
 <!-- Peer-Reviewed Chapters & Academic Papers -->
-<section class="content-section--bordered content-section--last" aria-labelledby="research-papers-heading">
+<section class="content-section--bordered" aria-labelledby="research-papers-heading">
   <div class="eyebrow">Peer-Reviewed Research</div>
   <h2 id="research-papers-heading">Chapters &amp; conference papers</h2>
 
@@ -116,4 +125,11 @@ permalink: /publications/
     </div>
     {% endfor %}
   </div>
+</section>
+
+<!-- Publications & Editorial Review FAQ -->
+<section class="content-section--bordered content-section--last" aria-labelledby="publications-faq-heading">
+  <div class="eyebrow">Publications &amp; Reviewing FAQ</div>
+  <h2 id="publications-faq-heading">Common questions</h2>
+  {% include faq-section.html key="publications" %}
 </section>

@@ -70,11 +70,15 @@ permalink: /blog/
         aria-pressed="false">Early Archive (2015–17)</button>
     </div>
 
-    <div>
+    <form id="blog-search-form" action="/blog/" method="get" role="search"
+      toolname="search-blog-articles"
+      tooldescription="Search Jigyasa Grover's 91 technical AI, ML, Cloud TPU, and open-source articles by keyword.">
       <label for="blog-search" class="sr-only">Search all 91 articles &amp; archives by keyword</label>
-      <input id="blog-search" type="search" class="search-input" placeholder="Search all 91 articles &amp; archives…" />
+      <input id="blog-search" name="q" type="search" class="search-input"
+        placeholder="Search all 91 articles &amp; archives…"
+        toolparamdescription="Keyword to match against article titles, summaries, categories, and tags (e.g., TorchTPU, ADK, Gemini, ranking, privacy)." />
       <span id="blog-results-status" class="sr-only" role="status" aria-live="polite"></span>
-    </div>
+    </form>
   </div>
 
   <div class="ledger">

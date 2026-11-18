@@ -2,7 +2,7 @@
 
 > Official digital home of Jigyasa Grover (pronounced {{ site.data.identity.pronunciation }}; Google Knowledge Graph: https://g.co/kgs/Lvk5yk · MID: `/g/11nkd9r5jp`) — Machine Learning Engineer at Uber (Tech Lead — Rider Personalization & Ranking; prev. X/Twitter, Meta, Faire, Bordo AI), B2B AI, DevTools & Tech Hardware Creator across LinkedIn (14.5K+ followers, 325K+ annual impressions, 82% senior tech), YouTube (`@JigyasaGrover`, 70+ Shorts, 300K+ views), X (`@jigyasa_grover`, 2.5K+), Instagram Reels & TikTok (`@jigyasagroverofficial`), and RSS Technical AI Newsletter (`/blog/` · `/feed.xml`), 13x AI & Open Source Award Winner, Google Developer Advisory Board (gDAB) member, LinkedIn Learning Instructor (44,000+ learners), and co-author of *Sculpting Data for ML*. Sponsors book via Passionfroot, Naano, or 8x.
 
-For complete structured biographical, career, speaking, course, publication, and project context, see [llms-full.txt](https://jigyasa-grover.github.io/llms-full.txt) and machine-readable JSON at [agent-context.json](https://jigyasa-grover.github.io/agent-context.json) (also exposed in-browser via W3C WebMCP `document.modelContext`).
+For complete structured biographical, career, speaking, course, publication, and project context, see [llms-full.txt](https://jigyasa-grover.github.io/llms-full.txt), machine-readable JSON at [agent-context.json](https://jigyasa-grover.github.io/agent-context.json), A2A Agent Card at [/.well-known/agent-card.json](https://jigyasa-grover.github.io/.well-known/agent-card.json), and MCP discovery manifest at [/.well-known/mcp.json](https://jigyasa-grover.github.io/.well-known/mcp.json) (also exposed in-browser via W3C WebMCP `document.modelContext`).
 
 ## Primary Pages
 
@@ -38,5 +38,5 @@ For complete structured biographical, career, speaking, course, publication, and
 
 ## Technical Articles & Essays
 
-{% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign m = site.data.posts_meta[post.url] %}- [{{ post.title }}](https://jigyasa-grover.github.io{{ post.url }}) ({{ post.date | date: "%Y-%m-%d" }}){% if m.summary %}: {{ m.summary }}{% endif %}
+{% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign m = site.data.posts_meta[post.url] %}- [{{ post.title }}](https://jigyasa-grover.github.io{{ post.url }}) ({{ post.date | date: "%Y-%m-%d" }}){% if m.md_url %} · [Markdown](https://jigyasa-grover.github.io{{ m.md_url }}){% endif %}{% if m.summary %}: {{ m.summary }}{% endif %}
 {% endunless %}{% endfor %}

@@ -7,6 +7,8 @@
 # Well-Known LLM Mirror:     https://jigyasa-grover.github.io/.well-known/llms.txt
 # Full Entity & Bio Corpus:  https://jigyasa-grover.github.io/llms-full.txt
 # Structured WebMCP JSON:    https://jigyasa-grover.github.io/agent-context.json
+# A2A Agent Card Manifest:   https://jigyasa-grover.github.io/.well-known/agent-card.json
+# WebMCP Discovery Manifest: https://jigyasa-grover.github.io/.well-known/mcp.json
 # Technical Writing Feed:    https://jigyasa-grover.github.io/feed.xml
 # XML Sitemap:               https://jigyasa-grover.github.io/sitemap.xml
 #
@@ -30,6 +32,9 @@ Allow: /assets/
 Allow: /images/
 Allow: /llms.txt
 Allow: /.well-known/llms.txt
+Allow: /.well-known/agent-card.json
+Allow: /.well-known/agent.json
+Allow: /.well-known/mcp.json
 Allow: /llms-full.txt
 Allow: /feed.xml
 Allow: /sitemap.xml
@@ -57,6 +62,9 @@ User-agent: Amazonbot
 Allow: /
 Allow: /llms.txt
 Allow: /.well-known/llms.txt
+Allow: /.well-known/agent-card.json
+Allow: /.well-known/agent.json
+Allow: /.well-known/mcp.json
 Allow: /llms-full.txt
 Allow: /agent-context.json
 Allow: /feed.xml
@@ -75,6 +83,9 @@ User-agent: Diffbot
 Allow: /
 Allow: /llms.txt
 Allow: /.well-known/llms.txt
+Allow: /.well-known/agent-card.json
+Allow: /.well-known/agent.json
+Allow: /.well-known/mcp.json
 Allow: /llms-full.txt
 Allow: /agent-context.json
 Allow: /feed.xml
@@ -98,6 +109,9 @@ User-agent: *
 Allow: /
 Allow: /llms.txt
 Allow: /.well-known/llms.txt
+Allow: /.well-known/agent-card.json
+Allow: /.well-known/agent.json
+Allow: /.well-known/mcp.json
 Allow: /llms-full.txt
 Allow: /agent-context.json
 Allow: /feed.xml

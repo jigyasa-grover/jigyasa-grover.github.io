@@ -85,11 +85,29 @@ layout: default
     </div>
 
     <footer class="post-footer">
+      {% if meta and meta.faqs %}
+      <section class="content-section--bordered mb-lg" aria-labelledby="post-faq-heading">
+        <div class="eyebrow">Technical Q&amp;A</div>
+        <h2 id="post-faq-heading" class="mb-md">Key engineering takeaways</h2>
+        <div class="faq-list">
+          {% for item in meta.faqs %}
+          <details class="faq-item" {% if forloop.first %}open{% endif %}>
+            <summary>{{ item.q }}</summary>
+            <div class="faq-item__answer">
+              <p>{{ item.a }}</p>
+            </div>
+          </details>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
       <div class="share-bar">
         <span>Share or cite this technical article:</span>
         <div class="share-bar__links">
           <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ canonical_url | uri_escape }}" target="_blank" rel="noopener">Share on LinkedIn ↗</a>
           <a href="https://x.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ canonical_url | uri_escape }}&via=jigyasa_grover" target="_blank" rel="noopener">Post on X ↗</a>
+          {% if meta and meta.md_url %}<a href="{{ meta.md_url }}">Markdown Brief</a>{% endif %}
           <button id="copy-article-url" type="button" data-url="{{ canonical_url }}">Copy Link</button>
         </div>
       </div>

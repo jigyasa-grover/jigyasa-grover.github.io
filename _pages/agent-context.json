@@ -10,6 +10,8 @@ sitemap: false
   "canonical_url": {{ site.data.identity.canonical_url | jsonify }},
   "llms_txt": "{{ site.url }}/llms.txt",
   "llms_full_txt": "{{ site.url }}/llms-full.txt",
+  "a2a_agent_card": "{{ site.url }}/.well-known/agent-card.json",
+  "mcp_manifest": "{{ site.url }}/.well-known/mcp.json",
   "identity": {
     "name": {{ site.data.identity.name | jsonify }},
     "pronunciation": {{ site.data.identity.pronunciation | jsonify }},
@@ -81,7 +83,8 @@ sitemap: false
       "seo_title": {{ meta.seo_title | default: post.title | jsonify }},
       "url": {{ site.url | append: post.url | jsonify }},
       "path": {{ post.url | jsonify }},
-      "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+      {% if meta and meta.md_url %}"markdown_url": {{ site.url | append: meta.md_url | jsonify }},
+      {% endif %}"date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
       "category": {{ cat_name | jsonify }},
       "archival": {% if post.archival %}true{% else %}false{% endif %},
       "summary": {{ row_summary | default: "" | jsonify }},

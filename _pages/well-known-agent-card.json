@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /.well-known/agent-card.json
+sitemap: false
+---
+{% include agent-card.json %}
+

@@ -260,6 +260,16 @@
       }
     } catch (e) { }
     searchInput.addEventListener("input", applyBlogFilter);
+    var blogSearchForm = document.getElementById("blog-search-form");
+    if (blogSearchForm) {
+      blogSearchForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var count = applyBlogFilter();
+        if (typeof e.respondWith === "function") {
+          e.respondWith(Promise.resolve({ ok: true, visible_articles: count, query: searchInput.value }));
+        }
+      });
+    }
   }
   applyBlogFilter();
 
@@ -1087,7 +1097,26 @@
     });
 
     if (pressSearchInput) {
+      try {
+        var pressInitParams = new URLSearchParams(window.location.search);
+        var pressInitQ = pressInitParams.get("q");
+        if (pressInitQ) {
+          pressSearchInput.value = pressInitQ;
+          applyPressFilters();
+        }
+      } catch (e) { }
       pressSearchInput.addEventListener("input", applyPressFilters);
+      var pressSearchForm = document.getElementById("press-search-form");
+      if (pressSearchForm) {
+        pressSearchForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          applyPressFilters();
+          var visibleNow = pressCards.filter(function (c) { return !c.hidden; }).length;
+          if (typeof e.respondWith === "function") {
+            e.respondWith(Promise.resolve({ ok: true, visible_features: visibleNow, query: pressSearchInput.value }));
+          }
+        });
+      }
     }
 
     if (pressResetBtn) {

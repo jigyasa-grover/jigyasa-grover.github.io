@@ -56,6 +56,12 @@ press:
   - q: "How should event organizers and journalists pronounce and credit Jigyasa Grover?"
     a: "Jigyasa Grover is pronounced jig-YAH-sah GROH-ver (/dʒɪɡˈjɑːsɑː ˈɡroʊvər/). Credit her as Machine Learning Engineer (Tech Lead) at Uber, Google Developer Advisory Board (gDAB) member, 13× AI & Open Source Award Winner, and co-author of Sculpting Data for ML, using the approved 50-word or 150-word bios and portraits on this page."
 
+publications:
+  - q: "What books and peer-reviewed papers has Jigyasa Grover authored?"
+    a: "She co-authored Sculpting Data for ML: The First Act of Machine Learning (ISBN 979-8585463570, 95+ academic citations, 4.8★ on Goodreads), Enterprise LLM Deployment Readiness (SSRN 2026 via the AI Assurance Council), two Springer book chapters on privacy-preserving ML and misinformation detection, and an ACM IWST research paper on live multi-agent visualization."
+  - q: "Does Jigyasa review technical manuscripts or collaborate with publishers?"
+    a: "Yes. She serves as a technical book reviewer for O'Reilly Media (Scalable AI Systems, Machine Learning with Python Cookbook 2nd Ed.) and Packt Publishing (Exploring Deepfakes), and welcomes curriculum, monograph, and benchmark study collaborations via Work With Me."
+
 media_kit:
   - q: "Does Jigyasa accept tech hardware, AI gadgets, and electronics for review or PR seeding?"
     a: "Yes. She reviews and features select AI laptops, developer workstations, smart glasses, AI wearables, edge inference kits, and creator studio/travel electronics that fit authentic ML engineering and global travel workflows. PR teams can request SF Bay Area shipping details and embargo coordination via Work With Me."
