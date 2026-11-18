@@ -184,6 +184,7 @@ brief_checklist:
 creator_kit:
   base_hub: "San Francisco Bay Area (SFO / SJC)"
   availability: "Local in San Francisco & Silicon Valley for embargoed hands-on demos, studio shoots, and VIP launch dinners; available worldwide for sponsored conference keynotes, Creator-in-Residence programs, and summit hospitality."
+  independence_note: "All creator content, summit coverage, and hardware or software reviews are produced independently in Jigyasa Grover's personal capacity across her owned media channels. Google Developer Expert (GDE) and Google Developer Advisory Board (gDAB) roles are external community appointments (non-employee)."
   tracks:
     - number: "01"
       kicker: "SF Bay Area & Global Fly-Outs"

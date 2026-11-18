@@ -187,11 +187,11 @@ education:
 
 ecosystem_roles:
   - role: "Member, Google Developer Advisory Board (gDAB)"
-    org: "Google"
-    detail: "Advising Google engineering and DevRel leadership on developer platforms, Firebase Studio, SDLC agents, and AI ecosystem strategy."
+    org: "Google (External Advisory Appointment)"
+    detail: "External community advisor to Google engineering and DevRel leadership on developer platforms, Firebase Studio, SDLC agents, and AI ecosystem strategy."
   - role: "Google Developer Expert (AI/ML), Cloud Champion Innovator & WTM Ambassador"
-    org: "Google Developers & Google Cloud"
-    detail: "5-year AI/ML GDE featured on the Google I/O main stage, Google's Gemini Omni Flash launch video, Google Developers' AI Agent Bake Off, and Google Cloud Tech documentary; Google Cloud BI Council member and Enterprise Design Partner."
+    org: "Google Developers & Google Cloud (External Community Honors)"
+    detail: "5-year external AI/ML GDE featured on the Google I/O main stage, Google's Gemini Omni Flash launch video, Google Developers' AI Agent Bake Off, and Google Cloud Tech documentary; Google Cloud BI Council member and Enterprise Design Partner."
     links:
       - label: "Google I/O Keynote"
         url: "https://www.youtube.com/live/XEzRZ35urlk?t=516"
