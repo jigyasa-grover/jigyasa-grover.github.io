@@ -14,15 +14,28 @@ awards:
   - year: "2025"
     title: "Women in AI Leadership — Emerging AI Leader Award"
     issuer: "AI 2030 Global Initiative"
+    url: "https://ai2030.org/"
+  - year: "2026"
+    title: "Top 5 Extraordinary Speakers — Codemotion Milan"
+    issuer: "Codemotion"
+    url: "https://www.codemotion.com/magazine/ai-ml/the-ai-you-didnt-know-you-were-using-wrong/"
   - year: "2023–25"
     title: "Most Active Speaker (3×) & Top 3% Conference Speakers Globally"
     issuer: "Sessionize"
     url: "https://sessionize.com/jigyasagrover/"
+  - year: "2024–25"
+    title: "Top 50 Tech Mentors in the United States"
+    issuer: "Topmate"
+    url: "https://topmate.io/topusers/top50-techmentors-us"
   - year: "2023"
     title: "Top 50 Women of Impact Honoree"
     issuer: "Women Impact Tech (Accelerate San Francisco)"
     url: "https://womenimpacttech.com/"
     image: "/assets/images/opt/woman_of_impact_2023.jpg"
+  - year: "2023"
+    title: "50 Most Powerful Women in Technology & Top 50 ML Experts to Follow"
+    issuer: "Engatica"
+    url: "https://www.engatica.com/blog/top-50-machine-learning-and-data-science-experts-to-follow-for-2023?contentId=634551c86f56fd1389e92c50"
   - year: "2022"
     title: "R&D Engineer of the Year"
     issuer: "Rise Awards (London — Media & Broadcast Technology)"
@@ -34,7 +47,7 @@ awards:
   - year: "2022"
     title: "Next Generation Leader of the Year"
     issuer: "Women in IT Awards USA (New York City)"
-    url: "https://diversityq.com/"
+    url: "https://diversityq.com/congratulations-to-the-winners-of-the-women-in-it-usa-awards-2022/"
   - year: "2022"
     title: "Outstanding in AI — Young Role Model of the Year (North America)"
     issuer: "Women in AI"
@@ -58,6 +71,15 @@ awards:
   - year: "2022"
     title: "Chief Data & Analytics Officer (CDAO) Rising Star Award"
     issuer: "Corinium Global Intelligence"
+    url: "https://web.archive.org/web/20230328211425/https://cdao-fall.coriniumintelligence.com/bod-awards"
+  - year: "2020–24"
+    title: "Multi-Year International Award Finalist (Women in Tech Excellence 3×, Globant Women That Build, Lead5050 Berlin, TalkTalk UK, WIT STEAM & Women in IT Top 5)"
+    issuer: "Global Technology Award Shortlists"
+    url: "https://www.lead5050.com/2022-awards"
+  - year: "2015–21"
+    title: "5× Hackathon & Engineering Showdown Winner (Gradle DPE Showdown, yuuvis® Verbalexa SF, Microsoft Pragyan 1st Place & hackIIITD)"
+    issuer: "Global Hackathons & Engineering Showdowns"
+    url: "https://www.youtube.com/watch?v=aCoAwijqrBs"
   - year: "2017"
     title: "Women in Open Source Academic Award Winner"
     issuer: "Red Hat Summit (Boston)"
@@ -263,7 +285,7 @@ media_features:
     masthead: "Data Neighbor"
     masthead_style: "mono"
     date: "Nov 2025"
-    title: "Ep. 40: Why Most AI Agents Fail—and How Production Teams Fix Them"
+    title: "Ep. 40: Why Most AI Agents Fail, and How Production Teams Fix Them"
     type: "Podcast Guest"
     category: "podcast"
     visual_mode: "snapshot"
@@ -276,6 +298,25 @@ media_features:
     tags: ["Agentic Evaluation", "Production ML", "Podcast"]
     cta_label: "Watch Episode on YouTube"
     url: "https://www.youtube.com/watch?v=tiSoT6vjTDI"
+
+  - id: "routledge-ai-culture-2025"
+    outlet: "Routledge Blog (Taylor & Francis Group)"
+    masthead: "Routledge"
+    masthead_style: "serif"
+    date: "2025"
+    title: "AI & Culture: How Can AI Preserve Heritage and Empower Communities?"
+    type: "Editorial & Book Endorsement"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_routledge.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Why culturally grounded datasets, community governance, and multilingual representation are prerequisites for preserving human heritage in generative AI."
+    summary: "Editorial spotlight on the official Routledge (Taylor & Francis) blog featuring Jigyasa Grover's lead book endorsement and commentary for AI for Community (ISBN 978-1-032-84662-0)."
+    tags: ["Routledge", "Taylor & Francis", "Book Endorsement"]
+    cta_label: "Read Spotlight on Routledge"
+    url: "https://blog.routledge.com/social-sciences/ai-culture-how-can-ai-preserve-heritage-empower-communities/"
 
   - id: "creativepro-deepfakes-c2pa-2025"
     outlet: "CreativePro"
@@ -411,6 +452,25 @@ media_features:
     cta_label: "Read Profile on Business Insider"
     url: "https://www.businessinsider.com/lessons-from-the-secret-contributed-big-tech-success-2025-3"
 
+  - id: "remitly-wall-street-earnings-2025"
+    outlet: "Remitly (NASDAQ: RELY) Investor Relations"
+    masthead: "Remitly · NASDAQ: RELY"
+    masthead_style: "sans"
+    date: "Feb 2025"
+    title: "Featured Customer Story in Q4 & Full Year 2024 Wall Street Earnings Presentation"
+    type: "Wall Street Feature"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_remitly.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Highlighted in Remitly's official Q4 and Full Year 2024 Wall Street earnings presentation and investor release celebrating global cross-border impact."
+    summary: "Featured by Remitly (NASDAQ: RELY) in its official fourth-quarter and full-year 2024 Wall Street investor presentation alongside executive earnings commentary."
+    tags: ["NASDAQ: RELY", "Wall Street", "Investor Feature"]
+    cta_label: "View Remitly Earnings Release"
+    url: "https://ir.remitly.com/news-releases/news-release-details/remitly-reports-fourth-quarter-and-full-year-2024-results-above"
+
   - id: "people-of-ai-google-podcast-2024"
     outlet: "People of AI (Google Podcast)"
     masthead: "People of AI · Google"
@@ -467,6 +527,25 @@ media_features:
     tags: ["Women in Data", "Data Curation", "Privacy ML"]
     cta_label: "Watch Podcast on YouTube"
     url: "https://www.youtube.com/watch?v=3zOqqUHKlbc"
+
+  - id: "the-forage-cs-vs-swe-2024"
+    outlet: "The Forage"
+    masthead: "The Forage"
+    masthead_style: "sans"
+    date: "Sep 2024"
+    title: "Computer Science vs. Software Engineering: What Career Path Is Right for Me?"
+    type: "Expert Career Feature"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_the_forage.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Contrasting theoretical foundations in algorithms and machine learning with day-to-day production systems ownership, reliability, and shipping velocity."
+    summary: "Featured industry expert in The Forage's engineering career guide advising students and early-career technologists on choosing between CS research and production software engineering."
+    tags: ["The Forage", "CS vs. SWE", "Career Guidance"]
+    cta_label: "Read Feature on The Forage"
+    url: "https://www.theforage.com/blog/careers/computer-science-vs-software-engineering"
 
   - id: "observer-synthetic-data-2024"
     outlet: "Observer"
@@ -640,12 +719,31 @@ media_features:
     cta_label: "Watch NTD Broadcast Segment"
     url: "https://www.ntd.com/meta-introduces-ai-text-to-video-creator_849271.html"
 
+  - id: "leaddev-comet-engineering-features"
+    outlet: "LeadDev · Comet ML · Connective Tissue · Diem"
+    masthead: "LeadDev · Comet ML"
+    masthead_style: "sans"
+    date: "2021–2024"
+    title: "Using Open Source Safely, Engineering Metrics at Every Level & ML Trends"
+    type: "Engineering Leadership"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_leaddev_comet.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Actionable playbooks for governing upstream open-source dependencies, aligning engineering metrics across org levels, and shipping human-centered search and ML."
+    summary: "Multi-feature engineering coverage across LeadDev (alongside IBM and Shopify), Comet ML's annual ML Trends report, Connective Tissue (with Tom Preston-Werner & Harvard Human Flourishing Program), and Diem's State of Search."
+    tags: ["LeadDev", "Comet ML", "Engineering Leadership"]
+    cta_label: "Read Feature on LeadDev"
+    url: "https://leaddev.com/software-quality/using-open-source-safely-and-effectively"
+
   - id: "spotify-podcast-anthology"
-    outlet: "20+ Technical Podcasts (Curated Spotify Playlist)"
-    masthead: "20+ Tech Podcasts"
+    outlet: "11 Podcast Series · 20+ Episodes (Spotify Anthology)"
+    masthead: "11 Podcast Series"
     masthead_style: "mono"
-    date: "2020–2025"
-    title: "Software Engineering Unlocked, Conversations on Applied AI, Women & AI, Equal Inspired & Women in Data (Data Bytes)"
+    date: "2020–2026"
+    title: "Data Neighbor, People of AI, Humanitarian Frontiers, Women in Data, Women & AI, SE Unlocked, Applied AI & Equal Inspired"
     type: "Podcast Anthology"
     category: "podcast"
     visual_mode: "snapshot"
@@ -653,9 +751,9 @@ media_features:
     width: 1280
     height: 720
     focal: "center center"
-    takeaway: "Twenty-plus long-form audio deep dives spanning data-centric ML, authoring Sculpting Data for ML, ad-ranking architectures, and open-source mentorship."
-    summary: "Curated Spotify anthology collecting Jigyasa Grover's guest episodes across Software Engineering Unlocked, Conversations on Applied AI, Women in Data, Women & AI, and more."
-    tags: ["Spotify Playlist", "20+ Episodes", "Data-Centric ML"]
+    takeaway: "Twenty-plus long-form audio deep dives across 11 shows covering agentic failure modes, Sculpting Data for ML, billion-request ranking, and open-source mentorship."
+    summary: "Curated Spotify anthology spanning Data Neighbor, Humanitarian Frontiers in AI, People of AI, Data Bytes (Women in Data), Women And AI, Equal Inspired, SaugaTalks, Business Matters, Conversations on Applied AI, Software Engineering Unlocked, and So You Want To Be A Data Scientist?."
+    tags: ["Spotify Playlist", "11 Podcast Series", "20+ Episodes"]
     cta_label: "Open Curated Spotify Playlist"
     url: "https://open.spotify.com/playlist/6vRPsGPE6v2I81NlWkdGiY"
 
@@ -678,12 +776,31 @@ media_features:
     cta_label: "Listen & Read Transcript"
     url: "https://www.software-engineering-unlocked.com/machine-learning-engineer-twitter/"
 
+  - id: "google-open-source-gde-roundups"
+    outlet: "Google Open Source Blog & Official Google GDE Publication"
+    masthead: "Google Open Source · GDE"
+    masthead_style: "sans"
+    date: "2016–2026"
+    title: "Stories from Google Code-in & 8× Official Google Developer Experts AI/ML Roundups"
+    type: "Official Google Blogs"
+    category: "press"
+    visual_mode: "brand"
+    image: "/assets/images/opt/press/brand_google_oss.svg"
+    width: 1280
+    height: 720
+    focal: "center center"
+    takeaway: "Ten years of official Google Open Source and Google Developer Experts blog features spanning FOSSASIA mentorship, Gemini fine-tuning, Vertex AI evals, and ADK agents."
+    summary: "Featured on the official Google Open Source Blog (2016) for Google Code-in & FOSSASIA mentorship and spotlighted across eight official Google Developer Experts monthly AI/ML roundups (2024–2026)."
+    tags: ["Google Open Source", "Google GDE", "10-Year Arc"]
+    cta_label: "Read on Google Open Source Blog"
+    url: "https://opensource.googleblog.com/2016/07/stories-from-google-code-in-fossasia.html"
+
   - id: "opensource-ibtimes-profiles"
-    outlet: "International Business Times · Opensource.com · Women Who Code · HelloMeets"
+    outlet: "IBTimes · Opensource.com · CIO · CRN · SVG Europe · Deine Korrespondentin"
     masthead: "Opensource.com · IBTimes"
     masthead_style: "serif"
     date: "2015–2023"
-    title: "Opensource.com Top Python Article & Early Press Profiles (IBTimes, Women in Silicon Valley, WWC 'Applaud Her' 3× & Buzzingg)"
+    title: "Opensource.com Top Python Article & International Press (IBTimes, CIO, CRN, SVG Europe, TVBEurope & Deine Korrespondentin)"
     type: "Print & Digital Press"
     category: "press"
     visual_mode: "snapshot"
@@ -691,28 +808,28 @@ media_features:
     width: 520
     height: 292
     focal: "center center"
-    takeaway: "Recognized among Opensource.com's top-read Python engineering articles alongside early international profiles (2015–2023) on open-source leadership, GSoC, and equity."
-    summary: "Multi-outlet coverage spanning Opensource.com ('Perceiving Python Programming Paradigms'), International Business Times, Women in Silicon Valley, Women Who Code ('Applaud Her' May/Oct/Nov 2015), HelloMeets ('More Power to Hackers', 2016), and Buzzingg."
-    tags: ["IBTimes", "Opensource.com", "Open Source Equity"]
+    takeaway: "Recognized among Opensource.com's top-read Python engineering articles alongside international coverage across US, UK, German, and broadcast technology press."
+    summary: "Multi-outlet coverage spanning Opensource.com ('Perceiving Python Programming Paradigms'), International Business Times, CIO.com, CRN, FOSS Force, SVG Europe, TVBEurope, IBC365, Deine Korrespondentin (Germany), Women Who Code ('Applaud Her' 3×), and HelloMeets."
+    tags: ["IBTimes", "Opensource.com", "International Press"]
     cta_label: "Read Top Article on Opensource.com"
     url: "https://opensource.com/article/19/10/python-programming-paradigms"
 
   - id: "un-itu-thecube-broadcasts-2017"
-    outlet: "United Nations ITU & SiliconANGLE theCUBE"
+    outlet: "United Nations ITU (EN/ES/ZH) & SiliconANGLE theCUBE"
     masthead: "theCUBE · UN ITU"
     masthead_style: "mono"
     date: "2017"
-    title: "#ICT4SDG Documentaries, Red Hat Summit & Grace Hopper Scholar Broadcasts"
-    type: "Documentary & Broadcast"
+    title: "UN ITU News Magazine, 2× UN Documentaries (#ICT4SDG & Aadhaar) & Red Hat / GHC theCUBE"
+    type: "Documentary & Print"
     category: "video"
     visual_mode: "snapshot"
     image: "/assets/images/opt/press/thecube_broadcast_2017.jpg"
     width: 640
     height: 360
     focal: "center center"
-    takeaway: "Early global documentary and live broadcast interviews spotlighting open-source research, Red Hat academic honors, and UN Sustainable Development Goals."
-    summary: "Featured in United Nations ITU #ICT4SDG video documentaries and interviewed live on SiliconANGLE's theCUBE studio stage as a Red Hat Women in Open Source Winner and Grace Hopper Scholar."
-    tags: ["UN ITU", "SiliconANGLE theCUBE", "Open Source"]
+    takeaway: "Published in UN ITU News Magazine (English, Spanish & Chinese editions) alongside two UN ITU documentaries and two live SiliconANGLE theCUBE studio interviews."
+    summary: "Featured in United Nations ITU News Magazine (2017 Issue 3), two UN ITU documentaries (#ICT4SDG Women in Tech and Aadhaar Financial Inclusion), and two live SiliconANGLE theCUBE broadcasts at Red Hat Summit Boston and Grace Hopper Celebration."
+    tags: ["UN ITU Magazine", "SiliconANGLE theCUBE", "Open Source"]
     cta_label: "Watch UN ITU Documentary"
     url: "https://www.youtube.com/watch?v=1QlhArGZbfU"
 
@@ -853,6 +970,10 @@ brand_partners:
   - "Appsmith"
   - "Simplilearn"
   - "CreativePro"
+  - "Interview Kickstart"
+  - "The Forage"
+  - "Jobright AI"
+  - "Routledge"
   - "O'Reilly Media"
   - "Packt"
   - "Forbes"
@@ -981,6 +1102,34 @@ brand_partner_logos:
     height: 36
     proof_label: "Feature ↗"
     url: "https://creativepro.com/event/design-ai-summit-2025/"
+  - name: "Interview Kickstart"
+    category: "Agentic AI Education"
+    logo: "/assets/images/brands/interview-kickstart.svg"
+    width: 186
+    height: 36
+    proof_label: "Program ↗"
+    url: "https://interviewkickstart.com/agentic-ai-career-boost"
+  - name: "The Forage"
+    category: "Engineering Career Guide"
+    logo: "/assets/images/brands/the-forage.svg"
+    width: 136
+    height: 36
+    proof_label: "Read Feature ↗"
+    url: "https://www.theforage.com/blog/careers/computer-science-vs-software-engineering"
+  - name: "Jobright AI"
+    category: "AI Career Platform"
+    logo: "/assets/images/brands/jobright.svg"
+    width: 134
+    height: 36
+    proof_label: "Watch Reel ↗"
+    url: "https://www.youtube.com/shorts/9cWdw6Y2_Gw"
+  - name: "Routledge"
+    category: "Taylor & Francis Endorsement"
+    logo: "/assets/images/brands/routledge.svg"
+    width: 132
+    height: 36
+    proof_label: "Spotlight ↗"
+    url: "https://blog.routledge.com/social-sciences/ai-culture-how-can-ai-preserve-heritage-empower-communities/"
   - name: "O'Reilly Media"
     category: "Technical Book Review"
     logo: "/assets/images/brands/oreilly.svg"

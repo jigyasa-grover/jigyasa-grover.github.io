@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Routledge Taylor and Francis Group">
+  <defs>
+    <linearGradient id="rtBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2B1518"/>
+      <stop offset="100%" stop-color="#140A0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#rtBg)"/>
+  <g transform="translate(260, 292)">
+    <rect x="0" y="16" width="66" height="84" rx="4" fill="none" stroke="#E06D53" stroke-width="5"/>
+    <line x1="16" y1="38" x2="50" y2="38" stroke="#F4D35E" stroke-width="4"/>
+    <line x1="16" y1="56" x2="50" y2="56" stroke="#F4D35E" stroke-width="4"/>
+    <line x1="16" y1="74" x2="38" y2="74" stroke="#F4D35E" stroke-width="4"/>
+    <text x="96" y="72" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="70" font-weight="700" letter-spacing="0.5">ROUTLEDGE</text>
+    <text x="98" y="112" fill="#D4A5A5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="600" letter-spacing="3.5">TAYLOR &amp; FRANCIS · EDITORIAL SPOTLIGHT</text>
+  </g>
+</svg>

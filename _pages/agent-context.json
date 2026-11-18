@@ -62,6 +62,7 @@ sitemap: false
   "learning_tracks": {{ site.data.learning_tracks | jsonify }},
   "publications": {
     "featured_book": {{ site.data.publications.featured_book | jsonify }},
+    "academic_and_policy_impact": {{ site.data.publications.academic_and_policy_impact | jsonify }},
     "reviewed_books": {{ site.data.publications.reviewed_books | jsonify }},
     "research_publications": {{ site.data.publications.research_publications | jsonify }}
   },

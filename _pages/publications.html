@@ -20,22 +20,25 @@ permalink: /publications/
     <div class="media-frame media-frame--book">
       <img src="{{ pub.featured_book.cover_image }}" width="517" height="800" fetchpriority="high"
         alt="Cover of Sculpting Data for ML: The First Act of Machine Learning" />
-      <div class="media-frame__caption">ISBN {{ pub.featured_book.isbn }} · {{ pub.featured_book.rating_value }}★ on
+      <div class="media-frame__caption">ISBN {{ pub.featured_book.isbn }} · {{ pub.featured_book.isbn_alt }} · {{ pub.featured_book.rating_value }}★ on
         Goodreads · {{ pub.featured_book.citations }}</div>
     </div>
 
     <div>
-      <div class="eyebrow">Published Book ({{ pub.featured_book.year }}) · {{ pub.featured_book.rating_value }}★
+      <div class="eyebrow">Published Book ({{ pub.featured_book.year }}) · Cornell Tech CS 5781 Reading · {{ pub.featured_book.rating_value }}★
         Goodreads</div>
       <h2 id="featured-book-heading">{{ pub.featured_book.title }}</h2>
       <p>{{ pub.featured_book.summary }}</p>
 
       <div class="endorsement-box">
-        <div class="endorsement-box__label">Forewords &amp; Endorsements By</div>
+        <div class="endorsement-box__label">Forewords, Endorsements &amp; Open Benchmark Datasets</div>
         <ul class="endorsement-box__list">
           {% for f in pub.featured_book.forewords %}
           <li><a href="{{ f.url }}" target="_blank" rel="noopener"><strong>{{ f.name }}</strong></a> — {{ f.affiliation
             }}</li>
+          {% endfor %}
+          {% for ds in pub.featured_book.datasets %}
+          <li><a href="{{ ds.url }}" target="_blank" rel="noopener"><strong>Kaggle Benchmark: {{ ds.name }} ↗</strong></a></li>
           {% endfor %}
         </ul>
       </div>
@@ -67,8 +70,8 @@ permalink: /publications/
 <section id="reviewed-books" class="content-section--bordered" aria-labelledby="reviewing-heading">
   <div class="section-header section-header--compact">
     <div>
-      <div class="eyebrow">Editorial Review, Endorsements &amp; Citations · O'Reilly, Packt &amp; Python</div>
-      <h2 id="reviewing-heading">Books reviewed, endorsed &amp; cited in</h2>
+      <div class="eyebrow">Editorial Review, Endorsements &amp; Citations · O'Reilly, Routledge &amp; Packt</div>
+      <h2 id="reviewing-heading">Books reviewed, endorsed &amp; featured in</h2>
     </div>
   </div>
 
@@ -96,12 +99,35 @@ permalink: /publications/
         </div>
         <div class="dossier-links">
           <a href="{{ b.url }}" target="_blank" rel="noopener">{{ b.cta_label }}</a>
+          {% if b.secondary_url %}
+          <a href="{{ b.secondary_url }}" target="_blank" rel="noopener">{{ b.secondary_label }}</a>
+          {% endif %}
           {% if b.review_post_url %}
           <a href="{{ b.review_post_url }}">Review Essay →</a>
           {% endif %}
         </div>
       </div>
     </article>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Academic Syllabi, Policy Reports & Top-Venue Citations -->
+<section class="content-section--bordered" aria-labelledby="citations-impact-heading">
+  <div class="eyebrow">Academic Syllabi, Policy Reports &amp; Citations</div>
+  <h2 id="citations-impact-heading">University adoption &amp; research citations</h2>
+
+  <div class="ledger mt-md">
+    {% for c in pub.academic_and_policy_impact %}
+    <div class="ledger-row">
+      <div class="ledger-row__date">{{ c.year }}</div>
+      <div>
+        <div class="ledger-row__title"><a href="{{ c.url }}" target="_blank" rel="noopener">{{ c.title }} ↗</a></div>
+        <p class="venue-label">{{ c.venue }}</p>
+        <p class="ledger-row__sub">{{ c.summary }}</p>
+      </div>
+      <div class="ledger-row__aside"><a href="{{ c.url }}" target="_blank" rel="noopener">Source ↗</a></div>
+    </div>
     {% endfor %}
   </div>
 </section>

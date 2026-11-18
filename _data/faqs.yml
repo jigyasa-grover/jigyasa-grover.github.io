@@ -1,6 +1,6 @@
 about:
   - q: "Who is Jigyasa Grover?"
-    a: "Jigyasa Grover is a San Francisco–based Machine Learning Engineer at Uber (Tech Lead for Rider Personalization & Ranking), 13× AI and Open Source award winner, Google Developer Advisory Board member, LinkedIn Learning instructor, and co-author of Sculpting Data for ML."
+    a: "Jigyasa Grover is a San Francisco-based Machine Learning Engineer at Uber (Tech Lead for Product Selector Ranking and Engineering Lead for an Org-Wide AI Initiative), 13× AI and Open Source award winner, Google Developer Advisory Board member, LinkedIn Learning instructor, and co-author of Sculpting Data for ML."
   - q: "What is her engineering background?"
     a: "Before Uber, she led AI & Research at Bordo AI, built a 0→1 feature store and ads bidding engine at Faire, owned sub-50ms billion-request ads ranking at Twitter/X, and worked at Meta, alongside completing her M.S. in CS (AI) at UC San Diego and attending the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS)."
   - q: "How can founders, organizers, or brands work with her?"
@@ -22,7 +22,7 @@ speaking:
 
 teaching:
   - q: "What organizations has Jigyasa delivered corporate AI training with?"
-    a: "She has trained 44,000+ learners on LinkedIn Learning and delivered corporate AI training and workshops with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, CommonSpirit Health, and Udacity."
+    a: "She has trained 44,000+ learners on LinkedIn Learning and delivered corporate AI training and workshops with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, CommonSpirit Health, Interview Kickstart, and Udacity."
   - q: "Can workshops be tailored to our internal stack and L&D budget?"
     a: "Yes. Sessions run as 90-minute executive briefings, half-day intensives, or full-day labs across Agentic AI/MCP, LLM evals, ranking, data-centric ML, Cloud TPUs, and developer AI workflows, with runnable repos and L&D-eligible certificates."
 
@@ -46,21 +46,21 @@ work_with_me:
 
 projects:
   - q: "What open-source AI, Hugging Face, and Cloud TPU contributions has Jigyasa Grover authored?"
-    a: "Across 180+ public pull requests and 76+ GitHub repositories, highlights include upstream PyTorch/Cloud TPU fixes in Hugging Face transformers (#50267, 2.06× faster eager LoRA steps) and peft (#4099 / #4101, torch.accelerator TPU device routing), TorchTPU Doctor (2,537× LoRA speedup on Cloud TPU v6e), Startup on a Shoestring (Google Antigravity token circuit breakers), Kinetic Gemma 3 Cloud TPU fine-tuning, Trust at Top Speed (split-brain Gemini Nano + Cloud Run AI Racing Coach), and Critic's Cut (multilingual Google ADK multi-agent system)."
+    a: "Across 245+ upstream pull requests and issues in 32 external repositories plus 76+ public GitHub repos, highlights include PyTorch/Cloud TPU fixes in Hugging Face transformers (#50267, 2.06× faster eager LoRA steps) and peft (#4099 / #4101, torch.accelerator TPU device routing), authoring Learn Smalltalk in Y Minutes (12.4K+ ★), TorchTPU Doctor (2,537× LoRA speedup on Cloud TPU v6e), Startup on a Shoestring, Trust at Top Speed, and Critic's Cut."
   - q: "Are the repositories, Agent Skills, and Colab notebooks free to fork and run?"
     a: "Yes. Open-source reference implementations, Agent Skills, Google Colab notebooks, and official LinkedIn Learning course companion labs are publicly available at github.com/jigyasa-grover."
 
 press:
   - q: "Where has Jigyasa Grover been featured in global press and broadcasts?"
-    a: "She has been featured on the Google I/O main keynote stage (introduced by Sundar Pichai), Google's official Gemini Omni Flash global launch video, Google Cloud Tech documentaries & livestreams, Forbes, Business Insider, Communications of the ACM, Codemotion Magazine, Google for Developers Blog, VentureBeat, Observer, Hyperight, MIT Sloan × BCG, Grazia UK, UN ITU, and NTD Live TV."
+    a: "She has been featured on the Google I/O main keynote stage (introduced by Sundar Pichai), Google's official Gemini Omni Flash launch video, Google Cloud Tech documentaries & livestreams, Remitly (NASDAQ: RELY) Wall Street earnings presentations, Forbes, Business Insider, Communications of the ACM, Codemotion Magazine, Routledge, The Forage, LeadDev, VentureBeat, Observer, Hyperight, MIT Sloan × BCG, Grazia UK, UN ITU, and NTD Live TV."
   - q: "How should event organizers and journalists pronounce and credit Jigyasa Grover?"
-    a: "Jigyasa Grover is pronounced jig-YAH-sah GROH-ver (/dʒɪɡˈjɑːsɑː ˈɡroʊvər/). Credit her as Machine Learning Engineer (Tech Lead) at Uber, Google Developer Advisory Board (gDAB) member, 13× AI & Open Source Award Winner, and co-author of Sculpting Data for ML, using the approved 50-word or 150-word bios and portraits on this page."
+    a: "Jigyasa Grover is pronounced jig-YAH-sah GROH-ver (/dʒɪɡˈjɑːsɑː ˈɡroʊvər/). Credit her as Machine Learning Engineer (Tech Lead, Product Selector Ranking) at Uber, Google Developer Advisory Board (gDAB) member, 13× AI & Open Source Award Winner, and co-author of Sculpting Data for ML, using the approved 50-word or 150-word bios and portraits on this page."
 
 publications:
   - q: "What books and peer-reviewed papers has Jigyasa Grover authored?"
-    a: "She co-authored Sculpting Data for ML: The First Act of Machine Learning (ISBN 979-8585463570, 100+ academic citations, 4.8★ on Goodreads), Enterprise LLM Deployment Readiness (SSRN 2026 via the AI Assurance Council), two Springer book chapters on privacy-preserving ML and misinformation detection, and an ACM IWST research paper on live multi-agent visualization."
+    a: "She co-authored Sculpting Data for ML: The First Act of Machine Learning (ISBN 979-8585463570 & 978-0-578-83125-1, assigned on Cornell Tech's CS 5781 syllabus, 100+ academic citations across NeurIPS, ICLR, EMNLP, NAACL & ACM CHI, 4.8★ on Goodreads), Enterprise LLM Deployment Readiness (SSRN 2026 via the AI Assurance Council), two Springer chapters (cited by Stanford's Cyber Policy Center), an ACM IWST research paper, and open-source Smalltalk/Pharo guides."
   - q: "Does Jigyasa review technical manuscripts or collaborate with publishers?"
-    a: "Yes. She serves as a technical book reviewer for O'Reilly Media (Scalable AI Systems, Machine Learning with Python Cookbook 2nd Ed.) and Packt Publishing (Principles of Data Science 3rd Ed., Exploring Deepfakes), endorsed Practical Python Projects, and welcomes curriculum, monograph, and benchmark study collaborations via Work With Me."
+    a: "Yes. She serves as a technical book reviewer for O'Reilly Media (Scalable AI Systems, Machine Learning with Python Cookbook 2nd Ed.) and Packt Publishing (Principles of Data Science 3rd Ed., Exploring Deepfakes), provided the lead endorsement for Routledge / Taylor & Francis's AI for Community (2025/2026) and Practical Python Projects, and welcomes curriculum, monograph, and benchmark collaborations via Work With Me."
 
 media_kit:
   - q: "Does Jigyasa accept tech hardware, AI gadgets, and electronics for review or PR seeding?"

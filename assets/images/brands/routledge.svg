@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 36" width="132" height="36" role="img" aria-label="Routledge">
+  <g fill="#141413">
+    <rect x="6" y="8" width="15" height="20" rx="1.5" fill="none" stroke="#141413" stroke-width="2"/>
+    <line x1="10" y1="13" x2="17" y2="13" stroke="#141413" stroke-width="1.6"/>
+    <line x1="10" y1="18" x2="17" y2="18" stroke="#141413" stroke-width="1.6"/>
+    <text x="28" y="24" font-family="Georgia, 'Times New Roman', serif" font-size="18.5" font-weight="700" letter-spacing="0.01em">Routledge</text>
+  </g>
+</svg>

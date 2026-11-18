@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Remitly NASDAQ RELY Wall Street Earnings Feature">
+  <defs>
+    <linearGradient id="remBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1736"/>
+      <stop offset="100%" stop-color="#0F0B1D"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#remBg)"/>
+  <g transform="translate(300, 290)">
+    <circle cx="42" cy="58" r="34" fill="none" stroke="#9B7EDE" stroke-width="8"/>
+    <path d="M24 58a18 18 0 0 1 36 0" fill="none" stroke="#4FD1C5" stroke-width="8" stroke-linecap="round"/>
+    <text x="104" y="72" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="800" letter-spacing="-1.5">Remitly</text>
+    <text x="108" y="112" fill="#B8ADD9" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="600" letter-spacing="3.5">NASDAQ: RELY · WALL STREET EARNINGS</text>
+  </g>
+</svg>

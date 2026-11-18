@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Google Open Source Blog and Google Developer Experts">
+  <defs>
+    <linearGradient id="goBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#17202E"/>
+      <stop offset="100%" stop-color="#0C1119"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#goBg)"/>
+  <g transform="translate(215, 292)">
+    <circle cx="38" cy="54" r="30" fill="none" stroke="#4285F4" stroke-width="8" stroke-dasharray="135 55"/>
+    <circle cx="38" cy="54" r="14" fill="#34A853"/>
+    <text x="92" y="72" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="60" font-weight="700" letter-spacing="-1">Google Open Source &amp; GDE</text>
+    <text x="94" y="112" fill="#9AA0A6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="600" letter-spacing="3.5">OFFICIAL BLOG &amp; 8× MONTHLY ROUNDUPS</text>
+  </g>
+</svg>

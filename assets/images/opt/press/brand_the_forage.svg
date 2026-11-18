@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="The Forage Career Feature">
+  <defs>
+    <linearGradient id="fgBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10253A"/>
+      <stop offset="100%" stop-color="#08131E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#fgBg)"/>
+  <g transform="translate(300, 292)">
+    <rect x="0" y="18" width="68" height="68" rx="14" fill="#2563EB"/>
+    <path d="M22 68V34h26v8H31v6h14v8H31v12h-9z" fill="#FFFFFF"/>
+    <text x="96" y="72" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="70" font-weight="800" letter-spacing="-1.2">The Forage</text>
+    <text x="98" y="112" fill="#93C5FD" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="600" letter-spacing="3.5">ENGINEERING &amp; CS CAREER GUIDE</text>
+  </g>
+</svg>
