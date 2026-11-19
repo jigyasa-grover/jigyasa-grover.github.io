@@ -62,7 +62,6 @@
   og_image_alt: "Supervised fine-tuning of Gemma 3 1B on Cloud TPU v5 Lite using Keras Kinetic"
   summary: "Supervised fine-tuning (SFT) of Google's Gemma 3 1B on a Cloud TPU v5 Lite using a single Python decorator, with zero Docker or Kubernetes YAML required."
   repo_url: "https://github.com/jigyasa-grover/kinetic-finetuning-on-cloud-tpu"
-  live_url: "https://jigyasa-grover.github.io/kinetic-finetuning-on-cloud-tpu/"
   md_url: "/KineticFinetuningOnCloudTPU/index.md"
   faqs:
     - q: "How can you fine-tune Gemma 3 on a Google Cloud TPU without Docker or Kubernetes YAML?"

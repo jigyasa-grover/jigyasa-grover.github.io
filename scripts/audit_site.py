@@ -329,6 +329,25 @@ def main() -> None:
         if f.endswith(".html")
     )
 
+    redirect_routes = set()
+    for path in html_files:
+        rel_p = "/" + str(path.relative_to(SITE_DIR))
+        if 'http-equiv="refresh"' in path.read_text(encoding="utf-8").lower():
+            if rel_p.endswith("/index.html"):
+                r_clean = rel_p[: -len("index.html")]
+                redirect_routes.add(r_clean)
+                redirect_routes.add(r_clean.rstrip("/"))
+            else:
+                redirect_routes.add(rel_p)
+                redirect_routes.add(rel_p[: -len(".html")])
+
+    if sitemap_path.is_file():
+        for sm_u in sm_tree.findall("sm:url", sm_ns):
+            loc_val = sm_u.findtext("sm:loc", default="", namespaces=sm_ns)
+            loc_path = urlparse(loc_val).path
+            if loc_path in redirect_routes:
+                errors.append(f"REDIRECT ALIAS LEAKED INTO sitemap.xml: {loc_val}")
+
     titles_seen = {}
     jsonld_count = 0
 
@@ -348,9 +367,13 @@ def main() -> None:
                     p_route = parsed.path or "/"
                     if not route_exists(p_route):
                         errors.append(f"BROKEN CANONICAL/SELF LINK in {rel_path}: {target}")
+                    elif not parser.is_redirect and p_route in redirect_routes:
+                        errors.append(f"INTERNAL LINK POINTS TO REDIRECT ALIAS in {rel_path}: {target}")
                 continue
             if not route_exists(target):
                 errors.append(f"BROKEN INTERNAL ASSET/LINK in {rel_path}: {target}")
+            elif not parser.is_redirect and target.split("#")[0].split("?")[0] in redirect_routes:
+                errors.append(f"INTERNAL LINK POINTS TO REDIRECT ALIAS in {rel_path}: {target}")
 
         if "cdn.mathjax.org" in raw:
             errors.append(f"RETIRED MATHJAX CDN in {rel_path}")

@@ -90,7 +90,6 @@
     - "Gemma 3 1B"
     - "Cloud TPU v5 Lite"
     - "Keras Kinetic"
-  live_url: "https://jigyasa-grover.github.io/kinetic-finetuning-on-cloud-tpu/"
   repo_url: "https://github.com/jigyasa-grover/kinetic-finetuning-on-cloud-tpu"
   post_url: "/KineticFinetuningOnCloudTPU/"
 
