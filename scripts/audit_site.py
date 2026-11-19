@@ -90,6 +90,8 @@ EXPECTED_ROUTES = [
     "/ads.txt",
     "/robots.txt",
     "/sitemap.xml",
+    "/sitemap_index.xml",
+    "/video-sitemap.xml",
     "/feed.xml",
     "/llms.txt",
     "/.well-known/llms.txt",
@@ -217,9 +219,12 @@ def main() -> None:
             errors.append(f"FORBIDDEN REPO FILE LEAKED INTO _site/: {item}")
 
     # 3. Validate XML feeds
-    for xml_file in ("sitemap.xml", "feed.xml"):
+    for xml_file in ("sitemap.xml", "sitemap_index.xml", "video-sitemap.xml", "feed.xml"):
         xml_path = SITE_DIR / xml_file
         if xml_path.is_file():
+            raw_bytes = xml_path.read_bytes()
+            if not raw_bytes.startswith(b"<?xml"):
+                errors.append(f"LEADING WHITESPACE OR BOM IN {xml_file}")
             try:
                 ET.parse(xml_path)
             except Exception as exc:

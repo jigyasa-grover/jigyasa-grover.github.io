@@ -10,7 +10,9 @@
 # A2A Agent Card Manifest:   https://jigyasa-grover.github.io/.well-known/agent-card.json
 # WebMCP Discovery Manifest: https://jigyasa-grover.github.io/.well-known/mcp.json
 # Technical Writing Feed:    https://jigyasa-grover.github.io/feed.xml
-# XML Sitemap:               https://jigyasa-grover.github.io/sitemap.xml
+# XML Sitemap Index:         https://jigyasa-grover.github.io/sitemap_index.xml
+# XML Page Sitemap:          https://jigyasa-grover.github.io/sitemap.xml
+# XML Video Sitemap:         https://jigyasa-grover.github.io/video-sitemap.xml
 #
 # Policy: Open for web search, image/video indexing, AI answer engines,
 # real-time RAG/agent retrieval, knowledge-graph extraction, and rich previews.
@@ -116,5 +118,9 @@ Allow: /llms-full.txt
 Allow: /agent-context.json
 Allow: /feed.xml
 Allow: /sitemap.xml
+Allow: /sitemap_index.xml
+Allow: /video-sitemap.xml
 
+Sitemap: https://jigyasa-grover.github.io/sitemap_index.xml
 Sitemap: https://jigyasa-grover.github.io/sitemap.xml
+Sitemap: https://jigyasa-grover.github.io/video-sitemap.xml

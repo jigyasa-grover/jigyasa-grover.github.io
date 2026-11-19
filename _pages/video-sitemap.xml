@@ -1,0 +1,30 @@
+---
+layout: null
+permalink: /video-sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>{{ site.url }}/speaking/</loc>
+    <video:video>
+      <video:thumbnail_loc>{{ site.url }}/assets/images/opt/google_io_feature.jpg</video:thumbnail_loc>
+      <video:title>{{ site.data.speaking.featured_video.title | xml_escape }}</video:title>
+      <video:description>{{ site.data.speaking.featured_video.caption | xml_escape }}</video:description>
+      <video:player_loc>https://www.youtube.com/embed/XEzRZ35urlk?start=516</video:player_loc>
+      <video:publication_date>2024-05-14T10:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>{{ site.url }}/highlights/</loc>{% for v in site.data.videos.featured_films %}{% assign v_thumb = v.thumbnail | default: "" %}{% if v_thumb != "" %}{% assign v_thumb_url = site.url | append: v_thumb %}{% else %}{% assign v_thumb_url = "https://i.ytimg.com/vi/" | append: v.video_id | append: "/hqdefault.jpg" %}{% endif %}
+    <video:video>
+      <video:thumbnail_loc>{{ v_thumb_url | xml_escape }}</video:thumbnail_loc>
+      <video:title>{{ v.title | xml_escape }}</video:title>
+      <video:description>{{ v.summary | xml_escape }}</video:description>
+      <video:player_loc>https://www.youtube.com/embed/{{ v.video_id | xml_escape }}{% if v.start %}?start={{ v.start }}{% endif %}</video:player_loc>
+      <video:publication_date>{{ v.upload_date | default: "2025-01-01T00:00:00Z" | xml_escape }}</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>{% endfor %}
+  </url>
+</urlset>
