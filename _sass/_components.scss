@@ -4321,3 +4321,49 @@
   color: var(--ink-secondary);
   margin: 0;
 }
+
+// ============================================================================
+// Executive Print / Save-to-PDF Media Kit & Broadsheet Rules
+// ============================================================================
+@media print {
+  .site-header,
+  .site-footer,
+  .stage-ribbon,
+  .breadcrumb,
+  .no-print,
+  .page-hero__cta,
+  .btn-group {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 10.5pt;
+  }
+
+  .page-hero,
+  .section,
+  .content-section,
+  .content-section--bordered {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    border-color: #d4d4d4 !important;
+  }
+
+  .project-dossier,
+  .brief-checklist,
+  .platform-box,
+  .comparison-table-wrap,
+  .proof-ledger,
+  .ledger-row {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none !important;
+  }
+
+  a {
+    color: #111 !important;
+    text-decoration: none !important;
+  }
+}

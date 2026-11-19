@@ -192,6 +192,13 @@
     });
   });
 
+  document.querySelectorAll("[data-print-page]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      trackEvent("print_media_kit_pdf", { source_path: window.location.pathname });
+      window.print();
+    });
+  });
+
   // 5. Blog Topic Filtering & Instant Search
   var searchInput = document.getElementById("blog-search");
   var filterBtns = document.querySelectorAll("[data-blog-filter]");

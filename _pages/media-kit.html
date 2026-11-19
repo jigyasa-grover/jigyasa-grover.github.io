@@ -26,8 +26,11 @@ redirect_from:
   </div>
   <div class="btn-group">
     <a class="btn btn--accent btn--compact" href="/work-with-me/?topic=Creator%20Events%20%26%20Hardware%20PR#contact">VIP Invite / PR Seeding →</a>
+    {% if site.contact.fallback_email and site.contact.fallback_email != "" %}
+    <button type="button" class="btn btn--secondary btn--compact" data-copy-email="{{ site.contact.fallback_email | escape }}">Copy PR Email</button>
+    {% endif %}
+    <button type="button" class="btn btn--secondary btn--compact no-print" data-print-page>Save / Print PDF</button>
     <a class="btn btn--secondary btn--compact" href="{{ b.passionfroot.url }}" target="_blank" rel="noopener">Passionfroot ↗</a>
-    <a class="btn btn--secondary btn--compact" href="{{ b.eightx.url }}" target="_blank" rel="noopener">8x ↗</a>
   </div>
 </div>
 
@@ -83,6 +86,66 @@ redirect_from:
         {% endfor %}
       </div>
     </article>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- 1B. Verified Channel-by-Channel Reach & Accreditation Matrix -->
+<section id="audience-matrix" class="content-section--bordered" aria-labelledby="channel-matrix-heading">
+  <div class="section-header section-header--compact">
+    <div>
+      <div class="eyebrow">Press Accreditation &amp; Agency Verification · Updated {{ ck.metrics_as_of }}</div>
+      <h2 id="channel-matrix-heading">Cross-platform reach, demographics &amp; formats</h2>
+    </div>
+    <button type="button" class="btn btn--secondary btn--compact no-print" data-print-page>Save 1-Page Media Kit PDF</button>
+  </div>
+
+  <div class="comparison-table-wrap" role="region" aria-labelledby="channel-matrix-heading" tabindex="0">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th scope="col">Platform</th>
+          <th scope="col">Verified Reach</th>
+          <th scope="col">Audience Profile (US / SF Bay Area &amp; Global)</th>
+          <th scope="col">Primary Deliverables</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ch in ck.audience_channels %}
+        <tr>
+          <th scope="row">
+            <a href="{{ ch.url }}" target="_blank" rel="noopener">{{ ch.channel }} ({{ ch.handle }}) ↗</a>
+          </th>
+          <td><strong>{{ ch.reach }}</strong></td>
+          <td>{{ ch.audience_fit }}</td>
+          <td>{{ ch.formats }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 1C. 2026-2027 Conference, Briefing & Press Travel Calendar -->
+<section id="event-calendar" class="content-section--bordered" aria-labelledby="briefing-calendar-heading">
+  <div class="section-header section-header--compact">
+    <div>
+      <div class="eyebrow">2026–2027 Tentpole Availability · SF Bay Area &amp; International</div>
+      <h2 id="briefing-calendar-heading">Upcoming summits &amp; press briefing windows</h2>
+    </div>
+    <a class="section-header__link" href="/work-with-me/?topic=Creator%20Events%20%26%20Hardware%20PR#contact">Book an On-Site Briefing →</a>
+  </div>
+
+  <div class="ledger">
+    {% for item in ck.event_briefing_calendar %}
+    <div class="ledger-row">
+      <div class="ledger-row__date">{{ item.window }}</div>
+      <div>
+        <div class="ledger-row__title">{{ item.event }}</div>
+        <p class="ledger-row__sub">{{ item.status }}</p>
+      </div>
+      <div class="ledger-row__aside">{{ item.location }}</div>
+    </div>
     {% endfor %}
   </div>
 </section>
@@ -175,6 +238,26 @@ redirect_from:
       <div class="brief-checklist__item">
         <div class="brief-checklist__label">{{ hw.label }}</div>
         <p class="brief-checklist__detail">{{ hw.detail }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div id="disclosure-policy" class="brief-checklist mt-lg" aria-labelledby="pr-policy-heading">
+    <div class="brief-checklist__header">
+      <div>
+        <div class="eyebrow mb-xs">Agency &amp; Brand Safety Compliance · FTC · NDA · Loaner Terms</div>
+        <h2 id="pr-policy-heading" class="brief-checklist__title">Editorial disclosure, embargo &amp; review-unit policy</h2>
+      </div>
+      {% if site.contact.fallback_email and site.contact.fallback_email != "" %}
+      <button type="button" class="btn btn--secondary btn--compact" data-copy-email="{{ site.contact.fallback_email | escape }}">Copy Direct PR Email</button>
+      {% endif %}
+    </div>
+    <div class="brief-checklist__grid">
+      {% for pol in ck.disclosure_and_pr_policy %}
+      <div class="brief-checklist__item">
+        <div class="brief-checklist__label">{{ pol.label }}</div>
+        <p class="brief-checklist__detail">{{ pol.detail }}</p>
       </div>
       {% endfor %}
     </div>
