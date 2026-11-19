@@ -50,6 +50,10 @@
         "@type": "Place",
         "name": "San Francisco Bay Area, California, USA"
       },
+      "workLocation": {
+        "@type": "Place",
+        "name": "San Francisco Bay Area, California, USA"
+      },
       "worksFor": {
         "@type": "Organization",
         "name": "Uber",
@@ -117,7 +121,9 @@
         "Privacy-Preserving Machine Learning",
         "AI Security and Red-Teaming",
         "AI Go-To-Market (GTM) Strategy",
+        "Technical AI/ML Creator",
         "AI DevTool Creator",
+        "AI Educator and Technical Instructor",
         "Developer Relations Partner",
         "Technical Advisor",
         "Developer Marketing and DevRel",
@@ -139,12 +145,12 @@
         },
         {
           "@type": "Occupation",
-          "name": "B2B AI, DevTools & Tech Hardware Creator",
+          "name": "Technical AI/ML, B2B DevTools & Tech Hardware Creator",
           "occupationLocation": {
-            "@type": "City",
-            "name": "San Francisco, California, USA"
+            "@type": "AdministrativeArea",
+            "name": "San Francisco Bay Area, California, USA"
           },
-          "skills": "Sponsored Developer Launches, Runnable GitHub Reference Apps, YouTube Shorts (@JigyasaGrover), Instagram Reels, LinkedIn & X Thought Leadership, AI Hardware & Gadget Reviews, Conference Creator-in-Residence"
+          "skills": "Technical AI/ML Education, Sponsored Developer Launches, Runnable GitHub Reference Apps, YouTube (@JigyasaGrover), Instagram Reels, LinkedIn & X Thought Leadership, AI Hardware & Gadget Reviews, Conference Creator-in-Residence"
         }
       ],
       "interactionStatistic": [
@@ -226,7 +232,14 @@
           }
         }
       ],
-      "sameAs": {{ id.same_as | jsonify }}
+      "sameAs": {{ id.same_as | jsonify }},
+      "subjectOf": {
+        "@type": "Book",
+        "@id": "https://jigyasa-grover.github.io/publications/#sculpting-data-for-ml",
+        "name": "Sculpting Data for ML: The First Act of Machine Learning",
+        "isbn": "979-8585463570",
+        "url": "https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/"
+      }
     },
     {
       "@type": "WebSite",

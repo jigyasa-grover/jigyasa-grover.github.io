@@ -5,17 +5,17 @@ location: "San Francisco Bay Area, California"
 entity_id: "https://jigyasa-grover.github.io/#person"
 canonical_url: "https://jigyasa-grover.github.io/"
 
-headline: "Machine Learning Engineer (Tech Lead) · B2B AI & DevTools Creator · Educator · Author & Advisor"
+headline: "Machine Learning Engineer (Tech Lead) · Technical AI/ML & DevTools Creator · Educator · Author & Advisor"
 current_role: "Machine Learning Engineer (Tech Lead, Product Selector Ranking & Engineering Lead, Org-Wide AI Initiative)"
 current_org: "Uber"
 award_badge: "13x AI & Open Source Award Winner"
 
 hero_title: "Architecting production AI, and teaching teams how to build, evaluate, and trust it."
-hero_lead: "Machine Learning Tech Lead at Uber, B2B AI & DevTools creator, Google Developer Advisory Board member, LinkedIn Learning instructor, and co-author of Sculpting Data for ML."
+hero_lead: "San Francisco Bay Area Machine Learning Tech Lead at Uber, technical AI/ML & DevTools creator, Google Developer Advisory Board member, LinkedIn Learning instructor, and co-author of Sculpting Data for ML."
 
-short_bio_50: "Jigyasa Grover is a Machine Learning Engineer (Tech Lead, Product Selector Ranking) at Uber, Google Developer Advisory Board member, 13x AI and Open Source award winner, LinkedIn Learning instructor (44,000+ learners), B2B AI and DevTools creator, and co-author of Sculpting Data for ML (100+ academic citations)."
+short_bio_50: "Jigyasa Grover is a San Francisco Bay Area Machine Learning Engineer (Tech Lead, Product Selector Ranking) at Uber, technical AI/ML and DevTools creator, Google Developer Advisory Board member, 13x AI and Open Source award winner, LinkedIn Learning instructor (44,000+ learners), and co-author of Sculpting Data for ML (100+ academic citations)."
 
-medium_bio_150: "Jigyasa Grover (pronounced jig-YAH-sah GROH-ver) is a San Francisco-based Machine Learning Engineer at Uber, serving as Tech Lead for Product Selector Ranking (~750M to 950M daily requests across 500+ cities) and Engineering Lead for an org-wide agentic AI initiative. Previously, she led AI and Research at Bordo AI and engineered billion-request ML ranking, ads prediction, and feature infrastructure across Faire, Twitter (X), and Meta, following her M.S. in Computer Science (AI) at UC San Diego and selection to the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS). Paired in parallel with an 11-year track record (2015–Present) as an AI educator, author, and creator, she serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) recognition, co-authored Sculpting Data for ML (assigned at Cornell Tech, 100+ citations), teaches 44,000+ learners on LinkedIn Learning, advises 30+ organizations via Afterdays, partners with 28+ AI and cloud brands across LinkedIn (14.5K+), YouTube (@JigyasaGrover, 300K+ views), X, and Instagram, and has delivered 200+ talks across 21 countries, including the Google I/O main stage."
+medium_bio_150: "Jigyasa Grover (pronounced jig-YAH-sah GROH-ver) is a San Francisco Bay Area Machine Learning Engineer at Uber (Tech Lead for Product Selector Ranking across ~750M to 950M daily requests in 500+ cities, and Engineering Lead for an org-wide agentic AI initiative) and a technical AI/ML creator and educator. Previously, she led AI and Research at Bordo AI and engineered billion-request ML ranking, ads prediction, and feature infrastructure across Faire, Twitter (X), and Meta, following her M.S. in Computer Science (AI) at UC San Diego and selection to the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS). Across an 11-year track record (2015–Present) in open-web AI education and developer storytelling, she serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) recognition, co-authored Sculpting Data for ML (assigned at Cornell Tech, 100+ citations), teaches 44,000+ learners on LinkedIn Learning, advises 30+ organizations via Afterdays, partners with 28+ AI and cloud brands across LinkedIn (14.5K+), YouTube (@JigyasaGrover, 300K+ views), X, and Instagram, and has delivered 200+ talks across 21 countries, including the Google I/O main stage."
 
 metrics:
   - value: "13+"
