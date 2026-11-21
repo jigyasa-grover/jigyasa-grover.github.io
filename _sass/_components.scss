@@ -2571,6 +2571,37 @@
   font-weight: 600;
 }
 
+.press-masthead-chip--logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.34rem 0.72rem;
+  min-height: 32px;
+
+  .press-masthead-chip__logo {
+    display: block;
+    height: 15px;
+    width: auto;
+    max-width: 118px;
+    object-fit: contain;
+    transition: filter 150ms var(--ease-editorial), opacity 150ms var(--ease-editorial);
+  }
+
+  &.is-active .press-masthead-chip__logo {
+    filter: brightness(0) invert(0.98);
+  }
+}
+
+[data-theme="dark"] .press-masthead-chip--logo {
+  .press-masthead-chip__logo {
+    filter: brightness(0) invert(0.92);
+  }
+
+  &.is-active .press-masthead-chip__logo {
+    filter: brightness(0);
+  }
+}
+
 .press-toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -4131,8 +4162,8 @@
 }
 
 [data-theme="dark"] .ecosystem-tier__item img {
-  filter: invert(1) hue-rotate(180deg);
-  opacity: 0.85;
+  filter: brightness(0) invert(0.92);
+  opacity: 0.9;
 }
 
 .platform-grid--primary {

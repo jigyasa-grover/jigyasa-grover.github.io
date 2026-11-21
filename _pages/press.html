@@ -39,10 +39,11 @@ permalink: /press/
       {% for mh in rec.press_mastheads %}
       <button
         type="button"
-        class="press-masthead-chip press-masthead-chip--{{ mh.style }}"
+        class="press-masthead-chip {% if mh.logo %}press-masthead-chip--logo{% else %}press-masthead-chip--{{ mh.style }}{% endif %}"
         data-press-masthead="{{ mh.query | escape }}"
         aria-pressed="false"
-      >{{ mh.label }}</button>
+        {% if mh.logo %}aria-label="Filter press features by {{ mh.label | escape }}"{% endif %}
+      >{% if mh.logo %}<img class="press-masthead-chip__logo" src="{{ mh.logo }}" height="16" loading="eager" alt="{{ mh.label | escape }}" />{% else %}{{ mh.label }}{% endif %}</button>
       {% endfor %}
     </div>
 

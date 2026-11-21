@@ -1,15 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="LeadDev and Comet ML Engineering Features">
-  <defs>
-    <linearGradient id="ldBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#141C2B"/>
-      <stop offset="100%" stop-color="#0A0E17"/>
-    </linearGradient>
-  </defs>
-  <rect width="1280" height="720" fill="url(#ldBg)"/>
-  <g transform="translate(220, 294)">
-    <polygon points="0,24 38,24 58,82 20,82" fill="#38BDF8"/>
-    <polygon points="44,24 72,24 52,82 24,82" fill="#818CF8" opacity="0.85"/>
-    <text x="96" y="72" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="-1.2">LeadDev · Comet ML</text>
-    <text x="98" y="112" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="600" letter-spacing="3.5">ENGINEERING METRICS &amp; PRODUCTION ML</text>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="LeadDev and Comet ML Engineering Features">
+  <rect width="1280" height="720" fill="#F6F4EF"/>
+  <g transform="translate(345.09, 220.80) scale(4.6080)">
+<g id="leaddev_logo_text" data-name="Logo text" transform="translate(41.569 17.348)">
+    <path class="logo--header__letter" d="M62.577,24.867V36.523h7.414v2.871H59.057V24.867Z" transform="translate(-59.057 -24.867)" fill="#ff326e"/>
+    <path class="logo--header__letter" d="M170.8,30.989l-2.431,6.66h-.094l-2.433-6.66h-3.522l3.915,10.2h3.916l3.915-10.2Z" transform="translate(-89.635 -26.718)" fill="#ff326e"/>
+    <path class="logo--header__letter" d="M83.023,34.934a1.929,1.929,0,0,0-1.991-1.929,2.064,2.064,0,0,0-2.156,1.929Zm3.151,2.779c-.532,2.32-2.364,3.628-5.05,3.628-3.267,0-5.584-1.974-5.584-5.212a5.364,5.364,0,0,1,5.513-5.534,4.85,4.85,0,0,1,5.19,5.1V36.7H78.831a2.245,2.245,0,0,0,2.409,2.135,2.129,2.129,0,0,0,2.246-1.378Z" transform="translate(-63.938 -26.599)" fill="#ff326e"/>
+    <path class="logo--header__letter" d="M98.352,36.54l-1.692.345c-1.042.207-1.691.459-1.691,1.263,0,.6.463.965,1.182.965a2.2,2.2,0,0,0,2.2-2.364Zm3.289,1.745c0,.527.232.757.648.757a1.925,1.925,0,0,0,.858-.183v1.768a3.506,3.506,0,0,1-2.178.666A2.339,2.339,0,0,1,98.537,39.5a3.611,3.611,0,0,1-3.453,1.792c-2.062,0-3.359-1.034-3.359-2.779,0-1.952,1.482-2.779,3.752-3.215l2.874-.5v-.184a1.364,1.364,0,0,0-1.506-1.538A1.6,1.6,0,0,0,95.2,34.52l-3.1-.23c.347-2.181,1.993-3.7,4.934-3.7,2.688,0,4.61,1.2,4.61,3.974Z" transform="translate(-68.731 -26.598)" fill="#ff326e"/>
+    <path class="logo--header__letter" d="M116.384,34.121a2.365,2.365,0,0,0-2.317-2.664c-1.6,0-2.34,1.125-2.34,2.779,0,1.676.743,2.8,2.34,2.8,1.367,0,2.317-1.033,2.317-2.686Zm0,3.4a3.525,3.525,0,0,1-3.452,2.09c-3.036,0-4.587-2.366-4.587-5.373,0-2.985,1.551-5.373,4.587-5.373a3.506,3.506,0,0,1,3.452,2.112V24.868h3.36V39.333h-3.36Z" transform="translate(-73.652 -24.867)" fill="#ff326e"/>
+    <path class="logo--header__letter" d="M132.676,36.577c2.757,0,4.356-1.652,4.356-4.5,0-2.8-1.6-4.454-4.356-4.454h-1.9v8.954Zm-5.421-11.71h5.653c4.8,0,7.762,2.709,7.762,7.234s-2.966,7.232-7.762,7.232h-5.653Z" transform="translate(-79.251 -24.867)" fill="#ff326e"/>
+    <path class="logo--header__letter" d="M154.85,34.934a1.93,1.93,0,0,0-1.991-1.929,2.064,2.064,0,0,0-2.156,1.929ZM158,37.713c-.532,2.32-2.364,3.628-5.05,3.628-3.267,0-5.584-1.974-5.584-5.212a5.364,5.364,0,0,1,5.513-5.534,4.85,4.85,0,0,1,5.19,5.1V36.7h-7.413a2.245,2.245,0,0,0,2.409,2.135,2.129,2.129,0,0,0,2.246-1.378Z" transform="translate(-85.207 -26.599)" fill="#ff326e"/>
   </g>
+  <g id="symbol">
+    <path class="logo--header__bottom" data-name="Path 19" d="M0,23.622V56.581H24.941v-8.24H8.314V23.622Z" transform="translate(0 -7.142)" fill="#ff326e"/>
+    <path class="logo--header__top" data-name="Path 20" d="M0,0V8.24H24.941V41.2h8.314V8.24L24.941,0Z" transform="translate(0 0)" fill="#0a0a46"/>
+  </g>
+  </g>
+  <text x="640" y="511.2" text-anchor="middle" fill="#5F5B53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="600" letter-spacing="4">LEADDEV · COMET ML · ENGINEERING LEADERSHIP</text>
 </svg>
