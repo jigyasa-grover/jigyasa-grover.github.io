@@ -1615,3 +1615,89 @@ home_ecosystem_logos:
     logo: "/assets/images/brands/python.svg"
     width: 122
     height: 36
+
+home_ecosystem_tiers:
+  - label: "Stages, Ecosystem & Press"
+    cta_label: "Press & Speaking →"
+    cta_url: "/press/"
+    logos:
+      - name: "Google"
+        logo: "/assets/images/brands/google.svg"
+        width: 118
+        height: 36
+      - name: "Google Cloud"
+        logo: "/assets/images/brands/google-cloud.svg"
+        width: 162
+        height: 36
+      - name: "The Linux Foundation"
+        logo: "/assets/images/brands/linux-foundation.svg"
+        width: 186
+        height: 36
+      - name: "Forbes"
+        logo: "/assets/images/brands/forbes.svg"
+        width: 96
+        height: 36
+      - name: "Business Insider"
+        logo: "/assets/images/brands/business-insider.svg"
+        width: 176
+        height: 36
+      - name: "VentureBeat"
+        logo: "/assets/images/brands/venturebeat.svg"
+        width: 156
+        height: 36
+  - label: "Corporate Training & Publishing"
+    cta_label: "Workshops & Courses →"
+    cta_url: "/teaching/"
+    logos:
+      - name: "LinkedIn Learning"
+        logo: "/assets/images/brands/linkedin-learning.svg"
+        width: 192
+        height: 36
+      - name: "Morgan Stanley"
+        logo: "/assets/images/brands/morgan-stanley.svg"
+        width: 156
+        height: 36
+      - name: "FedEx"
+        logo: "/assets/images/brands/fedex.svg"
+        width: 82
+        height: 36
+      - name: "Accenture"
+        logo: "/assets/images/brands/accenture.svg"
+        width: 112
+        height: 36
+      - name: "Roblox"
+        logo: "/assets/images/brands/roblox.svg"
+        width: 118
+        height: 36
+      - name: "O'Reilly Media"
+        logo: "/assets/images/brands/oreilly.svg"
+        width: 124
+        height: 36
+  - label: "AI Labs, DevTools & Launch Partners"
+    cta_label: "Advisory & Brand Roster →"
+    cta_url: "/partnerships/"
+    logos:
+      - name: "Google DeepMind"
+        logo: "/assets/images/brands/google-deepmind.svg"
+        width: 198
+        height: 36
+      - name: "Anthropic"
+        logo: "/assets/images/brands/anthropic.svg"
+        width: 158
+        height: 36
+      - name: "Windsurf"
+        logo: "/assets/images/brands/windsurf.svg"
+        width: 134
+        height: 36
+      - name: "Qodo"
+        logo: "/assets/images/brands/qodo.svg"
+        width: 104
+        height: 36
+      - name: "Parallel Web Systems"
+        logo: "/assets/images/brands/parallel.svg"
+        width: 124
+        height: 36
+      - name: "Fireflies.ai"
+        logo: "/assets/images/brands/fireflies.svg"
+        width: 146
+        height: 36

@@ -45,7 +45,7 @@ redirect_from:
         <p class="proof-item__detail">Runnable reference apps accompanying deep dives</p>
       </div>
       <div class="proof-item">
-        <div class="proof-item__value">24+</div>
+        <div class="proof-item__value">28+</div>
         <div class="proof-item__label">Brand &amp; Media Partners</div>
         <p class="proof-item__detail">Hyperscalers, AI labs, DevTools &amp; publishers</p>
       </div>
@@ -173,8 +173,23 @@ redirect_from:
 </div>
 
 <section class="content-section--bordered" aria-labelledby="past-partners-heading">
-  <div class="eyebrow">Sponsored Campaigns &amp; Collaborations</div>
-  <h2 id="past-partners-heading">Partner roster, live campaign examples &amp; booking</h2>
+  <div class="eyebrow">Verified Launch Proof &amp; Campaigns</div>
+  <h2 id="past-partners-heading">Shipped launches, partner roster &amp; booking</h2>
+
+  <div class="ledger mb-lg" aria-label="Verified developer and brand launch collaborations">
+    {% for item in pdata.gtm_positioning.verified_launch_highlights %}
+    <div class="ledger-row">
+      <div class="ledger-row__date">{{ item.partner }}</div>
+      <div>
+        <div class="ledger-row__title">
+          <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.campaign }} ↗</a>
+        </div>
+      </div>
+      <div class="ledger-row__aside">Verified</div>
+    </div>
+    {% endfor %}
+  </div>
+
   <div class="brand-logo-wall" role="list" aria-label="Brand and technical content partners">
     {% for partner in site.data.recognition.brand_partner_logos %}
     <a class="brand-logo-card" role="listitem" href="{{ partner.url }}" {% if partner.url contains "http"
@@ -195,44 +210,32 @@ redirect_from:
     {% include social-feed.html context="partnerships" %}
   </div>
 
-  <div class="platform-grid">
+  <div class="platform-grid platform-grid--primary">
     <div class="platform-box">
       <div>
         <div class="platform-box__badge">{{ b.passionfroot.badge }}</div>
         <h3 class="platform-box__name">{{ b.passionfroot.name }}</h3>
         <p class="platform-box__desc">{{ b.passionfroot.use_case }}</p>
       </div>
-      <a class="btn btn--primary" href="{{ b.passionfroot.url }}" target="_blank" rel="noopener">{{ b.passionfroot.cta
-        }} ↗</a>
-    </div>
-
-    <div class="platform-box">
-      <div>
-        <div class="platform-box__badge">{{ b.naano.badge }}</div>
-        <h3 class="platform-box__name">{{ b.naano.name }}</h3>
-        <p class="platform-box__desc">{{ b.naano.use_case }}</p>
-      </div>
-      <a class="btn btn--secondary" href="{{ b.naano.url }}" target="_blank" rel="noopener">{{ b.naano.cta }} ↗</a>
-    </div>
-
-    <div class="platform-box">
-      <div>
-        <div class="platform-box__badge">{{ b.eightx.badge }}</div>
-        <h3 class="platform-box__name">{{ b.eightx.name }}</h3>
-        <p class="platform-box__desc">{{ b.eightx.use_case }}</p>
-      </div>
-      <a class="btn btn--secondary" href="{{ b.eightx.url }}" target="_blank" rel="noopener">{{ b.eightx.cta }} ↗</a>
+      <a class="btn btn--primary" href="{{ b.passionfroot.url }}" target="_blank" rel="noopener">{{ b.passionfroot.cta }} ↗</a>
     </div>
 
     <div class="platform-box">
       <div>
         <div class="platform-box__badge">Custom Scope · 48h Response</div>
         <h3 class="platform-box__name">Direct Launch Brief</h3>
-        <p class="platform-box__desc">Custom reference builds, live developer webinars, stage demos, or multi-part
-          technical series.</p>
+        <p class="platform-box__desc">Custom reference builds, live developer webinars, stage demos, or multi-part technical series.</p>
       </div>
-      <a class="btn btn--accent" href="/work-with-me/?topic=Content%20%26%20Brand%20Partnerships#contact">Inquire
-        Directly →</a>
+      <a class="btn btn--accent" href="/work-with-me/?topic=Content%20%26%20Brand%20Partnerships#contact">Inquire Directly →</a>
+    </div>
+  </div>
+
+  <div class="secondary-platforms-bar" aria-label="Additional verified creator storefronts">
+    <span class="secondary-platforms-bar__label">Also bookable via</span>
+    <div class="secondary-platforms-bar__links">
+      <a href="{{ b.naano.url }}" target="_blank" rel="noopener">{{ b.naano.name }} ({{ b.naano.badge }}) ↗</a>
+      <a href="{{ b.eightx.url }}" target="_blank" rel="noopener">{{ b.eightx.name }} ({{ b.eightx.badge }}) ↗</a>
+      <a href="/media-kit/">Creator &amp; Hardware PR Media Kit →</a>
     </div>
   </div>
 

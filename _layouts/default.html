@@ -9,8 +9,14 @@
       {{ content }}
     </main>
     {% include footer.html %}
-    {% include video-lightbox.html %}
+    {% assign has_cinema = false %}
+    {% if page.url == "/" or page.url == "/highlights/" or page.url == "/speaking/" or page.url == "/teaching/" or page.url == "/links/" or page.url == "/partnerships/" %}
+      {% assign has_cinema = true %}
+    {% endif %}
+    {% if has_cinema %}{% include video-lightbox.html %}{% endif %}
     <script src="/assets/js/site.js?v={{ site.time | date: '%s' }}" defer></script>
+    {% if page.url == "/press/" %}<script src="/assets/js/press.js?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
+    {% if has_cinema %}<script src="/assets/js/cinema.js?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
     {% include mathjax.html %}
   </body>
 </html>

@@ -5,9 +5,9 @@ gtm_positioning:
   reach_metrics:
     - "82% senior technical & executive buyer audience"
     - "325,000+ annual LinkedIn impressions (14,500+ followers)"
-    - "76+ public GitHub repositories & 180+ open-source PRs (including Hugging Face transformers & peft)"
+    - "76+ public GitHub repositories & 245+ external upstream PRs & issues (including Hugging Face transformers & peft)"
     - "34+ SEO & GEO-indexed technical deep-dive essays"
-    - "24+ AI lab, hyperscaler, DevTools & media brand partners"
+    - "28+ AI lab, hyperscaler, DevTools & media brand partners"
     - "30+ AI startups, enterprises & VCs advised via Afterdays (including Anthropic & Google gDAB)"
   gtm_motions:
     - number: "01"
@@ -54,7 +54,7 @@ surfaces:
   - number: "01"
     channel: "GitHub & Open-Source Anchor Repos"
     kicker: "Hugging Face OSS · Runnable Code"
-    stat: "76+ Repos · 180+ PRs"
+    stat: "76+ Repos · 245+ PRs & Issues"
     summary: "End-to-end reference implementations, sponsored integration modules, MCP connectors, Agent Skills, Colab notebooks, and benchmark harnesses built by an upstream Hugging Face (transformers, peft) contributor."
     best_for: "AI SDKs, Cloud/TPU compute, eval/observability frameworks, and DevTools adoption."
     url: "https://github.com/jigyasa-grover"
@@ -202,7 +202,7 @@ creator_kit:
     - channel: "GitHub & Technical Blog"
       handle: "@jigyasa-grover"
       url: "https://github.com/jigyasa-grover"
-      reach: "74+ repos · 180+ PRs · 34 indexed deep dives"
+      reach: "76+ repos · 245+ PRs & issues · 34 indexed deep dives"
       audience_fit: "Hands-on PyTorch, Cloud TPU, Google ADK, MCP & production ML builders"
       formats: "Runnable reference apps, Colab notebooks, Agent Skills, GEO/SEO essays"
     - channel: "LinkedIn Learning"
@@ -309,7 +309,7 @@ creator_kit:
     - label: "Smart Glasses, AI Wearables & Edge Devices"
       detail: "Multimodal smart glasses, voice/meeting capture pins and recorders, smart rings, noise-canceling travel audio, and pocket edge-AI developer kits."
     - label: "Creator Camera, Audio & Conference Travel Rig"
-      detail: "4K pocket gimbal and mirrorless cameras, dual wireless lavalier mics, desktop XLR/USB microphones, portable key lights, and carry-on power gear built for 20+ countries of stage travel."
+      detail: "4K pocket gimbal and mirrorless cameras, dual wireless lavalier mics, desktop XLR/USB microphones, portable key lights, and carry-on power gear built for 21 countries of stage travel."
     - label: "PR Seeding & Embargo Protocol"
       detail: "Trusted pre-GA tester (Google Gemini Ultra, Omni Flash & Carbon) experienced with strict hardware/software embargoes. Request SF Bay Area shipping details via the inquiry form."
 

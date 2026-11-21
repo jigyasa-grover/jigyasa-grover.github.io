@@ -238,7 +238,7 @@
   seo_title: "Preventing Data Cascades in Production ML — Jigyasa Grover"
   og_image: "/assets/images/opt/book_cover.jpg"
   og_image_alt: "Preventing upstream data cascades in production machine learning systems"
-  summary: "Understanding compounding upstream data issues—data cascades—in high-stakes machine learning deployments and how to prevent them early."
+  summary: "Understanding compounding upstream data issues (data cascades) in high-stakes machine learning deployments and how to prevent them early."
 
 "/Polishing-Your-Dataset/":
   category: "Data-Centric AI"
@@ -256,7 +256,7 @@
   seo_title: "Sculpting Data for ML: Book Overview — Jigyasa Grover"
   og_image: "/assets/images/opt/book_cover.jpg"
   og_image_alt: "Book cover of Sculpting Data for ML: The First Act of Machine Learning"
-  summary: "Introducing Sculpting Data for ML: The First Act of Machine Learning—why we wrote a hands-on guide to dataset curation and data-centric engineering."
+  summary: "Introducing Sculpting Data for ML: The First Act of Machine Learning, and why we wrote a hands-on guide to dataset curation and data-centric engineering."
 
 "/top-5-trends-in-artificial-intelligence-for-2023/":
   category: "Responsible AI & Privacy"
@@ -299,7 +299,7 @@
   seo_title: "Python Programming Paradigms Explained — Jigyasa Grover"
   og_image: "/assets/images/wp-archive/2019/screen-shot-2019-09-25-at-2-18-41-pm-29d65656.png"
   og_image_alt: "Imperative, procedural, object-oriented, and functional programming paradigms in Python"
-  summary: "In-depth guide to imperative, procedural, object-oriented, and functional programming paradigms in Python—featured among Opensource.com's Top Articles."
+  summary: "In-depth guide to imperative, procedural, object-oriented, and functional programming paradigms in Python, featured among Opensource.com's Top Articles."
 
 "/dive-into-open-source-go-beyond-coding/":
   category: "Open Source & Python"

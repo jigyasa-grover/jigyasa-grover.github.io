@@ -141,7 +141,7 @@ layout: default
           <div class="reader-flywheel__eyebrow">Data-Centric ML &amp; Billion-Scale Ranking</div>
           <div class="reader-flywheel__title">Go deeper on dataset engineering, CTR ranking &amp; production ML</div>
           <p class="reader-flywheel__desc">
-            Explore <em>Sculpting Data for ML</em> (95+ academic citations, 4.8★), invite Jigyasa for an engineering keynote, or book a 1:1 ML systems consultation.
+            Explore <em>Sculpting Data for ML</em> (100+ academic citations, 4.8★), invite Jigyasa for an engineering keynote, or book a 1:1 ML systems consultation.
           </p>
           <div class="btn-group">
             <a class="btn btn--primary btn--compact" href="/publications/">Book &amp; Research Papers →</a>
@@ -152,12 +152,15 @@ layout: default
           <div class="reader-flywheel__eyebrow">Keep Learning &amp; Collaborate</div>
           <div class="reader-flywheel__title">Enjoyed this technical deep dive?</div>
           <p class="reader-flywheel__desc">
-            Explore corporate AI training, startup advisory, and conference keynotes—or join <strong>44,000+ learners</strong> across my LinkedIn Learning courses.
+            Explore corporate AI training, startup advisory, and conference keynotes, or join <strong>44,000+ learners</strong> across my LinkedIn Learning courses.
           </p>
           <div class="btn-group">
+            {% if site.social.newsletter_url and site.social.newsletter_url != "" %}
+            <a class="btn btn--accent btn--compact" href="{{ site.social.newsletter_url }}" target="_blank" rel="noopener">Subscribe via Email ↗</a>
+            {% endif %}
             <a class="btn btn--primary btn--compact" href="/work-with-me/">Work With Me →</a>
             <a class="btn btn--secondary btn--compact" href="/speaking/">Keynotes &amp; Panels →</a>
-            <a class="btn btn--secondary btn--compact" href="https://www.linkedin.com/in/jigyasa-grover/" target="_blank" rel="noopener">Follow on LinkedIn ↗</a>
+            <a class="btn btn--secondary btn--compact" href="/feed.xml">RSS Feed ↗</a>
           </div>
         {% endif %}
       </div>

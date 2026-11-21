@@ -3851,283 +3851,6 @@
 }
 
 // ============================================================================
-// Interactive 3D Orthographic Speaking Globe & Stage Atlas (/speaking/)
-// ============================================================================
-.globe-header-stat {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--ink-muted);
-  margin: 0;
-}
-
-.globe-atlas {
-  border: 1px solid var(--rule-light);
-  border-top: 2px solid var(--ink-primary);
-  background-color: var(--bg-surface);
-  border-radius: var(--radius-xs);
-  overflow: hidden;
-}
-
-.globe-toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.85rem 1.25rem;
-  padding: 0.9rem 1.35rem;
-  background-color: var(--bg-subtle);
-  border-bottom: 1px solid var(--rule-light);
-}
-
-.globe-toolbar__controls {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-}
-
-.globe-toolbar__hint {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--ink-muted);
-
-  @include mobile {
-    display: none;
-  }
-}
-
-.globe-stage {
-  display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
-  align-items: stretch;
-
-  @include tablet {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-.globe-canvas-panel {
-  padding: 1.5rem 1.25rem 1.2rem;
-  border-right: 1px solid var(--rule-light);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background: radial-gradient(circle at 50% 46%, var(--bg-subtle) 0%, var(--bg-surface) 74%);
-
-  @include tablet {
-    border-right: 0;
-    border-bottom: 1px solid var(--rule-light);
-    padding: 1.25rem 1rem 1rem;
-  }
-}
-
-.globe-canvas-wrap {
-  position: relative;
-  width: unquote("min(100%, 440px)");
-  aspect-ratio: 1 / 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.globe-canvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-  cursor: grab;
-  touch-action: pan-y;
-  user-select: none;
-  -webkit-user-select: none;
-
-  &.is-dragging {
-    cursor: grabbing;
-  }
-
-  &.is-pointer {
-    cursor: pointer;
-  }
-}
-
-.globe-hover-tip {
-  position: absolute;
-  pointer-events: none;
-  padding: 0.28rem 0.6rem;
-  background-color: var(--ink-primary);
-  color: var(--ink-inverse);
-  font-family: var(--font-mono);
-  font-size: 0.69rem;
-  border-radius: var(--radius-xs);
-  white-space: nowrap;
-  box-shadow: var(--shadow-subtle);
-  transform: translate(-50%, -135%);
-  z-index: 4;
-}
-
-.globe-legend {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.65rem 1.25rem;
-  margin-top: 0.75rem;
-  font-family: var(--font-mono);
-  font-size: 0.71rem;
-  color: var(--ink-muted);
-}
-
-.globe-legend__item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.globe-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  display: inline-block;
-}
-
-.globe-dot--hub {
-  background-color: var(--ink-primary);
-  box-shadow: 0 0 0 2px var(--bg-surface), 0 0 0 3px var(--ink-primary);
-}
-
-.globe-dot--upcoming {
-  background-color: var(--verified);
-  box-shadow: 0 0 0 3px var(--verified-wash);
-}
-
-.globe-dot--stage {
-  background-color: var(--accent);
-}
-
-.globe-inspector {
-  padding: 1.5rem 1.5rem 1.35rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.35rem;
-
-  @include mobile {
-    padding: 1.2rem 1.1rem;
-  }
-}
-
-.globe-dossier {
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--rule-light);
-}
-
-.globe-dossier__title {
-  font-family: var(--font-serif);
-  font-size: unquote("clamp(1.32rem, 2vw, 1.62rem)");
-  line-height: 1.22;
-  margin: 0.2rem 0 0.6rem;
-}
-
-.globe-dossier__venues {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1.48;
-  color: var(--ink-primary);
-  margin: 0 0 0.45rem;
-}
-
-.globe-dossier__note {
-  font-size: 0.87rem;
-  line-height: 1.56;
-  color: var(--ink-secondary);
-  margin: 0 0 0.95rem;
-}
-
-.globe-dossier__actions {
-  margin-top: 0.25rem;
-}
-
-.globe-cities-block__label {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--ink-muted);
-  margin-bottom: 0.65rem;
-}
-
-.globe-city-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.42rem;
-}
-
-.globe-city-chip {
-  appearance: none;
-  background-color: var(--bg-subtle);
-  border: 1px solid var(--rule-light);
-  border-radius: var(--radius-xs);
-  padding: 0.3rem 0.6rem;
-  font-family: var(--font-sans);
-  font-size: 0.77rem;
-  font-weight: 500;
-  color: var(--ink-secondary);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.38rem;
-  cursor: pointer;
-  transition: border-color 140ms var(--ease-editorial), background-color 140ms var(--ease-editorial), color 140ms var(--ease-editorial);
-
-  &:hover {
-    border-color: var(--rule-strong);
-    color: var(--ink-primary);
-  }
-
-  &.is-active {
-    background-color: var(--ink-primary);
-    border-color: var(--ink-primary);
-    color: var(--ink-inverse);
-
-    .globe-city-chip__dot {
-      background-color: var(--ink-inverse);
-    }
-  }
-}
-
-.globe-city-chip__dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background-color: var(--accent);
-  flex-shrink: 0;
-}
-
-.globe-city-chip--hub .globe-city-chip__dot {
-  background-color: var(--ink-primary);
-}
-
-.globe-city-chip--upcoming .globe-city-chip__dot {
-  background-color: var(--verified);
-}
-
-.globe-country-strip {
-  padding: 0.8rem 1.35rem;
-  background-color: var(--bg-subtle);
-  border-top: 1px solid var(--rule-light);
-  font-size: 0.79rem;
-  line-height: 1.55;
-  color: var(--ink-secondary);
-}
-
-.globe-country-strip__label {
-  font-family: var(--font-mono);
-  font-size: 0.71rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--ink-primary);
-  margin-right: 0.45rem;
-}
-
-// ============================================================================
 // Reviewed & Cited Industry Bookshelf (/publications/ + Homepage Book Card)
 // ============================================================================
 .book-compact__shelf {
@@ -4320,6 +4043,147 @@
   line-height: 1.52;
   color: var(--ink-secondary);
   margin: 0;
+}
+
+// ============================================================================
+// Categorized High-Signal Ecosystem Tiers & Streamlined Booking Hierarchy
+// ============================================================================
+.ecosystem-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.15rem;
+
+  @include tablet {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.ecosystem-tier {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--rule-light);
+  border-radius: var(--radius-xs);
+  padding: 1.15rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.ecosystem-tier__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--rule-light);
+}
+
+.ecosystem-tier__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-primary);
+}
+
+.ecosystem-tier__link {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.ecosystem-tier__logos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 1rem;
+  align-items: center;
+}
+
+.ecosystem-tier__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0.25rem 0.35rem;
+
+  img {
+    max-height: 24px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.86;
+    transition: opacity 160ms var(--ease-editorial);
+  }
+
+  &:hover img {
+    opacity: 1;
+  }
+}
+
+[data-theme="dark"] .ecosystem-tier__item img {
+  filter: invert(1) hue-rotate(180deg);
+  opacity: 0.85;
+}
+
+.platform-grid--primary {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.secondary-platforms-bar {
+  margin-top: 1rem;
+  padding: 0.85rem 1.15rem;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--rule-light);
+  border-radius: var(--radius-xs);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem 1.25rem;
+  font-size: 0.86rem;
+  color: var(--ink-secondary);
+}
+
+.secondary-platforms-bar__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+}
+
+.secondary-platforms-bar__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.15rem;
+
+  a {
+    font-weight: 600;
+    color: var(--ink-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 1px;
+
+    &:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+  }
 }
 
 // ============================================================================

@@ -31,11 +31,11 @@ home:
     rating: "5.0★"
     quote: "Jigyasa is an expert, and even 15 minutes of her time was incredibly valuable to me and my organization."
 
-  - author: "Verified Advisory Client"
-    role: "Product & Large-Scale ML"
+  - author: "Sirisha Kaipa"
+    role: "Startup Founder"
     platform: "1:1 Advisory"
     rating: "5.0★"
-    quote: "Jigyasa has a lot to share if you can ask the right questions. She has tons of exposure to developing and rolling out products to millions of customers."
+    quote: "She is a true star, and yet is so down-to-earth and easy to talk to. I came out of the 30 mins meeting with a lot of insights and resources that I can apply at my startup."
 
 advisory:
   - author: "Manav"
@@ -72,17 +72,18 @@ work_with_me:
     url: "https://intro.co/JigyasaGrover"
     quote: "Jigyasa was amazing, clear, insightful, and so generous with her knowledge."
 
-  - author: "Verified Consultation Client"
-    role: "AI Strategy & Assumptions Review"
+  - author: "Manav"
+    role: "1:1 AI Advisory & Thought Partner"
+    platform: "Intro"
+    rating: "5.0★"
+    url: "https://intro.co/JigyasaGrover"
+    quote: "Jigyasa is an excellent communicator, advisor and thought partner. She guided me toward a path tailored to my needs. I would recommend her in a heartbeat."
+
+  - author: "Uugii Tsenddorj"
+    role: "Startup Founder · Pitch & Strategy"
     platform: "1:1 Advisory"
     rating: "5.0★"
-    quote: "Jigyasa's responses to our inquiries on various assumptions in AI were clear-cut and insightful!"
-
-  - author: "Verified Mentee"
-    role: "Technical Brand & Advocacy"
-    platform: "1:1 Mentorship"
-    rating: "5.0★"
-    quote: "Loved the way Jigyasa broke down the approach to build a personal brand into actionable steps!"
+    quote: "Her attention and suggestions significantly enhanced my deck for presenting to judges, mentors, and ecosystem stakeholders. Actionable advice that was insightful."
 
 teaching:
   - author: "Carla B."
@@ -91,13 +92,6 @@ teaching:
     rating: "5.0★"
     url: "https://www.linkedin.com/learning/integrating-ai-into-the-product-architecture"
     quote: "Clear, practical, and actually connects the pieces in a way that makes sense."
-
-  - author: "Farjana Yeasmin"
-    role: "Director, MetLife Bangladesh · Implementing Responsible AI"
-    platform: "LinkedIn Learning"
-    rating: "5.0★"
-    url: "https://www.linkedin.com/learning/welcome-to-the-building-ai-products-implementing-responsible-ai-professional-certificate"
-    quote: "Very Good and Yes, I suggested to others"
 
   - author: "Olusegun Awoyemi"
     role: "Doctoral Researcher · Academic Mentorship"

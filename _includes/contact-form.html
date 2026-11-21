@@ -78,14 +78,24 @@
       <span id="error-message" class="field-error" role="alert"></span>
     </div>
 
+    {% assign has_form_api = false %}
+    {% if site.contact.formspree_endpoint != "" or site.contact.web3forms_access_key != "" %}
+      {% assign has_form_api = true %}
+    {% endif %}
     <div class="btn-group">
-      <button id="contact-submit" type="submit" class="btn btn--accent">Send Inquiry →</button>
+      <button id="contact-submit" type="submit" class="btn btn--accent">
+        {% if has_form_api %}Send Inquiry →{% else %}Prepare Email Inquiry →{% endif %}
+      </button>
       {% if site.contact.fallback_email and site.contact.fallback_email != "" %}
       <button id="copy-direct-email" type="button" class="btn btn--secondary"
         data-copy-email="{{ site.contact.fallback_email | escape }}">Copy Direct Email</button>
       {% endif %}
       <span class="form-note">
-        Typical response within 2 business days for aligned inquiries · Anti-spam protected
+        {% if has_form_api %}
+          Typical response within 2 business days for aligned inquiries · Anti-spam protected
+        {% else %}
+          Validates and opens Gmail Web, your mail app, or 1-click copy · Typical response within 2 business days
+        {% endif %}
       </span>
     </div>
 

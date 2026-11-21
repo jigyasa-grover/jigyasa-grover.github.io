@@ -1,12 +1,12 @@
 {% assign b = site.data.identity.booking %}
-<div class="platform-grid">
+<div class="platform-grid platform-grid--primary">
   <div class="platform-box">
     <div>
       <div class="platform-box__badge">{{ b.intro.badge }}</div>
       <h3 class="platform-box__name">{{ b.intro.name }}</h3>
       <p class="platform-box__desc">{{ b.intro.use_case }}</p>
     </div>
-    <a id="booking-link-intro" class="btn btn--secondary" href="{{ b.intro.url }}" target="_blank" rel="noopener">{{ b.intro.cta }} ↗</a>
+    <a id="booking-link-intro" class="btn btn--primary" href="{{ b.intro.url }}" target="_blank" rel="noopener">{{ b.intro.cta }} ↗</a>
   </div>
 
   <div class="platform-box">
@@ -15,24 +15,15 @@
       <h3 class="platform-box__name">{{ b.passionfroot.name }}</h3>
       <p class="platform-box__desc">{{ b.passionfroot.use_case }}</p>
     </div>
-    <a id="booking-link-passionfroot" class="btn btn--secondary" href="{{ b.passionfroot.url }}" target="_blank" rel="noopener">{{ b.passionfroot.cta }} ↗</a>
+    <a id="booking-link-passionfroot" class="btn btn--primary" href="{{ b.passionfroot.url }}" target="_blank" rel="noopener">{{ b.passionfroot.cta }} ↗</a>
   </div>
+</div>
 
-  <div class="platform-box">
-    <div>
-      <div class="platform-box__badge">{{ b.naano.badge }}</div>
-      <h3 class="platform-box__name">{{ b.naano.name }}</h3>
-      <p class="platform-box__desc">{{ b.naano.use_case }}</p>
-    </div>
-    <a id="booking-link-naano" class="btn btn--secondary" href="{{ b.naano.url }}" target="_blank" rel="noopener">{{ b.naano.cta }} ↗</a>
-  </div>
-
-  <div class="platform-box">
-    <div>
-      <div class="platform-box__badge">{{ b.eightx.badge }}</div>
-      <h3 class="platform-box__name">{{ b.eightx.name }}</h3>
-      <p class="platform-box__desc">{{ b.eightx.use_case }}</p>
-    </div>
-    <a id="booking-link-eightx" class="btn btn--secondary" href="{{ b.eightx.url }}" target="_blank" rel="noopener">{{ b.eightx.cta }} ↗</a>
+<div class="secondary-platforms-bar" aria-label="Additional verified creator storefronts">
+  <span class="secondary-platforms-bar__label">Also verified on</span>
+  <div class="secondary-platforms-bar__links">
+    <a id="booking-link-naano" href="{{ b.naano.url }}" target="_blank" rel="noopener">{{ b.naano.name }} ({{ b.naano.badge }}) ↗</a>
+    <a id="booking-link-eightx" href="{{ b.eightx.url }}" target="_blank" rel="noopener">{{ b.eightx.name }} ({{ b.eightx.badge }}) ↗</a>
+    <a href="/media-kit/">Creator &amp; Hardware PR Media Kit →</a>
   </div>
 </div>

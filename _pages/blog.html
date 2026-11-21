@@ -7,8 +7,8 @@ lead: "34 technical essays, architectural tutorials, and research readings, plus
 Google Summer of Code archives (2015–2017)."
 hero_cta_label: "Follow on LinkedIn ↗"
 hero_cta_url: "https://www.linkedin.com/in/jigyasa-grover/"
-seo_title: "AI Engineering Blog, Newsletter & Essays | Jigyasa Grover"
-description: "34+ technical AI newsletter essays by Jigyasa Grover on Agentic AI, Gemini, Cloud TPUs, DevTools, ranking & Python, plus 57 early open-source archives."
+seo_title: "AI Engineering Blog, Tutorials & Essays | Jigyasa Grover"
+description: "34+ technical AI engineering essays by Jigyasa Grover on Agentic AI, Gemini, Cloud TPUs, DevTools, ranking & Python, plus 57 early open-source archives."
 permalink: /blog/
 ---
 
@@ -34,12 +34,15 @@ permalink: /blog/
         postmortems:</span>
     </div>
     <div class="follow-strip__links">
+      {% if site.social.newsletter_url and site.social.newsletter_url != "" %}
+      <a href="{{ site.social.newsletter_url }}" target="_blank" rel="noopener"><strong>Subscribe via Email ↗</strong></a>
+      {% endif %}
+      <a href="/feed.xml">RSS Feed</a>
       <a href="https://www.linkedin.com/in/jigyasa-grover/" target="_blank" rel="noopener">LinkedIn (14.5K+) ↗</a>
       <a href="https://github.com/jigyasa-grover" target="_blank" rel="noopener">GitHub (76+ Repos) ↗</a>
       <a href="https://www.youtube.com/@JigyasaGrover" target="_blank" rel="noopener">YouTube ↗</a>
       <a href="https://dev.to/jigyasagrover" target="_blank" rel="noopener">DEV Community ↗</a>
       <a href="https://x.com/jigyasa_grover" target="_blank" rel="noopener">X (@jigyasa_grover) ↗</a>
-      <a href="/feed.xml">RSS Feed</a>
     </div>
   </div>
 </section>

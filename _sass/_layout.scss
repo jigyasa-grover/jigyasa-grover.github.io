@@ -61,7 +61,7 @@
   text-transform: uppercase;
   color: var(--ink-muted);
 
-  @include tablet {
+  @media screen and (max-width: 1180px) {
     display: none;
   }
 }
@@ -69,9 +69,9 @@
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 1.45rem;
+  gap: 1.05rem;
 
-  @include tablet {
+  @media screen and (max-width: 1024px) {
     display: none;
     position: absolute;
     top: 100%;
@@ -93,11 +93,12 @@
 
 .site-nav__link {
   font-family: var(--font-sans);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--ink-secondary);
   text-decoration: none;
   padding: 0.35rem 0;
+  white-space: nowrap;
   position: relative;
 
   &:hover,
@@ -115,7 +116,7 @@
     background-color: var(--accent);
   }
 
-  @include tablet {
+  @media screen and (max-width: 1024px) {
     padding: 0.75rem 0;
     border-bottom: 1px solid var(--rule-light);
     font-size: 0.98rem;
@@ -129,7 +130,7 @@
 .site-nav__cta {
   display: none;
 
-  @include tablet {
+  @media screen and (max-width: 1024px) {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -185,7 +186,7 @@
 .nav-toggle {
   display: none;
 
-  @include tablet {
+  @media screen and (max-width: 1024px) {
     display: inline-flex;
   }
 }

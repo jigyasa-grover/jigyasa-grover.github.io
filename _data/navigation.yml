@@ -4,6 +4,16 @@ primary:
     match_urls:
       - "/about"
       - "/experience/"
+  - label: "Projects"
+    url: "/projects/"
+    match_urls:
+      - "/projects/"
+      - "/publications/"
+  - label: "Writing"
+    url: "/blog/"
+    match_urls:
+      - "/blog/"
+    match_layout: "post"
   - label: "Speaking"
     url: "/speaking/"
     match_urls:
@@ -16,17 +26,16 @@ primary:
     url: "/teaching/"
     match_urls:
       - "/teaching/"
-  - label: "Writing"
-    url: "/blog/"
+  - label: "Partners"
+    url: "/partnerships/"
     match_urls:
-      - "/blog/"
-    match_layout: "post"
+      - "/partnerships/"
+      - "/media-kit/"
   - label: "Press"
     url: "/press/"
     match_urls:
       - "/press/"
       - "/highlights/"
-      - "/media-kit/"
 
 footer_explore:
   - label: "About & Biography"

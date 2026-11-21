@@ -1,0 +1,38 @@
+---
+layout: null
+permalink: /assets/data/cinema-catalog.json
+sitemap: false
+---
+[
+{% assign comma = false %}
+{% for v in site.data.videos.featured_films %}{% if comma %},{% endif %}{% assign comma = true %}
+  {
+    "video_id": {{ v.video_id | jsonify }},
+    "start": {{ v.start | default: 0 }},
+    "mode": "wide",
+    "role_type": {{ v.role_type | jsonify }},
+    "category": {{ v.category | jsonify }},
+    "badge": {{ v.badge | jsonify }},
+    "channel": {{ v.channel | jsonify }},
+    "date": {{ v.date | jsonify }},
+    "title": {{ v.title | jsonify }},
+    "summary": {{ v.summary | jsonify }},
+    "url": {{ v.url | jsonify }}
+  }{% endfor %}
+{% for s in site.data.videos.shorts %}{% if comma %},{% endif %}{% assign comma = true %}
+  {
+    "video_id": {{ s.video_id | jsonify }},
+    "start": 0,
+    "mode": "vertical",
+    "role_type": {{ s.role_type | jsonify }},
+    "category": {{ s.category | jsonify }},
+    "badge": {{ s.tag | append: " · Short" | jsonify }},
+    "channel": {% if s.partner %}{{ "@JigyasaGrover × " | append: s.partner | jsonify }}{% else %}"@JigyasaGrover"{% endif %},
+    "date": {{ s.date | jsonify }},
+    "title": {{ s.title | jsonify }},
+    "summary": "60-second vertical dispatch also cross-posted across @JigyasaGrover Shorts & @jigyasagroverofficial Reels.",
+    "url": {{ s.url | jsonify }},
+    "ig_url": "https://www.instagram.com/jigyasagroverofficial/"
+  }{% endfor %}
+]
+
