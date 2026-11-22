@@ -1,20 +1,21 @@
 gtm_positioning:
   headline: "AI DevTool Creator, Go-To-Market (GTM) & Developer Relations Partnerships"
-  summary: "Practitioner-led AI DevTool creator campaigns, go-to-market (GTM) execution, developer relations (DevRel) partnerships, and technical advisory built by an active Uber ML Tech Lead, Google Developer Advisory Board (gDAB) member, and 13x AI Award Winner."
-  target_icp: "82% senior technical decision-makers and buyers — Staff+ ML & Software Engineers, Engineering Directors, VPs of AI/Engineering, Founders, and C-Suite executives."
+  summary: "Practitioner-led AI DevTool creator campaigns, go-to-market (GTM) execution, developer relations (DevRel) partnerships, and technical advisory built by an active Uber ML Tech Lead, Google Developer Advisory Board (gDAB) member, and 14x AI Award Winner."
+  target_icp: "80%+ senior technical decision-makers and buyers (Staff+ ML & Software Engineers, Engineering Directors, VPs of AI/Engineering, Founders, and C-Suite executives) across Google, LinkedIn, Google DeepMind, Meta, Microsoft, Amazon, AWS, NVIDIA, OpenAI, and Apple."
   reach_metrics:
-    - "82% senior technical & executive buyer audience"
-    - "325,000+ annual LinkedIn impressions (14,500+ followers)"
+    - "80%+ senior technical & executive buyer audience (9% CXO, 9% Founder, 5% Co-Founder; 22% SF Bay Area, 8% NYC, 4% London)"
+    - "~318K annual LinkedIn impressions, 167K+ unique members reached (14,700+ followers, 2.5%+ 90-day ER; 2.0%–3.6% sponsored launch ER)"
+    - "Top 10 follower companies: Google (4%), LinkedIn, Google DeepMind, Meta, Microsoft, Amazon, AWS, NVIDIA, OpenAI, and Apple"
     - "76+ public GitHub repositories & 245+ external upstream PRs & issues (including Hugging Face transformers & peft)"
     - "34+ SEO & GEO-indexed technical deep-dive essays"
-    - "28+ AI lab, hyperscaler, DevTools & media brand partners"
+    - "28+ AI lab, hyperscaler, DevTools & media brand partners (LinkedIn Creator Marketplace & Thought Leader Ads supported)"
     - "30+ AI startups, enterprises & VCs advised via Afterdays (including Anthropic & Google gDAB)"
   gtm_motions:
     - number: "01"
       kicker: "Full-Funnel Launch"
       title: "0→1 AI & DevTools Product Launches"
       summary: "Turn model releases, APIs, and agent frameworks into runnable proof by combining forkable GitHub repos, architectural blog essays, LinkedIn/X launch sequences, and 9:16 creator Reels/Shorts."
-      tags: ["Launch Bundles", "Passionfroot · Naano · 8x", "Multi-Channel"]
+      tags: ["Launch Bundles", "Passionfroot · Naano · 8x", "LinkedIn Creator Marketplace"]
     - number: "02"
       kicker: "DevRel & PLG"
       title: "Developer Marketing, SDK Adoption & Agent Skills"
@@ -71,9 +72,9 @@ surfaces:
 
   - number: "03"
     channel: "LinkedIn Executive & Builder Reach"
-    kicker: "82% Senior Audience"
-    stat: "325K+ Annual Impressions"
-    summary: "Practitioner-led Go-To-Market launch analyses, architecture teardowns, and technical carousels reaching Staff+ Engineers, Directors, VPs, and Founders."
+    kicker: "80%+ Senior Audience"
+    stat: "~318K Annual Impressions"
+    summary: "Practitioner-led Go-To-Market launch analyses, architecture teardowns, and technical carousels (2.0%–3.6% engagement rate across recent sponsored launches) reaching Staff+ Engineers, Directors, VPs, and Founders across Google, DeepMind, Meta, Microsoft, AWS, NVIDIA, OpenAI, and Apple. Available via LinkedIn Creator Marketplace & Thought Leader Ads."
     best_for: "B2B AI product launches, category education, and reaching technical buyers."
     url: "https://www.linkedin.com/in/jigyasa-grover/"
     cta_label: "View LinkedIn ↗"
@@ -179,20 +180,20 @@ brief_checklist:
   - label: "Launch window & milestones"
     detail: "Target announcement date, embargo schedule, and any technical review requirements on your side."
   - label: "Sandbox access & budget tier"
-    detail: "SDK/API access details and target scope, or book standard packages instantly via Passionfroot, Naano, or 8x."
+    detail: "SDK/API access details and target scope, or book standard packages instantly via Passionfroot, Naano, 8x, or LinkedIn Creator Marketplace."
 
 creator_kit:
   base_hub: "San Francisco Bay Area (SFO / SJC)"
-  metrics_as_of: "Q4 2026"
+  metrics_as_of: "Nov 2026"
   availability: "Local in San Francisco & Silicon Valley for embargoed hands-on demos, studio shoots, and VIP launch dinners; available worldwide for sponsored conference keynotes, Creator-in-Residence programs, and summit hospitality."
   independence_note: "All creator content, summit coverage, and hardware or software reviews are produced independently in Jigyasa Grover's personal capacity across her owned media channels. Google Developer Expert (GDE) and Google Developer Advisory Board (gDAB) roles are external community appointments (non-employee)."
   audience_channels:
     - channel: "LinkedIn"
       handle: "in/jigyasa-grover"
       url: "https://www.linkedin.com/in/jigyasa-grover/"
-      reach: "14.5K+ followers · 325K+ annual impressions"
-      audience_fit: "82% senior technical buyers (Staff+ Engineers, Directors, VPs, Founders, C-Suite)"
-      formats: "Launch teardowns, executive recaps, technical carousels, native video"
+      reach: "14.7K+ followers · ~318K annual impressions · 167K+ reached"
+      audience_fit: "80%+ senior tech buyers (9% CXO, 9% Founder, 5% Co-Founder; 22% SF Bay Area, 8% NYC, 4% London; Top 10 companies: Google, LinkedIn, Google DeepMind, Meta, Microsoft, Amazon, AWS, NVIDIA, OpenAI, Apple)"
+      formats: "Launch teardowns, executive recaps, technical carousels (2.0%–3.6% sponsored ER), native video, Thought Leader Ads"
     - channel: "YouTube"
       handle: "@JigyasaGrover"
       url: "https://www.youtube.com/@JigyasaGrover"
@@ -276,8 +277,8 @@ creator_kit:
     - number: "04"
       kicker: "Multi-Platform Sponsorships"
       title: "AI, Cloud & Consumer Tech Brand Campaigns"
-      summary: "High-trust sponsored storytelling across LinkedIn (82% senior tech buyers), YouTube, Instagram Reels, TikTok, X, GitHub, and technical essays via Passionfroot, Naano, 8x, or direct agency brief."
-      tags: ["Passionfroot · Naano · 8x", "B2B & Prosumer Tech", "Code + Video"]
+      summary: "High-trust sponsored storytelling across LinkedIn (80%+ senior tech buyers, Creator Marketplace & Thought Leader Ads), YouTube, Instagram Reels, TikTok, X, GitHub, and technical essays via Passionfroot, Naano, 8x, or direct agency brief."
+      tags: ["Passionfroot · Naano · 8x", "LinkedIn Creator Marketplace", "Code + Video"]
   vip_event_highlights:
     - event: "Google I/O Main Keynote & Creator Ecosystem"
       location: "Mountain View, CA"

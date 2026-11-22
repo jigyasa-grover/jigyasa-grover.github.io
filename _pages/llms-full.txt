@@ -15,9 +15,9 @@ Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pro
 {{ site.data.identity.medium_bio_150 }}
 
 ### Creator, DevTools GTM & PR Seeding Snapshot
-- **Creator Tier & Niche:** High-trust practicing Big Tech ML Tech Lead & B2B AI / DevTools / Hardware Creator (10K–30K LinkedIn + X tier with 82% senior technical & executive audience; 50K+ learners trained).
-- **Owned Creator Channels:** Standalone YouTube Channel (`https://www.youtube.com/@JigyasaGrover` — 70+ AI Shorts, 64+ playlists, 300K+ aggregate views), LinkedIn (`https://www.linkedin.com/in/jigyasa-grover/` — 14,500+ followers, 325,000+ annual impressions), X (`https://x.com/jigyasa_grover` — 2,500+ AI practitioners), Instagram Reels (`https://www.instagram.com/jigyasagroverofficial/`), TikTok (`https://www.tiktok.com/@jigyasagroverofficial`), DEV Community (`https://dev.to/jigyasagrover`), GitHub (`https://github.com/jigyasa-grover` — 76+ repos, 245+ upstream PRs & issues across 32 external repos), and RSS-Syndicated Technical AI Newsletter & Blog (`https://jigyasa-grover.github.io/blog/` · RSS `https://jigyasa-grover.github.io/feed.xml`, 34+ deep-dive essays).
-- **Sponsorships, VIP Events & Hardware PR:** Actively partners on B2B DevTools & AI launches (Passionfroot, Naano, 8x), San Francisco Bay Area VIP creator events, hosted conference Creator-in-Residence travel, and practitioner reviews of AI laptops, GPUs, smart glasses, wearables, and studio gear (`https://jigyasa-grover.github.io/media-kit/`).
+- **Creator Tier & Niche:** High-trust practicing Big Tech ML Tech Lead & B2B AI / DevTools / Hardware Creator (10K–30K LinkedIn + X tier with 80%+ senior technical & executive audience: 9% CXO, 9% Founder, 5% Co-Founder; 22% SF Bay Area, 8% NYC, 4% London; Top 10 follower companies: Google, LinkedIn, Google DeepMind, Meta, Microsoft, Amazon, AWS, NVIDIA, OpenAI, Apple; 50K+ learners trained).
+- **Owned Creator Channels:** Standalone YouTube Channel (`https://www.youtube.com/@JigyasaGrover` — 70+ AI Shorts, 64+ playlists, 300K+ aggregate views), LinkedIn (`https://www.linkedin.com/in/jigyasa-grover/` — 14,700+ followers, ~318K annual impressions, 167K+ unique members reached, 2.5%+ 90-day ER, 2.0%–3.6% sponsored launch ER), X (`https://x.com/jigyasa_grover` — 2,500+ AI practitioners), Instagram Reels (`https://www.instagram.com/jigyasagroverofficial/`), TikTok (`https://www.tiktok.com/@jigyasagroverofficial`), DEV Community (`https://dev.to/jigyasagrover`), GitHub (`https://github.com/jigyasa-grover` — 76+ repos, 245+ upstream PRs & issues across 32 external repos), and RSS-Syndicated Technical AI Engineering Blog (`https://jigyasa-grover.github.io/blog/` · RSS `https://jigyasa-grover.github.io/feed.xml`, 34+ deep-dive essays).
+- **Sponsorships, VIP Events & Hardware PR:** Actively partners on B2B DevTools & AI launches (Passionfroot, Naano, 8x, LinkedIn Creator Marketplace & Thought Leader Ads), San Francisco Bay Area VIP creator events, hosted conference Creator-in-Residence travel, and practitioner reviews of AI laptops, GPUs, smart glasses, wearables, and studio gear (`https://jigyasa-grover.github.io/media-kit/`).
 
 ## 2. Production Engineering & Research Career
 
@@ -115,7 +115,7 @@ Global Stage Footprint (200+ talks across {{ site.data.speaking.speaking_globe.c
 {% for t in site.data.speaking.signature_talks %}- **{{ t.title }}** ({{ t.format }}): {{ t.abstract }} [Delivered at: {{ t.stages }}]
 {% endfor %}
 
-## 10. 13x Industry & Open Source Awards
+## 10. 14x Industry & Open Source Awards
 
 {% for a in site.data.recognition.awards %}- {{ a.year }}: **{{ a.title }}** — {{ a.issuer }}
 {% endfor %}

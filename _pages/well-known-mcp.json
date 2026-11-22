@@ -31,7 +31,7 @@ sitemap: false
     {
       "name": "get-gtm-and-marketing-kit",
       "mode": "imperative",
-      "description": "Retrieve AI Go-To-Market (GTM), developer marketing, audience ICP (82% senior technical buyers), launch bundles, and campaign proof URLs."
+      "description": "Retrieve AI Go-To-Market (GTM), developer marketing, audience ICP (80%+ senior technical buyers), launch bundles, and campaign proof URLs."
     },
     {
       "name": "search-technical-articles",

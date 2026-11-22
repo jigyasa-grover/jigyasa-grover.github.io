@@ -1,6 +1,6 @@
 # [Jigyasa Grover — jigyasa-grover.github.io](https://jigyasa-grover.github.io/)
 
-Official website, technical journal, and collaboration hub of **Jigyasa Grover** — Machine Learning Engineer (Tech Lead at Uber), Principal at **Afterdays**, 13× AI & Open Source Award Winner, Google Developer Advisory Board member, LinkedIn Learning Instructor, co-author of [*Sculpting Data for ML*](https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/), and International Keynote Speaker.
+Official website, technical journal, and collaboration hub of **Jigyasa Grover** — Machine Learning Engineer (Tech Lead at Uber), Principal at **Afterdays**, 14× AI & Open Source Award Winner, Google Developer Advisory Board member, LinkedIn Learning Instructor, co-author of [*Sculpting Data for ML*](https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/), and International Keynote Speaker.
 
 ## Explore
 

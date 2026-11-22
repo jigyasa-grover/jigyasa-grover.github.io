@@ -2,12 +2,12 @@ channels:
   - id: "linkedin"
     name: "LinkedIn"
     handle: "in/jigyasa-grover"
-    metric: "14.5K+ Followers · 82% Senior Tech"
+    metric: "14.7K+ Followers · 80%+ Senior Tech"
     url: "https://www.linkedin.com/in/jigyasa-grover/"
   - id: "x"
     name: "X (Twitter)"
     handle: "@jigyasa_grover"
-    metric: "2.4K+ AI Practitioners"
+    metric: "2.5K+ AI Practitioners"
     url: "https://x.com/jigyasa_grover"
   - id: "instagram"
     name: "Instagram"
@@ -21,6 +21,31 @@ channels:
     url: "https://www.youtube.com/@JigyasaGrover/playlists"
 
 posts:
+  - platform: "linkedin"
+    platform_label: "LinkedIn Carousel"
+    handle: "in/jigyasa-grover"
+    date: "Nov 2026"
+    sponsored: true
+    partner: "Fireflies.ai"
+    badge: "Fred Launch · 2-Page Workflow Breakdown"
+    contexts: ["partnerships", "highlights"]
+    excerpt: "Breaking down how Fireflies.ai consolidates meeting notes, pre-call prep, system-wide voice dictation, and post-call agents into one workflow instead of five disconnected tools."
+    tag: "#FirefliesPartner"
+    cta: "Read on LinkedIn"
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7526660776795869184/"
+
+  - platform: "linkedin"
+    platform_label: "LinkedIn"
+    handle: "in/jigyasa-grover"
+    date: "Nov 2026"
+    sponsored: false
+    badge: "Open Source · TorchTPU Doctor"
+    contexts: ["highlights", "home"]
+    excerpt: "Built TorchTPU Doctor: a zero-dependency AST linter, TorchDispatchMode profiler, and Agent Skill that catches silent PyTorch performance cliffs on Google Cloud TPUs (up to 2,537× faster LoRA steps on v6e)."
+    tag: "#TorchTPU · #BuildWithTPU"
+    cta: "Read on LinkedIn"
+    url: "https://www.linkedin.com/posts/jigyasa-grover_torchtpu-torchtpusprint-buildwithtpu-share-7523119920721850368-DEFU"
+
   - platform: "x"
     platform_label: "X (Twitter)"
     handle: "@jigyasa_grover"
