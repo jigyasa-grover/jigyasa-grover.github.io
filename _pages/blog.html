@@ -3,12 +3,12 @@ layout: page
 title: "Technical Writing & Essays"
 heading: "Deep dives on Agentic AI, LLM evaluation, fine-tuning, and data-centric ML."
 eyebrow: "Technical Journal"
-lead: "34 technical essays, architectural tutorials, and research readings, plus 57 self-hosted early open-source &
-Google Summer of Code archives (2015–2017)."
+lead: "34 technical AI engineering essays by Jigyasa Grover on Agentic AI, Cloud TPUs, LLM evals, and data-centric ML, plus 57 early open-source archives (2015–2017)."
 hero_cta_label: "Follow on LinkedIn ↗"
 hero_cta_url: "https://www.linkedin.com/in/jigyasa-grover/"
 seo_title: "AI Engineering Blog, Tutorials & Essays | Jigyasa Grover"
 description: "34+ technical AI engineering essays by Jigyasa Grover on Agentic AI, Gemini, Cloud TPUs, DevTools, ranking & Python, plus 57 early open-source archives."
+last_modified_at: 2026-11-22
 permalink: /blog/
 ---
 
@@ -34,9 +34,6 @@ permalink: /blog/
         postmortems:</span>
     </div>
     <div class="follow-strip__links">
-      {% if site.social.newsletter_url and site.social.newsletter_url != "" %}
-      <a href="{{ site.social.newsletter_url }}" target="_blank" rel="noopener"><strong>Subscribe via Email ↗</strong></a>
-      {% endif %}
       <a href="/feed.xml">RSS Feed</a>
       <a href="https://www.linkedin.com/in/jigyasa-grover/" target="_blank" rel="noopener">LinkedIn (14.7K+) ↗</a>
       <a href="https://github.com/jigyasa-grover" target="_blank" rel="noopener">GitHub (76+ Repos) ↗</a>
@@ -74,13 +71,11 @@ permalink: /blog/
         aria-pressed="false">Early Archive (2015–17)</button>
     </div>
 
-    <form id="blog-search-form" action="/blog/" method="get" role="search"
-      toolname="search-technical-articles"
-      tooldescription="Search Jigyasa Grover's 91 technical AI, ML, Cloud TPU, and open-source articles by keyword.">
+    <form id="blog-search-form" action="/blog/" method="get" role="search">
       <label for="blog-search" class="sr-only">Search all 91 articles &amp; archives by keyword</label>
       <input id="blog-search" name="q" type="search" class="search-input"
-        placeholder="Search all 91 articles &amp; archives…"
-        toolparamdescription="Keyword to match against article titles, summaries, categories, and tags (e.g., TorchTPU, ADK, Gemini, ranking, privacy)." />
+        placeholder="Search all 91 articles &amp; archives…" />
+      <button type="submit" class="sr-only">Search articles</button>
       <span id="blog-results-status" class="sr-only" role="status" aria-live="polite"></span>
     </form>
   </div>

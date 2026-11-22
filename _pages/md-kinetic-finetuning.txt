@@ -3,5 +3,4 @@ layout: null
 permalink: /KineticFinetuningOnCloudTPU/index.md
 sitemap: false
 ---
-{% include post-markdown-twin.md post_url="/KineticFinetuningOnCloudTPU/" %}
-
+{% include post-markdown-twin.md post_url="/KineticFinetuningOnCloudTPU/" slug="KineticFinetuningOnCloudTPU" %}

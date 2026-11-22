@@ -2,6 +2,7 @@
 layout: post
 type: blog
 title: Proof of Work - Agentic Video Understanding with Gemini as Your AI Teaching Assistant 📝
+last_modified_at: 2026-11-22
 comments: true
 mathjax: true
 ---

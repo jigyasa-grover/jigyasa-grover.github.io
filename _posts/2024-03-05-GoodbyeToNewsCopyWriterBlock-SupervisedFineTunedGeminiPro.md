@@ -2,6 +2,7 @@
 layout: post
 type: blog
 title: Goodbye to News Copy Writer's Block! Supercharging Gemini Pro via Supervised Fine-Tuning 📰
+last_modified_at: 2026-11-22
 comments: true
 mathjax: false
 ---

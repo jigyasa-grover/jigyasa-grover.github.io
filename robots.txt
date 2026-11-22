@@ -7,12 +7,10 @@
 # Well-Known LLM Mirror:     https://jigyasa-grover.github.io/.well-known/llms.txt
 # Full Entity & Bio Corpus:  https://jigyasa-grover.github.io/llms-full.txt
 # Structured WebMCP JSON:    https://jigyasa-grover.github.io/agent-context.json
-# A2A Agent Card Manifest:   https://jigyasa-grover.github.io/.well-known/agent-card.json
+# A2A Discovery Card:        https://jigyasa-grover.github.io/.well-known/agent-card.json
 # WebMCP Discovery Manifest: https://jigyasa-grover.github.io/.well-known/mcp.json
 # Technical Writing Feed:    https://jigyasa-grover.github.io/feed.xml
 # XML Sitemap Index:         https://jigyasa-grover.github.io/sitemap_index.xml
-# XML Page Sitemap:          https://jigyasa-grover.github.io/sitemap.xml
-# XML Video Sitemap:         https://jigyasa-grover.github.io/video-sitemap.xml
 #
 # Policy: Open for web search, image/video indexing, AI answer engines,
 # real-time RAG/agent retrieval, knowledge-graph extraction, and rich previews.
@@ -27,23 +25,16 @@ User-agent: GoogleOther
 User-agent: Bingbot
 User-agent: Applebot
 User-agent: DuckDuckBot
+User-agent: Bravebot
+User-agent: KagiBot
 User-agent: Slurp
 User-agent: YandexBot
 Allow: /
-Allow: /assets/
-Allow: /images/
-Allow: /llms.txt
-Allow: /.well-known/llms.txt
-Allow: /.well-known/agent-card.json
-Allow: /.well-known/agent.json
-Allow: /.well-known/mcp.json
-Allow: /llms-full.txt
-Allow: /feed.xml
-Allow: /sitemap.xml
 
 # 2. AI Search Engines, Live Grounding & User-Triggered Agent Fetchers (GEO)
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
+User-agent: OAI-ImageBot
 User-agent: Claude-SearchBot
 User-agent: Claude-User
 User-agent: Claude-Web
@@ -52,9 +43,13 @@ User-agent: PerplexityBot
 User-agent: Perplexity-User
 User-agent: Google-Agent
 User-agent: Google-CloudVertexBot
+User-agent: Google-NotebookLM
 User-agent: DuckAssistBot
 User-agent: Meta-ExternalFetcher
 User-agent: MistralAI-User
+User-agent: xAI-Bot
+User-agent: Grok
+User-agent: DeepSeekBot
 User-agent: YouBot
 User-agent: PhindBot
 User-agent: ExaBot
@@ -62,15 +57,6 @@ User-agent: AndiBot
 User-agent: Timpibot
 User-agent: Amazonbot
 Allow: /
-Allow: /llms.txt
-Allow: /.well-known/llms.txt
-Allow: /.well-known/agent-card.json
-Allow: /.well-known/agent.json
-Allow: /.well-known/mcp.json
-Allow: /llms-full.txt
-Allow: /agent-context.json
-Allow: /feed.xml
-Allow: /sitemap.xml
 
 # 3. Foundation Model Knowledge & Entity Graph Control Tokens
 User-agent: GPTBot
@@ -78,20 +64,12 @@ User-agent: ClaudeBot
 User-agent: Google-Extended
 User-agent: Applebot-Extended
 User-agent: Meta-ExternalAgent
+User-agent: Bytespider
 User-agent: cohere-ai
 User-agent: cohere-training-data-crawler
 User-agent: CCBot
 User-agent: Diffbot
 Allow: /
-Allow: /llms.txt
-Allow: /.well-known/llms.txt
-Allow: /.well-known/agent-card.json
-Allow: /.well-known/agent.json
-Allow: /.well-known/mcp.json
-Allow: /llms-full.txt
-Allow: /agent-context.json
-Allow: /feed.xml
-Allow: /sitemap.xml
 
 # 4. Social, Developer & Messaging Rich-Preview Unfurlers
 User-agent: LinkedInBot
@@ -103,24 +81,10 @@ User-agent: Facebot
 User-agent: WhatsApp
 User-agent: TelegramBot
 Allow: /
-Allow: /assets/images/
-Allow: /images/
 
 # 5. Default Fallback for All Other Compliant Crawlers & Autonomous Agents
 User-agent: *
 Allow: /
-Allow: /llms.txt
-Allow: /.well-known/llms.txt
-Allow: /.well-known/agent-card.json
-Allow: /.well-known/agent.json
-Allow: /.well-known/mcp.json
-Allow: /llms-full.txt
-Allow: /agent-context.json
-Allow: /feed.xml
-Allow: /sitemap.xml
-Allow: /sitemap_index.xml
-Allow: /video-sitemap.xml
 
 Sitemap: https://jigyasa-grover.github.io/sitemap_index.xml
 Sitemap: https://jigyasa-grover.github.io/sitemap.xml
-Sitemap: https://jigyasa-grover.github.io/video-sitemap.xml

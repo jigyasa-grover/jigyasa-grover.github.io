@@ -425,6 +425,7 @@
           name: "search-and-play-videos",
           description:
             "Search Jigyasa Grover's keynotes, official Google developer films, podcasts, YouTube Shorts, and cross-posted Instagram Reels, and optionally play the top match inline in the Cinema Lightbox.",
+          annotations: { readOnlyHint: true },
           inputSchema: {
             type: "object",
             properties: {

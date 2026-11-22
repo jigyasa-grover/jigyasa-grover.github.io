@@ -2,6 +2,7 @@
 layout: post
 type: blog
 title: In my Kinetic era - Fine-tuning Gemma 3 to speak Gen Z on a Cloud TPU with one decorator 🤌🏻
+last_modified_at: 2026-11-22
 comments: true
 mathjax: false
 redirect_from:

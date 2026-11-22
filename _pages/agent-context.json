@@ -79,12 +79,25 @@ sitemap: false
   "faqs": {{ site.data.faqs | jsonify }},
   "videos": {
     "watch_hub_url": "{{ site.url }}/highlights/#watch-hub",
+    "cinema_catalog_json": "{{ site.url }}/assets/data/cinema-catalog.json",
     "channels": {{ site.data.videos.channels | jsonify }},
-    "featured_films": {{ site.data.videos.featured_films | jsonify }},
-    "shorts": {{ site.data.videos.shorts | jsonify }}
+    "featured_films_count": {{ site.data.videos.featured_films | size }},
+    "shorts_count": {{ site.data.videos.shorts | size }},
+    "featured_highlights": [
+      {% for v in site.data.videos.featured_films limit:16 %}{
+        "title": {{ v.title | jsonify }},
+        "channel": {{ v.channel | jsonify }},
+        "date": {{ v.date | jsonify }},
+        "category": {{ v.category | jsonify }},
+        "url": {{ v.url | jsonify }}
+      }{% unless forloop.last %},
+      {% endunless %}{% endfor %}
+    ]
   },
+  "archive_index_url": "{{ site.url }}/archive/",
+  "total_archival_posts": 57,
   "articles": [
-    {% assign emitted = false %}{% for post in site.posts %}{% unless post.url == "/archive/" %}{% assign meta = site.data.posts_meta[post.url] %}{% if post.archival %}{% assign cat_name = "Early Archive (2015–17)" %}{% assign row_tags = post.archive_tags %}{% assign row_summary = post.description %}{% else %}{% assign cat_name = meta.category | default: "AI Engineering" %}{% assign row_tags = meta.tags %}{% assign row_summary = meta.summary %}{% endif %}{% if emitted %},
+    {% assign emitted = false %}{% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign meta = site.data.posts_meta[post.url] %}{% assign cat_name = meta.category | default: "AI Engineering" %}{% assign row_tags = meta.tags %}{% assign row_summary = meta.summary %}{% if emitted %},
     {% endif %}{% assign emitted = true %}{
       "title": {{ post.title | jsonify }},
       "seo_title": {{ meta.seo_title | default: post.title | jsonify }},
@@ -92,8 +105,9 @@ sitemap: false
       "path": {{ post.url | jsonify }},
       {% if meta and meta.md_url %}"markdown_url": {{ site.url | append: meta.md_url | jsonify }},
       {% endif %}"date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
-      "category": {{ cat_name | jsonify }},
-      "archival": {% if post.archival %}true{% else %}false{% endif %},
+      {% if post.last_modified_at %}"last_modified": {{ post.last_modified_at | date: "%Y-%m-%d" | jsonify }},
+      {% endif %}"category": {{ cat_name | jsonify }},
+      "archival": false,
       "summary": {{ row_summary | default: "" | jsonify }},
       "tags": {{ row_tags | default: empty | jsonify }}
     }{% endunless %}{% endfor %}

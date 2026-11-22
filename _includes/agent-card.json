@@ -1,9 +1,10 @@
 {
-  "protocolVersion": "0.2.1",
-  "name": "Jigyasa Grover — Official Domain & Collaboration Agent Card",
+  "protocolVersion": "0.3.0",
+  "name": "Jigyasa Grover — Official Domain & Collaboration Discovery Card",
   "description": {{ site.data.identity.short_bio_50 | jsonify }},
-  "url": "https://jigyasa-grover.github.io/",
-  "version": "1.0.0",
+  "url": "https://jigyasa-grover.github.io/agent-context.json",
+  "preferredTransport": "HTTP+JSON",
+  "version": "1.1.0",
   "documentationUrl": "https://jigyasa-grover.github.io/llms-full.txt",
   "iconUrl": "https://jigyasa-grover.github.io/apple-touch-icon.png",
   "provider": {
@@ -14,10 +15,14 @@
     "streaming": false,
     "pushNotifications": false,
     "stateTransitionHistory": false,
+    "readOnlyStaticDiscovery": true,
     "webmcp": true
   },
-  "authentication": {
-    "schemes": ["public"]
+  "securitySchemes": {
+    "public": {
+      "type": "openAccess",
+      "description": "Public read-only static discovery endpoints (GET only; interactive tools run in-browser via W3C WebMCP document.modelContext)."
+    }
   },
   "defaultInputModes": ["text/plain", "application/json"],
   "defaultOutputModes": ["application/json", "text/markdown"],
@@ -26,6 +31,7 @@
     "llms_txt": "https://jigyasa-grover.github.io/llms.txt",
     "llms_full_txt": "https://jigyasa-grover.github.io/llms-full.txt",
     "mcp_manifest": "https://jigyasa-grover.github.io/.well-known/mcp.json",
+    "cinema_catalog_json": "https://jigyasa-grover.github.io/assets/data/cinema-catalog.json",
     "rss_feed": "https://jigyasa-grover.github.io/feed.xml",
     "direct_inquiry": "https://jigyasa-grover.github.io/work-with-me/#contact",
     "booking": {
@@ -79,13 +85,12 @@
     {
       "id": "technical-research-and-open-source",
       "name": "Technical Essays, Open-Source Benchmarks & Publications",
-      "description": "Search 34 indexed technical essays, 76+ public GitHub repositories, Cloud TPU & agentic AI benchmarks, and peer-reviewed publications including Sculpting Data for ML.",
+      "description": "Search 34 indexed technical essays (including 10 full text/markdown twins), 76+ public GitHub repositories, Cloud TPU & agentic AI benchmarks, and peer-reviewed publications including Sculpting Data for ML.",
       "tags": ["open-source", "cloud-tpu", "pytorch", "gemini", "data-centric-ai", "publications"],
       "examples": [
-        "Fetch Markdown summary briefs for TorchTPU Doctor, Google ADK, and Gemini agent evaluation",
+        "Fetch full Markdown articles for TorchTPU Doctor, Proof of Work, Google ADK, and Vertex AI LLM Comparator",
         "Retrieve citations for Sculpting Data for ML and Enterprise LLM Deployment Readiness (SSRN 2026)"
       ]
     }
   ]
 }
-

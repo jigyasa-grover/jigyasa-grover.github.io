@@ -25,6 +25,14 @@ sitemap: false
       <video:player_loc>https://www.youtube.com/embed/{{ v.video_id | xml_escape }}{% if v.start %}?start={{ v.start }}{% endif %}</video:player_loc>
       <video:publication_date>{{ v.upload_date | default: "2025-01-01T00:00:00Z" | xml_escape }}</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
+    </video:video>{% endfor %}{% for s in site.data.videos.shorts %}{% assign s_year = s.date | slice: -4, 4 %}{% if s.date contains "Jan" %}{% assign s_mo = "01" %}{% elsif s.date contains "Feb" %}{% assign s_mo = "02" %}{% elsif s.date contains "Mar" %}{% assign s_mo = "03" %}{% elsif s.date contains "Apr" %}{% assign s_mo = "04" %}{% elsif s.date contains "May" %}{% assign s_mo = "05" %}{% elsif s.date contains "Jun" %}{% assign s_mo = "06" %}{% elsif s.date contains "Jul" %}{% assign s_mo = "07" %}{% elsif s.date contains "Aug" %}{% assign s_mo = "08" %}{% elsif s.date contains "Sep" %}{% assign s_mo = "09" %}{% elsif s.date contains "Oct" %}{% assign s_mo = "10" %}{% elsif s.date contains "Nov" %}{% assign s_mo = "11" %}{% elsif s.date contains "Dec" %}{% assign s_mo = "12" %}{% else %}{% assign s_mo = "01" %}{% endif %}{% assign s_pub = s_year | append: "-" | append: s_mo | append: "-01T00:00:00Z" %}{% assign s_desc = s.title | append: " — " | append: s.tag | append: " (9:16 AI & developer video short by Jigyasa Grover)" %}
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/{{ s.video_id | xml_escape }}/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>{{ s.title | xml_escape }}</video:title>
+      <video:description>{{ s_desc | xml_escape }}</video:description>
+      <video:player_loc>https://www.youtube.com/embed/{{ s.video_id | xml_escape }}</video:player_loc>
+      <video:publication_date>{{ s_pub }}</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
     </video:video>{% endfor %}
   </url>
 </urlset>

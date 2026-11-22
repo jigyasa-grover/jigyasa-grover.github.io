@@ -407,14 +407,17 @@
         return;
       }
 
-      // Anti-bot honeypot & sub-second automated spam check (exempting Playwright / WebDriver with empty honeypot)
-      var isAutomatedBrowser = typeof navigator !== "undefined" && navigator.webdriver === true;
-      if ((gotcha && gotcha.value) || (!isAutomatedBrowser && Date.now() - formLoadedAt < 800)) {
+      // Anti-bot honeypot & sub-second automated spam check (exempting WebMCP agentInvoked & WebDriver)
+      var isAgentOrAutomation = Boolean(e.agentInvoked) || (typeof navigator !== "undefined" && navigator.webdriver === true);
+      if ((gotcha && gotcha.value) || (!isAgentOrAutomation && Date.now() - formLoadedAt < 800)) {
         if (statusEl) {
           statusEl.className = "form-status is-visible is-success";
           statusEl.textContent = "Thank you. Your inquiry has been recorded.";
         }
         contactForm.reset();
+        if (typeof e.respondWith === "function") {
+          e.respondWith(Promise.resolve({ ok: false, error: "Submission blocked by anti-spam check." }));
+        }
         return;
       }
 
@@ -714,6 +717,7 @@
       name: "get-speaker-and-profile-kit",
       description:
         "Retrieve Jigyasa Grover's verified speaker bios (50-word and 150-word), phonetic name pronunciation, education, signature talk abstracts, and high-resolution press photo URLs.",
+      annotations: { readOnlyHint: true },
       inputSchema: {
         type: "object",
         properties: {
@@ -739,6 +743,7 @@
       name: "get-collaboration-channels",
       description:
         "Retrieve Jigyasa Grover's collaboration pillars, AI Go-To-Market (GTM) & developer marketing surfaces, direct booking platforms (Intro, Passionfroot, Naano, 8x), brand partners, live corporate AI workshops, and LinkedIn Learning courses.",
+      annotations: { readOnlyHint: true },
       inputSchema: {
         type: "object",
         properties: {
@@ -789,6 +794,7 @@
       name: "get-gtm-and-marketing-kit",
       description:
         "Retrieve Jigyasa Grover's AI Go-To-Market (GTM), developer marketing (DevRel), and B2B creator launch kit, including 80%+ senior technical buyer ICP metrics, distribution surfaces, launch bundles, verified AI launch campaigns, and Passionfroot/Naano/8x/LinkedIn Creator Marketplace/Intro booking URLs.",
+      annotations: { readOnlyHint: true },
       inputSchema: {
         type: "object",
         properties: {}
@@ -811,13 +817,14 @@
     safeRegister({
       name: "search-technical-articles",
       description:
-        "Search Jigyasa Grover's 91 technical articles and historical open-source archives by keyword or topic category. When currently viewing /blog/, also updates the live article filter UI.",
+        "Search Jigyasa Grover's 34 indexed technical AI, ML, Cloud TPU, and open-source articles (with full Markdown twin URLs) by keyword or topic category. When viewing /blog/, also updates the live filter across all 91 essays and archives.",
+      annotations: { readOnlyHint: true },
       inputSchema: {
         type: "object",
         properties: {
           query: {
             type: "string",
-            description: "Optional keyword search query (e.g., ADK, Gemini, TPU, ranking, privacy, Pharo)."
+            description: "Optional keyword search query (e.g., TorchTPU, ADK, Gemini, TPU, ranking, privacy, Pharo)."
           },
           category: {
             type: "string",
@@ -844,7 +851,7 @@
           var qLower = q.toLowerCase();
           var matches = (ctx.articles || []).filter(function (art) {
             var artCat = (art.category || "").toLowerCase();
-            var catOk = cat === "all" ? (qLower ? true : !art.archival) : artCat.indexOf(cat) !== -1;
+            var catOk = cat === "all" ? true : artCat.indexOf(cat) !== -1;
             if (!catOk) return false;
             if (!qLower) return true;
             var hay = (
@@ -861,6 +868,7 @@
           return formatToolResult({
             total_matches: matches.length,
             ui_synchronized: Boolean(postRows.length),
+            archive_index_url: ctx.archive_index_url,
             results: matches.slice(0, limit)
           });
         });
@@ -872,6 +880,7 @@
         name: "filter-social-feed",
         description:
           "Filter the visible social and brand-partnership feed on the current page by platform or sponsorship.",
+        annotations: { readOnlyHint: true },
         inputSchema: {
           type: "object",
           properties: {
@@ -896,7 +905,8 @@
       safeRegister({
         name: "search-press-features",
         description:
-          "Filter or switch views on Jigyasa Grover's interactive Press & Broadsheet Wall on /press/ by format (all, press, video, podcast), search query, or layout mode (wall, ledger).",
+          "Filter and retrieve Jigyasa Grover's press clippings, broadcast segments, and podcast interviews on /press/ by format (all, press, video, podcast), search query, or layout mode (wall, ledger).",
+        annotations: { readOnlyHint: true },
         inputSchema: {
           type: "object",
           properties: {
@@ -932,81 +942,27 @@
             var viewBtn = document.querySelector('[data-press-view="' + String(args.view).toLowerCase() + '"]');
             if (viewBtn) viewBtn.click();
           }
-          var visibleCards = document.querySelectorAll("[data-press-item]:not([hidden])").length;
+          var visibleEls = Array.prototype.slice.call(document.querySelectorAll("[data-press-item]:not([hidden])"));
+          var items = visibleEls.slice(0, 15).map(function (el) {
+            return {
+              outlet: el.getAttribute("data-outlet") || "",
+              date: el.getAttribute("data-date") || "",
+              category: el.getAttribute("data-category") || "",
+              title: el.getAttribute("data-title") || "",
+              summary: el.getAttribute("data-summary") || "",
+              url: el.getAttribute("data-url") || ""
+            };
+          });
           return formatToolResult({
-            visible_features: visibleCards,
-            status: (document.getElementById("press-results-status") || {}).textContent || ""
+            visible_features: visibleEls.length,
+            status: (document.getElementById("press-results-status") || {}).textContent || "",
+            results: items
           });
         }
       });
     }
-
-    if (contactForm) {
-      safeRegister({
-        name: "draft-collaboration-inquiry",
-        description:
-          "Populate the collaboration inquiry form on the current page with the user's details and focus the submit button so the user can review and send manually.",
-        inputSchema: {
-          type: "object",
-          properties: {
-            name: { type: "string", description: "Full name of the sender." },
-            email: { type: "string", description: "Work or direct email address." },
-            organization: { type: "string", description: "Optional company, conference, or publication." },
-            inquiry_type: {
-              type: "string",
-              enum: [
-                "Speaking & Workshops",
-                "Advisory & Consulting",
-                "Corporate AI Training",
-                "Technical Collaborations",
-                "Content & Brand Partnerships",
-                "Creator Events & Hardware PR",
-                "Media & Interviews",
-                "Other Inquiries"
-              ],
-              description: "Inquiry category."
-            },
-            message: { type: "string", description: "Project, event, or collaboration details (minimum 20 characters)." }
-          },
-          required: ["name", "email", "inquiry_type", "message"]
-        },
-        execute: function (args) {
-          var nameEl = document.getElementById("contact-name");
-          var emailEl = document.getElementById("contact-email");
-          var orgEl = document.getElementById("contact-org");
-          var topicEl = document.getElementById("contact-topic");
-          var msgEl = document.getElementById("contact-message");
-          var submitEl = document.getElementById("contact-submit");
-          var statusEl = document.getElementById("contact-status");
-
-          if (nameEl && args.name) nameEl.value = args.name;
-          if (emailEl && args.email) emailEl.value = args.email;
-          if (orgEl && typeof args.organization === "string") orgEl.value = args.organization;
-          if (topicEl && args.inquiry_type) {
-            for (var i = 0; i < topicEl.options.length; i++) {
-              if (topicEl.options[i].value.toLowerCase() === String(args.inquiry_type).toLowerCase()) {
-                topicEl.selectedIndex = i;
-                break;
-              }
-            }
-          }
-          if (msgEl && args.message) msgEl.value = args.message;
-
-          contactForm.scrollIntoView({ behavior: "smooth", block: "center" });
-          if (submitEl) submitEl.focus();
-          if (statusEl) {
-            var submitLabel = submitEl ? submitEl.textContent.trim() : "Prepare Email Inquiry →";
-            statusEl.className = "form-status is-visible is-success";
-            statusEl.textContent = "Draft ready. Please review the fields above and click '" + submitLabel + "' to confirm.";
-          }
-
-          return formatToolResult({
-            status: "draft_populated_awaiting_user_submit",
-            message: "Inquiry form populated and submit button focused for human review."
-          });
-        }
-      });
-    }
+    // Note: draft-collaboration-inquiry is exposed declaratively on <form id="contact-form" toolname="draft-collaboration-inquiry">
+    // without toolautosubmit (human-in-the-loop review) to prevent duplicate tool-name InvalidStateError collisions.
   }
 
   // 10. Outbound Click, Booking Conversion, Search & Article Read Telemetry

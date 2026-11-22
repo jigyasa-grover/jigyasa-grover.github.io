@@ -125,9 +125,10 @@ Global Stage Footprint (200+ talks across {{ site.data.speaking.countries.size }
 {% for m in site.data.recognition.media_features %}- {{ m.date }} — **{{ m.outlet }}**: {{ m.title }}{% if m.url %} ({{ m.url }}){% endif %}
 {% endfor %}
 
-### Video Channels, Curated Playlists & Vertical Reels
+### Video Channels, Curated Playlists & Featured Talks
 {% for ch in site.data.videos.channels %}- **{{ ch.label }}** ({{ ch.handle }} — {{ ch.stat }}): {{ ch.url }}
-{% endfor %}{% for v in site.data.videos.featured_films %}- **{{ v.title }}** ({{ v.channel }}, {{ v.date }}, {% if v.role_type == "produced" %}Produced by Jigyasa Grover{% else %}Featured{% endif %}): {{ v.summary }} — {{ v.url }}
+{% endfor %}Complete 80-video interactive catalog & 9:16 Reels hub: https://jigyasa-grover.github.io/highlights/ (JSON catalog: https://jigyasa-grover.github.io/assets/data/cinema-catalog.json). Selected highlights:
+{% for v in site.data.videos.featured_films limit:15 %}- **{{ v.title }}** ({{ v.channel }}, {{ v.date }}): {{ v.url }}
 {% endfor %}
 
 ## 12. Verified External Profiles (sameAs)

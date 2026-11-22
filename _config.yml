@@ -1,7 +1,7 @@
 name: Jigyasa Grover
 title: Jigyasa Grover — Machine Learning Engineer, Agentic AI Educator, Author & Advisor
 tagline: Production AI Systems · Agentic Engineering · Technical Education · Industry Advisory
-description: "Jigyasa Grover is a San Francisco Bay Area Machine Learning Engineer (Tech Lead) at Uber, technical AI/ML creator, 14x AI Award Winner, Google gDAB member, LinkedIn Learning instructor (44K+ learners), and co-author of Sculpting Data for ML."
+description: "Jigyasa Grover is a San Francisco Bay Area Machine Learning Engineer (Tech Lead) at Uber, technical AI/ML creator, 14× AI Award Winner, Google gDAB member, LinkedIn Learning instructor (44K+ learners), and co-author of Sculpting Data for ML."
 author: Jigyasa Grover
 locale: en_US
 
@@ -22,12 +22,10 @@ contact:
   web3forms_access_key: ""
   fallback_email: "grover.jigyasa2@gmail.com"
 
-# Live Instagram Feed & Optional Email Newsletter Signup
-# Paste a free Behold.so JSON feed URL to auto-hydrate Instagram Reels,
-# or a free Substack / Buttondown signup URL to enable email subscribe banners on /blog/ and posts.
+# Live Instagram Feed
+# Paste a free Behold.so JSON feed URL to auto-hydrate Instagram Reels.
 social:
   behold_feed_url: ""
-  newsletter_url: ""
 
 footer-links:
   github: jigyasa-grover
@@ -68,14 +66,6 @@ defaults:
     values:
       layout: "post"
       author: "Jigyasa Grover"
-  - scope:
-      path: "_pages"
-    values:
-      last_modified_at: 2026-11-22
-  - scope:
-      path: "index.html"
-    values:
-      last_modified_at: 2026-11-22
 
 exclude:
   - .editorconfig

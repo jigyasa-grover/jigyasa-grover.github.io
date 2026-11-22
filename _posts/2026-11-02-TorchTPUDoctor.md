@@ -3,6 +3,7 @@ layout: post
 type: blog
 title: "TorchTPU Doctor: Agent Skill & Performance Profiler for PyTorch on Cloud TPUs 🩺"
 date: 2026-11-02 08:00:00 -0800
+last_modified_at: 2026-11-22
 comments: true
 mathjax: true
 og_image: "/assets/images/opt/torchtpu-doctor-cover.jpg"

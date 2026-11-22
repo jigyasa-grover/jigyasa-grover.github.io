@@ -42,18 +42,23 @@
 {% assign canonical_url = site.url | append: clean_path %}
 
 {% if page.og_image %}
+  {% assign og_rel_path = page.og_image %}
   {% assign social_image = site.url | append: page.og_image %}
   {% assign is_default_og = false %}
   {% assign social_image_alt = page.og_image_alt | default: meta_title %}
 {% elsif post_meta and post_meta.og_image %}
+  {% assign og_rel_path = post_meta.og_image %}
   {% assign social_image = site.url | append: post_meta.og_image %}
   {% assign is_default_og = false %}
   {% assign social_image_alt = post_meta.og_image_alt | default: meta_title %}
 {% else %}
+  {% assign og_rel_path = site.og_image %}
   {% assign social_image = site.url | append: site.og_image %}
   {% assign is_default_og = true %}
   {% assign social_image_alt = "Jigyasa Grover — Machine Learning Engineer, Agentic AI Educator, Author & Keynote Speaker" %}
 {% endif %}
+{% assign og_dims = site.data.og_images[og_rel_path] %}
+{% assign page_lastmod = page.last_modified_at | default: "2026-11-22" %}
 
 <title>{{ meta_title | escape }}</title>
 <meta name="description" content="{{ meta_desc | escape }}" />
@@ -72,16 +77,23 @@
 <link rel="alternate" type="text/plain" title="Jigyasa Grover — LLM Context (llms.txt)" href="{{ site.url }}/llms.txt" />
 <link rel="alternate" type="text/markdown" title="Jigyasa Grover — Full LLM Profile (llms-full.txt)" href="{{ site.url }}/llms-full.txt" />
 <link rel="alternate" type="application/json" title="Jigyasa Grover — Structured Agent &amp; WebMCP Context (agent-context.json)" href="{{ site.url }}/agent-context.json" />
-<link rel="alternate" type="application/json" title="Jigyasa Grover — A2A Agent Card (agent-card.json)" href="{{ site.url }}/.well-known/agent-card.json" />
+<link rel="alternate" type="application/json" title="Jigyasa Grover — A2A Discovery Card (agent-card.json)" href="{{ site.url }}/.well-known/agent-card.json" />
 <link rel="alternate" type="application/json" title="Jigyasa Grover — WebMCP Discovery Manifest (mcp.json)" href="{{ site.url }}/.well-known/mcp.json" />
 {% if post_meta and post_meta.md_url %}
-<link rel="alternate" type="text/markdown" title="{{ page.title | escape }} — Markdown Summary Brief" href="{{ site.url }}{{ post_meta.md_url }}" />
+<link rel="alternate" type="text/markdown" title="{{ page.title | escape }} — Full Markdown Article" href="{{ site.url }}{{ post_meta.md_url }}" />
 {% endif %}
 <link rel="me" href="https://github.com/jigyasa-grover" />
 <link rel="me" href="https://www.linkedin.com/in/jigyasa-grover/" />
+<link rel="me" href="https://www.linkedin.com/learning/instructors/jigyasa-grover" />
 <link rel="me" href="https://x.com/jigyasa_grover" />
+<link rel="me" href="https://www.youtube.com/@JigyasaGrover" />
+<link rel="me" href="https://www.instagram.com/jigyasagroverofficial/" />
+<link rel="me" href="https://www.tiktok.com/@jigyasagroverofficial" />
 <link rel="me" href="https://scholar.google.com/citations?user=CwlnmQQAAAAJ" />
+<link rel="me" href="https://dblp.org/pid/209/6093.html" />
 <link rel="me" href="https://developers.google.com/profile/u/jigyasa-grover" />
+<link rel="me" href="https://sessionize.com/jigyasagrover" />
+<link rel="me" href="https://dev.to/jigyasagrover" />
 <link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48x48.png" />
@@ -100,6 +112,10 @@
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+{% elsif og_dims %}
+<meta property="og:image:type" content="{{ og_dims.type }}" />
+<meta property="og:image:width" content="{{ og_dims.width }}" />
+<meta property="og:image:height" content="{{ og_dims.height }}" />
 {% endif %}
 <meta property="og:image:alt" content="{{ social_image_alt | escape }}" />
 {% if page.layout == "post" %}
@@ -121,7 +137,7 @@
 {% endif %}
 {% elsif page.url == "/publications/" %}
 <meta property="og:type" content="website" />
-<meta property="og:updated_time" content="{{ site.time | date_to_xmlschema }}" />
+<meta property="og:updated_time" content="{{ page_lastmod | date_to_xmlschema }}" />
 <meta name="citation_title" content="Sculpting Data for ML: The First Act of Machine Learning" />
 <meta name="citation_author" content="Jigyasa Grover" />
 <meta name="citation_author" content="Rishabh Misra" />
@@ -132,10 +148,10 @@
 <meta property="og:type" content="profile" />
 <meta property="profile:first_name" content="Jigyasa" />
 <meta property="profile:last_name" content="Grover" />
-<meta property="og:updated_time" content="{{ site.time | date_to_xmlschema }}" />
+<meta property="og:updated_time" content="{{ page_lastmod | date_to_xmlschema }}" />
 {% else %}
 <meta property="og:type" content="website" />
-<meta property="og:updated_time" content="{{ site.time | date_to_xmlschema }}" />
+<meta property="og:updated_time" content="{{ page_lastmod | date_to_xmlschema }}" />
 {% endif %}
 
 <!-- Twitter / X Card -->

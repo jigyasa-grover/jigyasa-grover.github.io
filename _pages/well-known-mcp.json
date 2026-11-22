@@ -4,7 +4,7 @@ permalink: /.well-known/mcp.json
 sitemap: false
 ---
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "protocol": "W3C WebMCP + Static Agent Context",
   "name": "jigyasa-grover-webmcp",
   "title": "Jigyasa Grover — WebMCP & Agentic Discovery Manifest",
@@ -21,45 +21,53 @@ sitemap: false
     {
       "name": "get-speaker-and-profile-kit",
       "mode": "imperative",
+      "annotations": { "readOnlyHint": true },
       "description": "Retrieve verified 50-word and 150-word speaker bios, phonetic pronunciation, signature talk abstracts, and high-res press portrait URLs."
     },
     {
       "name": "get-collaboration-channels",
       "mode": "imperative",
+      "annotations": { "readOnlyHint": true },
       "description": "Retrieve collaboration pillars, booking platforms (Intro, Passionfroot, Naano, 8x), corporate workshops, and courses."
     },
     {
       "name": "get-gtm-and-marketing-kit",
       "mode": "imperative",
+      "annotations": { "readOnlyHint": true },
       "description": "Retrieve AI Go-To-Market (GTM), developer marketing, audience ICP (80%+ senior technical buyers), launch bundles, and campaign proof URLs."
     },
     {
       "name": "search-technical-articles",
-      "mode": "imperative+declarative",
+      "mode": "imperative",
+      "annotations": { "readOnlyHint": true },
       "route": "https://jigyasa-grover.github.io/blog/",
-      "description": "Search 91 technical essays and open-source archives by keyword or topic category."
+      "description": "Search 34 indexed technical AI, ML, Cloud TPU, and open-source articles (including 10 full Markdown twins) by keyword or topic category, and synchronize the live filter on /blog/."
     },
     {
       "name": "draft-collaboration-inquiry",
-      "mode": "declarative+imperative",
+      "mode": "declarative",
+      "annotations": { "readOnlyHint": false },
       "route": "https://jigyasa-grover.github.io/work-with-me/#contact",
-      "description": "Populate the collaboration inquiry form and focus the submit button for human confirmation."
+      "description": "Declarative WebMCP HTML form (without toolautosubmit) to draft a collaboration inquiry for human review before submission."
     },
     {
       "name": "search-press-features",
-      "mode": "declarative+imperative",
+      "mode": "imperative",
+      "annotations": { "readOnlyHint": true },
       "route": "https://jigyasa-grover.github.io/press/",
-      "description": "Filter and search press clippings, broadcast segments, and podcast interviews."
+      "description": "Filter and retrieve structured press clippings, broadcast segments, and podcast interviews on /press/."
     },
     {
       "name": "search-and-play-videos",
       "mode": "imperative",
+      "annotations": { "readOnlyHint": true },
       "route": "https://jigyasa-grover.github.io/highlights/",
       "description": "Search keynotes, Google developer films, podcasts, YouTube Shorts, and Reels, and optionally play the top match inline in the Cinema Lightbox."
     },
     {
       "name": "filter-social-feed",
       "mode": "imperative",
+      "annotations": { "readOnlyHint": true },
       "route": "https://jigyasa-grover.github.io/highlights/",
       "description": "Filter the visible social and brand-partnership feed on the current page by platform or sponsorship."
     }
@@ -74,4 +82,3 @@ sitemap: false
     }
   ]
 }
-

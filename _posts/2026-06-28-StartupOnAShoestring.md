@@ -2,6 +2,7 @@
 layout: post
 type: blog
 title: Startup on a Shoestring - Building with a 50¢ Budget using Google Antigravity Cost & Token Monitors 💸
+last_modified_at: 2026-11-22
 comments: true
 mathjax: true
 redirect_from:

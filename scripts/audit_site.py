@@ -106,6 +106,11 @@ EXPECTED_ROUTES = [
     "/StartupOnAShoestring/index.md",
     "/KineticFinetuningOnCloudTPU/index.md",
     "/TrustAtTopSpeed/index.md",
+    "/ColabVSCodeExtension/index.md",
+    "/CriticsCutMultilingualContextADKAgent/index.md",
+    "/SmartSuitcasePackingUsingGeminiImagenOpenWeather/index.md",
+    "/SmarterThanA5thGrader-LLMComparatorOnGoogleVertexAI/index.md",
+    "/BookBuddyInteractiveStorytellingUsingAGemmaBasedRAG/index.md",
     "/b7e4c9a12d8f4e639a501c7b8d2e4f6a.txt",
     "/favicon.ico",
     "/favicon.svg",
@@ -144,9 +149,18 @@ class PageInspector(HTMLParser):
         self.toolnames = []
         self._skip_text_depth = 0
         self.non_code_text_chunks = []
+        self.ids = set()
+        self.classes = set()
+        self.tags = set()
 
     def handle_starttag(self, tag, attrs) -> None:
         ad = dict(attrs)
+        self.tags.add(tag)
+        if ad.get("id"):
+            self.ids.add(ad["id"])
+        if ad.get("class"):
+            for cls in ad["class"].split():
+                self.classes.add(cls)
         if tag in ("script", "style", "pre", "code", "textarea", "noscript"):
             self._skip_text_depth += 1
         if "toolname" in ad and ad["toolname"].strip():
@@ -368,17 +382,54 @@ def main() -> None:
     titles_seen = {}
     jsonld_count = 0
     declarative_toolnames = set()
+    page_ids_by_route = {}
+    anchor_checks = []
     gfm_alert_re = re.compile(r"\[!(?:WARNING|NOTE|TIP|IMPORTANT|CAUTION)\]")
     mathjax_currency_re = re.compile(r"(?<!\\)\$\d")
     unparsed_single_dollar_tex_re = re.compile(r"(?<!\$)\$[^$\n]*\\[A-Za-z]+[^$\n]*\$(?!\$)")
 
+    def _selector_matches_dom(sel: str, p_insp: PageInspector) -> bool:
+        for part in sel.strip().split():
+            if part.startswith("."):
+                if part[1:] not in p_insp.classes:
+                    return False
+            elif part.startswith("#"):
+                if part[1:] not in p_insp.ids:
+                    return False
+            elif re.match(r"^[a-zA-Z0-9]+$", part):
+                if part not in p_insp.tags:
+                    return False
+        return True
+
     for path in html_files:
         rel_path = "/" + str(path.relative_to(SITE_DIR))
+        route_key = rel_path[: -len("index.html")] if rel_path.endswith("/index.html") else rel_path
         raw = path.read_text(encoding="utf-8")
 
         parser = PageInspector()
         parser.feed(raw)
         declarative_toolnames.update(parser.toolnames)
+        page_ids_by_route[route_key] = parser.ids
+        if route_key.endswith(".html"):
+            page_ids_by_route[route_key[: -len(".html")]] = parser.ids
+
+        for href in parser.hrefs:
+            if "#" not in href or href.startswith(("mailto:", "tel:", "javascript:", "data:")):
+                continue
+            if href.startswith(("http://", "https://")):
+                ph = urlparse(href)
+                if ph.netloc != "jigyasa-grover.github.io":
+                    continue
+                t_path, t_frag = (ph.path or "/"), ph.fragment
+            elif href.startswith("#"):
+                t_path, t_frag = route_key, href[1:]
+            elif href.startswith("/"):
+                t_path, t_frag = href.split("#", 1)
+                t_path = t_path.split("?")[0] or "/"
+            else:
+                continue
+            if t_frag:
+                anchor_checks.append((rel_path, t_path, t_frag, href))
 
         non_code_text = "".join(parser.non_code_text_chunks)
         if gfm_alert_re.search(non_code_text):
@@ -480,8 +531,13 @@ def main() -> None:
                 errors.append(f"TITLE TOO LONG FOR SERP ({len(title)} > 68 chars) in {rel_path}: '{title}'")
             if not is_post and not (110 <= len(desc) <= 165):
                 errors.append(f"META DESCRIPTION LENGTH ({len(desc)} chars, expected 110-165) in {rel_path}")
+            if is_post and len(desc) > 165:
+                errors.append(f"POST META DESCRIPTION TOO LONG ({len(desc)} > 165 chars) in {rel_path}")
+            og_props = {m.get("property"): m.get("content", "") for m in parser.metas if m.get("property")}
+            if "og:image" in og_props and ("og:image:width" not in og_props or "og:image:height" not in og_props):
+                errors.append(f"MISSING og:image:width/height in {rel_path}")
 
-        if not parser.jsonld_blocks:
+        if is_indexed and not parser.jsonld_blocks:
             errors.append(f"MISSING JSON-LD in {rel_path}")
         for blk in parser.jsonld_blocks:
             try:
@@ -496,14 +552,23 @@ def main() -> None:
                     same_as = person_nodes[0].get("sameAs", [])
                     if len(same_as) != len(set(same_as)):
                         errors.append(f"DUPLICATE URLS IN Person.sameAs in {rel_path}")
-                    if not person_nodes[0].get("hasCredential"):
-                        errors.append(f"MISSING Person.hasCredential E-E-A-T SCHEMA in {rel_path}")
+                    if rel_path in ("/index.html", "/about.html"):
+                        if not person_nodes[0].get("hasCredential"):
+                            errors.append(f"MISSING Person.hasCredential E-E-A-T SCHEMA in {rel_path}")
+                        if not person_nodes[0].get("disambiguatingDescription"):
+                            errors.append(f"MISSING Person.disambiguatingDescription in {rel_path}")
                     if "subjectOf" in person_nodes[0]:
                         errors.append(f"INVALID Person.subjectOf ON AUTHORED WORK in {rel_path}")
                 website_nodes = [n for n in graph if n.get("@id") == "https://jigyasa-grover.github.io/#website"]
                 if website_nodes and not website_nodes[0].get("potentialAction"):
                     errors.append(f"MISSING WebSite SearchAction in {rel_path}")
                 for node in graph:
+                    sp = node.get("speakable")
+                    if isinstance(sp, dict) and "cssSelector" in sp:
+                        sels = sp["cssSelector"] if isinstance(sp["cssSelector"], list) else [sp["cssSelector"]]
+                        for sel in sels:
+                            if not _selector_matches_dom(sel, parser):
+                                errors.append(f"UNMATCHED speakable SELECTOR '{sel}' in {rel_path}")
                     for date_key in ("datePublished", "dateCreated"):
                         dval = node.get(date_key)
                         if isinstance(dval, str) and ("–" in dval or re.match(r"^\d{4}-\d{4}$", dval)):
@@ -523,15 +588,21 @@ def main() -> None:
                                 errors.append(f"MISSING uploadDate on ItemList VideoObject in {rel_path}")
                 if rel_path in ("/index.html", "/about.html") and "ProfilePage" not in gtypes:
                     errors.append(f"MISSING ProfilePage SCHEMA in {rel_path}")
+                if rel_path == "/work-with-me/index.html" and "ContactPage" not in gtypes:
+                    errors.append("MISSING ContactPage SCHEMA in /work-with-me/")
                 if rel_path == "/publications/index.html" and not ({"Book", "ScholarlyArticle"} <= gtypes):
                     errors.append("MISSING Book OR ScholarlyArticle SCHEMA in /publications/")
                 if rel_path == "/projects/index.html" and "SoftwareSourceCode" not in blk:
                     errors.append("MISSING SoftwareSourceCode SCHEMA in /projects/")
-                if rel_path == "/speaking/index.html" and "VideoObject" not in gtypes:
-                    errors.append("MISSING VideoObject SCHEMA in /speaking/")
-                if rel_path == "/teaching/index.html" and "CourseInstance" not in blk:
-                    errors.append("MISSING CourseInstance SCHEMA in /teaching/")
-                if rel_path in ("/partnerships/index.html", "/advisory/index.html") and "Service" not in gtypes:
+                if rel_path == "/speaking/index.html" and not ({"VideoObject", "Event"} <= gtypes):
+                    errors.append("MISSING VideoObject OR Event SCHEMA in /speaking/")
+                if rel_path == "/experience/index.html" and "OrganizationRole" not in blk:
+                    errors.append("MISSING OrganizationRole SCHEMA in /experience/")
+                if rel_path == "/press/index.html" and "NewsArticle" not in blk:
+                    errors.append("MISSING NewsArticle SCHEMA in /press/")
+                if rel_path == "/teaching/index.html" and ("CourseInstance" not in blk or "Service" not in gtypes):
+                    errors.append("MISSING CourseInstance OR Workshop Service SCHEMA in /teaching/")
+                if rel_path in ("/partnerships/index.html", "/advisory/index.html", "/media-kit/index.html") and "Service" not in gtypes:
                     errors.append(f"MISSING Service SCHEMA in {rel_path}")
             except Exception as exc:
                 errors.append(f"INVALID JSON-LD in {rel_path}: {exc}")
@@ -544,6 +615,19 @@ def main() -> None:
                 errors.append(f"ARCHIVAL POST {rel_path} MISSING noindex robots meta tag")
             if sitemap_path.is_file() and canon in sm_raw:
                 errors.append(f"ARCHIVAL POST {canon} SHOULD NOT APPEAR IN sitemap.xml")
+
+    # 5b. Validate all internal #fragment anchors resolve to real DOM ids
+    for src_rel, t_path, t_frag, orig_href in anchor_checks:
+        target_ids = (
+            page_ids_by_route.get(t_path)
+            or page_ids_by_route.get(t_path + "/")
+            or page_ids_by_route.get(t_path.rstrip("/"))
+        )
+        if target_ids is None:
+            if t_path not in EXTERNAL_SUBREPOS and t_path not in redirect_routes:
+                errors.append(f"BROKEN FRAGMENT TARGET PAGE in {src_rel}: {orig_href}")
+        elif t_frag not in target_ids:
+            errors.append(f"BROKEN INTERNAL #ANCHOR in {src_rel}: {orig_href} (id='{t_frag}' not found)")
 
     # 6. Verify booking platform links on /work-with-me/
     wwm_path = SITE_DIR / "work-with-me" / "index.html"
@@ -589,12 +673,17 @@ def main() -> None:
         "StartupOnAShoestring/index.md",
         "KineticFinetuningOnCloudTPU/index.md",
         "TrustAtTopSpeed/index.md",
+        "ColabVSCodeExtension/index.md",
+        "CriticsCutMultilingualContextADKAgent/index.md",
+        "SmartSuitcasePackingUsingGeminiImagenOpenWeather/index.md",
+        "SmarterThanA5thGrader-LLMComparatorOnGoogleVertexAI/index.md",
+        "BookBuddyInteractiveStorytellingUsingAGemmaBasedRAG/index.md",
     ):
         md_path = SITE_DIR / md_rel
         if md_path.is_file():
             md_txt = md_path.read_text(encoding="utf-8")
-            if "{{" in md_txt or "{%" in md_txt or len(md_txt.strip()) < 300:
-                errors.append(f"INVALID OR SHORT MARKDOWN TWIN: /{md_rel}")
+            if "{%" in md_txt or len(md_txt.strip()) < 1500:
+                errors.append(f"INVALID OR SHORT FULL MARKDOWN TWIN: /{md_rel} ({len(md_txt.strip())} B)")
 
     site_js_path = SITE_DIR / "assets" / "js" / "site.js"
     if site_js_path.is_file():
@@ -602,7 +691,7 @@ def main() -> None:
         if "modelContext" not in site_js or "registerTool" not in site_js:
             errors.append("MISSING WebMCP modelContext.registerTool support in /assets/js/site.js")
 
-    # 8. Verify WebMCP tool-name parity across mcp.json, JS registrations, and HTML toolname=
+    # 8. Verify WebMCP tool-name parity, zero declarative/imperative collisions, annotations, and honeypot hygiene
     mcp_path = SITE_DIR / ".well-known" / "mcp.json"
     if mcp_path.is_file():
         mcp_data = json.loads(mcp_path.read_text(encoding="utf-8"))
@@ -612,13 +701,25 @@ def main() -> None:
             jp = SITE_DIR / "assets" / "js" / js_name
             if jp.is_file():
                 js_src = jp.read_text(encoding="utf-8")
-                js_tools.update(re.findall(r'(?:safeRegister|registerTool)\(\s*\{\s*name:\s*"([^"]+)"', js_src))
-        if js_tools - manifest_tools:
-            errors.append(f"JS WebMCP TOOLS MISSING FROM /.well-known/mcp.json: {sorted(js_tools - manifest_tools)}")
-        if manifest_tools - js_tools:
-            errors.append(f"MANIFEST WebMCP TOOLS NOT REGISTERED IN JS: {sorted(manifest_tools - js_tools)}")
-        if declarative_toolnames - manifest_tools:
-            errors.append(f"DECLARATIVE HTML toolname= MISSING FROM /.well-known/mcp.json: {sorted(declarative_toolnames - manifest_tools)}")
+                reg_blocks = re.findall(r'(?:safeRegister|registerTool)\(\s*\{(.*?)inputSchema:', js_src, re.S)
+                for blk in reg_blocks:
+                    m_name = re.search(r'name:\s*"([^"]+)"', blk)
+                    if m_name:
+                        tname = m_name.group(1)
+                        js_tools.add(tname)
+                        if "readOnlyHint" not in blk:
+                            errors.append(f"IMPERATIVE WebMCP TOOL '{tname}' IN {js_name} MISSING annotations.readOnlyHint")
+        implemented_tools = js_tools | declarative_toolnames
+        if implemented_tools - manifest_tools:
+            errors.append(f"IMPLEMENTED WebMCP TOOLS MISSING FROM /.well-known/mcp.json: {sorted(implemented_tools - manifest_tools)}")
+        if manifest_tools - implemented_tools:
+            errors.append(f"MANIFEST WebMCP TOOLS NOT IMPLEMENTED IN JS OR HTML: {sorted(manifest_tools - implemented_tools)}")
+        collisions = js_tools & declarative_toolnames
+        if collisions:
+            errors.append(f"DUPLICATE WebMCP TOOL NAME COLLISION (imperative JS + declarative HTML): {sorted(collisions)}")
+        wwm_html_path = SITE_DIR / "work-with-me" / "index.html"
+        if wwm_html_path.is_file() and 'name="_gotcha"' in wwm_html_path.read_text(encoding="utf-8"):
+            errors.append('HONEYPOT name="_gotcha" LEAKS INTO DECLARATIVE WebMCP FORM SCHEMA on /work-with-me/')
 
     # 9. Enforce AGENTS.md editorial prose invariant (no unspaced em dashes in structured data/templates/JS)
     unspaced_em_re = re.compile(r"[A-Za-z0-9]—[A-Za-z0-9]")

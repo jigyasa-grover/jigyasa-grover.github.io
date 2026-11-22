@@ -31,27 +31,61 @@ jobs:
       - name: Run automated SEO, link, JSON-LD & GEO audit
         run: python3 scripts/audit_site.py
 
-      - name: Notify Bing, ChatGPT Search & IndexNow on master push
+      - name: Notify Bing, ChatGPT Search & IndexNow after live deploy
         if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
         continue-on-error: true
         run: |
           python3 - <<'PY'
-          import json, time, urllib.request, xml.etree.ElementTree as ET
-          key_url = "https://jigyasa-grover.github.io/b7e4c9a12d8f4e639a501c7b8d2e4f6a.txt"
-          for _ in range(12):
+          import email.utils, json, subprocess, time, urllib.request, xml.etree.ElementTree as ET
+
+          key = "b7e4c9a12d8f4e639a501c7b8d2e4f6a"
+          key_url = f"https://jigyasa-grover.github.io/{key}.txt"
+          probe_url = "https://jigyasa-grover.github.io/sitemap.xml"
+
+          commit_ts = int(subprocess.check_output(["git", "show", "-s", "--format=%ct", "HEAD"], text=True).strip())
+
+          # Wait up to 3 minutes for GitHub Pages to publish this commit before pinging IndexNow
+          deployed = False
+          for _ in range(18):
               try:
-                  with urllib.request.urlopen(key_url, timeout=5) as r:
-                      if r.status == 200:
-                          break
+                  req = urllib.request.Request(probe_url, method="HEAD")
+                  with urllib.request.urlopen(req, timeout=8) as r:
+                      lm = r.headers.get("Last-Modified")
+                      if r.status == 200 and lm:
+                          live_ts = int(email.utils.parsedate_to_datetime(lm).timestamp())
+                          if live_ts >= commit_ts:
+                              deployed = True
+                              break
               except Exception:
                   pass
-              time.sleep(5)
+              time.sleep(10)
+
+          if not deployed:
+              print("GitHub Pages deploy did not surpass commit timestamp within 180s; submitting anyway.")
+
           tree = ET.parse("_site/sitemap.xml")
           ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
           urls = [el.text.strip() for el in tree.findall(".//sm:loc", ns) if el.text]
+          for extra in (
+              "https://jigyasa-grover.github.io/llms.txt",
+              "https://jigyasa-grover.github.io/llms-full.txt",
+              "https://jigyasa-grover.github.io/TorchTPUDoctor/index.md",
+              "https://jigyasa-grover.github.io/ProofOfWork/index.md",
+              "https://jigyasa-grover.github.io/StartupOnAShoestring/index.md",
+              "https://jigyasa-grover.github.io/KineticFinetuningOnCloudTPU/index.md",
+              "https://jigyasa-grover.github.io/TrustAtTopSpeed/index.md",
+              "https://jigyasa-grover.github.io/ColabVSCodeExtension/index.md",
+              "https://jigyasa-grover.github.io/CriticsCutMultilingualContextADKAgent/index.md",
+              "https://jigyasa-grover.github.io/SmartSuitcasePackingUsingGeminiImagenOpenWeather/index.md",
+              "https://jigyasa-grover.github.io/SmarterThanA5thGrader-LLMComparatorOnGoogleVertexAI/index.md",
+              "https://jigyasa-grover.github.io/BookBuddyInteractiveStorytellingUsingAGemmaBasedRAG/index.md",
+          ):
+              if extra not in urls:
+                  urls.append(extra)
+
           payload = json.dumps({
               "host": "jigyasa-grover.github.io",
-              "key": "b7e4c9a12d8f4e639a501c7b8d2e4f6a",
+              "key": key,
               "keyLocation": key_url,
               "urlList": urls,
           }).encode("utf-8")
@@ -62,5 +96,5 @@ jobs:
               method="POST",
           )
           with urllib.request.urlopen(req, timeout=15) as resp:
-              print(f"IndexNow submitted {len(urls)} URLs -> HTTP {resp.status}")
+              print(f"IndexNow submitted {len(urls)} URLs (deployed={deployed}) -> HTTP {resp.status}")
           PY

@@ -107,7 +107,7 @@ layout: default
         <div class="share-bar__links">
           <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ canonical_url | uri_escape }}" target="_blank" rel="noopener">Share on LinkedIn ↗</a>
           <a href="https://x.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ canonical_url | uri_escape }}&via=jigyasa_grover" target="_blank" rel="noopener">Post on X ↗</a>
-          {% if meta and meta.md_url %}<a href="{{ meta.md_url }}">Markdown Brief</a>{% endif %}
+          {% if meta and meta.md_url %}<a href="{{ meta.md_url }}">Full Markdown</a>{% endif %}
           <button id="copy-article-url" type="button" data-url="{{ canonical_url }}">Copy Link</button>
         </div>
       </div>
@@ -155,9 +155,6 @@ layout: default
             Explore corporate AI training, startup advisory, and conference keynotes, or join <strong>44,000+ learners</strong> across my LinkedIn Learning courses.
           </p>
           <div class="btn-group">
-            {% if site.social.newsletter_url and site.social.newsletter_url != "" %}
-            <a class="btn btn--accent btn--compact" href="{{ site.social.newsletter_url }}" target="_blank" rel="noopener">Subscribe via Email ↗</a>
-            {% endif %}
             <a class="btn btn--primary btn--compact" href="/work-with-me/">Work With Me →</a>
             <a class="btn btn--secondary btn--compact" href="/speaking/">Keynotes &amp; Panels →</a>
             <a class="btn btn--secondary btn--compact" href="/feed.xml">RSS Feed ↗</a>

@@ -4,10 +4,10 @@
     data-formspree="{{ site.contact.formspree_endpoint | escape }}"
     data-web3forms="{{ site.contact.web3forms_access_key | escape }}"
     data-fallback-email="{{ site.contact.fallback_email | escape }}">
-    <!-- Honeypot anti-spam trap (hidden from screen readers and sighted users) -->
+    <!-- Honeypot anti-spam trap (unnamed so it stays excluded from FormData & WebMCP declarative schemas) -->
     <div class="sr-only" aria-hidden="true">
       <label for="contact-gotcha">Leave this field empty</label>
-      <input type="text" id="contact-gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
+      <input type="text" id="contact-gotcha" tabindex="-1" autocomplete="off" />
     </div>
 
     <div class="form-grid">

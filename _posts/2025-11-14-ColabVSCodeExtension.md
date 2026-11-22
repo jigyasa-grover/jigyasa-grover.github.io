@@ -1,7 +1,8 @@
 ---
 layout: post
 type: blog
-title: Supercharging VS Code Vibe Coding with Gemini Code Assist +*new* Google Colab Extension 🔋
+title: Supercharging VS Code Vibe Coding with Gemini Code Assist + New Google Colab Extension 🔋
+last_modified_at: 2026-11-22
 comments: true
 mathjax: false
 redirect_from:

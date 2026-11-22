@@ -3,5 +3,4 @@ layout: null
 permalink: /TrustAtTopSpeed/index.md
 sitemap: false
 ---
-{% include post-markdown-twin.md post_url="/TrustAtTopSpeed/" %}
-
+{% include post-markdown-twin.md post_url="/TrustAtTopSpeed/" slug="TrustAtTopSpeed" %}

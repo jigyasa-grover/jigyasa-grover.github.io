@@ -1,12 +1,12 @@
 gtm_positioning:
   headline: "AI DevTool Creator, Go-To-Market (GTM) & Developer Relations Partnerships"
-  summary: "Practitioner-led AI DevTool creator campaigns, go-to-market (GTM) execution, developer relations (DevRel) partnerships, and technical advisory built by an active Uber ML Tech Lead, Google Developer Advisory Board (gDAB) member, and 14x AI Award Winner."
+  summary: "Practitioner-led AI DevTool creator campaigns, go-to-market (GTM) execution, developer relations (DevRel) partnerships, and technical advisory built by an active Uber ML Tech Lead, Google Developer Advisory Board (gDAB) member, and 14× AI Award Winner."
   target_icp: "80%+ senior technical decision-makers and buyers (Staff+ ML & Software Engineers, Engineering Directors, VPs of AI/Engineering, Founders, and C-Suite executives) across Google, LinkedIn, Google DeepMind, Meta, Microsoft, Amazon, AWS, NVIDIA, OpenAI, and Apple."
   reach_metrics:
     - "80%+ senior technical & executive buyer audience (9% CXO, 9% Founder, 5% Co-Founder; 22% SF Bay Area, 8% NYC, 4% London)"
     - "~318K annual LinkedIn impressions, 167K+ unique members reached (14,700+ followers, 2.5%+ 90-day ER; 2.0%–3.6% sponsored launch ER)"
     - "Top 10 follower companies: Google (4%), LinkedIn, Google DeepMind, Meta, Microsoft, Amazon, AWS, NVIDIA, OpenAI, and Apple"
-    - "76+ public GitHub repositories & 245+ external upstream PRs & issues (including Hugging Face transformers & peft)"
+    - "76+ public GitHub repositories & 245+ external upstream PRs & issues (including a merged Hugging Face peft Cloud TPU fix)"
     - "34+ SEO & GEO-indexed technical deep-dive essays"
     - "28+ AI lab, hyperscaler, DevTools & media brand partners (LinkedIn Creator Marketplace & Thought Leader Ads supported)"
     - "30+ AI startups, enterprises & VCs advised via Afterdays (including Anthropic & Google gDAB)"
@@ -56,7 +56,7 @@ surfaces:
     channel: "GitHub & Open-Source Anchor Repos"
     kicker: "Hugging Face OSS · Runnable Code"
     stat: "76+ Repos · 245+ PRs & Issues"
-    summary: "End-to-end reference implementations, sponsored integration modules, MCP connectors, Agent Skills, Colab notebooks, and benchmark harnesses built by an upstream Hugging Face (transformers, peft) contributor."
+    summary: "End-to-end reference implementations, sponsored integration modules, MCP connectors, Agent Skills, Colab notebooks, and benchmark harnesses built by an upstream Hugging Face (peft) and Cloud TPU open-source contributor."
     best_for: "AI SDKs, Cloud/TPU compute, eval/observability frameworks, and DevTools adoption."
     url: "https://github.com/jigyasa-grover"
     cta_label: "Explore GitHub ↗"
@@ -267,7 +267,7 @@ creator_kit:
     - number: "02"
       kicker: "Hardware & Gadget Seeding"
       title: "Tech Hardware, AI Devices, Wearables & Studio Gear Reviews"
-      summary: "Practitioner-tested reviews evaluating AI laptops, GPU workstations, smart glasses, AI wearables, edge inference kits, monitors, keyboards, and travel creator gear inside real coding, ML, and 200-plus-flight workflows."
+      summary: "Practitioner-tested reviews evaluating AI laptops, GPU workstations, smart glasses, AI wearables, edge inference kits, monitors, keyboards, and travel creator gear inside real coding, ML, and global conference travel workflows (200+ talks across 21 countries)."
       tags: ["AI PCs & GPUs", "Smart Glasses & Wearables", "Studio & Travel Tech"]
     - number: "03"
       kicker: "Hosted Travel & Hospitality"

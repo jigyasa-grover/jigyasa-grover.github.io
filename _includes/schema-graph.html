@@ -1,7 +1,13 @@
+{% unless page.noindex == true %}
 {% assign id = site.data.identity %}
 {% assign post_meta = site.data.posts_meta[page.url] %}
 {% assign clean_path = page.url | replace: "index.html", "" %}
 {% assign canonical_url = site.url | append: clean_path %}
+{% assign page_lastmod = page.last_modified_at | default: "2026-11-22" %}
+{% assign is_entity_hub = false %}
+{% if page.url == "/" or page.url == "/about" %}
+  {% assign is_entity_hub = true %}
+{% endif %}
 {% if page.seo_title %}
   {% assign schema_title = page.seo_title %}
 {% elsif post_meta and post_meta.seo_title %}
@@ -24,16 +30,21 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+    {% if is_entity_hub %}
     {
       "@type": "Person",
       "@id": "https://jigyasa-grover.github.io/#person",
       "name": "Jigyasa Grover",
       "givenName": "Jigyasa",
       "familyName": "Grover",
+      "alternateName": ["@jigyasa_grover", "@JigyasaGrover", "jig-YAH-sah GROH-ver"],
       "url": "https://jigyasa-grover.github.io/",
+      "mainEntityOfPage": "https://jigyasa-grover.github.io/about",
       "image": "https://jigyasa-grover.github.io/assets/images/opt/profile_photo.jpg",
       "jobTitle": "Machine Learning Engineer (Tech Lead), B2B AI & DevTools Creator, Educator, Author & Advisor",
+      "disambiguatingDescription": "San Francisco Bay Area Machine Learning Engineer (Tech Lead) at Uber, Google Developer Advisory Board member, LinkedIn Learning AI instructor, and co-author of Sculpting Data for ML (Google Knowledge Graph MID /g/11nkd9r5jp).",
       "description": {{ id.short_bio_50 | jsonify }},
+      "knowsLanguage": ["en", "hi"],
       "identifier": [
         {
           "@type": "PropertyValue",
@@ -58,6 +69,13 @@
         "@type": "Organization",
         "name": "Uber",
         "url": "https://www.uber.com/"
+      },
+      "affiliation": {
+        "@type": "Organization",
+        "@id": "https://jigyasa-grover.github.io/#afterdays",
+        "name": "Afterdays",
+        "url": "https://jigyasa-grover.github.io/advisory/",
+        "description": "Independent AI technical advisory, corporate education, and developer go-to-market practice founded by Jigyasa Grover in 2015."
       },
       "alumniOf": [
         {
@@ -234,6 +252,29 @@
       ],
       "sameAs": {{ id.same_as | jsonify }}
     },
+    {% else %}
+    {
+      "@type": "Person",
+      "@id": "https://jigyasa-grover.github.io/#person",
+      "name": "Jigyasa Grover",
+      "url": "https://jigyasa-grover.github.io/",
+      "mainEntityOfPage": "https://jigyasa-grover.github.io/about",
+      "image": "https://jigyasa-grover.github.io/assets/images/opt/profile_photo.jpg",
+      "jobTitle": "Machine Learning Engineer (Tech Lead), AI Creator, Educator, Author & Advisor",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Uber",
+        "url": "https://www.uber.com/"
+      },
+      "sameAs": [
+        "https://g.co/kgs/Lvk5yk",
+        "https://www.linkedin.com/in/jigyasa-grover/",
+        "https://github.com/jigyasa-grover",
+        "https://x.com/jigyasa_grover",
+        "https://scholar.google.com/citations?user=CwlnmQQAAAAJ"
+      ]
+    },
+    {% endif %}
     {
       "@type": "WebSite",
       "@id": "https://jigyasa-grover.github.io/#website",
@@ -260,7 +301,9 @@
         "query-input": "required name=search_term_string"
       }
     }
-    {% if page.layout == "post" and page.noindex != true %},
+    {% if page.layout == "post" %},
+    {% assign post_words = page.content | strip_html | number_of_words %}
+    {% assign post_mins = post_words | divided_by: 210 | plus: 1 %}
     {
       "@type": "BlogPosting",
       "@id": {{ canonical_url | append: "#article" | jsonify }},
@@ -270,7 +313,8 @@
       "description": {{ schema_desc | jsonify }},
       "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
       "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
-      "wordCount": {{ page.content | number_of_words }},
+      "wordCount": {{ post_words }},
+      "timeRequired": {{ "PT" | append: post_mins | append: "M" | jsonify }},
       "author": {
         "@id": "https://jigyasa-grover.github.io/#person"
       },
@@ -285,11 +329,22 @@
       "isAccessibleForFree": true,
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".post-summary-box"]
+        "cssSelector": {% if post_meta and post_meta.faqs %}["h1", ".post-summary-box", ".faq-item__answer"]{% else %}["h1", ".post-summary-box"]{% endif %}
       }
       {% if post_meta and post_meta.tags %},
       "keywords": {{ post_meta.tags | join: ", " | jsonify }},
-      "articleSection": {{ post_meta.category | jsonify }}
+      "articleSection": {{ post_meta.category | jsonify }},
+      "about": [
+        {% for tag in post_meta.tags %}{"@type": "Thing", "name": {{ tag | jsonify }}}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+      {% endif %}
+      {% if post_meta and post_meta.md_url %},
+      "encoding": {
+        "@type": "MediaObject",
+        "encodingFormat": "text/markdown",
+        "contentUrl": {{ site.url | append: post_meta.md_url | jsonify }}
+      }
       {% endif %}
       {% if post_meta and post_meta.repo_url %},
       "mentions": {
@@ -299,7 +354,7 @@
       }
       {% endif %}
     }
-    {% elsif page.url == "/" or page.url == "/about" %},
+    {% elsif page.url == "/" %},
     {
       "@type": "ProfilePage",
       "@id": {{ canonical_url | append: "#webpage" | jsonify }},
@@ -307,7 +362,7 @@
       "name": {{ schema_title | jsonify }},
       "description": {{ schema_desc | jsonify }},
       "dateCreated": "2020-07-01T00:00:00Z",
-      "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page_lastmod | date_to_xmlschema | jsonify }},
       "inLanguage": "en-US",
       "mainEntity": {
         "@id": "https://jigyasa-grover.github.io/#person"
@@ -317,7 +372,74 @@
       },
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".hero__lead", ".page-hero__lead"]
+        "cssSelector": ["h1", ".hero__lead"]
+      }
+    }
+    {% elsif page.url == "/about" %},
+    {
+      "@type": "ProfilePage",
+      "@id": {{ canonical_url | append: "#webpage" | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ schema_title | jsonify }},
+      "description": {{ schema_desc | jsonify }},
+      "dateCreated": "2020-07-01T00:00:00Z",
+      "dateModified": {{ page_lastmod | date_to_xmlschema | jsonify }},
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "isPartOf": {
+        "@id": "https://jigyasa-grover.github.io/#website"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".page-hero__lead"]
+      }
+    }
+    {% elsif page.url == "/work-with-me/" %},
+    {
+      "@type": "ContactPage",
+      "@id": {{ canonical_url | append: "#webpage" | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ schema_title | jsonify }},
+      "description": {{ schema_desc | jsonify }},
+      "dateModified": {{ page_lastmod | date_to_xmlschema | jsonify }},
+      "inLanguage": "en-US",
+      "about": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "mainEntity": {
+        "@type": "ContactPoint",
+        "contactType": "Advisory, Speaking, Training & Partnerships Inquiries",
+        "url": "https://jigyasa-grover.github.io/work-with-me/#contact",
+        "availableLanguage": ["en"]
+      },
+      "isPartOf": {
+        "@id": "https://jigyasa-grover.github.io/#website"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".page-hero__lead"]
+      }
+    }
+    {% elsif page.url == "/links/" %},
+    {
+      "@type": "WebPage",
+      "@id": {{ canonical_url | append: "#webpage" | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ schema_title | jsonify }},
+      "description": {{ schema_desc | jsonify }},
+      "dateModified": {{ page_lastmod | date_to_xmlschema | jsonify }},
+      "inLanguage": "en-US",
+      "about": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "isPartOf": {
+        "@id": "https://jigyasa-grover.github.io/#website"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".links-hub__bio"]
       }
     }
     {% else %},
@@ -327,21 +449,21 @@
       "url": {{ canonical_url | jsonify }},
       "name": {{ schema_title | jsonify }},
       "description": {{ schema_desc | jsonify }},
-      "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page_lastmod | date_to_xmlschema | jsonify }},
       "inLanguage": "en-US",
       "about": {
         "@id": "https://jigyasa-grover.github.io/#person"
       },
       "isPartOf": {
         "@id": "https://jigyasa-grover.github.io/#website"
-      }{% if page.noindex != true %},
+      },
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": ["h1", ".page-hero__lead"]
-      }{% endif %}
+      }
     }
     {% endif %}
-    {% if page.url != "/" and page.noindex != true %},
+    {% if page.url != "/" %},
     {
       "@type": "BreadcrumbList",
       "@id": {{ canonical_url | append: "#breadcrumb" | jsonify }},
@@ -393,6 +515,30 @@
       }
     }
     {% endif %}
+    {% if page.url == "/experience/" %},
+    {
+      "@type": "ItemList",
+      "@id": "https://jigyasa-grover.github.io/experience/#career",
+      "name": "Production ML & AI Engineering Career of Jigyasa Grover",
+      "itemListElement": [
+        {% for job in id.career %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "OrganizationRole",
+            "roleName": {{ job.role | jsonify }},
+            "description": {{ job.summary | jsonify }},
+            "memberOf": {
+              "@type": "Organization",
+              "name": {{ job.org | jsonify }}
+            }
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    {% endif %}
     {% if page.url == "/publications/" %},
     {
       "@type": "Book",
@@ -402,6 +548,10 @@
       "bookFormat": "https://schema.org/Paperback",
       "inLanguage": "en",
       "datePublished": "2021-01-24",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sculpting Data for ML (Independent Monograph)"
+      },
       "author": [
         {
           "@id": "https://jigyasa-grover.github.io/#person"
@@ -412,7 +562,35 @@
         }
       ],
       "url": "https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/",
-      "sameAs": {{ site.data.publications.featured_book.goodreads_url | jsonify }},
+      "sameAs": [
+        {{ site.data.publications.featured_book.goodreads_url | jsonify }},
+        {{ site.data.publications.featured_book.amazon_url | jsonify }}
+      ],
+      "workExample": [
+        {
+          "@type": "Book",
+          "bookFormat": "https://schema.org/Paperback",
+          "isbn": "979-8585463570",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Book",
+          "bookFormat": "https://schema.org/Paperback",
+          "isbn": "978-0-578-83125-1",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Book",
+          "bookFormat": "https://schema.org/EBook",
+          "inLanguage": "en",
+          "url": "https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/"
+        },
+        {
+          "@type": "Book",
+          "bookFormat": "https://schema.org/AudiobookFormat",
+          "inLanguage": "en"
+        }
+      ],
       "image": "https://jigyasa-grover.github.io/assets/images/opt/book_cover.jpg",
       "description": {{ site.data.publications.featured_book.summary | jsonify }},
       "aggregateRating": {
@@ -455,7 +633,26 @@
       },
       "url": {{ r.doi_url | jsonify }},
       "description": {{ r.summary | jsonify }}
-    }{% endfor %}
+    }{% endfor %},
+    {
+      "@type": "ItemList",
+      "@id": "https://jigyasa-grover.github.io/publications/#academic-impact",
+      "name": "Academic Syllabi, Policy Citations & Peer-Reviewed Impact",
+      "itemListElement": [
+        {% for imp in site.data.publications.academic_and_policy_impact %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "CreativeWork",
+            "name": {{ imp.title | jsonify }},
+            "description": {{ imp.summary | jsonify }},
+            "url": {{ imp.url | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
     {% endif %}
     {% if page.url == "/projects/" %},
     {
@@ -500,6 +697,26 @@
         "@id": "https://jigyasa-grover.github.io/#person"
       }
     },
+    {% assign upcoming_stage = site.data.speaking.appearances | where: "status", "Upcoming" | first %}
+    {% if upcoming_stage %}
+    {
+      "@type": "Event",
+      "@id": "https://jigyasa-grover.github.io/speaking/#upcoming-event",
+      "name": {{ upcoming_stage.event | jsonify }},
+      "description": {{ upcoming_stage.role | jsonify }},
+      "startDate": "2026-12-01",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": {{ upcoming_stage.location | jsonify }}
+      },
+      "performer": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      }{% if upcoming_stage.url %},
+      "url": {{ upcoming_stage.url | jsonify }}{% endif %}
+    },
+    {% endif %}
     {
       "@type": "ItemList",
       "@id": "https://jigyasa-grover.github.io/speaking/#talks",
@@ -514,9 +731,38 @@
             "name": {{ talk.title | jsonify }},
             "description": {{ talk.abstract | jsonify }},
             "keywords": {{ talk.themes | jsonify }},
+            "inLanguage": "en-US",
             "author": {
               "@id": "https://jigyasa-grover.github.io/#person"
             }
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    {% endif %}
+    {% if page.url == "/press/" %},
+    {
+      "@type": "ItemList",
+      "@id": "https://jigyasa-grover.github.io/press/#media-archive",
+      "name": "Selected Press, Broadcast & Podcast Appearances of Jigyasa Grover",
+      "itemListElement": [
+        {% for mf in site.data.recognition.media_features limit:20 %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": {% if mf.category == "podcast" %}"PodcastEpisode"{% elsif mf.category == "video" %}"CreativeWork"{% else %}"NewsArticle"{% endif %},
+            "name": {{ mf.title | jsonify }},
+            "headline": {{ mf.title | jsonify }},
+            "publisher": {
+              "@type": "Organization",
+              "name": {{ mf.outlet | jsonify }}
+            },
+            "mentions": {
+              "@id": "https://jigyasa-grover.github.io/#person"
+            }{% if mf.url %},
+            "url": {{ mf.url | jsonify }}{% endif %}
           }
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}
@@ -529,7 +775,7 @@
       "@id": "https://jigyasa-grover.github.io/highlights/#videos",
       "name": "Keynotes, Developer Films & Reels Featuring or Produced by Jigyasa Grover",
       "itemListElement": [
-        {% for v in site.data.videos.featured_films limit:12 %}
+        {% for v in site.data.videos.featured_films limit:24 %}
         {
           "@type": "ListItem",
           "position": {{ forloop.index }},
@@ -565,6 +811,14 @@
             "name": {{ course.title | jsonify }},
             "description": {{ course.summary | jsonify }},
             "url": {{ course.url | jsonify }},
+            "educationalLevel": {{ course.level | jsonify }},
+            "inLanguage": "en",
+            "isAccessibleForFree": false,
+            "offers": {
+              "@type": "Offer",
+              "category": "Subscription",
+              "url": {{ course.url | jsonify }}
+            },
             "provider": {
               "@type": "Organization",
               "name": {{ course.provider | jsonify }}
@@ -587,6 +841,33 @@
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}
       ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://jigyasa-grover.github.io/teaching/#workshops-service",
+      "name": "Corporate AI Engineering Workshops & Enterprise Enablement",
+      "serviceType": "Corporate AI Training, Agentic AI & LLM Evaluation Workshops",
+      "url": "https://jigyasa-grover.github.io/teaching/",
+      "provider": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "areaServed": "Global",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Live Corporate AI Workshops",
+        "itemListElement": [
+          {% for w in site.data.courses.workshops %}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": {{ w.title | jsonify }},
+              "description": {{ w.abstract | jsonify }}
+            }
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      }
     }
     {% endif %}
     {% if page.url == "/advisory/" %},
@@ -649,6 +930,36 @@
       }
     }
     {% endif %}
+    {% if page.url == "/media-kit/" %},
+    {
+      "@type": "Service",
+      "@id": "https://jigyasa-grover.github.io/media-kit/#service",
+      "name": "SF Bay Area & Global AI Creator Media Kit, VIP Events & Hardware PR Reviews",
+      "serviceType": "Technical AI Creator Partnerships, Conference Creator-in-Residence & Hardware PR Seeding",
+      "description": {{ site.data.partnerships.creator_kit.availability | jsonify }},
+      "url": "https://jigyasa-grover.github.io/media-kit/",
+      "provider": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "areaServed": ["San Francisco Bay Area", "Global"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Creator, VIP Event & Hardware PR Tracks",
+        "itemListElement": [
+          {% for tr in site.data.partnerships.creator_kit.tracks %}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": {{ tr.title | jsonify }},
+              "description": {{ tr.summary | jsonify }}
+            }
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      }
+    }
+    {% endif %}
     {% if page.faq_key and site.data.faqs[page.faq_key] %},
     {
       "@type": "FAQPage",
@@ -687,3 +998,4 @@
   ]
 }
 </script>
+{% endunless %}

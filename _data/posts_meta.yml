@@ -6,7 +6,7 @@
   seo_title: "TorchTPU Doctor: PyTorch Cloud TPU Profiler — Jigyasa Grover"
   og_image: "/assets/images/opt/torchtpu-doctor-cover.jpg"
   og_image_alt: "TorchTPU Doctor — 7-rule AST linter and Cloud TPU v6e PyTorch profiler by Jigyasa Grover"
-  summary: "Catching silent CPU fallbacks, hidden Hugging Face eager host syncs, and XLA recompiles in PyTorch on Cloud TPU v6e, cutting LoRA step time 2,537× (47.3s → 18.6ms) alongside a merged PR in huggingface/peft (#4099)."
+  summary: "Catching silent CPU fallbacks, Hugging Face host syncs, and XLA recompiles in PyTorch on Cloud TPU v6e, cutting LoRA step time 2,537× alongside peft #4099."
   repo_url: "https://github.com/jigyasa-grover/TorchTPU-Doctor"
   live_url: "https://colab.research.google.com/github/jigyasa-grover/TorchTPU-Doctor/blob/main/notebooks/torchtpu_doctor_demo.ipynb"
   skill_url: "https://raw.githubusercontent.com/jigyasa-grover/TorchTPU-Doctor/main/.agents/skills/torchtpu-doctor/SKILL.md"
@@ -25,7 +25,7 @@
   seo_title: "Proof of Work: Agentic Video Evals with Gemini — Jigyasa Grover"
   og_image: "/assets/images/wp-archive/2026/cover-d3562309.jpg"
   og_image_alt: "Proof of Work — Agentic video evaluation pipeline with Google Gemini"
-  summary: "How Proof of Work uses Gemini's agentic video understanding to evaluate software engineering process, debugging discipline, and hypothesis iteration from continuous screen recordings."
+  summary: "How Proof of Work uses Gemini's agentic video understanding to grade software engineering debugging discipline and hypothesis iteration from screen recordings."
   repo_url: "https://github.com/jigyasa-grover/proof-of-work"
   live_url: "https://jigyasa-grover.github.io/proof-of-work/"
   md_url: "/ProofOfWork/index.md"
@@ -40,10 +40,10 @@
   tags: ["Agentic AI", "Token Economics", "Cost Guardrails", "FastAPI"]
   featured: true
   home_spotlight: true
-  seo_title: "Agent Cost & Token Guardrails (Antigravity SDK) — Jigyasa Grover"
+  seo_title: "Agent Cost & Token Guardrails (Antigravity) — Jigyasa Grover"
   og_image: "/assets/images/wp-archive/2026/cover-c3565608.jpg"
   og_image_alt: "Startup on a Shoestring — Agent token budget and cost monitors using Google Antigravity SDK"
-  summary: "Preventing quadratic token inflation and runaway self-correction loops in autonomous agents using Google Antigravity SDK lifecycle hooks and FastAPI SSE telemetry."
+  summary: "Preventing quadratic token inflation and runaway self-correction loops in AI agents using Google Antigravity SDK lifecycle hooks and FastAPI SSE telemetry."
   repo_url: "https://github.com/jigyasa-grover/startup-on-a-shoestring"
   md_url: "/StartupOnAShoestring/index.md"
   faqs:
@@ -77,7 +77,7 @@
   seo_title: "Trust at Top Speed: Gemini AI Racing Coach — Jigyasa Grover"
   og_image: "/assets/images/wp-archive/2025/image-68f4e07f.png"
   og_image_alt: "Split-brain Gemini Nano + Cloud Run AI Racing Coach architecture at Thunderhill Raceway"
-  summary: "Building and field-testing a split-brain AI Racing Coach at Thunderhill Raceway Park combining sub-15ms on-device Gemini Nano cues, physics safety gates, and Cloud Run telemetry reasoning."
+  summary: "Field-testing a split-brain AI Racing Coach at Thunderhill Raceway combining sub-15ms on-device Gemini Nano cues, physics safety gates, and Cloud Run."
   md_url: "/TrustAtTopSpeed/index.md"
   faqs:
     - q: "What is a split-brain edge and cloud AI architecture?"
@@ -93,6 +93,12 @@
   og_image: "/assets/images/wp-archive/2025/supercharging-vs-code-vibe-coding-with-gemini-code-assis-943b0e18.jpg"
   og_image_alt: "Running cloud GPUs and TPUs inside VS Code with the Google Colab extension and Gemini Code Assist"
   summary: "Running modular, version-controlled Python ML workloads on cloud GPUs and TPUs directly inside VS Code using the Google Colab extension and Gemini Code Assist."
+  md_url: "/ColabVSCodeExtension/index.md"
+  faqs:
+    - q: "How does the official Google Colab VS Code extension improve ML engineering workflows?"
+      a: "It connects local VS Code workspaces, Git branches, and modular Python files directly to Google Colab's managed cloud GPUs and TPUs, eliminating manual notebook copy-pasting while keeping full IDE debugging and Gemini Code Assist completions."
+    - q: "What hardware backends can you target from VS Code using the Colab extension?"
+      a: "Developers can select Colab's hosted CPU, NVIDIA GPU (such as T4, L4, or A100), and Google Cloud TPU runtimes directly from the VS Code kernel picker."
 
 "/CriticsCutMultilingualContextADKAgent/":
   category: "Agentic AI & Evaluation"
@@ -101,8 +107,14 @@
   seo_title: "Multilingual Multi-Agent Safety in Google ADK — Jigyasa Grover"
   og_image: "/assets/images/wp-archive/2025/image-7b993ce9.jpg"
   og_image_alt: "Critic's Cut multilingual safety-gated multi-agent architecture in Google ADK"
-  summary: "Architectural deep dive into Critic's Cut: building a context-aware, multilingual multi-agent system with Google's Agent Development Kit (ADK), tool integration, and PII safety callbacks."
+  summary: "Building Critic's Cut: a multilingual multi-agent system using Google's Agent Development Kit (ADK), custom tool integration, and PII safety callbacks."
   repo_url: "https://github.com/jigyasa-grover/critics-cut"
+  md_url: "/CriticsCutMultilingualContextADKAgent/index.md"
+  faqs:
+    - q: "How does Critic's Cut structure multilingual multi-agent orchestration in Google ADK?"
+      a: "Critic's Cut composes specialized Google ADK sub-agents for intent routing, live external movie search tools, and multilingual synthesis while sharing typed session state across turns."
+    - q: "How are safety and PII guardrails enforced inside a Google ADK agent?"
+      a: "Deterministic ADK before-model and before-tool callbacks intercept prompts and tool payloads to block disallowed inputs or redact PII before tokens ever reach Gemini 2.0."
 
 "/SmartSuitcasePackingUsingGeminiImagenOpenWeather/":
   category: "Agentic AI & Evaluation"
@@ -113,6 +125,12 @@
   og_image_alt: "Weather-aware multimodal travel planning agent built with Gemini 2.0, Imagen 3, and OpenWeather"
   summary: "Combining Gemini 2.0 structured reasoning, Imagen 3 visual generation, and real-time OpenWeather API data for weather-aware travel planning."
   repo_url: "https://github.com/jigyasa-grover/smart-suitcase-packing"
+  md_url: "/SmartSuitcasePackingUsingGeminiImagenOpenWeather/index.md"
+  faqs:
+    - q: "How does Smart Suitcase Packing ground Gemini 2.0 outputs in live weather data?"
+      a: "Gemini 2.0 invokes a typed OpenWeather API tool function for the traveler's destination and dates, then synthesizes structured packing checklists constrained by real forecast temperatures and precipitation."
+    - q: "What role does Imagen 3 play in the travel packing pipeline?"
+      a: "Imagen 3 transforms the structured outfit and gear checklist produced by Gemini 2.0 into visual flat-lay packing previews tailored to the destination's climate and itinerary."
 
 "/SmarterThanA5thGrader-LLMComparatorOnGoogleVertexAI/":
   category: "Agentic AI & Evaluation"
@@ -123,6 +141,12 @@
   og_image_alt: "Quantitative side-by-side LLM evaluation dashboard using PAIR LLM Comparator on Vertex AI"
   summary: "Quantitative side-by-side LLM evaluation on Google Vertex AI using PAIR's open-source LLM Comparator across accuracy, clarity, safety, and communication rubrics."
   repo_url: "https://github.com/jigyasa-grover/Smarter-than-a-5th-Grader-Using-LLM-Comparator-on-Google-Vertex-AI"
+  md_url: "/SmarterThanA5thGrader-LLMComparatorOnGoogleVertexAI/index.md"
+  faqs:
+    - q: "Why use Google PAIR's LLM Comparator instead of single-number aggregate benchmarks?"
+      a: "LLM Comparator pairs automated LLM-as-a-Judge win-rate scoring with interactive per-prompt slices and textual rationales, making it easy to pinpoint exactly where one model beats another on factual accuracy, clarity, or safety."
+    - q: "How does Vertex AI's AutoSxS evaluation integrate with LLM Comparator?"
+      a: "Side-by-side model outputs and judge rationales generated via Vertex AI Evaluation / AutoSxS export directly into LLM Comparator's JSON format for visual slice-by-slice auditing."
 
 "/BookBuddyInteractiveStorytellingUsingAGemmaBasedRAG/":
   category: "Agentic AI & Evaluation"
@@ -133,6 +157,12 @@
   og_image_alt: "Book Buddy interactive storytelling Retrieval-Augmented Generation (RAG) architecture with Gemma"
   summary: "Designing a Retrieval-Augmented Generation (RAG) pipeline with Google's open-weights Gemma model for grounded interactive narratives and educational Q&A."
   repo_url: "https://github.com/jigyasa-grover/Book-Buddy-Interactive-Storytelling-using-a-Gemma-based-RAG"
+  md_url: "/BookBuddyInteractiveStorytellingUsingAGemmaBasedRAG/index.md"
+  faqs:
+    - q: "How does Book Buddy ground Gemma's responses to prevent plot hallucinations?"
+      a: "Book Buddy chunks source book text into dense vector embeddings, retrieves the highest-similarity passages for each reader prompt, and injects only retrieved context into Gemma's generation prompt."
+    - q: "Why choose Google's open-weights Gemma family for a RAG storytelling prototype?"
+      a: "Gemma provides lightweight, locally or single-GPU hostable open weights with strong instruction following, enabling low-latency, privacy-preserving RAG pipelines without proprietary API lock-in."
 
 "/GoodbyeToNewsCopyWriterBlock-SupervisedFineTunedGeminiPro/":
   category: "Fine-Tuning & Compute"
@@ -141,7 +171,7 @@
   seo_title: "Supervised Fine-Tuning Gemini Pro in AI Studio — Jigyasa Grover"
   og_image: "/assets/images/wp-archive/2024/huge-d46b5d35.jpg"
   og_image_alt: "Supervised fine-tuning workflow for Google Gemini Pro in Google AI Studio"
-  summary: "Step-by-step supervised fine-tuning of Gemini Pro in Google AI Studio for structured domain adaptation and editorial headline generation (historical 2024 walkthrough)."
+  summary: "Step-by-step supervised fine-tuning of Gemini Pro in Google AI Studio for domain adaptation and news headline generation (historical 2024 walkthrough)."
 
 "/BifocalPerspectiveOfCAS/":
   category: "Agentic AI & Evaluation"
@@ -166,7 +196,7 @@
   category: "Responsible AI & Privacy"
   tags: ["Deepfakes", "Synthetic Media", "AI Safety", "Detection"]
   featured: false
-  seo_title: "Exploring Deepfakes: Detection & AI Provenance — Jigyasa Grover"
+  seo_title: "Exploring Deepfakes & AI Provenance — Jigyasa Grover"
   og_image: "/images/bookreview.jpg"
   og_image_alt: "Technical review of deepfake synthesis architectures, detection limits, and provenance defenses"
   summary: "Technical breakdown of generative synthetic media, deepfake synthesis architectures, detection limits, and organizational provenance defenses."

@@ -1,0 +1,106 @@
+# Verified intrinsic pixel dimensions & MIME types for custom Open Graph images
+# Keeps og:image:type, og:image:width, and og:image:height populated on every indexed page.
+"/assets/images/opt/book_cover.jpg":
+  width: 517
+  height: 800
+  type: "image/jpeg"
+"/assets/images/opt/google_io_feature.jpg":
+  width: 1280
+  height: 718
+  type: "image/jpeg"
+"/assets/images/opt/red_hat_award_winner.jpg":
+  width: 960
+  height: 686
+  type: "image/jpeg"
+"/assets/images/opt/torchtpu-doctor-cover.jpg":
+  width: 1280
+  height: 720
+  type: "image/jpeg"
+"/assets/images/wp-archive/2017/photogrid_1486052550585-0e97d0b5.jpg":
+  width: 1280
+  height: 719
+  type: "image/jpeg"
+"/assets/images/wp-archive/2017/screen-shot-2017-06-23-at-2-02-29-pm-9e83c44f.png":
+  width: 1200
+  height: 1293
+  type: "image/png"
+"/assets/images/wp-archive/2017/screen-shot-2017-10-22-at-2-33-54-am-5214eb5c.png":
+  width: 996
+  height: 1274
+  type: "image/png"
+"/assets/images/wp-archive/2018/whatsapp-image-2018-02-27-at-1-01-18-pm-2d4dbcfc.jpeg":
+  width: 900
+  height: 1600
+  type: "image/jpeg"
+"/assets/images/wp-archive/2018/whatsapp-image-2018-03-04-at-1-24-51-pm-071946ff.jpeg":
+  width: 1200
+  height: 1461
+  type: "image/jpeg"
+"/assets/images/wp-archive/2019/screen-shot-2019-09-25-at-2-18-41-pm-29d65656.png":
+  width: 1199
+  height: 619
+  type: "image/png"
+"/assets/images/wp-archive/2019/screen-shot-2019-12-24-at-1-49-01-pm-e1577176734426-3e41577c.png":
+  width: 1198
+  height: 527
+  type: "image/png"
+"/assets/images/wp-archive/2019/screen-shot-2019-12-24-at-4-50-59-pm-5ff2dd16.png":
+  width: 1199
+  height: 496
+  type: "image/png"
+"/assets/images/wp-archive/2019/screen-shot-2019-12-24-at-5-26-26-pm-c1bc640f.png":
+  width: 1200
+  height: 415
+  type: "image/png"
+"/assets/images/wp-archive/2024/1-1-9c14fb5a.png":
+  width: 940
+  height: 788
+  type: "image/png"
+"/assets/images/wp-archive/2024/book-buddy-af714930.png":
+  width: 1080
+  height: 753
+  type: "image/png"
+"/assets/images/wp-archive/2024/huge-d46b5d35.jpg":
+  width: 1200
+  height: 675
+  type: "image/jpeg"
+"/assets/images/wp-archive/2024/image-1-847c1ce5.png":
+  width: 1200
+  height: 676
+  type: "image/png"
+"/assets/images/wp-archive/2024/image-9-30e43097.jpg":
+  width: 1200
+  height: 799
+  type: "image/jpeg"
+"/assets/images/wp-archive/2025/image-3-eb95a8b8.jpg":
+  width: 1280
+  height: 890
+  type: "image/jpeg"
+"/assets/images/wp-archive/2025/image-68f4e07f.png":
+  width: 1199
+  height: 654
+  type: "image/png"
+"/assets/images/wp-archive/2025/image-7b993ce9.jpg":
+  width: 940
+  height: 788
+  type: "image/jpeg"
+"/assets/images/wp-archive/2025/supercharging-vs-code-vibe-coding-with-gemini-code-assis-943b0e18.jpg":
+  width: 1280
+  height: 720
+  type: "image/jpeg"
+"/assets/images/wp-archive/2026/cover-c3565608.jpg":
+  width: 1200
+  height: 675
+  type: "image/jpeg"
+"/assets/images/wp-archive/2026/cover-d3562309.jpg":
+  width: 1200
+  height: 670
+  type: "image/jpeg"
+"/assets/images/wp-archive/2026/kinetic-era-2-abfee7c9.png":
+  width: 1200
+  height: 675
+  type: "image/png"
+"/images/bookreview.jpg":
+  width: 1920
+  height: 2743
+  type: "image/jpeg"
