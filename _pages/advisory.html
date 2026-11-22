@@ -172,6 +172,31 @@ permalink: /advisory/
   <a class="btn btn--secondary btn--compact" href="/teaching/">Explore Team Workshops →</a>
 </div>
 
+{% assign cmp = site.data.comparisons.advisory %}
+<section id="advisory-comparison" class="content-section--bordered" aria-labelledby="advisory-compare-heading">
+  <div class="eyebrow">{{ cmp.eyebrow }}</div>
+  <h2 id="advisory-compare-heading" class="mb-md">{{ cmp.heading }}</h2>
+  <div class="comparison-table-wrap" role="region" aria-labelledby="advisory-compare-heading" tabindex="0">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          {% for col in cmp.columns %}<th scope="col">{{ col }}</th>{% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in cmp.rows %}
+        <tr>
+          <th scope="row">{{ row.factor }}</th>
+          <td>{{ row.jigyasa }}</td>
+          <td><strong>{{ row.alt1 }}</strong></td>
+          <td>{{ row.alt2 }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
 <section class="content-section--bordered" aria-labelledby="advisory-reviews-heading">
   <div class="section-header">
     <div>

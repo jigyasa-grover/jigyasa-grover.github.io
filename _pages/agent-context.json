@@ -76,6 +76,7 @@ sitemap: false
   "projects": {{ site.data.projects | jsonify }},
   "github": {{ site.data.github | jsonify }},
   "awards": {{ site.data.recognition.awards | jsonify }},
+  "buyer_comparisons": {{ site.data.comparisons | jsonify }},
   "faqs": {{ site.data.faqs | jsonify }},
   "videos": {
     "watch_hub_url": "{{ site.url }}/highlights/#watch-hub",

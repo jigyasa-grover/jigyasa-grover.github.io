@@ -182,6 +182,31 @@ redirect_from:
   <a class="btn btn--secondary btn--compact" href="/media-kit/">Open Creator &amp; Hardware Kit →</a>
 </div>
 
+{% assign cmp = site.data.comparisons.partnerships %}
+<section id="why-practitioner" class="content-section--bordered" aria-labelledby="partnerships-compare-heading">
+  <div class="eyebrow">{{ cmp.eyebrow }}</div>
+  <h2 id="partnerships-compare-heading" class="mb-md">{{ cmp.heading }}</h2>
+  <div class="comparison-table-wrap" role="region" aria-labelledby="partnerships-compare-heading" tabindex="0">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          {% for col in cmp.columns %}<th scope="col">{{ col }}</th>{% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in cmp.rows %}
+        <tr>
+          <th scope="row">{{ row.factor }}</th>
+          <td><strong>{{ row.jigyasa }}</strong></td>
+          <td>{{ row.alt1 }}</td>
+          <td>{{ row.alt2 }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
 <section class="content-section--bordered" aria-labelledby="past-partners-heading">
   <div class="eyebrow">Verified Launch Proof &amp; Campaigns</div>
   <h2 id="past-partners-heading">Shipped launches, partner roster &amp; booking</h2>

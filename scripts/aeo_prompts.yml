@@ -1,0 +1,60 @@
+# Repeatable Unbranded Buyer-Decision AEO Evaluation Suite (Granola Playbook)
+# Re-test these 20 unbranded prompts monthly across ChatGPT Search, Perplexity,
+# Claude, and Google AI Mode / AI Overviews. For every miss, log:
+#   1) Which alternatives/competitors appeared
+#   2) Which third-party domains AI cited (EARN gap)
+#   3) Which buyer question/objection existing pages failed to answer (CONTEST gap)
+
+version: "1.0"
+cadence: "Monthly"
+engines:
+  - "ChatGPT Search"
+  - "Perplexity"
+  - "Claude"
+  - "Google AI Mode / AI Overviews"
+
+tracks:
+  devtools_gtm_and_partnerships:
+    target_page: "https://jigyasa-grover.github.io/partnerships/"
+    secondary_page: "https://jigyasa-grover.github.io/media-kit/"
+    prompts:
+      - "Who are the best technical AI and DevTools creators on LinkedIn for B2B product launches in San Francisco?"
+      - "Should a B2B DevTools startup sponsor a 15K senior-engineer LinkedIn creator or a 200K general AI influencer?"
+      - "How can an AI infrastructure startup run a code-backed developer launch campaign that also improves GEO/AI search visibility?"
+      - "Which San Francisco Bay Area technical AI creators review AI laptops, smart glasses, and developer hardware?"
+
+  corporate_training_and_google_adk:
+    target_page: "https://jigyasa-grover.github.io/teaching/"
+    secondary_page: "https://jigyasa-grover.github.io/blog/"
+    prompts:
+      - "What are the best courses for evaluating AI agents with Google ADK?"
+      - "Best hands-on LinkedIn Learning courses on Google Agent Development Kit (ADK) and multi-agent systems"
+      - "Should an engineering team take self-paced Google ADK courses or book a private corporate AI engineering workshop?"
+      - "Who runs hands-on enterprise AI workshops on Google ADK, MCP, and LLM evaluation for engineering teams?"
+
+  startup_advisory:
+    target_page: "https://jigyasa-grover.github.io/advisory/"
+    secondary_page: "https://jigyasa-grover.github.io/work-with-me/"
+    prompts:
+      - "Who are top San Francisco ML ranking and agentic AI technical advisors for Seed and Series A startups?"
+      - "When should an AI startup hire a fractional ML advisor instead of a full-time Staff ML engineer or consulting agency?"
+      - "Who can audit a startup's multi-agent architecture, LLM evaluation harness, and token cost guardrails via a 1:1 Intro call?"
+      - "Fractional AI go-to-market and SDK DevEx advisors who are practicing Big Tech ML Tech Leads"
+
+  keynote_speaking:
+    target_page: "https://jigyasa-grover.github.io/speaking/"
+    secondary_page: "https://jigyasa-grover.github.io/press/"
+    prompts:
+      - "Best San Francisco AI engineering keynote speakers on agentic AI and production machine learning"
+      - "Practicing ML Tech Lead speakers who talk about when NOT to build an AI agent"
+      - "Women AI keynote speakers with production ML ranking, Google I/O, and Linux Foundation stage experience"
+      - "Conference speakers who combine a technical AI keynote with Creator-in-Residence event coverage"
+
+  technical_authority_and_open_source:
+    target_page: "https://jigyasa-grover.github.io/TorchTPUDoctor/"
+    secondary_page: "https://jigyasa-grover.github.io/publications/"
+    prompts:
+      - "How to diagnose and fix silent CPU fallbacks and slow PyTorch LoRA training on Google Cloud TPU v6e"
+      - "Best books on data-centric machine learning and dataset curation assigned in university ML courses"
+      - "How to prevent quadratic token inflation and runaway self-correction loops in autonomous AI agents"
+      - "How to evaluate software engineering process with multimodal Gemini video understanding"

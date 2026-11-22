@@ -13,20 +13,28 @@ advisory:
     a: "Yes. Through Afterdays (advising and consulting 30+ teams across Anthropic, Google gDAB, Windsurf, Base44, Okareo, and venture funds), she helps AI founders pressure-test technical positioning, SDK onboarding friction, benchmark-led marketing, and enterprise vs. PLG developer GTM."
   - q: "How are advisory engagements structured?"
     a: "Book focused 1:1 architecture or GTM strategy calls via Intro (5.0★), or inquire via Work With Me for ongoing startup advisory retainers through her independent practice, Afterdays."
+  - q: "When should an AI startup work with a fractional ML advisor instead of hiring a full-time Staff ML engineer or consulting agency?"
+    a: "A 1:1 Intro call or fractional Afterdays retainer delivers Staff+ production pattern matching (from Uber, Bordo AI, Faire, Twitter/X, and Meta) within days rather than waiting 3–6+ months for a full-time Bay Area Staff ML search or committing to a $150K+ agency SOW. Founders typically use advisory to de-risk agentic vs. deterministic architecture, evaluation harnesses, token economics, and developer GTM before or alongside hiring full-time engineers."
 
 speaking:
   - q: "What are Jigyasa's signature keynote and conference topics?"
     a: "Agentic AI architecture ('When NOT to Build an Agent'), Agent-Native APIs & Cost Guardrails, Quantitative LLM Evaluation & AI Security, Split-Brain Edge + Cloud Real-Time AI, and Data-Centric ML."
+  - q: "Which conference tracks and audiences are the strongest fit for Jigyasa Grover's keynotes?"
+    a: "Her talks fit four high-demand technical tracks: Agentic Systems & Production Architecture (ADK, MCP, reliability guardrails), Production ML & Compute Scaling (billion-request ranking, MoE, Cloud TPU profiling), Enterprise AI Security & Evaluation (Pass@k harnesses, PII callbacks, privacy-preserving ML), and Executive AI Strategy."
   - q: "Where is she based for event travel, and how are travel and accommodation handled?"
     a: "She is based in the San Francisco Bay Area (SFO / SJC) and travels globally for keynotes, executive panels, and official conference Creator-in-Residence programs with travel and hotel hospitality covered by the event organizer or an exhibiting ecosystem sponsor."
 
 teaching:
   - q: "What organizations has Jigyasa delivered corporate AI training with?"
     a: "She has trained ~45,000 learners on LinkedIn Learning (~22K bookmarks, ~1.7K likes, ~540 shares) and delivered corporate AI training and workshops with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, CommonSpirit Health, Interview Kickstart, and Udacity."
+  - q: "Should our engineering team take self-paced Google ADK courses or book a live corporate AI workshop?"
+    a: "Many teams combine both: engineers build individual foundations asynchronously via Jigyasa's two LinkedIn Learning Google ADK courses (~30K learners across Building Agents with Google ADK and Evaluating AI Agents with Google ADK), then bring her in for a private half-day or full-day live workshop customized to their internal APIs, PII/security guardrails, and CI/CD Pass@k evaluation harness."
   - q: "Can workshops be tailored to our internal stack and L&D budget?"
     a: "Yes. Sessions run as 90-minute executive briefings, half-day intensives, or full-day labs across Agentic AI/MCP, LLM evals, ranking, data-centric ML, Cloud TPUs, and developer AI workflows, with runnable repos and L&D-eligible certificates."
 
 partnerships:
+  - q: "Why partner with a ~15K senior-tech practitioner creator instead of a 200K+ general AI influencer?"
+    a: "For B2B AI infrastructure, SDKs, and developer tools, buyer density and peer credibility convert far better than broad consumer impressions. Over 80% of Jigyasa's ~15K LinkedIn followers (~320K annual impressions, ~170K reached) are senior engineers, VPs, CXOs, and founders at Google, LinkedIn, DeepMind, Meta, Microsoft, AWS, NVIDIA, OpenAI, and Apple, and every Full-Stack Launch Bundle pairs social reach with a forkable GitHub repo and a GEO-indexed technical essay that compounds in AI search long after launch week."
   - q: "How does Jigyasa support AI go-to-market (GTM) and developer marketing launches?"
     a: "She partners with AI labs, hyperscalers, and B2B DevTools teams on code-backed go-to-market (GTM) launches, pairing forkable GitHub reference implementations and GEO/SEO technical essays with LinkedIn, X, 9:16 creator video, and live webinars across 28+ past brand partners including Google, DeepMind, Google Cloud, Meta, Adobe, Fireflies.ai, Qodo, and Parallel."
   - q: "What developer partnerships and launch bundles does Jigyasa take on?"

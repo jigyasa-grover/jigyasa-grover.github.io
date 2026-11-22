@@ -9,10 +9,24 @@
       window.dataLayer.push(arguments);
     }
     window.gtag = gtag;
+
+    var AI_SESSION_KEY = "jg_ai_engine";
+    window.jgGetAiEngine = function () {
+      try {
+        return sessionStorage.getItem(AI_SESSION_KEY) || "";
+      } catch (e) {
+        return "";
+      }
+    };
+
     window.jgTrack = function (eventName, params) {
       if (isAutomated || !eventName) return;
       try {
         var payload = Object.assign({ transport_type: "beacon" }, params || {});
+        var aiSrc = window.jgGetAiEngine();
+        if (aiSrc && !payload.ai_engine) {
+          payload.ai_engine = aiSrc;
+        }
         gtag("event", eventName, payload);
       } catch (e) {}
     };
@@ -43,7 +57,12 @@
 
     try {
       var ref = (document.referrer || "").toLowerCase();
-      var utm = (new URLSearchParams(window.location.search).get("utm_source") || "").toLowerCase();
+      var params = new URLSearchParams(window.location.search);
+      var utm = (params.get("utm_source") || "").toLowerCase();
+      var navEntry = (window.performance && performance.getEntriesByType) ? performance.getEntriesByType("navigation")[0] : null;
+      var navUrl = navEntry && navEntry.name ? String(navEntry.name) : "";
+      var hasTextFragment = navUrl.indexOf(":~:text=") !== -1 || (window.location.hash || "").indexOf(":~:text=") !== -1;
+
       var src = "";
       if (utm.indexOf("chatgpt") !== -1 || ref.indexOf("chatgpt.com") !== -1 || ref.indexOf("chat.openai.com") !== -1) src = "chatgpt";
       else if (utm.indexOf("perplexity") !== -1 || ref.indexOf("perplexity.ai") !== -1) src = "perplexity";
@@ -57,7 +76,14 @@
       else if (ref.indexOf("phind.com") !== -1) src = "phind";
       else if (ref.indexOf("you.com") !== -1) src = "you";
       else if (ref.indexOf("meta.ai") !== -1) src = "meta_ai";
+      else if (ref.indexOf("google.") !== -1 && (hasTextFragment || ref.indexOf("udm=50") !== -1)) src = "google_ai_overview";
+
       if (src) {
+        try {
+          if (!sessionStorage.getItem(AI_SESSION_KEY)) {
+            sessionStorage.setItem(AI_SESSION_KEY, src);
+          }
+        } catch (e) {}
         window.jgTrack("ai_citation_visit", { ai_engine: src, landing_path: cleanPath });
       }
     } catch (e) {}
