@@ -4,7 +4,7 @@ featured_video:
   date: "May 2024"
   url: "https://www.youtube.com/live/XEzRZ35urlk?t=516"
   image: "/assets/images/opt/google_io_feature.jpg"
-  caption: "Introduced on the main stage by Sundar Pichai, sharing practitioner insights on Gemini 1.5 Pro's 1M-token context window (147K+ views)."
+  caption: "Introduced on the main stage by Sundar Pichai, sharing practitioner insights on Gemini 1.5 Pro's 1M-token context window (~150K views)."
 
 signature_talks:
   - title: "When NOT to Build an Agent: Lessons from Systems That Didn't Want Autonomy"

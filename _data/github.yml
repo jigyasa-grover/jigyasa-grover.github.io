@@ -74,7 +74,7 @@ pinned_upstream:
     url: "https://github.com/LinkedInLearning/hands-on-ai-building-agents-with-google-s-agent-development-toolkit-adk-2743271"
     role: "Course Author · 42+ Forks"
     stack: "Python · Google ADK · Jupyter"
-    summary: "Official companion code repository for LinkedIn Learning's Hands-On AI: Building Agents with Google ADK (28K+ learners, ~17K bookmarks)."
+    summary: "Official companion code repository for LinkedIn Learning's Hands-On AI: Building Agents with Google ADK (~29K learners, ~17K bookmarks)."
 
   - repo: "LinkedInLearning/evaluating-ai-agents-with-google-adk-11697044"
     url: "https://github.com/LinkedInLearning/evaluating-ai-agents-with-google-adk-11697044"

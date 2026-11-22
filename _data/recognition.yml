@@ -598,7 +598,7 @@ media_features:
     masthead_style: "sans"
     date: "May 2024"
     title: "Main Stage Developer Feature on Gemini 1.5 Pro Long-Context Engineering"
-    type: "Keynote Broadcast (147K+ views)"
+    type: "Keynote Broadcast (~150K views)"
     category: "video"
     featured_span: true
     visual_mode: "snapshot"
@@ -608,7 +608,7 @@ media_features:
     focal: "center center"
     takeaway: "Featured on the Shoreline Amphitheatre main keynote screen, introduced by Sundar Pichai, sharing early production insights on Gemini 1.5 Pro's 1-million-token context window."
     summary: "Broadcast globally during the flagship Google I/O 2024 opening keynote, highlighting how ultra-long-context multimodal models transform developer workflows and retrieval architectures."
-    tags: ["Google I/O Keynote", "Gemini 1.5 Pro", "147K+ Views"]
+    tags: ["Google I/O Keynote", "Gemini 1.5 Pro", "~150K Views"]
     cta_label: "Watch Google I/O Keynote Segment"
     url: "https://www.youtube.com/live/XEzRZ35urlk?t=516"
 
