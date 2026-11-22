@@ -1,8 +1,8 @@
 linkedin_learning_profile: "https://www.linkedin.com/learning/instructors/jigyasa-grover"
-total_learners: "44,900+"
-total_bookmarks: "19,500+"
-total_likes: "1,616"
-total_shares: "539"
+total_learners: "~45,000"
+total_bookmarks: "~22,000"
+total_likes: "1.6K+"
+total_shares: "~540"
 avg_rating: "4.6–4.8★"
 total_ratings: "180+"
 
@@ -70,7 +70,8 @@ courses:
     provider: "LinkedIn Learning"
     year: "2026"
     updated: "2026-06-30"
-    learners: "1,370+ learners"
+    learners: "~1.4K learners"
+    bookmarks: 688
     likes: 56
     shares: 20
     rating_value: 4.8
@@ -88,7 +89,8 @@ courses:
     provider: "LinkedIn Learning"
     year: "2025"
     updated: "2025-08-19"
-    learners: "28,200+ learners"
+    learners: "28K+ learners"
+    bookmarks: 16937
     likes: 1290
     shares: 195
     rating_value: 4.6
@@ -106,7 +108,8 @@ courses:
     provider: "LinkedIn Learning"
     year: "2025"
     updated: "2025-05-02"
-    learners: "10,800+ learners"
+    learners: "~11K learners"
+    bookmarks: 3613
     likes: 221
     shares: 194
     rating_value: 4.6
@@ -123,7 +126,8 @@ courses:
     provider: "LinkedIn Learning"
     year: "2025"
     updated: "2025-05-21"
-    learners: "4,480+ learners"
+    learners: "~4.5K learners"
+    bookmarks: 724
     likes: 49
     shares: 130
     rating_value: 4.6
