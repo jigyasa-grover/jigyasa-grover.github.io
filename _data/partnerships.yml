@@ -265,10 +265,10 @@ creator_kit:
       summary: "Camera-ready on-site presence for private AI and hardware previews, creator summits, founder dinners, and hands-on launch showcases, delivering authentic 9:16 Reels, X threads, and LinkedIn executive recaps."
       tags: ["SF Bay Area Local", "Embargo-Ready", "9:16 Reels + LinkedIn"]
     - number: "02"
-      kicker: "Hardware & Gadget Seeding"
-      title: "Tech Hardware, AI Devices, Wearables & Studio Gear Reviews"
-      summary: "Practitioner-tested reviews evaluating AI laptops, GPU workstations, smart glasses, AI wearables, edge inference kits, monitors, keyboards, and travel creator gear inside real coding, ML, and global conference travel workflows (200+ talks across 21 countries)."
-      tags: ["AI PCs & GPUs", "Smart Glasses & Wearables", "Studio & Travel Tech"]
+      kicker: "Hardware, Credits & Launch PR"
+      title: "Tech Hardware, AI Devices, API/Compute Credits & Studio Gear"
+      summary: "Practitioner-tested reviews evaluating AI laptops, GPU workstations, smart glasses, wearables, edge kits, studio gear, and creator allocations of AI API/compute credits, pro DevTool licenses, and launch PR kits inside real ML and global conference workflows (200+ talks across 21 countries)."
+      tags: ["AI PCs & Wearables", "API & Compute Credits", "Hardware & Launch PR"]
     - number: "03"
       kicker: "Hosted Travel & Hospitality"
       title: "Conference Creator-in-Residence & Sponsored Stage Coverage"
@@ -311,7 +311,7 @@ creator_kit:
       detail: "Multimodal smart glasses, voice/meeting capture pins and recorders, smart rings, noise-canceling travel audio, and pocket edge-AI developer kits."
     - label: "Creator Camera, Audio & Conference Travel Rig"
       detail: "4K pocket gimbal and mirrorless cameras, dual wireless lavalier mics, desktop XLR/USB microphones, portable key lights, and carry-on power gear built for 21 countries of stage travel."
-    - label: "PR Seeding & Embargo Protocol"
-      detail: "Trusted pre-GA tester (Google Gemini Ultra, Omni Flash & Carbon) experienced with strict hardware/software embargoes. Request SF Bay Area shipping details via the inquiry form."
+    - label: "AI API & Compute Credits, DevTool Licenses & Launch Kits"
+      detail: "Creator/builder API credit allocations (frontier LLMs, multimodal APIs, Cloud GPU/TPU compute), pro IDE/agentic DevTool licenses, early-access sandboxes, and curated tech launch PR boxes evaluated in runnable GitHub demos and tutorials."
 
 

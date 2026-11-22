@@ -54,7 +54,7 @@ Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pro
 - Naano (LinkedIn/X Creator Collaborations): https://naano.com/creators/jigyasa-grover
 - 8x (AI & Tech Launch Campaigns): https://8x.business/p/b623ba2ed48544748601a75a3569c6ee
 - Creator Media Kit, VIP Events, Sponsored Summit Travel & Hardware PR Seeding (SF Bay Area & Global): https://jigyasa-grover.github.io/media-kit/
-- Hardware & Electronics Categories Reviewed: AI laptops & workstations, GPUs/local AI dev kits, smart glasses & AI wearables, edge AI hardware, developer monitors/keyboards, and 4K travel/studio creator gear.
+- Hardware, Credits & PR Seeding Categories: AI laptops & workstations, GPUs/local AI dev kits, smart glasses & AI wearables, edge AI hardware, 4K travel/studio creator gear, and builder allocations of AI API/cloud compute credits, pro DevTool licenses & launch PR kits.
 - PR, Embargo & FTC Compliance: NDA-ready pre-GA tester with strict PST/EST/UTC embargo adherence, FTC-compliant commercial disclosures, and 14–30 day loaner return or gifted review-unit logistics in the San Francisco Bay Area.
 - 2026–2027 Event & Press Briefing Calendar: {% for ev in site.data.partnerships.creator_kit.event_briefing_calendar %}{{ ev.event }} ({{ ev.window }}, {{ ev.location }}){% unless forloop.last %}; {% endunless %}{% endfor %}.
 - Brand & Technical Content Partners: {{ site.data.recognition.brand_partners | join: ", " }}
