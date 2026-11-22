@@ -10,7 +10,7 @@
     </main>
     {% include footer.html %}
     {% assign has_cinema = false %}
-    {% if page.url == "/" or page.url == "/highlights/" or page.url == "/speaking/" or page.url == "/teaching/" or page.url == "/links/" or page.url == "/partnerships/" %}
+    {% if page.url == "/" or page.url == "/highlights/" or page.url == "/speaking/" or page.url == "/teaching/" or page.url == "/links/" or page.url == "/partnerships/" or page.url == "/media-kit/" %}
       {% assign has_cinema = true %}
     {% endif %}
     {% if has_cinema %}{% include video-lightbox.html %}{% endif %}

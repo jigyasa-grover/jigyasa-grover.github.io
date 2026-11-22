@@ -153,6 +153,24 @@ redirect_from:
     </div>
     {% endfor %}
   </div>
+
+  <div class="brief-checklist mt-lg" aria-labelledby="turnaround-sla-heading">
+    <div class="brief-checklist__header">
+      <div>
+        <div class="eyebrow mb-xs">Event Logistics, Turnaround &amp; Accreditation</div>
+        <h3 id="turnaround-sla-heading" class="brief-checklist__title">What PR agencies &amp; event teams can expect</h3>
+      </div>
+      <a class="btn btn--secondary btn--compact" href="/press/">Press Clippings &amp; Bios →</a>
+    </div>
+    <div class="brief-checklist__grid">
+      {% for sla in ck.turnaround_and_accreditation %}
+      <div class="brief-checklist__item">
+        <div class="brief-checklist__label">{{ sla.label }}</div>
+        <p class="brief-checklist__detail">{{ sla.detail }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>
 
 <!-- 2. Visual Creator Proof & VIP Event Track Record -->
@@ -160,13 +178,22 @@ redirect_from:
   <div class="section-header section-header--compact">
     <div>
       <div class="eyebrow">Past Launch Events, Press Trips &amp; Creator Showcases</div>
-      <h2 id="vip-events-heading">On-site summit, launch &amp; documentary highlights</h2>
+      <h2 id="vip-events-heading">On-site summit, launch &amp; documentary highlights (click to play inline)</h2>
     </div>
     <a class="section-header__link" href="/work-with-me/?topic=Creator%20Events%20%26%20Hardware%20PR#contact">Extend an Event or Travel Invite →</a>
   </div>
 
   <div class="gallery-grid mb-lg">
-    <div class="gallery-card">
+    <a
+      class="gallery-card"
+      href="https://www.youtube.com/shorts/5pnyzzMNZ9Q"
+      target="_blank"
+      rel="noopener"
+      data-cinema="5pnyzzMNZ9Q"
+      data-cinema-mode="vertical"
+      data-cinema-title="Gemini 4 Argon — Builder Breakdown"
+      data-cinema-channel="@JigyasaGrover"
+    >
       <img
         src="/assets/images/opt/gemini_dinner_2026.jpg"
         width="1080"
@@ -176,12 +203,21 @@ redirect_from:
         alt="Jigyasa Grover at an invite-only Google Gemini creator and advisory dinner in San Francisco"
       />
       <div class="gallery-card__body">
-        <div class="gallery-card__title">VIP Launch Dinners (SF Bay Area)</div>
-        <p class="gallery-card__sub">Google Gemini Early Access &amp; Creator Friendsgiving</p>
+        <div class="gallery-card__title">VIP Launch Dinners &amp; Early Access</div>
+        <p class="gallery-card__sub">SF Bay Area previews &amp; builder breakdowns ▶ Play Reel</p>
       </div>
-    </div>
+    </a>
 
-    <div class="gallery-card">
+    <a
+      class="gallery-card"
+      href="https://www.youtube.com/shorts/5AflJGyIZt4"
+      target="_blank"
+      rel="noopener"
+      data-cinema="5AflJGyIZt4"
+      data-cinema-mode="vertical"
+      data-cinema-title="Codemotion Milan Keynote &amp; Backstage Reel"
+      data-cinema-channel="@JigyasaGrover"
+    >
       <img
         src="/assets/images/opt/codemotion_speaker_2026.jpg"
         width="576"
@@ -192,11 +228,20 @@ redirect_from:
       />
       <div class="gallery-card__body">
         <div class="gallery-card__title">International Summit Reels</div>
-        <p class="gallery-card__sub">Keynotes &amp; backstage coverage across 21 countries</p>
+        <p class="gallery-card__sub">Keynotes &amp; backstage coverage across 21 countries ▶ Play Reel</p>
       </div>
-    </div>
+    </a>
 
-    <div class="gallery-card">
+    <a
+      class="gallery-card"
+      href="https://www.youtube.com/watch?v=3iZzf_NRxDQ"
+      target="_blank"
+      rel="noopener"
+      data-cinema="3iZzf_NRxDQ"
+      data-cinema-mode="vertical"
+      data-cinema-title="Official Google Gemini Omni Flash Global Launch"
+      data-cinema-channel="@googlegemini × @JigyasaGrover"
+    >
       <img
         src="/assets/images/opt/gemini_live_2026.jpg"
         width="1200"
@@ -206,10 +251,10 @@ redirect_from:
         alt="Jigyasa Grover testing multimodal hardware and live voice AI at a Google builder showcase"
       />
       <div class="gallery-card__body">
-        <div class="gallery-card__title">Hands-On Hardware &amp; Live Demos</div>
-        <p class="gallery-card__sub">Official Gemini Omni Flash Launch &amp; Edge AI Track Day</p>
+        <div class="gallery-card__title">Official Launch Films &amp; Live Demos</div>
+        <p class="gallery-card__sub">Google Gemini Omni Flash global launch ▶ Play Clip</p>
       </div>
-    </div>
+    </a>
   </div>
 
   <div class="ledger">
