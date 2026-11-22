@@ -1,6 +1,8 @@
 linkedin_learning_profile: "https://www.linkedin.com/learning/instructors/jigyasa-grover"
-total_learners: "44,000+"
+total_learners: "44,900+"
 total_bookmarks: "19,500+"
+total_likes: "1,616"
+total_shares: "539"
 avg_rating: "4.6–4.8★"
 total_ratings: "180+"
 
@@ -67,7 +69,10 @@ courses:
   - title: "Evaluating AI Agents with Google ADK"
     provider: "LinkedIn Learning"
     year: "2026"
-    learners: "1,300+ learners"
+    updated: "2026-06-30"
+    learners: "1,370+ learners"
+    likes: 56
+    shares: 20
     rating_value: 4.8
     rating_count: 5
     level: "Intermediate"
@@ -82,7 +87,10 @@ courses:
   - title: "Hands-On AI: Building Agents with Google's Agent Development Toolkit (ADK)"
     provider: "LinkedIn Learning"
     year: "2025"
-    learners: "28,000+ learners"
+    updated: "2025-08-19"
+    learners: "28,200+ learners"
+    likes: 1290
+    shares: 195
     rating_value: 4.6
     rating_count: 91
     level: "Intermediate"
@@ -97,7 +105,10 @@ courses:
   - title: "Integrating AI into the Product Architecture"
     provider: "LinkedIn Learning"
     year: "2025"
-    learners: "11,000+ learners"
+    updated: "2025-05-02"
+    learners: "10,800+ learners"
+    likes: 221
+    shares: 194
     rating_value: 4.6
     rating_count: 54
     level: "Intermediate / Senior"
@@ -111,7 +122,10 @@ courses:
   - title: "Building AI Products: Implementing Responsible AI"
     provider: "LinkedIn Learning"
     year: "2025"
-    learners: "4,300+ learners"
+    updated: "2025-05-21"
+    learners: "4,480+ learners"
+    likes: 49
+    shares: 130
     rating_value: 4.6
     rating_count: 30
     level: "Professional Certificate"

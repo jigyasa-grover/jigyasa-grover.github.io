@@ -13,9 +13,9 @@ award_badge: "14× AI & Open Source Award Winner"
 hero_title: "Architecting production AI, and teaching teams how to build, evaluate, and trust it."
 hero_lead: "San Francisco Bay Area Machine Learning Tech Lead at Uber, technical AI/ML & DevTools creator, Google Developer Advisory Board member, LinkedIn Learning instructor, and co-author of Sculpting Data for ML."
 
-short_bio_50: "Jigyasa Grover is a San Francisco Bay Area Machine Learning Engineer (Tech Lead, Product Selector Ranking) at Uber, technical AI/ML and DevTools creator, Google Developer Advisory Board member, 14× AI and Open Source award winner, LinkedIn Learning instructor (44,000+ learners), and co-author of Sculpting Data for ML (100+ academic citations)."
+short_bio_50: "Jigyasa Grover is a San Francisco Bay Area Machine Learning Engineer (Tech Lead, Product Selector Ranking) at Uber, technical AI/ML and DevTools creator, Google Developer Advisory Board member, 14× AI and Open Source award winner, LinkedIn Learning instructor (44,900+ learners), and co-author of Sculpting Data for ML (100+ academic citations)."
 
-medium_bio_150: "Jigyasa Grover (pronounced jig-YAH-sah GROH-ver) is a San Francisco Bay Area Machine Learning Engineer at Uber (Tech Lead for Product Selector Ranking across ~750M to 950M daily requests in 500+ cities, and Engineering Lead for an org-wide agentic AI initiative) and a technical AI/ML creator and educator. Previously, she led AI and Research at Bordo AI and built billion-request ML ranking, ads prediction, and feature infrastructure at Faire, Twitter (X), and Meta, after earning her M.S. in CS (AI) at UC San Diego and attending the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS). She serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) recognition, co-authored Sculpting Data for ML (assigned at Cornell Tech, 100+ citations), teaches 44,000+ LinkedIn Learning learners, advises 30+ organizations via Afterdays, partners with 28+ AI and cloud brands, and has delivered 200+ talks across 21 countries, including Google I/O."
+medium_bio_150: "Jigyasa Grover (pronounced jig-YAH-sah GROH-ver) is a San Francisco Bay Area Machine Learning Engineer at Uber (Tech Lead for Product Selector Ranking across ~750M to 950M daily requests in 500+ cities, and Engineering Lead for an org-wide agentic AI initiative) and a technical AI/ML creator and educator. Previously, she led AI and Research at Bordo AI and built billion-request ML ranking, ads prediction, and feature infrastructure at Faire, Twitter (X), and Meta, after earning her M.S. in CS (AI) at UC San Diego and attending the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS). She serves on the Google Developer Advisory Board (gDAB), holds Google Developer Expert (AI/ML) recognition, co-authored Sculpting Data for ML (assigned at Cornell Tech, 100+ citations), teaches 44,900+ LinkedIn Learning learners, advises 30+ organizations via Afterdays, partners with 28+ AI and cloud brands, and has delivered 200+ talks across 21 countries, including Google I/O."
 
 metrics:
   - value: "14+"
@@ -29,7 +29,7 @@ metrics:
   - value: "50K+"
     label: "Engineers & Leaders Trained"
     short_detail: "LinkedIn Learning · Morgan Stanley · FedEx"
-    detail: "LinkedIn Learning (44K+), Morgan Stanley, FedEx, Accenture & Roblox"
+    detail: "LinkedIn Learning (44.9K+), Morgan Stanley, FedEx, Accenture & Roblox"
   - value: "30+"
     label: "Advisory & Consulting Orgs"
     short_detail: "Google gDAB · Startups · Venture Funds"

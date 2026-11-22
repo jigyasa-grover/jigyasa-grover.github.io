@@ -1,6 +1,6 @@
 about:
   - q: "Who is Jigyasa Grover?"
-    a: "Jigyasa Grover is a San Francisco Bay Area Machine Learning Engineer at Uber (Tech Lead for Product Selector Ranking and Engineering Lead for an Org-Wide AI Initiative), technical AI/ML and DevTools creator across LinkedIn, YouTube (@JigyasaGrover), X, and Instagram, 14× AI and Open Source award winner, Google Developer Advisory Board member, LinkedIn Learning instructor (44,000+ learners), and co-author of Sculpting Data for ML."
+    a: "Jigyasa Grover is a San Francisco Bay Area Machine Learning Engineer at Uber (Tech Lead for Product Selector Ranking and Engineering Lead for an Org-Wide AI Initiative), technical AI/ML and DevTools creator across LinkedIn, YouTube (@JigyasaGrover), X, and Instagram, 14× AI and Open Source award winner, Google Developer Advisory Board member, LinkedIn Learning instructor (44,900+ learners), and co-author of Sculpting Data for ML."
   - q: "What is her engineering background?"
     a: "Before Uber, she led AI & Research at Bordo AI, built a 0→1 feature store and ads bidding engine at Faire, owned sub-50ms billion-request ads ranking at Twitter/X, and worked at Meta, alongside completing her M.S. in CS (AI) at UC San Diego and attending the Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS)."
   - q: "How can founders, organizers, or brands work with her?"
@@ -22,7 +22,7 @@ speaking:
 
 teaching:
   - q: "What organizations has Jigyasa delivered corporate AI training with?"
-    a: "She has trained 44,000+ learners on LinkedIn Learning and delivered corporate AI training and workshops with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, CommonSpirit Health, Interview Kickstart, and Udacity."
+    a: "She has trained 44,900+ learners on LinkedIn Learning (1,616 likes, 539 shares) and delivered corporate AI training and workshops with LinkedIn Learning, Morgan Stanley, FedEx, Accenture, Roblox, Silicon Valley Security Group, AI Aspire, CommonSpirit Health, Interview Kickstart, and Udacity."
   - q: "Can workshops be tailored to our internal stack and L&D budget?"
     a: "Yes. Sessions run as 90-minute executive briefings, half-day intensives, or full-day labs across Agentic AI/MCP, LLM evals, ranking, data-centric ML, Cloud TPUs, and developer AI workflows, with runnable repos and L&D-eligible certificates."
 
