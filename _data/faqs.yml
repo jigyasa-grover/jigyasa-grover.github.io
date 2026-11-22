@@ -46,7 +46,7 @@ work_with_me:
 
 projects:
   - q: "What open-source AI, Hugging Face, and Cloud TPU contributions has Jigyasa Grover authored?"
-    a: "Across 245+ upstream pull requests and issues in 32 external repositories plus 76+ public GitHub repos, highlights include PyTorch/Cloud TPU fixes in Hugging Face transformers (#50267, 2.06× faster eager LoRA steps) and peft (#4099 / #4101, torch.accelerator TPU device routing), authoring Learn Smalltalk in Y Minutes (12.4K+ ★), TorchTPU Doctor (2,537× LoRA speedup on Cloud TPU v6e), Startup on a Shoestring, Trust at Top Speed, and Critic's Cut."
+    a: "Across 245+ upstream pull requests and issues in 32 external repositories plus 76+ public GitHub repos, highlights include a merged PyTorch/Cloud TPU fix in Hugging Face peft (#4099 / #4101, adding torch.accelerator TPU device routing), eager-mode TPU sync profiling across transformers (#50267) and torch_tpu (#6127), authoring Learn Smalltalk in Y Minutes (12.4K+ ★), TorchTPU Doctor (2,537× LoRA speedup on Cloud TPU v6e), Startup on a Shoestring, Trust at Top Speed, and Critic's Cut."
   - q: "Are the repositories, Agent Skills, and Colab notebooks free to fork and run?"
     a: "Yes. Open-source reference implementations, Agent Skills, Google Colab notebooks, and official LinkedIn Learning course companion labs are publicly available at github.com/jigyasa-grover."
 

@@ -17,7 +17,7 @@ metrics:
     label: "Upstream PRs & Issues"
     detail: "Across 32 external repos: Hugging Face, Learn X in Y Minutes, FOSSASIA, Loklak & Loris"
   - id: "followers"
-    value: "430+"
+    value: "425+"
     label: "GitHub Followers"
     detail: "Active on GitHub since 2014 · 165+ personal stars & forks"
   - id: "achievements"
@@ -46,23 +46,23 @@ organizations:
     url: "https://github.com/teamOSC"
 
 pinned_upstream:
-  - repo: "huggingface/transformers (#50267)"
-    url: "https://github.com/huggingface/transformers/pull/50267"
-    role: "Upstream PR · 168K+ ★"
-    stack: "PyTorch · Cloud TPU · SDPA"
-    summary: "Eliminated two blocking device-to-host boolean syncs per forward pass in `_ignore_causal_mask_sdpa` on TorchTPU (`tpu:0`), cutting bucketed eager LoRA step latency 2.06×."
-
   - repo: "huggingface/peft (PR #4099 · #4101)"
     url: "https://github.com/huggingface/peft/pull/4099"
-    role: "Upstream PR & Issue · 21.8K+ ★"
+    role: "Merged Upstream PR · 21.8K+ ★"
     stack: "PyTorch · LoRA · torch.accelerator"
-    summary: "Added `torch.accelerator` support (including `torch_tpu` / `PrivateUse1`) to `infer_device()` (#4101, PR #4099) so `load_adapter`, `hotswap`, and LoRA helpers target `'tpu'` instead of host CPU."
+    summary: "Merged `torch.accelerator` support (including `torch_tpu` / `PrivateUse1`) into `infer_device()` (#4101, PR #4099) so `load_adapter`, `hotswap`, and LoRA helpers target `'tpu'` instead of host CPU."
 
   - repo: "google-pytorch/torch_tpu (#6127)"
     url: "https://github.com/google-pytorch/torch_tpu/issues/6127"
     role: "Ecosystem Benchmark Report"
     stack: "Cloud TPU v6e · TorchDispatchMode"
-    summary: "Filed reproducible Qwen2.5-0.5B LoRA benchmark timings, `TorchDispatchMode` stack traces, and Hugging Face ecosystem fixes on Cloud TPU `v6e-1` (`torch_tpu 0.2.0`)."
+    summary: "Filed reproducible Qwen2.5-0.5B LoRA benchmark timings and `TorchDispatchMode` stack traces on Cloud TPU `v6e-1` (`torch_tpu 0.2.0`), confirming `torch.compile(backend='tpu')` as the zero-sync path."
+
+  - repo: "huggingface/transformers (#50267)"
+    url: "https://github.com/huggingface/transformers/pull/50267"
+    role: "Eager-Mode Profiling PR · 168K+ ★"
+    stack: "PyTorch · Cloud TPU · SDPA"
+    summary: "Isolated two blocking device-to-host boolean syncs per eager forward pass in `_ignore_causal_mask_sdpa` on TorchTPU (`tpu:0`, 2.06× eager speedup); closed after maintainers confirmed eager control-flow syncs are expected and `torch.compile(backend='tpu')` is the intended zero-sync path (retained in `torchtpu_doctor.patch_hf_tpu()` for eager debugging)."
 
   - repo: "adambard/learnxinyminutes-docs (Smalltalk)"
     url: "https://learnxinyminutes.com/smalltalk/"

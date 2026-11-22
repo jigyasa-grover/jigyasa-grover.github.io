@@ -99,14 +99,6 @@ academic_and_policy_impact:
     url: "https://static1.squarespace.com/static/60355084905d134a93c099a8/t/6320ea00759bc24cd7addf69/1663101447504/Responsible+Tech+Guide+2022+by+All+Tech+Is+Human+AllTechIsHuman.org.pdf"
     summary: "Featured practitioner perspective in All Tech Is Human's flagship guide to building responsible, equitable technology."
 
-editorial_reviewing:
-  - org: "O'Reilly Media"
-    role: "Technical Book Reviewer: Scalable AI Systems (2026) & Machine Learning with Python Cookbook, 2nd Ed. (2023); cited in AI-Assisted Programming (2024)"
-    url: "https://www.oreilly.com/library/view/scalable-ai-systems/0642572342883/"
-  - org: "Routledge (Taylor & Francis) & Packt Publishing"
-    role: "Lead Book Endorser: AI for Community (Routledge, 2025/2026); Technical Reviewer: Principles of Data Science, 3rd Ed. (2024) & Exploring Deepfakes (2023)"
-    url: "https://www.routledge.com/AI-for-Community-Preserving-Culture-and-Tradition/Ardalan-Banifatemi-Gonzalez-Ingram-Moradinezhad-Williams/p/book/9781032846620"
-
 reviewed_books:
   - id: "scalable-ai-systems"
     title: "Scalable AI Systems"

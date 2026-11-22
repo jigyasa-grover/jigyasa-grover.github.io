@@ -195,8 +195,8 @@ posts:
     badge: "Gemini Omni Flash Official Launch"
     contexts: ["partnerships", "highlights"]
     image: "/assets/images/opt/press/gemini_omni_flash_2026.jpg"
-    width: 607
-    height: 1080
+    width: 1280
+    height: 720
     focal: "center 32%"
     video_id: "3iZzf_NRxDQ"
     video_mode: "vertical"
@@ -258,15 +258,3 @@ posts:
     tag: "Google gDAB"
     cta: "View on X"
     url: "https://x.com/jigyasa_grover/status/2105464156656939298"
-
-  - platform: "linkedin"
-    platform_label: "LinkedIn"
-    handle: "in/jigyasa-grover"
-    date: "2026"
-    sponsored: false
-    badge: "Production Agentic AI"
-    contexts: ["highlights"]
-    excerpt: "Field notes on designing reliable agentic workflows in production, where latency budgets, deterministic state boundaries, and evaluation harnesses beat prompt guesswork."
-    tag: "Agentic AI"
-    cta: "Read on LinkedIn"
-    url: "https://www.linkedin.com/posts/jigyasa-grover_agenticai-machinelearning-share-7433765251751538688-ATRA"

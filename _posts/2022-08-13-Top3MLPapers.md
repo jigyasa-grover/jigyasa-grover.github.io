@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: My top 3 papers in ML for 2022 👀
 comments: true
-mathjax: true
+mathjax: false
 ---
 
 <p><em><strong>How do you keep up with the countless innovations and state-of-the-art R&amp;D happening?</strong> </em> This is one of the most commonly asked questions. 🎙💭🤔</p>

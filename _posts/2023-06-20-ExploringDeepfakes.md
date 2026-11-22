@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: Exploring Deepfakes - Deploy Powerful AI Techniques for Face Replacement and More 🥸
 comments: true
-mathjax: true
+mathjax: false
 ---
 
 <p>Last year, I co-authored a book chapter titled <a href="https://link.springer.com/chapter/10.1007/978-3-031-10869-3_12" target="_blank">Do Not ‘Fake It Till You Make It’!</a> for Springer Nature Group's <a href="https://link.springer.com/book/10.1007/978-3-031-10869-3" target="_blank">Deep Learning for Social Media Data Analytics</a> book series 📕 The publication walks through a comparative study of <strong>Deep Learning</strong> models to approach the tasks of identifying phony information, verifying the validity of various claims and facts, catching fake content, and so on.  It eloquently analyzes the definition of <strong>Fake News</strong> specifically clickbait, hoax, satire, propaganda, hyperpartisan, and deepfakes in the world of social media, the various forms it can take, what causes its spread, and what are the rudimentary signs of such fake news. It further discusses the limitations of the detection algorithms with insights into the fairness, interpretability, and accountability along with providing pointers for the readers regarding emerging trends in this domain.</p>

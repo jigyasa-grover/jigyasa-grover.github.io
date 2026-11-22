@@ -129,7 +129,7 @@ Proof of Work exclusively uses agentic mode because every evaluation targets 15�
 
 Google DeepMind's [published evaluations](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/) on long-form video understanding benchmarks (including LongVideoBench) show major improvements:
 
-| Benchmark Dimension | Static Processing Baseline | Agentic Video (Gemini 3.7 Flash) | Delta ($\Delta$) |
+| Benchmark Dimension | Static Processing Baseline | Agentic Video (Gemini 3.7 Flash) | Delta ($$\Delta$$) |
 | :--- | :--- | :--- | :--- |
 | **Token Consumption** | Dense Frame Array | Dynamic Targeted Sampling | **Up to 88% reduction** |
 | **Inference Cost** | Multi-frame Context Saturation | Tool-Governed Traversal | **Up to 66% lower cost** |
@@ -142,12 +142,12 @@ To validate these claims under real-world engineering constraints, we deployed P
 
 | System Parameter | Static Processing (1 FPS, estimated) | Proof of Work (Agentic, measured) | Gain |
 | :--- | :--- | :--- | :--- |
-| **Token Ingestion** | ~$2,697,000 tokens | **$57,226 tokens** | **97.9% reduction** |
+| **Token Ingestion** | ~2,697,000 tokens | **50,900 tokens** | **98.1% reduction** |
 | **Per-Evaluation Cost** | ~$0.526* | **~$0.011** | **97.9% cheaper** |
 | **Inference Feasibility** | Context Saturated | Trivially Fits Edge Budget | Deterministic Scaling |
 | **Granularity** | Single Monolithic Prompt | **5 Specialized Passes** | Deep Corroboration |
 
-*\*Static baseline estimated as 1,860 frames × 258 tokens/frame × 5 passes. Agentic column is measured from actual pipeline run.*
+*\*Static baseline estimated as (1,860 frames × 258 visual tokens/frame + 1,860 sec × 32 audio tokens/sec) × 5 passes = 2,697,000 tokens. Agentic column is measured from actual pipeline run.*
 
 This massive efficiency gain means process verification is no longer a research curiosity — it's practical enough to score thousands of submissions in real time.
 
@@ -286,7 +286,7 @@ follow_up = client.models.generate_content(
 )
 ```
 
-This enables **interactive investigation** — an evaluator can drill into suspicious moments flagged by the initial 5-pass pipeline without re-ingesting 57K tokens.
+This enables **interactive investigation** — an evaluator can drill into suspicious moments flagged by the initial 5-pass pipeline without re-ingesting 50.9K tokens.
 
 ### Mixed-Mode Processing
 
@@ -366,8 +366,8 @@ Proof of Work solves this by running a **5-pass pipeline** where each pass focus
    - Measures how code quality improves over time.
    - Tracks testing frequency, naming conventions, and dead-code cleanup.
 
-5. **Pass 5: Final Scorecard (15%)**
-   - Combines evidence from all passes into a scored rubric with timestamp citations.
+5. **Pass 5: Final Scorecard & Time Management Synthesis (15%)**
+   - Scores overall time management across phases and combines evidence from all prior passes into a weighted rubric with timestamp citations.
 
 ---
 
@@ -379,12 +379,12 @@ The pipeline was tested on a real, unscripted [31-minute PyTorch CNN lecture and
 
 | Evaluation Dimension | Weight | Score | Rating | Primary Behavioral Observation |
 | :--- | :---: | :---: | :---: | :--- |
-| **Approach Strategy** | $25\%$ | **10** / 10 | `Exceptional` | Comprehensive, step-by-step conceptual walkthrough covering CNN architecture, convolution operations, ReLU, max pooling, flattening, and dense layers with extensive visual diagrams and manual calculations (00:00–26:25). |
-| **Debugging Maturity** | $25\%$ | **9** / 10 | `Expert` | Seamless execution of code demos and parameter adjustments without runtime errors; tensor dimensions and activations clearly verified at each stage (26:25–30:17). |
-| **Resource Usage** | $20\%$ | **10** / 10 | `Original Work` | Self-contained local JupyterLab environment executed without copying external code, consulting search engines, or using AI assistance (26:24–30:17). |
-| **Code Iteration** | $15\%$ | **8** / 10 | `Strong` | Iteratively altered kernel sizes (3×3 to 4×4) and strides (1, 2, 3, 4) in nn.Conv2d layers to demonstrate dimension changes and feature map loss (28:32–30:16). |
-| **Time Management** | $15\%$ | **9** / 10 | `Well-Balanced` | Dedicated ~85% to thorough foundational concepts across balanced sub-topics and ~15% to practical implementation and parameter tuning. |
-| **Aggregate Index** | **$100\%$** | **9.2** / 10 | **`VERIFIED`** | **Verified Original Process.** |
+| **Approach Strategy** | 25% | **10** / 10 | `Exceptional` | Comprehensive, step-by-step conceptual walkthrough covering CNN architecture, convolution operations, ReLU, max pooling, flattening, and dense layers with extensive visual diagrams and manual calculations (00:00–26:25). |
+| **Debugging Maturity** | 25% | **9** / 10 | `Expert` | Seamless execution of code demos and parameter adjustments without runtime errors; tensor dimensions and activations clearly verified at each stage (26:25–30:17). |
+| **Resource Usage** | 20% | **10** / 10 | `Original Work` | Self-contained local JupyterLab environment executed without copying external code, consulting search engines, or using AI assistance (26:24–30:17). |
+| **Code Iteration** | 15% | **8** / 10 | `Strong` | Iteratively altered kernel sizes (3×3 to 4×4) and strides (1, 2, 3, 4) in nn.Conv2d layers to demonstrate dimension changes and feature map loss (28:32–30:16). |
+| **Time Management** | 15% | **9** / 10 | `Well-Balanced` | Dedicated ~85% to thorough foundational concepts across balanced sub-topics and ~15% to practical implementation and parameter tuning. |
+| **Aggregate Index** | **100%** | **9.3** / 10 | **`VERIFIED`** | **Verified Original Process.** |
 
 ### Timestamped Phase Detection (Pass 1 Output)
 
@@ -582,7 +582,7 @@ Here's what a real Antigravity IDE session looks like when invoking the skill co
   ╔══════════════════════════════════════════════════╗
   ║         CALIBRATED PROCESS SCORECARD             ║
   ╠══════════════════════════════════════════════════╣
-  ║ Overall Score: 9.2 / 10                          ║
+  ║ Overall Score: 9.3 / 10                          ║
   ║ Verdict: VERIFIED ORIGINAL PROCESS               ║
   ║                                                  ║
   ║ Approach Strategy .... 10/10 ██████████          ║
@@ -666,7 +666,7 @@ At a naive 1 FPS ingestion rate:
 - Running a calibrated 5-pass evaluation pipeline (Timeline → Debugging → Originality → Code Iteration → Final Scorecard) over raw 1 FPS frames consumes over **2.7 million tokens**, costing $0.40–$1.50+ per single student evaluation.
 - Worse, 90% of those 1,860 frames are near-identical static editor views, diluting the model's attention.
 
-With Gemini's agentic video understanding, our 5-pass pipeline consumed **50,900 tokens total** — costing **~$0.011** (a **98.1% token and cost reduction**). Evaluating an entire university cohort of 100 students drops from ~$150 down to ~$1.10.
+With Gemini's agentic video understanding, our 5-pass pipeline consumed **50,900 tokens total** — costing **~$0.011** (a **98.1% token reduction**). Evaluating an entire university cohort of 100 students drops from ~$150 down to ~$1.10.
 
 ---
 

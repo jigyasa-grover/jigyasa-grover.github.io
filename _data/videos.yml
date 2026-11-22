@@ -92,6 +92,7 @@ featured_films:
 
   - id: "agntcon-mcpcon-eu"
     video_id: "hbH2RbUBZQ0"
+    start: 10500
     title: "AGNTCon + MCPCon Europe: When NOT to use an agent"
     channel: "Agentic AI Foundation"
     date: "Sep 2026"
@@ -100,7 +101,7 @@ featured_films:
     category: "keynotes"
     badge: "Amsterdam Stage Broadcast"
     playlist_id: "PLE2ReuPVyz3s"
-    url: "https://www.youtube.com/watch?v=hbH2RbUBZQ0"
+    url: "https://www.youtube.com/watch?v=hbH2RbUBZQ0&t=10500"
     summary: "European stage session separating deterministic state-machine workflows from true multi-agent autonomy."
     featured_initial: true
 
@@ -188,6 +189,7 @@ featured_films:
 
   - id: "gcloud-live-next26-recap"
     video_id: "N7N0TU9tkzw"
+    start: 4114
     title: "Google Cloud Live: Developer Recap of Next '26"
     channel: "Google Cloud Tech"
     date: "Apr 2026"
@@ -195,7 +197,7 @@ featured_films:
     role_type: "featured"
     category: "google"
     badge: "Google Cloud Livestream"
-    url: "https://www.youtube.com/watch?v=N7N0TU9tkzw"
+    url: "https://www.youtube.com/watch?v=N7N0TU9tkzw&t=4114"
     summary: "Official Google Cloud livestream unpacking Next '26 developer tools, open-source Race Condition telemetry simulations, and multi-agent architectures."
 
   - id: "google-io-1m-context-spotlight"

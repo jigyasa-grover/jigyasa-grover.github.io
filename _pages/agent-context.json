@@ -24,6 +24,7 @@ sitemap: false
     "short_bio_50": {{ site.data.identity.short_bio_50 | jsonify }},
     "medium_bio_150": {{ site.data.identity.medium_bio_150 | jsonify }},
     "education": {{ site.data.identity.education | jsonify }},
+    "career": {{ site.data.identity.career | jsonify }},
     "same_as": {{ site.data.identity.same_as | jsonify }},
     "press_photos": [
       {
@@ -40,7 +41,7 @@ sitemap: false
       },
       {
         "label": "Google I/O 2024 Main Stage Feature",
-        "url": "{{ site.url }}/images/google_io_feature.jpg"
+        "url": "{{ site.url }}/assets/images/opt/google_io_feature.jpg"
       }
     ]
   },
@@ -69,8 +70,13 @@ sitemap: false
   "speaking": {
     "featured_keynote": {{ site.data.speaking.featured_video | jsonify }},
     "signature_talks": {{ site.data.speaking.signature_talks | jsonify }},
-    "global_footprint": {{ site.data.speaking.speaking_globe | jsonify }}
+    "appearances": {{ site.data.speaking.appearances | jsonify }},
+    "countries": {{ site.data.speaking.countries | jsonify }}
   },
+  "projects": {{ site.data.projects | jsonify }},
+  "github": {{ site.data.github | jsonify }},
+  "awards": {{ site.data.recognition.awards | jsonify }},
+  "faqs": {{ site.data.faqs | jsonify }},
   "videos": {
     "watch_hub_url": "{{ site.url }}/highlights/#watch-hub",
     "channels": {{ site.data.videos.channels | jsonify }},

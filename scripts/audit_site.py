@@ -3,6 +3,7 @@
 
 import json
 import os
+import re
 import sys
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
@@ -140,9 +141,16 @@ class PageInspector(HTMLParser):
         self.imgs_missing_alt = []
         self.imgs_empty_alt = []
         self.is_redirect = False
+        self.toolnames = []
+        self._skip_text_depth = 0
+        self.non_code_text_chunks = []
 
     def handle_starttag(self, tag, attrs) -> None:
         ad = dict(attrs)
+        if tag in ("script", "style", "pre", "code", "textarea", "noscript"):
+            self._skip_text_depth += 1
+        if "toolname" in ad and ad["toolname"].strip():
+            self.toolnames.append(ad["toolname"].strip())
         if tag == "title":
             self.in_title = True
         elif tag == "h1":
@@ -172,6 +180,8 @@ class PageInspector(HTMLParser):
                 self.imgs_empty_alt.append(ad.get("src", "unknown"))
 
     def handle_endtag(self, tag) -> None:
+        if tag in ("script", "style", "pre", "code", "textarea", "noscript") and self._skip_text_depth > 0:
+            self._skip_text_depth -= 1
         if tag == "title":
             self.in_title = False
         elif tag == "script" and self.in_jsonld:
@@ -183,6 +193,8 @@ class PageInspector(HTMLParser):
             self.title += data
         elif self.in_jsonld:
             self._curr_jsonld.append(data)
+        elif self._skip_text_depth == 0:
+            self.non_code_text_chunks.append(data)
 
 
 def route_exists(route: str) -> bool:
@@ -355,6 +367,10 @@ def main() -> None:
 
     titles_seen = {}
     jsonld_count = 0
+    declarative_toolnames = set()
+    gfm_alert_re = re.compile(r"\[!(?:WARNING|NOTE|TIP|IMPORTANT|CAUTION)\]")
+    mathjax_currency_re = re.compile(r"(?<!\\)\$\d")
+    unparsed_single_dollar_tex_re = re.compile(r"(?<!\$)\$[^$\n]*\\[A-Za-z]+[^$\n]*\$(?!\$)")
 
     for path in html_files:
         rel_path = "/" + str(path.relative_to(SITE_DIR))
@@ -362,6 +378,20 @@ def main() -> None:
 
         parser = PageInspector()
         parser.feed(raw)
+        declarative_toolnames.update(parser.toolnames)
+
+        non_code_text = "".join(parser.non_code_text_chunks)
+        if gfm_alert_re.search(non_code_text):
+            errors.append(f"UNSUPPORTED GFM ALERT RENDERED LITERALLY in {rel_path}")
+        if "MathJax-script" in raw:
+            if "inlineMath: [['$'" in raw:
+                for line in non_code_text.splitlines():
+                    if len(mathjax_currency_re.findall(line)) >= 2:
+                        errors.append(f"MATHJAX CURRENCY COLLISION in {rel_path}: {line.strip()[:90]}")
+            elif unparsed_single_dollar_tex_re.search(non_code_text):
+                errors.append(f"UNPARSED SINGLE-DOLLAR LATEX (use $$...$$ for Kramdown inline math) in {rel_path}")
+        if "https://sessionize.com/jigyasagrover/" in raw:
+            errors.append(f"BROKEN TRAILING-SLASH SESSIONIZE URL in {rel_path}")
 
         for target in parser.hrefs + parser.srcs:
             if not target or target.startswith(("#", "mailto:", "tel:", "javascript:", "data:")):
@@ -468,15 +498,27 @@ def main() -> None:
                         errors.append(f"DUPLICATE URLS IN Person.sameAs in {rel_path}")
                     if not person_nodes[0].get("hasCredential"):
                         errors.append(f"MISSING Person.hasCredential E-E-A-T SCHEMA in {rel_path}")
+                    if "subjectOf" in person_nodes[0]:
+                        errors.append(f"INVALID Person.subjectOf ON AUTHORED WORK in {rel_path}")
                 website_nodes = [n for n in graph if n.get("@id") == "https://jigyasa-grover.github.io/#website"]
                 if website_nodes and not website_nodes[0].get("potentialAction"):
                     errors.append(f"MISSING WebSite SearchAction in {rel_path}")
                 for node in graph:
+                    for date_key in ("datePublished", "dateCreated"):
+                        dval = node.get(date_key)
+                        if isinstance(dval, str) and ("–" in dval or re.match(r"^\d{4}-\d{4}$", dval)):
+                            errors.append(f"NON-ISO DATE RANGE in {date_key}='{dval}' of {rel_path}")
                     if node.get("@type") == "VideoObject" and not node.get("uploadDate"):
                         errors.append(f"MISSING uploadDate on VideoObject in {rel_path}")
                     if node.get("@type") == "ItemList":
                         for li in node.get("itemListElement", []):
                             item = li.get("item", {})
+                            for date_key in ("datePublished", "dateCreated"):
+                                dval = item.get(date_key)
+                                if isinstance(dval, str) and ("–" in dval or re.match(r"^\d{4}-\d{4}$", dval)):
+                                    errors.append(f"NON-ISO DATE RANGE in ItemList {date_key}='{dval}' of {rel_path}")
+                            if item.get("@type") == "Course" and "instructor" in item:
+                                errors.append(f"INVALID TOP-LEVEL Course.instructor in {rel_path}")
                             if item.get("@type") == "VideoObject" and not item.get("uploadDate"):
                                 errors.append(f"MISSING uploadDate on ItemList VideoObject in {rel_path}")
                 if rel_path in ("/index.html", "/about.html") and "ProfilePage" not in gtypes:
@@ -559,6 +601,38 @@ def main() -> None:
         site_js = site_js_path.read_text(encoding="utf-8")
         if "modelContext" not in site_js or "registerTool" not in site_js:
             errors.append("MISSING WebMCP modelContext.registerTool support in /assets/js/site.js")
+
+    # 8. Verify WebMCP tool-name parity across mcp.json, JS registrations, and HTML toolname=
+    mcp_path = SITE_DIR / ".well-known" / "mcp.json"
+    if mcp_path.is_file():
+        mcp_data = json.loads(mcp_path.read_text(encoding="utf-8"))
+        manifest_tools = {t["name"] for t in mcp_data.get("webmcp_browser_tools", []) if "name" in t}
+        js_tools = set()
+        for js_name in ("site.js", "cinema.js"):
+            jp = SITE_DIR / "assets" / "js" / js_name
+            if jp.is_file():
+                js_src = jp.read_text(encoding="utf-8")
+                js_tools.update(re.findall(r'(?:safeRegister|registerTool)\(\s*\{\s*name:\s*"([^"]+)"', js_src))
+        if js_tools - manifest_tools:
+            errors.append(f"JS WebMCP TOOLS MISSING FROM /.well-known/mcp.json: {sorted(js_tools - manifest_tools)}")
+        if manifest_tools - js_tools:
+            errors.append(f"MANIFEST WebMCP TOOLS NOT REGISTERED IN JS: {sorted(manifest_tools - js_tools)}")
+        if declarative_toolnames - manifest_tools:
+            errors.append(f"DECLARATIVE HTML toolname= MISSING FROM /.well-known/mcp.json: {sorted(declarative_toolnames - manifest_tools)}")
+
+    # 9. Enforce AGENTS.md editorial prose invariant (no unspaced em dashes in structured data/templates/JS)
+    unspaced_em_re = re.compile(r"[A-Za-z0-9]—[A-Za-z0-9]")
+    for src_dir in ("_data", "_pages", "_includes", "assets/js"):
+        dpath = REPO_ROOT / src_dir
+        if not dpath.is_dir():
+            continue
+        for fpath in sorted(dpath.rglob("*")):
+            if not fpath.is_file():
+                continue
+            for lineno, line in enumerate(fpath.read_text(encoding="utf-8", errors="ignore").splitlines(), 1):
+                if unspaced_em_re.search(line):
+                    rel_src = fpath.relative_to(REPO_ROOT)
+                    errors.append(f"UNSPACED PROSE EM DASH in {rel_src}:{lineno}")
 
     print(f"Audited {len(html_files)} generated HTML files and {jsonld_count} JSON-LD graphs.")
     if warnings:

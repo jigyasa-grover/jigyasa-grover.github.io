@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: Data Cascades in Machine Learning ⛲️
 comments: true
-mathjax: true
+mathjax: false
 ---
 
 <p>Machine Learning models are as good as the data they consume🍴Data impacts performance, fairness, robustness &amp; scalability of <a href="https://twitter.com/hashtag/ML">#ML</a> Systems. If not taken care of, it leads to a TON of tech debt over time in a corporate setting, downstream effects of which are termed as DATA CASCADES 🌊 🧵👇🏻</p>

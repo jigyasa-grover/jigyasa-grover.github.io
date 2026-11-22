@@ -131,7 +131,7 @@
         "Technical Creator and Brand Partnerships",
         "AI Hardware and Developer Workstation Reviews",
         "YouTube Shorts and Technical Video Creation",
-        "Technical Newsletter and Engineering Blogging"
+        "Technical AI Engineering Writing and Blogging"
       ],
       "hasOccupation": [
         {
@@ -162,7 +162,7 @@
             "name": "LinkedIn",
             "url": "https://www.linkedin.com/in/jigyasa-grover/"
           },
-          "userInteractionCount": 14500
+          "userInteractionCount": 14700
         },
         {
           "@type": "InteractionCounter",
@@ -198,7 +198,7 @@
       "agentInteractionStatistic": {
         "@type": "InteractionCounter",
         "interactionType": "https://schema.org/WriteAction",
-        "userInteractionCount": 90
+        "userInteractionCount": 91
       },
       "hasCredential": [
         {
@@ -232,14 +232,7 @@
           }
         }
       ],
-      "sameAs": {{ id.same_as | jsonify }},
-      "subjectOf": {
-        "@type": "Book",
-        "@id": "https://jigyasa-grover.github.io/publications/#sculpting-data-for-ml",
-        "name": "Sculpting Data for ML: The First Act of Machine Learning",
-        "isbn": "979-8585463570",
-        "url": "https://www.amazon.com/Sculpting-Data-ML-Machine-Learning-ebook/dp/B08RN47C5T/"
-      }
+      "sameAs": {{ id.same_as | jsonify }}
     },
     {
       "@type": "WebSite",
@@ -388,7 +381,7 @@
       "@type": "Blog",
       "@id": "https://jigyasa-grover.github.io/blog/#blog",
       "url": "https://jigyasa-grover.github.io/blog/",
-      "name": "Jigyasa Grover — AI Engineering Blog & Technical Newsletter",
+      "name": "Jigyasa Grover — AI Engineering Blog & Technical Journal",
       "description": {{ schema_desc | jsonify }},
       "inLanguage": "en-US",
       "webFeed": "https://jigyasa-grover.github.io/feed.xml",
@@ -448,13 +441,13 @@
       ]
     }{% for r in site.data.publications.research_publications %},
     {
-      "@type": "ScholarlyArticle",
+      "@type": {% if r.type == "Springer Chapter" %}"Chapter"{% elsif r.type == "Language Guide" %}"TechArticle"{% elsif r.type == "Open-Source Books" %}"Book"{% else %}"ScholarlyArticle"{% endif %},
       "@id": {{ "https://jigyasa-grover.github.io/publications/#paper-" | append: forloop.index | jsonify }},
       "headline": {{ r.title | jsonify }},
       "name": {{ r.title | jsonify }},
-      "datePublished": {{ r.year | append: "" | jsonify }},
+      "datePublished": {{ r.year | append: "" | slice: 0, 4 | jsonify }},
       "isPartOf": {
-        "@type": "PublicationIssue",
+        "@type": {% if r.type == "Springer Chapter" %}"Book"{% else %}"CreativeWork"{% endif %},
         "name": {{ r.venue | jsonify }}
       },
       "author": {
@@ -479,8 +472,8 @@
             "@type": "SoftwareSourceCode",
             "name": {{ proj.title | jsonify }},
             "description": {{ proj.summary | jsonify }},
-            "dateCreated": {{ proj.year | append: "" | jsonify }},
-            "programmingLanguage": "Python",
+            "dateCreated": {{ proj.year | append: "" | slice: 0, 4 | jsonify }},
+            "programmingLanguage": {% if proj.id == "trust-at-top-speed" %}["JavaScript", "Python"]{% elsif proj.stack contains "TypeScript" %}"TypeScript"{% elsif proj.stack contains "Pharo Smalltalk" %}"Smalltalk"{% else %}"Python"{% endif %},
             "author": {
               "@id": "https://jigyasa-grover.github.io/#person"
             }{% if proj.repo_url %},
@@ -503,7 +496,7 @@
       "uploadDate": "2024-05-14T10:00:00-07:00",
       "contentUrl": {{ site.data.speaking.featured_video.url | jsonify }},
       "embedUrl": "https://www.youtube.com/embed/XEzRZ35urlk?start=516",
-      "actor": {
+      "contributor": {
         "@id": "https://jigyasa-grover.github.io/#person"
       }
     },
@@ -547,8 +540,8 @@
             "thumbnailUrl": {% if v.thumbnail %}{{ "https://jigyasa-grover.github.io" | append: v.thumbnail | jsonify }}{% else %}{{ "https://i.ytimg.com/vi/" | append: v.video_id | append: "/hqdefault.jpg" | jsonify }}{% endif %},
             "uploadDate": {{ v.upload_date | default: "2025-01-01T00:00:00Z" | jsonify }},
             "contentUrl": {{ v.url | jsonify }},
-            "embedUrl": {{ "https://www.youtube.com/embed/" | append: v.video_id | jsonify }},
-            "actor": {
+            "embedUrl": {% if v.start %}{{ "https://www.youtube.com/embed/" | append: v.video_id | append: "?start=" | append: v.start | jsonify }}{% else %}{{ "https://www.youtube.com/embed/" | append: v.video_id | jsonify }}{% endif %},
+            {% if v.role_type == "produced" %}"creator"{% else %}"contributor"{% endif %}: {
               "@id": "https://jigyasa-grover.github.io/#person"
             }
           }
@@ -575,9 +568,6 @@
             "provider": {
               "@type": "Organization",
               "name": {{ course.provider | jsonify }}
-            },
-            "instructor": {
-              "@id": "https://jigyasa-grover.github.io/#person"
             },
             "hasCourseInstance": {
               "@type": "CourseInstance",

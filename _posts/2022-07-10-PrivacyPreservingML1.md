@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: Privacy Preserving Machine Learning 🔐
 comments: true
-mathjax: true
+mathjax: false
 ---
 
 <p>Lately, I’ve been working on <a href="https://twitter.com/hashtag/PrivacyPreservingML">#PrivacyPreservingML</a> 🔐 I got looped in some projects after Apple launched <a href="https://developer.apple.com/documentation/apptrackingtransparency">AppTrackingTransparency (ATT)</a> framework, requiring iOS apps to ask permission to share users’ data w/ 3rd parties. This has triggered an industry-wide discussion on best practices to respect user privacy.</p>

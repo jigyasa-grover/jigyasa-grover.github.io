@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: Demystifying Data Quality in Machine Learning 🤓
 comments: true
-mathjax: true
+mathjax: false
 ---
 
 <p><strong><em>DATA is the new oil</em></strong>🛢️ As <a href="https://twitter.com/hashtag/DataCentric">#DataCentric</a> approaches to <a href="https://twitter.com/hashtag/ML">#ML</a> gather traction, access to diverse, comprehensive, and more importantly quality data has been the talk of the town. Along these lines, it's important to understand what does QUALITY really means in the context of DATA 🔢🧵👇🏻</p>

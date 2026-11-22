@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: Data Lakes for Big Data ⛵️
 comments: true
-mathjax: true
+mathjax: false
 ---
 
 <p>Volumes of crude data are available at our fingertips today, and the latest concept of a <a href="https://twitter.com/hashtag/DataLake">#DataLake</a> helps store any type or volume of data as-is, process it in real-time or batch mode, and analyze it at scale 🤽🧵👇</p>

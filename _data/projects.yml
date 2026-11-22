@@ -16,23 +16,23 @@
   post_url: "/TorchTPUDoctor/"
 
 - id: "huggingface-tpu-upstream"
-  title: "Hugging Face transformers & peft: Upstream Cloud TPU Fixes"
-  short_title: "Hugging Face transformers & peft"
+  title: "Hugging Face peft & transformers: Cloud TPU Contributions"
+  short_title: "Hugging Face peft & transformers"
   year: "2026"
   category: "Upstream Open Source · 190K+ ★"
   featured: true
   home_featured: true
-  home_summary: "Authored upstream PyTorch/TPU fixes cutting eager LoRA step latency 2.06× in transformers (#50267) and eliminating CPU fallbacks in peft (#4099)."
-  summary: "Authored upstream PyTorch and Cloud TPU patches in huggingface/transformers (#50267, removing two blocking SDPA device-to-host syncs per forward pass for a 2.06× eager LoRA speedup) and huggingface/peft (#4099 / #4101, adding torch.accelerator PrivateUse1 TPU routing to infer_device()), coordinated via google-pytorch/torch_tpu (#6127)."
+  home_summary: "Merged upstream torch.accelerator TPU device routing in huggingface/peft (#4099) and profiled eager transformers SDPA host syncs (#50267 / torch_tpu#6127)."
+  summary: "Merged upstream PyTorch/TPU fix in huggingface/peft (#4099 / #4101, adding torch.accelerator PrivateUse1 TPU routing to infer_device() so adapters target 'tpu' instead of CPU), alongside eager-mode SDPA host-sync profiling in huggingface/transformers (#50267) and google-pytorch/torch_tpu (#6127), where maintainers confirmed eager control-flow syncs are expected and torch.compile(backend='tpu') is the zero-sync path (with patch_hf_tpu() speeding up eager debugging 2.06×)."
   stack:
-    - "huggingface/transformers"
     - "huggingface/peft"
+    - "huggingface/transformers"
     - "PyTorch (torch_tpu)"
-  repo_url: "https://github.com/huggingface/transformers/pull/50267"
-  repo_label: "transformers #50267 ↗"
-  secondary_repo_url: "https://github.com/huggingface/peft/pull/4099"
-  secondary_repo_label: "peft #4099 ↗"
-  post_url: "/TorchTPUDoctor/#7-upstream-ecosystem-contributions-transformers-peft-torch_tpu"
+  repo_url: "https://github.com/huggingface/peft/pull/4099"
+  repo_label: "peft #4099 (Merged) ↗"
+  secondary_repo_url: "https://github.com/google-pytorch/torch_tpu/issues/6127"
+  secondary_repo_label: "torch_tpu #6127 ↗"
+  post_url: "/TorchTPUDoctor/#7-upstream-ecosystem-contributions-peft-transformers-torch_tpu"
 
 - id: "trust-at-top-speed"
   title: "Trust at Top Speed: Split-Brain Edge/Cloud AI Racing Coach"

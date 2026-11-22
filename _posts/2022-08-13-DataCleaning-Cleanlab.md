@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: Data Correction with Cleanlab 🧼 #DataCentricAI
 comments: true
-mathjax: true
+mathjax: false
 ---
 
 <p>Did you know that the ML benchmark datasets we heavily rely on like MNIST, ImageNet, CIFAR, etc., can have thousands of errors in their labels? 😱 Check out <a href="http://labelerrors.com/">labelerrors.com</a> for a few examples.</p>

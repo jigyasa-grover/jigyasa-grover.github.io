@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: Trust at Top Speed - AI Racing Coach powered by Gemini 🏁
 comments: true
-mathjax: true
+mathjax: false
 redirect_from:
   - /trust-at-top-speed/
 ---
@@ -52,32 +52,25 @@ redirect_from:
 
 <p>We quickly found that one model couldn't do it all. You can't have a deep reasoning model trying to shout <em>"BRAKE!"</em> in 50 milliseconds. It's too slow! So, we architected a <strong>Split-Brain System</strong>, treating the car like a biological organism with reflexes and reasoning.</p>
 
-<li><strong>The Reflexes &lt;&gt; Gemini Nano</strong>. For the "Hot Path", the safety-critical alerts, we went to the Edge. We used Chrome's experimental <code>window.ai</code> API to run <a href="https://developer.android.com/ai/gemini-nano">Gemini Nano</a> directly in the browser.<!-- wp:list -->
-<ul class="wp-block-list"><!-- wp:list-item -->
+<ul>
+<li><strong>The Reflexes &lt;&gt; Gemini Nano</strong>. For the "Hot Path", the safety-critical alerts, we went to the Edge. We used Chrome's experimental <code>window.ai</code> API to run <a href="https://developer.android.com/ai/gemini-nano">Gemini Nano</a> directly in the browser.
+<ul class="wp-block-list">
 <li>To stop the model from hallucinating, we used Schema-Constrained Generation. We forced it to output strict JSON enums like <code>["COMMIT", "TRAIL_BRAKE"]</code>.</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
 <li>This cut our latency to <em>~15ms</em>. No network round-trips. No 5G dead zones. Just pure, local inference.</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
 <li>A sub-50ms decision is worthless if the audio synthesis takes 200ms. We bypassed slow browser TTS and used the Web Audio API with a library of pre-cached command tokens. This ensured sub-10ms <em>"decision-to-ear"</em> latency, delivering advice before the driver even touched the brake pedal.</li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list --></li>
+</ul>
+</li>
 
-<li><strong>The Strategist &lt;> Gemini 3.0 Flash</strong>. While Nano watched the corners, <a href="https://deepmind.google/models/gemini/flash/">Gemini 3.0 Flash</a> watched the lap. Living in the cloud via <a href="https://cloud.google.com/run">GCP Cloud Run</a>, this layer acted as the "Race Engineer." It ingested the data stream (buffered via Redis/PubSub) and looked for patterns over time, like identifying that a driver was consistently braking 0.2s earlier than Anthony's 1:57 reference in Sector 2.</li>
-<!-- wp:list -->
-<ul class="wp-block-list"><!-- wp:list-item --><!-- /wp:list-item --></ul>
+<li><strong>The Strategist &lt;&gt; Gemini 3.0 Flash</strong>. While Nano watched the corners, <a href="https://deepmind.google/models/gemini/flash/">Gemini 3.0 Flash</a> watched the lap. Living in the cloud via <a href="https://cloud.google.com/run">GCP Cloud Run</a>, this layer acted as the "Race Engineer." It ingested the data stream (buffered via Redis/PubSub) and looked for patterns over time, like identifying that a driver was consistently braking 0.2s earlier than Anthony's 1:57 reference in Sector 2.</li>
 
-<li><strong><strong>Virtual Sensors &amp; Heuristics</strong></strong>. When hardware failed us, we used physics. We implemented Virtual Sensors to infer brake pressure by calculating longitudinal and lateral G.<!-- wp:list -->
-<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Virtual Sensors &amp; Heuristics</strong>. When hardware failed us, we used physics. We implemented Virtual Sensors to infer brake pressure by calculating longitudinal and lateral G.
+<ul class="wp-block-list">
 <li>But we didn't stop at AI. We implemented a Heuristic Fallback layer, a rule-based system that acts as a hard safety gate. If the AI suggests an action that contradicts the telemetry's "Safe Set" (like "Push" during a heavy braking zone), the heuristics preempt the audio.</li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list --></li>
+</ul>
+</li>
 
 <li><strong>Predictive Geofencing</strong>. Best coaching comes <em>before</em> you need it. We defined geofences around every corner using Haversine distance. This allowed the AI to trigger "Feed Forward" advice, <em>"APPROACHING Turn 4: Smooth release"</em>, exactly 200 meters before the braking zone.</li>
-<ul class="wp-block-list"><!-- wp:list-item --><!-- /wp:list-item --></ul>
+</ul>
 
 <figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/image-68f4e07f.png"><img src="/assets/images/wp-archive/2025/image-68f4e07f.png" alt="Split-brain Gemini Nano edge reflex and Cloud Run telemetry reasoning architecture for the AI Racing Coach" class="wp-image-3661"/></a><figcaption class="wp-element-caption"><sub><em>Credits: Vikram Tiwari</em></sub></figcaption></figure>
 
@@ -85,11 +78,11 @@ redirect_from:
 
 <p>To be honest, this project would have taken months without the right (AI-powered!) tools. We used the Gemini ecosystem to <em>"vibe code"</em> the entire stack.</p>
 
+<ul>
 <li><strong>Discovery Phase</strong>: As newcomers to racing, we used <a href="https://aistudio.google.com/apps">Google AI Studio</a> to anchor the entire project. We literally uploaded raw VBOX videos and telemetry logs to make sense of the domain, the data, design our "Coach Personas" (Tony, Rachel, AJ), and prototype the entire app experience in a sandbox before we moved anywhere near a motor.</li>
-<ul class="wp-block-list"><!-- wp:list-item --><!-- /wp:list-item --></ul>
 
 <li><strong>Build Phase</strong>: In production, <a href="https://antigravity.google/">Google Antigravity</a> (the agentic IDE) became our pair programmer. It didn't just autocomplete syntax; it helped build the app from the ground up. We could describe physics in plain English: <em>"If speed drops rapidly without lateral G, that’s straight-line braking,"</em> and Antigravity would generate the Python inference logic for our virtual sensors. When our hardware failed, or GPS units spat out gibberish, I’d paste the error logs into Antigravity, and it would instantly identify the baud rate mismatch and rewrite our configuration.</li>
-<ul class="wp-block-list"><!-- wp:list-item --><!-- /wp:list-item --></ul>
+</ul>
 
 <p><em>Side Note</em>: Since track laps were limited (and expensive!), we had to get creative. We literally physically ran around the paddock holding our GPS devices to capture live coordinates for some quick testing. And yes, our first version involved a laptop strapped to the passenger seat in a backpack, but that's a chaotic story for another day.</p>
 
@@ -97,35 +90,28 @@ redirect_from:
 
 <p>The track is a cruel testing ground. Here is what I actually learned when code met physics:</p>
 
-<li><strong>Servers Don't Shake. Cars Do.</strong> <!-- wp:list -->
-<ul class="wp-block-list"><!-- wp:list-item -->
+<ul>
+<li><strong>Servers Don't Shake. Cars Do.</strong>
+<ul class="wp-block-list">
 <li>In the cloud, your servers are air-conditioned and mounted to stable racks. On the track, it’s 100 degrees in the cabin, the car is vibrating at 1.5G, and your hardware is gasping for air. We faced a 50% failure rate with our hardware setup because standard USB-C cables wiggled loose, or the browser crashed. It taught us that "robustness" isn't just about code coverage. It's about building for the physical chaos of the real world. </li>
-<!-- /wp:list-item -->
+<li>We even implemented a "Store &amp; Forward" architecture so that when a cable slipped or a connection dropped, the data wasn't lost, it just caught up later.</li>
+</ul>
+</li>
 
-<!-- wp:list-item -->
-<li>We even implemented a "Store &amp; Forward" architecture so that when a cable slipped or a connection dropped, the data wasn't lost, it just caught up later.<br></li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list --></li>
-
-<li><strong>Augmentation > Automation</strong>. <!-- wp:list -->
-<ul class="wp-block-list"><!-- wp:list-item -->
-<li>We originally thought the<em> "Killer App"</em> was the real-time voice coach. But it turned out the drivers valued the Post-Session Dashboard just as much. </li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
+<li><strong>Augmentation &gt; Automation</strong>.
+<ul class="wp-block-list">
+<li>We originally thought the <em>"Killer App"</em> was the real-time voice coach. But it turned out the drivers valued the Post-Session Dashboard just as much. </li>
 <li>Why? Because at 150 mph, you survive. In the paddock, you learn. </li>
-<!-- /wp:list-item -->
+<li>Combining the magic of real-time voice (cue AirPods) with the deep truth of visual analysis (Dashboard) verified the AI's advice and built real trust.</li>
+</ul>
+</li>
 
-<!-- wp:list-item -->
-<li>Combining the magic of real-time voice (cue AirPods) with the deep truth of visual analysis (Dashboard) verified the AI's advice and built real trust.<br></li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list --></li>
-
-<li><strong>The Era of the System Orchestrator</strong>.<!-- wp:list -->
-<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>The Era of the System Orchestrator</strong>.
+<ul class="wp-block-list">
 <li>I learned that being a "Prompt Engineer" isn't enough anymore. You need to be a System Orchestrator. Success came from knowing <em>how</em> to leverage intelligence - Nano for speed, Flash for analysis, and Pro for deep thinking and reasoning!</li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list --></li>
+</ul>
+</li>
+</ul>
 
 <h2 class="wp-block-heading">Bottom Line 💡</h2>
 
@@ -147,10 +133,8 @@ redirect_from:
 <hr>
 
 <br><br>
-<pre class="wp-block-preformatted">
-<p><em>A huge shoutout to the GDEs and Google teams who made this possible: 
-Ajeet Mirwani, Austin Bennett, Hemanth HM, Jesse Nowlin, Lynn Langit, Margaret Maynard-Reid, Rabimba Karanjai, 
+<pre class="wp-block-preformatted">A huge shoutout to the GDEs and Google teams who made this possible:
+Ajeet Mirwani, Austin Bennett, Hemanth HM, Jesse Nowlin, Lynn Langit, Margaret Maynard-Reid, Rabimba Karanjai,
 Sebastian Gomez, Vikram Tiwari, Karen Acosta Parra, Alvaro H., and the entire Developer Ecosystem team ✨
-  
-#BuildWithAI #BuildWithGemini #BuildWithAntigravity #AISprint #AISprintH2</em></p>
-</pre>
+
+#BuildWithAI #BuildWithGemini #BuildWithAntigravity #AISprint #AISprintH2</pre>

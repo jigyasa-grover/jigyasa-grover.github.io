@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: Taking the Data-Centric route to Machine Learning 🚴🏻‍♀️
 comments: true
-mathjax: true
+mathjax: false
 ---
 
 <p>Hey folks 👋🏻 For those who missed the talk by <a href="https://twitter.com/AndrewYNg">@AndrewYNg</a> on <a href="https://twitter.com/hashtag/DataCentric">#DataCentric</a> approach to <a href="https://twitter.com/hashtag/MachineLearning">#MachineLearning</a>, which aligns with our mission <a href="https://twitter.com/DataForML">@DataForML</a>, here is a quick recap 🧵👇🏻</p>

@@ -97,7 +97,7 @@ Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pro
 
 ## 8. GitHub Profile & Selected AI / Open-Source Engineering Projects
 
-- **GitHub Profile:** {{ site.data.github.url }} ({{ site.data.github.handle }}, active since {{ site.data.github.active_since }}; 76+ public repositories, 245+ upstream pull requests & issues across 32 external repositories, 430+ followers; Achievements: {{ site.data.github.achievements | join: ", " }})
+- **GitHub Profile:** {{ site.data.github.url }} ({{ site.data.github.handle }}, active since {{ site.data.github.active_since }}; 76+ public repositories, 245+ upstream pull requests & issues across 32 external repositories, 425+ followers; Achievements: {{ site.data.github.achievements | join: ", " }})
 - **GitHub Organizations:** {% for o in site.data.github.organizations %}@{{ o.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}
 
 ### Original Systems & Benchmarks
@@ -110,12 +110,12 @@ Pronunciation: {{ site.data.identity.pronunciation }} ({{ site.data.identity.pro
 ## 9. Signature Speaking Topics & Global Conferences
 
 Featured Video: {{ site.data.speaking.featured_video.title }} ({{ site.data.speaking.featured_video.url }}) — {{ site.data.speaking.featured_video.caption }}
-Global Stage Footprint (200+ talks across {{ site.data.speaking.speaking_globe.countries.size }} countries): {{ site.data.speaking.speaking_globe.countries | join: ", " }}.
+Global Stage Footprint (200+ talks across {{ site.data.speaking.countries.size }} countries): {{ site.data.speaking.countries | join: ", " }}.
 
 {% for t in site.data.speaking.signature_talks %}- **{{ t.title }}** ({{ t.format }}): {{ t.abstract }} [Delivered at: {{ t.stages }}]
 {% endfor %}
 
-## 10. 14x Industry & Open Source Awards
+## 10. 14× Industry & Open Source Awards
 
 {% for a in site.data.recognition.awards %}- {{ a.year }}: **{{ a.title }}** — {{ a.issuer }}
 {% endfor %}

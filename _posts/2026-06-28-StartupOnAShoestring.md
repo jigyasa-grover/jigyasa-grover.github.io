@@ -37,8 +37,7 @@ To prevent this, we must treat token consumption as a **finite runtime resource*
 * **Per-Turn Deltas**: To catch spike operations (like a massive database scan) immediately.
 * **Cumulative Escrow**: To enforce the absolute budget boundary ($0.50 limit) across the entire session.
 
-> [!WARNING]
-> **The Context Inflation Trap:** Because multi-step agents append every tool output and error to their message logs, the cost of processing your system instructions is billed *repeatedly* on every single step. In a 30-turn execution, your initial prompt gets read 30 times.
+> **Warning: The Context Inflation Trap.** Because multi-step agents append every tool output and error to their message logs, the cost of processing your system instructions is billed *repeatedly* on every single step. In a 30-turn execution, your initial prompt gets read 30 times.
 
 ---
 
@@ -136,9 +135,23 @@ class TemperaturePolicy(BaseOptimizationPolicy):
     def apply(self, monitor):
         monitor.agent.config.temperature = 0.0
 
+class ThinkingConfigPolicy(BaseOptimizationPolicy):
+    """Caps thinking_budget to 0 under panic pressure to conserve remaining escrow."""
+    def __init__(self, threshold_pct=0.8):
+        self.threshold_pct = threshold_pct
+
+    def evaluate(self, monitor) -> bool:
+        total_tokens = monitor.cumulative_usage["total_tokens"]
+        return (total_tokens / monitor.max_tokens) >= self.threshold_pct
+
+    def apply(self, monitor):
+        if getattr(monitor.agent.config, "thinking_config", None):
+            monitor.agent.config.thinking_config.thinking_budget = 0
+
 # Core Monitor Harness
 class TokenBudgetMonitor:
-    def __init__(self, max_tokens=5000, max_cost=0.50):
+    def __init__(self, agent=None, max_tokens=5000, max_cost=0.50):
+        self.agent = agent
         self.max_tokens = max_tokens
         self.max_cost = max_cost
         
@@ -153,7 +166,8 @@ class TokenBudgetMonitor:
         # Extensible policy registry
         self.optimization_policies = [
             ContextPruningPolicy(threshold_pct=0.5),
-            TemperaturePolicy(threshold_pct=0.8)
+            TemperaturePolicy(threshold_pct=0.8),
+            ThinkingConfigPolicy(threshold_pct=0.8),
         ]
 
     def calculate_cost(self, usage: types.UsageMetadata) -> float:
@@ -233,8 +247,8 @@ Instead of hardcoding a giant mess of `if/else` statements inside our hooks, we'
 
 Cost metrics are great, but we also want to see performance. By capturing timestamps at the start and end of every turn, we can calculate throughput and lag metrics in real-time:
 
-* **Latency**: The duration of the turn ($t_{\text{post}} - t_{\text{pre}}$).
-* **Throughput (TPS)**: $\frac{\text{Generated Tokens}}{\text{Latency}}$.
+* **Latency**: The duration of the turn ($$t_{\text{post}} - t_{\text{pre}}$$).
+* **Throughput (TPS)**: $$\frac{\text{Generated Tokens}}{\text{Latency}}$$.
 * **Runway**: The remaining token buffer before shutdown.
 
 We'll stream these metrics out from our monitor as JSON payloads and send them down a FastAPI Server-Sent Events (SSE) channel. This feeds our dashboard so we can monitor our agent's metrics turn-by-turn. Here is the operational interface in action:
@@ -298,7 +312,7 @@ python3 demo.py --mock --limit-tokens 1000
 
 ### Watching the Policy Steer in Real-Time
 
-To see how the agent adapts under pressure, compare these two simulation readouts. Notice how the cost-engineered run dynamically flags interventions and shifts down parameters:
+To see how the agent adapts under pressure, compare these two simulation readouts (note: `--mock` mode uses an accelerated synthetic per-turn dollar multiplier so the 50¢ escrow thresholds trigger visibly within 2,500 tokens). Notice how the cost-engineered run dynamically flags interventions and shifts down parameters:
 
 #### Baseline Run without Safety Overrides:
 ```
@@ -445,4 +459,3 @@ Huge thanks to the Google ML Developer team for organizing #AgenticArchitectSpri
 Google Cloud credits are provided for this project✨ 
 #BuildWithAI #BuildWithGemini #BuildWithGoogleAntigravity #BuildWithAntigravity #AISprint #GeminiSprint #AgenticArchitect #GoogleAntigravity
 </pre>
-_

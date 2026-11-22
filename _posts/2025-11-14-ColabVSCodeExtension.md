@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: Supercharging VS Code Vibe Coding with Gemini Code Assist +*new* Google Colab Extension 🔋
 comments: true
-mathjax: true
+mathjax: false
 redirect_from:
   - /colab-vscode-extension/
 ---
@@ -81,7 +81,7 @@ redirect_from:
 <br>
 
 <h2 class="wp-block-heading">Quick Show &amp; Tell </h2>
-<p>To showcase the power of <strong>VS Code + Colab extension + GPU compute</strong>, I <em>*vibe-coded*</em> a <strong>Zen Garden </strong>generative visualization and benchmarking demo:</p>
+<p>To showcase the power of <strong>VS Code + Colab extension + GPU compute</strong>, I <em>vibe-coded</em> a <strong>Zen Garden</strong> generative visualization and benchmarking demo:</p>
 <ul>
     <li><code>zen_garden(vibe, ax)</code> draws pastel, flowing vector‑field streamplots inspired by vibes like “tranquil stream”, “stormy sea”, “neon city dream”.</li>
     <li>CPU (NumPy) vs GPU (CuPy) on a 2048×2048 grid for 100 frames executed on the remote Colab GPU.</li>
@@ -92,7 +92,7 @@ redirect_from:
 
 <br>
 
-<pre class="wp-block-code" style="font-size:8px"><code>import matplotlib.pyplot as plt
+<pre class="wp-block-code"><code>import matplotlib.pyplot as plt
 import numpy as np
 
 def zen_garden(vibe: str, ax):
@@ -176,7 +176,7 @@ plt.show()</code></pre>
 
 <figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/image-f9676e62.png"><img src="/assets/images/wp-archive/2025/image-f9676e62.png" alt="Gemini Code Assist inline suggestions inside a VS Code Colab notebook" class="wp-image-3604"/></a></figure>
 
-<pre class="wp-block-code" style="font-size:8px"><code>import time
+<pre class="wp-block-code"><code>import time
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -356,7 +356,7 @@ if __name__ == "__main__":
 
 <figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2025/screenshot-2025-11-09-at-8-08-25-am-9386181d.jpg"><img src="/assets/images/wp-archive/2025/screenshot-2025-11-09-at-8-08-25-am-9386181d.jpg" alt="Generative visual output rendered on a cloud GPU via the VS Code Colab extension" class="wp-image-3610"/></a></figure>
 
-<pre class="wp-block-code" style="font-size:8px"><code>
+<pre class="wp-block-code"><code>
 --- Stream Animation Benchmark Summary ---
 CPU Vector Field Computation: 32.2074 seconds
 GPU Vector Field Computation: 0.5150 seconds

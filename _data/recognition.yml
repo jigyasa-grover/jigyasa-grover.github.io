@@ -1,4 +1,8 @@
 awards:
+  - year: "2026"
+    title: "Top 5 Extraordinary Speakers — Codemotion Milan"
+    issuer: "Codemotion"
+    url: "https://www.codemotion.com/magazine/ai-ml/the-ai-you-didnt-know-you-were-using-wrong/"
   - year: "2025/26"
     title: "Distinguished Alumni — Young Achiever / Young Trailblazer Award"
     issuer: "Delhi Technological University (DTU / DCE)"
@@ -15,18 +19,14 @@ awards:
     title: "Women in AI Leadership — Emerging AI Leader Award"
     issuer: "AI 2030 Global Initiative"
     url: "https://ai2030.org/"
-  - year: "2026"
-    title: "Top 5 Extraordinary Speakers — Codemotion Milan"
-    issuer: "Codemotion"
-    url: "https://www.codemotion.com/magazine/ai-ml/the-ai-you-didnt-know-you-were-using-wrong/"
-  - year: "2023–25"
-    title: "Most Active Speaker (3×) & Top 3% Conference Speakers Globally"
-    issuer: "Sessionize"
-    url: "https://sessionize.com/jigyasagrover/"
   - year: "2024–25"
     title: "Top 50 Tech Mentors in the United States"
     issuer: "Topmate"
     url: "https://topmate.io/topusers/top50-techmentors-us"
+  - year: "2023–25"
+    title: "Most Active Speaker (3×) & Top 3% Conference Speakers Globally"
+    issuer: "Sessionize"
+    url: "https://sessionize.com/jigyasagrover"
   - year: "2023"
     title: "Top 50 Women of Impact Honoree"
     issuer: "Women Impact Tech (Accelerate San Francisco)"
@@ -208,7 +208,7 @@ media_features:
     summary: "Joined Google Cloud's Aja Hammerly on the official Google Cloud Live broadcast to break down flagship Next '26 developer tooling, Cloud TPUs, and production agentic workflows."
     tags: ["Google Cloud Live", "Cloud Next '26", "Developer Recap"]
     cta_label: "Watch Livestream on YouTube"
-    url: "https://www.youtube.com/watch?v=N7N0TU9tkzw"
+    url: "https://www.youtube.com/watch?v=N7N0TU9tkzw&t=4114"
 
   - id: "cacm-ai-native-stack-2026"
     outlet: "Communications of the ACM"
@@ -644,17 +644,16 @@ media_features:
     height: 720
     focal: "center center"
     takeaway: "Weighing legitimate enterprise localization and accessibility use cases of synthetic media against impersonation fraud and reputational risk."
-    summary: "Expert commentary examining dual-use synthetic media, enterprise verification protocols, and organizational defenses against AI-generated social engineering."
+    summary: "Expert commentary originally published in Techopedia examining dual-use synthetic media, enterprise verification protocols, and organizational defenses against AI-generated social engineering (original article URL since retired by publisher)."
     tags: ["Techopedia", "Synthetic Media", "AI Security"]
-    cta_label: "Read Commentary on Techopedia"
-    url: "https://www.techopedia.com/deepfake-technology-strength-and-danger-for-organizations"
+    cta_label: "Media & Press Inquiry"
 
   - id: "google-dev-blog-whm-2023"
-    outlet: "Google Developers Blog & IBC"
-    masthead: "Google Developers · IBC"
+    outlet: "Google Developers Blog"
+    masthead: "Google Developers"
     masthead_style: "sans"
     date: "Mar 2023"
-    title: "Women's History Month ML GDE Spotlight & Deepfakes Industry Feature"
+    title: "Women's History Month ML GDE Spotlight"
     type: "Spotlight Interview"
     category: "press"
     visual_mode: "snapshot"
@@ -663,8 +662,8 @@ media_features:
     height: 640
     focal: "center center"
     quote: "One of the most meaningful parts of the Google Developer Experts program is the community — reaching out to communities and saying yes to challenging opportunities."
-    summary: "Official Google Developers Blog Women's History Month profile celebrating Jigyasa Grover's path from open-source Smalltalk contributor to Machine Learning GDE, author, and broadcast technologist."
-    tags: ["Google GDE Spotlight", "IBC Media Tech", "Open Source"]
+    summary: "Official Google Developers Blog Women's History Month profile celebrating Jigyasa Grover's path from open-source Smalltalk contributor to Machine Learning GDE and author."
+    tags: ["Google GDE Spotlight", "Machine Learning", "Open Source"]
     cta_label: "Read Spotlight on Google Blog"
     url: "https://developers.googleblog.com/2023/03/gde-womens-history-month-feature-jigyasa-grover-machine-learning.html"
 
@@ -933,13 +932,13 @@ visual_highlights:
     image: "/assets/images/opt/moxie_award_winner.jpg"
     width: 800
     height: 734
-    url: "https://builtin.com/women-tech/moxie-award-winners"
+    url: "https://builtin.com/articles/2022-moxie-award-winners"
   - title: "Gradle DevProdEng Showdown Champion (S1E5)"
     subtitle: "Open Source & Developer Productivity at Scale"
     image: "/assets/images/opt/devprodeng_showdown_winner.jpg"
     width: 960
     height: 536
-    url: "https://www.youtube.com/watch?v=O5L2e1UrQtI"
+    url: "https://www.youtube.com/watch?v=aCoAwijqrBs"
   - title: "Top 50 ML & Data Science Experts to Follow"
     subtitle: "Engatica Global Industry Recognition"
     image: "/assets/images/opt/engatica_top_50_ml_experts.jpg"
@@ -1331,296 +1330,6 @@ advisory_client_logos:
   - name: "World Economic Forum"
     logo: "/assets/images/brands/wef.svg"
     width: 184
-    height: 36
-
-home_ecosystem_logos:
-  - name: "Google"
-    logo: "/assets/images/brands/google.svg"
-    width: 118
-    height: 36
-  - name: "Google DeepMind"
-    logo: "/assets/images/brands/google-deepmind.svg"
-    width: 198
-    height: 36
-  - name: "Anthropic"
-    logo: "/assets/images/brands/anthropic.svg"
-    width: 158
-    height: 36
-  - name: "Apple"
-    logo: "/assets/images/brands/apple.svg"
-    width: 104
-    height: 36
-  - name: "Microsoft"
-    logo: "/assets/images/brands/microsoft.svg"
-    width: 138
-    height: 36
-  - name: "Meta"
-    logo: "/assets/images/brands/meta.svg"
-    width: 104
-    height: 36
-  - name: "Amazon"
-    logo: "/assets/images/brands/amazon.svg"
-    width: 112
-    height: 36
-  - name: "Google Cloud"
-    logo: "/assets/images/brands/google-cloud.svg"
-    width: 162
-    height: 36
-  - name: "Spotify"
-    logo: "/assets/images/brands/spotify.svg"
-    width: 122
-    height: 36
-  - name: "Adobe"
-    logo: "/assets/images/brands/adobe.svg"
-    width: 112
-    height: 36
-  - name: "Figma"
-    logo: "/assets/images/brands/figma.svg"
-    width: 108
-    height: 36
-  - name: "Atlassian"
-    logo: "/assets/images/brands/atlassian.svg"
-    width: 136
-    height: 36
-  - name: "Coinbase"
-    logo: "/assets/images/brands/coinbase.svg"
-    width: 128
-    height: 36
-  - name: "Morgan Stanley"
-    logo: "/assets/images/brands/morgan-stanley.svg"
-    width: 156
-    height: 36
-  - name: "FedEx"
-    logo: "/assets/images/brands/fedex.svg"
-    width: 82
-    height: 36
-  - name: "Accenture"
-    logo: "/assets/images/brands/accenture.svg"
-    width: 112
-    height: 36
-  - name: "Roblox"
-    logo: "/assets/images/brands/roblox.svg"
-    width: 118
-    height: 36
-  - name: "Grammarly"
-    logo: "/assets/images/brands/grammarly.svg"
-    width: 144
-    height: 36
-  - name: "Windsurf"
-    logo: "/assets/images/brands/windsurf.svg"
-    width: 134
-    height: 36
-  - name: "Superhuman"
-    logo: "/assets/images/brands/superhuman.svg"
-    width: 166
-    height: 36
-  - name: "Remitly"
-    logo: "/assets/images/brands/remitly.svg"
-    width: 118
-    height: 36
-  - name: "HP"
-    logo: "/assets/images/brands/hp.svg"
-    width: 82
-    height: 36
-  - name: "Southwest Airlines"
-    logo: "/assets/images/brands/southwest.svg"
-    width: 144
-    height: 36
-  - name: "Neutrogena"
-    logo: "/assets/images/brands/neutrogena.svg"
-    width: 132
-    height: 36
-  - name: "LinkedIn Learning"
-    logo: "/assets/images/brands/linkedin-learning.svg"
-    width: 192
-    height: 36
-  - name: "Udacity"
-    logo: "/assets/images/brands/udacity.svg"
-    width: 112
-    height: 36
-  - name: "CommonSpirit Health"
-    logo: "/assets/images/brands/commonspirit.svg"
-    width: 198
-    height: 36
-  - name: "O'Reilly Media"
-    logo: "/assets/images/brands/oreilly.svg"
-    width: 124
-    height: 36
-  - name: "Springer Nature"
-    logo: "/assets/images/brands/springer.svg"
-    width: 126
-    height: 36
-  - name: "The Linux Foundation"
-    logo: "/assets/images/brands/linux-foundation.svg"
-    width: 186
-    height: 36
-  - name: "Red Hat"
-    logo: "/assets/images/brands/red-hat.svg"
-    width: 124
-    height: 36
-  - name: "World Economic Forum"
-    logo: "/assets/images/brands/wef.svg"
-    width: 184
-    height: 36
-  - name: "United Nations ITU"
-    logo: "/assets/images/brands/un-itu.svg"
-    width: 112
-    height: 36
-  - name: "Forbes"
-    logo: "/assets/images/brands/forbes.svg"
-    width: 96
-    height: 36
-  - name: "Business Insider"
-    logo: "/assets/images/brands/business-insider.svg"
-    width: 176
-    height: 36
-  - name: "VentureBeat"
-    logo: "/assets/images/brands/venturebeat.svg"
-    width: 156
-    height: 36
-  - name: "MIT Sloan SMR × BCG"
-    logo: "/assets/images/brands/mit-bcg.svg"
-    width: 156
-    height: 36
-  - name: "Fireflies.ai"
-    logo: "/assets/images/brands/fireflies.svg"
-    width: 146
-    height: 36
-  - name: "Qodo"
-    logo: "/assets/images/brands/qodo.svg"
-    width: 104
-    height: 36
-  - name: "Parallel Web Systems"
-    logo: "/assets/images/brands/parallel.svg"
-    width: 124
-    height: 36
-  - name: "SenseLab"
-    logo: "/assets/images/brands/senselab.svg"
-    width: 138
-    height: 36
-  - name: "Opaque Systems"
-    logo: "/assets/images/brands/opaque.svg"
-    width: 128
-    height: 36
-  - name: "Pensieve"
-    logo: "/assets/images/brands/pensieve.svg"
-    width: 132
-    height: 36
-  - name: "Guidde"
-    logo: "/assets/images/brands/guidde.svg"
-    width: 116
-    height: 36
-  - name: "Appsmith"
-    logo: "/assets/images/brands/appsmith.svg"
-    width: 138
-    height: 36
-  - name: "Simplilearn"
-    logo: "/assets/images/brands/simplilearn.svg"
-    width: 148
-    height: 36
-  - name: "Diem AI"
-    logo: "/assets/images/brands/diem.svg"
-    width: 116
-    height: 36
-  - name: "Founders Circle Capital"
-    logo: "/assets/images/brands/founders-circle.svg"
-    width: 176
-    height: 36
-  - name: "Capital Hill Ventures"
-    logo: "/assets/images/brands/capital-hill.svg"
-    width: 168
-    height: 36
-  - name: "Preston-Werner Ventures"
-    logo: "/assets/images/brands/preston-werner.svg"
-    width: 184
-    height: 36
-  - name: "Eero"
-    logo: "/assets/images/brands/eero.svg"
-    width: 76
-    height: 36
-  - name: "Innodata"
-    logo: "/assets/images/brands/innodata.svg"
-    width: 132
-    height: 36
-  - name: "Base44"
-    logo: "/assets/images/brands/base44.svg"
-    width: 120
-    height: 36
-  - name: "Okareo"
-    logo: "/assets/images/brands/okareo.svg"
-    width: 122
-    height: 36
-  - name: "BackOps AI"
-    logo: "/assets/images/brands/backops.svg"
-    width: 144
-    height: 36
-  - name: "Bezoku AI"
-    logo: "/assets/images/brands/bezoku.svg"
-    width: 136
-    height: 36
-  - name: "Optica Labs AI"
-    logo: "/assets/images/brands/optica-labs.svg"
-    width: 148
-    height: 36
-  - name: "Fusion Hill"
-    logo: "/assets/images/brands/fusion-hill.svg"
-    width: 138
-    height: 36
-  - name: "Packt"
-    logo: "/assets/images/brands/packt.svg"
-    width: 102
-    height: 36
-  - name: "CreativePro"
-    logo: "/assets/images/brands/creativepro.svg"
-    width: 152
-    height: 36
-  - name: "LeadDev"
-    logo: "/assets/images/brands/leaddev.svg"
-    width: 124
-    height: 36
-  - name: "SiliconANGLE theCUBE"
-    logo: "/assets/images/brands/thecube.svg"
-    width: 132
-    height: 36
-  - name: "Grazia UK"
-    logo: "/assets/images/brands/grazia.svg"
-    width: 106
-    height: 36
-  - name: "Ticker News"
-    logo: "/assets/images/brands/ticker-news.svg"
-    width: 144
-    height: 36
-  - name: "Silicon Valley Security Group"
-    logo: "/assets/images/brands/svsg.svg"
-    width: 96
-    height: 36
-  - name: "AI Aspire"
-    logo: "/assets/images/brands/ai-aspire.svg"
-    width: 128
-    height: 36
-  - name: "AI Assurance Council"
-    logo: "/assets/images/brands/ai-assurance.svg"
-    width: 166
-    height: 36
-  - name: "Corinium Global Intelligence"
-    logo: "/assets/images/brands/corinium.svg"
-    width: 132
-    height: 36
-  - name: "VigiTrust"
-    logo: "/assets/images/brands/vigitrust.svg"
-    width: 132
-    height: 36
-  - name: "Girls Who Code"
-    logo: "/assets/images/brands/girls-who-code.svg"
-    width: 168
-    height: 36
-  - name: "Apache Software Foundation"
-    logo: "/assets/images/brands/apache.svg"
-    width: 124
-    height: 36
-  - name: "Python Software Foundation"
-    logo: "/assets/images/brands/python.svg"
-    width: 122
     height: 36
 
 home_ecosystem_tiers:

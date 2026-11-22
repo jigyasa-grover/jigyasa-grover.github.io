@@ -3,8 +3,10 @@ layout: post
 type: blog
 title: Goodbye to News Copy Writer's Block! Supercharging Gemini Pro via Supervised Fine-Tuning 📰
 comments: true
-mathjax: true
+mathjax: false
 ---
+
+<p><em>Historical Note (March 2024): This walkthrough used <code>gemini-1.0-pro-001</code> in Google AI Studio. Gemini 1.0 Pro has since been retired in favor of newer Gemini models, though the supervised fine-tuning workflow and dataset curation patterns remain instructive.</em></p>
 
 <p>Are you tired of staring at a blank screen, struggling to craft captivating headlines and categorize news articles effectively? Say goodbye to news copywriter's block as we harness the power of Gemini Pro. In this article, we'll explore how this cutting-edge technology can supercharge your productivity and creativity, helping you craft compelling headlines and easily categorize news articles.</p>
 
@@ -17,9 +19,11 @@ mathjax: true
 
 <p><a href="https://blog.google/technology/ai/google-gemini-ai/">Gemini</a> is a family of highly capable multimodal models developed at Google. The Gemini models are trained jointly across image, audio, video, and text data to build a model with strong generalist capabilities across modalities alongside cutting-edge understanding and reasoning performance in each respective domain. Its state-of-the-art capabilities are aimed to significantly enhance the way developers and enterprise customers build and scale with AI. Google has optimized Gemini 1.0, the first version, for three different sizes:</p>
 
+<ul>
 <li>Gemini Ultra — largest and most capable model for highly complex tasks.</li>
 <li>Gemini Pro — best model for scaling across a wide range of tasks.</li>
 <li>Gemini Nano — most efficient model for on-device tasks.</li>
+</ul>
 
 <h3 class="wp-block-heading">How does supervised fine-tuning help?</h3>
 
@@ -29,8 +33,9 @@ mathjax: true
 
 <p>So, while Gemini Pro starts as a generic model, it can be customized and specialized to suit specific use cases and provide tailored solutions for various natural language processing tasks.</p>
 
-<h3 class="wp-block-heading"><div class="flex flex-grow flex-col max-w-full" style="border: 0px solid rgb(227, 227, 227);--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x:;--tw-pan-y:;--tw-pinch-zoom:;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position:;--tw-gradient-via-position:;--tw-gradient-to-position:;--tw-ordinal:;--tw-slashed-zero:;--tw-numeric-figure:;--tw-numeric-spacing:;--tw-numeric-fraction:;--tw-ring-inset:;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgba(69,89,164,.5);--tw-ring-offset-shadow: 0 0 transparent;--tw-ring-shadow: 0 0 transparent;--tw-shadow: 0 0 transparent;--tw-shadow-colored: 0 0 transparent;--tw-blur:;--tw-brightness:;--tw-contrast:;--tw-grayscale:;--tw-hue-rotate:;--tw-invert:;--tw-saturate:;--tw-sepia:;--tw-drop-shadow:;--tw-backdrop-blur:;--tw-backdrop-brightness:;--tw-backdrop-contrast:;--tw-backdrop-grayscale:;--tw-backdrop-hue-rotate:;--tw-backdrop-invert:;--tw-backdrop-opacity:;--tw-backdrop-saturate:;--tw-backdrop-sepia:;display: flex;max-width: 100%;flex-grow: 1;flex-direction: column"><div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" style="border: 0px solid rgb(227, 227, 227);--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x:;--tw-pan-y:;--tw-pinch-zoom:;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position:;--tw-gradient-via-position:;--tw-gradient-to-position:;--tw-ordinal:;--tw-slashed-zero:;--tw-numeric-figure:;--tw-numeric-spacing:;--tw-numeric-fraction:;--tw-ring-inset:;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgba(69,89,164,.5);--tw-ring-offset-shadow: 0 0 transparent;--tw-ring-shadow: 0 0 transparent;--tw-shadow: 0 0 transparent;--tw-shadow-colored: 0 0 transparent;--tw-blur:;--tw-brightness:;--tw-contrast:;--tw-grayscale:;--tw-hue-rotate:;--tw-invert:;--tw-saturate:;--tw-sepia:;--tw-drop-shadow:;--tw-backdrop-blur:;--tw-backdrop-brightness:;--tw-backdrop-contrast:;--tw-backdrop-grayscale:;--tw-backdrop-hue-rotate:;--tw-backdrop-invert:;--tw-backdrop-opacity:;--tw-backdrop-saturate:;--tw-backdrop-sepia:;display: flex;min-height: 20px;flex-direction: column;align-items: flex-start;gap: 0.75rem"><div style="border: 0px solid rgb(227, 227, 227);--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x:;--tw-pan-y:;--tw-pinch-zoom:;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position:;--tw-gradient-via-position:;--tw-gradient-to-position:;--tw-ordinal:;--tw-slashed-zero:;--tw-numeric-figure:;--tw-numeric-spacing:;--tw-numeric-fraction:;--tw-ring-inset:;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgba(69,89,164,.5);--tw-ring-offset-shadow: 0 0 transparent;--tw-ring-shadow: 0 0 transparent;--tw-shadow: 0 0 transparent;--tw-shadow-colored: 0 0 transparent;--tw-blur:;--tw-brightness:;--tw-contrast:;--tw-grayscale:;--tw-hue-rotate:;--tw-invert:;--tw-saturate:;--tw-sepia:;--tw-drop-shadow:;--tw-backdrop-blur:;--tw-backdrop-brightness:;--tw-backdrop-contrast:;--tw-backdrop-grayscale:;--tw-backdrop-hue-rotate:;--tw-backdrop-invert:;--tw-backdrop-opacity:;--tw-backdrop-saturate:;--tw-backdrop-sepia:" class="">Why should I fine-tune Gemini Pro i.e. <code>gemini-1.0-pro-001</code> to generate headlines and categories for news articles rather than training a traditional supervised multi-class classifier?</div></div></div></h3>
+<h3 class="wp-block-heading">Why should I fine-tune Gemini Pro i.e. <code>gemini-1.0-pro-001</code> to generate headlines and categories for news articles rather than training a traditional supervised multi-class classifier?</h3>
 
+<ul>
 <li><strong>End-to-End Solution</strong>: LLMs can provide an end-to-end solution for headline generation and categorization, eliminating the need for a separate classifier and headline generator. This simplifies the overall architecture and may lead to better integration of the model into applications.</li>
 
 <li><strong>Semantic Understanding</strong>: LLMs, like <a href="https://blog.google/technology/ai/google-gemini-ai/">Gemini</a>, have been pretrained on vast amounts of text data, enabling them to capture semantic understanding and contextual information. This allows them to generate more contextually relevant and diverse headlines and categories compared to traditional classifiers.</li>
@@ -46,6 +51,7 @@ mathjax: true
 <li><strong>Transfer Learning Benefits</strong>: Fine-tuning a pretrained LLM involves leveraging transfer learning, where the model transfers knowledge gained from one task (pretraining on a large corpus) to another (fine-tuning on your specific task). This often results in faster convergence and better generalization to new data compared to training a model from scratch.</li>
 
 <li><strong>Adaptability to Various Inputs</strong>: LLMs can handle a wide range of inputs, including incomplete or partially specified prompts. This adaptability is beneficial in scenarios where users may provide partial information or the input data is not uniform.</li>
+</ul>
 
 <p>While fine-tuning LLMs for headline and category generation offers these advantages, it's essential to consider the specific requirements and constraints of your task, as well as the computational resources available. Traditional classifiers may still be suitable for certain scenarios, especially if you have a well-annotated dataset and computational efficiency is a primary concern.</p>
 
@@ -74,7 +80,7 @@ White House officials say the crux of the president's visit to the U.N. this yea
 
 <h3 class="wp-block-heading">Supervised Fine-Tuning Gemini Pro to yield News Headline &amp; Category Generator!</h3>
 
-<p>Using the above modified version of <a href="https://www.kaggle.com/datasets/rmisra/news-category-dataset">News Category Dataset</a> by keeping only the <code>short_description</code>, <code>headline</code>, and <code>category</code> we fine-tuned the <a href="https://blog.google/technology/ai/gemini-api-developers-cloud/">Gemini Pro</a> (or to be specific <span style="background-color: inherit; font-family: monospace; font-size: inherit; color: initial;">gemini-1.0-pro-001</span>). Specifically we used 1, 000 of the 200, 000 samples only for this process with the following configuration in <a href="https://aistudio.google.com/">Google AI Studio</a>.</p>
+<p>Using the above modified version of <a href="https://www.kaggle.com/datasets/rmisra/news-category-dataset">News Category Dataset</a> by keeping only the <code>short_description</code>, <code>headline</code>, and <code>category</code> we fine-tuned the <a href="https://blog.google/technology/ai/gemini-api-developers-cloud/">Gemini Pro</a> (or to be specific <code>gemini-1.0-pro-001</code>). Specifically we used 1,000 of the 200,000 samples only for this process with the following configuration in <a href="https://aistudio.google.com/">Google AI Studio</a>.</p>
 
 <pre class="wp-block-code"><code>
 input: short_description
@@ -89,7 +95,7 @@ batch size: 32
 <figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/image-3-0a60acfe.png"><img src="/assets/images/wp-archive/2024/image-3-0a60acfe.png" alt="Google Gemini API supervised model tuning workflow diagram" class="wp-image-3355"/></a><figcaption class="wp-element-caption"><em>Check out this <a href="https://ai.google.dev/docs/model_tuning_guidance">guide</a> by Google for more on tuning the text model behind the Gemini API text service. </em></figcaption></figure>
 
 <br><br>
-<p>It took ~34 minutes to fine-tune the model with a learning rate of 0.00002. Here is a snapshot of the loss vs epoch curve and other details for the model `tunedModels/news-headline--category-generator-pvv2y3`.</p>
+<p>It took ~34 minutes to fine-tune the model with a learning rate of 0.00002. Here is a snapshot of the loss vs epoch curve and other details for the model <code>tunedModels/news-headline--category-generator-pvv2y3</code>.</p>
 
 <figure class="wp-block-image size-full is-style-default"><a href="/assets/images/wp-archive/2024/image-98a0d57b.png"><img src="/assets/images/wp-archive/2024/image-98a0d57b.png" alt="Training loss progression during Gemini Pro supervised fine-tuning" class="wp-image-3349"/></a></figure>
 

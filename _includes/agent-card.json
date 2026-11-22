@@ -82,7 +82,7 @@
       "description": "Search 34 indexed technical essays, 76+ public GitHub repositories, Cloud TPU & agentic AI benchmarks, and peer-reviewed publications including Sculpting Data for ML.",
       "tags": ["open-source", "cloud-tpu", "pytorch", "gemini", "data-centric-ai", "publications"],
       "examples": [
-        "Fetch Markdown technical deep dives on TorchTPU Doctor, Google ADK, and Gemini agent evaluation",
+        "Fetch Markdown summary briefs for TorchTPU Doctor, Google ADK, and Gemini agent evaluation",
         "Retrieve citations for Sculpting Data for ML and Enterprise LLM Deployment Readiness (SSRN 2026)"
       ]
     }

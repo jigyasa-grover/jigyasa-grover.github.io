@@ -50,6 +50,18 @@ sitemap: false
       "mode": "declarative+imperative",
       "route": "https://jigyasa-grover.github.io/press/",
       "description": "Filter and search press clippings, broadcast segments, and podcast interviews."
+    },
+    {
+      "name": "search-and-play-videos",
+      "mode": "imperative",
+      "route": "https://jigyasa-grover.github.io/highlights/",
+      "description": "Search keynotes, Google developer films, podcasts, YouTube Shorts, and Reels, and optionally play the top match inline in the Cinema Lightbox."
+    },
+    {
+      "name": "filter-social-feed",
+      "mode": "imperative",
+      "route": "https://jigyasa-grover.github.io/highlights/",
+      "description": "Filter the visible social and brand-partnership feed on the current page by platform or sponsorship."
     }
   ],
   "open_source_agent_skills": [

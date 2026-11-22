@@ -3,12 +3,12 @@ layout: post
 type: blog
 title: In my Kinetic era - Fine-tuning Gemma 3 to speak Gen Z on a Cloud TPU with one decorator 🤌🏻
 comments: true
-mathjax: true
+mathjax: false
 redirect_from:
   - /kinetic-finetuning-on-cloud-tpu/
 ---
 
-<p><strong>TL; DR </strong>We fine-tuned Google's <a href="https://huggingface.co/google/gemma-3-1b-it">Gemma 3 1B</a> to respond in Gen Z slang using supervised fine-tuning (SFT) on just 30 prompt/response pairs. The entire job runs on a Cloud TPU v5 Lite, deployed with a single Python decorator using the <em>*new*</em> <a href="https://github.com/keras-team/kinetic">Kinetic</a> framework from the Keras team.</p> 
+<p><strong>TL; DR </strong>We fine-tuned Google's <a href="https://huggingface.co/google/gemma-3-1b-it">Gemma 3 1B</a> to respond in Gen Z slang using supervised fine-tuning (SFT) on just 30 prompt/response pairs. The entire job runs on a Cloud TPU v5 Lite, deployed with a single Python decorator using the <em>new</em> <a href="https://github.com/keras-team/kinetic">Kinetic</a> framework from the Keras team.</p> 
 
 <p>Zero Docker. Zero Kubernetes YAML. Just <code>@kinetic.run()</code>!</p>
 
@@ -44,6 +44,7 @@ def train():
 
 <pre class="wp-block-code has-small-font-size"><code>@kinetic.run(accelerator=&#34;v5litepod-1&#34;, capture_env_vars=&#91;&#34;KAGGLE_API_TOKEN&#34;])
 def finetune(sft_data, test_prompts):
+    import time
     import jax
     import keras_hub
 
@@ -51,18 +52,20 @@ def finetune(sft_data, test_prompts):
     gemma = keras_hub.models.Gemma3CausalLM.from_preset(&#34;gemma3_1b&#34;)
 
     # Fine-tune on Gen Z prompt/response pairs
+    t0 = time.perf_counter()
     gemma.fit(x=sft_data, batch_size=1)
+    train_time = time.perf_counter() - t0
 
     # Generate on unseen prompts to test style transfer
     generations = {p: gemma.generate(p, max_length=80) for p in test_prompts}
-    return {&#34;generations&#34;: generations, &#34;train_time_s&#34;: train_time, ...}
+    return {&#34;generations&#34;: generations, &#34;train_time_s&#34;: round(train_time, 1)}
   </code></pre>
 
 <p><strong>Why do imports go inside the function?</strong> The function body runs on the remote TPU container, not your local machine. Imports resolve against the container's packages: JAX compiled with <code>libtpu</code>, the correct CUDA-free numpy, etc. If you imported <code>jax</code> or <code>keras_hub</code> at module level, Kinetic would try to serialize those modules when pickling the function, which would either fail or produce version mismatches when deserialized inside the container. This is a deliberate design pattern, not a workaround. Think of the decorated function as a self-contained script that happens to share your local namespace for its arguments.</p>
 
 <h2 class="wp-block-heading">Under the hood: How Kinetic works?</h2>
 
-<p>When you call a <code>@kinetic.run()</code> decorated function, Kinetic runs a four-stage pipeline:</p>
+<p>When you call a <code>@kinetic.run()</code> decorated function, Kinetic runs a five-stage pipeline:</p>
 
 <pre class="wp-block-code has-small-font-size"><code>Local machine                              Cloud (GKE + TPU)
 ─────────────                              ──────────────────
@@ -176,11 +179,12 @@ Cleaned up 3 artifacts from gs://PROJECT-kr-kinetic-cluster-jobs/job-5c7cbd62/
 
 <p>Though factual accuracy degrades on some prompts. The first four answers are correct; the last two are hallucinations. This is a known trade-off with full fine-tuning on tiny datasets: updating all 1B parameters with only 30 examples can partially overwrite the pretrained knowledge, especially for facts underrepresented in the training distribution. For production use, you'd mitigate this with: </p>
 
+<ul>
 <li><strong>More training data</strong> (hundreds and thousands of examples, not just 30)</li>
 <li><strong>LoRA</strong> (freeze pretrained weights, train only low-rank adapters)</li>
 <li><strong>Multiple epochs with early stopping</strong> (monitor validation loss)</li>
 <li><strong>A held-out evaluation set</strong> for factual accuracy checks </li>
-<br>
+</ul>
 <p>For a demo of Kinetic's workflow? 30 pairs in one epoch is enough to show that style transfer works, and that the TPU handled it in under a minute.</p>
 
 <h2 class="wp-block-heading"><strong>What Kinetic gets right</strong>? </h2>
@@ -208,22 +212,26 @@ Cleaned up 3 artifacts from gs://PROJECT-kr-kinetic-cluster-jobs/job-5c7cbd62/
 
 <h2 class="wp-block-heading">So... when to use Kinetic?</h2>
 
+<ul>
 <li><strong>Rapid prototyping</strong>: You have a training loop that works locally and want to see if it runs on a TPU. Kinetic removes the infrastructure gap.</li>
 <li><strong>Quick experiments</strong>: Trying different hyperparameters, datasets, or model sizes. Container caching makes the feedback loop fast.</li>
 <li><strong>Demos and tutorials</strong>: The decorator pattern is visually clean and easy to explain. Great for teaching. </li>
+</ul>
 
-<br>
 <p>It might <em>not</em> be a great choice for:</p>
+<ul>
 <li><strong>Production training</strong>: Multi-hour jobs need checkpointing, monitoring dashboards (TensorBoard, W&amp;B), and fault tolerance. Use Vertex AI or a direct GKE deployment for these. </li>
 <li><strong>Multi-node TPU pods</strong>: Kinetic supports multi-chip topologies (v5litepod-4, etc.) via LeaderWorkerSet, but orchestrating data parallelism across pods is still your responsibility.</li>
+</ul>
 
-<br>
-<p><strong>Important:</strong> The GKE cluster control plane (~$0.10/hr) runs even when > no TPU nodes are active. Always <code>kinetic down --yes</code> when you're done experimenting. In our session, missing this for a few hours would have cost more than the actual training.</p>
+<p><strong>Important:</strong> The GKE cluster control plane (~$0.10/hr) runs even when no TPU nodes are active. Always <code>kinetic down --yes</code> when you're done experimenting. In our session, missing this for a few hours would have cost more than the actual training.</p>
 
 <h2 class="wp-block-heading">Final Thoughts</h2>
 
+<ul>
 <li><strong>Kinetic makes TPUs feel local.</strong> The <em>"write function → decorate → call"</em> workflow genuinely eliminates infrastructure friction. No YAML, no Dockerfiles, no SSH. The mental model is <em>"I have a function; I want it to run on a TPU"</em>, and Kinetic makes that literal. </li>
 <li><strong>Container caching is the killer feature.</strong> The first run pays a ~5 min build tax. Every subsequent run skips straight to execution. We ran 5 iterations during development (fixing bugs, tweaking data, adjusting prompts), and only the first one waited for a build. This is what makes Kinetic feel like local development.</li>
+</ul>
 
 <br><br>
 

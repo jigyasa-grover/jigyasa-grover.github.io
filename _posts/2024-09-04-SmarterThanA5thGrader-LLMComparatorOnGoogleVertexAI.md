@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: Smarter than a 5th Grader? 🎓 Using LLM Comparator on Google Vertex AI to find out.
 comments: true
-mathjax: true
+mathjax: false
 ---
 
 <p>Ever wondered which <em>Large Language Model (LLM)</em> stands out not just for providing accurate responses, but also for being clear, respectful, and detail-oriented? With the ever-expanding list of LLMs, each boasting different configurations and capabilities, it is crucial to have a way to quantitatively assess their performance. The goal is to help us select the best model for building applications that prioritize precision, safety, and ethical considerations.</p>
@@ -17,8 +17,10 @@ mathjax: true
 <p>The <a href="https://github.com/pair-code/llm-comparator">LLM Comparator</a> is an advanced interactive tool designed for in-depth evaluations of large language models (LLMs). It facilitates side-by-side comparisons of model responses, focusing on both the quality and safety of outputs. </p>
 
 <p>This tool offers a dual-layered approach, wherein it provides:</p>
+<ul>
 <li>Quantitative assessments through numerical scores.</li>
 <li>Qualitative insights through detailed feedback.</li>
+</ul>
 
 <figure class="wp-block-image size-large"><a href="/assets/images/wp-archive/2024/image-3b041b5e.png"><img src="/assets/images/wp-archive/2024/image-3b041b5e.png" alt="PAIR LLM Comparator side-by-side rubric evaluation UI on Vertex AI" class="wp-image-3452"/></a></figure>
 
@@ -98,9 +100,11 @@ vertexai.init(project=PROJECT_ID, location=REGION)
 <h4 class="wp-block-heading">Input Prep</h4>
 
 <p>The <code>llm_judge_inputs</code> structure is designed to facilitate a detailed comparison between two different model responses for a set of prompts. Here is a breakdown of its components:</p>
+<ul>
 <li><code>prompt</code>: This is the question or statement to which the models are responding. It sets the context for evaluating the quality and accuracy of the responses provided by each model.</li>
 <li><code>response_a</code>: This represents the answer provided by Model A to the given prompt. It is what you are comparing against Model B's response.</li>
 <li><code>response_b</code>: This represents the answer provided by Model B to the same prompt. This allows you to evaluate how well Model B performs in comparison to Model A.</li>
+</ul>
 
 <p><em>Also, take a moment to guess which responses might belong to which model 😉 </em><br><em>(your options are Gemini 1.5 Pro, Gemma 2B, GPT-4o, Claude 3.5 Sonnet, Llama 3.1, etc.)</em></p>
 
@@ -238,11 +242,13 @@ llm_judge_inputs = [
 
 <p><code>judge</code></p>
 
+<ul>
 <li>It is the model responsible for actually doing the comparison between the two models. The same judge is run multiple times to get a diversity of perspectives, more on how to configure this below.</li>
-<li>A judge must phrase their responses in a simple XML format that includes the verdict and an explanation of the results, to enable downstream processing by the the bulletizer and clustered.</li>
+<li>A judge must phrase their responses in a simple XML format that includes the verdict and an explanation of the results, to enable downstream processing by the bulletizer and clusterer.</li>
 <li>We provide a default "judge" prompt in <code>llm_comparator.llm_judge_runner.DEFAULT_LLM_JUDGE_PROMPT_TEMPLATE</code>, and you can use the <code>llm_judge_prompt_template=</code> parameter to provide a custom prompt that may better suit your needs.</li>
+</ul>
 
-```
+```xml
 <result>
      <explanation>YOUR EXPLANATION GOES HERE.</explanation>
      <verdict>A is slightly better</verdict>
@@ -251,11 +257,15 @@ llm_judge_inputs = [
 
 <p><code>bulletizer</code></p>
 
+<ul>
 <li>It condenses the results provided by the judge into a set of bullets to make them easier to understand and consume in the UI.</li>
+</ul>
 
 <p><code>clusterer</code></p>
 
+<ul>
 <li>It takes the bullets, embeds them, groups them into clusters based on embedding similarity, and generates a label for those clusters.</li>
+</ul>
 
 ```
 generator = model_helper.VertexGenerationModelHelper()

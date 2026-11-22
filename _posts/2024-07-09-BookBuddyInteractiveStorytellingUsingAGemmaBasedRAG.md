@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: Book Buddy - Interactive Storytelling using a Gemma-based RAG 📖
 comments: true
-mathjax: true
+mathjax: false
 ---
 
 <p>In the realm of AI-driven interactive storytelling, the fusion of Retrieval Augmented Generation (RAG) and Google's Gemma language model opens new avenues for creating engaging narratives and educational experiences. RAG, often likened to an "open-book" approach for AI, empowers models like Gemma to access and synthesize vast amounts of information to answer specific queries or weave intricate tales.</p>

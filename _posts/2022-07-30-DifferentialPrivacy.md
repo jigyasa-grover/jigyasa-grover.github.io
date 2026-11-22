@@ -3,7 +3,7 @@ layout: post
 type: blog
 title: Differential Privacy for Privacy-Preserving Machine Learning 🔐
 comments: true
-mathjax: true
+mathjax: false
 ---
 
 <p>Tonight's explorations led me to the ✨gold✨ standard of mitigating the leakage of data in <a href="https://twitter.com/hashtag/ML">#ML</a> -- <a href="https://twitter.com/hashtag/DifferentalPrivacy">#DifferentialPrivacy</a>. The idea is to add very subtle statistical noise (in the dataset) to make it impossible to infer information about an individual data point.</p>

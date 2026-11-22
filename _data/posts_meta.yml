@@ -6,7 +6,7 @@
   seo_title: "TorchTPU Doctor: PyTorch Cloud TPU Profiler — Jigyasa Grover"
   og_image: "/assets/images/opt/torchtpu-doctor-cover.jpg"
   og_image_alt: "TorchTPU Doctor — 7-rule AST linter and Cloud TPU v6e PyTorch profiler by Jigyasa Grover"
-  summary: "Catching silent CPU fallbacks, hidden Hugging Face host syncs, and XLA recompiles in PyTorch on Cloud TPU v6e, cutting LoRA step time 2,537× (47.3s → 18.6ms) alongside upstream PRs to transformers & peft."
+  summary: "Catching silent CPU fallbacks, hidden Hugging Face eager host syncs, and XLA recompiles in PyTorch on Cloud TPU v6e, cutting LoRA step time 2,537× (47.3s → 18.6ms) alongside a merged PR in huggingface/peft (#4099)."
   repo_url: "https://github.com/jigyasa-grover/TorchTPU-Doctor"
   live_url: "https://colab.research.google.com/github/jigyasa-grover/TorchTPU-Doctor/blob/main/notebooks/torchtpu_doctor_demo.ipynb"
   skill_url: "https://raw.githubusercontent.com/jigyasa-grover/TorchTPU-Doctor/main/.agents/skills/torchtpu-doctor/SKILL.md"
@@ -66,8 +66,8 @@
   faqs:
     - q: "How can you fine-tune Gemma 3 on a Google Cloud TPU without Docker or Kubernetes YAML?"
       a: "Wrapping a standard Python training function with a Keras Kinetic decorator packages local dependencies, provisions a Cloud TPU v5 Lite slice on demand, streams logs back to your terminal, and tears down compute automatically on completion."
-    - q: "Why choose LoRA supervised fine-tuning on Gemma 3 1B?"
-      a: "Low-Rank Adaptation (LoRA) updates a small fraction of adapter weights on Gemma 3 1B, converging rapidly on a single Cloud TPU v5 Lite chip while preserving low-latency serving."
+    - q: "Why did this walkthrough run full SFT on 30 examples, and when should you switch to LoRA?"
+      a: "Full supervised fine-tuning on 30 prompt/response pairs demonstrates rapid style transfer on a single Cloud TPU v5 Lite in under a minute (~48s), while illustrating how updating all 1B weights on a tiny dataset can cause factual drift; for production workloads, combine larger curated datasets with LoRA adapters, early stopping, and held-out factual evaluations."
 
 "/TrustAtTopSpeed/":
   category: "Agentic Infrastructure"
@@ -136,12 +136,12 @@
 
 "/GoodbyeToNewsCopyWriterBlock-SupervisedFineTunedGeminiPro/":
   category: "Fine-Tuning & Compute"
-  tags: ["Gemini Pro", "Supervised Fine-Tuning", "Vertex AI", "NLP"]
+  tags: ["Gemini Pro", "Supervised Fine-Tuning", "Google AI Studio", "NLP"]
   featured: false
-  seo_title: "Supervised Fine-Tuning of Gemini Pro on Vertex — Jigyasa Grover"
+  seo_title: "Supervised Fine-Tuning Gemini Pro in AI Studio — Jigyasa Grover"
   og_image: "/assets/images/wp-archive/2024/huge-d46b5d35.jpg"
-  og_image_alt: "Supervised fine-tuning workflow for Google Gemini Pro on Vertex AI"
-  summary: "Step-by-step supervised fine-tuning of Gemini Pro for structured domain adaptation and editorial headline generation."
+  og_image_alt: "Supervised fine-tuning workflow for Google Gemini Pro in Google AI Studio"
+  summary: "Step-by-step supervised fine-tuning of Gemini Pro in Google AI Studio for structured domain adaptation and editorial headline generation (historical 2024 walkthrough)."
 
 "/BifocalPerspectiveOfCAS/":
   category: "Agentic AI & Evaluation"

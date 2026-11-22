@@ -412,7 +412,7 @@
       if ((gotcha && gotcha.value) || (!isAutomatedBrowser && Date.now() - formLoadedAt < 800)) {
         if (statusEl) {
           statusEl.className = "form-status is-visible is-success";
-          statusEl.textContent = "Thank you—your inquiry has been recorded.";
+          statusEl.textContent = "Thank you. Your inquiry has been recorded.";
         }
         contactForm.reset();
         return;
@@ -811,7 +811,7 @@
     safeRegister({
       name: "search-technical-articles",
       description:
-        "Search Jigyasa Grover's 90 technical articles and historical open-source archives by keyword or topic category. When currently viewing /blog/, also updates the live article filter UI.",
+        "Search Jigyasa Grover's 91 technical articles and historical open-source archives by keyword or topic category. When currently viewing /blog/, also updates the live article filter UI.",
       inputSchema: {
         type: "object",
         properties: {
@@ -894,7 +894,7 @@
 
     if (document.querySelector("[data-press-root]")) {
       safeRegister({
-        name: "filter-press-coverage",
+        name: "search-press-features",
         description:
           "Filter or switch views on Jigyasa Grover's interactive Press & Broadsheet Wall on /press/ by format (all, press, video, podcast), search query, or layout mode (wall, ledger).",
         inputSchema: {
@@ -943,7 +943,7 @@
 
     if (contactForm) {
       safeRegister({
-        name: "prepare-collaboration-inquiry",
+        name: "draft-collaboration-inquiry",
         description:
           "Populate the collaboration inquiry form on the current page with the user's details and focus the submit button so the user can review and send manually.",
         inputSchema: {
@@ -995,8 +995,9 @@
           contactForm.scrollIntoView({ behavior: "smooth", block: "center" });
           if (submitEl) submitEl.focus();
           if (statusEl) {
+            var submitLabel = submitEl ? submitEl.textContent.trim() : "Prepare Email Inquiry →";
             statusEl.className = "form-status is-visible is-success";
-            statusEl.textContent = "Draft ready—please review the fields above and click 'Send Inquiry →' to confirm.";
+            statusEl.textContent = "Draft ready. Please review the fields above and click '" + submitLabel + "' to confirm.";
           }
 
           return formatToolResult({

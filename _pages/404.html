@@ -39,12 +39,18 @@ sitemap: false
         "advisory": "/advisory/",
         "consulting": "/advisory/",
         "partnerships": "/partnerships/",
+        "partner": "/partnerships/",
+        "sponsor": "/partnerships/",
         "sponsors": "/partnerships/",
+        "mediakit": "/media-kit/",
+        "creator": "/media-kit/",
+        "uses": "/media-kit/",
         "workwithme": "/work-with-me/",
         "collaborate": "/work-with-me/",
         "contact": "/work-with-me/",
         "experience": "/experience/",
         "links": "/links/",
+        "qr": "/links/",
         "bio": "/links/"{% for post in site.posts %}{% unless post.url == "/archive/" %},
         {{ post.url | downcase | remove: "/" | remove: "-" | remove: "_" | jsonify }}: {{ post.url | jsonify }}{% endunless %}{% endfor %}
       };
