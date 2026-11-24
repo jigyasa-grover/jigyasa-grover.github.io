@@ -212,6 +212,13 @@ ecosystem_roles:
         url: "https://www.youtube.com/watch?v=VSgKWy2iRWE"
       - label: "Cloud Next '26 Live Recap"
         url: "https://www.youtube.com/watch?v=N7N0TU9tkzw&t=4114"
+  - role: "Mentor, Google.org AI for Science Accelerator"
+    org: "Google.org & Google Accelerator (Invited Mentor)"
+    status: "Active"
+    detail: "Invited technical mentor supporting global cohorts of nonprofits, academic institutions, and social entrepreneurs across APAC, the US & Canada, and Europe converting scientific research into scalable, reproducible AI solutions across AI for Health & Life Sciences and AI for Climate Resilience & Environmental Science."
+    links:
+      - label: "Google.org AI for Science"
+        url: "https://www.google.org/impact-challenges/ai-science/"
   - role: "Principal AI Strategist & Startup Advisor"
     org: "Afterdays (Independent Practice · 2015–Present)"
     status: "Active"

@@ -1,3 +1,7 @@
+- date: "Nov–Dec 2026"
+  category: "Mentorship & Google.org"
+  text: "Invited as a technical mentor for the Google.org AI for Science Accelerator (Google.org & Google Accelerator), supporting nonprofits, academic institutions, and social entrepreneurs across APAC, North America, and Europe applying Google's AI stack to Health & Life Sciences and Climate Resilience."
+  url: "https://www.google.org/impact-challenges/ai-science/"
 - date: "Nov 2026"
   category: "Open Source & AI"
   text: "Open-sourced TorchTPU Doctor (cutting PyTorch LoRA step time 2,537× on Cloud TPU v6e), merged upstream TPU device routing into huggingface/peft (#4099), and filed Cloud TPU eager-mode profiling findings across huggingface/transformers and google-pytorch/torch_tpu."
