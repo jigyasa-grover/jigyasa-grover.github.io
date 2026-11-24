@@ -31,6 +31,8 @@ teaching:
     a: "Many teams combine both: engineers build individual foundations asynchronously via Jigyasa's two LinkedIn Learning Google ADK courses (~30K learners across Building Agents with Google ADK and Evaluating AI Agents with Google ADK), then bring her in for a private half-day or full-day live workshop customized to their internal APIs, PII/security guardrails, and CI/CD Pass@k evaluation harness."
   - q: "Can workshops be tailored to our internal stack and L&D budget?"
     a: "Yes. Sessions run as 90-minute executive briefings, half-day intensives, or full-day labs across Agentic AI/MCP, LLM evals, ranking, data-centric ML, Cloud TPUs, and developer AI workflows, with runnable repos and L&D-eligible certificates."
+  - q: "Does Jigyasa partner on funded small-business (SMB), nonprofit, or community AI enablement programs?"
+    a: "Yes. Beyond corporate engineering orgs, she partners with AI labs, foundations, universities, and ecosystem sponsors funding local San Francisco Bay Area and virtual AI enablement programs, helping small business owners and community organizations adopt practical AI tools and workflows."
 
 partnerships:
   - q: "Why partner with a ~15K senior-tech practitioner creator instead of a 200K+ general AI influencer?"

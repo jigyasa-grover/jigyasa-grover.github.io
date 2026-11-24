@@ -214,9 +214,9 @@ engagement_modes:
     cta_label: "Explore Advisory →"
     cta_url: "/advisory/"
   - number: "04"
-    title: "Executive & University Programs"
-    kicker: "90-Min Briefings · Guest Lectures"
-    summary: "Grounded production AI frameworks for C-suite offsites, venture portfolio summits, and graduate CS curricula."
+    title: "Executive, Community & Funded SMB AI Programs"
+    kicker: "Sponsored Cohorts · Briefings · Guest Lectures"
+    summary: "Grounded AI frameworks and practical workflow enablement for C-suite offsites, graduate CS curricula, and sponsor-funded small business (SMB) and local SF Bay Area community initiatives."
 
 capability_domains:
   - number: "01"
@@ -245,7 +245,7 @@ room_profiles:
     focus: "Move from fragile notebooks to calibrated ranking pipelines, SFT/RAG benchmarks, and automated trajectory evals."
   - group: "Engineering Leaders & Executives"
     focus: "Establish pragmatic AI roadmaps, build-vs-buy guardrails, inference unit economics, and clear org ownership."
-  - group: "Universities, VCs & Summits"
-    focus: "Bring current Silicon Valley production practice into graduate classrooms, portfolio bootcamps, and technical forums."
+  - group: "Small Businesses (SMBs), Community & Universities"
+    focus: "Practical, no-jargon AI workflow implementation and skills training for sponsor-funded small business cohorts, local SF Bay Area community initiatives, venture portfolios, and graduate classrooms."
 
-ld_reimbursement_note: "All live corporate bootcamps and custom cohorts include tailored pre-reads, runnable Python/Colab repositories, and formal completion certificates eligible for corporate L&D and professional development budgets."
+ld_reimbursement_note: "All live corporate bootcamps and custom cohorts include tailored pre-reads, runnable Python/Colab repositories, and formal completion certificates eligible for corporate L&D budgets. Also open to AI-lab, foundation, or civic-sponsored local small-business (SMB) and community AI enablement fellowships."
