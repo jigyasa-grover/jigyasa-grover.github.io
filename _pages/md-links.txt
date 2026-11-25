@@ -27,3 +27,4 @@ last-updated: "2026-11-26"
 
 {% for s in site.data.identity.socials %}- **{{ s.name }}** ({{ s.handle }}): {{ s.url }}
 {% endfor %}
+

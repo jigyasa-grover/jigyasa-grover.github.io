@@ -35,3 +35,4 @@ last-updated: "2026-11-26"
 
 {% for pol in site.data.partnerships.creator_kit.disclosure_and_pr_policy %}- **{{ pol.label }}:** {{ pol.detail }}
 {% endfor %}
+

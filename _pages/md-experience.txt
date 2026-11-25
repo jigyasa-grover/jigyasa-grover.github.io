@@ -31,3 +31,4 @@ last-updated: "2026-11-26"
 
 {% for e in site.data.identity.ecosystem_roles %}- **{{ e.role }}** ({{ e.org }}): {{ e.detail }}
 {% endfor %}
+
