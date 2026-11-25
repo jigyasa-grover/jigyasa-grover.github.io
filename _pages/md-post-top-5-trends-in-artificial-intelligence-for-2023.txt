@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /top-5-trends-in-artificial-intelligence-for-2023.md
+sitemap: false
+---
+{% include post-markdown-twin.md post_url="/top-5-trends-in-artificial-intelligence-for-2023/" slug="top-5-trends-in-artificial-intelligence-for-2023" %}

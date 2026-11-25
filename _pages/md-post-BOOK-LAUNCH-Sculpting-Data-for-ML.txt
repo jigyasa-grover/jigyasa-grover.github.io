@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /BOOK-LAUNCH-Sculpting-Data-for-ML.md
+sitemap: false
+---
+{% include post-markdown-twin.md post_url="/BOOK-LAUNCH-Sculpting-Data-for-ML/" slug="BOOK-LAUNCH-Sculpting-Data-for-ML" %}

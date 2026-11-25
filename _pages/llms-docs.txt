@@ -28,3 +28,4 @@ sitemap: false
 - [W3C WebMCP Manifest](https://jigyasa-grover.github.io/.well-known/mcp.json): In-browser `document.modelContext` tool catalog.
 - [Source Repository (`AGENTS.md` & `plugin.json`)](https://github.com/jigyasa-grover/jigyasa-grover.github.io): Public GitHub repo with coding-agent rules and Agent Plugin manifest.
 - [Root llms.txt](https://jigyasa-grover.github.io/llms.txt): Full site navigation index.
+

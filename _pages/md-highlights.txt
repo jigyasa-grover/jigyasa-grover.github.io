@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /highlights.md
+sitemap: false
+---
+---
+title: "Watch, Reels & Visual Highlights — Jigyasa Grover"
+description: "Video screening room featuring 64+ YouTube playlists, 70+ AI Shorts, 300K+ aggregate views, Google I/O keynote, Google Cloud Tech documentary, and conference talks."
+canonical: "https://jigyasa-grover.github.io/highlights/"
+last-updated: "2026-11-26"
+---
+
+# Watch, Reels & Visual Highlights — Jigyasa Grover
+
+- **Video Catalog JSON API:** https://jigyasa-grover.github.io/assets/data/cinema-catalog.json
+- **YouTube Channel:** https://www.youtube.com/@JigyasaGrover (300K+ aggregate views · 70+ Shorts · 64+ playlists)
+
+## Featured Developer Films & Keynotes
+
+{% for v in site.data.videos.featured_films limit:20 %}- **{{ v.title }}** ({{ v.channel }}, {{ v.date }}): {{ v.url }}
+{% endfor %}
+
+## Channels
+
+{% for ch in site.data.videos.channels %}- **{{ ch.label }}** ({{ ch.handle }} · {{ ch.stat }}): {{ ch.url }}
+{% endfor %}

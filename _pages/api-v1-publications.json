@@ -11,3 +11,4 @@ sitemap: false
   "reviewed_books": {{ site.data.publications.reviewed_books | jsonify }},
   "research_publications": {{ site.data.publications.research_publications | jsonify }}
 }
+

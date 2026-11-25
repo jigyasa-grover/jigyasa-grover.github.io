@@ -35,3 +35,4 @@ last-updated: "2026-11-26"
 
 {% for c in site.data.courses.courses %}- **{{ c.title }}** ({{ c.provider }}, {{ c.year }}, {{ c.learners }}): {{ c.summary }} — {{ c.url }}
 {% endfor %}
+

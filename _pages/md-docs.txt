@@ -58,3 +58,4 @@ curl -s https://jigyasa-grover.github.io/api/v1/articles.json | jq '.pagination,
 ## Versioning & Error Recovery
 
 Endpoints under `/api/v1/` follow Semantic Versioning (`1.0.0`). Any breaking contract change ships under `/api/v2/` with at least 90 days of parallel support. Missing resources return HTTP `404`; recover by inspecting `/openapi.json`, `/api/v1/index.json`, or `/llms.txt`.
+

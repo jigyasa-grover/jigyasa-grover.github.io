@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /paris-france-to-maribor-slovenia-and-beyond-chronicles-of-cormas-pharo.md
+sitemap: false
+---
+{% include post-markdown-twin.md post_url="/paris-france-to-maribor-slovenia-and-beyond-chronicles-of-cormas-pharo/" slug="paris-france-to-maribor-slovenia-and-beyond-chronicles-of-cormas-pharo" %}

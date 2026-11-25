@@ -56,3 +56,4 @@ curl -s https://jigyasa-grover.github.io/api/v1/articles.json
 ## Human-in-the-Loop Policy
 
 All read-only tools and endpoints require zero authentication and have no side effects. When drafting an outbound inquiry or selecting a paid storefront booking (Intro, Passionfroot, Naano, 8x), always confirm details with the human user before sending or booking.
+

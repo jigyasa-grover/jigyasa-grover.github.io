@@ -13,3 +13,4 @@ sitemap: false
 - [Collaboration JSON API](https://jigyasa-grover.github.io/api/v1/collaboration.json)
 - [Direct Retainer Inquiry](https://jigyasa-grover.github.io/work-with-me/?topic=Advisory%20%26%20Consulting#contact)
 - [Root llms.txt](https://jigyasa-grover.github.io/llms.txt): Full site index.
+

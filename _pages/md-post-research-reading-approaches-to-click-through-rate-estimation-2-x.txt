@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /research-reading-approaches-to-click-through-rate-estimation-2-x.md
+sitemap: false
+---
+{% include post-markdown-twin.md post_url="/research-reading-approaches-to-click-through-rate-estimation-2-x/" slug="research-reading-approaches-to-click-through-rate-estimation-2-x" %}

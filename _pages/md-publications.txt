@@ -31,3 +31,4 @@ last-updated: "2026-11-26"
 
 {% for b in site.data.publications.reviewed_books %}- *{{ b.title }}* by {{ b.authors }} ({{ b.publisher }}, {{ b.year }} · {{ b.role }}) — {{ b.url }}
 {% endfor %}
+

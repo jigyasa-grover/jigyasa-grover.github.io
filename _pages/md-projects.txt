@@ -30,3 +30,4 @@ last-updated: "2026-11-26"
 
 {% for u in site.data.github.pinned_upstream %}- **{{ u.repo }}** ({{ u.role }} · {{ u.stack }}): {{ u.summary }} — {{ u.url }}
 {% endfor %}
+

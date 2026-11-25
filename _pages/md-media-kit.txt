@@ -1,0 +1,37 @@
+---
+layout: null
+permalink: /media-kit.md
+sitemap: false
+---
+---
+title: "Creator Media Kit, VIP Events & Hardware PR — Jigyasa Grover"
+description: "San Francisco Bay Area VIP AI events, embargoed hardware and AI device PR reviews, API/compute credits, conference Creator-in-Residence packages, and verified audience demographics."
+canonical: "https://jigyasa-grover.github.io/media-kit/"
+last-updated: "2026-11-26"
+---
+
+# Creator Media Kit, VIP Events & Hardware PR — Jigyasa Grover
+
+- **Base Hub:** {{ site.data.partnerships.creator_kit.base_hub }} (Metrics as of {{ site.data.partnerships.creator_kit.metrics_as_of }})
+- **Availability:** {{ site.data.partnerships.creator_kit.availability }}
+- **Collaboration JSON API:** https://jigyasa-grover.github.io/api/v1/collaboration.json
+
+## Owned Audience Channels
+
+{% for ch in site.data.partnerships.creator_kit.audience_channels %}- **{{ ch.channel }}** ({{ ch.handle }} · {{ ch.reach }}): {{ ch.audience_fit }} — {{ ch.url }}
+{% endfor %}
+
+## Creator & PR Collaboration Tracks
+
+{% for tr in site.data.partnerships.creator_kit.tracks %}- **{{ tr.number }}. {{ tr.title }}** ({{ tr.kicker }}): {{ tr.summary }}
+{% endfor %}
+
+## 2026–2027 Event & Press Briefing Calendar
+
+{% for ev in site.data.partnerships.creator_kit.event_briefing_calendar %}- **{{ ev.window }} · {{ ev.event }}** ({{ ev.location }}): {{ ev.status }}
+{% endfor %}
+
+## FTC Disclosure, NDA & Hardware Policy
+
+{% for pol in site.data.partnerships.creator_kit.disclosure_and_pr_policy %}- **{{ pol.label }}:** {{ pol.detail }}
+{% endfor %}

@@ -50,3 +50,4 @@ All projects & upstream open source (including merged Hugging Face `peft` #4099)
 - **Public Read-Only Agent API & Docs:** https://jigyasa-grover.github.io/docs/ (`https://jigyasa-grover.github.io/openapi.json`)
 - **Privacy Policy:** https://jigyasa-grover.github.io/privacy/
 - **Source Repository (`AGENTS.md` & `plugin.json`):** https://github.com/jigyasa-grover/jigyasa-grover.github.io
+

@@ -29,3 +29,4 @@ Independent technical and developer Go-To-Market (GTM) advisory operated by **Ji
 
 {% for item in site.data.faqs.advisory %}- **{{ item.q }}** {{ item.a }}
 {% endfor %}
+

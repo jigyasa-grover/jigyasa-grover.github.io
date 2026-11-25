@@ -15,21 +15,22 @@ import re
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = REPO_ROOT / "_posts"
+PAGES_DIR = REPO_ROOT / "_pages"
 OUT_DIR = REPO_ROOT / "_includes" / "post-md"
 SITE_URL = "https://jigyasa-grover.github.io"
 
-FLAGSHIP_POSTS = [
-    ("TorchTPUDoctor", "2026-11-02-TorchTPUDoctor.md"),
-    ("ProofOfWork", "2026-09-08-ProofOfWork.md"),
-    ("StartupOnAShoestring", "2026-06-28-StartupOnAShoestring.md"),
-    ("KineticFinetuningOnCloudTPU", "2026-03-30-KineticFinetuningOnCloudTPU.md"),
-    ("TrustAtTopSpeed", "2025-12-18-TrustAtTopSpeed.md"),
-    ("ColabVSCodeExtension", "2025-11-14-ColabVSCodeExtension.md"),
-    ("CriticsCutMultilingualContextADKAgent", "2025-06-04-CriticsCutMultilingualContextADKAgent.md"),
-    ("SmartSuitcasePackingUsingGeminiImagenOpenWeather", "2025-02-25-SmartSuitcasePackingUsingGeminiImagenOpenWeather.md"),
-    ("SmarterThanA5thGrader-LLMComparatorOnGoogleVertexAI", "2024-09-04-SmarterThanA5thGrader-LLMComparatorOnGoogleVertexAI.md"),
-    ("BookBuddyInteractiveStorytellingUsingAGemmaBasedRAG", "2024-07-09-BookBuddyInteractiveStorytellingUsingAGemmaBasedRAG.md"),
-]
+
+def discover_indexed_posts() -> list[tuple[str, str]]:
+    """Return (slug, filename) for all non-archival indexed posts in _posts/."""
+    found: list[tuple[str, str]] = []
+    for p in sorted(POSTS_DIR.glob("*.md")):
+        txt = p.read_text(encoding="utf-8", errors="replace")
+        fm = txt.split("---", 2)[1] if txt.startswith("---") else ""
+        if "archival: true" in fm or "noindex: true" in fm or "permalink: /archive/" in fm:
+            continue
+        slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", p.stem)
+        found.append((slug, p.name))
+    return found
 
 
 def abs_url(url: str) -> str:
@@ -258,17 +259,30 @@ def convert_post_body(raw_body: str) -> str:
 
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    for slug, filename in FLAGSHIP_POSTS:
+    posts = discover_indexed_posts()
+    for slug, filename in posts:
         src = POSTS_DIR / filename
         text = src.read_text(encoding="utf-8")
         parts = text.split("---", 2)
         raw_body = parts[2] if len(parts) >= 3 else text
         raw_body = re.sub(r"\{%-?\s*(?:raw|endraw)\s*-?%\}", "", raw_body)
         md_body = convert_post_body(raw_body)
+        # Ensure balanced code fences (even count) so Markdown parsers never truncate
+        fence_count = sum(1 for ln in md_body.splitlines() if ln.strip().startswith("```"))
+        if fence_count % 2 != 0:
+            md_body = md_body.rstrip() + "\n```\n"
         out_path = OUT_DIR / f"{slug}.md"
         out_path.write_text("{% raw %}\n" + md_body + "\n{% endraw %}\n", encoding="utf-8")
+
+        # Emit clean /<slug>.md suffix twin for 100% markdown-url-fallback coverage
+        page_twin = PAGES_DIR / f"md-post-{slug}.txt"
+        page_twin.write_text(
+            f"---\nlayout: null\npermalink: /{slug}.md\nsitemap: false\n---\n"
+            f'{{% include post-markdown-twin.md post_url="/{slug}/" slug="{slug}" %}}\n',
+            encoding="utf-8",
+        )
         words = len(md_body.split())
-        print(f"  {slug:52s} -> {len(md_body):6d} B | {words:5d} words")
+        print(f"  {slug:60s} -> {len(md_body):6d} B | {words:5d} words")
 
 
 if __name__ == "__main__":

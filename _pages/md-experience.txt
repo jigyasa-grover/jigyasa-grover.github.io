@@ -1,0 +1,33 @@
+---
+layout: null
+permalink: /experience.md
+sitemap: false
+---
+---
+title: "Career & Production ML Experience — Jigyasa Grover"
+description: "Production ML engineering career across Uber, Afterdays (2015–Present), Bordo AI, Faire, Twitter/X, and Meta, plus UC San Diego M.S. CS, CMMRS, and DTU."
+canonical: "https://jigyasa-grover.github.io/experience/"
+last-updated: "2026-11-26"
+---
+
+# Career & Production ML Experience — Jigyasa Grover
+
+- **Profile JSON API:** https://jigyasa-grover.github.io/api/v1/profile.json
+
+## Production Engineering & Research Timeline
+
+{% for job in site.data.identity.career %}### {{ job.role }} — {{ job.org }} ({{ job.period }}, {{ job.location }})
+{{ job.summary }}
+{% for h in job.highlights %}- {{ h }}
+{% endfor %}
+{% endfor %}
+
+## Education
+
+{% for edu in site.data.identity.education %}- **{{ edu.degree }}**, {{ edu.institution }} ({{ edu.period }}): {{ edu.detail }}
+{% endfor %}
+
+## Ecosystem & Governance Roles
+
+{% for e in site.data.identity.ecosystem_roles %}- **{{ e.role }}** ({{ e.org }}): {{ e.detail }}
+{% endfor %}

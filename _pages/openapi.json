@@ -49,6 +49,15 @@ sitemap: false
         "tags": ["Discovery"],
         "summary": "Retrieve API root index, version metadata, and endpoint directory",
         "description": "Returns the v1 API metadata, authentication policy (none required), versioning and deprecation policy, endpoint map, and links to ARD, AI Catalog, A2A, Agent Skills, and llms.txt discovery documents.",
+        "parameters": [
+          {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": false,
+            "description": "Optional ETag from a previous response for conditional HTTP 304 caching.",
+            "schema": { "type": "string" }
+          }
+        ],
         "responses": {
           "200": {
             "description": "API index and discovery metadata",
@@ -58,7 +67,20 @@ sitemap: false
               }
             }
           },
-          "404": { "$ref": "#/components/responses/NotFoundError" }
+          "404": {
+            "description": "Resource not found on this origin.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          },
+          "500": {
+            "description": "Unexpected upstream CDN or origin error.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          }
         }
       }
     },
@@ -68,6 +90,15 @@ sitemap: false
         "tags": ["Identity"],
         "summary": "Retrieve canonical entity profile, verified bios, career, and press photos",
         "description": "Returns Jigyasa Grover's canonical Person entity data including 50-word and 150-word approved bios, phonetic pronunciation, production ML career timeline, education, ecosystem board roles, 14x awards, sameAs links, and press photo URLs.",
+        "parameters": [
+          {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": false,
+            "description": "Optional ETag from a previous response for conditional HTTP 304 caching.",
+            "schema": { "type": "string" }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Canonical identity and biography payload",
@@ -77,7 +108,20 @@ sitemap: false
               }
             }
           },
-          "404": { "$ref": "#/components/responses/NotFoundError" }
+          "404": {
+            "description": "Resource not found on this origin.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          },
+          "500": {
+            "description": "Unexpected upstream CDN or origin error.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          }
         }
       }
     },
@@ -87,6 +131,15 @@ sitemap: false
         "tags": ["Collaboration"],
         "summary": "Retrieve collaboration tracks, AI GTM packages, and booking URLs",
         "description": "Returns all six collaboration pillars, instant booking URLs (Intro, Passionfroot, Naano, 8x), AI Go-To-Market (GTM) audience ICP metrics, launch bundles, creator media kit, brand partners, buyer comparison matrices, and structured FAQs.",
+        "parameters": [
+          {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": false,
+            "description": "Optional ETag from a previous response for conditional HTTP 304 caching.",
+            "schema": { "type": "string" }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Collaboration, booking, and GTM partnership metadata",
@@ -96,7 +149,20 @@ sitemap: false
               }
             }
           },
-          "404": { "$ref": "#/components/responses/NotFoundError" }
+          "404": {
+            "description": "Resource not found on this origin.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          },
+          "500": {
+            "description": "Unexpected upstream CDN or origin error.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          }
         }
       }
     },
@@ -105,7 +171,16 @@ sitemap: false
         "operationId": "listTechnicalArticles",
         "tags": ["Knowledge"],
         "summary": "List all indexed technical AI, ML, Cloud TPU, and open-source articles",
-        "description": "Returns a paginated-envelope catalog of 34 indexed engineering essays with titles, canonical URLs, full Markdown twin URLs (where available), publication dates, categories, summaries, and tags.",
+        "description": "Returns a paginated-envelope catalog of 34 indexed engineering essays with titles, canonical URLs, full Markdown twin URLs, publication dates, categories, summaries, and tags.",
+        "parameters": [
+          {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": false,
+            "description": "Optional ETag from a previous response for conditional HTTP 304 caching.",
+            "schema": { "type": "string" }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Indexed technical articles with pagination metadata",
@@ -115,7 +190,20 @@ sitemap: false
               }
             }
           },
-          "404": { "$ref": "#/components/responses/NotFoundError" }
+          "404": {
+            "description": "Resource not found on this origin.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          },
+          "500": {
+            "description": "Unexpected upstream CDN or origin error.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          }
         }
       }
     },
@@ -125,6 +213,15 @@ sitemap: false
         "tags": ["Collaboration"],
         "summary": "Retrieve keynote video, signature talk abstracts, and conference appearances",
         "description": "Returns Jigyasa Grover's featured Google I/O keynote metadata, signature conference talk abstracts, global appearance ledger, and 21-country speaking footprint.",
+        "parameters": [
+          {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": false,
+            "description": "Optional ETag from a previous response for conditional HTTP 304 caching.",
+            "schema": { "type": "string" }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Speaking topics and global conference appearance catalog",
@@ -134,7 +231,20 @@ sitemap: false
               }
             }
           },
-          "404": { "$ref": "#/components/responses/NotFoundError" }
+          "404": {
+            "description": "Resource not found on this origin.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          },
+          "500": {
+            "description": "Unexpected upstream CDN or origin error.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          }
         }
       }
     },
@@ -144,6 +254,15 @@ sitemap: false
         "tags": ["Knowledge"],
         "summary": "Retrieve book metadata, academic citations, and peer-reviewed papers",
         "description": "Returns Sculpting Data for ML ISBNs and citation metadata, Cornell Tech syllabus and policy citations, 8 reviewed or endorsed technical books, and SSRN, Springer, and ACM research publications.",
+        "parameters": [
+          {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": false,
+            "description": "Optional ETag from a previous response for conditional HTTP 304 caching.",
+            "schema": { "type": "string" }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Books, reviews, and peer-reviewed research publications",
@@ -153,7 +272,20 @@ sitemap: false
               }
             }
           },
-          "404": { "$ref": "#/components/responses/NotFoundError" }
+          "404": {
+            "description": "Resource not found on this origin.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          },
+          "500": {
+            "description": "Unexpected upstream CDN or origin error.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          }
         }
       }
     },
@@ -163,6 +295,15 @@ sitemap: false
         "tags": ["Knowledge"],
         "summary": "List selected AI systems, open-source repositories, and GitHub profile metrics",
         "description": "Returns original AI systems and benchmarks (TorchTPU Doctor, Proof of Work, Google ADK agents), upstream Hugging Face peft contributions, and public GitHub metrics in a standard list envelope.",
+        "parameters": [
+          {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": false,
+            "description": "Optional ETag from a previous response for conditional HTTP 304 caching.",
+            "schema": { "type": "string" }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Projects and GitHub open-source portfolio",
@@ -172,7 +313,20 @@ sitemap: false
               }
             }
           },
-          "404": { "$ref": "#/components/responses/NotFoundError" }
+          "404": {
+            "description": "Resource not found on this origin.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          },
+          "500": {
+            "description": "Unexpected upstream CDN or origin error.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          }
         }
       }
     },
@@ -182,6 +336,15 @@ sitemap: false
         "tags": ["Collaboration"],
         "summary": "Retrieve LinkedIn Learning courses, live corporate workshops, and capability domains",
         "description": "Returns 4 LinkedIn Learning courses (~45K learners), Udacity and Interview Kickstart curricula, 4 live corporate AI workshops, 6 production capability domains, and enterprise training clients.",
+        "parameters": [
+          {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": false,
+            "description": "Optional ETag from a previous response for conditional HTTP 304 caching.",
+            "schema": { "type": "string" }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Courses and corporate AI workshop catalog",
@@ -191,7 +354,20 @@ sitemap: false
               }
             }
           },
-          "404": { "$ref": "#/components/responses/NotFoundError" }
+          "404": {
+            "description": "Resource not found on this origin.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          },
+          "500": {
+            "description": "Unexpected upstream CDN or origin error.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          }
         }
       }
     },
@@ -201,6 +377,15 @@ sitemap: false
         "tags": ["Discovery"],
         "summary": "Retrieve the complete consolidated single-fetch agent context JSON",
         "description": "Returns the complete machine-readable bundle combining identity, collaboration, publications, speaking, projects, videos, comparisons, FAQs, and all 34 indexed articles in one GET request.",
+        "parameters": [
+          {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": false,
+            "description": "Optional ETag from a previous response for conditional HTTP 304 caching.",
+            "schema": { "type": "string" }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Full consolidated agent context payload",
@@ -210,7 +395,20 @@ sitemap: false
               }
             }
           },
-          "404": { "$ref": "#/components/responses/NotFoundError" }
+          "404": {
+            "description": "Resource not found on this origin.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          },
+          "500": {
+            "description": "Unexpected upstream CDN or origin error.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          }
         }
       }
     },
@@ -220,6 +418,15 @@ sitemap: false
         "tags": ["Knowledge"],
         "summary": "List featured keynotes, Google developer films, podcasts, and 9:16 Reels",
         "description": "Returns the structured array of video entries powering the Screening Room and Cinema Lightbox, including video_id, mode (wide or vertical), channel, title, summary, and canonical URL.",
+        "parameters": [
+          {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": false,
+            "description": "Optional ETag from a previous response for conditional HTTP 304 caching.",
+            "schema": { "type": "string" }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Array of video catalog items",
@@ -232,25 +439,25 @@ sitemap: false
               }
             }
           },
-          "404": { "$ref": "#/components/responses/NotFoundError" }
+          "404": {
+            "description": "Resource not found on this origin.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          },
+          "500": {
+            "description": "Unexpected upstream CDN or origin error.",
+            "content": {
+              "application/problem+json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } },
+              "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } }
+            }
+          }
         }
       }
     }
   },
   "components": {
-    "responses": {
-      "NotFoundError": {
-        "description": "Requested resource does not exist on this static origin.",
-        "content": {
-          "application/problem+json": {
-            "schema": { "$ref": "#/components/schemas/ErrorResponse" }
-          },
-          "application/json": {
-            "schema": { "$ref": "#/components/schemas/ErrorResponse" }
-          }
-        }
-      }
-    },
     "schemas": {
       "ErrorResponse": {
         "type": "object",
@@ -258,7 +465,7 @@ sitemap: false
         "properties": {
           "type": { "type": "string", "format": "uri", "description": "RFC 9457 problem type URI." },
           "title": { "type": "string", "description": "Short human-readable summary of the error." },
-          "status": { "type": "integer", "description": "HTTP status code (e.g., 404)." },
+          "status": { "type": "integer", "description": "HTTP status code (e.g., 404 or 500)." },
           "code": { "type": "string", "description": "Stable machine-readable error code (e.g., resource_not_found)." },
           "message": { "type": "string", "description": "Detailed explanation of the error." },
           "hint": { "type": "string", "description": "Actionable recovery hint pointing to /openapi.json or /llms.txt." }

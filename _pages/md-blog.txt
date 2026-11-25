@@ -20,3 +20,4 @@ last-updated: "2026-11-26"
 
 {% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign m = site.data.posts_meta[post.url] %}- **[{{ post.title }}](https://jigyasa-grover.github.io{{ post.url }})** ({{ post.date | date: "%Y-%m-%d" }}{% if m.category %} · {{ m.category }}{% endif %}){% if m.md_url %} · [Full Markdown](https://jigyasa-grover.github.io{{ m.md_url }}){% endif %}{% if m.summary %}: {{ m.summary }}{% endif %}
 {% endunless %}{% endfor %}
+

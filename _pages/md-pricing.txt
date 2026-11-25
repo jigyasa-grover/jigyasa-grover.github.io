@@ -31,3 +31,4 @@ All public writing, open-source repositories, Agent Skills, and read-only JSON/M
 - **L&D Reimbursement:** Corporate workshops include runnable repositories, pre-reads, and formal completion certificates eligible for enterprise L&D budgets.
 - **Independent Personal Capacity:** All paid collaborations are operated independently by Jigyasa Grover via Afterdays (San Francisco Bay Area, CA), separate from her employer and unpaid community roles (Google gDAB / GDE).
 - **Direct Inquiry:** https://jigyasa-grover.github.io/work-with-me/#contact (`grover.jigyasa2@gmail.com`).
+

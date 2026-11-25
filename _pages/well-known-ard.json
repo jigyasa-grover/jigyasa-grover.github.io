@@ -27,11 +27,7 @@ sitemap: false
       "auth": { "status": "none" },
       "trustManifest": {
         "identity": "did:web:jigyasa-grover.github.io",
-        "identityType": "did",
-        "provenance": {
-          "sourceRepository": "https://github.com/jigyasa-grover/jigyasa-grover.github.io",
-          "publisher": "https://jigyasa-grover.github.io/#person"
-        }
+        "identityType": "did"
       }
     },
     {
@@ -49,11 +45,7 @@ sitemap: false
       "auth": { "status": "none" },
       "trustManifest": {
         "identity": "did:web:jigyasa-grover.github.io",
-        "identityType": "did",
-        "provenance": {
-          "sourceRepository": "https://github.com/jigyasa-grover/jigyasa-grover.github.io",
-          "publisher": "https://jigyasa-grover.github.io/#person"
-        }
+        "identityType": "did"
       }
     },
     {
@@ -70,11 +62,7 @@ sitemap: false
       "auth": { "status": "none" },
       "trustManifest": {
         "identity": "did:web:jigyasa-grover.github.io",
-        "identityType": "did",
-        "provenance": {
-          "sourceRepository": "https://github.com/jigyasa-grover/jigyasa-grover.github.io",
-          "publisher": "https://jigyasa-grover.github.io/#person"
-        }
+        "identityType": "did"
       }
     },
     {
@@ -91,11 +79,7 @@ sitemap: false
       "auth": { "status": "none" },
       "trustManifest": {
         "identity": "did:web:jigyasa-grover.github.io",
-        "identityType": "did",
-        "provenance": {
-          "sourceRepository": "https://github.com/jigyasa-grover/TorchTPU-Doctor",
-          "publisher": "https://jigyasa-grover.github.io/#person"
-        }
+        "identityType": "did"
       }
     },
     {
@@ -108,11 +92,7 @@ sitemap: false
       "auth": { "status": "none" },
       "trustManifest": {
         "identity": "did:web:jigyasa-grover.github.io",
-        "identityType": "did",
-        "provenance": {
-          "sourceRepository": "https://github.com/jigyasa-grover/jigyasa-grover.github.io",
-          "publisher": "https://jigyasa-grover.github.io/#person"
-        }
+        "identityType": "did"
       }
     },
     {
@@ -125,11 +105,7 @@ sitemap: false
       "auth": { "status": "none" },
       "trustManifest": {
         "identity": "did:web:jigyasa-grover.github.io",
-        "identityType": "did",
-        "provenance": {
-          "sourceRepository": "https://github.com/jigyasa-grover/jigyasa-grover.github.io",
-          "publisher": "https://jigyasa-grover.github.io/#person"
-        }
+        "identityType": "did"
       }
     }
   ]

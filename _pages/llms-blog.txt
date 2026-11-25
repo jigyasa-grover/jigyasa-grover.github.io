@@ -20,3 +20,4 @@ sitemap: false
 {% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign m = site.data.posts_meta[post.url] %}{% unless m.md_url %}- [{{ post.title }}](https://jigyasa-grover.github.io{{ post.url }}){% if m.summary %}: {{ m.summary }}{% endif %}
 {% endunless %}{% endunless %}{% endfor %}
 - [Root llms.txt](https://jigyasa-grover.github.io/llms.txt): Full site index.
+

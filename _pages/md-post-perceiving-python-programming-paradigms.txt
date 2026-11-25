@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /perceiving-python-programming-paradigms.md
+sitemap: false
+---
+{% include post-markdown-twin.md post_url="/perceiving-python-programming-paradigms/" slug="perceiving-python-programming-paradigms" %}

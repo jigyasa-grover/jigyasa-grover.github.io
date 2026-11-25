@@ -105,8 +105,19 @@
 <link rel="alternate" type="text/markdown" title="Pricing &amp; Engagement Modes — Markdown Twin" href="{{ site.url }}/pricing.md" />
 {% elsif page.url == "/privacy/" %}
 <link rel="alternate" type="text/markdown" title="Privacy Policy — Markdown Twin" href="{{ site.url }}/privacy.md" />
+{% elsif page.url == "/experience/" %}
+<link rel="alternate" type="text/markdown" title="Experience — Markdown Twin" href="{{ site.url }}/experience.md" />
+{% elsif page.url == "/highlights/" %}
+<link rel="alternate" type="text/markdown" title="Watch &amp; Visual Highlights — Markdown Twin" href="{{ site.url }}/highlights.md" />
+{% elsif page.url == "/media-kit/" %}
+<link rel="alternate" type="text/markdown" title="Creator Media Kit — Markdown Twin" href="{{ site.url }}/media-kit.md" />
+{% elsif page.url == "/links/" %}
+<link rel="alternate" type="text/markdown" title="Quick Links — Markdown Twin" href="{{ site.url }}/links.md" />
 {% elsif post_meta and post_meta.md_url %}
 <link rel="alternate" type="text/markdown" title="{{ page.title | escape }} — Full Markdown Article" href="{{ site.url }}{{ post_meta.md_url }}" />
+{% elsif page.layout == "post" and page.noindex != true %}
+{% assign post_md_suffix = page.url | replace_first: "/", "" | replace: "/", "" | prepend: "/" | append: ".md" %}
+<link rel="alternate" type="text/markdown" title="{{ page.title | escape }} — Full Markdown Article" href="{{ site.url }}{{ post_md_suffix }}" />
 {% else %}
 <link rel="alternate" type="text/markdown" title="Jigyasa Grover — Full LLM Profile (llms-full.txt)" href="{{ site.url }}/llms-full.txt" />
 {% endif %}

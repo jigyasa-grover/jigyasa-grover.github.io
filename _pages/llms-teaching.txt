@@ -17,3 +17,4 @@ sitemap: false
 {% for w in site.data.courses.workshops %}- **{{ w.title }}** ({{ w.duration }} · {{ w.audience }}): {{ w.abstract }}
 {% endfor %}
 - [Root llms.txt](https://jigyasa-grover.github.io/llms.txt): Full site index.
+

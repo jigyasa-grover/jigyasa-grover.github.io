@@ -9,3 +9,4 @@ sitemap: false
 {% for c in site.data.courses.courses %}{"@context":"https://schema.org","@type":"Course","name":{{ c.title | jsonify }},"provider":{"@type":"Organization","name":{{ c.provider | jsonify }}},"url":{{ c.url | jsonify }},"description":{{ c.summary | jsonify }}}
 {% endfor %}{% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign meta = site.data.posts_meta[post.url] %}{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ post.title | jsonify }},"url":{{ site.url | append: post.url | jsonify }},"datePublished":{{ post.date | date: "%Y-%m-%d" | jsonify }},"author":{"@id":"https://jigyasa-grover.github.io/#person"},"description":{{ meta.summary | default: "" | jsonify }}}
 {% endunless %}{% endfor %}
+

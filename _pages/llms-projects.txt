@@ -17,3 +17,4 @@ sitemap: false
 {% for proj in site.data.projects %}- [{{ proj.title }}]({% if proj.post_url %}https://jigyasa-grover.github.io{{ proj.post_url }}{% elsif proj.repo_url %}{{ proj.repo_url }}{% else %}https://jigyasa-grover.github.io/projects/{% endif %}) ({{ proj.year }}): {{ proj.summary }}
 {% endfor %}
 - [Root llms.txt](https://jigyasa-grover.github.io/llms.txt): Full site index.
+

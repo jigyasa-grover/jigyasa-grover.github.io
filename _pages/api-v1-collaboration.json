@@ -19,3 +19,4 @@ sitemap: false
   "buyer_comparisons": {{ site.data.comparisons | jsonify }},
   "faqs": {{ site.data.faqs | jsonify }}
 }
+

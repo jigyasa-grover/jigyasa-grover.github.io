@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /ExploringDeepfakes.md
+sitemap: false
+---
+{% include post-markdown-twin.md post_url="/ExploringDeepfakes/" slug="ExploringDeepfakes" %}

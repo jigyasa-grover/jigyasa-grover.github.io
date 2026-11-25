@@ -32,3 +32,4 @@ All advisory, speaking, corporate AI training, and creator partnerships are cond
 - **Scope:** {{ p.summary }}
 - **Proof:** {{ p.evidence }}
 {% endfor %}
+
