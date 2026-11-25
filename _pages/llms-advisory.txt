@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: /advisory/llms.txt
+sitemap: false
+---
+# Jigyasa Grover — AI Startup, Architecture & GTM Advisory (Section Index)
+
+> Independent AI startup, ranking, agentic architecture, and developer GTM advisory via Afterdays across 30+ organizations, plus instant 5.0★ 1:1 sessions on Intro.
+
+- [Advisory Overview (HTML)](https://jigyasa-grover.github.io/advisory/) · [Advisory (Markdown)](https://jigyasa-grover.github.io/advisory.md)
+- [Book 1:1 on Intro (5.0★)](https://intro.co/JigyasaGrover)
+- [Engagement Modes & Pricing](https://jigyasa-grover.github.io/pricing/) · [pricing.md](https://jigyasa-grover.github.io/pricing.md)
+- [Collaboration JSON API](https://jigyasa-grover.github.io/api/v1/collaboration.json)
+- [Direct Retainer Inquiry](https://jigyasa-grover.github.io/work-with-me/?topic=Advisory%20%26%20Consulting#contact)
+- [Root llms.txt](https://jigyasa-grover.github.io/llms.txt): Full site index.

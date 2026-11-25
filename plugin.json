@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "jigyasa-grover-agent-kit",
+  "version": "1.0.0",
+  "description": "Portable Agent Plugin packaging Jigyasa Grover's verified site discovery skills, TorchTPU Doctor Cloud TPU diagnostics skill, and read-only JSON/Markdown API references.",
+  "author": {
+    "name": "Jigyasa Grover",
+    "email": "grover.jigyasa2@gmail.com",
+    "url": "https://jigyasa-grover.github.io/"
+  },
+  "homepage": "https://jigyasa-grover.github.io/docs/",
+  "repository": "https://github.com/jigyasa-grover/jigyasa-grover.github.io",
+  "license": "MIT",
+  "keywords": [
+    "jigyasa-grover",
+    "agent-skills",
+    "torchtpu-doctor",
+    "cloud-tpu",
+    "google-adk",
+    "webmcp",
+    "openapi",
+    "ai-engineering"
+  ]
+}

@@ -1,0 +1,469 @@
+---
+layout: null
+permalink: /openapi.json
+sitemap: false
+---
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Jigyasa Grover Public Read-Only Agent API",
+    "version": "1.0.0",
+    "summary": "Public read-only JSON API exposing Jigyasa Grover's canonical biography, speaking kit, technical articles, publications, projects, courses, and collaboration pathways.",
+    "description": "Free, unauthenticated, read-only HTTPS JSON API hosted statically on GitHub Pages for AI agents, search engines, and developer tooling. All endpoints under /api/v1/ follow Semantic Versioning: additive fields are backwards-compatible, and any breaking change ships under /api/v2/ with at least 90 days of parallel support and deprecation notices published on /docs/ and /openapi.json. Because all endpoints are read-only static GET resources, every endpoint doubles as a safe zero-signup sandbox environment.",
+    "contact": {
+      "name": "Jigyasa Grover",
+      "url": "https://jigyasa-grover.github.io/work-with-me/#contact",
+      "email": "grover.jigyasa2@gmail.com"
+    },
+    "license": {
+      "name": "CC BY 4.0 (Content & Metadata)",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "x-deprecation-policy": {
+      "strategy": "URL path major versioning (/api/v1/)",
+      "minimum_notice_days": 90,
+      "documentation_url": "https://jigyasa-grover.github.io/docs/#versioning"
+    }
+  },
+  "externalDocs": {
+    "description": "Full Agent & Public API Documentation, curl examples, and WebMCP reference",
+    "url": "https://jigyasa-grover.github.io/docs/"
+  },
+  "servers": [
+    {
+      "url": "https://jigyasa-grover.github.io",
+      "description": "Production HTTPS static origin (free public read-only API and sandbox)"
+    }
+  ],
+  "security": [],
+  "tags": [
+    { "name": "Discovery", "description": "API root index and full aggregated agent context." },
+    { "name": "Identity", "description": "Canonical biography, career timeline, education, awards, and press photos." },
+    { "name": "Collaboration", "description": "Advisory, speaking, corporate AI training, GTM partnerships, and booking channels." },
+    { "name": "Knowledge", "description": "Technical articles, books, peer-reviewed publications, open-source projects, courses, and videos." }
+  ],
+  "paths": {
+    "/api/v1/index.json": {
+      "get": {
+        "operationId": "getApiIndex",
+        "tags": ["Discovery"],
+        "summary": "Retrieve API root index, version metadata, and endpoint directory",
+        "description": "Returns the v1 API metadata, authentication policy (none required), versioning and deprecation policy, endpoint map, and links to ARD, AI Catalog, A2A, Agent Skills, and llms.txt discovery documents.",
+        "responses": {
+          "200": {
+            "description": "API index and discovery metadata",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ApiIndexResponse" }
+              }
+            }
+          },
+          "404": { "$ref": "#/components/responses/NotFoundError" }
+        }
+      }
+    },
+    "/api/v1/profile.json": {
+      "get": {
+        "operationId": "getProfile",
+        "tags": ["Identity"],
+        "summary": "Retrieve canonical entity profile, verified bios, career, and press photos",
+        "description": "Returns Jigyasa Grover's canonical Person entity data including 50-word and 150-word approved bios, phonetic pronunciation, production ML career timeline, education, ecosystem board roles, 14x awards, sameAs links, and press photo URLs.",
+        "responses": {
+          "200": {
+            "description": "Canonical identity and biography payload",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ProfileResponse" }
+              }
+            }
+          },
+          "404": { "$ref": "#/components/responses/NotFoundError" }
+        }
+      }
+    },
+    "/api/v1/collaboration.json": {
+      "get": {
+        "operationId": "getCollaborationCatalog",
+        "tags": ["Collaboration"],
+        "summary": "Retrieve collaboration tracks, AI GTM packages, and booking URLs",
+        "description": "Returns all six collaboration pillars, instant booking URLs (Intro, Passionfroot, Naano, 8x), AI Go-To-Market (GTM) audience ICP metrics, launch bundles, creator media kit, brand partners, buyer comparison matrices, and structured FAQs.",
+        "responses": {
+          "200": {
+            "description": "Collaboration, booking, and GTM partnership metadata",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/CollaborationResponse" }
+              }
+            }
+          },
+          "404": { "$ref": "#/components/responses/NotFoundError" }
+        }
+      }
+    },
+    "/api/v1/articles.json": {
+      "get": {
+        "operationId": "listTechnicalArticles",
+        "tags": ["Knowledge"],
+        "summary": "List all indexed technical AI, ML, Cloud TPU, and open-source articles",
+        "description": "Returns a paginated-envelope catalog of 34 indexed engineering essays with titles, canonical URLs, full Markdown twin URLs (where available), publication dates, categories, summaries, and tags.",
+        "responses": {
+          "200": {
+            "description": "Indexed technical articles with pagination metadata",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ArticleListResponse" }
+              }
+            }
+          },
+          "404": { "$ref": "#/components/responses/NotFoundError" }
+        }
+      }
+    },
+    "/api/v1/speaking.json": {
+      "get": {
+        "operationId": "getSpeakingCatalog",
+        "tags": ["Collaboration"],
+        "summary": "Retrieve keynote video, signature talk abstracts, and conference appearances",
+        "description": "Returns Jigyasa Grover's featured Google I/O keynote metadata, signature conference talk abstracts, global appearance ledger, and 21-country speaking footprint.",
+        "responses": {
+          "200": {
+            "description": "Speaking topics and global conference appearance catalog",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/SpeakingResponse" }
+              }
+            }
+          },
+          "404": { "$ref": "#/components/responses/NotFoundError" }
+        }
+      }
+    },
+    "/api/v1/publications.json": {
+      "get": {
+        "operationId": "getPublications",
+        "tags": ["Knowledge"],
+        "summary": "Retrieve book metadata, academic citations, and peer-reviewed papers",
+        "description": "Returns Sculpting Data for ML ISBNs and citation metadata, Cornell Tech syllabus and policy citations, 8 reviewed or endorsed technical books, and SSRN, Springer, and ACM research publications.",
+        "responses": {
+          "200": {
+            "description": "Books, reviews, and peer-reviewed research publications",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/PublicationsResponse" }
+              }
+            }
+          },
+          "404": { "$ref": "#/components/responses/NotFoundError" }
+        }
+      }
+    },
+    "/api/v1/projects.json": {
+      "get": {
+        "operationId": "listProjects",
+        "tags": ["Knowledge"],
+        "summary": "List selected AI systems, open-source repositories, and GitHub profile metrics",
+        "description": "Returns original AI systems and benchmarks (TorchTPU Doctor, Proof of Work, Google ADK agents), upstream Hugging Face peft contributions, and public GitHub metrics in a standard list envelope.",
+        "responses": {
+          "200": {
+            "description": "Projects and GitHub open-source portfolio",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ProjectListResponse" }
+              }
+            }
+          },
+          "404": { "$ref": "#/components/responses/NotFoundError" }
+        }
+      }
+    },
+    "/api/v1/courses.json": {
+      "get": {
+        "operationId": "getCoursesAndWorkshops",
+        "tags": ["Collaboration"],
+        "summary": "Retrieve LinkedIn Learning courses, live corporate workshops, and capability domains",
+        "description": "Returns 4 LinkedIn Learning courses (~45K learners), Udacity and Interview Kickstart curricula, 4 live corporate AI workshops, 6 production capability domains, and enterprise training clients.",
+        "responses": {
+          "200": {
+            "description": "Courses and corporate AI workshop catalog",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/CoursesResponse" }
+              }
+            }
+          },
+          "404": { "$ref": "#/components/responses/NotFoundError" }
+        }
+      }
+    },
+    "/agent-context.json": {
+      "get": {
+        "operationId": "getFullAgentContext",
+        "tags": ["Discovery"],
+        "summary": "Retrieve the complete consolidated single-fetch agent context JSON",
+        "description": "Returns the complete machine-readable bundle combining identity, collaboration, publications, speaking, projects, videos, comparisons, FAQs, and all 34 indexed articles in one GET request.",
+        "responses": {
+          "200": {
+            "description": "Full consolidated agent context payload",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/AgentContextResponse" }
+              }
+            }
+          },
+          "404": { "$ref": "#/components/responses/NotFoundError" }
+        }
+      }
+    },
+    "/assets/data/cinema-catalog.json": {
+      "get": {
+        "operationId": "getVideoCatalog",
+        "tags": ["Knowledge"],
+        "summary": "List featured keynotes, Google developer films, podcasts, and 9:16 Reels",
+        "description": "Returns the structured array of video entries powering the Screening Room and Cinema Lightbox, including video_id, mode (wide or vertical), channel, title, summary, and canonical URL.",
+        "responses": {
+          "200": {
+            "description": "Array of video catalog items",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/VideoItem" }
+                }
+              }
+            }
+          },
+          "404": { "$ref": "#/components/responses/NotFoundError" }
+        }
+      }
+    }
+  },
+  "components": {
+    "responses": {
+      "NotFoundError": {
+        "description": "Requested resource does not exist on this static origin.",
+        "content": {
+          "application/problem+json": {
+            "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+          },
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "ErrorResponse": {
+        "type": "object",
+        "required": ["type", "title", "status", "code", "message"],
+        "properties": {
+          "type": { "type": "string", "format": "uri", "description": "RFC 9457 problem type URI." },
+          "title": { "type": "string", "description": "Short human-readable summary of the error." },
+          "status": { "type": "integer", "description": "HTTP status code (e.g., 404)." },
+          "code": { "type": "string", "description": "Stable machine-readable error code (e.g., resource_not_found)." },
+          "message": { "type": "string", "description": "Detailed explanation of the error." },
+          "hint": { "type": "string", "description": "Actionable recovery hint pointing to /openapi.json or /llms.txt." }
+        }
+      },
+      "PaginationMeta": {
+        "type": "object",
+        "required": ["total", "limit", "has_more", "next_cursor"],
+        "properties": {
+          "total": { "type": "integer", "minimum": 0, "description": "Total number of records in the collection." },
+          "limit": { "type": "integer", "minimum": 0, "description": "Number of records included in this page." },
+          "has_more": { "type": "boolean", "description": "Whether additional pages are available via next_cursor." },
+          "next_cursor": { "type": ["string", "null"], "description": "Opaque cursor for the next page, or null when all records are returned." }
+        }
+      },
+      "ApiIndexResponse": {
+        "type": "object",
+        "required": ["api_version", "status", "base_url", "documentation_url", "openapi_url", "endpoints"],
+        "properties": {
+          "api_version": { "type": "string" },
+          "status": { "type": "string" },
+          "base_url": { "type": "string", "format": "uri" },
+          "documentation_url": { "type": "string", "format": "uri" },
+          "openapi_url": { "type": "string", "format": "uri" },
+          "authentication": { "type": "object" },
+          "versioning_and_deprecation": { "type": "object" },
+          "error_model": { "type": "object" },
+          "endpoints": { "type": "object", "additionalProperties": { "type": "string", "format": "uri" } },
+          "agent_discovery": { "type": "object", "additionalProperties": { "type": "string", "format": "uri" } }
+        }
+      },
+      "ProfileResponse": {
+        "type": "object",
+        "required": ["api_version", "entity_id", "canonical_url", "name", "short_bio_50", "medium_bio_150", "career", "education", "same_as"],
+        "properties": {
+          "api_version": { "type": "string" },
+          "entity_id": { "type": "string", "format": "uri" },
+          "canonical_url": { "type": "string", "format": "uri" },
+          "name": { "type": "string" },
+          "pronunciation": { "type": "string" },
+          "pronunciation_ipa": { "type": "string" },
+          "location": { "type": "string" },
+          "headline": { "type": "string" },
+          "current_role": { "type": "string" },
+          "current_org": { "type": "string" },
+          "award_badge": { "type": "string" },
+          "short_bio_50": { "type": "string" },
+          "medium_bio_150": { "type": "string" },
+          "metrics": { "type": "array", "items": { "type": "object" } },
+          "education": { "type": "array", "items": { "type": "object" } },
+          "career": { "type": "array", "items": { "type": "object" } },
+          "ecosystem_roles": { "type": "array", "items": { "type": "object" } },
+          "awards": { "type": "array", "items": { "type": "object" } },
+          "same_as": { "type": "array", "items": { "type": "string", "format": "uri" } },
+          "press_photos": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["label", "url"],
+              "properties": {
+                "label": { "type": "string" },
+                "url": { "type": "string", "format": "uri" }
+              }
+            }
+          }
+        }
+      },
+      "CollaborationResponse": {
+        "type": "object",
+        "required": ["api_version", "work_with_me_url", "pricing_url", "booking_platforms", "pillars"],
+        "properties": {
+          "api_version": { "type": "string" },
+          "work_with_me_url": { "type": "string", "format": "uri" },
+          "pricing_url": { "type": "string", "format": "uri" },
+          "pricing_md_url": { "type": "string", "format": "uri" },
+          "media_kit_url": { "type": "string", "format": "uri" },
+          "booking_platforms": { "type": "object" },
+          "pillars": { "type": "array", "items": { "type": "object" } },
+          "gtm_and_ai_marketing": { "type": "object" },
+          "partnership_surfaces": { "type": "array", "items": { "type": "object" } },
+          "partnership_packages": { "type": "array", "items": { "type": "object" } },
+          "creator_kit": { "type": "object" },
+          "brand_partners": { "type": "array", "items": { "type": "string" } },
+          "buyer_comparisons": { "type": "object" },
+          "faqs": { "type": "object" }
+        }
+      },
+      "ArticleItem": {
+        "type": "object",
+        "required": ["title", "url", "path", "date", "category"],
+        "properties": {
+          "title": { "type": "string" },
+          "seo_title": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "path": { "type": "string" },
+          "markdown_url": { "type": "string", "format": "uri" },
+          "date": { "type": "string", "format": "date" },
+          "last_modified": { "type": "string", "format": "date" },
+          "category": { "type": "string" },
+          "summary": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "ArticleListResponse": {
+        "type": "object",
+        "required": ["api_version", "feed_url", "pagination", "items"],
+        "properties": {
+          "api_version": { "type": "string" },
+          "feed_url": { "type": "string", "format": "uri" },
+          "archive_index_url": { "type": "string", "format": "uri" },
+          "pagination": { "$ref": "#/components/schemas/PaginationMeta" },
+          "items": { "type": "array", "items": { "$ref": "#/components/schemas/ArticleItem" } }
+        }
+      },
+      "SpeakingResponse": {
+        "type": "object",
+        "required": ["api_version", "speaking_url", "signature_talks", "appearances", "countries", "pagination"],
+        "properties": {
+          "api_version": { "type": "string" },
+          "speaking_url": { "type": "string", "format": "uri" },
+          "press_url": { "type": "string", "format": "uri" },
+          "featured_keynote": { "type": "object" },
+          "signature_talks": { "type": "array", "items": { "type": "object" } },
+          "appearances": { "type": "array", "items": { "type": "object" } },
+          "countries": { "type": "array", "items": { "type": "string" } },
+          "pagination": { "$ref": "#/components/schemas/PaginationMeta" }
+        }
+      },
+      "PublicationsResponse": {
+        "type": "object",
+        "required": ["api_version", "publications_url", "featured_book", "research_publications"],
+        "properties": {
+          "api_version": { "type": "string" },
+          "publications_url": { "type": "string", "format": "uri" },
+          "featured_book": { "type": "object" },
+          "academic_and_policy_impact": { "type": "array", "items": { "type": "object" } },
+          "reviewed_books": { "type": "array", "items": { "type": "object" } },
+          "research_publications": { "type": "array", "items": { "type": "object" } }
+        }
+      },
+      "ProjectListResponse": {
+        "type": "object",
+        "required": ["api_version", "projects_url", "github", "pagination", "items"],
+        "properties": {
+          "api_version": { "type": "string" },
+          "projects_url": { "type": "string", "format": "uri" },
+          "github": { "type": "object" },
+          "pagination": { "$ref": "#/components/schemas/PaginationMeta" },
+          "items": { "type": "array", "items": { "type": "object" } }
+        }
+      },
+      "CoursesResponse": {
+        "type": "object",
+        "required": ["api_version", "teaching_url", "courses", "workshops", "pagination"],
+        "properties": {
+          "api_version": { "type": "string" },
+          "teaching_url": { "type": "string", "format": "uri" },
+          "linkedin_learning_profile": { "type": "string", "format": "uri" },
+          "total_learners": { "type": "string" },
+          "total_bookmarks": { "type": "string" },
+          "avg_rating": { "type": "string" },
+          "training_clients": { "type": "array", "items": { "type": "string" } },
+          "engagement_modes": { "type": "array", "items": { "type": "object" } },
+          "capability_domains": { "type": "array", "items": { "type": "object" } },
+          "workshops": { "type": "array", "items": { "type": "object" } },
+          "courses": { "type": "array", "items": { "type": "object" } },
+          "pagination": { "$ref": "#/components/schemas/PaginationMeta" }
+        }
+      },
+      "AgentContextResponse": {
+        "type": "object",
+        "required": ["schema_version", "entity_id", "identity", "collaboration", "speaking", "articles"],
+        "properties": {
+          "schema_version": { "type": "string" },
+          "protocol": { "type": "string" },
+          "entity_id": { "type": "string", "format": "uri" },
+          "canonical_url": { "type": "string", "format": "uri" },
+          "identity": { "type": "object" },
+          "collaboration": { "type": "object" },
+          "learning_tracks": { "type": "array", "items": { "type": "object" } },
+          "publications": { "type": "object" },
+          "speaking": { "type": "object" },
+          "projects": { "type": "array", "items": { "type": "object" } },
+          "github": { "type": "object" },
+          "awards": { "type": "array", "items": { "type": "object" } },
+          "buyer_comparisons": { "type": "object" },
+          "faqs": { "type": "object" },
+          "videos": { "type": "object" },
+          "articles": { "type": "array", "items": { "$ref": "#/components/schemas/ArticleItem" } }
+        }
+      },
+      "VideoItem": {
+        "type": "object",
+        "required": ["video_id", "title", "mode", "url"],
+        "properties": {
+          "video_id": { "type": "string" },
+          "title": { "type": "string" },
+          "channel": { "type": "string" },
+          "badge": { "type": "string" },
+          "mode": { "type": "string", "enum": ["wide", "vertical"] },
+          "start": { "type": "integer" },
+          "summary": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

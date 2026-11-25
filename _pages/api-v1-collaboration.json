@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /api/v1/collaboration.json
+sitemap: false
+---
+{
+  "api_version": "1.0.0",
+  "work_with_me_url": "{{ site.url }}/work-with-me/",
+  "pricing_url": "{{ site.url }}/pricing/",
+  "pricing_md_url": "{{ site.url }}/pricing.md",
+  "media_kit_url": "{{ site.url }}/media-kit/",
+  "booking_platforms": {{ site.data.identity.booking | jsonify }},
+  "pillars": {{ site.data.pillars | jsonify }},
+  "gtm_and_ai_marketing": {{ site.data.partnerships.gtm_positioning | jsonify }},
+  "partnership_surfaces": {{ site.data.partnerships.surfaces | jsonify }},
+  "partnership_packages": {{ site.data.partnerships.packages | jsonify }},
+  "creator_kit": {{ site.data.partnerships.creator_kit | jsonify }},
+  "brand_partners": {{ site.data.recognition.brand_partners | jsonify }},
+  "buyer_comparisons": {{ site.data.comparisons | jsonify }},
+  "faqs": {{ site.data.faqs | jsonify }}
+}

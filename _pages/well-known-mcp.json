@@ -11,10 +11,18 @@ sitemap: false
   "canonical_url": "https://jigyasa-grover.github.io/",
   "entity_id": "https://jigyasa-grover.github.io/#person",
   "discovery": {
+    "api_docs": "https://jigyasa-grover.github.io/docs/",
+    "openapi_spec": "https://jigyasa-grover.github.io/openapi.json",
+    "api_v1_index": "https://jigyasa-grover.github.io/api/v1/index.json",
+    "ard_catalog": "https://jigyasa-grover.github.io/.well-known/ard.json",
+    "ai_catalog": "https://jigyasa-grover.github.io/.well-known/ai-catalog.json",
+    "api_catalog": "https://jigyasa-grover.github.io/.well-known/api-catalog",
+    "agent_skills_index": "https://jigyasa-grover.github.io/.well-known/agent-skills/index.json",
     "agent_context": "https://jigyasa-grover.github.io/agent-context.json",
     "a2a_agent_card": "https://jigyasa-grover.github.io/.well-known/agent-card.json",
     "llms_txt": "https://jigyasa-grover.github.io/llms.txt",
     "llms_full_txt": "https://jigyasa-grover.github.io/llms-full.txt",
+    "agents_md": "https://jigyasa-grover.github.io/agents.md",
     "rss_feed": "https://jigyasa-grover.github.io/feed.xml"
   },
   "webmcp_browser_tools": [

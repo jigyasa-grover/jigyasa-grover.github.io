@@ -1,0 +1,52 @@
+---
+layout: null
+permalink: /index.md
+sitemap: false
+---
+---
+title: "Jigyasa Grover — Machine Learning Engineer, Agentic AI Educator, Author & Advisor"
+description: "San Francisco Bay Area Machine Learning Tech Lead at Uber, technical AI/ML and B2B DevTools creator, Google gDAB member, 14x Award Winner, LinkedIn Learning instructor (~45K learners), and co-author of Sculpting Data for ML."
+canonical: "https://jigyasa-grover.github.io/"
+last-updated: "2026-11-26"
+---
+
+# Jigyasa Grover
+
+> {{ site.data.identity.short_bio_50 }}
+
+- **Canonical URL:** https://jigyasa-grover.github.io/
+- **Entity ID:** https://jigyasa-grover.github.io/#person
+- **Pronunciation:** {{ site.data.identity.pronunciation }} (`{{ site.data.identity.pronunciation_ipa }}`)
+- **Location:** {{ site.data.identity.location }}
+- **Agent Index:** https://jigyasa-grover.github.io/llms.txt · **Agent Guide:** https://jigyasa-grover.github.io/agents.md · **OpenAPI 3.1:** https://jigyasa-grover.github.io/openapi.json
+
+## Verified Career Impact
+
+{% for m in site.data.identity.metrics %}- **{{ m.value }} {{ m.label }}:** {{ m.detail }}
+{% endfor %}
+
+## Selected Production Systems & Open Source
+
+{% assign home_projects = site.data.projects | where: "home_featured", true %}{% for proj in home_projects %}- **{{ proj.title }}** ({{ proj.year }} · {{ proj.category }}): {{ proj.summary }}{% if proj.post_url %} — Deep Dive: https://jigyasa-grover.github.io{{ proj.post_url }}{% endif %}{% if proj.repo_url %} — Repo: {{ proj.repo_url }}{% endif %}
+{% endfor %}
+All projects & upstream open source (including merged Hugging Face `peft` #4099): https://jigyasa-grover.github.io/projects/ (Markdown: https://jigyasa-grover.github.io/projects.md)
+
+## Book, Courses & Technical Writing
+
+- **Book:** *{{ site.data.publications.featured_book.title }}* (ISBN {{ site.data.publications.featured_book.isbn }}, 4.8★ Goodreads, 100+ citations, Cornell Tech CS 5781) — https://jigyasa-grover.github.io/publications/
+- **Courses:** 4 LinkedIn Learning AI courses (~45K learners, ~22K bookmarks, 4.6–4.8★) & live corporate workshops — https://jigyasa-grover.github.io/teaching/
+- **Technical Blog:** 34 indexed AI/ML, Cloud TPU, and Google ADK engineering essays — https://jigyasa-grover.github.io/blog/ (RSS: https://jigyasa-grover.github.io/feed.xml)
+
+## How We Can Work Together
+
+{% for p in site.data.pillars %}- **{{ p.number }}. {{ p.title }}** ({{ p.audience }}): {{ p.summary }} — https://jigyasa-grover.github.io{{ p.cta_url }}
+{% endfor %}
+
+## Direct Booking & Agent Endpoints
+
+- **1:1 Advisory (Intro, 5.0★):** {{ site.data.identity.booking.intro.url }}
+- **Developer & Brand Campaigns:** Passionfroot ({{ site.data.identity.booking.passionfroot.url }}) · Naano ({{ site.data.identity.booking.naano.url }}) · 8x ({{ site.data.identity.booking.eightx.url }})
+- **Engagement Modes & Free Resources:** https://jigyasa-grover.github.io/pricing/ (`https://jigyasa-grover.github.io/pricing.md`)
+- **Public Read-Only Agent API & Docs:** https://jigyasa-grover.github.io/docs/ (`https://jigyasa-grover.github.io/openapi.json`)
+- **Privacy Policy:** https://jigyasa-grover.github.io/privacy/
+- **Source Repository (`AGENTS.md` & `plugin.json`):** https://github.com/jigyasa-grover/jigyasa-grover.github.io

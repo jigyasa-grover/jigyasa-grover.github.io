@@ -1,0 +1,31 @@
+---
+layout: null
+permalink: /speaking.md
+sitemap: false
+---
+---
+title: "Keynotes & Conference Speaking — Jigyasa Grover"
+description: "Signature keynote abstracts, Google I/O main stage feature (~150K views), 200+ global talks across 21 countries, and speaker kit for Jigyasa Grover."
+canonical: "https://jigyasa-grover.github.io/speaking/"
+last-updated: "2026-11-26"
+---
+
+# Keynotes & Conference Speaking — Jigyasa Grover
+
+Named among **Sessionize's Top 3% Speakers globally** with **200+ talks across {{ site.data.speaking.countries.size }} countries** ({{ site.data.speaking.countries | join: ", " }}).
+
+- **Featured Keynote:** {{ site.data.speaking.featured_video.title }} ({{ site.data.speaking.featured_video.url }}) — {{ site.data.speaking.featured_video.caption }}
+- **Speaking JSON API:** https://jigyasa-grover.github.io/api/v1/speaking.json
+- **Invite to Speak:** https://jigyasa-grover.github.io/work-with-me/?topic=Speaking%20%26%20Workshops#contact
+
+## Signature Talks
+
+{% for t in site.data.speaking.signature_talks %}### {{ t.title }} ({{ t.format }})
+{{ t.abstract }}
+- **Stages:** {{ t.stages }}
+{% endfor %}
+
+## Selected Conference Appearances
+
+{% for a in site.data.speaking.appearances limit:20 %}- **{{ a.event }}** ({{ a.date }} · {{ a.location }}) — {{ a.role }}{% if a.topic %}: {{ a.topic }}{% endif %}
+{% endfor %}

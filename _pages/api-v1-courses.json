@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /api/v1/courses.json
+sitemap: false
+---
+{
+  "api_version": "1.0.0",
+  "teaching_url": "{{ site.url }}/teaching/",
+  "linkedin_learning_profile": {{ site.data.courses.linkedin_learning_profile | jsonify }},
+  "total_learners": {{ site.data.courses.total_learners | jsonify }},
+  "total_bookmarks": {{ site.data.courses.total_bookmarks | jsonify }},
+  "avg_rating": {{ site.data.courses.avg_rating | jsonify }},
+  "training_clients": {{ site.data.courses.training_clients | jsonify }},
+  "engagement_modes": {{ site.data.courses.engagement_modes | jsonify }},
+  "capability_domains": {{ site.data.courses.capability_domains | jsonify }},
+  "workshops": {{ site.data.courses.workshops | jsonify }},
+  "courses": {{ site.data.courses.courses | jsonify }},
+  "pagination": {
+    "total": {{ site.data.courses.courses | size }},
+    "limit": {{ site.data.courses.courses | size }},
+    "has_more": false,
+    "next_cursor": null
+  }
+}

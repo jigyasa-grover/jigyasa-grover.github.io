@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /speaking/llms.txt
+sitemap: false
+---
+# Jigyasa Grover — Keynotes & Conference Speaking (Section Index)
+
+> Top 3% global speaker (Sessionize), 200+ talks across 21 countries, featured on the Google I/O main keynote stage (~150K views).
+
+- [Speaking & Talk Abstracts (HTML)](https://jigyasa-grover.github.io/speaking/) · [Speaking (Markdown)](https://jigyasa-grover.github.io/speaking.md)
+- [Speaking JSON API](https://jigyasa-grover.github.io/api/v1/speaking.json)
+- [Approved Speaker Bios & Press Portraits](https://jigyasa-grover.github.io/press/) · [Press (Markdown)](https://jigyasa-grover.github.io/press.md)
+- [Invite to Speak](https://jigyasa-grover.github.io/work-with-me/?topic=Speaking%20%26%20Workshops#contact)
+
+## Signature Talks
+
+{% for t in site.data.speaking.signature_talks %}- **{{ t.title }}** ({{ t.format }}): {{ t.abstract }}
+{% endfor %}
+- [Root llms.txt](https://jigyasa-grover.github.io/llms.txt): Full site index.

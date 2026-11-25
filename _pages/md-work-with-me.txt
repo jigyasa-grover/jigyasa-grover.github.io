@@ -1,0 +1,34 @@
+---
+layout: null
+permalink: /work-with-me.md
+sitemap: false
+---
+---
+title: "Work With Jigyasa Grover — AI Advisory, Speaking, Training & Partnerships"
+description: "Six collaboration tracks, instant booking platforms (Intro, Passionfroot, Naano, 8x), engagement pricing modes, and direct inquiry channel for Jigyasa Grover."
+canonical: "https://jigyasa-grover.github.io/work-with-me/"
+last-updated: "2026-11-26"
+---
+
+# Work With Jigyasa Grover
+
+All advisory, speaking, corporate AI training, and creator partnerships are conducted independently in Jigyasa Grover's personal capacity (via Afterdays, San Francisco Bay Area).
+
+- **Direct Inquiry Form:** https://jigyasa-grover.github.io/work-with-me/#contact (`grover.jigyasa2@gmail.com`)
+- **Engagement Modes & Pricing:** https://jigyasa-grover.github.io/pricing.md
+- **JSON API:** https://jigyasa-grover.github.io/api/v1/collaboration.json
+
+## Direct Booking Platforms
+
+- **Intro (1:1 Consultations, 5.0★):** {{ site.data.identity.booking.intro.url }} — {{ site.data.identity.booking.intro.use_case }}
+- **Passionfroot (Brand & Dev Campaigns):** {{ site.data.identity.booking.passionfroot.url }} — {{ site.data.identity.booking.passionfroot.use_case }}
+- **Naano (LinkedIn & X Campaigns):** {{ site.data.identity.booking.naano.url }} — {{ site.data.identity.booking.naano.use_case }}
+- **8x (AI Launch Series):** {{ site.data.identity.booking.eightx.url }} — {{ site.data.identity.booking.eightx.use_case }}
+
+## Six Collaboration Tracks
+
+{% for p in site.data.pillars %}### {{ p.number }}. {{ p.title }} (https://jigyasa-grover.github.io{{ p.cta_url }})
+- **Audience:** {{ p.audience }}
+- **Scope:** {{ p.summary }}
+- **Proof:** {{ p.evidence }}
+{% endfor %}

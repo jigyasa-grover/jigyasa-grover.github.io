@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: /partnerships/llms.txt
+sitemap: false
+---
+# Jigyasa Grover — AI Go-To-Market (GTM) & Developer Partnerships (Section Index)
+
+> Practitioner-led AI DevTool creator campaigns, runnable GitHub demos, GEO/SEO deep dives, and 9:16 vertical creator video reaching an 80%+ senior technical buyer ICP (~320K annual LinkedIn impressions, ~15K followers).
+
+- [AI GTM & Brand Partnerships (HTML)](https://jigyasa-grover.github.io/partnerships/) · [Partnerships (Markdown)](https://jigyasa-grover.github.io/partnerships.md)
+- [Creator Media Kit, VIP Events & Hardware PR](https://jigyasa-grover.github.io/media-kit/)
+- [Pricing & Launch Packages](https://jigyasa-grover.github.io/pricing/) · [pricing.md](https://jigyasa-grover.github.io/pricing.md)
+- [Collaboration JSON API](https://jigyasa-grover.github.io/api/v1/collaboration.json)
+- [Passionfroot Storefront](https://www.passionfroot.me/jigyasa-grover) · [Naano Profile](https://naano.com/creators/jigyasa-grover) · [8x Launch Series](https://8x.business/p/b623ba2ed48544748601a75a3569c6ee)
+- [Root llms.txt](https://jigyasa-grover.github.io/llms.txt): Full site index.

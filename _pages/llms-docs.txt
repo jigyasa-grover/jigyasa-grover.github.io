@@ -1,0 +1,30 @@
+---
+layout: null
+permalink: /docs/llms.txt
+sitemap: false
+---
+# Jigyasa Grover — Agent & Public API Docs (Section Index)
+
+> Focused index of free ($0 USD), unauthenticated, read-only JSON APIs, OpenAPI 3.1 spec, ARD & AI Catalog discovery manifests, Agent Skills, and W3C WebMCP browser tools on jigyasa-grover.github.io.
+
+## API & OpenAPI
+
+- [Agent & Public API Docs (HTML)](https://jigyasa-grover.github.io/docs/): Human and developer quickstart with cURL examples and versioning policy.
+- [Agent & Public API Docs (Markdown)](https://jigyasa-grover.github.io/docs.md): Clean Markdown twin with YAML frontmatter.
+- [OpenAPI 3.1.0 Spec](https://jigyasa-grover.github.io/openapi.json): Machine-readable REST contract with operationIds and typed schemas.
+- [API v1 Root Index](https://jigyasa-grover.github.io/api/v1/index.json): Endpoint directory, versioning policy, and discovery links.
+- [Profile JSON API](https://jigyasa-grover.github.io/api/v1/profile.json): Canonical entity profile, speaker bios, career, education, and press photos.
+- [Collaboration JSON API](https://jigyasa-grover.github.io/api/v1/collaboration.json): Six collaboration pillars, booking links, AI GTM packages, and FAQs.
+- [Articles JSON API](https://jigyasa-grover.github.io/api/v1/articles.json): 34 indexed technical essays and Markdown twin URLs.
+- [Consolidated Agent Context](https://jigyasa-grover.github.io/agent-context.json): Single-fetch JSON bundle of the full site.
+
+## Discovery & Skills
+
+- [ARD v1.0 Catalog](https://jigyasa-grover.github.io/.well-known/ard.json): Agentic Resource Discovery manifest (`did:web:jigyasa-grover.github.io`).
+- [AI Catalog Standard v1.0](https://jigyasa-grover.github.io/.well-known/ai-catalog.json): AI Catalog discovery manifest with `trustManifests`.
+- [RFC 9727 API Catalog](https://jigyasa-grover.github.io/.well-known/api-catalog): Linkset pointing to OpenAPI 3.1 and documentation.
+- [A2A v0.3.0 Agent Card](https://jigyasa-grover.github.io/.well-known/agent-card.json): Read-only Agent-to-Agent discovery card.
+- [Agent Skills v0.2.0 Index](https://jigyasa-grover.github.io/.well-known/agent-skills/index.json): Verified SHA-256 index for `jigyasa-grover` and `torchtpu-doctor` skills.
+- [W3C WebMCP Manifest](https://jigyasa-grover.github.io/.well-known/mcp.json): In-browser `document.modelContext` tool catalog.
+- [Source Repository (`AGENTS.md` & `plugin.json`)](https://github.com/jigyasa-grover/jigyasa-grover.github.io): Public GitHub repo with coding-agent rules and Agent Plugin manifest.
+- [Root llms.txt](https://jigyasa-grover.github.io/llms.txt): Full site navigation index.

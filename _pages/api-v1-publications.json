@@ -1,0 +1,13 @@
+---
+layout: null
+permalink: /api/v1/publications.json
+sitemap: false
+---
+{
+  "api_version": "1.0.0",
+  "publications_url": "{{ site.url }}/publications/",
+  "featured_book": {{ site.data.publications.featured_book | jsonify }},
+  "academic_and_policy_impact": {{ site.data.publications.academic_and_policy_impact | jsonify }},
+  "reviewed_books": {{ site.data.publications.reviewed_books | jsonify }},
+  "research_publications": {{ site.data.publications.research_publications | jsonify }}
+}

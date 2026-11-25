@@ -1,0 +1,20 @@
+---
+layout: null
+permalink: /api/v1/speaking.json
+sitemap: false
+---
+{
+  "api_version": "1.0.0",
+  "speaking_url": "{{ site.url }}/speaking/",
+  "press_url": "{{ site.url }}/press/",
+  "featured_keynote": {{ site.data.speaking.featured_video | jsonify }},
+  "signature_talks": {{ site.data.speaking.signature_talks | jsonify }},
+  "appearances": {{ site.data.speaking.appearances | jsonify }},
+  "countries": {{ site.data.speaking.countries | jsonify }},
+  "pagination": {
+    "total": {{ site.data.speaking.appearances | size }},
+    "limit": {{ site.data.speaking.appearances | size }},
+    "has_more": false,
+    "next_cursor": null
+  }
+}

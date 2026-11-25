@@ -1,0 +1,13 @@
+---
+layout: null
+permalink: /llms.md
+sitemap: false
+---
+---
+title: "Jigyasa Grover — LLM & Agent Navigation Index"
+description: "Curated Markdown index for LLMs and autonomous agents covering Jigyasa Grover's bio, APIs, collaboration tracks, speaking, courses, publications, and full-text engineering essays."
+canonical: "https://jigyasa-grover.github.io/llms.txt"
+last-updated: "2026-11-26"
+---
+
+{% include llms-index.md %}

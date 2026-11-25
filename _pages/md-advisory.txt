@@ -1,0 +1,31 @@
+---
+layout: null
+permalink: /advisory.md
+sitemap: false
+---
+---
+title: "AI Startup, Technical & GTM Advisory — Jigyasa Grover (Afterdays)"
+description: "Independent AI startup, ranking, agentic architecture, and developer GTM advisory via Afterdays across 30+ organizations, plus instant 1:1 bookings on Intro (5.0 stars)."
+canonical: "https://jigyasa-grover.github.io/advisory/"
+last-updated: "2026-11-26"
+---
+
+# AI Startup, Technical & GTM Advisory (Afterdays)
+
+Independent technical and developer Go-To-Market (GTM) advisory operated by **Jigyasa Grover** via **Afterdays** (founded 2015, San Francisco Bay Area) across 30+ startups, enterprises, and venture funds.
+
+- **Instant 1:1 Advisory (5.0★ verified):** {{ site.data.identity.booking.intro.url }}
+- **Direct Retainer Inquiry:** https://jigyasa-grover.github.io/work-with-me/?topic=Advisory%20%26%20Consulting#contact
+- **Collaboration JSON API:** https://jigyasa-grover.github.io/api/v1/collaboration.json
+
+## Core Advisory Areas
+
+- **Agentic AI & Multi-Agent Architecture:** Google ADK, MCP tool contracts, deterministic state machines vs. autonomous agents, and token cost circuit breakers.
+- **LLM Evaluation & Safety Harnesses:** Golden datasets, trajectory grading, Pass@k reliability, LLM-as-a-Judge rubrics, and PII/prompt-injection guardrails.
+- **Production ML Ranking & Infrastructure:** Multi-task MoE ranking, feature stores, cold-start calibration, and Cloud TPU/GPU training efficiency.
+- **Developer Go-To-Market (GTM) & SDK Friction Audits:** Positioning, onboarding telemetry, runnable reference architectures, and technical buyer trust.
+
+## Advisory FAQ
+
+{% for item in site.data.faqs.advisory %}- **{{ item.q }}** {{ item.a }}
+{% endfor %}

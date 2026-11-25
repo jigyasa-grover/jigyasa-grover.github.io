@@ -1,0 +1,22 @@
+---
+layout: null
+permalink: /blog.md
+sitemap: false
+---
+---
+title: "Technical AI & ML Engineering Blog — Jigyasa Grover"
+description: "34 indexed AI engineering essays covering Cloud TPU optimization, Google ADK multi-agent systems, LLM evaluation, ranking, and data-centric ML, with 10 full Markdown twins."
+canonical: "https://jigyasa-grover.github.io/blog/"
+last-updated: "2026-11-26"
+---
+
+# Technical AI & ML Engineering Blog — Jigyasa Grover
+
+- **Articles JSON API:** https://jigyasa-grover.github.io/api/v1/articles.json
+- **RSS / Atom Feed:** https://jigyasa-grover.github.io/feed.xml
+- **Section LLM Index:** https://jigyasa-grover.github.io/blog/llms.txt
+
+## Indexed Technical Articles (34 Essays)
+
+{% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign m = site.data.posts_meta[post.url] %}- **[{{ post.title }}](https://jigyasa-grover.github.io{{ post.url }})** ({{ post.date | date: "%Y-%m-%d" }}{% if m.category %} · {{ m.category }}{% endif %}){% if m.md_url %} · [Full Markdown](https://jigyasa-grover.github.io{{ m.md_url }}){% endif %}{% if m.summary %}: {{ m.summary }}{% endif %}
+{% endunless %}{% endfor %}

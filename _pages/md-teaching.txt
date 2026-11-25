@@ -1,0 +1,37 @@
+---
+layout: null
+permalink: /teaching.md
+sitemap: false
+---
+---
+title: "Corporate AI Training & Courses — Jigyasa Grover"
+description: "Live corporate AI workshops (Morgan Stanley, FedEx, Accenture, Roblox), sponsor-funded SMB and SF community AI programs, and 4 LinkedIn Learning courses (~45K learners)."
+canonical: "https://jigyasa-grover.github.io/teaching/"
+last-updated: "2026-11-26"
+---
+
+# Corporate AI Training & Courses — Jigyasa Grover
+
+- **LinkedIn Learning Reach:** {{ site.data.courses.total_learners }} learners · {{ site.data.courses.total_bookmarks }} bookmarks · {{ site.data.courses.avg_rating }} across {{ site.data.courses.total_ratings }} ratings ({{ site.data.courses.linkedin_learning_profile }})
+- **Enterprise & Institutional Clients:** {{ site.data.courses.training_clients | join: ", " }}
+- **Courses JSON API:** https://jigyasa-grover.github.io/api/v1/courses.json
+
+## Live Corporate Workshops
+
+{% for w in site.data.courses.workshops %}### {{ w.title }} ({{ w.duration }})
+- **Audience:** {{ w.audience }}
+- **Summary:** {{ w.abstract }}
+- **Core Tools:** {{ w.tools | join: ", " }}
+{% endfor %}
+
+## Engagement Modes & Capability Domains
+
+{% for em in site.data.courses.engagement_modes %}- **{{ em.number }}. {{ em.title }}** ({{ em.kicker }}): {{ em.summary }}
+{% endfor %}
+{% for dom in site.data.courses.capability_domains %}- **Domain {{ dom.number }} ({{ dom.title }}):** {{ dom.summary }}
+{% endfor %}
+
+## Published Courses
+
+{% for c in site.data.courses.courses %}- **{{ c.title }}** ({{ c.provider }}, {{ c.year }}, {{ c.learners }}): {{ c.summary }} — {{ c.url }}
+{% endfor %}

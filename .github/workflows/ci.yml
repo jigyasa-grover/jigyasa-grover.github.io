@@ -67,8 +67,15 @@ jobs:
           ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
           urls = [el.text.strip() for el in tree.findall(".//sm:loc", ns) if el.text]
           for extra in (
+              "https://jigyasa-grover.github.io/docs/",
+              "https://jigyasa-grover.github.io/pricing/",
+              "https://jigyasa-grover.github.io/privacy/",
               "https://jigyasa-grover.github.io/llms.txt",
               "https://jigyasa-grover.github.io/llms-full.txt",
+              "https://jigyasa-grover.github.io/index.md",
+              "https://jigyasa-grover.github.io/agents.md",
+              "https://jigyasa-grover.github.io/docs.md",
+              "https://jigyasa-grover.github.io/pricing.md",
               "https://jigyasa-grover.github.io/TorchTPUDoctor/index.md",
               "https://jigyasa-grover.github.io/ProofOfWork/index.md",
               "https://jigyasa-grover.github.io/StartupOnAShoestring/index.md",

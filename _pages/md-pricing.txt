@@ -1,0 +1,33 @@
+---
+layout: null
+permalink: /pricing.md
+sitemap: false
+---
+---
+title: "Pricing, Free Resources & Engagement Modes — Jigyasa Grover"
+description: "Machine-readable summary of free public resources ($0 USD), self-serve Intro, Passionfroot, Naano, and 8x storefronts, and custom-scoped workshops and advisory."
+canonical: "https://jigyasa-grover.github.io/pricing/"
+last-updated: "2026-11-26"
+---
+
+# Pricing & Engagement Modes — Jigyasa Grover
+
+All public writing, open-source repositories, Agent Skills, and read-only JSON/Markdown APIs on `jigyasa-grover.github.io` are **free ($0 USD)** with no signup or API key. Independent consulting, speaking, training, and creator campaigns are available via transparent self-serve storefronts or custom scoping through Afterdays.
+
+## Tier Comparison
+
+| Offering | Pricing Model | Included Deliverables | Booking / Access |
+| --- | --- | --- | --- |
+| Public Technical Blog, Open Source & Read-Only APIs | **Free ($0 USD)** (no auth, no signup) | 34 indexed essays, 10 full Markdown twins, 76+ GitHub repos, `torchtpu-doctor` Skill, `/api/v1/*.json`, `/openapi.json` | https://jigyasa-grover.github.io/docs/ |
+| *Sculpting Data for ML* & LinkedIn Learning Courses | Standard retail / LinkedIn Learning subscription (open Kaggle datasets free) | Monograph (ISBN 979-8585463570) + 4 LinkedIn Learning courses (~45K learners) | https://jigyasa-grover.github.io/publications/ · https://jigyasa-grover.github.io/teaching/ |
+| 1:1 AI Architecture & GTM Advisory Call | Published live per-session rate on Intro | 1:1 video review on production ML, ranking/MoE, Google ADK/MCP, LLM evals, or startup GTM (5.0★ verified) | https://intro.co/JigyasaGrover |
+| AI GTM & Developer Brand Sponsorships | Published package cards on Passionfroot, Naano & 8x | Reference Build, Editorial & Social, 9:16 Creator Video, Live Dev Session, or Full-Stack Launch Bundle (80%+ senior tech buyer ICP) | https://www.passionfroot.me/jigyasa-grover · https://naano.com/creators/jigyasa-grover · https://8x.business/p/b623ba2ed48544748601a75a3569c6ee |
+| Corporate AI Workshops & Keynotes | Custom-scoped by format & team size (L&D budget eligible) | 90-min executive briefings, half-day/full-day engineering labs, global keynotes, and sponsor-funded SMB/community cohorts | https://jigyasa-grover.github.io/work-with-me/?topic=Corporate%20AI%20Training#contact |
+| Afterdays Startup Advisory Retainer | Custom monthly retainer or equity/advisory agreement | Recurring architecture, evaluation, and developer GTM advisory (30+ organizations advised) | https://jigyasa-grover.github.io/advisory/ |
+
+## Notes for Procurement & Purchasing Agents
+
+- **Zero-Friction Self-Serve:** Direct 1:1 consultations (Intro) and standard creator sponsorship packages (Passionfroot, Naano, 8x) display live availability and transparent rates without requiring a discovery call.
+- **L&D Reimbursement:** Corporate workshops include runnable repositories, pre-reads, and formal completion certificates eligible for enterprise L&D budgets.
+- **Independent Personal Capacity:** All paid collaborations are operated independently by Jigyasa Grover via Afterdays (San Francisco Bay Area, CA), separate from her employer and unpaid community roles (Google gDAB / GDE).
+- **Direct Inquiry:** https://jigyasa-grover.github.io/work-with-me/#contact (`grover.jigyasa2@gmail.com`).

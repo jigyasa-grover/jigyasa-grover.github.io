@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /projects/llms.txt
+sitemap: false
+---
+# Jigyasa Grover — Engineering Projects & Open Source (Section Index)
+
+> Production AI systems, Cloud TPU profiling tools (`TorchTPU Doctor`), merged Hugging Face `peft` PR #4099, Google ADK agents, and 76+ public GitHub repositories.
+
+- [Projects Page (HTML)](https://jigyasa-grover.github.io/projects/) · [Projects (Markdown)](https://jigyasa-grover.github.io/projects.md)
+- [Projects JSON API](https://jigyasa-grover.github.io/api/v1/projects.json)
+- [TorchTPU Doctor Agent Skill](https://jigyasa-grover.github.io/.well-known/agent-skills/torchtpu-doctor/SKILL.md)
+- [GitHub Profile](https://github.com/jigyasa-grover) · [Site Source Repo (`AGENTS.md`, `plugin.json`)](https://github.com/jigyasa-grover/jigyasa-grover.github.io)
+
+## Original Systems & Benchmarks
+
+{% for proj in site.data.projects %}- [{{ proj.title }}]({% if proj.post_url %}https://jigyasa-grover.github.io{{ proj.post_url }}{% elsif proj.repo_url %}{{ proj.repo_url }}{% else %}https://jigyasa-grover.github.io/projects/{% endif %}) ({{ proj.year }}): {{ proj.summary }}
+{% endfor %}
+- [Root llms.txt](https://jigyasa-grover.github.io/llms.txt): Full site index.

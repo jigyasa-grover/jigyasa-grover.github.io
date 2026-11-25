@@ -1,0 +1,41 @@
+---
+layout: null
+permalink: /press.md
+sitemap: false
+---
+---
+title: "Press, Media & Speaker Kit — Jigyasa Grover"
+description: "Approved 50-word and 150-word bios, high-resolution press portraits, 14x awards, and media features in Forbes, Business Insider, VentureBeat, CACM, LeadDev, and Google I/O."
+canonical: "https://jigyasa-grover.github.io/press/"
+last-updated: "2026-11-26"
+---
+
+# Press, Media & Speaker Kit — Jigyasa Grover
+
+- **Pronunciation:** {{ site.data.identity.pronunciation }} (`{{ site.data.identity.pronunciation_ipa }}`)
+- **Profile & Speaker Kit JSON API:** https://jigyasa-grover.github.io/api/v1/profile.json
+- **Media Inquiries:** https://jigyasa-grover.github.io/work-with-me/?topic=Media%20%26%20Interviews#contact
+
+## Approved 50-Word Bio
+
+{{ site.data.identity.short_bio_50 }}
+
+## Approved 150-Word Bio
+
+{{ site.data.identity.medium_bio_150 }}
+
+## High-Resolution Press Portraits
+
+- Studio Headshot (Square): https://jigyasa-grover.github.io/assets/images/press/jigyasa-grover-studio-headshot.jpg
+- Fireside & Panel Stage: https://jigyasa-grover.github.io/assets/images/press/jigyasa-grover-panel-stage.jpg
+- Codemotion Milan 2026 Speaker Portrait: https://jigyasa-grover.github.io/assets/images/press/jigyasa-grover-codemotion-speaker-2026.jpg
+
+## 14× Industry & Open-Source Awards
+
+{% for a in site.data.recognition.awards %}- **{{ a.year }}:** {{ a.title }} ({{ a.issuer }})
+{% endfor %}
+
+## Selected Media & Broadcast Features
+
+{% for m in site.data.recognition.media_features limit:25 %}- **{{ m.date }} · {{ m.outlet }}:** {{ m.title }}{% if m.url %} — {{ m.url }}{% endif %}
+{% endfor %}

@@ -1,0 +1,22 @@
+---
+layout: null
+permalink: /blog/llms.txt
+sitemap: false
+---
+# Jigyasa Grover — Technical AI & ML Blog (Section Index)
+
+> 34 indexed production AI, Cloud TPU optimization, Google ADK multi-agent systems, LLM evaluation, ranking, and data-centric ML essays (10 with full-text Markdown twins).
+
+- [Blog Index (HTML)](https://jigyasa-grover.github.io/blog/) · [Blog Index (Markdown)](https://jigyasa-grover.github.io/blog.md)
+- [Articles JSON API](https://jigyasa-grover.github.io/api/v1/articles.json) · [Atom/RSS Feed](https://jigyasa-grover.github.io/feed.xml)
+
+## Flagship Articles (Full Markdown Twins)
+
+{% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign m = site.data.posts_meta[post.url] %}{% if m.md_url %}- [{{ post.title }}](https://jigyasa-grover.github.io{{ post.url }}) · [Full Markdown](https://jigyasa-grover.github.io{{ m.md_url }}): {{ m.summary }}
+{% endif %}{% endunless %}{% endfor %}
+
+## Additional Technical Essays
+
+{% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign m = site.data.posts_meta[post.url] %}{% unless m.md_url %}- [{{ post.title }}](https://jigyasa-grover.github.io{{ post.url }}){% if m.summary %}: {{ m.summary }}{% endif %}
+{% endunless %}{% endunless %}{% endfor %}
+- [Root llms.txt](https://jigyasa-grover.github.io/llms.txt): Full site index.

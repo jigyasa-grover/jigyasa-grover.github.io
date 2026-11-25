@@ -1,0 +1,11 @@
+---
+layout: null
+permalink: /feeds/schema-items.jsonl
+sitemap: false
+---
+{"@context":"https://schema.org","@type":"Person","@id":"https://jigyasa-grover.github.io/#person","name":"Jigyasa Grover","url":"https://jigyasa-grover.github.io/","description":{{ site.data.identity.short_bio_50 | jsonify }},"sameAs":{{ site.data.identity.same_as | jsonify }}}
+{"@context":"https://schema.org","@type":"Organization","@id":"https://jigyasa-grover.github.io/#afterdays","name":"Afterdays","url":"https://jigyasa-grover.github.io/advisory/","description":"Independent AI technical advisory, corporate education, and developer go-to-market practice founded by Jigyasa Grover in 2015.","address":{"@type":"PostalAddress","addressLocality":"San Francisco","addressRegion":"CA","addressCountry":"US"},"contactPoint":{"@type":"ContactPoint","contactType":"Advisory, Speaking & Partnerships","email":"grover.jigyasa2@gmail.com","url":"https://jigyasa-grover.github.io/work-with-me/#contact"}}
+{"@context":"https://schema.org","@type":"Book","name":"Sculpting Data for ML: The First Act of Machine Learning","isbn":"979-8585463570","url":"https://jigyasa-grover.github.io/publications/","description":{{ site.data.publications.featured_book.summary | jsonify }}}
+{% for c in site.data.courses.courses %}{"@context":"https://schema.org","@type":"Course","name":{{ c.title | jsonify }},"provider":{"@type":"Organization","name":{{ c.provider | jsonify }}},"url":{{ c.url | jsonify }},"description":{{ c.summary | jsonify }}}
+{% endfor %}{% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign meta = site.data.posts_meta[post.url] %}{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ post.title | jsonify }},"url":{{ site.url | append: post.url | jsonify }},"datePublished":{{ post.date | date: "%Y-%m-%d" | jsonify }},"author":{"@id":"https://jigyasa-grover.github.io/#person"},"description":{{ meta.summary | default: "" | jsonify }}}
+{% endunless %}{% endfor %}

@@ -73,15 +73,47 @@
 {% endif %}
 
 <link rel="canonical" href="{{ canonical_url }}" />
+<link rel="describedby" href="{{ site.url }}/llms.txt" />
+<link rel="ard" href="{{ site.url }}/.well-known/ard.json" />
 <link rel="alternate" type="application/rss+xml" title="Jigyasa Grover — Technical Writing RSS" href="{{ site.url }}/feed.xml" />
 <link rel="alternate" type="text/plain" title="Jigyasa Grover — LLM Context (llms.txt)" href="{{ site.url }}/llms.txt" />
+{% if page.url == "/" %}
+<link rel="alternate" type="text/markdown" title="Jigyasa Grover — Homepage Markdown Twin" href="{{ site.url }}/index.md" />
+{% elsif page.url == "/about" %}
+<link rel="alternate" type="text/markdown" title="About Jigyasa Grover — Markdown Twin" href="{{ site.url }}/about.md" />
+{% elsif page.url == "/work-with-me/" %}
+<link rel="alternate" type="text/markdown" title="Work With Jigyasa Grover — Markdown Twin" href="{{ site.url }}/work-with-me.md" />
+{% elsif page.url == "/speaking/" %}
+<link rel="alternate" type="text/markdown" title="Speaking — Markdown Twin" href="{{ site.url }}/speaking.md" />
+{% elsif page.url == "/teaching/" %}
+<link rel="alternate" type="text/markdown" title="Corporate AI Training &amp; Courses — Markdown Twin" href="{{ site.url }}/teaching.md" />
+{% elsif page.url == "/advisory/" %}
+<link rel="alternate" type="text/markdown" title="AI Startup &amp; GTM Advisory — Markdown Twin" href="{{ site.url }}/advisory.md" />
+{% elsif page.url == "/partnerships/" %}
+<link rel="alternate" type="text/markdown" title="AI Go-To-Market &amp; Brand Partnerships — Markdown Twin" href="{{ site.url }}/partnerships.md" />
+{% elsif page.url == "/projects/" %}
+<link rel="alternate" type="text/markdown" title="Selected Engineering Projects — Markdown Twin" href="{{ site.url }}/projects.md" />
+{% elsif page.url == "/publications/" %}
+<link rel="alternate" type="text/markdown" title="Books &amp; Publications — Markdown Twin" href="{{ site.url }}/publications.md" />
+{% elsif page.url == "/press/" %}
+<link rel="alternate" type="text/markdown" title="Press &amp; Speaker Kit — Markdown Twin" href="{{ site.url }}/press.md" />
+{% elsif page.url == "/docs/" %}
+<link rel="alternate" type="text/markdown" title="Agent &amp; Public API Documentation — Markdown Twin" href="{{ site.url }}/docs.md" />
+{% elsif page.url == "/blog/" %}
+<link rel="alternate" type="text/markdown" title="Technical AI &amp; ML Blog — Markdown Twin" href="{{ site.url }}/blog.md" />
+{% elsif page.url == "/pricing/" %}
+<link rel="alternate" type="text/markdown" title="Pricing &amp; Engagement Modes — Markdown Twin" href="{{ site.url }}/pricing.md" />
+{% elsif page.url == "/privacy/" %}
+<link rel="alternate" type="text/markdown" title="Privacy Policy — Markdown Twin" href="{{ site.url }}/privacy.md" />
+{% elsif post_meta and post_meta.md_url %}
+<link rel="alternate" type="text/markdown" title="{{ page.title | escape }} — Full Markdown Article" href="{{ site.url }}{{ post_meta.md_url }}" />
+{% else %}
 <link rel="alternate" type="text/markdown" title="Jigyasa Grover — Full LLM Profile (llms-full.txt)" href="{{ site.url }}/llms-full.txt" />
+{% endif %}
+<link rel="alternate" type="application/vnd.oai.openapi+json" title="Jigyasa Grover — Public Read-Only API (OpenAPI 3.1)" href="{{ site.url }}/openapi.json" />
 <link rel="alternate" type="application/json" title="Jigyasa Grover — Structured Agent &amp; WebMCP Context (agent-context.json)" href="{{ site.url }}/agent-context.json" />
 <link rel="alternate" type="application/json" title="Jigyasa Grover — A2A Discovery Card (agent-card.json)" href="{{ site.url }}/.well-known/agent-card.json" />
 <link rel="alternate" type="application/json" title="Jigyasa Grover — WebMCP Discovery Manifest (mcp.json)" href="{{ site.url }}/.well-known/mcp.json" />
-{% if post_meta and post_meta.md_url %}
-<link rel="alternate" type="text/markdown" title="{{ page.title | escape }} — Full Markdown Article" href="{{ site.url }}{{ post_meta.md_url }}" />
-{% endif %}
 <link rel="me" href="https://github.com/jigyasa-grover" />
 <link rel="me" href="https://www.linkedin.com/in/jigyasa-grover/" />
 <link rel="me" href="https://www.linkedin.com/learning/instructors/jigyasa-grover" />

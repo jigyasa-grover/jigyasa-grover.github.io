@@ -1,0 +1,51 @@
+---
+layout: null
+permalink: /api/v1/index.json
+sitemap: false
+---
+{
+  "api_version": "1.0.0",
+  "status": "stable",
+  "base_url": "https://jigyasa-grover.github.io/api/v1",
+  "documentation_url": "https://jigyasa-grover.github.io/docs/",
+  "openapi_url": "https://jigyasa-grover.github.io/openapi.json",
+  "authentication": {
+    "type": "none",
+    "read_only": true,
+    "free_tier": true,
+    "sandbox_mode": "All endpoints are public, read-only, idempotent HTTPS GET resources requiring no API key or signup."
+  },
+  "versioning_and_deprecation": {
+    "policy": "Semantic Versioning under /api/v1/. Additive fields are backwards-compatible; any breaking contract change introduces /api/v2/ with at least 90 days of parallel support and a deprecation notice on /docs/ and /openapi.json.",
+    "current_major": "v1",
+    "last_updated": "2026-11-26"
+  },
+  "error_model": {
+    "format": "RFC 9457 Problem Details (documented in /openapi.json)",
+    "not_found_recovery": "If an endpoint returns HTTP 404, consult /openapi.json, /api/v1/index.json, or /llms.txt for valid resource paths."
+  },
+  "endpoints": {
+    "index": "https://jigyasa-grover.github.io/api/v1/index.json",
+    "profile": "https://jigyasa-grover.github.io/api/v1/profile.json",
+    "collaboration": "https://jigyasa-grover.github.io/api/v1/collaboration.json",
+    "articles": "https://jigyasa-grover.github.io/api/v1/articles.json",
+    "speaking": "https://jigyasa-grover.github.io/api/v1/speaking.json",
+    "publications": "https://jigyasa-grover.github.io/api/v1/publications.json",
+    "projects": "https://jigyasa-grover.github.io/api/v1/projects.json",
+    "courses": "https://jigyasa-grover.github.io/api/v1/courses.json",
+    "videos": "https://jigyasa-grover.github.io/assets/data/cinema-catalog.json",
+    "full_agent_context": "https://jigyasa-grover.github.io/agent-context.json"
+  },
+  "agent_discovery": {
+    "ard": "https://jigyasa-grover.github.io/.well-known/ard.json",
+    "ai_catalog": "https://jigyasa-grover.github.io/.well-known/ai-catalog.json",
+    "api_catalog": "https://jigyasa-grover.github.io/.well-known/api-catalog",
+    "agent_card": "https://jigyasa-grover.github.io/.well-known/agent-card.json",
+    "agent_skills": "https://jigyasa-grover.github.io/.well-known/agent-skills/index.json",
+    "webmcp_manifest": "https://jigyasa-grover.github.io/.well-known/mcp.json",
+    "llms_txt": "https://jigyasa-grover.github.io/llms.txt",
+    "agents_md": "https://jigyasa-grover.github.io/agents.md",
+    "pricing_md": "https://jigyasa-grover.github.io/pricing.md",
+    "schemamap": "https://jigyasa-grover.github.io/schemamap.xml"
+  }
+}

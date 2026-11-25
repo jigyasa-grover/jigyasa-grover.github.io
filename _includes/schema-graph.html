@@ -71,11 +71,7 @@
         "url": "https://www.uber.com/"
       },
       "affiliation": {
-        "@type": "Organization",
-        "@id": "https://jigyasa-grover.github.io/#afterdays",
-        "name": "Afterdays",
-        "url": "https://jigyasa-grover.github.io/advisory/",
-        "description": "Independent AI technical advisory, corporate education, and developer go-to-market practice founded by Jigyasa Grover in 2015."
+        "@id": "https://jigyasa-grover.github.io/#afterdays"
       },
       "alumniOf": [
         {
@@ -256,6 +252,51 @@
         }
       ],
       "sameAs": {{ id.same_as | jsonify }}
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://jigyasa-grover.github.io/#afterdays",
+      "name": "Afterdays",
+      "url": "https://jigyasa-grover.github.io/advisory/",
+      "description": "Independent AI technical advisory, corporate education, and developer go-to-market practice founded by Jigyasa Grover in 2015.",
+      "founder": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Francisco",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Advisory, Speaking, Training & Partnerships",
+        "email": "grover.jigyasa2@gmail.com",
+        "url": "https://jigyasa-grover.github.io/work-with-me/#contact",
+        "availableLanguage": ["English", "Hindi"]
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Public Technical Articles, Open Source & Read-Only Agent API (/api/v1/)",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://jigyasa-grover.github.io/docs/"
+        },
+        {
+          "@type": "Offer",
+          "name": "1:1 AI Architecture & GTM Advisory Session (Intro)",
+          "url": {{ id.booking.intro.url | jsonify }},
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "AI Go-To-Market & Developer Content Campaigns (Passionfroot, Naano, 8x)",
+          "url": {{ id.booking.passionfroot.url | jsonify }},
+          "availability": "https://schema.org/InStock"
+        }
+      ]
     },
     {% else %}
     {
@@ -963,6 +1004,62 @@
           {% endfor %}
         ]
       }
+    }
+    {% endif %}
+    {% if page.url == "/docs/" %},
+    {
+      "@type": "WebAPI",
+      "@id": "https://jigyasa-grover.github.io/docs/#webapi",
+      "name": "Jigyasa Grover Public Read-Only Agent API",
+      "description": "Free, unauthenticated, read-only HTTPS JSON API (OpenAPI 3.1.0) exposing Jigyasa Grover's canonical profile, speaker kit, technical essays, publications, projects, courses, and collaboration channels.",
+      "documentation": "https://jigyasa-grover.github.io/docs/",
+      "url": "https://jigyasa-grover.github.io/openapi.json",
+      "provider": {
+        "@id": "https://jigyasa-grover.github.io/#person"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://jigyasa-grover.github.io/docs/"
+      }
+    }
+    {% endif %}
+    {% if page.url == "/pricing/" %},
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://jigyasa-grover.github.io/pricing/#offers",
+      "name": "Jigyasa Grover Free Open-Source Resources & Collaboration Engagement Modes",
+      "url": "https://jigyasa-grover.github.io/pricing/",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Public Technical Articles, Open Source & Read-Only Agent APIs (/api/v1/)",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://jigyasa-grover.github.io/docs/"
+        },
+        {
+          "@type": "Offer",
+          "name": "1:1 AI Architecture & GTM Advisory Call (Intro)",
+          "url": {{ id.booking.intro.url | jsonify }},
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "AI Go-To-Market & Developer Brand Campaigns (Passionfroot, Naano, 8x)",
+          "url": {{ id.booking.passionfroot.url | jsonify }},
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Corporate AI Workshops, Keynotes & Afterdays Advisory Retainers",
+          "url": "https://jigyasa-grover.github.io/work-with-me/#contact",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
     }
     {% endif %}
     {% if page.faq_key and site.data.faqs[page.faq_key] %},

@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /api/v1/projects.json
+sitemap: false
+---
+{
+  "api_version": "1.0.0",
+  "projects_url": "{{ site.url }}/projects/",
+  "github": {{ site.data.github | jsonify }},
+  "pagination": {
+    "total": {{ site.data.projects | size }},
+    "limit": {{ site.data.projects | size }},
+    "has_more": false,
+    "next_cursor": null
+  },
+  "items": {{ site.data.projects | jsonify }}
+}

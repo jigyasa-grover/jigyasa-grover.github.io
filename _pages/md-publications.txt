@@ -1,0 +1,33 @@
+---
+layout: null
+permalink: /publications.md
+sitemap: false
+---
+---
+title: "Books & Peer-Reviewed Publications — Jigyasa Grover"
+description: "Sculpting Data for ML (ISBN 979-8585463570, Cornell Tech CS 5781, 100+ citations), Enterprise LLM Deployment Readiness (SSRN 2026), Springer & ACM papers, and 8 reviewed books."
+canonical: "https://jigyasa-grover.github.io/publications/"
+last-updated: "2026-11-26"
+---
+
+# Books & Peer-Reviewed Publications — Jigyasa Grover
+
+- **Publications JSON API:** https://jigyasa-grover.github.io/api/v1/publications.json
+- **Google Scholar:** https://scholar.google.com/citations?user=CwlnmQQAAAAJ · **DBLP:** https://dblp.org/pid/209/6093.html
+
+## Featured Book: *{{ site.data.publications.featured_book.title }}*
+
+- **Year:** {{ site.data.publications.featured_book.year }} · **ISBN:** {{ site.data.publications.featured_book.isbn }} & {{ site.data.publications.featured_book.isbn_alt }}
+- **Impact:** {{ site.data.publications.featured_book.rating_value }}★ Goodreads · {{ site.data.publications.featured_book.citations }}
+- **Summary:** {{ site.data.publications.featured_book.summary }}
+- **Links:** Amazon ({{ site.data.publications.featured_book.amazon_url }}) · Goodreads ({{ site.data.publications.featured_book.goodreads_url }})
+
+## Research Publications & Papers
+
+{% for r in site.data.publications.research_publications %}- **{{ r.title }}** ({{ r.venue }}, {{ r.year }}): {{ r.summary }} — {{ r.doi_url }}
+{% endfor %}
+
+## Technical Book Reviewing, Endorsements & Features
+
+{% for b in site.data.publications.reviewed_books %}- *{{ b.title }}* by {{ b.authors }} ({{ b.publisher }}, {{ b.year }} · {{ b.role }}) — {{ b.url }}
+{% endfor %}

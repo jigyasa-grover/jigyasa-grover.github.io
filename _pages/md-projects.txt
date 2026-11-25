@@ -1,0 +1,32 @@
+---
+layout: null
+permalink: /projects.md
+sitemap: false
+---
+---
+title: "Selected Engineering Projects & Open Source — Jigyasa Grover"
+description: "Production AI systems, TorchTPU Doctor (2,537x LoRA speedup), merged Hugging Face peft Cloud TPU PR #4099, Google ADK agents, and 76+ open-source GitHub repositories."
+canonical: "https://jigyasa-grover.github.io/projects/"
+last-updated: "2026-11-26"
+---
+
+# Selected Engineering Projects & Open Source
+
+- **GitHub Profile:** {{ site.data.github.url }} ({{ site.data.github.handle }} · 76+ public repositories · 245+ upstream PRs & issues across 32 external repos)
+- **Projects JSON API:** https://jigyasa-grover.github.io/api/v1/projects.json
+- **Agent Skill (`torchtpu-doctor`):** https://jigyasa-grover.github.io/.well-known/agent-skills/torchtpu-doctor/SKILL.md
+
+## Original Systems & Benchmarks
+
+{% for proj in site.data.projects %}### {{ proj.title }} ({{ proj.year }} · {{ proj.category }})
+{{ proj.summary }}
+{% if proj.post_url %}- **Deep Dive:** https://jigyasa-grover.github.io{{ proj.post_url }}
+{% endif %}{% if proj.repo_url %}- **Repository:** {{ proj.repo_url }}
+{% endif %}{% if proj.live_url %}- **Live Demo:** {{ proj.live_url }}
+{% endif %}
+{% endfor %}
+
+## Pinned Upstream Open-Source & Course Repositories
+
+{% for u in site.data.github.pinned_upstream %}- **{{ u.repo }}** ({{ u.role }} · {{ u.stack }}): {{ u.summary }} — {{ u.url }}
+{% endfor %}

@@ -1,0 +1,136 @@
+---
+layout: null
+permalink: /.well-known/ard.json
+sitemap: false
+---
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Jigyasa Grover",
+    "identifier": "did:web:jigyasa-grover.github.io",
+    "documentationUrl": "https://jigyasa-grover.github.io/docs/"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:jigyasa-grover.github.io:api:public-v1",
+      "displayName": "Jigyasa Grover Public Read-Only API (OpenAPI 3.1)",
+      "type": "application/vnd.oai.openapi+json;version=3.1",
+      "url": "https://jigyasa-grover.github.io/openapi.json",
+      "description": "OpenAPI 3.1.0 specification for Jigyasa Grover's free, unauthenticated read-only JSON endpoints (/api/v1/profile.json, collaboration, articles, speaking, publications, projects, courses, and /agent-context.json).",
+      "tags": ["api", "rest", "openapi", "read-only", "ai-ml"],
+      "capabilities": ["getProfile", "getCollaborationCatalog", "listTechnicalArticles", "getSpeakingCatalog", "getPublications", "listProjects", "getCoursesAndWorkshops", "getFullAgentContext"],
+      "representativeQueries": [
+        "retrieve Jigyasa Grover's verified speaker bio and press portraits",
+        "list Jigyasa Grover's AI engineering articles and Markdown twins",
+        "check collaboration tracks, workshops, and booking links for Jigyasa Grover"
+      ],
+      "auth": { "status": "none" },
+      "trustManifest": {
+        "identity": "did:web:jigyasa-grover.github.io",
+        "identityType": "did",
+        "provenance": {
+          "sourceRepository": "https://github.com/jigyasa-grover/jigyasa-grover.github.io",
+          "publisher": "https://jigyasa-grover.github.io/#person"
+        }
+      }
+    },
+    {
+      "identifier": "urn:air:jigyasa-grover.github.io:agent:a2a-card",
+      "displayName": "Jigyasa Grover A2A Discovery Card",
+      "type": "application/a2a-agent-card+json",
+      "url": "https://jigyasa-grover.github.io/.well-known/agent-card.json",
+      "description": "Read-only Agent-to-Agent (A2A v0.3.0) discovery card detailing collaboration skills, verified booking storefronts, and static endpoints.",
+      "tags": ["a2a", "agent-card", "advisory", "speaking", "gtm"],
+      "capabilities": ["gtm-and-developer-marketing", "ai-startup-and-architecture-advisory", "keynote-and-conference-speaking", "corporate-ai-training-and-courses", "technical-research-and-open-source"],
+      "representativeQueries": [
+        "invite Jigyasa Grover to keynote an AI conference",
+        "scope a developer marketing or AI GTM partnership with Jigyasa Grover"
+      ],
+      "auth": { "status": "none" },
+      "trustManifest": {
+        "identity": "did:web:jigyasa-grover.github.io",
+        "identityType": "did",
+        "provenance": {
+          "sourceRepository": "https://github.com/jigyasa-grover/jigyasa-grover.github.io",
+          "publisher": "https://jigyasa-grover.github.io/#person"
+        }
+      }
+    },
+    {
+      "identifier": "urn:air:jigyasa-grover.github.io:skill:jigyasa-grover",
+      "displayName": "Jigyasa Grover Site & Collaboration Skill",
+      "type": "application/agent-skills+md",
+      "url": "https://jigyasa-grover.github.io/.well-known/agent-skills/jigyasa-grover/SKILL.md",
+      "description": "Portable Agent Skill guiding AI assistants on fetching Jigyasa Grover's verified bios, technical articles, GTM surfaces, and booking workflows.",
+      "tags": ["agent-skill", "directory", "collaboration", "speaker-kit"],
+      "representativeQueries": [
+        "how should an agent query jigyasa-grover.github.io",
+        "get speaker kit, course catalog, or booking links for Jigyasa Grover"
+      ],
+      "auth": { "status": "none" },
+      "trustManifest": {
+        "identity": "did:web:jigyasa-grover.github.io",
+        "identityType": "did",
+        "provenance": {
+          "sourceRepository": "https://github.com/jigyasa-grover/jigyasa-grover.github.io",
+          "publisher": "https://jigyasa-grover.github.io/#person"
+        }
+      }
+    },
+    {
+      "identifier": "urn:air:jigyasa-grover.github.io:skill:torchtpu-doctor",
+      "displayName": "TorchTPU Doctor Agent Skill",
+      "type": "application/agent-skills+md",
+      "url": "https://jigyasa-grover.github.io/.well-known/agent-skills/torchtpu-doctor/SKILL.md",
+      "description": "Open-source Agent Skill and checklist for diagnosing silent PyTorch and Hugging Face performance cliffs on Google Cloud TPUs (torch_tpu).",
+      "tags": ["agent-skill", "pytorch", "cloud-tpu", "xla", "open-source"],
+      "representativeQueries": [
+        "debug slow PyTorch or LoRA training on Google Cloud TPU v5e or v6e",
+        "eliminate XLA recompiles and host syncs in torch_tpu"
+      ],
+      "auth": { "status": "none" },
+      "trustManifest": {
+        "identity": "did:web:jigyasa-grover.github.io",
+        "identityType": "did",
+        "provenance": {
+          "sourceRepository": "https://github.com/jigyasa-grover/TorchTPU-Doctor",
+          "publisher": "https://jigyasa-grover.github.io/#person"
+        }
+      }
+    },
+    {
+      "identifier": "urn:air:jigyasa-grover.github.io:doc:llms-txt",
+      "displayName": "llms.txt Navigation Index",
+      "type": "text/plain",
+      "url": "https://jigyasa-grover.github.io/llms.txt",
+      "description": "Curated LLM navigation index with when-to-use guidance, section indexes, and flagship full Markdown article twins.",
+      "tags": ["llms-txt", "documentation", "discovery"],
+      "auth": { "status": "none" },
+      "trustManifest": {
+        "identity": "did:web:jigyasa-grover.github.io",
+        "identityType": "did",
+        "provenance": {
+          "sourceRepository": "https://github.com/jigyasa-grover/jigyasa-grover.github.io",
+          "publisher": "https://jigyasa-grover.github.io/#person"
+        }
+      }
+    },
+    {
+      "identifier": "urn:air:jigyasa-grover.github.io:doc:agents-md",
+      "displayName": "agents.md Site Usage Guide",
+      "type": "text/markdown",
+      "url": "https://jigyasa-grover.github.io/agents.md",
+      "description": "Cold-start Markdown guide explaining how AI agents can read, cite, and interact with jigyasa-grover.github.io.",
+      "tags": ["agents-md", "markdown", "documentation"],
+      "auth": { "status": "none" },
+      "trustManifest": {
+        "identity": "did:web:jigyasa-grover.github.io",
+        "identityType": "did",
+        "provenance": {
+          "sourceRepository": "https://github.com/jigyasa-grover/jigyasa-grover.github.io",
+          "publisher": "https://jigyasa-grover.github.io/#person"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+---
+layout: null
+permalink: /about.md
+sitemap: false
+---
+---
+title: "About Jigyasa Grover — Canonical Biography, Career & Governance"
+description: "Canonical biography, phonetic pronunciation, production ML leadership at Uber, X, Meta & Faire, UC San Diego M.S. CS, Google gDAB, Google.org AI for Science Mentor, and Entity FAQ."
+canonical: "https://jigyasa-grover.github.io/about"
+last-updated: "2026-11-26"
+---
+
+# About Jigyasa Grover
+
+- **Pronunciation:** {{ site.data.identity.pronunciation }} (`{{ site.data.identity.pronunciation_ipa }}`)
+- **Entity ID:** `{{ site.data.identity.entity_id }}` · Google Knowledge Graph: https://g.co/kgs/Lvk5yk (MID: `/g/11nkd9r5jp`)
+- **Location:** {{ site.data.identity.location }}
+- **JSON API:** https://jigyasa-grover.github.io/api/v1/profile.json
+
+## Canonical Biography
+
+{{ site.data.identity.medium_bio_150 }}
+
+## Career Highlights
+
+{% for job in site.data.identity.career %}### {{ job.role }} — {{ job.org }} ({{ job.period }}, {{ job.location }})
+{{ job.summary }}
+{% for h in job.highlights %}- {{ h }}
+{% endfor %}
+{% endfor %}
+
+## Education
+
+{% for edu in site.data.identity.education %}- **{{ edu.degree }}**, {{ edu.institution }} ({{ edu.period }}): {{ edu.detail }}
+{% endfor %}
+
+## Ecosystem, Governance & Advisory Appointments
+
+{% for e in site.data.identity.ecosystem_roles %}- **{{ e.role }}** ({{ e.org }}): {{ e.detail }}
+{% endfor %}
+
+## Entity FAQ
+
+{% for item in site.data.faqs.about %}- **{{ item.q }}** {{ item.a }}
+{% endfor %}

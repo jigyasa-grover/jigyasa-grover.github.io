@@ -7,8 +7,15 @@
 # Well-Known LLM Mirror:     https://jigyasa-grover.github.io/.well-known/llms.txt
 # Full Entity & Bio Corpus:  https://jigyasa-grover.github.io/llms-full.txt
 # Structured WebMCP JSON:    https://jigyasa-grover.github.io/agent-context.json
+# Public OpenAPI 3.1 Spec:   https://jigyasa-grover.github.io/openapi.json
+# Agent & API Documentation: https://jigyasa-grover.github.io/docs/
+# ARD v1.0 Discovery Catalog:https://jigyasa-grover.github.io/.well-known/ard.json
+# AI Catalog Standard v1.0:  https://jigyasa-grover.github.io/.well-known/ai-catalog.json
+# RFC 9727 API Catalog:      https://jigyasa-grover.github.io/.well-known/api-catalog
+# Agent Skills v0.2.0 Index: https://jigyasa-grover.github.io/.well-known/agent-skills/index.json
 # A2A Discovery Card:        https://jigyasa-grover.github.io/.well-known/agent-card.json
 # WebMCP Discovery Manifest: https://jigyasa-grover.github.io/.well-known/mcp.json
+# NLWeb Schema Map:          https://jigyasa-grover.github.io/schemamap.xml
 # Technical Writing Feed:    https://jigyasa-grover.github.io/feed.xml
 # XML Sitemap Index:         https://jigyasa-grover.github.io/sitemap_index.xml
 #
@@ -84,7 +91,10 @@ Allow: /
 
 # 5. Default Fallback for All Other Compliant Crawlers & Autonomous Agents
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 Sitemap: https://jigyasa-grover.github.io/sitemap_index.xml
 Sitemap: https://jigyasa-grover.github.io/sitemap.xml
+schemamap: https://jigyasa-grover.github.io/schemamap.xml
+Agentmap: https://jigyasa-grover.github.io/.well-known/ard.json

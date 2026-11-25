@@ -1,4 +1,11 @@
-{% assign target_post = site.posts | where: "url", include.post_url | first %}{% assign m = site.data.posts_meta[include.post_url] %}{% assign body_partial = "post-md/" | append: include.slug | append: ".md" %}# {{ target_post.title }}
+{% assign target_post = site.posts | where: "url", include.post_url | first %}{% assign m = site.data.posts_meta[include.post_url] %}{% assign body_partial = "post-md/" | append: include.slug | append: ".md" %}---
+title: {{ target_post.title | jsonify }}
+description: {{ m.summary | default: target_post.title | jsonify }}
+canonical: "https://jigyasa-grover.github.io{{ include.post_url }}"
+last-updated: "{{ target_post.last_modified_at | default: target_post.date | date: '%Y-%m-%d' }}"
+---
+
+# {{ target_post.title }}
 
 - **Author:** Jigyasa Grover (https://jigyasa-grover.github.io/#person)
 - **Published:** {{ target_post.date | date: "%Y-%m-%d" }}{% if target_post.last_modified_at %}

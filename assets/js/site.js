@@ -793,7 +793,7 @@
     safeRegister({
       name: "get-gtm-and-marketing-kit",
       description:
-        "Retrieve Jigyasa Grover's AI Go-To-Market (GTM), developer marketing (DevRel), and B2B creator launch kit, including 80%+ senior technical buyer ICP metrics, distribution surfaces, launch bundles, verified AI launch campaigns, and Passionfroot/Naano/8x/LinkedIn Creator Marketplace/Intro booking URLs.",
+        "Retrieve Jigyasa Grover's AI Go-To-Market (GTM) and DevTools creator kit, including 80%+ senior buyer ICP metrics, launch bundles, proof links, and booking URLs.",
       annotations: { readOnlyHint: true },
       inputSchema: {
         type: "object",
@@ -829,7 +829,7 @@
           category: {
             type: "string",
             description:
-              "Optional topic category (all, agentic ai & evaluation, agentic infrastructure, fine-tuning & compute, personalization & ranking, data-centric ai, responsible ai & privacy, open source & python, early archive (2015–17))."
+              "Optional topic category (e.g., all, agentic ai, compute, ranking, data-centric ai, privacy, open source)."
           },
           limit: {
             type: "number",

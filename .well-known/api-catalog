@@ -1,0 +1,60 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://jigyasa-grover.github.io/api/v1/",
+      "service-desc": [
+        {
+          "href": "https://jigyasa-grover.github.io/openapi.json",
+          "type": "application/vnd.oai.openapi+json;version=3.1",
+          "title": "Jigyasa Grover Public Read-Only Agent API (OpenAPI 3.1.0)"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://jigyasa-grover.github.io/docs/",
+          "type": "text/html",
+          "title": "Agent & Public API Documentation"
+        },
+        {
+          "href": "https://jigyasa-grover.github.io/docs.md",
+          "type": "text/markdown",
+          "title": "Agent & Public API Documentation (Markdown)"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://jigyasa-grover.github.io/api/v1/index.json",
+          "type": "application/json",
+          "title": "API v1 Root Index & Status"
+        }
+      ],
+      "item": [
+        {
+          "href": "https://jigyasa-grover.github.io/openapi.json",
+          "type": "application/vnd.oai.openapi+json;version=3.1",
+          "title": "OpenAPI 3.1.0 Specification"
+        },
+        {
+          "href": "https://jigyasa-grover.github.io/api/v1/profile.json",
+          "type": "application/json",
+          "title": "Canonical Identity & Bio API"
+        },
+        {
+          "href": "https://jigyasa-grover.github.io/api/v1/collaboration.json",
+          "type": "application/json",
+          "title": "Collaboration, Advisory & GTM API"
+        },
+        {
+          "href": "https://jigyasa-grover.github.io/api/v1/articles.json",
+          "type": "application/json",
+          "title": "Technical Articles API"
+        },
+        {
+          "href": "https://jigyasa-grover.github.io/agent-context.json",
+          "type": "application/json",
+          "title": "Consolidated Agent Context JSON"
+        }
+      ]
+    }
+  ]
+}

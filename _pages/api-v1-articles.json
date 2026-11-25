@@ -1,0 +1,31 @@
+---
+layout: null
+permalink: /api/v1/articles.json
+sitemap: false
+---
+{% assign indexed_count = 0 %}{% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign indexed_count = indexed_count | plus: 1 %}{% endunless %}{% endfor %}{
+  "api_version": "1.0.0",
+  "feed_url": "{{ site.url }}/feed.xml",
+  "archive_index_url": "{{ site.url }}/archive/",
+  "pagination": {
+    "total": {{ indexed_count }},
+    "limit": {{ indexed_count }},
+    "has_more": false,
+    "next_cursor": null
+  },
+  "items": [
+    {% assign emitted = false %}{% for post in site.posts %}{% unless post.url == "/archive/" or post.archival %}{% assign meta = site.data.posts_meta[post.url] %}{% assign cat_name = meta.category | default: "AI Engineering" %}{% if emitted %},
+    {% endif %}{% assign emitted = true %}{
+      "title": {{ post.title | jsonify }},
+      "seo_title": {{ meta.seo_title | default: post.title | jsonify }},
+      "url": {{ site.url | append: post.url | jsonify }},
+      "path": {{ post.url | jsonify }},
+      {% if meta and meta.md_url %}"markdown_url": {{ site.url | append: meta.md_url | jsonify }},
+      {% endif %}"date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+      {% if post.last_modified_at %}"last_modified": {{ post.last_modified_at | date: "%Y-%m-%d" | jsonify }},
+      {% endif %}"category": {{ cat_name | jsonify }},
+      "summary": {{ meta.summary | default: "" | jsonify }},
+      "tags": {{ meta.tags | default: empty | jsonify }}
+    }{% endunless %}{% endfor %}
+  ]
+}

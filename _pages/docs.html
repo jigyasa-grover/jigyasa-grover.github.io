@@ -1,0 +1,207 @@
+---
+layout: page
+title: "Agent & Public API Docs"
+heading: "Agent & Public Read-Only API Documentation"
+eyebrow: "Developers & Autonomous Agents · OpenAPI 3.1 · WebMCP · ARD"
+lead: "Free, unauthenticated, read-only JSON and Markdown endpoints exposing Jigyasa Grover's canonical biography, speaker kit, technical essays, projects, courses, and collaboration channels."
+hero_cta_label: "Open OpenAPI 3.1 Spec →"
+hero_cta_url: "/openapi.json"
+seo_title: "Jigyasa Grover — Agent & Public API Documentation"
+description: "Public read-only JSON APIs, OpenAPI 3.1 spec, ARD & AI Catalog discovery, W3C WebMCP browser tools, Agent Skills, and Markdown docs for jigyasa-grover.github.io."
+last_modified_at: 2026-11-26
+permalink: /docs/
+redirect_from:
+  - /api/
+  - /developers/
+---
+
+<section class="content-section" aria-labelledby="quickstart-heading">
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Zero-Auth Read-Only API &amp; Free Sandbox</div>
+      <h2 id="quickstart-heading">Authentication, base URL &amp; quickstart</h2>
+    </div>
+    <a class="section-header__link" href="/docs.md">Read this page in Markdown (.md) →</a>
+  </div>
+
+  <div class="callout-strip mb-lg">
+    <div class="eyebrow mb-xs">Authentication &amp; Sandbox Policy</div>
+    <p class="mb-0">
+      <strong>Authentication:</strong> None required (public read-only HTTPS <code>GET</code> endpoints, CORS-enabled, <strong>$0 / Free</strong> with no API key or account signup).
+      <strong>Sandbox &amp; Safe Testing:</strong> Every endpoint under <code>/api/v1/</code> is an idempotent static JSON document served over GitHub Pages CDN, making all live endpoints safe for automated agent evaluation and testing without side effects.
+    </p>
+  </div>
+
+  <div class="project-grid">
+    <article class="project-dossier">
+      <div>
+        <div class="project-dossier__meta"><span>cURL · REST JSON</span><span>v1.0.0</span></div>
+        <h3 class="project-dossier__title project-dossier__title--md">Fetch canonical profile &amp; API index</h3>
+        <pre><code>curl -s https://jigyasa-grover.github.io/api/v1/index.json | jq .
+curl -s https://jigyasa-grover.github.io/api/v1/profile.json | jq '{name, current_role, short_bio_50}'</code></pre>
+      </div>
+      <div class="dossier-links">
+        <a href="/api/v1/index.json">api/v1/index.json →</a>
+        <a href="/openapi.json">openapi.json →</a>
+      </div>
+    </article>
+
+    <article class="project-dossier">
+      <div>
+        <div class="project-dossier__meta"><span>cURL · Markdown &amp; Agent Discovery</span><span>Zero Scrape</span></div>
+        <h3 class="project-dossier__title project-dossier__title--md">Fetch Markdown twins &amp; ARD catalog</h3>
+        <pre><code>curl -s https://jigyasa-grover.github.io/.well-known/ard.json | jq .
+curl -s https://jigyasa-grover.github.io/TorchTPUDoctor/index.md | head -n 30</code></pre>
+      </div>
+      <div class="dossier-links">
+        <a href="/.well-known/ard.json">ard.json →</a>
+        <a href="/llms.txt">llms.txt →</a>
+        <a href="/agents.md">agents.md →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="content-section--bordered" aria-labelledby="endpoints-heading">
+  <div class="eyebrow">REST JSON Reference · Base URL: https://jigyasa-grover.github.io</div>
+  <h2 id="endpoints-heading" class="mb-md">Public read-only JSON endpoints</h2>
+  <p class="section-lead">
+    All endpoints return UTF-8 <code>application/json</code> and are generated directly from the repository's canonical <code>_data/*.yml</code> single source of truth so HTML pages, JSON-LD, Markdown twins, and REST responses never drift.
+  </p>
+
+  <div class="table-wrap">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th scope="col">Method &amp; Path</th>
+          <th scope="col">operationId</th>
+          <th scope="col">Payload &amp; Best Use Case</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>GET</code> <a href="/api/v1/index.json">/api/v1/index.json</a></td>
+          <td><code>getApiIndex</code></td>
+          <td>API root metadata, versioning policy, endpoint map, and agent discovery pointers.</td>
+        </tr>
+        <tr>
+          <td><code>GET</code> <a href="/api/v1/profile.json">/api/v1/profile.json</a></td>
+          <td><code>getProfile</code></td>
+          <td>Canonical <code>#person</code> entity, 50-word &amp; 150-word speaker bios, pronunciation, career, education, 14x awards, and press photos.</td>
+        </tr>
+        <tr>
+          <td><code>GET</code> <a href="/api/v1/collaboration.json">/api/v1/collaboration.json</a></td>
+          <td><code>getCollaborationCatalog</code></td>
+          <td>Six collaboration pillars, Intro/Passionfroot/Naano/8x booking links, AI GTM launch packages, ICP metrics, buyer comparisons, and FAQs.</td>
+        </tr>
+        <tr>
+          <td><code>GET</code> <a href="/api/v1/articles.json">/api/v1/articles.json</a></td>
+          <td><code>listTechnicalArticles</code></td>
+          <td>34 indexed technical AI/ML/TPU articles with pagination metadata, summaries, tags, and full Markdown twin URLs.</td>
+        </tr>
+        <tr>
+          <td><code>GET</code> <a href="/api/v1/speaking.json">/api/v1/speaking.json</a></td>
+          <td><code>getSpeakingCatalog</code></td>
+          <td>Google I/O keynote highlight, signature talk abstracts, global conference appearances, and 21-country footprint.</td>
+        </tr>
+        <tr>
+          <td><code>GET</code> <a href="/api/v1/publications.json">/api/v1/publications.json</a></td>
+          <td><code>getPublications</code></td>
+          <td><em>Sculpting Data for ML</em> ISBNs &amp; citations, Cornell Tech syllabus, 8 reviewed books, and SSRN/Springer/ACM papers.</td>
+        </tr>
+        <tr>
+          <td><code>GET</code> <a href="/api/v1/projects.json">/api/v1/projects.json</a></td>
+          <td><code>listProjects</code></td>
+          <td>Original AI systems (TorchTPU Doctor, Proof of Work, ADK agents), GitHub stats, and upstream Hugging Face <code>peft</code> PR.</td>
+        </tr>
+        <tr>
+          <td><code>GET</code> <a href="/api/v1/courses.json">/api/v1/courses.json</a></td>
+          <td><code>getCoursesAndWorkshops</code></td>
+          <td>4 LinkedIn Learning courses (~45K learners), 4 live corporate AI workshops, 6 capability domains, and enterprise clients.</td>
+        </tr>
+        <tr>
+          <td><code>GET</code> <a href="/agent-context.json">/agent-context.json</a></td>
+          <td><code>getFullAgentContext</code></td>
+          <td>Consolidated single-fetch JSON bundle combining identity, collaboration, speaking, publications, projects, videos, FAQs, and articles.</td>
+        </tr>
+        <tr>
+          <td><code>GET</code> <a href="/assets/data/cinema-catalog.json">/assets/data/cinema-catalog.json</a></td>
+          <td><code>getVideoCatalog</code></td>
+          <td>Structured Screening Room catalog of 50+ developer films, talks, playlists, and 9:16 vertical Shorts.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="content-section--bordered" aria-labelledby="discovery-heading">
+  <div class="eyebrow">Open Standards &amp; Machine-Readable Manifests</div>
+  <h2 id="discovery-heading" class="mb-lg">Agent discovery, skills &amp; Markdown surfaces</h2>
+
+  <div class="project-grid">
+    <article class="project-dossier">
+      <div>
+        <div class="project-dossier__meta"><span>Discovery Catalogs</span><span>ARD · AI Catalog · RFC 9727</span></div>
+        <h3 class="project-dossier__title project-dossier__title--md">Standard .well-known endpoints</h3>
+        <ul class="detail-list">
+          <li><a href="/.well-known/ard.json">/.well-known/ard.json</a>: Agentic Resource Discovery catalog (v1.0) with <code>did:web</code> trust metadata.</li>
+          <li><a href="/.well-known/ai-catalog.json">/.well-known/ai-catalog.json</a>: AI Catalog Standard (v1.0) with <code>trustManifests</code> provenance.</li>
+          <li><a href="/.well-known/api-catalog">/.well-known/api-catalog</a>: RFC 9727 linkset pointing to OpenAPI 3.1 and documentation.</li>
+          <li><a href="/.well-known/agent-card.json">/.well-known/agent-card.json</a>: Read-only A2A v0.3.0 Agent Card.</li>
+          <li><a href="/schemamap.xml">/schemamap.xml</a> &amp; <a href="/feeds/schema-items.jsonl">/feeds/schema-items.jsonl</a>: NLWeb Schema Map &amp; JSONL feed.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project-dossier">
+      <div>
+        <div class="project-dossier__meta"><span>Portable Skills &amp; Browser Tools</span><span>v0.2.0 · W3C WebMCP</span></div>
+        <h3 class="project-dossier__title project-dossier__title--md">Agent Skills &amp; WebMCP tools</h3>
+        <ul class="detail-list">
+          <li><a href="/.well-known/agent-skills/index.json">/.well-known/agent-skills/index.json</a>: v0.2.0 Agent Skills index with verified SHA-256 digests.</li>
+          <li><a href="/.well-known/agent-skills/jigyasa-grover/SKILL.md">jigyasa-grover SKILL.md</a>: Site query, speaker kit, and collaboration routing skill.</li>
+          <li><a href="/.well-known/agent-skills/torchtpu-doctor/SKILL.md">torchtpu-doctor SKILL.md</a>: Cloud TPU PyTorch performance diagnostics skill.</li>
+          <li><a href="/.well-known/mcp.json">/.well-known/mcp.json</a>: W3C WebMCP <code>document.modelContext</code> manifest (7 read-only imperative tools + 1 human-reviewed declarative inquiry form).</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project-dossier">
+      <div>
+        <div class="project-dossier__meta"><span>LLM Context &amp; Markdown Twins</span><span>YAML Frontmatter</span></div>
+        <h3 class="project-dossier__title project-dossier__title--md">Zero-scrape Markdown navigation</h3>
+        <ul class="detail-list">
+          <li>Root indexes: <a href="/llms.txt">/llms.txt</a>, <a href="/llms-full.txt">/llms-full.txt</a>, <a href="/agents.md">/agents.md</a>, <a href="/index.md">/index.md</a>, and <a href="/pricing.md">/pricing.md</a>.</li>
+          <li>Modular section indexes: <a href="/docs/llms.txt">/docs/llms.txt</a>, <a href="/blog/llms.txt">/blog/llms.txt</a>, <a href="/projects/llms.txt">/projects/llms.txt</a>, <a href="/speaking/llms.txt">/speaking/llms.txt</a>, <a href="/advisory/llms.txt">/advisory/llms.txt</a>, <a href="/teaching/llms.txt">/teaching/llms.txt</a>, <a href="/partnerships/llms.txt">/partnerships/llms.txt</a>.</li>
+          <li>Full-text Markdown twins for core pages (<code>/about.md</code>, <code>/speaking.md</code>, etc.) and 10 flagship engineering essays.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project-dossier">
+      <div>
+        <div class="project-dossier__meta"><span>Open-Source Repository</span><span>AGENTS.md · plugin.json</span></div>
+        <h3 class="project-dossier__title project-dossier__title--md">Source repo, agent rules &amp; plugin manifest</h3>
+        <p class="project-dossier__summary">
+          The entire static site, automated audit suite, coding-agent maintainer rules (<code>AGENTS.md</code> and <code>CLAUDE.md</code>), and Agent Plugins v1.0.0 manifest (<code>plugin.json</code>) are open source on GitHub.
+        </p>
+      </div>
+      <div class="dossier-links">
+        <a href="https://github.com/jigyasa-grover/jigyasa-grover.github.io" target="_blank" rel="noopener">Site Repository ↗</a>
+        <a href="https://github.com/jigyasa-grover" target="_blank" rel="noopener">GitHub Profile ↗</a>
+        <a href="https://github.com/jigyasa-grover/TorchTPU-Doctor" target="_blank" rel="noopener">TorchTPU Doctor ↗</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="versioning" class="content-section--bordered content-section--last" aria-labelledby="versioning-heading">
+  <div class="eyebrow">Contract Stability &amp; Error Handling</div>
+  <h2 id="versioning-heading" class="mb-sm">Versioning, deprecation &amp; error recovery</h2>
+  <p>
+    Endpoints under <code>/api/v1/</code> follow Semantic Versioning (currently <code>1.0.0</code>). Additive properties may be introduced without breaking clients; any breaking schema change will be released under <code>/api/v2/</code> while keeping <code>/api/v1/</code> live for at least 90 days with a deprecation notice in <code>/openapi.json</code> and on this page.
+  </p>
+  <p class="mb-0">
+    All endpoints are served statically over HTTPS by GitHub Pages. Missing paths return HTTP <code>404</code>; agents encountering a <code>404</code> should re-discover valid paths from <a href="/openapi.json">/openapi.json</a>, <a href="/api/v1/index.json">/api/v1/index.json</a>, or <a href="/llms.txt">/llms.txt</a>. For collaboration questions, see <a href="/pricing/">Engagement Modes &amp; Pricing</a> or <a href="/work-with-me/">Work With Me</a>.
+  </p>
+</section>

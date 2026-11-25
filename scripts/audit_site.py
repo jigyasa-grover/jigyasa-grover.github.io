@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Automated build, route, link, SEO, JSON-LD & GEO audit for jigyasa-grover.github.io."""
 
+import hashlib
 import json
 import os
 import re
@@ -84,6 +85,12 @@ EXPECTED_ROUTES = [
     "/links/",
     "/bio/",
     "/qr/",
+    "/docs/",
+    "/api/",
+    "/developers/",
+    "/pricing/",
+    "/privacy/",
+    "/privacy-policy/",
     "/assets/images/og-card.jpg",
     "/assets/images/links-qr.svg",
     "/assets/css/style.css",
@@ -93,12 +100,52 @@ EXPECTED_ROUTES = [
     "/sitemap.xml",
     "/sitemap_index.xml",
     "/video-sitemap.xml",
+    "/schemamap.xml",
+    "/feeds/schema-items.jsonl",
     "/feed.xml",
     "/llms.txt",
+    "/llms.md",
+    "/agents.md",
+    "/index.md",
+    "/about.md",
+    "/work-with-me.md",
+    "/speaking.md",
+    "/teaching.md",
+    "/advisory.md",
+    "/partnerships.md",
+    "/projects.md",
+    "/publications.md",
+    "/press.md",
+    "/docs.md",
+    "/blog.md",
+    "/pricing.md",
+    "/privacy.md",
+    "/docs/llms.txt",
+    "/blog/llms.txt",
+    "/projects/llms.txt",
+    "/speaking/llms.txt",
+    "/advisory/llms.txt",
+    "/teaching/llms.txt",
+    "/partnerships/llms.txt",
     "/.well-known/llms.txt",
+    "/.well-known/ard.json",
+    "/.well-known/ai-catalog.json",
+    "/.well-known/api-catalog",
+    "/.well-known/agent-skills/index.json",
+    "/.well-known/agent-skills/jigyasa-grover/SKILL.md",
+    "/.well-known/agent-skills/torchtpu-doctor/SKILL.md",
     "/.well-known/agent-card.json",
     "/.well-known/agent.json",
     "/.well-known/mcp.json",
+    "/openapi.json",
+    "/api/v1/index.json",
+    "/api/v1/profile.json",
+    "/api/v1/collaboration.json",
+    "/api/v1/articles.json",
+    "/api/v1/speaking.json",
+    "/api/v1/publications.json",
+    "/api/v1/projects.json",
+    "/api/v1/courses.json",
     "/llms-full.txt",
     "/agent-context.json",
     "/TorchTPUDoctor/index.md",
@@ -126,6 +173,7 @@ FORBIDDEN_IN_SITE = [
     "Makefile",
     "Gemfile",
     "Gemfile.lock",
+    "plugin.json",
     "scripts",
 ]
 
@@ -239,13 +287,14 @@ def main() -> None:
         if not route_exists(route):
             errors.append(f"MISSING EXPECTED ROUTE: {route}")
 
-    # 2. Ensure repo maintainer files did not leak into _site/
+    # 2. Ensure repo maintainer files did not leak into _site/ (case-exact check for macOS APFS vs Linux)
+    site_root_names = {p.name for p in SITE_DIR.iterdir()}
     for item in FORBIDDEN_IN_SITE:
-        if (SITE_DIR / item).exists():
+        if item in site_root_names:
             errors.append(f"FORBIDDEN REPO FILE LEAKED INTO _site/: {item}")
 
     # 3. Validate XML feeds
-    for xml_file in ("sitemap.xml", "sitemap_index.xml", "video-sitemap.xml", "feed.xml"):
+    for xml_file in ("sitemap.xml", "sitemap_index.xml", "video-sitemap.xml", "schemamap.xml", "feed.xml"):
         xml_path = SITE_DIR / xml_file
         if xml_path.is_file():
             raw_bytes = xml_path.read_bytes()
@@ -301,6 +350,13 @@ def main() -> None:
                     errors.append(f"INVALID PATH '{val}' in robots.txt:{lineno}")
             elif fl == "sitemap":
                 seen_sitemaps.append(val)
+            elif fl == "content-signal":
+                if not in_group:
+                    errors.append(f"ORPHAN {field} BEFORE User-agent in robots.txt:{lineno}")
+                saw_rule_in_group = True
+            elif fl in ("schemamap", "agentmap"):
+                if not val.startswith("https://jigyasa-grover.github.io/"):
+                    errors.append(f"INVALID {field} URL '{val}' in robots.txt:{lineno}")
             else:
                 errors.append(f"NON-RFC-9309 DIRECTIVE '{field}' in robots.txt:{lineno}")
         for req_agent in (
@@ -487,6 +543,9 @@ def main() -> None:
             "/teaching/index.html",
             "/work-with-me/index.html",
             "/links/index.html",
+            "/docs/index.html",
+            "/pricing/index.html",
+            "/privacy/index.html",
         }
         is_post = rel_path not in standalone_paths
         if not is_post and "rishabhmisra" in raw.lower():
@@ -657,7 +716,24 @@ def main() -> None:
         except Exception as exc:
             errors.append(f"INVALID JSON in /agent-context.json: {exc}")
 
-    for wk_json in (".well-known/agent-card.json", ".well-known/agent.json", ".well-known/mcp.json"):
+    for wk_json in (
+        ".well-known/agent-card.json",
+        ".well-known/agent.json",
+        ".well-known/mcp.json",
+        ".well-known/ard.json",
+        ".well-known/ai-catalog.json",
+        ".well-known/api-catalog",
+        ".well-known/agent-skills/index.json",
+        "openapi.json",
+        "api/v1/index.json",
+        "api/v1/profile.json",
+        "api/v1/collaboration.json",
+        "api/v1/articles.json",
+        "api/v1/speaking.json",
+        "api/v1/publications.json",
+        "api/v1/projects.json",
+        "api/v1/courses.json",
+    ):
         wk_path = SITE_DIR / wk_json
         if wk_path.is_file():
             try:
@@ -666,6 +742,127 @@ def main() -> None:
                     errors.append(f"EXPECTED JSON OBJECT in /{wk_json}")
             except Exception as exc:
                 errors.append(f"INVALID JSON in /{wk_json}: {exc}")
+
+    # 7b. Verify ARD, AI Catalog, Agent Skills v0.2.0 SHA-256 digests, OpenAPI 3.1 live paths, NLWeb JSONL & plugin.json
+    ard_path = SITE_DIR / ".well-known" / "ard.json"
+    if ard_path.is_file():
+        ard_doc = json.loads(ard_path.read_text(encoding="utf-8"))
+        for entry in ard_doc.get("entries", []):
+            if not str(entry.get("identifier", "")).startswith("urn:air:jigyasa-grover.github.io:"):
+                errors.append(f"INVALID ARD URN: {entry.get('identifier')}")
+            if bool(entry.get("url")) == bool(entry.get("data")):
+                errors.append(f"ARD ENTRY MUST SET EXACTLY ONE OF url OR data: {entry.get('identifier')}")
+            e_url = entry.get("url", "")
+            if e_url.startswith("https://jigyasa-grover.github.io/"):
+                if not route_exists(urlparse(e_url).path):
+                    errors.append(f"BROKEN ARD ENTRY URL: {e_url}")
+            if not entry.get("trustManifest", {}).get("identity"):
+                errors.append(f"ARD ENTRY MISSING trustManifest.identity: {entry.get('identifier')}")
+
+    aicat_path = SITE_DIR / ".well-known" / "ai-catalog.json"
+    if aicat_path.is_file():
+        aicat_doc = json.loads(aicat_path.read_text(encoding="utf-8"))
+        if aicat_doc.get("specVersion") != "1.0":
+            errors.append("MISSING specVersion '1.0' in /.well-known/ai-catalog.json")
+        for entry in aicat_doc.get("entries", []):
+            if "trustManifest" in entry:
+                errors.append(f"AI-CATALOG MUST USE trustManifests ARRAY (NOT singular trustManifest): {entry.get('identifier')}")
+            if not entry.get("trustManifests"):
+                errors.append(f"AI-CATALOG ENTRY MISSING trustManifests: {entry.get('identifier')}")
+
+    skills_idx_path = SITE_DIR / ".well-known" / "agent-skills" / "index.json"
+    if skills_idx_path.is_file():
+        sidx = json.loads(skills_idx_path.read_text(encoding="utf-8"))
+        if sidx.get("$schema") != "https://schemas.agentskills.io/discovery/0.2.0/schema.json":
+            errors.append("INVALID $schema in /.well-known/agent-skills/index.json")
+        for sk in sidx.get("skills", []):
+            sk_url = sk.get("url", "")
+            sk_file = SITE_DIR / sk_url.lstrip("/")
+            if not sk_file.is_file():
+                errors.append(f"MISSING AGENT SKILL ARTIFACT: {sk_url}")
+            else:
+                raw_sk = sk_file.read_bytes()
+                expected_digest = "sha256:" + hashlib.sha256(raw_sk).hexdigest()
+                if sk.get("digest") != expected_digest:
+                    errors.append(f"AGENT SKILL DIGEST MISMATCH for {sk_url}: got {sk.get('digest')}, expected {expected_digest}")
+                sk_txt = raw_sk.decode("utf-8", errors="replace")
+                if not sk_txt.startswith("---\n"):
+                    errors.append(f"AGENT SKILL MISSING RAW YAML FRONTMATTER: {sk_url}")
+
+    openapi_path = SITE_DIR / "openapi.json"
+    if openapi_path.is_file():
+        oa = json.loads(openapi_path.read_text(encoding="utf-8"))
+        if not str(oa.get("openapi", "")).startswith("3.1"):
+            errors.append("OPENAPI SPEC MUST BE 3.1.x in /openapi.json")
+        seen_op_ids = set()
+        for oa_path, path_item in oa.get("paths", {}).items():
+            if not route_exists(oa_path):
+                errors.append(f"OPENAPI DECLARED PATH NOT FOUND IN _site/: {oa_path}")
+            for meth, op in path_item.items():
+                if isinstance(op, dict) and meth.lower() in ("get", "post", "put", "patch", "delete"):
+                    op_id = op.get("operationId")
+                    if not op_id:
+                        errors.append(f"MISSING operationId on {meth.upper()} {oa_path}")
+                    elif op_id in seen_op_ids:
+                        errors.append(f"DUPLICATE operationId '{op_id}' in /openapi.json")
+                    else:
+                        seen_op_ids.add(op_id)
+
+    jsonl_path = SITE_DIR / "feeds" / "schema-items.jsonl"
+    if jsonl_path.is_file():
+        for lineno, jline in enumerate(jsonl_path.read_text(encoding="utf-8").splitlines(), 1):
+            if not jline.strip():
+                continue
+            try:
+                obj = json.loads(jline)
+                if "@type" not in obj:
+                    errors.append(f"MISSING @type in /feeds/schema-items.jsonl:{lineno}")
+            except Exception as exc:
+                errors.append(f"INVALID JSONL in /feeds/schema-items.jsonl:{lineno}: {exc}")
+
+    plugin_path = REPO_ROOT / "plugin.json"
+    if not plugin_path.is_file():
+        errors.append("MISSING ROOT plugin.json (Agent Plugins v1.0.0 manifest)")
+    else:
+        try:
+            pdoc = json.loads(plugin_path.read_text(encoding="utf-8"))
+            allowed_keys = {"$schema", "name", "version", "description", "author", "homepage", "repository", "license", "keywords", "extensions"}
+            extra_keys = set(pdoc.keys()) - allowed_keys
+            if extra_keys:
+                errors.append(f"DISALLOWED TOP-LEVEL KEYS IN plugin.json: {sorted(extra_keys)}")
+            if pdoc.get("$schema") != "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json":
+                errors.append("INVALID $schema in plugin.json")
+        except Exception as exc:
+            errors.append(f"INVALID JSON in plugin.json: {exc}")
+
+    for md_core in (
+        "index.md",
+        "agents.md",
+        "llms.md",
+        "pricing.md",
+        "docs.md",
+        "about.md",
+        "work-with-me.md",
+        "speaking.md",
+        "teaching.md",
+        "advisory.md",
+        "partnerships.md",
+        "projects.md",
+        "publications.md",
+        "press.md",
+        "blog.md",
+        "privacy.md",
+    ):
+        mp = SITE_DIR / md_core
+        if mp.is_file():
+            mtxt = mp.read_text(encoding="utf-8")
+            if not mtxt.startswith("---\n") or "title:" not in mtxt[:600] or "canonical:" not in mtxt[:600]:
+                errors.append(f"MISSING YAML FRONTMATTER METADATA IN /{md_core}")
+            if "{{" in mtxt or "{%" in mtxt:
+                errors.append(f"UNRENDERED LIQUID IN /{md_core}")
+            fence_count = sum(1 for ln in mtxt.splitlines() if ln.strip().startswith("```"))
+            if fence_count % 2 != 0:
+                errors.append(f"UNCLOSED CODE FENCE IN /{md_core}")
 
     for md_rel in (
         "TorchTPUDoctor/index.md",
@@ -682,8 +879,13 @@ def main() -> None:
         md_path = SITE_DIR / md_rel
         if md_path.is_file():
             md_txt = md_path.read_text(encoding="utf-8")
+            if not md_txt.startswith("---\n") or "canonical:" not in md_txt[:600]:
+                errors.append(f"MISSING YAML FRONTMATTER IN /{md_rel}")
             if "{%" in md_txt or len(md_txt.strip()) < 1500:
                 errors.append(f"INVALID OR SHORT FULL MARKDOWN TWIN: /{md_rel} ({len(md_txt.strip())} B)")
+            fence_count = sum(1 for ln in md_txt.splitlines() if ln.strip().startswith("```"))
+            if fence_count % 2 != 0:
+                errors.append(f"UNCLOSED CODE FENCE IN /{md_rel}")
 
     site_js_path = SITE_DIR / "assets" / "js" / "site.js"
     if site_js_path.is_file():

@@ -1,0 +1,35 @@
+---
+layout: null
+permalink: /partnerships.md
+sitemap: false
+---
+---
+title: "AI Go-To-Market (GTM), Developer Marketing & Brand Partnerships — Jigyasa Grover"
+description: "Practitioner-led AI DevTool creator campaigns, runnable GitHub demos, GEO/SEO technical essays, and 9:16 creator video reaching an 80%+ senior technical buyer ICP."
+canonical: "https://jigyasa-grover.github.io/partnerships/"
+last-updated: "2026-11-26"
+---
+
+# {{ site.data.partnerships.gtm_positioning.headline }}
+
+{{ site.data.partnerships.gtm_positioning.summary }}
+
+- **Target Buyer ICP:** {{ site.data.partnerships.gtm_positioning.target_icp }}
+- **Storefronts:** Passionfroot ({{ site.data.identity.booking.passionfroot.url }}) · Naano ({{ site.data.identity.booking.naano.url }}) · 8x ({{ site.data.identity.booking.eightx.url }})
+- **Creator & Hardware PR Media Kit:** https://jigyasa-grover.github.io/media-kit/
+- **JSON API:** https://jigyasa-grover.github.io/api/v1/collaboration.json
+
+## Verified Reach & Distribution Surfaces
+
+{% for r in site.data.partnerships.gtm_positioning.reach_metrics %}- {{ r }}
+{% endfor %}
+
+{% for s in site.data.partnerships.surfaces %}### {{ s.number }}. {{ s.channel }} ({{ s.stat }})
+{{ s.summary }}
+- **Best for:** {{ s.best_for }}
+{% endfor %}
+
+## Selected AI Launch Highlights
+
+{% for h in site.data.partnerships.gtm_positioning.verified_launch_highlights %}- **{{ h.partner }}:** {{ h.campaign }} — {{ h.url }}
+{% endfor %}

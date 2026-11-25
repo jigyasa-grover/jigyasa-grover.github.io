@@ -1,0 +1,20 @@
+---
+layout: null
+permalink: /privacy.md
+sitemap: false
+---
+---
+title: "Privacy Policy — Jigyasa Grover"
+description: "Plain-English privacy policy for jigyasa-grover.github.io covering static GitHub Pages hosting, GA4 analytics, local theme storage, and voluntary inquiries."
+canonical: "https://jigyasa-grover.github.io/privacy/"
+last-updated: "2026-11-26"
+---
+
+# Privacy Policy — jigyasa-grover.github.io
+
+`https://jigyasa-grover.github.io/` is a static personal website hosted on GitHub Pages over HTTPS with no user accounts, login walls, third-party ad networks, or data-broker tracking.
+
+- **Analytics:** Aggregate traffic and engagement measurement via Google Analytics 4 (`G-GC9TNKJ6GT`); no contact form content or personally identifiable inquiry details are logged to analytics.
+- **Local Preferences:** Optional light/dark theme preference stored locally in `localStorage` (`jg-theme`); aggregate session referrer stored temporarily in `sessionStorage`.
+- **Voluntary Inquiries:** The direct contact form prepares an explicit email draft to `grover.jigyasa2@gmail.com`. Bookings made on Intro, Passionfroot, Naano, or 8x are governed by those platforms' respective privacy policies.
+- **Contact:** Jigyasa Grover (`grover.jigyasa2@gmail.com`) — https://jigyasa-grover.github.io/work-with-me/

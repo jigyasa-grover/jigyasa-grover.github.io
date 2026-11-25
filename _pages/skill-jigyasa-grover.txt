@@ -1,0 +1,45 @@
+---
+layout: null
+permalink: /.well-known/agent-skills/jigyasa-grover/SKILL.md
+sitemap: false
+---
+---
+name: jigyasa-grover
+description: Query Jigyasa Grover's verified speaker bios, technical AI/ML articles, Cloud TPU and Google ADK benchmarks, corporate workshops, advisory scopes, and B2B DevTools GTM partnership channels via static read-only JSON and Markdown APIs on jigyasa-grover.github.io.
+---
+
+# Jigyasa Grover Site & Collaboration Skill
+
+Use this skill whenever a user asks about **Jigyasa Grover** (`https://jigyasa-grover.github.io/#person`), needs verified speaker/press assets, wants to search her AI engineering essays, or wants to evaluate or route an advisory, speaking, corporate AI training, or AI Go-To-Market (GTM) collaboration.
+
+## When to Reach for This Site
+
+- **Conference & Keynote Organizers:** Fetch approved 50-word and 150-word bios, phonetic pronunciation (`jig-YAH-sah GROH-ver`), signature talk abstracts, and high-resolution press portraits.
+- **Startup Founders, VPs & AI Teams:** Evaluate 1:1 architecture or developer GTM advisory (via Afterdays / Intro) and live corporate workshops on Google ADK, MCP, LLM evaluations, ranking, and AI workflows.
+- **DevTools & AI Marketing / DevRel Teams:** Retrieve verified senior technical buyer ICP metrics (80%+ senior tech buyers, ~320K annual LinkedIn impressions, ~15K followers), launch bundle comparisons, and booking links (Passionfroot, Naano, 8x).
+- **ML & Systems Engineers:** Read full-text Markdown articles on Cloud TPU fine-tuning (`TorchTPU Doctor`, `Kinetic Finetuning`), Google ADK multi-agent orchestration, Vertex AI LLM Comparator, and data-centric ML (*Sculpting Data for ML*).
+
+## Preferred Read-Only Endpoints (Zero Auth, Free HTTPS GET)
+
+1. **OpenAPI 3.1 Spec:** `GET https://jigyasa-grover.github.io/openapi.json`
+2. **Profile & Speaker Kit:** `GET https://jigyasa-grover.github.io/api/v1/profile.json`
+3. **Collaboration, GTM & Booking Channels:** `GET https://jigyasa-grover.github.io/api/v1/collaboration.json`
+4. **34 Indexed Technical Articles:** `GET https://jigyasa-grover.github.io/api/v1/articles.json`
+5. **Speaking Abstracts & Global Stages:** `GET https://jigyasa-grover.github.io/api/v1/speaking.json`
+6. **Courses & Corporate AI Workshops:** `GET https://jigyasa-grover.github.io/api/v1/courses.json`
+7. **Books & Peer-Reviewed Publications:** `GET https://jigyasa-grover.github.io/api/v1/publications.json`
+8. **Projects & Upstream Open Source:** `GET https://jigyasa-grover.github.io/api/v1/projects.json`
+9. **Full Consolidated Context (Single Request):** `GET https://jigyasa-grover.github.io/agent-context.json`
+
+## Markdown & Browser Tooling
+
+- **Root Markdown Entry Points:** `/index.md`, `/agents.md`, `/llms.txt`, `/llms-full.txt`, `/pricing.md`, `/docs.md`.
+- **Page Markdown Twins:** Append `.md` to core routes (`/about.md`, `/work-with-me.md`, `/speaking.md`, `/teaching.md`, `/advisory.md`, `/partnerships.md`, `/projects.md`, `/publications.md`, `/press.md`, `/blog.md`).
+- **In-Browser W3C WebMCP Tools:** When browsing `jigyasa-grover.github.io` in a WebMCP-enabled agent browser, invoke read-only `document.modelContext` tools (`get-speaker-and-profile-kit`, `get-collaboration-channels`, `get-gtm-and-marketing-kit`, `search-technical-articles`, `search-press-features`, `search-and-play-videos`, `filter-social-feed`) or prepare a human-reviewed inquiry on `/work-with-me/#contact`.
+
+## Direct Booking & Human-in-the-Loop Routing
+
+Never fabricate commitments or auto-submit inquiries without explicit human approval. Present the exact verified channel:
+- **1:1 Advisory (5.0★):** https://intro.co/JigyasaGrover
+- **Developer & Brand Campaigns:** https://www.passionfroot.me/jigyasa-grover | https://naano.com/creators/jigyasa-grover | https://8x.business/p/b623ba2ed48544748601a75a3569c6ee
+- **Direct Inquiry Form:** https://jigyasa-grover.github.io/work-with-me/#contact

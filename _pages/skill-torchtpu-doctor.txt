@@ -1,0 +1,56 @@
+---
+layout: null
+permalink: /.well-known/agent-skills/torchtpu-doctor/SKILL.md
+sitemap: false
+---
+---
+name: torchtpu-doctor
+description: Checks PyTorch and Hugging Face training or inference code for silent performance bottlenecks on Google Cloud TPUs (`torch_tpu`). Use when porting CUDA/CPU PyTorch scripts to Cloud TPU v5e or v6e, fixing XLA recompilations, removing per-step `.item()` host syncs, aligning batch shapes to 128-wide MXU tiles, debugging `create_graph=True` higher-order autograd graph growth, or migrating off legacy `torch_xla`.
+---
+
+# TorchTPU Doctor
+
+Checklist and CLI workflow authored by Jigyasa Grover (`https://github.com/jigyasa-grover/TorchTPU-Doctor`) for getting native PyTorch (`torch_tpu`) code running fast on Cloud TPUs without silent CPU fallbacks or XLA stalls. Full benchmark walkthrough: `https://jigyasa-grover.github.io/TorchTPUDoctor/index.md`.
+
+## Quick Audit
+
+1. Run the static AST check on the target script or directory:
+   ```bash
+   torchtpu-doctor scan path/to/code --strict
+   ```
+2. Wrap 3-5 warmup steps in `tpu_doctor()` to inspect live ATen dispatch:
+   ```python
+   from torchtpu_doctor import tpu_doctor
+
+   with tpu_doctor("train_step") as doc:
+       for step, batch in zip(range(5), loader):
+           run_step(model, batch)
+           doc.step()
+   print(doc.result.format_text())
+   ```
+
+## Six Fixes to Apply
+
+1. **Device selection (`TPU001`):**
+   - Do not call `torch.tpu.is_available()`, `torch.tpu.device_count()`, or `torch.tpu.synchronize()`. Those are internal `PrivateUse1` hooks in `torch_tpu>=0.2.0`; use `torch.accelerator.*` or `torchtpu_doctor.get_device()`.
+   - `peft.utils.other.infer_device()` and `sentence_transformers.util.environment.get_device_name()` omit `"tpu"` and return `"cpu"`, and `transformers.masking_utils._ignore_causal_mask_sdpa` triggers 2 TPU-to-CPU boolean syncs per forward pass via `fast_all(padding_mask)`. Call `torchtpu_doctor.patch_hf_tpu()` before loading models or adapters.
+
+2. **Host-device syncs in loops (`TPU002`):**
+   - `loss.item()`, `.cpu()`, `.numpy()`, and `torch.nonzero()` flush TorchTPU's `DEFER_AND_FUSE` queue and block Python on HBM transfers.
+   - Keep running loss on device (`loss_sum += loss.detach()`) and call `.item()` only on logging intervals outside the inner step.
+
+3. **Dynamic shapes and MXU tile alignment (`TPU003`):**
+   - `tokenizer(..., padding=True)` pads each batch to a different length, triggering repeated XLA recompiles and under-filling `8x128` MXU tiles.
+   - Pass `pad_to_multiple_of=128` or use `TileAlignedCollator(pad_to_multiple_of=128, pad_batch_to_multiple_of=8)`.
+   - Enable persistent XLA caches via `enable_tpu_cache("/tmp/torchtpu_cache")` and wrap steady-state models in `torch.compile(model, backend="tpu")`.
+
+4. **In-place slice writes (`TPU004`):**
+   - Mutating a partial view (`buf[:, :seq_len] = x`) often blocks XLA buffer donation during StableHLO functionalization, copying the full backing storage. Prefer out-of-place `torch.where` / `torch.cat` inside `torch.compile`.
+
+5. **Dtypes, strided views, and legacy `torch_xla` (`TPU005` / `TPU006`):**
+   - Avoid `float64` / `.double()` and custom `.as_strided()` layouts; stick to `bfloat16` or `float32` (with `torch.tpu.Precision.HIGHEST` if needed).
+   - Remove `xm.xla_device()` and `xm.mark_step()` when migrating from `torch_xla`.
+
+6. **Higher-order autograd in loops (`TPU007`):**
+   - Calling `torch.autograd.grad(..., create_graph=True)` inside training loops or `forward()` retains and chains backward graphs across iterations, causing linear per-step and quadratic cumulative StableHLO graph, XLA compilation, and HBM growth under `torch_tpu`'s `DEFER_AND_FUSE` queue and XLA compiler.
+   - Pass `create_graph=False` and `.detach()` loop-carried state between steps when second-order derivatives are unnecessary; when computing Hessian-vector products (HVPs), use stateless forward-over-reverse `torch.func.jvp(torch.func.grad(fn), ...)` with static shapes.

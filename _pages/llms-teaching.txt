@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /teaching/llms.txt
+sitemap: false
+---
+# Jigyasa Grover — Corporate AI Training & Courses (Section Index)
+
+> Live corporate AI workshops (Morgan Stanley, FedEx, Accenture, Roblox, CommonSpirit Health), sponsor-funded SMB and SF Bay Area community programs, and 4 LinkedIn Learning courses (~45K learners).
+
+- [Corporate Training & Courses (HTML)](https://jigyasa-grover.github.io/teaching/) · [Teaching (Markdown)](https://jigyasa-grover.github.io/teaching.md)
+- [Courses JSON API](https://jigyasa-grover.github.io/api/v1/courses.json)
+- [LinkedIn Learning Instructor Profile](https://www.linkedin.com/learning/instructors/jigyasa-grover)
+- [Request a Team Workshop](https://jigyasa-grover.github.io/work-with-me/?topic=Corporate%20AI%20Training#contact)
+
+## Live Workshops
+
+{% for w in site.data.courses.workshops %}- **{{ w.title }}** ({{ w.duration }} · {{ w.audience }}): {{ w.abstract }}
+{% endfor %}
+- [Root llms.txt](https://jigyasa-grover.github.io/llms.txt): Full site index.
