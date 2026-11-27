@@ -8,8 +8,8 @@ help: ## Show available development commands
 install: ## Install Ruby dependencies locally into vendor/bundle
 	bundle install --path vendor/bundle
 
-build: ## Build production static site into _site/
-	bundle exec jekyll build --trace
+build: ## Build production static site into _site/ (UTC to match GitHub Pages & CI)
+	TZ=UTC bundle exec jekyll build --trace
 
 serve: ## Start local development server (default PORT=4000)
 	bundle exec jekyll serve --host 127.0.0.1 --port $(PORT)
