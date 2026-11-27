@@ -15,7 +15,7 @@ sitemap: false
 - [API v1 Root Index](https://jigyasa-grover.github.io/api/v1/index.json): Endpoint directory, versioning policy, and discovery links.
 - [Profile JSON API](https://jigyasa-grover.github.io/api/v1/profile.json): Canonical entity profile, speaker bios, career, education, and press photos.
 - [Collaboration JSON API](https://jigyasa-grover.github.io/api/v1/collaboration.json): Six collaboration pillars, booking links, AI GTM packages, and FAQs.
-- [Articles JSON API](https://jigyasa-grover.github.io/api/v1/articles.json): 34 indexed technical essays and Markdown twin URLs.
+- [Articles JSON API](https://jigyasa-grover.github.io/api/v1/articles.json): 35 indexed technical essays and Markdown twin URLs.
 - [Consolidated Agent Context](https://jigyasa-grover.github.io/agent-context.json): Single-fetch JSON bundle of the full site.
 
 ## Discovery & Skills

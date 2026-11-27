@@ -49,7 +49,7 @@ sitemap: false
       "mode": "imperative",
       "annotations": { "readOnlyHint": true },
       "route": "https://jigyasa-grover.github.io/blog/",
-      "description": "Search 34 indexed technical AI, ML, Cloud TPU, and open-source articles (including 10 full Markdown twins) by keyword or topic category, and synchronize the live filter on /blog/."
+      "description": "Search 35 indexed technical AI, ML, Cloud TPU, DevTools GTM, and open-source articles (all with full Markdown twins) by keyword or topic category, and synchronize the live filter on /blog/."
     },
     {
       "name": "draft-collaboration-inquiry",

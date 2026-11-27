@@ -8,6 +8,7 @@ sitemap: false
 > Independent AI startup, ranking, agentic architecture, and developer GTM advisory via Afterdays across 30+ organizations, plus instant 5.0★ 1:1 sessions on Intro.
 
 - [Advisory Overview (HTML)](https://jigyasa-grover.github.io/advisory/) · [Advisory (Markdown)](https://jigyasa-grover.github.io/advisory.md)
+- [Technical Advisory Boards as a GTM Channel for AI & Developer Tools](https://jigyasa-grover.github.io/TechnicalAdvisoryBoardsDevToolsGTM/) · [Full Markdown](https://jigyasa-grover.github.io/TechnicalAdvisoryBoardsDevToolsGTM/index.md)
 - [Book 1:1 on Intro (5.0★)](https://intro.co/JigyasaGrover)
 - [Engagement Modes & Pricing](https://jigyasa-grover.github.io/pricing/) · [pricing.md](https://jigyasa-grover.github.io/pricing.md)
 - [Collaboration JSON API](https://jigyasa-grover.github.io/api/v1/collaboration.json)

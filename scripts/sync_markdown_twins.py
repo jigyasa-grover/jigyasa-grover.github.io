@@ -234,8 +234,8 @@ def normalize_prose_em_dashes(md: str) -> str:
             continue
         if not in_fence:
             line = re.sub(r"([A-Za-z0-9])—([A-Za-z0-9])", r"\1 — \2", line)
-            # Rewrite relative image/site links inside Markdown to absolute URLs
-            line = re.sub(r"\]\((/(?:assets|images)/[^)]+)\)", rf"]({SITE_URL}\1)", line)
+            # Rewrite all root-relative site/asset Markdown links to absolute canonical URLs
+            line = re.sub(r"\]\((/(?!/)[^)\s]+)\)", rf"]({SITE_URL}\1)", line)
         out_lines.append(line)
     return "\n".join(out_lines)
 

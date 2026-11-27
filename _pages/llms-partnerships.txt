@@ -8,6 +8,7 @@ sitemap: false
 > Practitioner-led AI DevTool creator campaigns, runnable GitHub demos, GEO/SEO deep dives, and 9:16 vertical creator video reaching an 80%+ senior technical buyer ICP (~320K annual LinkedIn impressions, ~15K followers).
 
 - [AI GTM & Brand Partnerships (HTML)](https://jigyasa-grover.github.io/partnerships/) · [Partnerships (Markdown)](https://jigyasa-grover.github.io/partnerships.md)
+- [Technical Advisory Boards as a GTM Channel for AI & Developer Tools](https://jigyasa-grover.github.io/TechnicalAdvisoryBoardsDevToolsGTM/) · [Full Markdown](https://jigyasa-grover.github.io/TechnicalAdvisoryBoardsDevToolsGTM/index.md)
 - [Creator Media Kit, VIP Events & Hardware PR](https://jigyasa-grover.github.io/media-kit/)
 - [Pricing & Launch Packages](https://jigyasa-grover.github.io/pricing/) · [pricing.md](https://jigyasa-grover.github.io/pricing.md)
 - [Collaboration JSON API](https://jigyasa-grover.github.io/api/v1/collaboration.json)

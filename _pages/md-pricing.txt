@@ -18,7 +18,7 @@ All public writing, open-source repositories, Agent Skills, and read-only JSON/M
 
 | Offering | Pricing Model | Included Deliverables | Booking / Access |
 | --- | --- | --- | --- |
-| Public Technical Blog, Open Source & Read-Only APIs | **Free ($0 USD)** (no auth, no signup) | 34 indexed essays, 10 full Markdown twins, 76+ GitHub repos, `torchtpu-doctor` Skill, `/api/v1/*.json`, `/openapi.json` | https://jigyasa-grover.github.io/docs/ |
+| Public Technical Blog, Open Source & Read-Only APIs | **Free ($0 USD)** (no auth, no signup) | 35 indexed essays, full Markdown twins, 76+ GitHub repos, `torchtpu-doctor` Skill, `/api/v1/*.json`, `/openapi.json` | https://jigyasa-grover.github.io/docs/ |
 | *Sculpting Data for ML* & LinkedIn Learning Courses | Standard retail / LinkedIn Learning subscription (open Kaggle datasets free) | Monograph (ISBN 979-8585463570) + 4 LinkedIn Learning courses (~45K learners) | https://jigyasa-grover.github.io/publications/ · https://jigyasa-grover.github.io/teaching/ |
 | 1:1 AI Architecture & GTM Advisory Call | Published live per-session rate on Intro | 1:1 video review on production ML, ranking/MoE, Google ADK/MCP, LLM evals, or startup GTM (5.0★ verified) | https://intro.co/JigyasaGrover |
 | AI GTM & Developer Brand Sponsorships | Published package cards on Passionfroot, Naano & 8x | Reference Build, Editorial & Social, 9:16 Creator Video, Live Dev Session, or Full-Stack Launch Bundle (80%+ senior tech buyer ICP) | https://www.passionfroot.me/jigyasa-grover · https://naano.com/creators/jigyasa-grover · https://8x.business/p/b623ba2ed48544748601a75a3569c6ee |

@@ -171,7 +171,7 @@ sitemap: false
         "operationId": "listTechnicalArticles",
         "tags": ["Knowledge"],
         "summary": "List all indexed technical AI, ML, Cloud TPU, and open-source articles",
-        "description": "Returns a paginated-envelope catalog of 34 indexed engineering essays with titles, canonical URLs, full Markdown twin URLs, publication dates, categories, summaries, and tags.",
+        "description": "Returns a paginated-envelope catalog of 35 indexed engineering essays with titles, canonical URLs, full Markdown twin URLs, publication dates, categories, summaries, and tags.",
         "parameters": [
           {
             "name": "If-None-Match",
@@ -376,7 +376,7 @@ sitemap: false
         "operationId": "getFullAgentContext",
         "tags": ["Discovery"],
         "summary": "Retrieve the complete consolidated single-fetch agent context JSON",
-        "description": "Returns the complete machine-readable bundle combining identity, collaboration, publications, speaking, projects, videos, comparisons, FAQs, and all 34 indexed articles in one GET request.",
+        "description": "Returns the complete machine-readable bundle combining identity, collaboration, publications, speaking, projects, videos, comparisons, FAQs, and all 35 indexed articles in one GET request.",
         "parameters": [
           {
             "name": "If-None-Match",

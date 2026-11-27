@@ -11,7 +11,7 @@ sitemap: false
       "type": "skill-md",
       "description": "Query Jigyasa Grover's verified speaker bios, technical AI/ML articles, Cloud TPU and Google ADK benchmarks, corporate workshops, advisory scopes, and B2B DevTools GTM partnership channels via static read-only JSON and Markdown APIs on jigyasa-grover.github.io.",
       "url": "/.well-known/agent-skills/jigyasa-grover/SKILL.md",
-      "digest": "sha256:f9fb7d604fd5e5dc0453375ac6a313596498b9223e05d1b382dc9f9890519a45"
+      "digest": "sha256:2d80ff3d689eff3fc4947011d4cf57c6a75575480e003f5111a0631fdf891bbc"
     },
     {
       "name": "torchtpu-doctor",

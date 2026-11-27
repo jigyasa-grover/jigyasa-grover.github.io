@@ -21,6 +21,7 @@ EXTERNAL_SUBREPOS = {
 }
 
 EXPECTED_POST_URLS = [
+    "/TechnicalAdvisoryBoardsDevToolsGTM/",
     "/TorchTPUDoctor/",
     "/ProofOfWork/",
     "/StartupOnAShoestring/",
@@ -61,6 +62,7 @@ EXPECTED_ROUTES = [
     "/kinetic-finetuning-on-cloud-tpu/",
     "/trust-at-top-speed/",
     "/torchtpu-doctor/",
+    "/devtools-gtm-advisory-boards/",
     "/startup-on-a-shoestring/",
     "/colab-vscode-extension/",
     "/experience/",
@@ -127,6 +129,7 @@ EXPECTED_ROUTES = [
     "/BOOK-LAUNCH-Sculpting-Data-for-ML.md",
     "/DifferentialPrivacy.md",
     "/TorchTPUDoctor.md",
+    "/TechnicalAdvisoryBoardsDevToolsGTM.md",
     "/docs/llms.txt",
     "/blog/llms.txt",
     "/projects/llms.txt",
@@ -155,6 +158,7 @@ EXPECTED_ROUTES = [
     "/api/v1/courses.json",
     "/llms-full.txt",
     "/agent-context.json",
+    "/TechnicalAdvisoryBoardsDevToolsGTM/index.md",
     "/TorchTPUDoctor/index.md",
     "/ProofOfWork/index.md",
     "/StartupOnAShoestring/index.md",
@@ -718,7 +722,7 @@ def main() -> None:
                     errors.append(f"MISSING KEY '{key}' in /agent-context.json")
             if "gtm_and_ai_marketing" not in agent_ctx.get("collaboration", {}):
                 errors.append("MISSING 'gtm_and_ai_marketing' in /agent-context.json collaboration")
-            if len(agent_ctx.get("articles", [])) < 34:
+            if len(agent_ctx.get("articles", [])) < 35:
                 errors.append("UNEXPECTEDLY FEW ARTICLES in /agent-context.json")
         except Exception as exc:
             errors.append(f"INVALID JSON in /agent-context.json: {exc}")
@@ -872,6 +876,7 @@ def main() -> None:
                 errors.append(f"UNCLOSED CODE FENCE IN /{md_core}")
 
     for md_rel in (
+        "TechnicalAdvisoryBoardsDevToolsGTM/index.md",
         "TorchTPUDoctor/index.md",
         "ProofOfWork/index.md",
         "StartupOnAShoestring/index.md",

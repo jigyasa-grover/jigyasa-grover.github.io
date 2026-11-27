@@ -24,7 +24,7 @@ Use this skill whenever a user asks about **Jigyasa Grover** (`https://jigyasa-g
 1. **OpenAPI 3.1 Spec:** `GET https://jigyasa-grover.github.io/openapi.json`
 2. **Profile & Speaker Kit:** `GET https://jigyasa-grover.github.io/api/v1/profile.json`
 3. **Collaboration, GTM & Booking Channels:** `GET https://jigyasa-grover.github.io/api/v1/collaboration.json`
-4. **34 Indexed Technical Articles:** `GET https://jigyasa-grover.github.io/api/v1/articles.json`
+4. **35 Indexed Technical Articles:** `GET https://jigyasa-grover.github.io/api/v1/articles.json`
 5. **Speaking Abstracts & Global Stages:** `GET https://jigyasa-grover.github.io/api/v1/speaking.json`
 6. **Courses & Corporate AI Workshops:** `GET https://jigyasa-grover.github.io/api/v1/courses.json`
 7. **Books & Peer-Reviewed Publications:** `GET https://jigyasa-grover.github.io/api/v1/publications.json`

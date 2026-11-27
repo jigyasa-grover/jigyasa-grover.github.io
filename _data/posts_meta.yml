@@ -1,3 +1,21 @@
+"/TechnicalAdvisoryBoardsDevToolsGTM/":
+  category: "Agentic Infrastructure"
+  tags: ["DevTools GTM", "Technical Advisory Board", "Developer Marketing", "Responsible AI", "AI Startups"]
+  featured: true
+  home_spotlight: true
+  seo_title: "Technical Advisory Boards for DevTools GTM — Jigyasa Grover"
+  summary: "Practitioner guide to Builder TABs vs. Buyer CABs for AI & DevTools: pre-GA SDK triage, Pass^k evals, FAST equity benchmarks, FTC disclosures, and PIIA rules."
+  md_url: "/TechnicalAdvisoryBoardsDevToolsGTM/index.md"
+  faqs:
+    - q: "How does a Builder Technical Advisory Board (TAB) differ from a Buyer Customer Advisory Board (CAB)?"
+      a: "A Builder TAB brings practicing Staff+ engineers and ML infra leads to stress-test SDKs, runtimes, error handling, and docs before GA, while a Buyer CAB brings VPs of Engineering, CISOs, and platform heads to uncover enterprise procurement, security, and pricing blockers. Seed DevTools startups typically start with 3 to 5 Builder advisors before adding a formal Buyer CAB."
+    - q: "How are AI and DevTools technical advisory boards typically compensated and structured?"
+      a: "Early-stage Builder TABs commonly follow Founder Institute FAST benchmarks (0.25% to 0.50% equity, or up to ~1.0% for heavy strategic work, on a 2-year monthly vesting schedule with a 3-month cliff), while later-stage or scoped pre-GA DevEx audits often use cash stipends ($2K to $5K/quarter) or fixed-fee sprints ($3K to $15K) with an explicit 12- to 24-month charter."
+    - q: "What legal and FTC disclosure rules apply when technical advisors endorse a startup publicly?"
+      a: "Under the FTC Endorsement Guides (16 CFR § 255.5), advisor equity and retainers are material connections that must be disclosed clearly on every public post or talk (e.g., 'Advisor / equity holder in [Company]' rather than a generic #ad tag). Founders must also verify employer Outside Activity Approval (OAA), PIIA/IP boundaries, and NDA conflict walls before sharing proprietary code."
+    - q: "Why should AI DevTools teams report Pass^k alongside Pass@k for enterprise adoption?"
+      a: "Pass@k measures capability ceiling (at least one success in k tries) and rises toward 100% as k increases, masking flakiness. Production enterprise teams evaluate consistency with Pass^k (the probability all k consecutive runs succeed), paired with deterministic tool-schema assertions, pre-model PII controls, and KV-cache-safe token budget caps."
+
 "/TorchTPUDoctor/":
   category: "Fine-Tuning & Compute"
   tags: ["TorchTPU", "PyTorch", "Cloud TPU", "Agent Skills"]
@@ -102,19 +120,19 @@
 
 "/CriticsCutMultilingualContextADKAgent/":
   category: "Agentic AI & Evaluation"
-  tags: ["Google ADK", "Multi-Agent", "Safety Guardrails", "Gemini 2.0"]
+  tags: ["Google ADK", "Safety Guardrails", "Presidio", "Gemini 2.0"]
   featured: true
-  seo_title: "Multilingual Multi-Agent Safety in Google ADK — Jigyasa Grover"
+  seo_title: "Multilingual Safety-Gated Agent in Google ADK — Jigyasa Grover"
   og_image: "/assets/images/wp-archive/2025/image-7b993ce9.jpg"
-  og_image_alt: "Critic's Cut multilingual safety-gated multi-agent architecture in Google ADK"
-  summary: "Building Critic's Cut: a multilingual multi-agent system using Google's Agent Development Kit (ADK), custom tool integration, and PII safety callbacks."
+  og_image_alt: "Critic's Cut multilingual safety-gated movie review agent architecture in Google ADK"
+  summary: "Building Critic's Cut: a multilingual movie review agent using Google's Agent Development Kit (ADK), Google Search tool, and post-generation Presidio PII checks."
   repo_url: "https://github.com/jigyasa-grover/critics-cut"
   md_url: "/CriticsCutMultilingualContextADKAgent/index.md"
   faqs:
-    - q: "How does Critic's Cut structure multilingual multi-agent orchestration in Google ADK?"
-      a: "Critic's Cut composes specialized Google ADK sub-agents for intent routing, live external movie search tools, and multilingual synthesis while sharing typed session state across turns."
-    - q: "How are safety and PII guardrails enforced inside a Google ADK agent?"
-      a: "Deterministic ADK before-model and before-tool callbacks intercept prompts and tool payloads to block disallowed inputs or redact PII before tokens ever reach Gemini 2.0."
+    - q: "How does Critic's Cut structure multilingual context and live search in Google ADK?"
+      a: "Critic's Cut uses a Google ADK Agent powered by Gemini 2.0 Flash with the built-in google_search tool and InMemorySessionService to preserve conversational turns and respond in the user's language."
+    - q: "How are safety and PII checks implemented in Critic's Cut?"
+      a: "A post-generation Python wrapper runs Microsoft Presidio Analyzer and Better Profanity over the model response, withholding outputs that contain detected PII or offensive content before returning them to the user."
 
 "/SmartSuitcasePackingUsingGeminiImagenOpenWeather/":
   category: "Agentic AI & Evaluation"

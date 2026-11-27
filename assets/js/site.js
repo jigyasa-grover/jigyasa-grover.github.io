@@ -218,7 +218,7 @@
       var isArchival = row.getAttribute("data-archival") === "true";
       var catMatch;
       if (activeCategory === "all") {
-        // Keep default All Articles focused on the 34 primary essays unless user types a search query
+        // Keep default All Articles focused on the 35 primary essays unless user types a search query
         catMatch = query ? true : !isArchival;
       } else {
         catMatch = cat === activeCategory;
@@ -817,7 +817,7 @@
     safeRegister({
       name: "search-technical-articles",
       description:
-        "Search Jigyasa Grover's 34 indexed technical AI, ML, Cloud TPU, and open-source articles (with full Markdown twin URLs) by keyword or topic category. When viewing /blog/, also updates the live filter across all 91 essays and archives.",
+        "Search Jigyasa Grover's 35 indexed technical AI, ML, Cloud TPU, and open-source articles (with full Markdown twin URLs) by keyword or topic category. When viewing /blog/, also updates the live filter across all 92 essays and archives.",
       annotations: { readOnlyHint: true },
       inputSchema: {
         type: "object",

@@ -27,7 +27,7 @@ last-updated: "2026-11-26"
 | `GET /api/v1/index.json` | `getApiIndex` | API root index, version metadata, deprecation policy, and discovery links |
 | `GET /api/v1/profile.json` | `getProfile` | Canonical `#person` profile, 50w/150w bios, career, education, awards, press photos |
 | `GET /api/v1/collaboration.json` | `getCollaborationCatalog` | Collaboration pillars, Intro/Passionfroot/Naano/8x links, GTM packages, FAQs |
-| `GET /api/v1/articles.json` | `listTechnicalArticles` | 34 indexed AI/ML/TPU articles with pagination metadata and Markdown twin URLs |
+| `GET /api/v1/articles.json` | `listTechnicalArticles` | 35 indexed AI/ML/TPU articles with pagination metadata and Markdown twin URLs |
 | `GET /api/v1/speaking.json` | `getSpeakingCatalog` | Google I/O keynote, signature talk abstracts, appearances, 21 countries |
 | `GET /api/v1/publications.json` | `getPublications` | *Sculpting Data for ML*, Cornell Tech syllabus, 8 reviewed books, research papers |
 | `GET /api/v1/projects.json` | `listProjects` | AI systems, GitHub stats, and upstream Hugging Face `peft` PR |

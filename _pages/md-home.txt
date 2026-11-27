@@ -35,7 +35,7 @@ All projects & upstream open source (including merged Hugging Face `peft` #4099)
 
 - **Book:** *{{ site.data.publications.featured_book.title }}* (ISBN {{ site.data.publications.featured_book.isbn }}, 4.8★ Goodreads, 100+ citations, Cornell Tech CS 5781) — https://jigyasa-grover.github.io/publications/
 - **Courses:** 4 LinkedIn Learning AI courses (~45K learners, ~22K bookmarks, 4.6–4.8★) & live corporate workshops — https://jigyasa-grover.github.io/teaching/
-- **Technical Blog:** 34 indexed AI/ML, Cloud TPU, and Google ADK engineering essays — https://jigyasa-grover.github.io/blog/ (RSS: https://jigyasa-grover.github.io/feed.xml)
+- **Technical Blog:** 35 indexed AI/ML, Cloud TPU, DevTools GTM, and Google ADK engineering essays — https://jigyasa-grover.github.io/blog/ (RSS: https://jigyasa-grover.github.io/feed.xml)
 
 ## How We Can Work Together
 
