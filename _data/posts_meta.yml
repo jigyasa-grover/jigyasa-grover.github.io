@@ -3,10 +3,10 @@
   tags: ["TorchTPU", "PyTorch", "Cloud TPU", "Agent Skills"]
   featured: true
   home_spotlight: true
-  seo_title: "TorchTPU Doctor: PyTorch Cloud TPU Profiler — Jigyasa Grover"
+  seo_title: "TorchTPU Doctor: torch_tpu Profiler (2,537× LoRA Speedup)"
   og_image: "/assets/images/opt/torchtpu-doctor-cover.jpg"
   og_image_alt: "TorchTPU Doctor — 7-rule AST linter and Cloud TPU v6e PyTorch profiler by Jigyasa Grover"
-  summary: "Catching silent CPU fallbacks, Hugging Face host syncs, and XLA recompiles in PyTorch on Cloud TPU v6e, cutting LoRA step time 2,537× alongside peft #4099."
+  summary: "Fix silent CPU fallbacks, host syncs & XLA recompiles in torch_tpu via TorchDispatchMode + 7-rule AST linter, cutting Cloud TPU v6e LoRA step time 2,537×."
   repo_url: "https://github.com/jigyasa-grover/TorchTPU-Doctor"
   live_url: "https://colab.research.google.com/github/jigyasa-grover/TorchTPU-Doctor/blob/main/notebooks/torchtpu_doctor_demo.ipynb"
   skill_url: "https://raw.githubusercontent.com/jigyasa-grover/TorchTPU-Doctor/main/.agents/skills/torchtpu-doctor/SKILL.md"
